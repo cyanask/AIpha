@@ -75,25 +75,26 @@
       flex: 0 0 auto;
       display: block;
     }
-    .nav-links {
+    .header-tags {
       display: flex;
       align-items: center;
       gap: 8px;
       flex-wrap: wrap;
       justify-content: flex-end;
     }
-    .nav-links a {
-      min-height: 32px;
+    .header-tag {
+      min-height: 30px;
       display: inline-flex;
       align-items: center;
-      border: 1px solid rgba(248, 250, 252, 0.14);
+      border: 1px solid rgba(248, 250, 252, 0.2);
       border-radius: 4px;
       padding: 0 11px;
-      color: rgba(248, 250, 252, 0.78);
-      font-size: 13px;
+      color: rgba(248, 250, 252, 0.82);
+      background: rgba(248, 250, 252, 0.04);
+      font-size: 12px;
       line-height: 1;
+      white-space: nowrap;
     }
-    .nav-links a:hover { border-color: rgba(198, 161, 91, 0.72); color: #ffffff; }
     main {
       padding: 34px 0 36px;
     }
@@ -135,38 +136,6 @@
       color: var(--ink-2);
       font-size: 16px;
       line-height: 1.68;
-    }
-    .tag-strip {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-top: 18px;
-    }
-    .tag {
-      display: inline-flex;
-      align-items: center;
-      min-height: 28px;
-      padding: 0 10px;
-      border: 1px solid var(--line);
-      border-radius: 4px;
-      background: #f8fafb;
-      color: var(--muted);
-      font-size: 12px;
-    }
-    .ledger-strip {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px 18px;
-      margin-top: 18px;
-      padding-top: 14px;
-      border-top: 1px solid var(--line);
-      color: var(--muted);
-      font-size: 12px;
-      line-height: 1.5;
-    }
-    .ledger-strip strong {
-      color: var(--ink-2);
-      font-weight: 720;
     }
     .projects {
       display: grid;
@@ -262,16 +231,6 @@
       font-size: 13px;
       font-weight: 700;
     }
-    .boundary {
-      padding: 18px 20px;
-      background: var(--band);
-      border: 1px solid var(--line);
-      border-left: 4px solid var(--gold);
-      border-radius: 8px;
-      color: var(--muted);
-      font-size: 13px;
-      line-height: 1.7;
-    }
     footer {
       padding: 24px 0 36px;
       color: var(--muted);
@@ -293,7 +252,7 @@
         align-items: flex-start;
         flex-direction: column;
       }
-      .nav-links {
+      .header-tags {
         justify-content: flex-start;
       }
       .brand img {
@@ -342,11 +301,12 @@
       <a class="brand" href="./" aria-label="AIpha Research Desk">
         <img src="assets/nero-mark.svg" alt="AIpha Research Desk logo" />
       </a>
-      <nav class="nav-links" aria-label="AIpha modules">
-        <a href="radar/">Radar</a>
-        <a href="serenity/">Serenity</a>
-        <a href="close/">Close</a>
-      </nav>
+      <div class="header-tags" aria-label="AIpha public package boundary">
+        <span class="header-tag">仅公开静态 HTML</span>
+        <span class="header-tag">不公开 SQLite</span>
+        <span class="header-tag">不公开原始推文库</span>
+        <span class="header-tag">非投资建议</span>
+      </div>
     </div>
   </header>
   <main>
@@ -358,17 +318,6 @@
               <p class="eyebrow">统一研究入口</p>
               <h1>AIpha 平台</h1>
               <p class="intro-copy">一个统一入口，承载 AIpha 当前保留的三个静态 HTML 公开项目。这里负责进入研究资产，不替代本地 Fact Store、Feature Store、Evaluation Ledger 或 A 股映射表。</p>
-            </div>
-            <div class="tag-strip" aria-label="AIpha public package boundary">
-              <span class="tag">仅公开静态 HTML</span>
-              <span class="tag">不公开 SQLite</span>
-              <span class="tag">不公开原始推文库</span>
-              <span class="tag">非投资建议</span>
-            </div>
-            <div class="ledger-strip" aria-label="AIpha publish ledger">
-              <span>发布仓库：<strong>cyanask/AIpha</strong></span>
-              <span>生成时间：<strong>2026-06-12T23:04:19+08:00</strong></span>
-              <span>公开根路径：<strong>https://cyanask.github.io/AIpha/</strong></span>
             </div>
           </div>
         </section>
@@ -410,14 +359,11 @@
         </a>
           </div>
         </section>
-        <section class="boundary">
-          本页面不公开 SQLite、完整映射表、完整 Serenity 原始推文、Radar 原始包、debug JSON、manifest 或任何密钥/账户/持仓信息；三个子页面均保持原有静态 HTML 公开边界。
-        </section>
       </div>
     </div>
   </main>
   <footer>
-    <div class="shell">生成时间：2026-06-12T23:04:19+08:00。AIpha 输出是研究资产，不构成投资建议。</div>
+    <div class="shell">生成时间：2026-06-12T23:23:52+08:00。AIpha 输出是研究资产，不构成投资建议。</div>
   </footer>
 </body>
 </html>
