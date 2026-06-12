@@ -1,6 +1,6 @@
 # AIpha Research Desk
 
-Unified GitHub Pages entry for AIpha public HTML-only artifacts.
+Unified GitHub Pages entry for AIpha public static HTML artifacts.
 
 - Home: https://cyanask.github.io/AIpha/
 - Radar: https://cyanask.github.io/AIpha/radar/
