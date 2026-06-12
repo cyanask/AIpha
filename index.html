@@ -66,27 +66,14 @@
     .brand {
       display: inline-flex;
       align-items: center;
-      gap: 12px;
+      gap: 0;
       min-width: 0;
     }
     .brand img {
-      width: 38px;
-      height: 38px;
+      width: 132px;
+      height: auto;
       flex: 0 0 auto;
-    }
-    .brand-text {
-      display: grid;
-      gap: 2px;
-    }
-    .brand strong {
-      font-size: 15px;
-      line-height: 1.2;
-      font-weight: 760;
-    }
-    .brand span {
-      color: rgba(248, 250, 252, 0.66);
-      font-size: 12px;
-      line-height: 1.35;
+      display: block;
     }
     .nav-links {
       display: flex;
@@ -309,6 +296,9 @@
       .nav-links {
         justify-content: flex-start;
       }
+      .brand img {
+        width: 118px;
+      }
       main {
         padding-top: 20px;
       }
@@ -351,10 +341,6 @@
     <div class="shell nav">
       <a class="brand" href="./" aria-label="AIpha Research Desk">
         <img src="assets/nero-mark.svg" alt="AIpha Research Desk logo" />
-        <span class="brand-text">
-          <strong>AIpha Research Desk</strong>
-          <span>统一公开入口</span>
-        </span>
       </a>
       <nav class="nav-links" aria-label="AIpha modules">
         <a href="radar/">Radar</a>
@@ -381,7 +367,7 @@
             </div>
             <div class="ledger-strip" aria-label="AIpha publish ledger">
               <span>发布仓库：<strong>cyanask/AIpha</strong></span>
-              <span>生成时间：<strong>2026-06-12T22:57:50+08:00</strong></span>
+              <span>生成时间：<strong>2026-06-12T23:04:19+08:00</strong></span>
               <span>公开根路径：<strong>https://cyanask.github.io/AIpha/</strong></span>
             </div>
           </div>
@@ -431,7 +417,7 @@
     </div>
   </main>
   <footer>
-    <div class="shell">生成时间：2026-06-12T22:57:50+08:00。AIpha 输出是研究资产，不构成投资建议。</div>
+    <div class="shell">生成时间：2026-06-12T23:04:19+08:00。AIpha 输出是研究资产，不构成投资建议。</div>
   </footer>
 </body>
 </html>
