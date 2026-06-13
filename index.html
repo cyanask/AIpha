@@ -3,9 +3,9 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="AIpha Research Desk unified GitHub Pages entry." />
+  <meta name="description" content="AIpha Research Desk：面向 AI 与半导体产业链的公开研究入口。" />
   <meta property="og:title" content="AIpha Research Desk" />
-  <meta property="og:description" content="AIpha 平台统一入口：Radar、Serenity、Close。" />
+  <meta property="og:description" content="AIpha Research Desk：Radar、Serenity、Close 统一公开研究入口。" />
   <meta property="og:type" content="website" />
   <title>AIpha Research Desk</title>
   <style>
@@ -21,11 +21,13 @@
       --line-strong: #afbbc3;
       --top: #111a23;
       --top-2: #182530;
+      --console: #0f1820;
+      --console-2: #13232b;
       --blue: #1f4e5f;
       --green: #087f5b;
       --gold: #c6a15b;
       --band: #e9eef0;
-      --shadow: 0 18px 44px rgba(17, 26, 35, 0.08);
+      --shadow: 0 18px 44px rgba(17, 26, 35, 0.07);
     }
     * { box-sizing: border-box; }
     html { scroll-behavior: smooth; }
@@ -43,14 +45,14 @@
     }
     a { color: inherit; text-decoration: none; }
     .shell {
-      width: min(1220px, calc(100vw - 40px));
+      width: min(1240px, calc(100vw - 40px));
       margin: 0 auto;
     }
     header {
       position: sticky;
       top: 0;
       z-index: 30;
-      min-height: 62px;
+      min-height: 66px;
       background: rgba(17, 26, 35, 0.97);
       color: #f7fafc;
       border-bottom: 1px solid rgba(198, 161, 91, 0.32);
@@ -61,7 +63,7 @@
       align-items: center;
       justify-content: space-between;
       gap: 18px;
-      padding: 11px 0;
+      padding: 12px 0;
     }
     .brand {
       display: inline-flex;
@@ -70,7 +72,7 @@
       min-width: 0;
     }
     .brand img {
-      width: 132px;
+      width: 146px;
       height: auto;
       flex: 0 0 auto;
       display: block;
@@ -96,23 +98,25 @@
       white-space: nowrap;
     }
     main {
-      padding: 34px 0 36px;
+      padding: 30px 0 36px;
     }
     .content {
       min-width: 0;
       display: grid;
-      gap: 16px;
+      gap: 20px;
     }
     .intro {
-      display: block;
+      padding: 18px 0 4px;
     }
     .intro-main {
-      min-height: 0;
-      padding: 26px 28px 22px;
-      background: var(--paper);
-      border: 1px solid var(--line);
-      border-radius: 8px;
-      box-shadow: var(--shadow);
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(310px, 360px);
+      gap: 22px;
+      align-items: stretch;
+    }
+    .intro-copy-block {
+      min-width: 0;
+      align-self: center;
     }
     .eyebrow {
       margin: 0 0 14px;
@@ -121,36 +125,115 @@
       line-height: 1;
       letter-spacing: 0;
       font-weight: 760;
+      font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+      text-transform: uppercase;
     }
     h1 {
       margin: 0;
-      max-width: 720px;
-      font-size: clamp(34px, 4.8vw, 52px);
-      line-height: 1.08;
-      font-weight: 780;
+      max-width: 780px;
+      font-size: clamp(38px, 5.2vw, 62px);
+      line-height: 1.02;
+      font-weight: 800;
       letter-spacing: 0;
     }
     .intro-copy {
-      margin: 14px 0 0;
-      max-width: 860px;
+      margin: 18px 0 0;
+      max-width: 900px;
       color: var(--ink-2);
       font-size: 16px;
-      line-height: 1.68;
+      line-height: 1.72;
+    }
+    .console-panel {
+      min-height: 218px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      color: #dbe7e9;
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.035), transparent 28%),
+        var(--console);
+      border: 1px solid rgba(198, 161, 91, 0.35);
+      border-radius: 8px;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+    .console-top {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      min-height: 36px;
+      padding: 0 14px;
+      background: var(--console-2);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      color: rgba(219, 231, 233, 0.72);
+      font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+      font-size: 11px;
+      line-height: 1;
+    }
+    .console-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: rgba(198, 161, 91, 0.78);
+    }
+    .console-top strong {
+      margin-left: 6px;
+      font-weight: 650;
+    }
+    .console-grid {
+      display: grid;
+      gap: 10px;
+      margin: 0;
+      padding: 16px 16px 12px;
+    }
+    .console-grid div {
+      display: grid;
+      grid-template-columns: 96px 1fr;
+      gap: 12px;
+      align-items: baseline;
+    }
+    .console-grid dt {
+      color: rgba(219, 231, 233, 0.55);
+      font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+      font-size: 11px;
+      line-height: 1.2;
+      text-transform: uppercase;
+    }
+    .console-grid dd {
+      margin: 0;
+      color: #f5f8f8;
+      font-size: 13px;
+      line-height: 1.45;
+      font-weight: 650;
+    }
+    .command-line {
+      margin: 0;
+      padding: 12px 16px 15px;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      color: rgba(219, 231, 233, 0.86);
+      font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+      font-size: 12px;
+      line-height: 1.45;
+      overflow-wrap: anywhere;
+    }
+    .command-line span {
+      color: var(--gold);
+      font-weight: 750;
     }
     .projects {
       display: grid;
-      gap: 10px;
-      padding: 14px;
-      background: rgba(255, 255, 255, 0.74);
-      border: 1px solid var(--line);
-      border-radius: 8px;
+      gap: 12px;
+      padding: 0;
+      background: transparent;
+      border: 0;
+      border-radius: 0;
     }
     .section-head {
       display: flex;
       justify-content: space-between;
       align-items: end;
       gap: 16px;
-      padding: 4px 4px 12px;
+      padding: 14px 0 12px;
       border-bottom: 1px solid var(--line);
     }
     .section-head h2 {
@@ -169,27 +252,30 @@
     }
     .module-row {
       display: grid;
-      grid-template-columns: 82px minmax(190px, 0.82fr) minmax(260px, 1fr) minmax(170px, 0.62fr) 72px;
+      grid-template-columns: 90px minmax(210px, 0.75fr) minmax(280px, 1fr) minmax(190px, 0.62fr) 74px;
       gap: 16px;
       align-items: center;
-      min-height: 86px;
-      padding: 16px;
+      min-height: 98px;
+      padding: 18px 18px;
       border: 1px solid var(--line);
       border-radius: 8px;
       background: var(--paper);
-      transition: border-color 160ms ease, background 160ms ease, transform 160ms ease;
+      box-shadow: 0 10px 30px rgba(17, 26, 35, 0.045);
+      transition: border-color 160ms ease, background 160ms ease, transform 160ms ease, box-shadow 160ms ease;
     }
     .module-row:hover {
       background: #fbfcfd;
       border-color: var(--line-strong);
       transform: translateY(-1px);
+      box-shadow: 0 18px 36px rgba(17, 26, 35, 0.075);
     }
     .module-code {
       color: var(--blue);
-      font-size: 12px;
+      font-size: 13px;
       line-height: 1;
       text-transform: uppercase;
       font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+      font-weight: 700;
     }
     .module-main {
       display: grid;
@@ -198,9 +284,9 @@
     }
     .module-main strong {
       color: var(--ink);
-      font-size: 22px;
+      font-size: 24px;
       line-height: 1.12;
-      font-weight: 760;
+      font-weight: 790;
     }
     .module-main em {
       color: var(--ink-2);
@@ -212,13 +298,22 @@
     .module-description {
       color: var(--muted);
       font-size: 14px;
-      line-height: 1.62;
+      line-height: 1.7;
     }
     .module-status {
+      display: grid;
+      gap: 4px;
       color: var(--subtle);
-      font-size: 12px;
-      line-height: 1.4;
+      font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+      font-size: 11px;
+      line-height: 1.45;
       overflow-wrap: anywhere;
+    }
+    .module-status small {
+      color: var(--blue);
+      font-size: 10px;
+      line-height: 1;
+      font-weight: 750;
     }
     .module-action {
       display: inline-flex;
@@ -228,7 +323,8 @@
       border: 1px solid rgba(31, 78, 95, 0.36);
       border-radius: 4px;
       color: var(--blue);
-      font-size: 13px;
+      font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+      font-size: 12px;
       font-weight: 700;
     }
     footer {
@@ -239,6 +335,9 @@
       border-top: 1px solid var(--line);
     }
     @media (max-width: 1040px) {
+      .intro-main {
+        grid-template-columns: 1fr;
+      }
       .module-row {
         grid-template-columns: 72px minmax(170px, 0.92fr) minmax(230px, 1fr) 70px;
       }
@@ -256,16 +355,21 @@
         justify-content: flex-start;
       }
       .brand img {
-        width: 118px;
+        width: 132px;
       }
       main {
         padding-top: 20px;
       }
-      .intro-main {
-        min-height: 0;
-        padding: 22px 18px;
+      .intro {
+        padding-top: 10px;
       }
-      h1 { font-size: clamp(34px, 11vw, 48px); }
+      .console-panel {
+        min-height: 0;
+      }
+      .console-grid div {
+        grid-template-columns: 86px 1fr;
+      }
+      h1 { font-size: clamp(36px, 11vw, 50px); }
       .intro-copy {
         font-size: 16px;
       }
@@ -314,17 +418,31 @@
       <div class="content">
         <section class="intro">
           <div class="intro-main">
-            <div>
-              <p class="eyebrow">统一研究入口</p>
-              <h1>AIpha 平台</h1>
-              <p class="intro-copy">一个统一入口，承载 AIpha 当前保留的三个静态 HTML 公开项目。这里负责进入研究资产，不替代本地 Fact Store、Feature Store、Evaluation Ledger 或 A 股映射表。</p>
+            <div class="intro-copy-block">
+              <p class="eyebrow">PUBLIC RESEARCH CONSOLE</p>
+              <h1>AIpha Research Desk</h1>
+              <p class="intro-copy">AIpha Research Desk 是面向 AI 与半导体产业链的公开研究入口：把海外硬事件、Serenity 框架线索和收盘后本地账本视图，压缩成三个可审阅的静态 HTML 工作台。公开页只呈现可读结果，底层 Fact Store、Feature Store、Evaluation Ledger 与映射表仍保留在本地。</p>
             </div>
+            <aside class="console-panel" aria-label="AIpha public surface boundary">
+              <div class="console-top">
+                <span class="console-dot" aria-hidden="true"></span>
+                <span class="console-dot" aria-hidden="true"></span>
+                <span class="console-dot" aria-hidden="true"></span>
+                <strong>desk.status</strong>
+              </div>
+              <dl class="console-grid">
+                <div><dt>mode</dt><dd>static HTML only</dd></div>
+                <div><dt>scope</dt><dd>Radar / Serenity / Close</dd></div>
+                <div><dt>ledger</dt><dd>local-first, not public</dd></div>
+              </dl>
+              <p class="command-line"><span>&gt;</span> open /radar /serenity /close --review-surface</p>
+            </aside>
           </div>
         </section>
         <section class="projects" aria-label="AIpha subpages">
           <div class="section-head">
-            <h2>工作流入口</h2>
-            <span>三个子目录分别保留原有公开边界和生成链路。</span>
+            <h2>研究工作台</h2>
+            <span>每个入口保留独立生成链路与公开边界；统一仓库只负责分发静态 HTML。</span>
           </div>
           <div class="module-list">
         <a class="module-row" href="radar/">
@@ -333,9 +451,9 @@
             <strong>AIpha Radar</strong>
             <em>海外 AI 产业链新闻雷达</em>
           </span>
-          <span class="module-description">追踪海外 AI 与半导体产业链硬事件，保留来源、分组和公开边界。</span>
-          <span class="module-status">静态 HTML · https://cyanask.github.io/AIpha/radar/</span>
-          <span class="module-action">打开</span>
+          <span class="module-description">从官方源、权威媒体与产业链信号中抽取海外硬事件，按 AI 产业链语义归类并保留来源边界。</span>
+          <span class="module-status"><small>PUBLIC ROUTE</small>https://cyanask.github.io/AIpha/radar/</span>
+          <span class="module-action">OPEN</span>
         </a>
         <a class="module-row" href="serenity/">
           <span class="module-code">/serenity/</span>
@@ -343,9 +461,9 @@
             <strong>AIpha Serenity</strong>
             <em>Serenity Lens 推文研究资产</em>
           </span>
-          <span class="module-description">把 Serenity 与 X KOL 公开线索整理为可阅读、可对照 A 股映射的专题资产。</span>
-          <span class="module-status">静态 HTML · https://cyanask.github.io/AIpha/serenity/</span>
-          <span class="module-action">打开</span>
+          <span class="module-description">把 Serenity 与 X KOL 公开线索沉淀为可阅读、可复核、可对照映射表的专题研究资产。</span>
+          <span class="module-status"><small>PUBLIC ROUTE</small>https://cyanask.github.io/AIpha/serenity/</span>
+          <span class="module-action">OPEN</span>
         </a>
         <a class="module-row" href="close/">
           <span class="module-code">/close/</span>
@@ -353,9 +471,9 @@
             <strong>AIpha Close</strong>
             <em>收盘后研究资产摘要</em>
           </span>
-          <span class="module-description">只读消费 Fact Store、Feature Store、Radar、Serenity 和映射表，生成静态 HTML 收盘视图。</span>
-          <span class="module-status">静态 HTML · https://cyanask.github.io/AIpha/close/</span>
-          <span class="module-action">打开</span>
+          <span class="module-description">收盘后只读消费本地账本与映射表，输出 A 股 AI 链条状态、拥挤度和研究线索摘要。</span>
+          <span class="module-status"><small>PUBLIC ROUTE</small>https://cyanask.github.io/AIpha/close/</span>
+          <span class="module-action">OPEN</span>
         </a>
           </div>
         </section>
@@ -363,7 +481,7 @@
     </div>
   </main>
   <footer>
-    <div class="shell">生成时间：2026-06-13T12:16:26+08:00。AIpha 输出是研究资产，不构成投资建议。</div>
+    <div class="shell">生成时间：2026-06-13T12:35:04+08:00。AIpha 输出是研究资产，不构成投资建议。</div>
   </footer>
 </body>
 </html>
