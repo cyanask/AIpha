@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  
+
   <meta name="description" content="AIpha bilingual report based on the local Serenity tweet asset: upstream AI supply-chain bottlenecks, evidence and leaf-lane A-share mapping assets." />
   <meta property="og:title" content="AIpha Serenity V4.1｜AI上游瓶颈地图 / AI Upstream Bottleneck Map" />
   <meta property="og:description" content="AIpha bilingual report based on the local Serenity tweet asset: upstream AI supply-chain bottlenecks, evidence and leaf-lane A-share mapping assets." />
@@ -11,7 +11,7 @@
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="AIpha Serenity V4.1｜AI上游瓶颈地图 / AI Upstream Bottleneck Map" />
   <meta name="twitter:description" content="AIpha bilingual report based on the local Serenity tweet asset: upstream AI supply-chain bottlenecks, evidence and leaf-lane A-share mapping assets." />
-  <meta name="serenity:source_commit" content="8fdf621e3f17bae6ecd063d16ba1a31f3ecf4a7c" />
+  <meta name="serenity:source_commit" content="c01d8fdde6cf8a53f1ef60c6554b1f497698a848" />
   <title>AI 上游瓶颈地图：Serenity 发文中的供应链信息差</title>
   <script>
     (function () {
@@ -376,13 +376,14 @@
         overflow-wrap: anywhere;
         word-break: normal;
       }
-      .top-nav { position: static; align-items: center; padding: calc(10px + env(safe-area-inset-top)) 14px 10px; }
+      .top-nav { position: static; align-items: center; gap: 6px; padding: calc(6px + env(safe-area-inset-top)) max(8px, env(safe-area-inset-left)) 6px max(8px, env(safe-area-inset-right)); }
       .top-nav nav { display: none; }
-      .nav-actions { flex: 0 0 auto; gap: 7px; }
-      .nav-brand { gap: 10px; }
-      .nav-disclaimer { min-height: 44px; padding: 0 9px; font-size: 11px; }
-      .lang-toggle button { min-width: 44px; height: 44px; padding: 0 10px; }
-      .aipha-logo { width: 108px; height: 34px; }
+      .nav-actions { flex: 0 0 auto; gap: 4px; }
+      .nav-brand { gap: 6px; }
+      .nav-disclaimer { min-height: 24px; padding: 1px 6px; font-size: 10px; }
+      .lang-toggle { min-height: 24px; padding: 1px; }
+      .lang-toggle button { min-width: 32px; height: 22px; padding: 0 4px; font-size: 10px; }
+      .aipha-logo { width: 76px; height: 24px; }
       .page { width: min(100% - 20px, 1480px); }
       .share-screen { padding-top: 12px; }
       .cover-board { padding: 16px 14px; gap: 13px; border-left: 0; border-right: 0; box-shadow: none; }
@@ -420,10 +421,10 @@
     }
     @media (max-width: 480px) {
       .page { width: min(100% - 14px, 1480px); }
-      .top-nav { gap: 8px; }
+      .top-nav { gap: 6px; }
       .nav-brand { min-width: 0; }
-      .nav-disclaimer { padding: 0 8px; }
-      .aipha-logo { width: 104px; height: 33px; }
+      .nav-disclaimer { padding: 1px 5px; }
+      .aipha-logo { width: 76px; height: 24px; }
       .cover-meta-row, .cover-meta-side { gap: 6px; }
       .meta-chip { padding: 4px 7px; font-size: 11px; }
       .cover-title-row { gap: 14px; }
@@ -444,6 +445,10 @@
       .evidence-grid { padding: 0 14px 14px; }
     }
     @media (max-width: 430px) {
+      .top-nav { gap: 5px; padding-left: max(7px, env(safe-area-inset-left)); padding-right: max(7px, env(safe-area-inset-right)); }
+      .nav-disclaimer { min-height: 24px; padding: 1px 5px; font-size: 9.5px; }
+      .lang-toggle button { min-width: 30px; padding: 0 3px; font-size: 9.5px; }
+      .aipha-logo { width: 70px; height: 22px; }
       .page { width: 100%; }
       .share-screen { padding-top: 8px; }
       .cover-board { padding: 14px 12px; }
@@ -468,11 +473,19 @@
       .chain-head p { font-size: 13px; }
       .chain-body { padding: 14px; }
     }
+    @media (max-width: 375px) {
+      .top-nav { gap: 4px; padding-left: 6px; padding-right: 6px; }
+      .nav-disclaimer { padding: 1px 4px; font-size: 9px; }
+      .lang-toggle button { min-width: 28px; font-size: 9px; }
+      .aipha-logo { width: 64px; height: 21px; }
+    }
     @media (max-width: 932px) and (orientation: landscape) {
-      .top-nav { position: static; padding: calc(8px + env(safe-area-inset-top)) 14px 8px; }
+      .top-nav { position: static; padding: calc(6px + env(safe-area-inset-top)) 10px 6px; }
       .top-nav nav { display: none; }
-      .nav-disclaimer { min-height: 40px; font-size: 10px; }
-      .aipha-logo { width: 108px; height: 34px; }
+      .nav-disclaimer { min-height: 24px; padding: 1px 6px; font-size: 10px; }
+      .lang-toggle { min-height: 24px; padding: 1px; }
+      .lang-toggle button { min-width: 32px; height: 22px; padding: 0 4px; font-size: 10px; }
+      .aipha-logo { width: 76px; height: 24px; }
       .page { width: min(100% - 18px, 1480px); }
       .share-screen { padding-top: 10px; }
       .cover-board { padding: 16px; gap: 12px; }
@@ -515,11 +528,11 @@
   </script>
   <header class="top-nav">
     <div class="nav-brand">
-      
+
     <div class="aipha-lockup aipha-lockup-nav" aria-label="AIpha Research Desk">
       <img class="aipha-logo" src="assets/nero-mark.svg" alt="AIpha Research Desk logo" />
     </div>
-    
+
     </div>
     <div class="nav-actions">
       <nav>
@@ -549,10 +562,10 @@
             <span class="meta-chip">AIpha Serenity V4.1</span>
             <span class="meta-chip"><span class="lang lang-zh">双源近 5 日摘要版</span><span class="lang lang-en">Dual-source 5D Digest</span></span>
             <span class="meta-chip">2026-06-12</span>
-            <span class="meta-chip">5,894 tweets</span>
+            <span class="meta-chip">5,898 tweets</span>
           </div>
           <div class="cover-meta-side">
-            <span class="meta-chip">source_commit 8fdf621e3f17</span>
+            <span class="meta-chip">source_commit c01d8fdde6cf</span>
           </div>
         </div>
         <div class="cover-title-row">
@@ -565,31 +578,31 @@
               <span class="lang lang-zh"><span>拥挤主线之后，</span><span>AI 上游看二阶瓶颈</span></span>
               <span class="lang lang-en"><span>Beyond Crowded AI Themes:</span><span>Second-order Bottlenecks in the AI Supply Chain</span></span>
             </h1>
-            <p class="lead"><span class="lang lang-block lang-zh">基于 5,894 条 Serenity 推文与 A股唯一映射表，近 5 日新增讨论集中在光互连、HBM/HBF、Neocloud 融资质量与电力功率链；本页只展示研究资产归桶，不构成投资建议。</span><span class="lang lang-block lang-en">Based on 5,894 Serenity tweets and the authoritative A-share mapping table, the last 5 days concentrate around optical interconnect, HBM/HBF, neocloud financing quality and power delivery; this page shows research-asset buckets only, not investment advice.</span></p>
+            <p class="lead"><span class="lang lang-block lang-zh">基于 5,898 条 Serenity 推文与 A股唯一映射表，近 5 日新增讨论集中在光互连、HBM/HBF、Neocloud 融资质量与电力功率链；本页只展示研究资产归桶，不构成投资建议。</span><span class="lang lang-block lang-en">Based on 5,898 Serenity tweets and the authoritative A-share mapping table, the last 5 days concentrate around optical interconnect, HBM/HBF, neocloud financing quality and power delivery; this page shows research-asset buckets only, not investment advice.</span></p>
           </div>
-          <div class="cover-stats"><div class="stat"><span><span class="lang lang-zh">本地推文</span><span class="lang lang-en">Local Tweets</span></span><b>5,894</b><small><span class="lang lang-zh">SQLite 去重后样本</span><span class="lang lang-en">Deduped SQLite sample</span></small></div><div class="stat"><span><span class="lang lang-zh">资产截止</span><span class="lang lang-en">Asset Cutoff</span></span><b>2026-06-12</b><small><span class="lang lang-zh">04:26</span><span class="lang lang-en">04:26</span></small></div><div class="stat"><span><span class="lang lang-zh">瓶颈链</span><span class="lang lang-en">Bottleneck Chains</span></span><b>7</b><small><span class="lang lang-zh">Serenity 七链归因</span><span class="lang lang-en">Seven-chain attribution</span></small></div><div class="stat"><span><span class="lang lang-zh">A股映射</span><span class="lang lang-en">A-share Mapping</span></span><b>173</b><small><span class="lang lang-zh">叶子链研究资产</span><span class="lang lang-en">Leaf-lane research asset</span></small></div></div>
+          <div class="cover-stats"><div class="stat"><span><span class="lang lang-zh">本地推文</span><span class="lang lang-en">Local Tweets</span></span><b>5,898</b><small><span class="lang lang-zh">SQLite 去重后样本</span><span class="lang lang-en">Deduped SQLite sample</span></small></div><div class="stat"><span><span class="lang lang-zh">资产截止</span><span class="lang lang-en">Asset Cutoff</span></span><b>2026-06-12</b><small><span class="lang lang-zh">15:55</span><span class="lang lang-en">15:55</span></small></div><div class="stat"><span><span class="lang lang-zh">瓶颈链</span><span class="lang lang-en">Bottleneck Chains</span></span><b>7</b><small><span class="lang lang-zh">Serenity 七链归因</span><span class="lang lang-en">Seven-chain attribution</span></small></div><div class="stat"><span><span class="lang lang-zh">A股映射</span><span class="lang lang-en">A-share Mapping</span></span><b>173</b><small><span class="lang lang-zh">叶子链研究资产</span><span class="lang lang-en">Leaf-lane research asset</span></small></div></div>
         </div>
         <div class="supply-path" aria-label="AI 上游供应链追踪路径">
             <div class="path-node">
               <b><span class="lang lang-zh">CapEx</span><span class="lang lang-en">CapEx</span></b>
               <span><span class="lang lang-zh">云厂商资本开支</span><span class="lang lang-en">Hyperscaler capital spend</span></span>
             </div>
-            
+
             <div class="path-node">
               <b><span class="lang lang-zh">算力</span><span class="lang lang-en">Compute</span></b>
               <span><span class="lang lang-zh">GPU / ASIC / Neocloud</span><span class="lang lang-en">GPU / ASIC / Neocloud</span></span>
             </div>
-            
+
             <div class="path-node">
               <b><span class="lang lang-zh">封装互连</span><span class="lang lang-en">Packaging / Interconnect</span></b>
               <span><span class="lang lang-zh">CPO / HBM / CoWoS</span><span class="lang lang-en">CPO / HBM / CoWoS</span></span>
             </div>
-            
+
             <div class="path-node">
               <b><span class="lang lang-zh">材料电力</span><span class="lang lang-en">Materials / Power</span></b>
               <span><span class="lang lang-zh">基板 / 功率 / 电源</span><span class="lang lang-en">Substrate / Power / Supply</span></span>
             </div>
-            
+
             <div class="path-node">
               <b><span class="lang lang-zh">A股映射</span><span class="lang lang-en">A-share Mapping</span></b>
               <span><span class="lang lang-zh">叶子链 / 角色 / 证据</span><span class="lang lang-en">Leaf lane / Role / Evidence</span></span>
@@ -604,38 +617,38 @@
             </div>
           </div>
           <div>
-            
+
     <aside class="cover-digest-panel">
       <header>
         <span><span class="lang lang-zh">5D 摘要</span><span class="lang lang-en">5D Digest</span></span>
-        <strong>51</strong>
+        <strong>47</strong>
       </header>
       <p><span class="lang lang-block lang-zh">近 5 日新增讨论集中在光互连、AI 半导体供应链、HBM/存储与 Neocloud 融资质量。</span><span class="lang lang-block lang-en">The last 5 days cluster around optical interconnect, AI semi supply chain, HBM/memory and neocloud financing quality.</span></p>
       <small>2026-06-07 → 2026-06-12｜<span class="lang lang-zh">以资产最新推文为右端</span><span class="lang lang-en">rolling from newest asset tweet</span></small>
       <ol>
         <li>
           <span><span class="lang lang-zh">CPO / 光通信</span><span class="lang lang-en">CPO / Optical Interconnect</span></span>
-          <b>27</b>
+          <b>24</b>
         </li>
-        
+
         <li>
           <span><span class="lang lang-zh">AI 半导体供应链</span><span class="lang lang-en">AI Semi Supply Chain</span></span>
-          <b>21</b>
-        </li>
-        
-        <li>
-          <span><span class="lang lang-zh">HBM / 存储</span><span class="lang lang-en">HBM / Memory Bandwidth</span></span>
           <b>20</b>
         </li>
-        
+
+        <li>
+          <span><span class="lang lang-zh">HBM / 存储</span><span class="lang lang-en">HBM / Memory Bandwidth</span></span>
+          <b>19</b>
+        </li>
+
         <li>
           <span><span class="lang lang-zh">Neocloud 融资质量</span><span class="lang lang-en">Neocloud Financing Quality</span></span>
-          <b>13</b>
+          <b>11</b>
         </li>
         </ol>
-      <div class="cover-digest-tickers"><span>SIVE<b>14</b></span><span>NVDA<b>14</b></span><span>AAOI<b>10</b></span><span>LITE<b>9</b></span><span>NBIS<b>6</b></span><span>MU<b>6</b></span><span>RKLB<b>5</b></span><span>MRVL<b>5</b></span></div>
+      <div class="cover-digest-tickers"><span>SIVE<b>12</b></span><span>NVDA<b>11</b></span><span>AAOI<b>9</b></span><span>LITE<b>9</b></span><span>TSM<b>5</b></span><span>IQE<b>5</b></span><span>NBIS<b>5</b></span><span>RKLB<b>5</b></span></div>
     </aside>
-    
+
           </div>
         </div>
         <div class="cover-buckets">
@@ -644,19 +657,19 @@
               <b><span class="lang lang-zh">CPO/InP / HBM/HBF / 先进封装</span><span class="lang lang-en">CPO/InP / HBM/HBF / Advanced Packaging</span></b>
               <p><span class="lang lang-block lang-zh">继续下钻叶子链，不把主线热度当成信息差。</span><span class="lang lang-block lang-en">Drill into leaf chains; do not treat headline heat as an information gap.</span></p>
             </article>
-            
+
             <article>
               <span><span class="lang lang-zh">新增关注</span><span class="lang lang-en">Fresh Focus</span></span>
               <b><span class="lang lang-zh">InP / HBF / 800V</span><span class="lang lang-en">InP / HBF / 800V</span></b>
               <p><span class="lang lang-block lang-zh">近 5 日讨论更适合先做问题清单，不直接外推结论。</span><span class="lang lang-block lang-en">The last 5 days are better used as a question list, not as direct conclusions.</span></p>
             </article>
-            
+
             <article>
               <span><span class="lang lang-zh">映射资产</span><span class="lang lang-en">Mapping Asset</span></span>
               <b><span class="lang lang-zh">173 个叶子链</span><span class="lang lang-en">173 leaf-lane rows</span></b>
               <p><span class="lang lang-block lang-zh">只展示研究归桶，不展示交易动作。</span><span class="lang lang-block lang-en">Research buckets only; no trading action.</span></p>
             </article>
-            
+
             <article>
               <span><span class="lang lang-zh">值得跟踪</span><span class="lang lang-en">Track</span></span>
               <b><span class="lang lang-zh">电力功率 / 玻璃基板 / Physical AI</span><span class="lang lang-en">Power Semis / Glass Substrate / Physical AI</span></b>
@@ -687,7 +700,7 @@
                 <div><dt><span class="lang lang-zh">降权条件</span><span class="lang lang-en">Downgrade if</span></dt><dd><span class="lang lang-block lang-zh">CPO 时间表后移，InP 供给扩张快于需求，客户验证不及预期。</span><span class="lang lang-block lang-en">CPO timelines move out, InP supply expands faster than demand, or customer validation misses.</span></dd></div>
               </dl>
             </li>
-            
+
             <li>
               <header>
                 <span>02</span>
@@ -701,7 +714,7 @@
                 <div><dt><span class="lang lang-zh">降权条件</span><span class="lang lang-en">Downgrade if</span></dt><dd><span class="lang lang-block lang-zh">HBM 供需快速平衡，设备交期缩短，存储价格或订单转弱。</span><span class="lang lang-block lang-en">HBM supply-demand balances quickly, tool lead times shorten, or memory prices/orders weaken.</span></dd></div>
               </dl>
             </li>
-            
+
             <li>
               <header>
                 <span>03</span>
@@ -715,7 +728,7 @@
                 <div><dt><span class="lang lang-zh">降权条件</span><span class="lang lang-en">Downgrade if</span></dt><dd><span class="lang lang-block lang-zh">数据中心并网放慢，功率器件价格竞争加剧，库存周期重新压制。</span><span class="lang lang-block lang-en">Data-center grid access slows, power-device pricing competition intensifies, or inventory pressure returns.</span></dd></div>
               </dl>
             </li>
-            
+
             <li>
               <header>
                 <span>04</span>
@@ -744,10 +757,10 @@
           <span class="pill"><span class="lang lang-zh">保留 tweet_id / URL</span><span class="lang lang-en">tweet_id / URL retained</span></span>
         </div>
       </div>
-      
+
     <div class="recent-digest">
       <div class="digest-kpis">
-        <article><span><span class="lang lang-zh">窗口推文</span><span class="lang lang-en">Window Tweets</span></span><b>51</b><small>2026-06-07 → 2026-06-12</small></article>
+        <article><span><span class="lang lang-zh">窗口推文</span><span class="lang lang-en">Window Tweets</span></span><b>47</b><small>2026-06-07 → 2026-06-12</small></article>
         <article><span><span class="lang lang-zh">窗口口径</span><span class="lang lang-en">Window Rule</span></span><b>5D</b><small><span class="lang lang-zh">以资产最新推文为右端滚动计算</span><span class="lang lang-en">Rolling from the asset newest tweet</span></small></article>
         <article><span><span class="lang lang-zh">主题数</span><span class="lang lang-en">Themes</span></span><b>7</b><small><span class="lang lang-zh">按近 5 日主题命中统计</span><span class="lang lang-en">Theme hits in the last 5 days</span></small></article>
         <article><span><span class="lang lang-zh">证据样本</span><span class="lang lang-en">Evidence</span></span><b>12</b><small><span class="lang lang-zh">保留 tweet_id 与原 URL</span><span class="lang lang-en">tweet_id and URL retained</span></small></article>
@@ -757,53 +770,48 @@
           <h3><span class="lang lang-zh">每日分布</span><span class="lang lang-en">Daily Distribution</span></h3>
           <ol class="digest-days">
         <li>
-          <span>2026-06-07</span>
-          <div class="digest-day-bar"><i style="width:62%"></i><b>8</b></div>
-        </li>
-        
-        <li>
           <span>2026-06-08</span>
           <div class="digest-day-bar"><i style="width:69%"></i><b>9</b></div>
         </li>
-        
+
         <li>
           <span>2026-06-09</span>
           <div class="digest-day-bar"><i style="width:85%"></i><b>11</b></div>
         </li>
-        
+
         <li>
           <span>2026-06-10</span>
           <div class="digest-day-bar"><i style="width:62%"></i><b>8</b></div>
         </li>
-        
+
         <li>
           <span>2026-06-11</span>
           <div class="digest-day-bar"><i style="width:100%"></i><b>13</b></div>
         </li>
-        
+
         <li>
           <span>2026-06-12</span>
-          <div class="digest-day-bar"><i style="width:15%"></i><b>2</b></div>
+          <div class="digest-day-bar"><i style="width:46%"></i><b>6</b></div>
         </li>
         </ol>
         </div>
         <div>
           <h3><span class="lang lang-zh">Top themes</span><span class="lang lang-en">Top Themes</span></h3>
-          <div class="digest-tags"><span class="digest-tag"><span class="lang lang-zh">CPO / 光通信</span><span class="lang lang-en">CPO / Optical Interconnect</span><b>27</b></span><span class="digest-tag"><span class="lang lang-zh">AI 半导体供应链</span><span class="lang lang-en">AI Semi Supply Chain</span><b>21</b></span><span class="digest-tag"><span class="lang lang-zh">HBM / 存储</span><span class="lang lang-en">HBM / Memory Bandwidth</span><b>20</b></span><span class="digest-tag"><span class="lang lang-zh">Neocloud 融资质量</span><span class="lang lang-en">Neocloud Financing Quality</span><b>13</b></span><span class="digest-tag"><span class="lang lang-zh">InP / 化合物半导体</span><span class="lang lang-en">InP / Compound Semis</span><b>8</b></span><span class="digest-tag"><span class="lang lang-zh">电力 / 功率链</span><span class="lang lang-en">Power / Grid Chain</span><b>7</b></span><span class="digest-tag"><span class="lang lang-zh">Physical AI / 国防光学</span><span class="lang lang-en">Physical AI / Defense Optics</span><b>4</b></span></div>
+          <div class="digest-tags"><span class="digest-tag"><span class="lang lang-zh">CPO / 光通信</span><span class="lang lang-en">CPO / Optical Interconnect</span><b>24</b></span><span class="digest-tag"><span class="lang lang-zh">AI 半导体供应链</span><span class="lang lang-en">AI Semi Supply Chain</span><b>20</b></span><span class="digest-tag"><span class="lang lang-zh">HBM / 存储</span><span class="lang lang-en">HBM / Memory Bandwidth</span><b>19</b></span><span class="digest-tag"><span class="lang lang-zh">Neocloud 融资质量</span><span class="lang lang-en">Neocloud Financing Quality</span><b>11</b></span><span class="digest-tag"><span class="lang lang-zh">InP / 化合物半导体</span><span class="lang lang-en">InP / Compound Semis</span><b>8</b></span><span class="digest-tag"><span class="lang lang-zh">电力 / 功率链</span><span class="lang lang-en">Power / Grid Chain</span><b>8</b></span><span class="digest-tag"><span class="lang lang-zh">Physical AI / 国防光学</span><span class="lang lang-en">Physical AI / Defense Optics</span><b>4</b></span></div>
         </div>
         <div>
           <h3>Top tickers</h3>
-          <div class="digest-tags"><span class="digest-tag ticker-tag">SIVE<b>14</b></span><span class="digest-tag ticker-tag">NVDA<b>14</b></span><span class="digest-tag ticker-tag">AAOI<b>10</b></span><span class="digest-tag ticker-tag">LITE<b>9</b></span><span class="digest-tag ticker-tag">NBIS<b>6</b></span><span class="digest-tag ticker-tag">MU<b>6</b></span><span class="digest-tag ticker-tag">RKLB<b>5</b></span><span class="digest-tag ticker-tag">MRVL<b>5</b></span><span class="digest-tag ticker-tag">INTC<b>5</b></span><span class="digest-tag ticker-tag">IQE<b>5</b></span><span class="digest-tag ticker-tag">XFAB<b>5</b></span><span class="digest-tag ticker-tag">TSM<b>4</b></span></div>
+          <div class="digest-tags"><span class="digest-tag ticker-tag">SIVE<b>12</b></span><span class="digest-tag ticker-tag">NVDA<b>11</b></span><span class="digest-tag ticker-tag">AAOI<b>9</b></span><span class="digest-tag ticker-tag">LITE<b>9</b></span><span class="digest-tag ticker-tag">TSM<b>5</b></span><span class="digest-tag ticker-tag">IQE<b>5</b></span><span class="digest-tag ticker-tag">NBIS<b>5</b></span><span class="digest-tag ticker-tag">RKLB<b>5</b></span><span class="digest-tag ticker-tag">MRVL<b>5</b></span><span class="digest-tag ticker-tag">XFAB<b>5</b></span><span class="digest-tag ticker-tag">SPCX<b>4</b></span><span class="digest-tag ticker-tag">INTC<b>4</b></span></div>
         </div>
       </div>
       <div class="digest-card-grid">
             <article class="digest-card">
               <header>
                 <span><span class="lang lang-zh">CPO / 光通信</span><span class="lang lang-en">CPO / Optical Interconnect</span></span>
-                <strong>27</strong>
+                <strong>24</strong>
               </header>
               <h3><span class="lang lang-block lang-zh">CPO/硅光仍是主轴，焦点继续向激光、InP、代工和本土供给安全扩散。</span><span class="lang lang-block lang-en">CPO and silicon photonics remain the anchor, with focus spreading into lasers, InP, foundry paths and supply security.</span></h3>
-              <p class="digest-tickers">Top tickers: SIVE, NVDA, AAOI, LITE, NBIS, MU, IQE, XFAB</p>
+              <p class="digest-tickers">Top tickers: SIVE, NVDA, AAOI, LITE, XFAB, INTC, MRVL, NBIS</p>
               <ul class="lang lang-zh"><li>SIVE、AAOI、LITE、SOI、AXTI 等继续作为光互连链条锚点出现。</li><li>NVDA 对硅光和供给量的表述强化上游材料、器件和产能约束。</li><li>中国 InP 控制、美国本土激光产能和 1.6T 节奏是近端讨论点。</li></ul>
               <ul class="lang lang-en"><li>SIVE, AAOI, LITE, SOI and AXTI keep appearing as optical-interconnect anchors.</li><li>NVDA commentary reinforces upstream material, device and capacity constraints.</li><li>China InP controls, US domestic laser capacity and 1.6T timing are near-term discussion points.</li></ul>
               <div class="digest-card-evidence">
@@ -812,22 +820,22 @@
               <span>score 88｜AAOI, AEHR, AMKR, AMZN, ARM, AVGO, CEG, COHR, CRCL, CVX,…</span>
               <small>tweet_id 2063984786918854663</small>
             </a>
-            
-            <a href="https://x.com/aleabitoreddit/status/2063571485739106593" class="digest-evidence">
-              <b>2026-06-07</b>
-              <span>score 75｜BKKT, CRWV, IREN, NBIS, NVDA, SLNH, SNAP</span>
-              <small>tweet_id 2063571485739106593</small>
+
+            <a href="https://x.com/aleabitoreddit/status/2064942505553170886" class="digest-evidence">
+              <b>2026-06-11</b>
+              <span>score 76｜AMZN, AVGO, AXTI, COHR, GOOGL, LITE, META, MSFT, NVDA, SM…</span>
+              <small>tweet_id 2064942505553170886</small>
             </a>
             </div>
             </article>
-            
+
             <article class="digest-card">
               <header>
                 <span><span class="lang lang-zh">AI 半导体供应链</span><span class="lang lang-en">AI Semi Supply Chain</span></span>
-                <strong>21</strong>
+                <strong>20</strong>
               </header>
               <h3><span class="lang lang-block lang-zh">AI 半导体供应链从 CapEx 叙事转向国家冠军、供给安全和二阶制造约束。</span><span class="lang lang-block lang-en">The AI semi chain is moving from CapEx narratives toward national champions, supply security and second-order manufacturing constraints.</span></h3>
-              <p class="digest-tickers">Top tickers: NVDA, SIVE, AAOI, INTC, LITE, NBIS, MU, MRVL</p>
+              <p class="digest-tickers">Top tickers: NVDA, AAOI, SIVE, LITE, TSM, INTC, MRVL, NBIS</p>
               <ul class="lang lang-zh"><li>讨论不止停在 GPU，而是延伸到封装、材料、良率、设备和供应链安全。</li><li>NVDA、INTC、TSM、MRVL 等被用于定位 AI 基建约束的上下游关系。</li><li>800V DC、CPO 和先进封装被反复放在同一套系统瓶颈里讨论。</li></ul>
               <ul class="lang lang-en"><li>The discussion moves beyond GPUs into packaging, materials, yield, tools and supply-chain security.</li><li>NVDA, INTC, TSM and MRVL help locate upstream and downstream constraints around AI infrastructure.</li><li>800V DC, CPO and advanced packaging recur as one system-level bottleneck map.</li></ul>
               <div class="digest-card-evidence">
@@ -836,22 +844,22 @@
               <span>score 88｜AAOI, AEHR, AMKR, AMZN, ARM, AVGO, CEG, COHR, CRCL, CVX,…</span>
               <small>tweet_id 2063984786918854663</small>
             </a>
-            
-            <a href="https://x.com/aleabitoreddit/status/2063583856025108986" class="digest-evidence">
-              <b>2026-06-07</b>
-              <span>score 75｜EWY, INTC, MU, NVDA</span>
-              <small>tweet_id 2063583856025108986</small>
+
+            <a href="https://x.com/aleabitoreddit/status/2064942505553170886" class="digest-evidence">
+              <b>2026-06-11</b>
+              <span>score 76｜AMZN, AVGO, AXTI, COHR, GOOGL, LITE, META, MSFT, NVDA, SM…</span>
+              <small>tweet_id 2064942505553170886</small>
             </a>
             </div>
             </article>
-            
+
             <article class="digest-card">
               <header>
                 <span><span class="lang lang-zh">HBM / 存储</span><span class="lang lang-en">HBM / Memory Bandwidth</span></span>
-                <strong>20</strong>
+                <strong>19</strong>
               </header>
               <h3><span class="lang lang-block lang-zh">HBM/内存短缺与硅光并列，被当作 AI 基建多年约束继续跟踪。</span><span class="lang lang-block lang-en">HBM and memory scarcity sit beside silicon photonics as multi-year AI-infrastructure constraints.</span></h3>
-              <p class="digest-tickers">Top tickers: NVDA, SIVE, MU, INTC, AAOI, LITE, MRVL, EWY</p>
+              <p class="digest-tickers">Top tickers: SIVE, NVDA, AAOI, INTC, LITE, MRVL, TSM, MU</p>
               <ul class="lang lang-zh"><li>NVDA 管理层关于内存短缺的表述强化 MU/EWY 等存储链讨论。</li><li>市场已经知道 HBM 重要，增量问题转向 HBF、TC bonder、混合键合和后道材料。</li><li>存储链需要区分原厂周期、封装设备、基板材料和测试材料。</li></ul>
               <ul class="lang lang-en"><li>NVDA management comments strengthen the discussion around MU/EWY and the memory chain.</li><li>HBM is already recognized; the incremental question shifts to HBF, TC bonders, hybrid bonding and back-end materials.</li><li>The memory lane needs separation between original memory makers, packaging tools, substrates and test materials.</li></ul>
               <div class="digest-card-evidence">
@@ -860,22 +868,22 @@
               <span>score 88｜AAOI, AEHR, AMKR, AMZN, ARM, AVGO, CEG, COHR, CRCL, CVX,…</span>
               <small>tweet_id 2063984786918854663</small>
             </a>
-            
-            <a href="https://x.com/aleabitoreddit/status/2063583856025108986" class="digest-evidence">
-              <b>2026-06-07</b>
-              <span>score 75｜EWY, INTC, MU, NVDA</span>
-              <small>tweet_id 2063583856025108986</small>
+
+            <a href="https://x.com/aleabitoreddit/status/2064942505553170886" class="digest-evidence">
+              <b>2026-06-11</b>
+              <span>score 76｜AMZN, AVGO, AXTI, COHR, GOOGL, LITE, META, MSFT, NVDA, SM…</span>
+              <small>tweet_id 2064942505553170886</small>
             </a>
             </div>
             </article>
-            
+
             <article class="digest-card">
               <header>
                 <span><span class="lang lang-zh">Neocloud 融资质量</span><span class="lang lang-en">Neocloud Financing Quality</span></span>
-                <strong>13</strong>
+                <strong>11</strong>
               </header>
               <h3><span class="lang lang-block lang-zh">Neocloud 重点不是算力景气本身，而是融资结构、稀释风险和机构持股质量。</span><span class="lang lang-block lang-en">Neocloud focus is less about compute optimism and more about financing structure, dilution risk and institutional-holder quality.</span></h3>
-              <p class="digest-tickers">Top tickers: NBIS, AAOI, LITE, RKLB, TSM, SIVE, AMZN, COHR</p>
+              <p class="digest-tickers">Top tickers: NBIS, LITE, RKLB, TSM, AAOI, AMZN, COHR, GOOGL</p>
               <ul class="lang lang-zh"><li>NBIS、IREN 等讨论集中在融资路径、浮筹和合约质量，而不是简单算力 beta。</li><li>SIVE 等光链机构化讨论也被放入同一套资金质量观察框架。</li><li>近端摘要更适合作为“融资质量清单”，不是直接映射 A股买卖判断。</li></ul>
               <ul class="lang lang-en"><li>NBIS and IREN discussions center on financing path, float and contract quality, not generic compute beta.</li><li>Institutionalization around names like SIVE is read through the same capital-quality lens.</li><li>The near-term digest works better as a financing-quality checklist than as an A-share trading read.</li></ul>
               <div class="digest-card-evidence">
@@ -884,11 +892,11 @@
               <span>score 88｜AAOI, AEHR, AMKR, AMZN, ARM, AVGO, CEG, COHR, CRCL, CVX,…</span>
               <small>tweet_id 2063984786918854663</small>
             </a>
-            
-            <a href="https://x.com/aleabitoreddit/status/2063571485739106593" class="digest-evidence">
-              <b>2026-06-07</b>
-              <span>score 75｜BKKT, CRWV, IREN, NBIS, NVDA, SLNH, SNAP</span>
-              <small>tweet_id 2063571485739106593</small>
+
+            <a href="https://x.com/aleabitoreddit/status/2064942505553170886" class="digest-evidence">
+              <b>2026-06-11</b>
+              <span>score 76｜AMZN, AVGO, AXTI, COHR, GOOGL, LITE, META, MSFT, NVDA, SM…</span>
+              <small>tweet_id 2064942505553170886</small>
             </a>
             </div>
             </article>
@@ -905,72 +913,72 @@
           <td>AAOI, AEHR, AMKR, AMZN, ARM, AVGO, CEG, COHR, CRCL, CVX, DRAM, FN, GOOGL, HIMS, HOOD, IBIT,…</td>
           <td>Still think this US list from $MRVL to $ARM to $INTC was goated. Just as a recap if new followers were wondering what US equities I like. Especially because I&#x27;…<small><a href="https://x.com/aleabitoreddit/status/2063984786918854663">tweet_id 2063984786918854663</a></small></td>
         </tr>
-        
+
         <tr>
-          <td>2026-06-07<small>score 75</small></td>
-          <td>memory_hbm, ai_semicap_supply_chain</td>
-          <td>EWY, INTC, MU, NVDA</td>
-          <td>Oh look… $NVDA CEO warned memory shortage is expected to persist for many years, due to massive scaling demand of AI infrastructure. With further announcements…<small><a href="https://x.com/aleabitoreddit/status/2063583856025108986">tweet_id 2063583856025108986</a></small></td>
+          <td>2026-06-11<small>score 76</small></td>
+          <td>optical_cpo, inp_compound_semi, memory_hbm, neocloud_financing, ai_semi…</td>
+          <td>AMZN, AVGO, AXTI, COHR, GOOGL, LITE, META, MSFT, NVDA, SMTOY</td>
+          <td>Oh look… a new report by Reuters shows China’s control over InP threatens the AI DC buildout. Who could have guessed $AXTI would have been a major point of fai…<small><a href="https://x.com/aleabitoreddit/status/2064942505553170886">tweet_id 2064942505553170886</a></small></td>
         </tr>
-        
-        <tr>
-          <td>2026-06-07<small>score 75</small></td>
-          <td>optical_cpo, neocloud_financing, ai_semicap_supply_chain</td>
-          <td>BKKT, CRWV, IREN, NBIS, NVDA, SLNH, SNAP</td>
-          <td>Sure, #1 thing is toxic financing structure/float dynamics. Best example is current Neoclouds landscape: - $IREN is basically trash, since they have $6,000,000…<small><a href="https://x.com/aleabitoreddit/status/2063571485739106593">tweet_id 2063571485739106593</a></small></td>
-        </tr>
-        
+
         <tr>
           <td>2026-06-09<small>score 75</small></td>
           <td>optical_cpo, memory_hbm, neocloud_financing, power_grid, ai_semicap_sup…</td>
           <td>MRVL, SIVE, YSS</td>
           <td>A massive catalyst arrived today with $SIVE: Sivers announced $8.2M volume orders starting for Space applications (allspace). This is for Beamforming ICs power…<small><a href="https://x.com/aleabitoreddit/status/2064246556690469123">tweet_id 2064246556690469123</a></small></td>
         </tr>
-        
+
         <tr>
-          <td>2026-06-07<small>score 74</small></td>
-          <td>optical_cpo, memory_hbm, ai_semicap_supply_chain</td>
-          <td>EWY, MU, NVDA, SIVE, SOI</td>
-          <td>On top: $NVDA CEO also called out Silicon Photonics (optical networking) with memory. Stating that Nvidia would require “supply volumes beyond imagination”. Wh…<small><a href="https://x.com/aleabitoreddit/status/2063603368178938193">tweet_id 2063603368178938193</a></small></td>
+          <td>2026-06-12<small>score 73</small></td>
+          <td>optical_cpo, inp_compound_semi, neocloud_financing, ai_semicap_supply_c…</td>
+          <td>AAOI, ALAB, AXTI, LITE, NBIS, RKLB, SIVE, TSM</td>
+          <td>Just some reflection, my core high conviction ideas from 2025 aged super well! From $ALAB: $97-&gt; $372 $LITE: $330 -&gt; $904 $AAOI: $30 -&gt; $175 And others like $N…<small><a href="https://x.com/aleabitoreddit/status/2065289672356745561">tweet_id 2065289672356745561</a></small></td>
         </tr>
-        
-        <tr>
-          <td>2026-06-11<small>score 74</small></td>
-          <td>optical_cpo, inp_compound_semi, memory_hbm, neocloud_financing, ai_semi…</td>
-          <td>AMZN, AVGO, AXTI, COHR, GOOGL, LITE, META, MSFT, NVDA, SMTOY</td>
-          <td>Oh look… a new report by Reuters shows China’s control over InP threatens the AI DC buildout. Who could have guessed $AXTI would have been a major point of fai…<small><a href="https://x.com/aleabitoreddit/status/2064942505553170886">tweet_id 2064942505553170886</a></small></td>
-        </tr>
-        
+
         <tr>
           <td>2026-06-08<small>score 72</small></td>
           <td>optical_cpo, inp_compound_semi, power_grid</td>
           <td>AEHR, AMSC, AOSL, ASYS, BDC, CWR, ENPH, EOSE, FCEL, HYLN, IFNNY, IPWR, IQE, LFUS, NVDA, NVT…</td>
           <td>Okay chat, here&#x27;s your compiled list chat of your favorite 800V DC related ideas. 1. $IFNNY - $115.8B 2. $ON - $46.2B 3. Lite-On (2301) - $16.03B 4. 6504.T - $…<small><a href="https://x.com/aleabitoreddit/status/2063869376542192013">tweet_id 2063869376542192013</a></small></td>
         </tr>
-        
+
+        <tr>
+          <td>2026-06-11<small>score 68</small></td>
+          <td>optical_cpo, inp_compound_semi, memory_hbm, power_grid, ai_semicap_supp…</td>
+          <td>AAOI, INTC, IQE, MU, NVDA, SIVE, SOI, WOLF, XFAB</td>
+          <td>If you haven’t noticed too with my other investment themes with 800V DC and CPO recently. It’s investing in $NVDA, America’s national champion in AI, and secur…<small><a href="https://x.com/aleabitoreddit/status/2065114293767741950">tweet_id 2065114293767741950</a></small></td>
+        </tr>
+
         <tr>
           <td>2026-06-09<small>score 67</small></td>
           <td>optical_cpo, neocloud_financing, ai_semicap_supply_chain</td>
           <td>AAOI, AMKR, ARM, ASX, CLS, COHR, FN, GFS, JBL, LITE, MRVL, NBIS, NOK, TSEM, VICR</td>
           <td>Names like: - $ASX - Sumitomo Electric - $JBL - $VICR - $GFS - $AAOI - AlChip - $TSEM - $FN - Furukawa Electric - $CLS - $NBIS - $NOK - $AMKR - $LITE - $COHR O…<small><a href="https://x.com/aleabitoreddit/status/2064314680521507114">tweet_id 2064314680521507114</a></small></td>
         </tr>
-        
+
+        <tr>
+          <td>2026-06-11<small>score 67</small></td>
+          <td>optical_cpo, inp_compound_semi, memory_hbm, power_grid, ai_semicap_supp…</td>
+          <td>AAOI, INTC, IQE, MU, SIVE, SOI, WOLF, XFAB</td>
+          <td>Markets should be cheering on domestic champions like $AAOI. Since it&#x27;s ideal to support critical AI infra from laser fab to production in the US, rather than…<small><a href="https://x.com/aleabitoreddit/status/2065105141238489398">tweet_id 2065105141238489398</a></small></td>
+        </tr>
+
         <tr>
           <td>2026-06-11<small>score 65</small></td>
           <td>optical_cpo, memory_hbm, neocloud_financing, ai_semicap_supply_chain</td>
           <td>HIMX, JPM, NBIS, NVDA, RKLB, SIVE, TSM</td>
           <td>Basically this… and it’s how cycles work. Retail was early and completely frontran institutions on next architectural shifts. There was close to 0 US instituti…<small><a href="https://x.com/aleabitoreddit/status/2064884912667439129">tweet_id 2064884912667439129</a></small></td>
         </tr>
-        
+
         <tr>
-          <td>2026-06-11<small>score 65</small></td>
-          <td>optical_cpo, inp_compound_semi, memory_hbm, power_grid, ai_semicap_supp…</td>
-          <td>AAOI, INTC, IQE, MU, NVDA, SIVE, SOI, WOLF, XFAB</td>
-          <td>If you haven’t noticed too with my other investment themes with 800V DC and CPO recently. It’s investing in $NVDA, America’s national champion in AI, and secur…<small><a href="https://x.com/aleabitoreddit/status/2065114293767741950">tweet_id 2065114293767741950</a></small></td>
+          <td>2026-06-09<small>score 63</small></td>
+          <td>memory_hbm, neocloud_financing, ai_semicap_supply_chain</td>
+          <td>IREN</td>
+          <td>Given my recent popularity, might be a good time to put out a PSA. Early followers have known this from the start: 1. I don&#x27;t do any paid promotions, paid mark…<small><a href="https://x.com/aleabitoreddit/status/2064265545529307560">tweet_id 2064265545529307560</a></small></td>
         </tr>
         </tbody></table></div>
     </div>
-    
+
     </section>
 
     <section class="section-band" id="jukan-digest">
@@ -985,10 +993,10 @@
           <span class="pill"><span class="lang lang-zh">独立新闻流补充</span><span class="lang lang-en">Separate news-flow supplement</span></span>
         </div>
       </div>
-      
+
     <div class="recent-digest">
       <div class="digest-kpis">
-        <article><span><span class="lang lang-zh">窗口推文</span><span class="lang lang-en">Window Tweets</span></span><b>77</b><small>2026-06-07 → 2026-06-12</small></article>
+        <article><span><span class="lang lang-zh">窗口推文</span><span class="lang lang-en">Window Tweets</span></span><b>82</b><small>2026-06-07 → 2026-06-12</small></article>
         <article><span><span class="lang lang-zh">窗口口径</span><span class="lang lang-en">Window Rule</span></span><b>5D</b><small><span class="lang lang-zh">以资产最新推文为右端滚动计算</span><span class="lang lang-en">Rolling from the asset newest tweet</span></small></article>
         <article><span><span class="lang lang-zh">主题数</span><span class="lang lang-en">Themes</span></span><b>7</b><small><span class="lang lang-zh">按近 5 日主题命中统计</span><span class="lang lang-en">Theme hits in the last 5 days</span></small></article>
         <article><span><span class="lang lang-zh">证据样本</span><span class="lang lang-en">Evidence</span></span><b>12</b><small><span class="lang lang-zh">保留 tweet_id 与原 URL</span><span class="lang lang-en">tweet_id and URL retained</span></small></article>
@@ -999,38 +1007,38 @@
           <ol class="digest-days">
         <li>
           <span>2026-06-07</span>
-          <div class="digest-day-bar"><i style="width:50%"></i><b>9</b></div>
+          <div class="digest-day-bar"><i style="width:44%"></i><b>8</b></div>
         </li>
-        
+
         <li>
           <span>2026-06-08</span>
           <div class="digest-day-bar"><i style="width:67%"></i><b>12</b></div>
         </li>
-        
+
         <li>
           <span>2026-06-09</span>
           <div class="digest-day-bar"><i style="width:89%"></i><b>16</b></div>
         </li>
-        
+
         <li>
           <span>2026-06-10</span>
           <div class="digest-day-bar"><i style="width:100%"></i><b>18</b></div>
         </li>
-        
+
         <li>
           <span>2026-06-11</span>
           <div class="digest-day-bar"><i style="width:100%"></i><b>18</b></div>
         </li>
-        
+
         <li>
           <span>2026-06-12</span>
-          <div class="digest-day-bar"><i style="width:22%"></i><b>4</b></div>
+          <div class="digest-day-bar"><i style="width:56%"></i><b>10</b></div>
         </li>
         </ol>
         </div>
         <div>
           <h3><span class="lang lang-zh">Top themes</span><span class="lang lang-en">Top Themes</span></h3>
-          <div class="digest-tags"><span class="digest-tag"><span class="lang lang-zh">HBM / 存储</span><span class="lang lang-en">HBM / Memory Bandwidth</span><b>27</b></span><span class="digest-tag"><span class="lang lang-zh">AI 半导体供应链</span><span class="lang lang-en">AI Semi Supply Chain</span><b>26</b></span><span class="digest-tag"><span class="lang lang-zh">Neocloud 融资质量</span><span class="lang lang-en">Neocloud Financing Quality</span><b>10</b></span><span class="digest-tag"><span class="lang lang-zh">InP / 化合物半导体</span><span class="lang lang-en">InP / Compound Semis</span><b>6</b></span><span class="digest-tag"><span class="lang lang-zh">CPO / 光通信</span><span class="lang lang-en">CPO / Optical Interconnect</span><b>6</b></span><span class="digest-tag"><span class="lang lang-zh">电力 / 功率链</span><span class="lang lang-en">Power / Grid Chain</span><b>2</b></span><span class="digest-tag"><span class="lang lang-zh">Physical AI / 国防光学</span><span class="lang lang-en">Physical AI / Defense Optics</span><b>1</b></span></div>
+          <div class="digest-tags"><span class="digest-tag"><span class="lang lang-zh">AI 半导体供应链</span><span class="lang lang-en">AI Semi Supply Chain</span><b>28</b></span><span class="digest-tag"><span class="lang lang-zh">HBM / 存储</span><span class="lang lang-en">HBM / Memory Bandwidth</span><b>28</b></span><span class="digest-tag"><span class="lang lang-zh">Neocloud 融资质量</span><span class="lang lang-en">Neocloud Financing Quality</span><b>10</b></span><span class="digest-tag"><span class="lang lang-zh">InP / 化合物半导体</span><span class="lang lang-en">InP / Compound Semis</span><b>6</b></span><span class="digest-tag"><span class="lang lang-zh">CPO / 光通信</span><span class="lang lang-en">CPO / Optical Interconnect</span><b>5</b></span><span class="digest-tag"><span class="lang lang-zh">电力 / 功率链</span><span class="lang lang-en">Power / Grid Chain</span><b>2</b></span><span class="digest-tag"><span class="lang lang-zh">Physical AI / 国防光学</span><span class="lang lang-en">Physical AI / Defense Optics</span><b>1</b></span></div>
         </div>
         <div>
           <h3>Top tickers</h3>
@@ -1041,7 +1049,7 @@
             <article class="digest-card">
               <header>
                 <span><span class="lang lang-zh">HBM / 存储</span><span class="lang lang-en">HBM / Memory Bandwidth</span></span>
-                <strong>27</strong>
+                <strong>28</strong>
               </header>
               <h3><span class="lang lang-block lang-zh">jukan05 近端信息流把 HBM、SK hynix 事故、内存锁单和存储供给安全放在核心位置。</span><span class="lang lang-block lang-en">jukan05&#x27;s recent feed puts HBM, SK hynix incidents, memory allocation and supply security at the center.</span></h3>
               <p class="digest-tickers">Top tickers: </p>
@@ -1050,22 +1058,22 @@
               <div class="digest-card-evidence">
             <a href="https://x.com/jukan05/status/2065221955322843194" class="digest-evidence">
               <b>2026-06-11</b>
-              <span>score 37｜</span>
+              <span>score 38｜</span>
               <small>tweet_id 2065221955322843194</small>
             </a>
-            
+
             <a href="https://x.com/jukan05/status/2064838255582097523" class="digest-evidence">
               <b>2026-06-10</b>
-              <span>score 35｜</span>
+              <span>score 36｜</span>
               <small>tweet_id 2064838255582097523</small>
             </a>
             </div>
             </article>
-            
+
             <article class="digest-card">
               <header>
                 <span><span class="lang lang-zh">AI 半导体供应链</span><span class="lang lang-en">AI Semi Supply Chain</span></span>
-                <strong>26</strong>
+                <strong>28</strong>
               </header>
               <h3><span class="lang lang-block lang-zh">AI 半导体供应链新闻流更偏事实催化：NVIDIA、Intel、封装、材料和韩国工程师原始信息。</span><span class="lang lang-block lang-en">AI semi supply-chain news flow is more catalyst-like: NVIDIA, Intel, packaging, materials and raw Korean-engineer information.</span></h3>
               <p class="digest-tickers">Top tickers: INTC, NVDA, TSEM, TSM, LITE</p>
@@ -1077,19 +1085,19 @@
               <span>score 53｜</span>
               <small>tweet_id 2063860067649380675</small>
             </a>
-            
+
             <a href="https://x.com/jukan05/status/2065221955322843194" class="digest-evidence">
               <b>2026-06-11</b>
-              <span>score 37｜</span>
+              <span>score 38｜</span>
               <small>tweet_id 2065221955322843194</small>
             </a>
             </div>
             </article>
-            
+
             <article class="digest-card">
               <header>
                 <span><span class="lang lang-zh">CPO / 光通信</span><span class="lang lang-en">CPO / Optical Interconnect</span></span>
-                <strong>6</strong>
+                <strong>5</strong>
               </header>
               <h3><span class="lang lang-block lang-zh">光互连新闻流集中在 CPO 延后、NPO/HVLP/连接器与 PCB 材料上游竞争。</span><span class="lang lang-block lang-en">Optical-interconnect news flow clusters around CPO delays, NPO, HVLP, connectors and upstream PCB-material competition.</span></h3>
               <p class="digest-tickers">Top tickers: TSEM, TSM, LITE</p>
@@ -1098,18 +1106,18 @@
               <div class="digest-card-evidence">
             <a href="https://x.com/jukan05/status/2065221955322843194" class="digest-evidence">
               <b>2026-06-11</b>
-              <span>score 37｜</span>
+              <span>score 38｜</span>
               <small>tweet_id 2065221955322843194</small>
             </a>
-            
-            <a href="https://x.com/jukan05/status/2063585598074696187" class="digest-evidence">
-              <b>2026-06-07</b>
-              <span>score 28｜</span>
-              <small>tweet_id 2063585598074696187</small>
+
+            <a href="https://x.com/jukan05/status/2064475364802613343" class="digest-evidence">
+              <b>2026-06-09</b>
+              <span>score 27｜TSEM, TSM</span>
+              <small>tweet_id 2064475364802613343</small>
             </a>
             </div>
             </article>
-            
+
             <article class="digest-card">
               <header>
                 <span><span class="lang lang-zh">Neocloud 融资质量</span><span class="lang lang-en">Neocloud Financing Quality</span></span>
@@ -1125,10 +1133,10 @@
               <span>score 45｜</span>
               <small>tweet_id 2064170300452098183</small>
             </a>
-            
+
             <a href="https://x.com/jukan05/status/2065221955322843194" class="digest-evidence">
               <b>2026-06-11</b>
-              <span>score 37｜</span>
+              <span>score 38｜</span>
               <small>tweet_id 2065221955322843194</small>
             </a>
             </div>
@@ -1146,72 +1154,72 @@
           <td></td>
           <td>Why you should be on X: You can see real-time supply-chain information shared directly by Korean semiconductor engineers, for free. You get raw, unfiltered inf…<small><a href="https://x.com/jukan05/status/2063860067649380675">tweet_id 2063860067649380675</a></small></td>
         </tr>
-        
+
         <tr>
           <td>2026-06-09<small>score 45</small></td>
           <td>neocloud_financing</td>
           <td></td>
           <td>SOURCES: ANTHROPIC WILL RELEASE THE PUBLIC VERSION OF MYTHOS TOMORROW<small><a href="https://x.com/jukan05/status/2064170300452098183">tweet_id 2064170300452098183</a></small></td>
         </tr>
-        
+
         <tr>
           <td>2026-06-08<small>score 45</small></td>
           <td></td>
           <td></td>
           <td>JENSEN HUANG: “AI-RELATED STOCKS ARE VERY CHEAP RIGHT NOW.”<small><a href="https://x.com/jukan05/status/2063783610558407010">tweet_id 2063783610558407010</a></small></td>
         </tr>
-        
+
         <tr>
-          <td>2026-06-11<small>score 37</small></td>
+          <td>2026-06-11<small>score 38</small></td>
           <td>ai_semicap_supply_chain, inp_compound_semi, memory_hbm, neocloud_financ…</td>
           <td></td>
           <td>▶ NVIDIA takes PCB material competition upstream as HVLP4 copper foil gap widens - With high-end PCB orders rising on expanding AI infrastructure demand, new b…<small><a href="https://x.com/jukan05/status/2065221955322843194">tweet_id 2065221955322843194</a></small></td>
         </tr>
-        
+
         <tr>
-          <td>2026-06-10<small>score 35</small></td>
+          <td>2026-06-10<small>score 36</small></td>
           <td>ai_semicap_supply_chain, memory_hbm, neocloud_financing</td>
           <td></td>
           <td>Nvidia&#x27;s AI ramp deepens memory squeeze as cloud providers lock up supply through 2028 Memory shortages tied to Nvidia&#x27;s next wave of AI hardware are expected…<small><a href="https://x.com/jukan05/status/2064838255582097523">tweet_id 2064838255582097523</a></small></td>
         </tr>
-        
+
         <tr>
           <td>2026-06-07<small>score 34</small></td>
           <td>ai_semicap_supply_chain, memory_hbm, neocloud_financing</td>
           <td></td>
           <td>[Exclusive] Samsung Foundry Expected to Return to Profit in Q3 This Year… &quot;Entering Growth Trajectory After Four Years&quot; Observations are emerging internally th…<small><a href="https://x.com/jukan05/status/2063753367462256665">tweet_id 2063753367462256665</a></small></td>
         </tr>
-        
+
         <tr>
           <td>2026-06-11<small>score 33</small></td>
           <td>ai_semicap_supply_chain, memory_hbm, power_grid</td>
           <td></td>
           <td>▶ AI servers squeeze high-end MLCC supply, sending Taiwan firms toward China alternatives - Expanding demand from AI servers and high-voltage EVs is tightening…<small><a href="https://x.com/jukan05/status/2064919388411883930">tweet_id 2064919388411883930</a></small></td>
         </tr>
-        
-        <tr>
-          <td>2026-06-07<small>score 28</small></td>
-          <td>ai_semicap_supply_chain, optical_cpo</td>
-          <td></td>
-          <td>Jensen Huang: “Demand is enormous. From wafers to silicon photonics and cable connectors, everything across the entire industry supply chain is in short supply…<small><a href="https://x.com/jukan05/status/2063585598074696187">tweet_id 2063585598074696187</a></small></td>
-        </tr>
-        
+
         <tr>
           <td>2026-06-07<small>score 27</small></td>
           <td>ai_semicap_supply_chain</td>
           <td>NVDA</td>
           <td>JENSEN HUANG ANSWERED “YES” WHEN ASKED WHETHER IT IS TIME TO BUY NVIDIA STOCK. $NVDA<small><a href="https://x.com/jukan05/status/2063604023291523475">tweet_id 2063604023291523475</a></small></td>
         </tr>
-        
+
         <tr>
           <td>2026-06-09<small>score 27</small></td>
           <td>ai_semicap_supply_chain, optical_cpo</td>
           <td>TSEM, TSM</td>
           <td>Why would Nvidia try to scale up NPO? Because CPO has been delayed.<small><a href="https://x.com/jukan05/status/2064475364802613343">tweet_id 2064475364802613343</a></small></td>
         </tr>
+
+        <tr>
+          <td>2026-06-10<small>score 26</small></td>
+          <td>memory_hbm</td>
+          <td></td>
+          <td>According to Korean media reports, Samsung and SK Hynix have already introduced AMAT-BESI’s Kinex into some of their mass production lines… interesting. https:…<small><a href="https://x.com/jukan05/status/2064649697697083867">tweet_id 2064649697697083867</a></small></td>
+        </tr>
         </tbody></table></div>
     </div>
-    
+
     </section>
 
     <section class="section-band" id="matrix">
@@ -1236,7 +1244,7 @@
               <td><div class="metric-bar metric-blue" aria-label="crowding 91"><span style="width:91%"></span><b>91</b></div></td>
               <td><span class="lang lang-block lang-zh">高权重主链：推文密度最高，具备多跳 BOM 映射、海外 anchor 和材料/设备约束。</span><span class="lang lang-block lang-en">Highest-weight chain: dense tweet evidence, multi-hop BOM mapping, overseas anchors and material or equipment constraints.</span></td>
             </tr>
-            
+
             <tr class="chain-row tone-teal">
               <th><span><span class="lang lang-zh">先进封装</span><span class="lang lang-en">Advanced Packaging</span></span><small><span class="lang lang-zh">先进封装 / 关键设备</span><span class="lang lang-en">Advanced Packaging / Critical Equipment</span></small></th>
               <td class="priority">74.3</td>
@@ -1246,7 +1254,7 @@
               <td><div class="metric-bar metric-teal" aria-label="crowding 81"><span style="width:81%"></span><b>81</b></div></td>
               <td><span class="lang lang-block lang-zh">结构性主链：单个 A股标的业务相关性差异很大，需要按设备/材料/封测环节拆开看。</span><span class="lang lang-block lang-en">Structural chain: A-share business relevance varies widely, so equipment, materials and OSAT links must be separated.</span></td>
             </tr>
-            
+
             <tr class="chain-row tone-amber">
               <th><span><span class="lang lang-zh">HBM/HBF</span><span class="lang lang-en">HBM/HBF</span></span><small><span class="lang lang-zh">HBM / HBF / 存储带宽</span><span class="lang lang-en">HBM / HBF / Memory Bandwidth</span></small></th>
               <td class="priority">73.9</td>
@@ -1256,7 +1264,7 @@
               <td><div class="metric-bar metric-amber" aria-label="crowding 88"><span style="width:88%"></span><b>88</b></div></td>
               <td><span class="lang lang-block lang-zh">高热度但已显性化：更适合拆成 HBF、TC bonder、材料和后道设备等叶子链。</span><span class="lang lang-block lang-en">High-heat but already visible: better decomposed into HBF, TC bonders, materials and back-end equipment leaf chains.</span></td>
             </tr>
-            
+
             <tr class="chain-row tone-crimson">
               <th><span><span class="lang lang-zh">电力功率</span><span class="lang lang-en">Power Semis</span></span><small><span class="lang lang-zh">电力 / 功率半导体</span><span class="lang lang-en">Power / Power Semiconductors</span></small></th>
               <td class="priority">70.2</td>
@@ -1266,7 +1274,7 @@
               <td><div class="metric-bar metric-crimson" aria-label="crowding 49"><span style="width:49%"></span><b>49</b></div></td>
               <td><span class="lang lang-block lang-zh">中热度链：推文数量低于 CPO/HBM，但瓶颈硬度高，适合作为拥挤主线之外的补充研究。</span><span class="lang lang-block lang-en">Mid-heat chain: lower tweet count than CPO or HBM, but high bottleneck hardness makes it useful as a second-order research lane.</span></td>
             </tr>
-            
+
             <tr class="chain-row tone-green">
               <th><span><span class="lang lang-zh">Neocloud</span><span class="lang lang-en">Neocloud</span></span><small><span class="lang lang-zh">Neocloud / 算力融资质量</span><span class="lang lang-en">Neocloud / Compute Financing Quality</span></small></th>
               <td class="priority">66.7</td>
@@ -1276,7 +1284,7 @@
               <td><div class="metric-bar metric-green" aria-label="crowding 78"><span style="width:78%"></span><b>78</b></div></td>
               <td><span class="lang lang-block lang-zh">高推文密度但 A股映射间接：国内更多体现为 IDC、液冷、电源、服务器和国产算力链。</span><span class="lang lang-block lang-en">Dense tweet chain but indirect for A-shares: domestic mapping is mostly IDC, liquid cooling, power, servers and local compute.</span></td>
             </tr>
-            
+
             <tr class="chain-row tone-violet">
               <th><span><span class="lang lang-zh">玻璃基板</span><span class="lang lang-en">Glass Substrate</span></span><small><span class="lang lang-zh">玻璃基板 / 先进载板</span><span class="lang lang-en">Glass Substrate / Advanced Substrates</span></small></th>
               <td class="priority">61.1</td>
@@ -1286,7 +1294,7 @@
               <td><div class="metric-bar metric-violet" aria-label="crowding 58"><span style="width:58%"></span><b>58</b></div></td>
               <td><span class="lang lang-block lang-zh">新近升温链：推文样本少于 CPO/HBM，但处在供应链重新定价的早期观察区。</span><span class="lang lang-block lang-en">Newly heating chain: fewer tweets than CPO or HBM, but it sits in an early supply-chain repricing zone.</span></td>
             </tr>
-            
+
             <tr class="chain-row tone-slate">
               <th><span><span class="lang lang-zh">Physical AI</span><span class="lang lang-en">Physical AI</span></span><small><span class="lang lang-zh">Physical AI / 国防光学</span><span class="lang lang-en">Physical AI / Defense Optics</span></small></th>
               <td class="priority">58.9</td>
@@ -1300,7 +1308,7 @@
     </section>
 
     <section class="chain-stack" id="chains">
-      
+
             <section class="chain-deep tone-blue" id="chain-cpo_inp">
               <div class="chain-head">
                 <span>01</span>
@@ -1323,7 +1331,7 @@
                   <label><span class="lang lang-zh">瓶颈硬度</span><span class="lang lang-en">Bottleneck Hardness</span><div class="metric-bar metric-blue" aria-label="bottleneck hardness 95"><span style="width:95%"></span><b>95</b></div></label>
                   <label><span class="lang lang-zh">映射清晰度</span><span class="lang lang-en">Mapping Clarity</span><div class="metric-bar metric-blue" aria-label="mapping clarity 96"><span style="width:96%"></span><b>96</b></div></label>
                   <label><span class="lang lang-zh">拥挤 proxy</span><span class="lang lang-en">Crowding Proxy</span><div class="metric-bar metric-blue" aria-label="crowding proxy 91"><span style="width:91%"></span><b>91</b></div></label>
-                  <p>2172 tweets｜Top tickers: SIVE, AXTI, LITE, AAOI, NVDA, COHR, MRVL, GOOGL, AMZN, MSFT</p>
+                  <p>2173 tweets｜Top tickers: SIVE, AXTI, LITE, AAOI, NVDA, COHR, MRVL, GOOGL, AMZN, MSFT</p>
                 </div>
                 <div class="mapping-block">
                   <h4><span class="lang lang-zh">A股叶子链映射</span><span class="lang lang-en">A-share Leaf-lane Mapping</span></h4>
@@ -1333,43 +1341,43 @@
               <td><span class="lang lang-zh">高速光模块</span><span class="lang lang-en">High-speed Optical Modules</span><small>beneficiary · high</small></td>
               <td>800G/1.6T可插拔光模块</td>
             </tr>
-            
+
             <tr>
               <td>新易盛<small>300502.SZ</small></td>
               <td><span class="lang lang-zh">高速光模块</span><span class="lang lang-en">High-speed Optical Modules</span><small>beneficiary · high</small></td>
               <td>800G/1.6T可插拔光模块</td>
             </tr>
-            
+
             <tr>
               <td>仕佳光子<small>688313.SH</small></td>
               <td><span class="lang lang-zh">光芯片 / 硅光 / 上游光器件</span><span class="lang lang-en">Optical Chips / Silicon Photonics / Upstream Optical Components</span><small>bottleneck · high</small></td>
               <td>AWG/PLC/DFB光芯片/光器件</td>
             </tr>
-            
+
             <tr>
               <td>长飞光纤<small>601869.SH</small></td>
               <td><span class="lang lang-zh">光纤预制棒 / 数据中心光缆</span><span class="lang lang-en">Optical Fiber Preforms / Data-center Cables</span><small>enabler · medium</small></td>
               <td>光纤预制棒/新型数据中心光纤</td>
             </tr>
-            
+
             <tr>
               <td>亨通光电<small>600487.SH</small></td>
               <td><span class="lang lang-zh">光纤预制棒 / 数据中心光缆</span><span class="lang lang-en">Optical Fiber Preforms / Data-center Cables</span><small>enabler · medium</small></td>
               <td>数据中心光缆/光模块/光纤平台</td>
             </tr>
-            
+
             <tr>
               <td>中天科技<small>600522.SH</small></td>
               <td><span class="lang lang-zh">光纤预制棒 / 数据中心光缆</span><span class="lang lang-en">Optical Fiber Preforms / Data-center Cables</span><small>enabler · medium</small></td>
               <td>超大芯数光缆/224G铜缆/800G光模块</td>
             </tr>
-            
+
             <tr>
               <td>烽火通信<small>600498.SH</small></td>
               <td><span class="lang lang-zh">光纤预制棒 / 数据中心光缆</span><span class="lang lang-en">Optical Fiber Preforms / Data-center Cables</span><small>enabler · medium</small></td>
               <td>DCI光传输系统/预连接光缆</td>
             </tr>
-            
+
             <tr>
               <td>三安光电<small>600703.SH</small></td>
               <td><span class="lang lang-zh">InP / 化合物材料</span><span class="lang lang-en">InP / Compound Materials</span><small>bottleneck · medium</small></td>
@@ -1385,31 +1393,31 @@
               <p>中际旭创、新易盛、华工科技、剑桥科技、联特科技</p>
               <small><span class="lang lang-zh">映射依据</span><span class="lang lang-en">Mapping Basis</span>：800G/1.6T收入占比；北美云厂商客户；海外产能；毛利率斜率</small>
             </article>
-            
+
             <article class="subchain-card">
               <header><b><span class="lang lang-zh">光芯片 / 硅光 / 上游光器件</span><span class="lang lang-en">Optical Chips / Silicon Photonics / Upstream Optical Components</span></b><span>bottleneck · high</span></header>
               <p>仕佳光子、源杰科技、长光华芯、光迅科技、光库科技、天孚通信</p>
               <small><span class="lang lang-zh">映射依据</span><span class="lang lang-en">Mapping Basis</span>：高速光芯片出货；硅光客户导入；外延良率；海外客户认证</small>
             </article>
-            
+
             <article class="subchain-card">
               <header><b><span class="lang lang-zh">InP / 化合物材料</span><span class="lang lang-en">InP / Compound Materials</span></b><span>bottleneck · medium</span></header>
               <p>三安光电、云南锗业、有研新材</p>
               <small><span class="lang lang-zh">映射依据</span><span class="lang lang-en">Mapping Basis</span>：衬底收入占比；外延片良率；材料自供率；客户认证周期</small>
             </article>
-            
+
             <article class="subchain-card">
               <header><b><span class="lang lang-zh">光连接器 / 陶瓷插芯</span><span class="lang lang-en">Optical Connectors / Ceramic Ferrules</span></b><span>enabler · medium</span></header>
               <p>太辰光、三环集团、鼎通科技</p>
               <small><span class="lang lang-zh">映射依据</span><span class="lang lang-en">Mapping Basis</span>：MPO/MTP订单；陶瓷插芯产能；高速连接器客户；价格与交期</small>
             </article>
-            
+
             <article class="subchain-card">
               <header><b><span class="lang lang-zh">光纤预制棒 / 数据中心光缆</span><span class="lang lang-en">Optical Fiber Preforms / Data-center Cables</span></b><span>enabler · medium</span></header>
               <p>长飞光纤、亨通光电、中天科技、烽火通信</p>
               <small><span class="lang lang-zh">映射依据</span><span class="lang lang-en">Mapping Basis</span>：数据中心光缆收入；低损耗/空芯光纤产品；超大芯数光缆订单；AI数据中心客户占比</small>
             </article>
-            
+
             <article class="subchain-card">
               <header><b><span class="lang lang-zh">高速铜缆 / AEC / 高速连接器</span><span class="lang lang-en">High-speed Copper / AEC / High-speed Connectors</span></b><span>proxy · watch</span></header>
               <p>神宇股份、沃尔核材、兆龙互连、华丰科技、意华股份</p>
@@ -1426,25 +1434,25 @@
               <p>US has now invaded Venezuela. Everyone is probably wondering the same thing: How do you profit off the situation? 1. Heavy Sour, Ammonia, and Nitrogen Fertilizers disruption ( $CF , $CVE). These are Venezuela&#x27;s biggest exports. Most people will buy generic oil ETFs or light swee…</p>
               <a href="https://x.com/aleabitoreddit/status/2007387427820978510">tweet_id 2007387427820978510</a>
             </article>
-            
+
             <article class="evidence-item">
               <header><b>2026-01-02</b><span>score 102</span><em>AAOI, AIRO, AKAM, ALAB, AMD, AMKR, AMZN, ASOZF, ASTS, A…</em></header>
               <p>Welcome to 2026. Jan 1st ratings: Strong Buy: $TTD $SMCI $AIRO $INTC $HIMS $AXTI $TSM $NBIS $CIFR Samsung Electronics (KRX: 005930) $HUT $IREN $WULF $GLXY $TSSI $META $ETOR $CRCL Buy: $KRKNF $ONDS $GEMI $NVDA $MU $AMKR SK Hynix $SNAP $RDDT $AAOI $COHR $FISV $FLY $DJT $LITE $AMZN…</p>
               <a href="https://x.com/aleabitoreddit/status/2007071108831338685">tweet_id 2007071108831338685</a>
             </article>
-            
+
             <article class="evidence-item">
               <header><b>2026-06-07</b><span>score 97</span><em>AAOI, AXTI, INTC, IQE, JBL, LITE, MRVL, NVDA, RPI, SIVE…</em></header>
               <p>I think my personal style of investing is a bit different, just some reflection: It&#x27;s inherently discretionary, based on stuff markets don&#x27;t know yet. And a culmination of life experiences? If you look at $AXTI, $RPI, $SIVE, $IQE and others. Lot of it is guessing on unstructured…</p>
               <a href="https://x.com/aleabitoreddit/status/2063465386960736396">tweet_id 2063465386960736396</a>
             </article>
-            
+
             <article class="evidence-item">
               <header><b>2026-05-17</b><span>score 96</span><em>AAOI, AMD, ASML, COHR, DGXX, FN, INTC, IQE, JBL, KOPN,…</em></header>
               <p>When I see comments like this (and there are a lot) from retail investors: I immediately think they lack the technical depth. I&#x27;ll walk through each one from $SIVE to $LPK: 1. Photonics TAM goes from $14B -&gt; $154B In just two years time, and it&#x27;s likely going to keep scaling pas…</p>
               <a href="https://x.com/aleabitoreddit/status/2055822766600016238">tweet_id 2055822766600016238</a>
             </article>
-            
+
             <article class="evidence-item">
               <header><b>2026-03-16</b><span>score 90</span><em>AAOI, AXTI, COHR, FN, INTC, LITE, LWLG, MTSI, NVDA, POE…</em></header>
               <p>I’m long $SIVE at $140M. I believe this is the next $LITE that markets and institutions missed. $SIVE makes InP CW DFB lasers. Closest comparison is $LITE in the current EML laser bottleneck. But instead of supplying to Innolight/Eoptolink for current optical transceivers cycles…</p>
@@ -1453,7 +1461,7 @@
             </div>
               </details>
             </section>
-            
+
             <section class="chain-deep tone-teal" id="chain-advanced_packaging">
               <div class="chain-head">
                 <span>02</span>
@@ -1476,7 +1484,7 @@
                   <label><span class="lang lang-zh">瓶颈硬度</span><span class="lang lang-en">Bottleneck Hardness</span><div class="metric-bar metric-teal" aria-label="bottleneck hardness 88"><span style="width:88%"></span><b>88</b></div></label>
                   <label><span class="lang lang-zh">映射清晰度</span><span class="lang lang-en">Mapping Clarity</span><div class="metric-bar metric-teal" aria-label="mapping clarity 88"><span style="width:88%"></span><b>88</b></div></label>
                   <label><span class="lang lang-zh">拥挤 proxy</span><span class="lang lang-en">Crowding Proxy</span><div class="metric-bar metric-teal" aria-label="crowding proxy 81"><span style="width:81%"></span><b>81</b></div></label>
-                  <p>1422 tweets｜Top tickers: NVDA, LITE, NBIS, AXTI, MU, GOOGL, SNDK, TSM, SIVE, MSFT</p>
+                  <p>1424 tweets｜Top tickers: NVDA, LITE, NBIS, AXTI, MU, GOOGL, SNDK, TSM, SIVE, MSFT</p>
                 </div>
                 <div class="mapping-block">
                   <h4><span class="lang lang-zh">A股叶子链映射</span><span class="lang lang-en">A-share Leaf-lane Mapping</span></h4>
@@ -1486,43 +1494,43 @@
               <td><span class="lang lang-zh">HBF / TC bonder / 混合键合设备</span><span class="lang lang-en">HBF / TC Bonder / Hybrid Bonding Equipment</span><small>bottleneck · high</small></td>
               <td>W2W/D2W混合键合设备</td>
             </tr>
-            
+
             <tr>
               <td>百傲化学<small>603360.SH</small></td>
               <td><span class="lang lang-zh">HBF / TC bonder / 混合键合设备</span><span class="lang lang-en">HBF / TC Bonder / Hybrid Bonding Equipment</span><small>bottleneck · high</small></td>
               <td>W2W/D2W混合键合设备</td>
             </tr>
-            
+
             <tr>
               <td>长川科技<small>300604.SZ</small></td>
               <td><span class="lang lang-zh">测试 / 量测 / 探针</span><span class="lang lang-en">Test / Metrology / Probe</span><small>enabler · medium</small></td>
               <td>SoC/存储测试机/分选机</td>
             </tr>
-            
+
             <tr>
               <td>长电科技<small>600584.SH</small></td>
               <td><span class="lang lang-zh">OSAT / 先进封装产能</span><span class="lang lang-en">OSAT / Advanced Packaging Capacity</span><small>beneficiary · medium</small></td>
               <td>2.5D/3D/Chiplet/Fan-Out先进封测</td>
             </tr>
-            
+
             <tr>
               <td>通富微电<small>002156.SZ</small></td>
               <td><span class="lang lang-zh">OSAT / 先进封装产能</span><span class="lang lang-en">OSAT / Advanced Packaging Capacity</span><small>beneficiary · medium</small></td>
               <td>2.5D/3D/Chiplet/Fan-Out先进封测</td>
             </tr>
-            
+
             <tr>
               <td>华峰测控<small>688200.SH</small></td>
               <td><span class="lang lang-zh">测试 / 量测 / 探针</span><span class="lang lang-en">Test / Metrology / Probe</span><small>enabler · medium</small></td>
               <td>SoC/存储测试机/分选机</td>
             </tr>
-            
+
             <tr>
               <td>快克智能<small>603203.SH</small></td>
               <td><span class="lang lang-zh">HBF / TC bonder / 混合键合设备</span><span class="lang lang-en">HBF / TC Bonder / Hybrid Bonding Equipment</span><small>bottleneck · high</small></td>
               <td>TCB热压键合设备</td>
             </tr>
-            
+
             <tr>
               <td>北方华创<small>002371.SZ</small></td>
               <td><span class="lang lang-zh">前道半导体设备 / 刻蚀薄膜</span><span class="lang lang-en">Front-end Semi Equipment / Etch and Deposition</span><small>enabler · medium</small></td>
@@ -1538,31 +1546,31 @@
               <p>拓荆科技、快克智能、百傲化学</p>
               <small><span class="lang lang-zh">映射依据</span><span class="lang lang-en">Mapping Basis</span>：设备订单；HBM扩产节奏；客户验证；交付周期</small>
             </article>
-            
+
             <article class="subchain-card">
               <header><b><span class="lang lang-zh">先进封装工艺设备</span><span class="lang lang-en">Advanced Packaging Process Tools</span></b><span>bottleneck · high</span></header>
               <p>盛美上海、华海清科、芯源微</p>
               <small><span class="lang lang-zh">映射依据</span><span class="lang lang-en">Mapping Basis</span>：先进封装订单；客户导入；国产替代比例；设备毛利率</small>
             </article>
-            
+
             <article class="subchain-card">
               <header><b><span class="lang lang-zh">前道半导体设备 / 刻蚀薄膜</span><span class="lang lang-en">Front-end Semi Equipment / Etch and Deposition</span></b><span>enabler · medium</span></header>
               <p>北方华创、中微公司</p>
               <small><span class="lang lang-zh">映射依据</span><span class="lang lang-en">Mapping Basis</span>：新签订单；合同负债；发出商品；先进逻辑/存储客户验证</small>
             </article>
-            
+
             <article class="subchain-card">
               <header><b><span class="lang lang-zh">测试 / 量测 / 探针</span><span class="lang lang-en">Test / Metrology / Probe</span></b><span>enabler · medium</span></header>
               <p>长川科技、华峰测控、中科飞测、精测电子</p>
               <small><span class="lang lang-zh">映射依据</span><span class="lang lang-en">Mapping Basis</span>：测试设备订单；探针卡客户；载板良率；验证周期</small>
             </article>
-            
+
             <article class="subchain-card">
               <header><b><span class="lang lang-zh">封装基板 / ABF / FC-BGA验证</span><span class="lang lang-en">Packaging Substrate / ABF / FC-BGA Validation</span></b><span>enabler · medium</span></header>
               <p>深南电路、兴森科技</p>
               <small><span class="lang lang-zh">映射依据</span><span class="lang lang-en">Mapping Basis</span>：封装基板收入；FC-BGA良率；HBM/AI客户认证；产能爬坡</small>
             </article>
-            
+
             <article class="subchain-card">
               <header><b><span class="lang lang-zh">封装材料 / CMP材料</span><span class="lang lang-en">Packaging Materials / CMP Materials</span></b><span>bottleneck · medium</span></header>
               <p>华海诚科、德邦科技、生益科技、南亚新材、联瑞新材</p>
@@ -1579,25 +1587,25 @@
               <p>US has now invaded Venezuela. Everyone is probably wondering the same thing: How do you profit off the situation? 1. Heavy Sour, Ammonia, and Nitrogen Fertilizers disruption ( $CF , $CVE). These are Venezuela&#x27;s biggest exports. Most people will buy generic oil ETFs or light swee…</p>
               <a href="https://x.com/aleabitoreddit/status/2007387427820978510">tweet_id 2007387427820978510</a>
             </article>
-            
+
             <article class="evidence-item">
               <header><b>2026-01-02</b><span>score 102</span><em>AAOI, AIRO, AKAM, ALAB, AMD, AMKR, AMZN, ASOZF, ASTS, A…</em></header>
               <p>Welcome to 2026. Jan 1st ratings: Strong Buy: $TTD $SMCI $AIRO $INTC $HIMS $AXTI $TSM $NBIS $CIFR Samsung Electronics (KRX: 005930) $HUT $IREN $WULF $GLXY $TSSI $META $ETOR $CRCL Buy: $KRKNF $ONDS $GEMI $NVDA $MU $AMKR SK Hynix $SNAP $RDDT $AAOI $COHR $FISV $FLY $DJT $LITE $AMZN…</p>
               <a href="https://x.com/aleabitoreddit/status/2007071108831338685">tweet_id 2007071108831338685</a>
             </article>
-            
+
             <article class="evidence-item">
               <header><b>2026-06-07</b><span>score 97</span><em>AAOI, AXTI, INTC, IQE, JBL, LITE, MRVL, NVDA, RPI, SIVE…</em></header>
               <p>I think my personal style of investing is a bit different, just some reflection: It&#x27;s inherently discretionary, based on stuff markets don&#x27;t know yet. And a culmination of life experiences? If you look at $AXTI, $RPI, $SIVE, $IQE and others. Lot of it is guessing on unstructured…</p>
               <a href="https://x.com/aleabitoreddit/status/2063465386960736396">tweet_id 2063465386960736396</a>
             </article>
-            
+
             <article class="evidence-item">
               <header><b>2026-05-17</b><span>score 96</span><em>AAOI, AMD, ASML, COHR, DGXX, FN, INTC, IQE, JBL, KOPN,…</em></header>
               <p>When I see comments like this (and there are a lot) from retail investors: I immediately think they lack the technical depth. I&#x27;ll walk through each one from $SIVE to $LPK: 1. Photonics TAM goes from $14B -&gt; $154B In just two years time, and it&#x27;s likely going to keep scaling pas…</p>
               <a href="https://x.com/aleabitoreddit/status/2055822766600016238">tweet_id 2055822766600016238</a>
             </article>
-            
+
             <article class="evidence-item">
               <header><b>2026-03-16</b><span>score 90</span><em>AAOI, AXTI, COHR, FN, INTC, LITE, LWLG, MTSI, NVDA, POE…</em></header>
               <p>I’m long $SIVE at $140M. I believe this is the next $LITE that markets and institutions missed. $SIVE makes InP CW DFB lasers. Closest comparison is $LITE in the current EML laser bottleneck. But instead of supplying to Innolight/Eoptolink for current optical transceivers cycles…</p>
@@ -1606,7 +1614,7 @@
             </div>
               </details>
             </section>
-            
+
             <section class="chain-deep tone-amber" id="chain-memory_hbf">
               <div class="chain-head">
                 <span>03</span>
@@ -1629,7 +1637,7 @@
                   <label><span class="lang lang-zh">瓶颈硬度</span><span class="lang lang-en">Bottleneck Hardness</span><div class="metric-bar metric-amber" aria-label="bottleneck hardness 90"><span style="width:90%"></span><b>90</b></div></label>
                   <label><span class="lang lang-zh">映射清晰度</span><span class="lang lang-en">Mapping Clarity</span><div class="metric-bar metric-amber" aria-label="mapping clarity 91"><span style="width:91%"></span><b>91</b></div></label>
                   <label><span class="lang lang-zh">拥挤 proxy</span><span class="lang lang-en">Crowding Proxy</span><div class="metric-bar metric-amber" aria-label="crowding proxy 88"><span style="width:88%"></span><b>88</b></div></label>
-                  <p>1377 tweets｜Top tickers: LITE, NVDA, NBIS, AXTI, MU, GOOGL, SNDK, AMZN, MSFT, AAOI</p>
+                  <p>1379 tweets｜Top tickers: LITE, NVDA, NBIS, AXTI, MU, GOOGL, SNDK, AMZN, MSFT, TSM</p>
                 </div>
                 <div class="mapping-block">
                   <h4><span class="lang lang-zh">A股叶子链映射</span><span class="lang lang-en">A-share Leaf-lane Mapping</span></h4>
@@ -1639,43 +1647,43 @@
               <td><span class="lang lang-zh">未归类子链</span><span class="lang lang-en">Unclassified Leaf Lane</span><small>watchlist · watch</small></td>
               <td>CMP设备/减薄设备</td>
             </tr>
-            
+
             <tr>
               <td>长川科技<small>300604.SZ</small></td>
               <td><span class="lang lang-zh">未归类子链</span><span class="lang lang-en">Unclassified Leaf Lane</span><small>watchlist · watch</small></td>
               <td>SoC/存储测试机/分选机</td>
             </tr>
-            
+
             <tr>
               <td>拓荆科技<small>688072.SH</small></td>
               <td><span class="lang lang-zh">HBF / TC bonder / 混合键合设备</span><span class="lang lang-en">HBF / TC Bonder / Hybrid Bonding Equipment</span><small>bottleneck · high</small></td>
               <td>W2W/D2W混合键合设备</td>
             </tr>
-            
+
             <tr>
               <td>快克智能<small>603203.SH</small></td>
               <td><span class="lang lang-zh">HBF / TC bonder / 混合键合设备</span><span class="lang lang-en">HBF / TC Bonder / Hybrid Bonding Equipment</span><small>bottleneck · high</small></td>
               <td>TCB热压键合设备</td>
             </tr>
-            
+
             <tr>
               <td>百傲化学<small>603360.SH</small></td>
               <td><span class="lang lang-zh">HBF / TC bonder / 混合键合设备</span><span class="lang lang-en">HBF / TC Bonder / Hybrid Bonding Equipment</span><small>bottleneck · high</small></td>
               <td>W2W/D2W混合键合设备</td>
             </tr>
-            
+
             <tr>
               <td>深南电路<small>002916.SZ</small></td>
               <td><span class="lang lang-zh">HBM 封装基板 / FC-BGA</span><span class="lang lang-en">HBM Packaging Substrates / FC-BGA</span><small>enabler · medium</small></td>
               <td>HBM/先进封装基板</td>
             </tr>
-            
+
             <tr>
               <td>兴森科技<small>002436.SZ</small></td>
               <td><span class="lang lang-zh">HBM 封装基板 / FC-BGA</span><span class="lang lang-en">HBM Packaging Substrates / FC-BGA</span><small>enabler · medium</small></td>
               <td>HBM/先进封装基板</td>
             </tr>
-            
+
             <tr>
               <td>生益科技<small>600183.SH</small></td>
               <td><span class="lang lang-zh">HBM / 先进封装材料</span><span class="lang lang-en">HBM / Advanced Packaging Materials</span><small>bottleneck · medium</small></td>
@@ -1691,25 +1699,25 @@
               <p>江波龙、香农芯创</p>
               <small><span class="lang lang-zh">映射依据</span><span class="lang lang-en">Mapping Basis</span>：企业级SSD收入；DDR5 RDIMM客户；存储价格周期；库存水位</small>
             </article>
-            
+
             <article class="subchain-card">
               <header><b><span class="lang lang-zh">HBF / TC bonder / 混合键合设备</span><span class="lang lang-en">HBF / TC Bonder / Hybrid Bonding Equipment</span></b><span>bottleneck · high</span></header>
               <p>拓荆科技、快克智能、百傲化学</p>
               <small><span class="lang lang-zh">映射依据</span><span class="lang lang-en">Mapping Basis</span>：W2W/D2W订单；TCB客户打样；HBM/3D IC导入；设备验收</small>
             </article>
-            
+
             <article class="subchain-card">
               <header><b><span class="lang lang-zh">HBM 封装基板 / FC-BGA</span><span class="lang lang-en">HBM Packaging Substrates / FC-BGA</span></b><span>enabler · medium</span></header>
               <p>深南电路、兴森科技</p>
               <small><span class="lang lang-zh">映射依据</span><span class="lang lang-en">Mapping Basis</span>：封装基板收入；FC-BGA产线良率；HBM客户认证；产能爬坡</small>
             </article>
-            
+
             <article class="subchain-card">
               <header><b><span class="lang lang-zh">HBM / 先进封装材料</span><span class="lang lang-en">HBM / Advanced Packaging Materials</span></b><span>bottleneck · medium</span></header>
               <p>生益科技、南亚新材、华海诚科、德邦科技、联瑞新材</p>
               <small><span class="lang lang-zh">映射依据</span><span class="lang lang-en">Mapping Basis</span>：高端基材等级；先进封装材料订单；客户导入；材料良率</small>
             </article>
-            
+
             <article class="subchain-card">
               <header><b><span class="lang lang-zh">存储芯片设计 / 周期弹性</span><span class="lang lang-en">Memory Chip Design / Cycle Leverage</span></b><span>proxy · watch</span></header>
               <p>兆易创新</p>
@@ -1726,25 +1734,25 @@
               <p>US has now invaded Venezuela. Everyone is probably wondering the same thing: How do you profit off the situation? 1. Heavy Sour, Ammonia, and Nitrogen Fertilizers disruption ( $CF , $CVE). These are Venezuela&#x27;s biggest exports. Most people will buy generic oil ETFs or light swee…</p>
               <a href="https://x.com/aleabitoreddit/status/2007387427820978510">tweet_id 2007387427820978510</a>
             </article>
-            
+
             <article class="evidence-item">
               <header><b>2026-01-02</b><span>score 102</span><em>AAOI, AIRO, AKAM, ALAB, AMD, AMKR, AMZN, ASOZF, ASTS, A…</em></header>
               <p>Welcome to 2026. Jan 1st ratings: Strong Buy: $TTD $SMCI $AIRO $INTC $HIMS $AXTI $TSM $NBIS $CIFR Samsung Electronics (KRX: 005930) $HUT $IREN $WULF $GLXY $TSSI $META $ETOR $CRCL Buy: $KRKNF $ONDS $GEMI $NVDA $MU $AMKR SK Hynix $SNAP $RDDT $AAOI $COHR $FISV $FLY $DJT $LITE $AMZN…</p>
               <a href="https://x.com/aleabitoreddit/status/2007071108831338685">tweet_id 2007071108831338685</a>
             </article>
-            
+
             <article class="evidence-item">
               <header><b>2026-06-07</b><span>score 97</span><em>AAOI, AXTI, INTC, IQE, JBL, LITE, MRVL, NVDA, RPI, SIVE…</em></header>
               <p>I think my personal style of investing is a bit different, just some reflection: It&#x27;s inherently discretionary, based on stuff markets don&#x27;t know yet. And a culmination of life experiences? If you look at $AXTI, $RPI, $SIVE, $IQE and others. Lot of it is guessing on unstructured…</p>
               <a href="https://x.com/aleabitoreddit/status/2063465386960736396">tweet_id 2063465386960736396</a>
             </article>
-            
+
             <article class="evidence-item">
               <header><b>2026-05-17</b><span>score 96</span><em>AAOI, AMD, ASML, COHR, DGXX, FN, INTC, IQE, JBL, KOPN,…</em></header>
               <p>When I see comments like this (and there are a lot) from retail investors: I immediately think they lack the technical depth. I&#x27;ll walk through each one from $SIVE to $LPK: 1. Photonics TAM goes from $14B -&gt; $154B In just two years time, and it&#x27;s likely going to keep scaling pas…</p>
               <a href="https://x.com/aleabitoreddit/status/2055822766600016238">tweet_id 2055822766600016238</a>
             </article>
-            
+
             <article class="evidence-item">
               <header><b>2026-03-16</b><span>score 90</span><em>AAOI, AXTI, COHR, FN, INTC, LITE, LWLG, MTSI, NVDA, POE…</em></header>
               <p>I’m long $SIVE at $140M. I believe this is the next $LITE that markets and institutions missed. $SIVE makes InP CW DFB lasers. Closest comparison is $LITE in the current EML laser bottleneck. But instead of supplying to Innolight/Eoptolink for current optical transceivers cycles…</p>
@@ -1753,7 +1761,7 @@
             </div>
               </details>
             </section>
-            
+
             <section class="chain-deep tone-crimson" id="chain-power_semis">
               <div class="chain-head">
                 <span>04</span>
@@ -1776,7 +1784,7 @@
                   <label><span class="lang lang-zh">瓶颈硬度</span><span class="lang lang-en">Bottleneck Hardness</span><div class="metric-bar metric-crimson" aria-label="bottleneck hardness 86"><span style="width:86%"></span><b>86</b></div></label>
                   <label><span class="lang lang-zh">映射清晰度</span><span class="lang lang-en">Mapping Clarity</span><div class="metric-bar metric-crimson" aria-label="mapping clarity 84"><span style="width:84%"></span><b>84</b></div></label>
                   <label><span class="lang lang-zh">拥挤 proxy</span><span class="lang lang-en">Crowding Proxy</span><div class="metric-bar metric-crimson" aria-label="crowding proxy 49"><span style="width:49%"></span><b>49</b></div></label>
-                  <p>772 tweets｜Top tickers: NVDA, LITE, GOOGL, AMZN, NBIS, MSFT, COHR, AXTI, TSM, AVGO</p>
+                  <p>773 tweets｜Top tickers: NVDA, LITE, GOOGL, AMZN, NBIS, MSFT, COHR, AXTI, TSM, AVGO</p>
                 </div>
                 <div class="mapping-block">
                   <h4><span class="lang lang-zh">A股叶子链映射</span><span class="lang lang-en">A-share Leaf-lane Mapping</span></h4>
@@ -1786,43 +1794,43 @@
               <td><span class="lang lang-zh">SiC/GaN/IGBT 功率器件</span><span class="lang lang-en">SiC/GaN/IGBT Power Devices</span><small>bottleneck · high</small></td>
               <td>MOSFET/SiC/GaN功率器件</td>
             </tr>
-            
+
             <tr>
               <td>斯达半导<small>603290.SH</small></td>
               <td><span class="lang lang-zh">SiC/GaN/IGBT 功率器件</span><span class="lang lang-en">SiC/GaN/IGBT Power Devices</span><small>bottleneck · high</small></td>
               <td>SiC/GaN功率模块/分立器件</td>
             </tr>
-            
+
             <tr>
               <td>华润微<small>688396.SH</small></td>
               <td><span class="lang lang-zh">SiC/GaN/IGBT 功率器件</span><span class="lang lang-en">SiC/GaN/IGBT Power Devices</span><small>bottleneck · high</small></td>
               <td>功率半导体IDM/IGBT/GaN/SiC</td>
             </tr>
-            
+
             <tr>
               <td>欧陆通<small>300870.SZ</small></td>
               <td><span class="lang lang-zh">服务器电源模块 / 电源管理</span><span class="lang lang-en">Server Power Modules / Power Management</span><small>enabler · medium</small></td>
               <td>高功率GPU服务器PSU/CRPS/PowerShelf</td>
             </tr>
-            
+
             <tr>
               <td>麦格米特<small>002851.SZ</small></td>
               <td><span class="lang lang-zh">服务器电源模块 / 电源管理</span><span class="lang lang-en">Server Power Modules / Power Management</span><small>enabler · medium</small></td>
               <td>高功率GPU服务器PSU/CRPS/PowerShelf</td>
             </tr>
-            
+
             <tr>
               <td>金盘科技<small>688676.SH</small></td>
               <td><span class="lang lang-zh">并网 / 变压器 / 电力接入</span><span class="lang lang-en">Grid Access / Transformers</span><small>bottleneck · medium</small></td>
               <td>数据中心干式变压器/中压供配电</td>
             </tr>
-            
+
             <tr>
               <td>法拉电子<small>600563.SH</small></td>
               <td><span class="lang lang-zh">高压电容 / MLCC / 被动件</span><span class="lang lang-en">High-voltage Capacitors / MLCC / Passives</span><small>proxy · watch</small></td>
               <td>AI服务器电源/UPS薄膜电容</td>
             </tr>
-            
+
             <tr>
               <td>天岳先进<small>688234.SH</small></td>
               <td><span class="lang lang-zh">SiC/GaN/IGBT 功率器件</span><span class="lang lang-en">SiC/GaN/IGBT Power Devices</span><small>bottleneck · high</small></td>
@@ -1838,19 +1846,19 @@
               <p>东微半导、斯达半导、华润微、新洁能、士兰微、天岳先进</p>
               <small><span class="lang lang-zh">映射依据</span><span class="lang lang-en">Mapping Basis</span>：服务器电源导入；SiC/GaN价格；库存周期；车规与数据中心收入</small>
             </article>
-            
+
             <article class="subchain-card">
               <header><b><span class="lang lang-zh">服务器电源模块 / 电源管理</span><span class="lang lang-en">Server Power Modules / Power Management</span></b><span>enabler · medium</span></header>
               <p>新雷能、可立克、铂科新材、欧陆通、麦格米特</p>
               <small><span class="lang lang-zh">映射依据</span><span class="lang lang-en">Mapping Basis</span>：AI服务器电源订单；客户认证；功率密度；模块毛利率</small>
             </article>
-            
+
             <article class="subchain-card">
               <header><b><span class="lang lang-zh">并网 / 变压器 / 电力接入</span><span class="lang lang-en">Grid Access / Transformers</span></b><span>bottleneck · medium</span></header>
               <p>金盘科技、思源电气</p>
               <small><span class="lang lang-zh">映射依据</span><span class="lang lang-en">Mapping Basis</span>：数据中心订单；变压器交期；海外收入；产能扩张</small>
             </article>
-            
+
             <article class="subchain-card">
               <header><b><span class="lang lang-zh">高压电容 / MLCC / 被动件</span><span class="lang lang-en">High-voltage Capacitors / MLCC / Passives</span></b><span>proxy · watch</span></header>
               <p>三环集团、风华高科、博杰股份、宏达电子、江海股份、博迁新材</p>
@@ -1867,25 +1875,25 @@
               <p>US has now invaded Venezuela. Everyone is probably wondering the same thing: How do you profit off the situation? 1. Heavy Sour, Ammonia, and Nitrogen Fertilizers disruption ( $CF , $CVE). These are Venezuela&#x27;s biggest exports. Most people will buy generic oil ETFs or light swee…</p>
               <a href="https://x.com/aleabitoreddit/status/2007387427820978510">tweet_id 2007387427820978510</a>
             </article>
-            
+
             <article class="evidence-item">
               <header><b>2026-01-02</b><span>score 102</span><em>AAOI, AIRO, AKAM, ALAB, AMD, AMKR, AMZN, ASOZF, ASTS, A…</em></header>
               <p>Welcome to 2026. Jan 1st ratings: Strong Buy: $TTD $SMCI $AIRO $INTC $HIMS $AXTI $TSM $NBIS $CIFR Samsung Electronics (KRX: 005930) $HUT $IREN $WULF $GLXY $TSSI $META $ETOR $CRCL Buy: $KRKNF $ONDS $GEMI $NVDA $MU $AMKR SK Hynix $SNAP $RDDT $AAOI $COHR $FISV $FLY $DJT $LITE $AMZN…</p>
               <a href="https://x.com/aleabitoreddit/status/2007071108831338685">tweet_id 2007071108831338685</a>
             </article>
-            
+
             <article class="evidence-item">
               <header><b>2026-05-17</b><span>score 96</span><em>AAOI, AMD, ASML, COHR, DGXX, FN, INTC, IQE, JBL, KOPN,…</em></header>
               <p>When I see comments like this (and there are a lot) from retail investors: I immediately think they lack the technical depth. I&#x27;ll walk through each one from $SIVE to $LPK: 1. Photonics TAM goes from $14B -&gt; $154B In just two years time, and it&#x27;s likely going to keep scaling pas…</p>
               <a href="https://x.com/aleabitoreddit/status/2055822766600016238">tweet_id 2055822766600016238</a>
             </article>
-            
+
             <article class="evidence-item">
               <header><b>2026-01-14</b><span>score 89</span><em>LPTH, ONDS, UMAC, VLN</em></header>
               <p>I&#x27;ve initiated positions in $LPTH ($621M). Lightpath is incredible. Every modern thermal weapon (Missiles, Drones) requires Germanium glass, which China owns (70%) LPTH is the only US alternative with: Black Diamond Users? - $ONDS - L3Harris - Lockheed - Andruil (likely) - $UMAC…</p>
               <a href="https://x.com/aleabitoreddit/status/2011496801548058735">tweet_id 2011496801548058735</a>
             </article>
-            
+
             <article class="evidence-item">
               <header><b>2026-04-09</b><span>score 88</span><em>AAOI, AEHR, AMKR, AMZN, ARM, AVGO, CEG, COHR, CRCL, CVX…</em></header>
               <p>Here&#x27;s a bunch of random 30 US-available random stocks I like today and why: 1. $INTC - America&#x27;s hope for foundry, national security 2. $MRVL - scales rev from future maia asics and add ons like cpo, they do everything lost count 3. $TSM - backbone of semis/ai 4. $COHR - They d…</p>
@@ -1894,7 +1902,7 @@
             </div>
               </details>
             </section>
-            
+
             <section class="chain-deep tone-green" id="chain-neocloud">
               <div class="chain-head">
                 <span>05</span>
@@ -1927,43 +1935,43 @@
               <td><span class="lang lang-zh">液冷 / 热管理</span><span class="lang lang-en">Liquid Cooling / Thermal Management</span><small>enabler · medium</small></td>
               <td>CDU/冷板/Manifold/机房温控</td>
             </tr>
-            
+
             <tr>
               <td>同飞股份<small>300990.SZ</small></td>
               <td><span class="lang lang-zh">液冷 / 热管理</span><span class="lang lang-en">Liquid Cooling / Thermal Management</span><small>enabler · medium</small></td>
               <td>CDU/冷板/Manifold/机房温控</td>
             </tr>
-            
+
             <tr>
               <td>工业富联<small>601138.SH</small></td>
               <td><span class="lang lang-zh">AI服务器整机 / ODM-OEM</span><span class="lang lang-en">AI Server ODM / OEM</span><small>beneficiary · medium</small></td>
               <td>AI服务器整机/机柜级系统/ODM-OEM</td>
             </tr>
-            
+
             <tr>
               <td>浪潮信息<small>000977.SZ</small></td>
               <td><span class="lang lang-zh">AI服务器整机 / ODM-OEM</span><span class="lang lang-en">AI Server ODM / OEM</span><small>beneficiary · medium</small></td>
               <td>AI服务器整机/机柜级系统/ODM-OEM</td>
             </tr>
-            
+
             <tr>
               <td>中科曙光<small>603019.SH</small></td>
               <td><span class="lang lang-zh">国产算力集成 / 政企集群</span><span class="lang lang-en">Domestic Compute Integration / Enterprise Clusters</span><small>proxy · watch</small></td>
               <td>AI服务器整机/机柜级系统/ODM-OEM</td>
             </tr>
-            
+
             <tr>
               <td>紫光股份<small>000938.SZ</small></td>
               <td><span class="lang lang-zh">国产算力集成 / 政企集群</span><span class="lang lang-en">Domestic Compute Integration / Enterprise Clusters</span><small>proxy · watch</small></td>
               <td>AI服务器整机/机柜级系统/ODM-OEM</td>
             </tr>
-            
+
             <tr>
               <td>华勤技术<small>603296.SH</small></td>
               <td><span class="lang lang-zh">AI服务器整机 / ODM-OEM</span><span class="lang lang-en">AI Server ODM / OEM</span><small>beneficiary · medium</small></td>
               <td>AI服务器整机/机柜级系统/ODM-OEM</td>
             </tr>
-            
+
             <tr>
               <td>神州数码<small>000034.SZ</small></td>
               <td><span class="lang lang-zh">融资质量 / 低毛利集成观察</span><span class="lang lang-en">Financing Quality / Low-margin Integration Watchlist</span><small>watchlist · watch</small></td>
@@ -1979,25 +1987,25 @@
               <p>工业富联、浪潮信息、华勤技术</p>
               <small><span class="lang lang-zh">映射依据</span><span class="lang lang-en">Mapping Basis</span>：AI服务器收入；海外客户；毛利率；存货与应收</small>
             </article>
-            
+
             <article class="subchain-card">
               <header><b><span class="lang lang-zh">AIDC / IDC 运营与电力资源</span><span class="lang lang-en">AIDC / IDC Operators and Power Resources</span></b><span>enabler · medium</span></header>
               <p>润泽科技、奥飞数据、光环新网、数据港、宝信软件</p>
               <small><span class="lang lang-zh">映射依据</span><span class="lang lang-en">Mapping Basis</span>：机柜上架率；电力指标；客户合同质量；租赁价格</small>
             </article>
-            
+
             <article class="subchain-card">
               <header><b><span class="lang lang-zh">液冷 / 热管理</span><span class="lang lang-en">Liquid Cooling / Thermal Management</span></b><span>enabler · medium</span></header>
               <p>英维克、申菱环境、高澜股份、同飞股份、飞荣达、中石科技</p>
               <small><span class="lang lang-zh">映射依据</span><span class="lang lang-en">Mapping Basis</span>：液冷订单；海外客户；CDU/冷板收入；毛利率</small>
             </article>
-            
+
             <article class="subchain-card">
               <header><b><span class="lang lang-zh">国产算力集成 / 政企集群</span><span class="lang lang-en">Domestic Compute Integration / Enterprise Clusters</span></b><span>proxy · watch</span></header>
               <p>中科曙光、紫光股份</p>
               <small><span class="lang lang-zh">映射依据</span><span class="lang lang-en">Mapping Basis</span>：国产算力订单；项目回款；集群交付；利润率</small>
             </article>
-            
+
             <article class="subchain-card">
               <header><b><span class="lang lang-zh">融资质量 / 低毛利集成观察</span><span class="lang lang-en">Financing Quality / Low-margin Integration Watchlist</span></b><span>watchlist · watch</span></header>
               <p>神州数码</p>
@@ -2014,25 +2022,25 @@
               <p>US has now invaded Venezuela. Everyone is probably wondering the same thing: How do you profit off the situation? 1. Heavy Sour, Ammonia, and Nitrogen Fertilizers disruption ( $CF , $CVE). These are Venezuela&#x27;s biggest exports. Most people will buy generic oil ETFs or light swee…</p>
               <a href="https://x.com/aleabitoreddit/status/2007387427820978510">tweet_id 2007387427820978510</a>
             </article>
-            
+
             <article class="evidence-item">
               <header><b>2026-01-02</b><span>score 102</span><em>AAOI, AIRO, AKAM, ALAB, AMD, AMKR, AMZN, ASOZF, ASTS, A…</em></header>
               <p>Welcome to 2026. Jan 1st ratings: Strong Buy: $TTD $SMCI $AIRO $INTC $HIMS $AXTI $TSM $NBIS $CIFR Samsung Electronics (KRX: 005930) $HUT $IREN $WULF $GLXY $TSSI $META $ETOR $CRCL Buy: $KRKNF $ONDS $GEMI $NVDA $MU $AMKR SK Hynix $SNAP $RDDT $AAOI $COHR $FISV $FLY $DJT $LITE $AMZN…</p>
               <a href="https://x.com/aleabitoreddit/status/2007071108831338685">tweet_id 2007071108831338685</a>
             </article>
-            
+
             <article class="evidence-item">
               <header><b>2026-05-17</b><span>score 96</span><em>AAOI, AMD, ASML, COHR, DGXX, FN, INTC, IQE, JBL, KOPN,…</em></header>
               <p>When I see comments like this (and there are a lot) from retail investors: I immediately think they lack the technical depth. I&#x27;ll walk through each one from $SIVE to $LPK: 1. Photonics TAM goes from $14B -&gt; $154B In just two years time, and it&#x27;s likely going to keep scaling pas…</p>
               <a href="https://x.com/aleabitoreddit/status/2055822766600016238">tweet_id 2055822766600016238</a>
             </article>
-            
+
             <article class="evidence-item">
               <header><b>2026-03-16</b><span>score 90</span><em>AAOI, AXTI, COHR, FN, INTC, LITE, LWLG, MTSI, NVDA, POE…</em></header>
               <p>I’m long $SIVE at $140M. I believe this is the next $LITE that markets and institutions missed. $SIVE makes InP CW DFB lasers. Closest comparison is $LITE in the current EML laser bottleneck. But instead of supplying to Innolight/Eoptolink for current optical transceivers cycles…</p>
               <a href="https://x.com/aleabitoreddit/status/2033466880661606646">tweet_id 2033466880661606646</a>
             </article>
-            
+
             <article class="evidence-item">
               <header><b>2026-01-14</b><span>score 89</span><em>LPTH, ONDS, UMAC, VLN</em></header>
               <p>I&#x27;ve initiated positions in $LPTH ($621M). Lightpath is incredible. Every modern thermal weapon (Missiles, Drones) requires Germanium glass, which China owns (70%) LPTH is the only US alternative with: Black Diamond Users? - $ONDS - L3Harris - Lockheed - Andruil (likely) - $UMAC…</p>
@@ -2041,7 +2049,7 @@
             </div>
               </details>
             </section>
-            
+
             <section class="chain-deep tone-violet" id="chain-glass_substrate">
               <div class="chain-head">
                 <span>06</span>
@@ -2074,43 +2082,43 @@
               <td><span class="lang lang-zh">玻璃基板 / TGV</span><span class="lang lang-en">Glass Substrate / TGV</span><small>bottleneck · medium</small></td>
               <td>玻璃基板/TGV</td>
             </tr>
-            
+
             <tr>
               <td>凯盛科技<small>600552.SH</small></td>
               <td><span class="lang lang-zh">玻璃基板 / TGV</span><span class="lang lang-en">Glass Substrate / TGV</span><small>bottleneck · medium</small></td>
               <td>玻璃基板/TGV</td>
             </tr>
-            
+
             <tr>
               <td>深南电路<small>002916.SZ</small></td>
               <td><span class="lang lang-zh">ABF / FC-BGA / BT 载板</span><span class="lang lang-en">ABF / FC-BGA / BT Substrates</span><small>enabler · medium</small></td>
               <td>ABF/FC-BGA封装基板</td>
             </tr>
-            
+
             <tr>
               <td>兴森科技<small>002436.SZ</small></td>
               <td><span class="lang lang-zh">ABF / FC-BGA / BT 载板</span><span class="lang lang-en">ABF / FC-BGA / BT Substrates</span><small>enabler · medium</small></td>
               <td>ABF/FC-BGA封装基板</td>
             </tr>
-            
+
             <tr>
               <td>生益科技<small>600183.SH</small></td>
               <td><span class="lang lang-zh">先进载板基材 / 低 CTE 材料</span><span class="lang lang-en">Advanced Substrate Materials / Low-CTE Materials</span><small>bottleneck · medium</small></td>
               <td>载板用高端基材/低CTE材料</td>
             </tr>
-            
+
             <tr>
               <td>南亚新材<small>688519.SH</small></td>
               <td><span class="lang lang-zh">先进载板基材 / 低 CTE 材料</span><span class="lang lang-en">Advanced Substrate Materials / Low-CTE Materials</span><small>bottleneck · medium</small></td>
               <td>载板用高端基材/低CTE材料</td>
             </tr>
-            
+
             <tr>
               <td>芯碁微装<small>688630.SH</small></td>
               <td><span class="lang lang-zh">面板级封装 / IC载板设备</span><span class="lang lang-en">Panel-level Packaging / IC Substrate Tools</span><small>enabler · watch</small></td>
               <td>PCB/IC载板LDI直写光刻设备</td>
             </tr>
-            
+
             <tr>
               <td>东威科技<small>688700.SH</small></td>
               <td><span class="lang lang-zh">ABF / FC-BGA / BT 载板</span><span class="lang lang-en">ABF / FC-BGA / BT Substrates</span><small>enabler · medium</small></td>
@@ -2126,19 +2134,19 @@
               <p>沃格光电、凯盛科技</p>
               <small><span class="lang lang-zh">映射依据</span><span class="lang lang-en">Mapping Basis</span>：TGV良率；半导体玻璃基板收入；客户认证；量产时间表</small>
             </article>
-            
+
             <article class="subchain-card">
               <header><b><span class="lang lang-zh">ABF / FC-BGA / BT 载板</span><span class="lang lang-en">ABF / FC-BGA / BT Substrates</span></b><span>enabler · medium</span></header>
               <p>深南电路、兴森科技、东威科技</p>
               <small><span class="lang lang-zh">映射依据</span><span class="lang lang-en">Mapping Basis</span>：ABF/FC-BGA产能；良率；客户认证；AI封装导入</small>
             </article>
-            
+
             <article class="subchain-card">
               <header><b><span class="lang lang-zh">先进载板基材 / 低 CTE 材料</span><span class="lang lang-en">Advanced Substrate Materials / Low-CTE Materials</span></b><span>bottleneck · medium</span></header>
               <p>生益科技、南亚新材</p>
               <small><span class="lang lang-zh">映射依据</span><span class="lang lang-en">Mapping Basis</span>：材料等级；低CTE产品；载板客户；收入结构</small>
             </article>
-            
+
             <article class="subchain-card">
               <header><b><span class="lang lang-zh">面板级封装 / IC载板设备</span><span class="lang lang-en">Panel-level Packaging / IC Substrate Tools</span></b><span>enabler · watch</span></header>
               <p>芯碁微装</p>
@@ -2155,25 +2163,25 @@
               <p>US has now invaded Venezuela. Everyone is probably wondering the same thing: How do you profit off the situation? 1. Heavy Sour, Ammonia, and Nitrogen Fertilizers disruption ( $CF , $CVE). These are Venezuela&#x27;s biggest exports. Most people will buy generic oil ETFs or light swee…</p>
               <a href="https://x.com/aleabitoreddit/status/2007387427820978510">tweet_id 2007387427820978510</a>
             </article>
-            
+
             <article class="evidence-item">
               <header><b>2026-01-02</b><span>score 102</span><em>AAOI, AIRO, AKAM, ALAB, AMD, AMKR, AMZN, ASOZF, ASTS, A…</em></header>
               <p>Welcome to 2026. Jan 1st ratings: Strong Buy: $TTD $SMCI $AIRO $INTC $HIMS $AXTI $TSM $NBIS $CIFR Samsung Electronics (KRX: 005930) $HUT $IREN $WULF $GLXY $TSSI $META $ETOR $CRCL Buy: $KRKNF $ONDS $GEMI $NVDA $MU $AMKR SK Hynix $SNAP $RDDT $AAOI $COHR $FISV $FLY $DJT $LITE $AMZN…</p>
               <a href="https://x.com/aleabitoreddit/status/2007071108831338685">tweet_id 2007071108831338685</a>
             </article>
-            
+
             <article class="evidence-item">
               <header><b>2026-06-07</b><span>score 97</span><em>AAOI, AXTI, INTC, IQE, JBL, LITE, MRVL, NVDA, RPI, SIVE…</em></header>
               <p>I think my personal style of investing is a bit different, just some reflection: It&#x27;s inherently discretionary, based on stuff markets don&#x27;t know yet. And a culmination of life experiences? If you look at $AXTI, $RPI, $SIVE, $IQE and others. Lot of it is guessing on unstructured…</p>
               <a href="https://x.com/aleabitoreddit/status/2063465386960736396">tweet_id 2063465386960736396</a>
             </article>
-            
+
             <article class="evidence-item">
               <header><b>2026-05-17</b><span>score 96</span><em>AAOI, AMD, ASML, COHR, DGXX, FN, INTC, IQE, JBL, KOPN,…</em></header>
               <p>When I see comments like this (and there are a lot) from retail investors: I immediately think they lack the technical depth. I&#x27;ll walk through each one from $SIVE to $LPK: 1. Photonics TAM goes from $14B -&gt; $154B In just two years time, and it&#x27;s likely going to keep scaling pas…</p>
               <a href="https://x.com/aleabitoreddit/status/2055822766600016238">tweet_id 2055822766600016238</a>
             </article>
-            
+
             <article class="evidence-item">
               <header><b>2026-03-16</b><span>score 90</span><em>AAOI, AXTI, COHR, FN, INTC, LITE, LWLG, MTSI, NVDA, POE…</em></header>
               <p>I’m long $SIVE at $140M. I believe this is the next $LITE that markets and institutions missed. $SIVE makes InP CW DFB lasers. Closest comparison is $LITE in the current EML laser bottleneck. But instead of supplying to Innolight/Eoptolink for current optical transceivers cycles…</p>
@@ -2182,7 +2190,7 @@
             </div>
               </details>
             </section>
-            
+
             <section class="chain-deep tone-slate" id="chain-physical_ai">
               <div class="chain-head">
                 <span>07</span>
@@ -2215,43 +2223,43 @@
               <td><span class="lang lang-zh">一体化关节 / Tier1执行器</span><span class="lang lang-en">Integrated Joints / Tier-1 Actuator Modules</span><small>enabler · medium</small></td>
               <td>一体化关节模组/Tier1执行器平台</td>
             </tr>
-            
+
             <tr>
               <td>兆威机电<small>003021.SZ</small></td>
               <td><span class="lang lang-zh">一体化关节 / Tier1执行器</span><span class="lang lang-en">Integrated Joints / Tier-1 Actuator Modules</span><small>enabler · medium</small></td>
               <td>旋转执行器总成：电机+减速器+编码器+驱动</td>
             </tr>
-            
+
             <tr>
               <td>拓普集团<small>601689.SH</small></td>
               <td><span class="lang lang-zh">一体化关节 / Tier1执行器</span><span class="lang lang-en">Integrated Joints / Tier-1 Actuator Modules</span><small>enabler · medium</small></td>
               <td>旋转执行器总成：电机+减速器+编码器+驱动</td>
             </tr>
-            
+
             <tr>
               <td>三花智控<small>002050.SZ</small></td>
               <td><span class="lang lang-zh">一体化关节 / Tier1执行器</span><span class="lang lang-en">Integrated Joints / Tier-1 Actuator Modules</span><small>enabler · medium</small></td>
               <td>旋转执行器总成：电机+减速器+编码器+驱动</td>
             </tr>
-            
+
             <tr>
               <td>绿的谐波<small>688017.SH</small></td>
               <td><span class="lang lang-zh">精密减速器 / 一体化关节</span><span class="lang lang-en">Precision Reducers / Integrated Joints</span><small>bottleneck · high</small></td>
               <td>谐波减速器/应变波减速器</td>
             </tr>
-            
+
             <tr>
               <td>东华测试<small>300354.SZ</small></td>
               <td><span class="lang lang-zh">力觉 / 扭矩 / 关节传感</span><span class="lang lang-en">Force / Torque / Joint Sensors</span><small>bottleneck · medium</small></td>
               <td>关节扭矩传感器/应变片/力矩闭环</td>
             </tr>
-            
+
             <tr>
               <td>柯力传感<small>603662.SH</small></td>
               <td><span class="lang lang-zh">力觉 / 扭矩 / 关节传感</span><span class="lang lang-en">Force / Torque / Joint Sensors</span><small>bottleneck · medium</small></td>
               <td>机器人六维力/关节力矩传感器</td>
             </tr>
-            
+
             <tr>
               <td>奥比中光<small>688322.SH</small></td>
               <td><span class="lang lang-zh">机器视觉 / 传感器 / 光学</span><span class="lang lang-en">Machine Vision / Sensors / Optics</span><small>enabler · medium</small></td>
@@ -2267,31 +2275,31 @@
               <p>绿的谐波、双环传动、汉宇集团</p>
               <small><span class="lang lang-zh">映射依据</span><span class="lang lang-en">Mapping Basis</span>：人形机器人客户；一体化关节量产；减速器良率；单位价值量</small>
             </article>
-            
+
             <article class="subchain-card">
               <header><b><span class="lang lang-zh">一体化关节 / Tier1执行器</span><span class="lang lang-en">Integrated Joints / Tier-1 Actuator Modules</span></b><span>enabler · medium</span></header>
               <p>步科股份、兆威机电、拓普集团、三花智控、中大力德</p>
               <small><span class="lang lang-zh">映射依据</span><span class="lang lang-en">Mapping Basis</span>：执行器平台订单；Tier1客户认证；电机/减速器/丝杠集成度；量产节奏</small>
             </article>
-            
+
             <article class="subchain-card">
               <header><b><span class="lang lang-zh">电机 / 伺服 / 运动控制</span><span class="lang lang-en">Motors / Servo / Motion Control</span></b><span>enabler · medium</span></header>
               <p>鸣志电器、汇川技术</p>
               <small><span class="lang lang-zh">映射依据</span><span class="lang lang-en">Mapping Basis</span>：机器人电机订单；控制器客户；批量交付；毛利率</small>
             </article>
-            
+
             <article class="subchain-card">
               <header><b><span class="lang lang-zh">丝杠 / 轴承 / 精密传动</span><span class="lang lang-en">Screws / Bearings / Precision Transmission</span></b><span>bottleneck · medium</span></header>
               <p>国机精工、五洲新春、力星股份</p>
               <small><span class="lang lang-zh">映射依据</span><span class="lang lang-en">Mapping Basis</span>：丝杠量产；机器人客户；精度等级；产能爬坡</small>
             </article>
-            
+
             <article class="subchain-card">
               <header><b><span class="lang lang-zh">力觉 / 扭矩 / 关节传感</span><span class="lang lang-en">Force / Torque / Joint Sensors</span></b><span>bottleneck · medium</span></header>
               <p>东华测试、柯力传感</p>
               <small><span class="lang lang-zh">映射依据</span><span class="lang lang-en">Mapping Basis</span>：关节传感订单；力控闭环验证；机器人客户导入；量产良率</small>
             </article>
-            
+
             <article class="subchain-card">
               <header><b><span class="lang lang-zh">机器视觉 / 传感器 / 光学</span><span class="lang lang-en">Machine Vision / Sensors / Optics</span></b><span>enabler · medium</span></header>
               <p>奥比中光、韦尔股份、奥普特</p>
@@ -2308,25 +2316,25 @@
               <p>US has now invaded Venezuela. Everyone is probably wondering the same thing: How do you profit off the situation? 1. Heavy Sour, Ammonia, and Nitrogen Fertilizers disruption ( $CF , $CVE). These are Venezuela&#x27;s biggest exports. Most people will buy generic oil ETFs or light swee…</p>
               <a href="https://x.com/aleabitoreddit/status/2007387427820978510">tweet_id 2007387427820978510</a>
             </article>
-            
+
             <article class="evidence-item">
               <header><b>2026-01-02</b><span>score 102</span><em>AAOI, AIRO, AKAM, ALAB, AMD, AMKR, AMZN, ASOZF, ASTS, A…</em></header>
               <p>Welcome to 2026. Jan 1st ratings: Strong Buy: $TTD $SMCI $AIRO $INTC $HIMS $AXTI $TSM $NBIS $CIFR Samsung Electronics (KRX: 005930) $HUT $IREN $WULF $GLXY $TSSI $META $ETOR $CRCL Buy: $KRKNF $ONDS $GEMI $NVDA $MU $AMKR SK Hynix $SNAP $RDDT $AAOI $COHR $FISV $FLY $DJT $LITE $AMZN…</p>
               <a href="https://x.com/aleabitoreddit/status/2007071108831338685">tweet_id 2007071108831338685</a>
             </article>
-            
+
             <article class="evidence-item">
               <header><b>2026-03-16</b><span>score 90</span><em>AAOI, AXTI, COHR, FN, INTC, LITE, LWLG, MTSI, NVDA, POE…</em></header>
               <p>I’m long $SIVE at $140M. I believe this is the next $LITE that markets and institutions missed. $SIVE makes InP CW DFB lasers. Closest comparison is $LITE in the current EML laser bottleneck. But instead of supplying to Innolight/Eoptolink for current optical transceivers cycles…</p>
               <a href="https://x.com/aleabitoreddit/status/2033466880661606646">tweet_id 2033466880661606646</a>
             </article>
-            
+
             <article class="evidence-item">
               <header><b>2026-01-14</b><span>score 89</span><em>LPTH, ONDS, UMAC, VLN</em></header>
               <p>I&#x27;ve initiated positions in $LPTH ($621M). Lightpath is incredible. Every modern thermal weapon (Missiles, Drones) requires Germanium glass, which China owns (70%) LPTH is the only US alternative with: Black Diamond Users? - $ONDS - L3Harris - Lockheed - Andruil (likely) - $UMAC…</p>
               <a href="https://x.com/aleabitoreddit/status/2011496801548058735">tweet_id 2011496801548058735</a>
             </article>
-            
+
             <article class="evidence-item">
               <header><b>2026-04-09</b><span>score 88</span><em>AAOI, AEHR, AMKR, AMZN, ARM, AVGO, CEG, COHR, CRCL, CVX…</em></header>
               <p>Here&#x27;s a bunch of random 30 US-available random stocks I like today and why: 1. $INTC - America&#x27;s hope for foundry, national security 2. $MRVL - scales rev from future maia asics and add ons like cpo, they do everything lost count 3. $TSM - backbone of semis/ai 4. $COHR - They d…</p>
@@ -2335,7 +2343,7 @@
             </div>
               </details>
             </section>
-            
+
     </section>
 
     <section class="section-band" id="evidence">
@@ -2349,106 +2357,106 @@
             <article class="timeline-item">
               <span>E01</span>
               <div>
-                <h4><span class="lang lang-zh">Physical AI / 国防光学</span><span class="lang lang-en">Physical AI / Defense Optics</span>｜2026-06-11</h4>
+                <h4><span class="lang lang-zh">电力 / 功率半导体</span><span class="lang lang-en">Power / Power Semiconductors</span>｜2026-06-11</h4>
                 <p>Oh look… a new report by Reuters shows China’s control over InP threatens the AI DC buildout. Who could have guessed $AXTI would have been a major point of failure? https://t.co/mu9sOWGHN6</p>
-                <small>score 74｜AMZN, AVGO, AXTI, COHR, GOOGL, LITE, META, MSFT, NVDA, SMTOY｜tweet_id 2064942505553170886</small>
+                <small>score 76｜AMZN, AVGO, AXTI, COHR, GOOGL, LITE, META, MSFT, NVDA, SMTOY｜tweet_id 2064942505553170886</small>
               </div>
             </article>
-            
+
             <article class="timeline-item">
               <span>E02</span>
+              <div>
+                <h4><span class="lang lang-zh">玻璃基板 / 先进载板</span><span class="lang lang-en">Glass Substrate / Advanced Substrates</span>｜2026-06-11</h4>
+                <p>Oh look… a new report by Reuters shows China’s control over InP threatens the AI DC buildout. Who could have guessed $AXTI would have been a major point of failure? https://t.co/mu9sOWGHN6</p>
+                <small>score 76｜AMZN, AVGO, AXTI, COHR, GOOGL, LITE, META, MSFT, NVDA, SMTOY｜tweet_id 2064942505553170886</small>
+              </div>
+            </article>
+
+            <article class="timeline-item">
+              <span>E03</span>
+              <div>
+                <h4><span class="lang lang-zh">Physical AI / 国防光学</span><span class="lang lang-en">Physical AI / Defense Optics</span>｜2026-06-11</h4>
+                <p>Oh look… a new report by Reuters shows China’s control over InP threatens the AI DC buildout. Who could have guessed $AXTI would have been a major point of failure? https://t.co/mu9sOWGHN6</p>
+                <small>score 76｜AMZN, AVGO, AXTI, COHR, GOOGL, LITE, META, MSFT, NVDA, SMTOY｜tweet_id 2064942505553170886</small>
+              </div>
+            </article>
+
+            <article class="timeline-item">
+              <span>E04</span>
               <div>
                 <h4><span class="lang lang-zh">Physical AI / 国防光学</span><span class="lang lang-en">Physical AI / Defense Optics</span>｜2026-06-09</h4>
                 <p>A massive catalyst arrived today with $SIVE: Sivers announced $8.2M volume orders starting for Space applications (allspace). This is for Beamforming ICs powering Space LEO/multi-orbit satellite communication. The bigger implication is not the contract size: But that Sivers now…</p>
                 <small>score 75｜MRVL, SIVE, YSS｜tweet_id 2064246556690469123</small>
               </div>
             </article>
-            
+
             <article class="timeline-item">
-              <span>E03</span>
+              <span>E05</span>
               <div>
                 <h4><span class="lang lang-zh">CPO / InP 光通信</span><span class="lang lang-en">CPO / InP Optical Interconnect</span>｜2026-06-08</h4>
                 <p>Still think this US list from $MRVL to $ARM to $INTC was goated. Just as a recap if new followers were wondering what US equities I like. Especially because I&#x27;ve been talking about international companies recently. https://t.co/tZGLrFEGoh</p>
                 <small>score 88｜AAOI, AEHR, AMKR, AMZN, ARM, AVGO, CEG, COHR, CRCL, CVX, DRAM, FN, GOOGL, HIMS, HOOD, IBI…｜tweet_id 2063984786918854663</small>
               </div>
             </article>
-            
+
             <article class="timeline-item">
-              <span>E04</span>
+              <span>E06</span>
               <div>
                 <h4><span class="lang lang-zh">先进封装 / 关键设备</span><span class="lang lang-en">Advanced Packaging / Critical Equipment</span>｜2026-06-08</h4>
                 <p>Still think this US list from $MRVL to $ARM to $INTC was goated. Just as a recap if new followers were wondering what US equities I like. Especially because I&#x27;ve been talking about international companies recently. https://t.co/tZGLrFEGoh</p>
                 <small>score 88｜AAOI, AEHR, AMKR, AMZN, ARM, AVGO, CEG, COHR, CRCL, CVX, DRAM, FN, GOOGL, HIMS, HOOD, IBI…｜tweet_id 2063984786918854663</small>
               </div>
             </article>
-            
+
             <article class="timeline-item">
-              <span>E05</span>
+              <span>E07</span>
               <div>
                 <h4><span class="lang lang-zh">HBM / HBF / 存储带宽</span><span class="lang lang-en">HBM / HBF / Memory Bandwidth</span>｜2026-06-08</h4>
                 <p>Still think this US list from $MRVL to $ARM to $INTC was goated. Just as a recap if new followers were wondering what US equities I like. Especially because I&#x27;ve been talking about international companies recently. https://t.co/tZGLrFEGoh</p>
                 <small>score 88｜AAOI, AEHR, AMKR, AMZN, ARM, AVGO, CEG, COHR, CRCL, CVX, DRAM, FN, GOOGL, HIMS, HOOD, IBI…｜tweet_id 2063984786918854663</small>
               </div>
             </article>
-            
+
             <article class="timeline-item">
-              <span>E06</span>
+              <span>E08</span>
               <div>
                 <h4><span class="lang lang-zh">电力 / 功率半导体</span><span class="lang lang-en">Power / Power Semiconductors</span>｜2026-06-08</h4>
                 <p>Still think this US list from $MRVL to $ARM to $INTC was goated. Just as a recap if new followers were wondering what US equities I like. Especially because I&#x27;ve been talking about international companies recently. https://t.co/tZGLrFEGoh</p>
                 <small>score 88｜AAOI, AEHR, AMKR, AMZN, ARM, AVGO, CEG, COHR, CRCL, CVX, DRAM, FN, GOOGL, HIMS, HOOD, IBI…｜tweet_id 2063984786918854663</small>
               </div>
             </article>
-            
+
             <article class="timeline-item">
-              <span>E07</span>
+              <span>E09</span>
               <div>
                 <h4><span class="lang lang-zh">Neocloud / 算力融资质量</span><span class="lang lang-en">Neocloud / Compute Financing Quality</span>｜2026-06-08</h4>
                 <p>Still think this US list from $MRVL to $ARM to $INTC was goated. Just as a recap if new followers were wondering what US equities I like. Especially because I&#x27;ve been talking about international companies recently. https://t.co/tZGLrFEGoh</p>
                 <small>score 88｜AAOI, AEHR, AMKR, AMZN, ARM, AVGO, CEG, COHR, CRCL, CVX, DRAM, FN, GOOGL, HIMS, HOOD, IBI…｜tweet_id 2063984786918854663</small>
               </div>
             </article>
-            
+
             <article class="timeline-item">
-              <span>E08</span>
+              <span>E10</span>
               <div>
                 <h4><span class="lang lang-zh">玻璃基板 / 先进载板</span><span class="lang lang-en">Glass Substrate / Advanced Substrates</span>｜2026-06-08</h4>
                 <p>Still think this US list from $MRVL to $ARM to $INTC was goated. Just as a recap if new followers were wondering what US equities I like. Especially because I&#x27;ve been talking about international companies recently. https://t.co/tZGLrFEGoh</p>
                 <small>score 88｜AAOI, AEHR, AMKR, AMZN, ARM, AVGO, CEG, COHR, CRCL, CVX, DRAM, FN, GOOGL, HIMS, HOOD, IBI…｜tweet_id 2063984786918854663</small>
               </div>
             </article>
-            
+
             <article class="timeline-item">
-              <span>E09</span>
+              <span>E11</span>
               <div>
                 <h4><span class="lang lang-zh">Physical AI / 国防光学</span><span class="lang lang-en">Physical AI / Defense Optics</span>｜2026-06-08</h4>
                 <p>Still think this US list from $MRVL to $ARM to $INTC was goated. Just as a recap if new followers were wondering what US equities I like. Especially because I&#x27;ve been talking about international companies recently. https://t.co/tZGLrFEGoh</p>
                 <small>score 88｜AAOI, AEHR, AMKR, AMZN, ARM, AVGO, CEG, COHR, CRCL, CVX, DRAM, FN, GOOGL, HIMS, HOOD, IBI…｜tweet_id 2063984786918854663</small>
               </div>
             </article>
-            
-            <article class="timeline-item">
-              <span>E10</span>
-              <div>
-                <h4><span class="lang lang-zh">CPO / InP 光通信</span><span class="lang lang-en">CPO / InP Optical Interconnect</span>｜2026-06-07</h4>
-                <p>I think my personal style of investing is a bit different, just some reflection: It&#x27;s inherently discretionary, based on stuff markets don&#x27;t know yet. And a culmination of life experiences? If you look at $AXTI, $RPI, $SIVE, $IQE and others. Lot of it is guessing on unstructured…</p>
-                <small>score 97｜AAOI, AXTI, INTC, IQE, JBL, LITE, MRVL, NVDA, RPI, SIVE, TSEM, TSM, XFAB｜tweet_id 2063465386960736396</small>
-              </div>
-            </article>
-            
-            <article class="timeline-item">
-              <span>E11</span>
-              <div>
-                <h4><span class="lang lang-zh">先进封装 / 关键设备</span><span class="lang lang-en">Advanced Packaging / Critical Equipment</span>｜2026-06-07</h4>
-                <p>I think my personal style of investing is a bit different, just some reflection: It&#x27;s inherently discretionary, based on stuff markets don&#x27;t know yet. And a culmination of life experiences? If you look at $AXTI, $RPI, $SIVE, $IQE and others. Lot of it is guessing on unstructured…</p>
-                <small>score 97｜AAOI, AXTI, INTC, IQE, JBL, LITE, MRVL, NVDA, RPI, SIVE, TSEM, TSM, XFAB｜tweet_id 2063465386960736396</small>
-              </div>
-            </article>
-            
+
             <article class="timeline-item">
               <span>E12</span>
               <div>
-                <h4><span class="lang lang-zh">HBM / HBF / 存储带宽</span><span class="lang lang-en">HBM / HBF / Memory Bandwidth</span>｜2026-06-07</h4>
+                <h4><span class="lang lang-zh">CPO / InP 光通信</span><span class="lang lang-en">CPO / InP Optical Interconnect</span>｜2026-06-07</h4>
                 <p>I think my personal style of investing is a bit different, just some reflection: It&#x27;s inherently discretionary, based on stuff markets don&#x27;t know yet. And a culmination of life experiences? If you look at $AXTI, $RPI, $SIVE, $IQE and others. Lot of it is guessing on unstructured…</p>
                 <small>score 97｜AAOI, AXTI, INTC, IQE, JBL, LITE, MRVL, NVDA, RPI, SIVE, TSEM, TSM, XFAB｜tweet_id 2063465386960736396</small>
               </div>
@@ -2468,50 +2476,50 @@
               <td><span class="lang lang-zh">CPO / 光通信</span><span class="lang lang-en">CPO / Optical Interconnect</span><small>optical_cpo</small></td>
               <td>1424</td>
               <td>2025-07-03 → 2026-06-12</td>
-              <td>30.9</td>
+              <td>31.0</td>
               <td>LITE, AAOI, SIVE, AXTI, NVDA, COHR, MRVL, GOOGL</td>
             </tr>
-            
+
             <tr>
               <td><span class="lang lang-zh">Neocloud 融资质量</span><span class="lang lang-en">Neocloud Financing Quality</span><small>neocloud_financing</small></td>
               <td>1386</td>
               <td>2025-07-02 → 2026-06-12</td>
-              <td>27.3</td>
+              <td>27.4</td>
               <td>NBIS, IREN, MSFT, CIFR, NVDA, CRWV, GOOGL, META</td>
             </tr>
-            
+
             <tr>
               <td><span class="lang lang-zh">HBM / 存储</span><span class="lang lang-en">HBM / Memory Bandwidth</span><small>memory_hbm</small></td>
-              <td>1372</td>
-              <td>2025-07-07 → 2026-06-11</td>
+              <td>1374</td>
+              <td>2025-07-07 → 2026-06-12</td>
               <td>29.4</td>
               <td>LITE, NVDA, NBIS, AXTI, MU, GOOGL, SNDK, AMZN</td>
             </tr>
-            
+
             <tr>
               <td><span class="lang lang-zh">AI 半导体供应链</span><span class="lang lang-en">AI Semi Supply Chain</span><small>ai_semicap_supply_chain</small></td>
-              <td>1293</td>
+              <td>1295</td>
               <td>2025-07-21 → 2026-06-12</td>
               <td>34.6</td>
               <td>NVDA, LITE, AXTI, GOOGL, SIVE, COHR, AMZN, MSFT</td>
             </tr>
-            
+
             <tr>
               <td><span class="lang lang-zh">InP / 化合物半导体</span><span class="lang lang-en">InP / Compound Semis</span><small>inp_compound_semi</small></td>
-              <td>761</td>
+              <td>762</td>
               <td>2025-12-22 → 2026-06-12</td>
-              <td>32.1</td>
+              <td>32.2</td>
               <td>AXTI, LITE, IQE, COHR, AAOI, SIVE, NVDA, SOI</td>
             </tr>
-            
+
             <tr>
               <td><span class="lang lang-zh">电力 / 功率链</span><span class="lang lang-en">Power / Grid Chain</span><small>power_grid</small></td>
-              <td>331</td>
-              <td>2025-09-17 → 2026-06-11</td>
+              <td>332</td>
+              <td>2025-09-17 → 2026-06-12</td>
               <td>38.0</td>
               <td>NVDA, NBIS, GOOGL, IREN, AMZN, MSFT, LITE, TSM</td>
             </tr>
-            
+
             <tr>
               <td><span class="lang lang-zh">Physical AI / 国防光学</span><span class="lang lang-en">Physical AI / Defense Optics</span><small>robotics_physical_ai</small></td>
               <td>287</td>
@@ -2539,7 +2547,7 @@
               <td>29.2</td>
               <td>LED等传统业务会稀释AI光通信纯度，需看具体产品导入。</td>
             </tr>
-            
+
             <tr>
               <td><span class="lang lang-zh">CPO / InP 光通信</span><span class="lang lang-en">CPO / InP Optical Interconnect</span></td>
               <td><span class="lang lang-zh">光芯片 / 硅光 / 上游光器件</span><span class="lang lang-en">Optical Chips / Silicon Photonics / Upstream Optical Components</span><small>bottleneck · high</small></td>
@@ -2548,7 +2556,7 @@
               <td>29.2</td>
               <td>此行是InP器件链观察，不等同于InP衬底或铟材料上游。</td>
             </tr>
-            
+
             <tr>
               <td><span class="lang lang-zh">CPO / InP 光通信</span><span class="lang lang-en">CPO / InP Optical Interconnect</span></td>
               <td><span class="lang lang-zh">光芯片 / 硅光 / 上游光器件</span><span class="lang lang-en">Optical Chips / Silicon Photonics / Upstream Optical Components</span><small>bottleneck · high</small></td>
@@ -2557,7 +2565,7 @@
               <td>27.8</td>
               <td>如果只有研发无量产，不能纳入核心。</td>
             </tr>
-            
+
             <tr>
               <td><span class="lang lang-zh">CPO / InP 光通信</span><span class="lang lang-en">CPO / InP Optical Interconnect</span></td>
               <td><span class="lang lang-zh">光芯片 / 硅光 / 上游光器件</span><span class="lang lang-en">Optical Chips / Silicon Photonics / Upstream Optical Components</span><small>bottleneck · high</small></td>
@@ -2566,7 +2574,7 @@
               <td>24.8</td>
               <td>高端产品量产节奏不及预期。</td>
             </tr>
-            
+
             <tr>
               <td><span class="lang lang-zh">CPO / InP 光通信</span><span class="lang lang-en">CPO / InP Optical Interconnect</span></td>
               <td><span class="lang lang-zh">InP / 化合物材料</span><span class="lang lang-en">InP / Compound Materials</span><small>bottleneck · medium</small></td>
@@ -2575,7 +2583,7 @@
               <td>23.2</td>
               <td>映射偏材料资源端，需防止被金属价格和非AI需求稀释。</td>
             </tr>
-            
+
             <tr>
               <td><span class="lang lang-zh">CPO / InP 光通信</span><span class="lang lang-en">CPO / InP Optical Interconnect</span></td>
               <td><span class="lang lang-zh">InP / 化合物材料</span><span class="lang lang-en">InP / Compound Materials</span><small>bottleneck · medium</small></td>
@@ -2584,7 +2592,7 @@
               <td>23.2</td>
               <td>公司业务较分散，若半导体材料收入占比不足应降权。</td>
             </tr>
-            
+
             <tr>
               <td><span class="lang lang-zh">CPO / InP 光通信</span><span class="lang lang-en">CPO / InP Optical Interconnect</span></td>
               <td><span class="lang lang-zh">高速光模块</span><span class="lang lang-en">High-speed Optical Modules</span><small>beneficiary · high</small></td>
@@ -2593,7 +2601,7 @@
               <td>21.8</td>
               <td>业务复杂导致纯度不足。</td>
             </tr>
-            
+
             <tr>
               <td><span class="lang lang-zh">CPO / InP 光通信</span><span class="lang lang-en">CPO / InP Optical Interconnect</span></td>
               <td><span class="lang lang-zh">光芯片 / 硅光 / 上游光器件</span><span class="lang lang-en">Optical Chips / Silicon Photonics / Upstream Optical Components</span><small>bottleneck · high</small></td>
@@ -2602,7 +2610,7 @@
               <td>21.6</td>
               <td>若应用仍偏工业激光/电信，AI纯度低。</td>
             </tr>
-            
+
             <tr>
               <td><span class="lang lang-zh">CPO / InP 光通信</span><span class="lang lang-en">CPO / InP Optical Interconnect</span></td>
               <td><span class="lang lang-zh">光连接器 / 陶瓷插芯</span><span class="lang lang-en">Optical Connectors / Ceramic Ferrules</span><small>enabler · medium</small></td>
@@ -2611,7 +2619,7 @@
               <td>19.8</td>
               <td>若光通信陶瓷件占比低或订单不清晰，纯度降低。</td>
             </tr>
-            
+
             <tr>
               <td><span class="lang lang-zh">CPO / InP 光通信</span><span class="lang lang-en">CPO / InP Optical Interconnect</span></td>
               <td><span class="lang lang-zh">高速光模块</span><span class="lang lang-en">High-speed Optical Modules</span><small>beneficiary · high</small></td>
@@ -2620,7 +2628,7 @@
               <td>18.8</td>
               <td>客户波动和盈利不稳定。</td>
             </tr>
-            
+
             <tr>
               <td><span class="lang lang-zh">CPO / InP 光通信</span><span class="lang lang-en">CPO / InP Optical Interconnect</span></td>
               <td><span class="lang lang-zh">高速光模块</span><span class="lang lang-en">High-speed Optical Modules</span><small>beneficiary · high</small></td>
@@ -2629,7 +2637,7 @@
               <td>18.8</td>
               <td>客户和量产验证不足。</td>
             </tr>
-            
+
             <tr>
               <td><span class="lang lang-zh">CPO / InP 光通信</span><span class="lang lang-en">CPO / InP Optical Interconnect</span></td>
               <td><span class="lang lang-zh">光芯片 / 硅光 / 上游光器件</span><span class="lang lang-en">Optical Chips / Silicon Photonics / Upstream Optical Components</span><small>bottleneck · high</small></td>
@@ -2638,7 +2646,7 @@
               <td>16.8</td>
               <td>若客户库存修正或光模块订单放缓，短期波动大。</td>
             </tr>
-            
+
             <tr>
               <td><span class="lang lang-zh">CPO / InP 光通信</span><span class="lang lang-en">CPO / InP Optical Interconnect</span></td>
               <td><span class="lang lang-zh">光连接器 / 陶瓷插芯</span><span class="lang lang-en">Optical Connectors / Ceramic Ferrules</span><small>enabler · medium</small></td>
@@ -2647,7 +2655,7 @@
               <td>16.8</td>
               <td>若增长只来自传统电信连接器，AI权重下调。</td>
             </tr>
-            
+
             <tr>
               <td><span class="lang lang-zh">CPO / InP 光通信</span><span class="lang lang-en">CPO / InP Optical Interconnect</span></td>
               <td><span class="lang lang-zh">高速铜缆 / AEC / 高速连接器</span><span class="lang lang-en">High-speed Copper / AEC / High-speed Connectors</span><small>proxy · watch</small></td>
@@ -2656,7 +2664,7 @@
               <td>16.6</td>
               <td>题材强于收入验证则剔除核心。</td>
             </tr>
-            
+
             <tr>
               <td><span class="lang lang-zh">CPO / InP 光通信</span><span class="lang lang-en">CPO / InP Optical Interconnect</span></td>
               <td><span class="lang lang-zh">光芯片 / 硅光 / 上游光器件</span><span class="lang lang-en">Optical Chips / Silicon Photonics / Upstream Optical Components</span><small>bottleneck · high</small></td>
@@ -2665,7 +2673,7 @@
               <td>15.8</td>
               <td>低速电信产品占比高则降级。</td>
             </tr>
-            
+
             <tr>
               <td><span class="lang lang-zh">CPO / InP 光通信</span><span class="lang lang-en">CPO / InP Optical Interconnect</span></td>
               <td><span class="lang lang-zh">高速铜缆 / AEC / 高速连接器</span><span class="lang lang-en">High-speed Copper / AEC / High-speed Connectors</span><small>proxy · watch</small></td>
@@ -2674,7 +2682,7 @@
               <td>13.6</td>
               <td>铜价、客户认证和价格竞争。</td>
             </tr>
-            
+
             <tr>
               <td><span class="lang lang-zh">CPO / InP 光通信</span><span class="lang lang-en">CPO / InP Optical Interconnect</span></td>
               <td><span class="lang lang-zh">高速铜缆 / AEC / 高速连接器</span><span class="lang lang-en">High-speed Copper / AEC / High-speed Connectors</span><small>proxy · watch</small></td>
@@ -2683,7 +2691,7 @@
               <td>13.6</td>
               <td>若仍以普通网线/工业线为主，降级。</td>
             </tr>
-            
+
             <tr>
               <td><span class="lang lang-zh">CPO / InP 光通信</span><span class="lang lang-en">CPO / InP Optical Interconnect</span></td>
               <td><span class="lang lang-zh">未归类子链</span><span class="lang lang-en">Unclassified Leaf Lane</span><small>watchlist · watch</small></td>
@@ -2692,7 +2700,7 @@
               <td>12.8</td>
               <td>功率半导体周期影响。</td>
             </tr>
-            
+
             <tr>
               <td><span class="lang lang-zh">CPO / InP 光通信</span><span class="lang lang-en">CPO / InP Optical Interconnect</span></td>
               <td><span class="lang lang-zh">高速铜缆 / AEC / 高速连接器</span><span class="lang lang-en">High-speed Copper / AEC / High-speed Connectors</span><small>proxy · watch</small></td>
@@ -2701,7 +2709,7 @@
               <td>10.6</td>
               <td>如果收入来自防务/非AI，纯度下调。</td>
             </tr>
-            
+
             <tr>
               <td><span class="lang lang-zh">CPO / InP 光通信</span><span class="lang lang-en">CPO / InP Optical Interconnect</span></td>
               <td><span class="lang lang-zh">光连接器 / 陶瓷插芯</span><span class="lang lang-en">Optical Connectors / Ceramic Ferrules</span><small>enabler · medium</small></td>
@@ -2710,7 +2718,7 @@
               <td>7.6</td>
               <td>普通结构件占比高则降级。</td>
             </tr>
-            
+
             <tr>
               <td><span class="lang lang-zh">CPO / InP 光通信</span><span class="lang lang-en">CPO / InP Optical Interconnect</span></td>
               <td><span class="lang lang-zh">高速铜缆 / AEC / 高速连接器</span><span class="lang lang-en">High-speed Copper / AEC / High-speed Connectors</span><small>proxy · watch</small></td>
@@ -2719,7 +2727,7 @@
               <td>7.6</td>
               <td>光伏支架等业务稀释纯度。</td>
             </tr>
-            
+
             <tr>
               <td><span class="lang lang-zh">CPO / InP 光通信</span><span class="lang lang-en">CPO / InP Optical Interconnect</span></td>
               <td><span class="lang lang-zh">高速光模块</span><span class="lang lang-en">High-speed Optical Modules</span><small>beneficiary · high</small></td>
@@ -2728,7 +2736,7 @@
               <td>18.8</td>
               <td>CSP CapEx放缓、价格下行、客户集中、汇率。</td>
             </tr>
-            
+
             <tr>
               <td><span class="lang lang-zh">CPO / InP 光通信</span><span class="lang lang-en">CPO / InP Optical Interconnect</span></td>
               <td><span class="lang lang-zh">高速光模块</span><span class="lang lang-en">High-speed Optical Modules</span><small>beneficiary · high</small></td>
@@ -2737,7 +2745,7 @@
               <td>21.8</td>
               <td>单一客户或价格竞争。</td>
             </tr>
-            
+
             <tr>
               <td><span class="lang lang-zh">CPO / InP 光通信</span><span class="lang lang-en">CPO / InP Optical Interconnect</span></td>
               <td><span class="lang lang-zh">光芯片 / 硅光 / 上游光器件</span><span class="lang lang-en">Optical Chips / Silicon Photonics / Upstream Optical Components</span><small>bottleneck · high</small></td>
@@ -2746,7 +2754,7 @@
               <td>18.4</td>
               <td>若增长仍主要来自接入网或传统光纤业务，AI纯度下调。</td>
             </tr>
-            
+
             <tr>
               <td><span class="lang lang-zh">CPO / InP 光通信</span><span class="lang lang-en">CPO / InP Optical Interconnect</span></td>
               <td><span class="lang lang-zh">光纤预制棒 / 数据中心光缆</span><span class="lang lang-en">Optical Fiber Preforms / Data-center Cables</span><small>enabler · medium</small></td>
@@ -2755,7 +2763,7 @@
               <td>11.6</td>
               <td>若增长来自传统运营商集采，AI纯度下降。</td>
             </tr>
-            
+
             <tr>
               <td><span class="lang lang-zh">CPO / InP 光通信</span><span class="lang lang-en">CPO / InP Optical Interconnect</span></td>
               <td><span class="lang lang-zh">光纤预制棒 / 数据中心光缆</span><span class="lang lang-en">Optical Fiber Preforms / Data-center Cables</span><small>enabler · medium</small></td>
@@ -2764,7 +2772,7 @@
               <td>25.8</td>
               <td>海缆/电力业务会稀释AI纯度。</td>
             </tr>
-            
+
             <tr>
               <td><span class="lang lang-zh">CPO / InP 光通信</span><span class="lang lang-en">CPO / InP Optical Interconnect</span></td>
               <td><span class="lang lang-zh">光纤预制棒 / 数据中心光缆</span><span class="lang lang-en">Optical Fiber Preforms / Data-center Cables</span><small>enabler · medium</small></td>
@@ -2773,7 +2781,7 @@
               <td>19.8</td>
               <td>若主要是电力/海缆或传统光缆，AI权重下降。</td>
             </tr>
-            
+
             <tr>
               <td><span class="lang lang-zh">CPO / InP 光通信</span><span class="lang lang-en">CPO / InP Optical Interconnect</span></td>
               <td><span class="lang lang-zh">光纤预制棒 / 数据中心光缆</span><span class="lang lang-en">Optical Fiber Preforms / Data-center Cables</span><small>enabler · medium</small></td>
@@ -2782,7 +2790,7 @@
               <td>19.6</td>
               <td>运营商传统投资下滑拖累。</td>
             </tr>
-            
+
             <tr>
               <td><span class="lang lang-zh">先进封装 / 关键设备</span><span class="lang lang-en">Advanced Packaging / Critical Equipment</span></td>
               <td><span class="lang lang-zh">HBF / TC bonder / 混合键合设备</span><span class="lang lang-en">HBF / TC Bonder / Hybrid Bonding Equipment</span><small>bottleneck · high</small></td>
@@ -2791,7 +2799,7 @@
               <td>75.6</td>
               <td>薄膜沉积仍是主业，先进键合收入基数小；若客户验证或收入占比不足需降权。</td>
             </tr>
-            
+
             <tr>
               <td><span class="lang lang-zh">先进封装 / 关键设备</span><span class="lang lang-en">Advanced Packaging / Critical Equipment</span></td>
               <td><span class="lang lang-zh">HBF / TC bonder / 混合键合设备</span><span class="lang lang-en">HBF / TC Bonder / Hybrid Bonding Equipment</span><small>bottleneck · high</small></td>
@@ -2800,7 +2808,7 @@
               <td>64.2</td>
               <td>百傲化学通过子公司参股10.4822%，非直接控股并表；主营业务与键合设备距离远，收入弹性高度不确定。</td>
             </tr>
-            
+
             <tr>
               <td><span class="lang lang-zh">先进封装 / 关键设备</span><span class="lang lang-en">Advanced Packaging / Critical Equipment</span></td>
               <td><span class="lang lang-zh">测试 / 量测 / 探针</span><span class="lang lang-en">Test / Metrology / Probe</span><small>enabler · medium</small></td>
@@ -2809,7 +2817,7 @@
               <td>55.8</td>
               <td>周期下行和并购整合风险。</td>
             </tr>
-            
+
             <tr>
               <td><span class="lang lang-zh">先进封装 / 关键设备</span><span class="lang lang-en">Advanced Packaging / Critical Equipment</span></td>
               <td><span class="lang lang-zh">测试 / 量测 / 探针</span><span class="lang lang-en">Test / Metrology / Probe</span><small>enabler · medium</small></td>
@@ -2834,61 +2842,61 @@
           <p><span class="lang lang-block lang-zh">已纳入 2 个A股映射：拓荆科技、百傲化学。来源记录数 3。</span><span class="lang lang-block lang-en">Included 2 A-share mapping rows: 拓荆科技, 百傲化学. Max source record count 3.</span></p>
           <small><span class="lang lang-block lang-zh">BESI; EV Group; SUSS MicroTec; Tokyo Elec…；BESI; EV Group; SUSS MicroTec; Tokyo Elec…</span><span class="lang lang-block lang-en">Source fields retained in Chinese for traceability: BESI; EV Group; SUSS MicroTec; Tokyo Elec…；BESI; EV Group; SUSS MicroTec; Tokyo Elec…</span></small>
         </article>
-        
+
         <article class="gap-item">
           <h4><span class="lang lang-zh">TCB热压键合设备</span><span class="lang lang-en">TCB热压键合设备</span></h4>
           <p><span class="lang lang-block lang-zh">已纳入 1 个A股映射：快克智能。来源记录数 2。</span><span class="lang lang-block lang-en">Included 1 A-share mapping rows: 快克智能. Max source record count 2.</span></p>
           <small><span class="lang lang-block lang-zh">BESI; ASMPT; Shibaura; Kulicke and Soffa;…</span><span class="lang lang-block lang-en">Source fields retained in Chinese for traceability: BESI; ASMPT; Shibaura; Kulicke and Soffa;…</span></small>
         </article>
-        
+
         <article class="gap-item">
           <h4><span class="lang lang-zh">InP/稀散金属</span><span class="lang lang-en">InP/稀散金属</span></h4>
           <p><span class="lang lang-block lang-zh">已纳入 2 个A股映射：云南锗业、有研新材。来源记录数 1。</span><span class="lang lang-block lang-en">Included 2 A-share mapping rows: 云南锗业, 有研新材. Max source record count 1.</span></p>
           <small><span class="lang lang-block lang-zh">AXTI；InP substrate feedstock pressure；AXTI；compound semiconductor material dema…</span><span class="lang lang-block lang-en">Source fields retained in Chinese for traceability: AXTI；InP substrate feedstock pressure；AXTI；compound semiconductor material dema…</span></small>
         </article>
-        
+
         <article class="gap-item">
           <h4><span class="lang lang-zh">HBM/先进封装基板</span><span class="lang lang-en">HBM/先进封装基板</span></h4>
           <p><span class="lang lang-block lang-zh">已纳入 2 个A股映射：兴森科技、深南电路。来源记录数 1。</span><span class="lang lang-block lang-en">Included 2 A-share mapping rows: 兴森科技, 深南电路. Max source record count 1.</span></p>
           <small><span class="lang lang-block lang-zh">Micron；advanced packaging substrate demand；SK Hynix；HBM packaging substrate demand</span><span class="lang lang-block lang-en">Source fields retained in Chinese for traceability: Micron；advanced packaging substrate demand；SK Hynix；HBM packaging substrate demand</span></small>
         </article>
-        
+
         <article class="gap-item">
           <h4><span class="lang lang-zh">HBM基材/高端CCL</span><span class="lang lang-en">HBM基材/高端CCL</span></h4>
           <p><span class="lang lang-block lang-zh">已纳入 2 个A股映射：生益科技、南亚新材。来源记录数 1。</span><span class="lang lang-block lang-en">Included 2 A-share mapping rows: 生益科技, 南亚新材. Max source record count 1.</span></p>
           <small><span class="lang lang-block lang-zh">Samsung；advanced packaging material demand；SK Hynix；advanced packaging material dema…</span><span class="lang lang-block lang-en">Source fields retained in Chinese for traceability: Samsung；advanced packaging material demand；SK Hynix；advanced packaging material dema…</span></small>
         </article>
-        
+
         <article class="gap-item">
           <h4><span class="lang lang-zh">SiC/GaN功率模块</span><span class="lang lang-en">SiC/GaN功率模块</span></h4>
           <p><span class="lang lang-block lang-zh">已纳入 2 个A股映射：斯达半导、扬杰科技。来源记录数 1。</span><span class="lang lang-block lang-en">Included 2 A-share mapping rows: 斯达半导, 扬杰科技. Max source record count 1.</span></p>
           <small><span class="lang lang-block lang-zh">Infineon；800V power module architecture d…；ON Semiconductor；power discrete demand</span><span class="lang lang-block lang-en">Source fields retained in Chinese for traceability: Infineon；800V power module architecture d…；ON Semiconductor；power discrete demand</span></small>
         </article>
-        
+
         <article class="gap-item">
           <h4><span class="lang lang-zh">IGBT/GaN/SiC平台</span><span class="lang lang-en">IGBT/GaN/SiC平台</span></h4>
           <p><span class="lang lang-block lang-zh">已纳入 2 个A股映射：华润微、士兰微。来源记录数 1。</span><span class="lang lang-block lang-en">Included 2 A-share mapping rows: 华润微, 士兰微. Max source record count 1.</span></p>
           <small><span class="lang lang-block lang-zh">Infineon；power semiconductor demand；Infineon；power semiconductor cycle demand</span><span class="lang lang-block lang-en">Source fields retained in Chinese for traceability: Infineon；power semiconductor demand；Infineon；power semiconductor cycle demand</span></small>
         </article>
-        
+
         <article class="gap-item">
           <h4><span class="lang lang-zh">MOSFET/SiC/GaN器件</span><span class="lang lang-en">MOSFET/SiC/GaN器件</span></h4>
           <p><span class="lang lang-block lang-zh">已纳入 2 个A股映射：新洁能、东微半导。来源记录数 1。</span><span class="lang lang-block lang-en">Included 2 A-share mapping rows: 新洁能, 东微半导. Max source record count 1.</span></p>
           <small><span class="lang lang-block lang-zh">ON Semiconductor；power device demand；Infineon；high voltage power device demand</span><span class="lang lang-block lang-en">Source fields retained in Chinese for traceability: ON Semiconductor；power device demand；Infineon；high voltage power device demand</span></small>
         </article>
-        
+
         <article class="gap-item">
           <h4><span class="lang lang-zh">外延/器件</span><span class="lang lang-en">外延/器件</span></h4>
           <p><span class="lang lang-block lang-zh">已纳入 1 个A股映射：三安光电。来源记录数 1。</span><span class="lang lang-block lang-en">Included 1 A-share mapping rows: 三安光电. Max source record count 1.</span></p>
           <small><span class="lang lang-block lang-zh">LITE；compound semiconductor optical devic…</span><span class="lang lang-block lang-en">Source fields retained in Chinese for traceability: LITE；compound semiconductor optical devic…</span></small>
         </article>
-        
+
         <article class="gap-item">
           <h4><span class="lang lang-zh">InP激光器</span><span class="lang lang-en">InP激光器</span></h4>
           <p><span class="lang lang-block lang-zh">已纳入 1 个A股映射：源杰科技。来源记录数 1。</span><span class="lang lang-block lang-en">Included 1 A-share mapping rows: 源杰科技. Max source record count 1.</span></p>
           <small><span class="lang lang-block lang-zh">LITE；AI optical laser chip demand</span><span class="lang lang-block lang-en">Source fields retained in Chinese for traceability: LITE；AI optical laser chip demand</span></small>
         </article>
-        
+
         <article class="gap-item">
           <h4><span class="lang lang-zh">碳化硅衬底</span><span class="lang lang-en">碳化硅衬底</span></h4>
           <p><span class="lang lang-block lang-zh">已纳入 1 个A股映射：天岳先进。来源记录数 1。</span><span class="lang lang-block lang-en">Included 1 A-share mapping rows: 天岳先进. Max source record count 1.</span></p>
@@ -2913,7 +2921,7 @@
     </section>
 
     <footer class="footer">
-      <span>AIpha Serenity v4.1 HTML research report｜2026-06-12T22:09:53+08:00</span>
+      <span>AIpha Serenity v4.1 HTML research report｜2026-06-14T09:39:26+08:00</span>
       <span><span class="lang lang-zh">附录：xlsx / csv / json 保留 tweet_id、url、theme、ticker 和映射证据。</span><span class="lang lang-en">Appendix: xlsx / csv / json retains tweet_id, url, theme, ticker and mapping evidence.</span></span>
     </footer>
   </main>
