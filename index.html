@@ -97,6 +97,7 @@
       line-height: 1;
       white-space: nowrap;
     }
+    .tag-short { display: none; }
     main {
       padding: 30px 0 36px;
     }
@@ -347,15 +348,47 @@
       .shell {
         width: min(100vw - 24px, 1160px);
       }
-      .nav {
-        align-items: flex-start;
-        flex-direction: column;
+      .shell.nav {
+        width: min(100vw - 16px, 1160px);
       }
+      header {
+        min-height: 40px;
+      }
+      .nav {
+        align-items: center;
+        flex-direction: row;
+        gap: 6px;
+        padding: 7px 0;
+      }
+      .brand { flex: 0 0 auto; }
       .header-tags {
-        justify-content: flex-start;
+        flex: 1 1 auto;
+        min-width: 0;
+        justify-content: flex-end;
+        flex-wrap: nowrap;
+        gap: 4px;
+        overflow: hidden;
+      }
+      .header-tag {
+        flex: 0 1 auto;
+        max-width: 58px;
+        min-width: 0;
+        min-height: 26px;
+        justify-content: center;
+        padding: 1px 6px;
+        font-size: 11px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      .tag-full { display: none; }
+      .tag-short {
+        display: inline;
+        min-width: 0;
+        overflow: hidden;
+        text-overflow: ellipsis;
       }
       .brand img {
-        width: 132px;
+        width: 88px;
       }
       main {
         padding-top: 20px;
@@ -392,6 +425,59 @@
         padding: 0 12px;
       }
     }
+    @media (max-width: 560px) {
+      .shell.nav {
+        width: min(100vw - 16px, 1160px);
+      }
+      header {
+        min-height: 36px;
+      }
+      .nav {
+        gap: 5px;
+        padding: 6px 0;
+      }
+      .brand img {
+        width: 76px;
+      }
+      .header-tags {
+        gap: 4px;
+      }
+      .header-tag {
+        max-width: 52px;
+        min-height: 24px;
+        padding: 1px 4px;
+        font-size: 10px;
+      }
+    }
+    @media (max-width: 430px) {
+      .shell.nav {
+        width: min(100vw - 14px, 1160px);
+      }
+      .brand img {
+        width: 70px;
+      }
+      .header-tag {
+        max-width: 48px;
+        padding-left: 3px;
+        padding-right: 3px;
+        font-size: 9.5px;
+      }
+    }
+    @media (max-width: 375px) {
+      .shell.nav {
+        width: min(100vw - 12px, 1160px);
+      }
+      .nav {
+        gap: 4px;
+      }
+      .brand img {
+        width: 64px;
+      }
+      .header-tag {
+        max-width: 44px;
+        font-size: 9px;
+      }
+    }
     @media (prefers-reduced-motion: reduce) {
       html { scroll-behavior: auto; }
       .module-row { transition: none; }
@@ -406,10 +492,10 @@
         <img src="assets/nero-mark.svg" alt="AIpha Research Desk logo" />
       </a>
       <div class="header-tags" aria-label="AIpha public package status">
-        <span class="header-tag">仅公开静态 HTML</span>
-        <span class="header-tag">不公开 SQLite</span>
-        <span class="header-tag">不公开原始推文库</span>
-        <span class="header-tag">非投资建议</span>
+        <span class="header-tag" title="仅公开静态 HTML"><span class="tag-full">仅公开静态 HTML</span><span class="tag-short">HTML</span></span>
+        <span class="header-tag" title="不公开 SQLite"><span class="tag-full">不公开 SQLite</span><span class="tag-short">无DB</span></span>
+        <span class="header-tag" title="不公开原始推文库"><span class="tag-full">不公开原始推文库</span><span class="tag-short">无推文库</span></span>
+        <span class="header-tag" title="非投资建议"><span class="tag-full">非投资建议</span><span class="tag-short">非建议</span></span>
       </div>
     </div>
   </header>
