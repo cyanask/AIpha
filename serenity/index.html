@@ -5,11 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="description" content="AIpha bilingual report based on the local Serenity tweet asset: upstream AI supply-chain bottlenecks, evidence and leaf-lane A-share mapping assets." />
-  <meta property="og:title" content="AIpha Serenity V4.2｜AI上游瓶颈地图 / AI Upstream Bottleneck Map" />
+  <meta property="og:title" content="AIpha Serenity V4.3｜AI上游瓶颈地图 / AI Upstream Bottleneck Map" />
   <meta property="og:description" content="AIpha bilingual report based on the local Serenity tweet asset: upstream AI supply-chain bottlenecks, evidence and leaf-lane A-share mapping assets." />
   <meta property="og:type" content="article" />
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="AIpha Serenity V4.2｜AI上游瓶颈地图 / AI Upstream Bottleneck Map" />
+  <meta name="twitter:title" content="AIpha Serenity V4.3｜AI上游瓶颈地图 / AI Upstream Bottleneck Map" />
   <meta name="twitter:description" content="AIpha bilingual report based on the local Serenity tweet asset: upstream AI supply-chain bottlenecks, evidence and leaf-lane A-share mapping assets." />
   <meta name="serenity:source_commit" content="92d3ae23fa19948270a8116dd29827e4dd9d9e6f" />
   <title>AI 上游瓶颈地图：Serenity 发文中的供应链信息差</title>
@@ -218,9 +218,12 @@
     .cover-digest-panel li { display: grid; grid-template-columns: minmax(0, 1fr) 38px; gap: 8px; align-items: center; padding: 7px 0; border-top: 1px solid rgba(255,255,255,0.12); }
     .cover-digest-panel li span { color: #f8fafc; font-weight: 800; font-size: 13px; overflow-wrap: anywhere; }
     .cover-digest-panel li b { justify-self: end; color: #f1c074; font-size: 13px; }
+    .cover-digest-ticker-groups { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+    .cover-digest-ticker-groups strong { display: block; margin-bottom: 5px; color: #9fb6c3; font-size: 10px; text-transform: uppercase; letter-spacing: 0.04em; }
     .cover-digest-tickers { display: flex; flex-wrap: wrap; gap: 6px; }
     .cover-digest-tickers span { display: inline-flex; align-items: center; gap: 5px; padding: 4px 7px; color: #dbe4f0; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.12); font-size: 11px; }
     .cover-digest-tickers b { color: #f1c074; font-size: 10px; }
+    .cover-digest-tickers em { color: #91a1ae; font-size: 11px; font-style: normal; }
     .section-band h2 { margin: 0; font-size: 22px; }
     .section-band { margin: 22px 0; padding: clamp(22px, 3vw, 34px); }
     .section-head { display: flex; justify-content: space-between; gap: 24px; align-items: end; margin-bottom: 18px; }
@@ -285,7 +288,13 @@
     .digest-tags { display: flex; flex-wrap: wrap; gap: 7px; }
     .digest-tag { display: inline-flex; align-items: center; gap: 7px; max-width: 100%; padding: 5px 8px; background: #fff; border: 1px solid var(--line); color: var(--ink); font-size: 12px; overflow-wrap: anywhere; }
     .digest-tag b { color: var(--blue); }
+    .digest-tag small { color: var(--muted); font-size: 10px; }
     .ticker-tag { font-weight: 800; }
+    .rising-tag b { color: var(--teal); }
+    .muted-tag { color: var(--muted); background: #f7f7f5; }
+    .digest-ticker-columns { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+    .digest-ticker-columns h4 { margin: 0 0 4px; font-size: 13px; }
+    .digest-ticker-columns p { margin: 0 0 8px; color: var(--muted); font-size: 11px; }
     .digest-card-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
     .digest-card { background: #fff; border: 1px solid var(--line); border-top: 4px solid var(--blue); padding: 15px; min-width: 0; }
     .digest-card header { display: flex; justify-content: space-between; gap: 12px; align-items: center; margin-bottom: 8px; }
@@ -351,6 +360,7 @@
       .cover-title-row, .cover-grid, .chain-body { grid-template-columns: 1fr; }
       .cover-title-row .stats { margin-bottom: 0; }
       .digest-overview, .digest-card-grid { grid-template-columns: 1fr; }
+      .cover-digest-ticker-groups, .digest-ticker-columns { grid-template-columns: 1fr; }
       .question-list, .evidence-grid, .gap-grid, .boundary-grid, .subchain-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
       .supply-path { display: flex; flex-wrap: wrap; gap: 8px; overflow: visible; border: 0; background: transparent; }
       .path-node { flex: 1 1 170px; min-height: 0; padding: 8px 11px; border: 1px solid var(--line); background: rgba(255,255,255,0.78); }
@@ -559,7 +569,7 @@
       <div class="cover-board">
         <div class="cover-meta">
           <div class="cover-meta-row">
-            <span class="meta-chip">AIpha Serenity V4.2</span>
+            <span class="meta-chip">AIpha Serenity V4.3</span>
             <span class="meta-chip"><span class="lang lang-zh">双源近 3 日摘要版</span><span class="lang lang-en">Dual-source 3D Digest</span></span>
             <span class="meta-chip">2026-06-15</span>
             <span class="meta-chip">5,905 tweets</span>
@@ -646,7 +656,10 @@
           <b>5</b>
         </li>
         </ol>
-      <div class="cover-digest-tickers"><span>SIVE<b>6</b></span><span>AAOI<b>4</b></span><span>AXTI<b>4</b></span><span>SPCX<b>4</b></span><span>LITE<b>3</b></span><span>SOI<b>3</b></span><span>TSM<b>3</b></span><span>IQE<b>3</b></span></div>
+      <div class="cover-digest-ticker-groups">
+        <div><strong><span class="lang lang-zh">高频</span><span class="lang lang-en">Top</span></strong><div class="cover-digest-tickers"><span>SIVE<b>6</b></span><span>AAOI<b>4</b></span><span>AXTI<b>4</b></span><span>SPCX<b>4</b></span><span>LITE<b>3</b></span><span>SOI<b>3</b></span><span>TSM<b>3</b></span><span>IQE<b>3</b></span></div></div>
+        <div><strong><span class="lang lang-zh">升温</span><span class="lang lang-en">Rising</span></strong><div class="cover-digest-tickers"><span>IQE<b>+3</b></span><span>AXTI<b>+2</b></span><span>SPCX<b>+2</b></span><span>SOI<b>+2</b></span><span>ALAB<b>+2</b></span><span>WOLF<b>+2</b></span><span>TSM<b>+1</b></span><span>INTC<b>+1</b></span></div></div>
+      </div>
     </aside>
 
           </div>
@@ -795,8 +808,19 @@
           <div class="digest-tags"><span class="digest-tag"><span class="lang lang-zh">InP / 化合物半导体</span><span class="lang lang-en">InP / Compound Semis</span><b>7</b></span><span class="digest-tag"><span class="lang lang-zh">HBM / 存储</span><span class="lang lang-en">HBM / Memory Bandwidth</span><b>7</b></span><span class="digest-tag"><span class="lang lang-zh">AI 半导体供应链</span><span class="lang lang-en">AI Semi Supply Chain</span><b>7</b></span><span class="digest-tag"><span class="lang lang-zh">CPO / 光通信</span><span class="lang lang-en">CPO / Optical Interconnect</span><b>5</b></span><span class="digest-tag"><span class="lang lang-zh">Neocloud 融资质量</span><span class="lang lang-en">Neocloud Financing Quality</span><b>4</b></span><span class="digest-tag"><span class="lang lang-zh">电力 / 功率链</span><span class="lang lang-en">Power / Grid Chain</span><b>3</b></span></div>
         </div>
         <div>
-          <h3>Top tickers</h3>
-          <div class="digest-tags"><span class="digest-tag ticker-tag">SIVE<b>6</b></span><span class="digest-tag ticker-tag">AAOI<b>4</b></span><span class="digest-tag ticker-tag">AXTI<b>4</b></span><span class="digest-tag ticker-tag">SPCX<b>4</b></span><span class="digest-tag ticker-tag">LITE<b>3</b></span><span class="digest-tag ticker-tag">SOI<b>3</b></span><span class="digest-tag ticker-tag">TSM<b>3</b></span><span class="digest-tag ticker-tag">IQE<b>3</b></span><span class="digest-tag ticker-tag">SNDK<b>2</b></span><span class="digest-tag ticker-tag">ALAB<b>2</b></span><span class="digest-tag ticker-tag">NBIS<b>2</b></span><span class="digest-tag ticker-tag">RKLB<b>2</b></span></div>
+          <h3><span class="lang lang-zh">Ticker 温度</span><span class="lang lang-en">Ticker Temperature</span></h3>
+          <div class="digest-ticker-columns">
+            <section>
+              <h4><span class="lang lang-zh">窗口内高频 ticker</span><span class="lang lang-en">Frequent Tickers</span></h4>
+              <p><span class="lang lang-zh">当前 3 日窗口内绝对提及次数。</span><span class="lang lang-en">Absolute mentions in the current 3-day window.</span></p>
+              <div class="digest-tags"><span class="digest-tag ticker-tag">SIVE<b>6</b></span><span class="digest-tag ticker-tag">AAOI<b>4</b></span><span class="digest-tag ticker-tag">AXTI<b>4</b></span><span class="digest-tag ticker-tag">SPCX<b>4</b></span><span class="digest-tag ticker-tag">LITE<b>3</b></span><span class="digest-tag ticker-tag">SOI<b>3</b></span><span class="digest-tag ticker-tag">TSM<b>3</b></span><span class="digest-tag ticker-tag">IQE<b>3</b></span><span class="digest-tag ticker-tag">SNDK<b>2</b></span><span class="digest-tag ticker-tag">ALAB<b>2</b></span><span class="digest-tag ticker-tag">NBIS<b>2</b></span><span class="digest-tag ticker-tag">RKLB<b>2</b></span></div>
+            </section>
+            <section>
+              <h4><span class="lang lang-zh">近端升温 ticker</span><span class="lang lang-en">Rising Tickers</span></h4>
+              <p><span class="lang lang-zh">当前 3 日减前一 3 日，只显示正 delta。</span><span class="lang lang-en">Current 3 days minus previous 3 days; positive delta only.</span></p>
+              <div class="digest-tags"><span class="digest-tag ticker-tag rising-tag">IQE<b>+3</b><small>3 vs 0</small></span><span class="digest-tag ticker-tag rising-tag">AXTI<b>+2</b><small>4 vs 2</small></span><span class="digest-tag ticker-tag rising-tag">SPCX<b>+2</b><small>4 vs 2</small></span><span class="digest-tag ticker-tag rising-tag">SOI<b>+2</b><small>3 vs 1</small></span><span class="digest-tag ticker-tag rising-tag">ALAB<b>+2</b><small>2 vs 0</small></span><span class="digest-tag ticker-tag rising-tag">WOLF<b>+2</b><small>2 vs 0</small></span><span class="digest-tag ticker-tag rising-tag">TSM<b>+1</b><small>3 vs 2</small></span><span class="digest-tag ticker-tag rising-tag">INTC<b>+1</b><small>2 vs 1</small></span><span class="digest-tag ticker-tag rising-tag">SNDK<b>+1</b><small>2 vs 1</small></span><span class="digest-tag ticker-tag rising-tag">XFAB<b>+1</b><small>2 vs 1</small></span><span class="digest-tag ticker-tag rising-tag">CIFR<b>+1</b><small>1 vs 0</small></span><span class="digest-tag ticker-tag rising-tag">HUT<b>+1</b><small>1 vs 0</small></span></div>
+            </section>
+          </div>
         </div>
       </div>
       <div class="digest-card-grid">
@@ -1026,8 +1050,19 @@
           <div class="digest-tags"><span class="digest-tag"><span class="lang lang-zh">AI 半导体供应链</span><span class="lang lang-en">AI Semi Supply Chain</span><b>11</b></span><span class="digest-tag"><span class="lang lang-zh">HBM / 存储</span><span class="lang lang-en">HBM / Memory Bandwidth</span><b>9</b></span><span class="digest-tag"><span class="lang lang-zh">InP / 化合物半导体</span><span class="lang lang-en">InP / Compound Semis</span><b>3</b></span><span class="digest-tag"><span class="lang lang-zh">Neocloud 融资质量</span><span class="lang lang-en">Neocloud Financing Quality</span><b>2</b></span><span class="digest-tag"><span class="lang lang-zh">CPO / 光通信</span><span class="lang lang-en">CPO / Optical Interconnect</span><b>2</b></span><span class="digest-tag"><span class="lang lang-zh">电力 / 功率链</span><span class="lang lang-en">Power / Grid Chain</span><b>1</b></span></div>
         </div>
         <div>
-          <h3>Top tickers</h3>
-          <div class="digest-tags"></div>
+          <h3><span class="lang lang-zh">Ticker 温度</span><span class="lang lang-en">Ticker Temperature</span></h3>
+          <div class="digest-ticker-columns">
+            <section>
+              <h4><span class="lang lang-zh">窗口内高频 ticker</span><span class="lang lang-en">Frequent Tickers</span></h4>
+              <p><span class="lang lang-zh">当前 3 日窗口内绝对提及次数。</span><span class="lang lang-en">Absolute mentions in the current 3-day window.</span></p>
+              <div class="digest-tags"></div>
+            </section>
+            <section>
+              <h4><span class="lang lang-zh">近端升温 ticker</span><span class="lang lang-en">Rising Tickers</span></h4>
+              <p><span class="lang lang-zh">当前 3 日减前一 3 日，只显示正 delta。</span><span class="lang lang-en">Current 3 days minus previous 3 days; positive delta only.</span></p>
+              <div class="digest-tags"><span class="digest-tag muted-tag"><span class="lang lang-zh">暂无正向升温</span><span class="lang lang-en">No positive delta</span></span></div>
+            </section>
+          </div>
         </div>
       </div>
       <div class="digest-card-grid">
@@ -2906,7 +2941,7 @@
     </section>
 
     <footer class="footer">
-      <span>AIpha Serenity v4.2 HTML research report｜2026-06-15T08:06:29+08:00</span>
+      <span>AIpha Serenity v4.3 HTML research report｜2026-06-15T10:13:32+08:00</span>
       <span><span class="lang lang-zh">附录：xlsx / csv / json 保留 tweet_id、url、theme、ticker 和映射证据。</span><span class="lang lang-en">Appendix: xlsx / csv / json retains tweet_id, url, theme, ticker and mapping evidence.</span></span>
     </footer>
   </main>
