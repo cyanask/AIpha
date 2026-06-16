@@ -216,114 +216,123 @@
     .lead-group { grid-column: 2; color: var(--nero-blue); font-size: 12px; }
     .lead-card strong { grid-column: 2; color: var(--nero-ink); font-size: 13px; line-height: 1.32; overflow-wrap: anywhere; }
     .lead-card small { grid-column: 2; color: var(--nero-subtle); font-size: 11px; overflow-wrap: anywhere; }
-    .secondary-market { display: grid; gap: 10px; padding: 10px; }
+    .secondary-market { display: grid; gap: 6px; padding: 7px; }
     .market-head {
       display: flex;
       justify-content: space-between;
       align-items: end;
-      gap: 12px;
+      gap: 10px;
       border-bottom: 1px solid var(--nero-line);
-      padding-bottom: 8px;
+      padding-bottom: 6px;
     }
-    .market-head h2 { margin: 2px 0 0; font-size: 16px; line-height: 1.2; letter-spacing: 0; }
-    .market-head p { margin: 0; max-width: 720px; color: var(--nero-muted); font-size: 11px; }
-    .market-eyebrow { color: var(--nero-gold); font: 700 11px/1 var(--font-mono); text-transform: uppercase; }
+    .market-head h2 { margin: 1px 0 0; font-size: 14px; line-height: 1.15; letter-spacing: 0; }
+    .market-head p { margin: 0; max-width: 660px; color: var(--nero-muted); font-size: 10px; line-height: 1.25; }
+    .market-eyebrow { color: var(--nero-gold); font: 700 10px/1 var(--font-mono); text-transform: uppercase; }
     .market-index-grid {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 8px;
+      gap: 5px;
     }
     .market-index-tile {
       min-width: 0;
       display: grid;
-      grid-template-columns: minmax(0, 1fr) auto;
-      gap: 5px 10px;
-      align-items: start;
-      padding: 9px;
+      grid-template-columns: auto minmax(0, 1fr) auto;
+      gap: 3px 6px;
+      align-items: center;
+      padding: 4px 6px;
       border: 1px solid var(--nero-line);
       background: #fbfcfc;
-      border-left: 3px solid var(--nero-line-strong);
+      border-left: 2px solid var(--nero-line-strong);
     }
-    .market-index-tile h3 { margin: 2px 0 0; font-size: 13px; line-height: 1.2; letter-spacing: 0; }
-    .market-index-tile strong { font: 800 20px/1 var(--font-mono); }
-    .market-index-tile small { grid-column: 1 / -1; color: var(--nero-subtle); font-size: 11px; }
-    .market-symbol { color: var(--nero-muted); font: 700 11px/1 var(--font-mono); }
-    .market-domain-board { display: grid; gap: 8px; }
+    .market-index-tile h3 { margin: 0; font-size: 11px; line-height: 1.15; letter-spacing: 0; overflow-wrap: anywhere; }
+    .market-index-tile strong { font: 800 14px/1 var(--font-mono); white-space: nowrap; }
+    .market-index-tile small { grid-column: 1 / -1; color: var(--nero-subtle); font-size: 9px; line-height: 1.15; }
+    .market-symbol { color: var(--nero-muted); font: 700 10px/1 var(--font-mono); white-space: nowrap; }
+    .market-domain-board { display: grid; gap: 5px; }
     .market-domain {
       display: grid;
-      gap: 6px;
-      padding-top: 2px;
+      gap: 4px;
+      padding-top: 1px;
       min-width: 0;
     }
     .market-domain-head {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 10px;
+      gap: 8px;
     }
-    .market-domain-head h3 { margin: 0; font-size: 13px; line-height: 1.2; letter-spacing: 0; }
-    .market-domain-head span { color: var(--nero-subtle); font: 700 10px/1 var(--font-mono); }
+    .market-domain-head h3 { margin: 0; font-size: 12px; line-height: 1.15; letter-spacing: 0; }
+    .market-domain-head span { color: var(--nero-subtle); font: 700 9px/1 var(--font-mono); }
     .market-system-grid {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 8px;
+      gap: 5px;
     }
     .market-system-card {
       min-width: 0;
       display: grid;
-      gap: 6px;
-      padding: 8px;
+      gap: 3px;
+      padding: 4px 6px;
       border: 1px solid var(--nero-line);
       background: #fff;
       border-left: 2px solid var(--nero-line-strong);
     }
     .market-system-head {
-      display: flex;
-      align-items: start;
-      justify-content: space-between;
-      gap: 8px;
+      display: grid;
+      grid-template-columns: auto minmax(0, 1fr) auto auto;
+      align-items: center;
+      gap: 5px;
       min-width: 0;
     }
-    .market-system-head h4 { margin: 2px 0 0; font-size: 13px; line-height: 1.2; letter-spacing: 0; overflow-wrap: anywhere; }
-    .market-system-head strong { font: 800 17px/1 var(--font-mono); white-space: nowrap; }
+    .market-system-head h4 { margin: 0; font-size: 12px; line-height: 1.15; letter-spacing: 0; overflow-wrap: anywhere; }
+    .market-system-head strong { font: 800 14px/1 var(--font-mono); white-space: nowrap; }
     .market-status { color: var(--nero-subtle); font: 700 9px/1 var(--font-mono); text-transform: uppercase; }
     .market-status.ok { color: #176a4b; }
     .market-status.partial { color: #8b5e00; }
     .market-status.missing { color: #8a3441; }
-    .market-system-meta {
+    .market-source-chip a, .market-source-chip span {
+      color: var(--nero-muted);
+      font: 700 9px/1 var(--font-mono);
+      text-decoration: none;
+      white-space: nowrap;
+    }
+    .market-system-strip {
       display: flex;
       flex-wrap: wrap;
-      gap: 4px;
+      gap: 3px;
+      min-width: 0;
     }
-    .market-system-meta span {
-      padding: 2px 4px;
+    .market-system-strip > span {
+      display: inline-flex;
+      gap: 3px;
+      align-items: center;
+      padding: 1px 3px;
       border: 1px solid var(--nero-line);
       background: #fbfcfc;
       color: var(--nero-muted);
       font-size: 9px;
-      line-height: 1.2;
-    }
-    .market-ticker-row, .market-proxy-row { display: grid; gap: 4px; min-width: 0; }
-    .market-ticker-row small, .market-proxy-row small { color: var(--nero-subtle); font-size: 9px; }
-    .market-ticker-row div, .market-proxy-row div {
-      display: flex;
-      gap: 4px;
-      flex-wrap: wrap;
+      line-height: 1.1;
       min-width: 0;
     }
-    .market-ticker-row span, .market-proxy-row span, .market-proxy-row a {
+    .market-system-strip .market-components {
+      background: transparent;
+      border-color: transparent;
+      padding-left: 0;
+      flex-wrap: wrap;
+    }
+    .market-components span {
       display: inline-flex;
       gap: 3px;
       max-width: 100%;
-      padding: 2px 4px;
+      padding: 1px 3px;
       border: 1px solid var(--nero-line);
       background: #f7f9fb;
       color: var(--nero-muted);
       font-size: 9px;
-      line-height: 1.15;
+      line-height: 1.1;
       overflow-wrap: anywhere;
     }
-    .market-ticker-row b, .market-proxy-row b { color: var(--nero-ink); font-family: var(--font-mono); }
+    .market-components b { color: var(--nero-ink); font-family: var(--font-mono); }
     .market-up { border-left-color: #2b8a5f; }
     .market-down { border-left-color: #b84a5a; }
     .market-flat { border-left-color: #6b7280; }
@@ -893,64 +902,50 @@
       </div>
       <div class="market-index-grid">
       <article class="market-index-tile market-up">
-        <div>
-          <span class="market-symbol">^IXIC</span>
-          <h3><span class="lang-zh">纳斯达克综合指数</span><span class="lang-en">Nasdaq Composite</span><span class="lang-ja">纳斯达克综合指数</span></h3>
-        </div>
+        <span class="market-symbol">^IXIC</span>
+        <h3><span class="lang-zh">纳斯达克综合指数</span><span class="lang-en">Nasdaq Composite</span><span class="lang-ja">纳斯达克综合指数</span></h3>
         <strong>+3.07%</strong>
         <small><span class="lang-zh">收盘</span><span class="lang-en">Close</span><span class="lang-ja">終値</span> 26,683.94 · 2026-06-15</small>
       </article>
 
       <article class="market-index-tile market-up">
-        <div>
-          <span class="market-symbol">^GSPC</span>
-          <h3><span class="lang-zh">标普 500</span><span class="lang-en">S&amp;P 500</span><span class="lang-ja">标普 500</span></h3>
-        </div>
+        <span class="market-symbol">^GSPC</span>
+        <h3><span class="lang-zh">标普 500</span><span class="lang-en">S&amp;P 500</span><span class="lang-ja">标普 500</span></h3>
         <strong>+1.65%</strong>
         <small><span class="lang-zh">收盘</span><span class="lang-en">Close</span><span class="lang-ja">終値</span> 7,554.29 · 2026-06-15</small>
       </article>
 
       <article class="market-index-tile market-up">
-        <div>
-          <span class="market-symbol">AIQ</span>
-          <h3><span class="lang-zh">AI &amp; Big Data</span><span class="lang-en">AI &amp; Big Data</span><span class="lang-ja">AI &amp; Big Data</span></h3>
-        </div>
+        <span class="market-symbol">AIQ</span>
+        <h3><span class="lang-zh">AI &amp; Big Data</span><span class="lang-en">AI &amp; Big Data</span><span class="lang-ja">AI &amp; Big Data</span></h3>
         <strong>+3.98%</strong>
         <small><span class="lang-zh">收盘</span><span class="lang-en">Close</span><span class="lang-ja">終値</span> 66.55 · 2026-06-15</small>
       </article>
 
       <article class="market-index-tile market-up">
-        <div>
-          <span class="market-symbol">SOXX</span>
-          <h3><span class="lang-zh">半导体整体</span><span class="lang-en">Broad Semiconductors</span><span class="lang-ja">半导体整体</span></h3>
-        </div>
+        <span class="market-symbol">SOXX</span>
+        <h3><span class="lang-zh">半导体整体</span><span class="lang-en">Broad Semiconductors</span><span class="lang-ja">半导体整体</span></h3>
         <strong>+5.45%</strong>
         <small><span class="lang-zh">收盘</span><span class="lang-en">Close</span><span class="lang-ja">終値</span> 628.45 · 2026-06-15</small>
       </article>
 
       <article class="market-index-tile market-up">
-        <div>
-          <span class="market-symbol">XSD</span>
-          <h3><span class="lang-zh">半导体等权</span><span class="lang-en">Equal-Weight Semiconductors</span><span class="lang-ja">半导体等权</span></h3>
-        </div>
+        <span class="market-symbol">XSD</span>
+        <h3><span class="lang-zh">半导体等权</span><span class="lang-en">Equal-Weight Semiconductors</span><span class="lang-ja">半导体等权</span></h3>
         <strong>+1.37%</strong>
         <small><span class="lang-zh">收盘</span><span class="lang-en">Close</span><span class="lang-ja">終値</span> 605.75 · 2026-06-12</small>
       </article>
 
       <article class="market-index-tile market-up">
-        <div>
-          <span class="market-symbol">DTCR</span>
-          <h3><span class="lang-zh">数据中心与数字基础设施</span><span class="lang-en">Data Center &amp; Digital Infrastructure</span><span class="lang-ja">数据中心与数字基础设施</span></h3>
-        </div>
+        <span class="market-symbol">DTCR</span>
+        <h3><span class="lang-zh">数据中心与数字基础设施</span><span class="lang-en">Data Center &amp; Digital Infrastructure</span><span class="lang-ja">数据中心与数字基础设施</span></h3>
         <strong>+2.44%</strong>
         <small><span class="lang-zh">收盘</span><span class="lang-en">Close</span><span class="lang-ja">終値</span> 31.92 · 2026-06-15</small>
       </article>
 
       <article class="market-index-tile market-down">
-        <div>
-          <span class="market-symbol">GRID</span>
-          <h3><span class="lang-zh">智能电网基础设施</span><span class="lang-en">Smart Grid Infrastructure</span><span class="lang-ja">智能电网基础设施</span></h3>
-        </div>
+        <span class="market-symbol">GRID</span>
+        <h3><span class="lang-zh">智能电网基础设施</span><span class="lang-en">Smart Grid Infrastructure</span><span class="lang-ja">智能电网基础设施</span></h3>
         <strong>-0.18%</strong>
         <small><span class="lang-zh">收盘</span><span class="lang-en">Close</span><span class="lang-ja">終値</span> 189.01 · 2026-06-12</small>
       </article>
@@ -964,93 +959,61 @@
               <div class="market-system-grid">
       <article class="market-system-card market-up">
         <div class="market-system-head">
-          <div>
-            <span class="market-status ok"><span class="lang-zh">精选成分篮子</span><span class="lang-en">Curated component basket</span><span class="lang-ja">精选成分篮子</span></span>
-            <h4><span class="lang-zh">GPU/AI 加速器</span><span class="lang-en">GPU / AI Accelerators</span><span class="lang-ja">GPU/AI 加速器</span></h4>
-          </div>
+          <span class="market-status ok"><span class="lang-zh">精选成分篮子</span><span class="lang-en">Curated component basket</span><span class="lang-ja">精选成分篮子</span></span>
+          <h4><span class="lang-zh">GPU/AI 加速器</span><span class="lang-en">GPU / AI Accelerators</span><span class="lang-ja">GPU/AI 加速器</span></h4>
           <strong>+4.55%</strong>
+          <span class="market-source-chip"><a href="https://www.vaneck.com/us/en/investments/semiconductor-etf-smh/" target="_blank" rel="noreferrer">SMH/SOXX</a></span>
         </div>
-        <div class="market-system-meta">
+        <div class="market-system-strip">
           <span><span class="lang-zh">有效成分</span><span class="lang-en">Components</span><span class="lang-ja">構成銘柄</span> 5</span>
           <span><span class="lang-zh">源权重覆盖</span><span class="lang-en">Source weight</span><span class="lang-ja">ソース比率</span> 100.00%</span>
           <span>2026-06-15</span>
-        </div>
-        <div class="market-ticker-row">
-          <small><span class="lang-zh">Top accepted components</span><span class="lang-en">Top accepted components</span><span class="lang-ja">採用上位銘柄</span></small>
-          <div><span><b>AMD</b> +4.73% · 20.00%</span><span><b>ARM</b> +11.27% · 20.00%</span><span><b>AVGO</b> -0.91% · 20.00%</span><span><b>NVDA</b> +3.54% · 20.00%</span><span><b>TSM</b> +4.12% · 20.00%</span></div>
-        </div>
-        <div class="market-proxy-row">
-          <small><span class="lang-zh">来源口径</span><span class="lang-en">Source basis</span><span class="lang-ja">ソース</span></small>
-          <div><a href="https://www.vaneck.com/us/en/investments/semiconductor-etf-smh/" target="_blank" rel="noreferrer"><b>SMH/SOXX</b> Curated accelerator basket from semiconductor ETF holdings references</a></div>
+          <span class="market-components"><span><b>AMD</b> +4.73%</span><span><b>ARM</b> +11.27%</span><span><b>AVGO</b> -0.91%</span></span>
         </div>
       </article>
 
       <article class="market-system-card market-up">
         <div class="market-system-head">
-          <div>
-            <span class="market-status ok"><span class="lang-zh">ETF 持仓派生</span><span class="lang-en">ETF holdings-derived</span><span class="lang-ja">ETF 持仓派生</span></span>
-            <h4><span class="lang-zh">存储/HBM</span><span class="lang-en">Memory / HBM</span><span class="lang-ja">存储/HBM</span></h4>
-          </div>
+          <span class="market-status ok"><span class="lang-zh">ETF 持仓派生</span><span class="lang-en">ETF holdings-derived</span><span class="lang-ja">ETF 持仓派生</span></span>
+          <h4><span class="lang-zh">存储/HBM</span><span class="lang-en">Memory / HBM</span><span class="lang-ja">存储/HBM</span></h4>
           <strong>+10.61%</strong>
+          <span class="market-source-chip"><a href="https://www.roundhillinvestments.com/etf/dram/" target="_blank" rel="noreferrer">DRAM</a></span>
         </div>
-        <div class="market-system-meta">
+        <div class="market-system-strip">
           <span><span class="lang-zh">有效成分</span><span class="lang-en">Components</span><span class="lang-ja">構成銘柄</span> 4</span>
           <span><span class="lang-zh">源权重覆盖</span><span class="lang-en">Source weight</span><span class="lang-ja">ソース比率</span> 43.14%</span>
           <span>2026-06-15</span>
-        </div>
-        <div class="market-ticker-row">
-          <small><span class="lang-zh">Top accepted components</span><span class="lang-en">Top accepted components</span><span class="lang-ja">採用上位銘柄</span></small>
-          <div><span><b>MU</b> +10.84% · 66.69%</span><span><b>SNDK</b> +6.45% · 13.42%</span><span><b>STX</b> +9.43% · 10.25%</span><span><b>WDC</b> +16.09% · 9.64%</span></div>
-        </div>
-        <div class="market-proxy-row">
-          <small><span class="lang-zh">来源口径</span><span class="lang-en">Source basis</span><span class="lang-ja">ソース</span></small>
-          <div><a href="https://www.roundhillinvestments.com/etf/dram/" target="_blank" rel="noreferrer"><b>DRAM</b> Roundhill DRAM Memory ETF</a></div>
+          <span class="market-components"><span><b>MU</b> +10.84%</span><span><b>SNDK</b> +6.45%</span><span><b>STX</b> +9.43%</span></span>
         </div>
       </article>
 
       <article class="market-system-card market-up">
         <div class="market-system-head">
-          <div>
-            <span class="market-status ok"><span class="lang-zh">精选成分篮子</span><span class="lang-en">Curated component basket</span><span class="lang-ja">精选成分篮子</span></span>
-            <h4><span class="lang-zh">半导体设备</span><span class="lang-en">Semiconductor Equipment</span><span class="lang-ja">半导体设备</span></h4>
-          </div>
+          <span class="market-status ok"><span class="lang-zh">精选成分篮子</span><span class="lang-en">Curated component basket</span><span class="lang-ja">精选成分篮子</span></span>
+          <h4><span class="lang-zh">半导体设备</span><span class="lang-en">Semiconductor Equipment</span><span class="lang-ja">半导体设备</span></h4>
           <strong>+2.37%</strong>
+          <span class="market-source-chip"><a href="https://www.vaneck.com/us/en/investments/semiconductor-etf-smh/" target="_blank" rel="noreferrer">SMH/SOXX</a></span>
         </div>
-        <div class="market-system-meta">
+        <div class="market-system-strip">
           <span><span class="lang-zh">有效成分</span><span class="lang-en">Components</span><span class="lang-ja">構成銘柄</span> 5</span>
           <span><span class="lang-zh">源权重覆盖</span><span class="lang-en">Source weight</span><span class="lang-ja">ソース比率</span> 100.00%</span>
           <span>2026-06-15</span>
-        </div>
-        <div class="market-ticker-row">
-          <small><span class="lang-zh">Top accepted components</span><span class="lang-en">Top accepted components</span><span class="lang-ja">採用上位銘柄</span></small>
-          <div><span><b>AMAT</b> +2.64% · 20.00%</span><span><b>ASML</b> +1.56% · 20.00%</span><span><b>KLAC</b> +0.74% · 20.00%</span><span><b>LRCX</b> +1.18% · 20.00%</span><span><b>TER</b> +5.72% · 20.00%</span></div>
-        </div>
-        <div class="market-proxy-row">
-          <small><span class="lang-zh">来源口径</span><span class="lang-en">Source basis</span><span class="lang-ja">ソース</span></small>
-          <div><a href="https://www.vaneck.com/us/en/investments/semiconductor-etf-smh/" target="_blank" rel="noreferrer"><b>SMH/SOXX</b> Curated semiconductor equipment basket from semiconductor ETF holdings referenc…</a></div>
+          <span class="market-components"><span><b>AMAT</b> +2.64%</span><span><b>ASML</b> +1.56%</span><span><b>KLAC</b> +0.74%</span></span>
         </div>
       </article>
 
       <article class="market-system-card market-up">
         <div class="market-system-head">
-          <div>
-            <span class="market-status ok"><span class="lang-zh">精选成分篮子</span><span class="lang-en">Curated component basket</span><span class="lang-ja">精选成分篮子</span></span>
-            <h4><span class="lang-zh">EDA/IP</span><span class="lang-en">EDA / Semiconductor IP</span><span class="lang-ja">EDA/IP</span></h4>
-          </div>
+          <span class="market-status ok"><span class="lang-zh">精选成分篮子</span><span class="lang-en">Curated component basket</span><span class="lang-ja">精选成分篮子</span></span>
+          <h4><span class="lang-zh">EDA/IP</span><span class="lang-en">EDA / Semiconductor IP</span><span class="lang-ja">EDA/IP</span></h4>
           <strong>+0.55%</strong>
+          <span class="market-source-chip"><a href="https://www.vaneck.com/us/en/investments/semiconductor-etf-smh/" target="_blank" rel="noreferrer">SMH</a></span>
         </div>
-        <div class="market-system-meta">
+        <div class="market-system-strip">
           <span><span class="lang-zh">有效成分</span><span class="lang-en">Components</span><span class="lang-ja">構成銘柄</span> 5</span>
           <span><span class="lang-zh">源权重覆盖</span><span class="lang-en">Source weight</span><span class="lang-ja">ソース比率</span> 100.00%</span>
           <span>2026-06-12</span>
-        </div>
-        <div class="market-ticker-row">
-          <small><span class="lang-zh">Top accepted components</span><span class="lang-en">Top accepted components</span><span class="lang-ja">採用上位銘柄</span></small>
-          <div><span><b>CDNS</b> +0.32% · 20.00%</span><span><b>CEVA</b> +1.08% · 20.00%</span><span><b>PDFS</b> +0.45% · 20.00%</span><span><b>RMBS</b> +1.45% · 20.00%</span><span><b>SNPS</b> -0.53% · 20.00%</span></div>
-        </div>
-        <div class="market-proxy-row">
-          <small><span class="lang-zh">来源口径</span><span class="lang-en">Source basis</span><span class="lang-ja">ソース</span></small>
-          <div><a href="https://www.vaneck.com/us/en/investments/semiconductor-etf-smh/" target="_blank" rel="noreferrer"><b>SMH</b> Curated EDA/IP basket from semiconductor ETF holdings references</a></div>
+          <span class="market-components"><span><b>CDNS</b> +0.32%</span><span><b>CEVA</b> +1.08%</span><span><b>PDFS</b> +0.45%</span></span>
         </div>
       </article>
     </div>
@@ -1064,47 +1027,31 @@
               <div class="market-system-grid">
       <article class="market-system-card market-up">
         <div class="market-system-head">
-          <div>
-            <span class="market-status ok"><span class="lang-zh">精选成分篮子</span><span class="lang-en">Curated component basket</span><span class="lang-ja">精选成分篮子</span></span>
-            <h4><span class="lang-zh">光通信/CPO/互连</span><span class="lang-en">Optical / CPO / Interconnect</span><span class="lang-ja">光通信/CPO/互连</span></h4>
-          </div>
+          <span class="market-status ok"><span class="lang-zh">精选成分篮子</span><span class="lang-en">Curated component basket</span><span class="lang-ja">精选成分篮子</span></span>
+          <h4><span class="lang-zh">光通信/CPO/互连</span><span class="lang-en">Optical / CPO / Interconnect</span><span class="lang-ja">光通信/CPO/互连</span></h4>
           <strong>+2.51%</strong>
+          <span class="market-source-chip"><a href="https://www.ssga.com/us/en/intermediary/etfs/state-street-spdr-sp-semiconductor-etf-xsd" target="_blank" rel="noreferrer">XSD/SKYY</a></span>
         </div>
-        <div class="market-system-meta">
+        <div class="market-system-strip">
           <span><span class="lang-zh">有效成分</span><span class="lang-en">Components</span><span class="lang-ja">構成銘柄</span> 7</span>
           <span><span class="lang-zh">源权重覆盖</span><span class="lang-en">Source weight</span><span class="lang-ja">ソース比率</span> 100.00%</span>
           <span>2026-06-15</span>
-        </div>
-        <div class="market-ticker-row">
-          <small><span class="lang-zh">Top accepted components</span><span class="lang-en">Top accepted components</span><span class="lang-ja">採用上位銘柄</span></small>
-          <div><span><b>ANET</b> +3.58% · 14.29%</span><span><b>CIEN</b> +0.17% · 14.29%</span><span><b>COHR</b> +7.48% · 14.29%</span><span><b>CRDO</b> +3.43% · 14.29%</span><span><b>CSCO</b> -0.60% · 14.29%</span></div>
-        </div>
-        <div class="market-proxy-row">
-          <small><span class="lang-zh">来源口径</span><span class="lang-en">Source basis</span><span class="lang-ja">ソース</span></small>
-          <div><a href="https://www.ssga.com/us/en/intermediary/etfs/state-street-spdr-sp-semiconductor-etf-xsd" target="_blank" rel="noreferrer"><b>XSD/SKYY</b> Curated optical and high-speed interconnect basket from semiconductor and cloud…</a></div>
+          <span class="market-components"><span><b>ANET</b> +3.58%</span><span><b>CIEN</b> +0.17%</span><span><b>COHR</b> +7.48%</span></span>
         </div>
       </article>
 
       <article class="market-system-card market-up">
         <div class="market-system-head">
-          <div>
-            <span class="market-status ok"><span class="lang-zh">精选成分篮子</span><span class="lang-en">Curated component basket</span><span class="lang-ja">精选成分篮子</span></span>
-            <h4><span class="lang-zh">AI 服务器/ODM</span><span class="lang-en">AI Server / ODM</span><span class="lang-ja">AI 服务器/ODM</span></h4>
-          </div>
+          <span class="market-status ok"><span class="lang-zh">精选成分篮子</span><span class="lang-en">Curated component basket</span><span class="lang-ja">精选成分篮子</span></span>
+          <h4><span class="lang-zh">AI 服务器/ODM</span><span class="lang-en">AI Server / ODM</span><span class="lang-ja">AI 服务器/ODM</span></h4>
           <strong>+0.61%</strong>
+          <span class="market-source-chip"><a href="https://www.ftportfolios.com/Retail/Etf/EtfSummary.aspx?Ticker=SKYY" target="_blank" rel="noreferrer">SKYY</a></span>
         </div>
-        <div class="market-system-meta">
+        <div class="market-system-strip">
           <span><span class="lang-zh">有效成分</span><span class="lang-en">Components</span><span class="lang-ja">構成銘柄</span> 6</span>
           <span><span class="lang-zh">源权重覆盖</span><span class="lang-en">Source weight</span><span class="lang-ja">ソース比率</span> 100.00%</span>
           <span>2026-06-15</span>
-        </div>
-        <div class="market-ticker-row">
-          <small><span class="lang-zh">Top accepted components</span><span class="lang-en">Top accepted components</span><span class="lang-ja">採用上位銘柄</span></small>
-          <div><span><b>CLS</b> +2.63% · 16.67%</span><span><b>DELL</b> +3.41% · 16.67%</span><span><b>FLEX</b> -1.50% · 16.67%</span><span><b>HPE</b> +1.76% · 16.67%</span><span><b>JBL</b> +2.10% · 16.67%</span></div>
-        </div>
-        <div class="market-proxy-row">
-          <small><span class="lang-zh">来源口径</span><span class="lang-en">Source basis</span><span class="lang-ja">ソース</span></small>
-          <div><a href="https://www.ftportfolios.com/Retail/Etf/EtfSummary.aspx?Ticker=SKYY" target="_blank" rel="noreferrer"><b>SKYY</b> Curated AI server and ODM basket from cloud computing ETF references</a></div>
+          <span class="market-components"><span><b>CLS</b> +2.63%</span><span><b>DELL</b> +3.41%</span><span><b>FLEX</b> -1.50%</span></span>
         </div>
       </article>
     </div>
@@ -1118,70 +1065,46 @@
               <div class="market-system-grid">
       <article class="market-system-card market-up">
         <div class="market-system-head">
-          <div>
-            <span class="market-status ok"><span class="lang-zh">ETF 持仓派生</span><span class="lang-en">ETF holdings-derived</span><span class="lang-ja">ETF 持仓派生</span></span>
-            <h4><span class="lang-zh">数据中心运营/数字基础设施</span><span class="lang-en">Data Center Operators / Digital Infrastructure</span><span class="lang-ja">数据中心运营/数字基础设施</span></h4>
-          </div>
+          <span class="market-status ok"><span class="lang-zh">ETF 持仓派生</span><span class="lang-en">ETF holdings-derived</span><span class="lang-ja">ETF 持仓派生</span></span>
+          <h4><span class="lang-zh">数据中心运营/数字基础设施</span><span class="lang-en">Data Center Operators / Digital Infrastructure</span><span class="lang-ja">数据中心运营/数字基础设施</span></h4>
           <strong>+1.22%</strong>
+          <span class="market-source-chip"><a href="https://www.globalxetfs.com/funds/dtcr/" target="_blank" rel="noreferrer">DTCR</a></span>
         </div>
-        <div class="market-system-meta">
+        <div class="market-system-strip">
           <span><span class="lang-zh">有效成分</span><span class="lang-en">Components</span><span class="lang-ja">構成銘柄</span> 6</span>
           <span><span class="lang-zh">源权重覆盖</span><span class="lang-en">Source weight</span><span class="lang-ja">ソース比率</span> 46.60%</span>
           <span>2026-06-15</span>
-        </div>
-        <div class="market-ticker-row">
-          <small><span class="lang-zh">Top accepted components</span><span class="lang-en">Top accepted components</span><span class="lang-ja">採用上位銘柄</span></small>
-          <div><span><b>EQIX</b> +1.21% · 25.84%</span><span><b>DLR</b> +0.74% · 22.51%</span><span><b>AMT</b> -0.76% · 20.30%</span><span><b>CCI</b> +0.13% · 14.57%</span><span><b>APLD</b> +8.83% · 9.38%</span></div>
-        </div>
-        <div class="market-proxy-row">
-          <small><span class="lang-zh">来源口径</span><span class="lang-en">Source basis</span><span class="lang-ja">ソース</span></small>
-          <div><a href="https://www.globalxetfs.com/funds/dtcr/" target="_blank" rel="noreferrer"><b>DTCR</b> Global X Data Center &amp; Digital Infrastructure ETF</a></div>
+          <span class="market-components"><span><b>EQIX</b> +1.21%</span><span><b>DLR</b> +0.74%</span><span><b>AMT</b> -0.76%</span></span>
         </div>
       </article>
 
       <article class="market-system-card market-up">
         <div class="market-system-head">
-          <div>
-            <span class="market-status ok"><span class="lang-zh">精选成分篮子</span><span class="lang-en">Curated component basket</span><span class="lang-ja">精选成分篮子</span></span>
-            <h4><span class="lang-zh">电力/配电/电气设备</span><span class="lang-en">Power / Electrical Equipment</span><span class="lang-ja">电力/配电/电气设备</span></h4>
-          </div>
+          <span class="market-status ok"><span class="lang-zh">精选成分篮子</span><span class="lang-en">Curated component basket</span><span class="lang-ja">精选成分篮子</span></span>
+          <h4><span class="lang-zh">电力/配电/电气设备</span><span class="lang-en">Power / Electrical Equipment</span><span class="lang-ja">电力/配电/电气设备</span></h4>
           <strong>+2.23%</strong>
+          <span class="market-source-chip"><a href="https://www.ftportfolios.com/Retail/Etf/EtfSummary.aspx?Ticker=GRID" target="_blank" rel="noreferrer">GRID</a></span>
         </div>
-        <div class="market-system-meta">
+        <div class="market-system-strip">
           <span><span class="lang-zh">有效成分</span><span class="lang-en">Components</span><span class="lang-ja">構成銘柄</span> 7</span>
           <span><span class="lang-zh">源权重覆盖</span><span class="lang-en">Source weight</span><span class="lang-ja">ソース比率</span> 100.00%</span>
           <span>2026-06-15</span>
-        </div>
-        <div class="market-ticker-row">
-          <small><span class="lang-zh">Top accepted components</span><span class="lang-en">Top accepted components</span><span class="lang-ja">採用上位銘柄</span></small>
-          <div><span><b>ETN</b> -0.57% · 14.29%</span><span><b>GEV</b> +3.74% · 14.29%</span><span><b>HUBB</b> +2.69% · 14.29%</span><span><b>JCI</b> +0.66% · 14.29%</span><span><b>MYRG</b> +4.86% · 14.29%</span></div>
-        </div>
-        <div class="market-proxy-row">
-          <small><span class="lang-zh">来源口径</span><span class="lang-en">Source basis</span><span class="lang-ja">ソース</span></small>
-          <div><a href="https://www.ftportfolios.com/Retail/Etf/EtfSummary.aspx?Ticker=GRID" target="_blank" rel="noreferrer"><b>GRID</b> Curated power and electrical equipment basket from smart-grid ETF references</a></div>
+          <span class="market-components"><span><b>ETN</b> -0.57%</span><span><b>GEV</b> +3.74%</span><span><b>HUBB</b> +2.69%</span></span>
         </div>
       </article>
 
       <article class="market-system-card market-up">
         <div class="market-system-head">
-          <div>
-            <span class="market-status ok"><span class="lang-zh">精选成分篮子</span><span class="lang-en">Curated component basket</span><span class="lang-ja">精选成分篮子</span></span>
-            <h4><span class="lang-zh">散热/液冷/热管理</span><span class="lang-en">Cooling / Liquid Cooling / Thermal</span><span class="lang-ja">散热/液冷/热管理</span></h4>
-          </div>
+          <span class="market-status ok"><span class="lang-zh">精选成分篮子</span><span class="lang-en">Curated component basket</span><span class="lang-ja">精选成分篮子</span></span>
+          <h4><span class="lang-zh">散热/液冷/热管理</span><span class="lang-en">Cooling / Liquid Cooling / Thermal</span><span class="lang-ja">散热/液冷/热管理</span></h4>
           <strong>+0.64%</strong>
+          <span class="market-source-chip"><span>CURATED</span></span>
         </div>
-        <div class="market-system-meta">
+        <div class="market-system-strip">
           <span><span class="lang-zh">有效成分</span><span class="lang-en">Components</span><span class="lang-ja">構成銘柄</span> 6</span>
           <span><span class="lang-zh">源权重覆盖</span><span class="lang-en">Source weight</span><span class="lang-ja">ソース比率</span> 100.00%</span>
           <span>2026-06-15</span>
-        </div>
-        <div class="market-ticker-row">
-          <small><span class="lang-zh">Top accepted components</span><span class="lang-en">Top accepted components</span><span class="lang-ja">採用上位銘柄</span></small>
-          <div><span><b>AAON</b> -1.13% · 16.67%</span><span><b>CARR</b> +1.75% · 16.67%</span><span><b>DOV</b> -0.50% · 16.67%</span><span><b>MOD</b> +1.10% · 16.67%</span><span><b>TT</b> -0.41% · 16.67%</span></div>
-        </div>
-        <div class="market-proxy-row">
-          <small><span class="lang-zh">来源口径</span><span class="lang-en">Source basis</span><span class="lang-ja">ソース</span></small>
-          <div><span><b>CURATED</b> Curated data-center cooling and thermal-management basket</span></div>
+          <span class="market-components"><span><b>AAON</b> -1.13%</span><span><b>CARR</b> +1.75%</span><span><b>DOV</b> -0.50%</span></span>
         </div>
       </article>
     </div>
