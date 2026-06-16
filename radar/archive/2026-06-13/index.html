@@ -230,7 +230,7 @@
     .market-eyebrow { color: var(--nero-gold); font: 700 11px/1 var(--font-mono); text-transform: uppercase; }
     .market-index-grid {
       display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
+      grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 10px;
     }
     .market-index-tile {
@@ -303,15 +303,15 @@
       font-size: 10px;
       line-height: 1.2;
     }
-    .market-ticker-row { display: grid; gap: 5px; min-width: 0; }
-    .market-ticker-row small { color: var(--nero-subtle); font-size: 10px; }
-    .market-ticker-row div {
+    .market-ticker-row, .market-proxy-row { display: grid; gap: 5px; min-width: 0; }
+    .market-ticker-row small, .market-proxy-row small { color: var(--nero-subtle); font-size: 10px; }
+    .market-ticker-row div, .market-proxy-row div {
       display: flex;
       gap: 5px;
       flex-wrap: wrap;
       min-width: 0;
     }
-    .market-ticker-row span {
+    .market-ticker-row span, .market-proxy-row span, .market-proxy-row a {
       display: inline-flex;
       gap: 3px;
       max-width: 100%;
@@ -321,8 +321,9 @@
       color: var(--nero-muted);
       font-size: 10px;
       line-height: 1.15;
+      overflow-wrap: anywhere;
     }
-    .market-ticker-row b { color: var(--nero-ink); font-family: var(--font-mono); }
+    .market-ticker-row b, .market-proxy-row b { color: var(--nero-ink); font-family: var(--font-mono); }
     .market-up { border-left-color: #2b8a5f; }
     .market-down { border-left-color: #b84a5a; }
     .market-flat { border-left-color: #6b7280; }
@@ -875,30 +876,25 @@
       <div class="intro">
         <div class="title-row">
           <h1><span class="lang-zh">AI 产业链新闻汇总</span><span class="lang-en">AI Supply-Chain News Digest</span><span class="lang-ja">AI サプライチェーン・ニュースダイジェスト</span></h1>
-          <span class="product-badge" aria-label="AIpha Radar version"><span>AIpha Radar</span><span class="product-version">v2.4</span></span>
+          <span class="product-badge" aria-label="AIpha Radar version"><span>AIpha Radar</span><span class="product-version">v2.5</span></span>
         </div>
         <p><span class="lang-zh">按大模型巨头、半导体、算力设备、数据中心基础设施和具身智能/机器人五组整理；后四组与产业链 Domain 口径保持一致。界面支持中文、英文、日文切换；新闻标题与摘要保持来源原文，并交由浏览器翻译。公开版隐藏本地核验队列，仅保留简化核验状态。</span><span class="lang-en">Grouped into five buckets: LLM Giants plus Semiconductors, Compute Equipment, Data Center Infrastructure and Embodied AI / Robotics, aligned with the supply-chain domain taxonomy. The UI switches between Chinese, English and Japanese; news titles and excerpts stay in the source language and can be translated by the browser. The public version hides local verification queues and keeps simplified verification status.</span><span class="lang-ja">LLM 大手、半導体、計算インフラ機器、データセンター基盤、身体性 AI / ロボティクスの5分類で整理します。UI は中国語・英語・日本語を切り替え、ニュース見出しと抜粋はソース原文のまま保持し、翻訳はブラウザに委ねます。公開版です。</span></p>
       </div>
     </section>
-    
+
     <section class="secondary-market">
       <div class="market-head">
         <div>
           <span class="market-eyebrow"><span class="lang-zh">美股收盘表现</span><span class="lang-en">US Close</span><span class="lang-ja">米国終値</span></span>
-          <h2><span class="lang-zh">二级市场 · System 表现</span><span class="lang-en">Secondary Market · System Performance</span><span class="lang-ja">二次市場 · System パフォーマンス</span></h2>
+          <h2><span class="lang-zh">二级市场 · ETF 持仓派生 US/ADR 成分表现</span><span class="lang-en">Secondary Market · ETF Holdings-Derived US/ADR Components</span><span class="lang-ja">二次市場 · ETF 保有銘柄派生 US/ADR パフォーマンス</span></h2>
         </div>
-        <p><span class="lang-zh">宽基指数来自 Fact Store 收盘价；system 成分来自 Serenity 主题池，排除大模型，按当日 quote 市值加权。</span><span class="lang-en">Broad indices use Fact Store closes; system constituents come from Serenity theme pools, exclude LLM Giants, and are weighted by same-day quote market cap.</span><span class="lang-ja">主要指数は Fact Store の終値、system 構成は Serenity テーマプール由来です。LLM 大手を除外し、当日 quote 時価総額で加重します。</span></p>
+        <p><span class="lang-zh">宽基指数和 SOXX benchmark 来自 Fact Store 收盘价；system 只使用官方 ETF holdings 派生的 US-listed 普通股和 ADR 成分，无法达到覆盖阈值的 system 直接隐藏。</span><span class="lang-en">Broad indices and the SOXX benchmark use Fact Store closes. Systems use only US-listed common-stock and ADR components derived from official ETF holdings; systems below coverage thresholds are hidden.</span><span class="lang-ja">主要指数と SOXX benchmark は Fact Store の終値を使用します。system は公式 ETF 保有銘柄から派生した US 上場普通株と ADR のみを採用し、カバレッジ閾値未満は非表示にします。</span></p>
       </div>
       <div class="market-index-grid"><article class="market-index-tile market-missing"><h3><span class="lang-zh">宽基指数暂缺</span><span class="lang-en">Broad indices missing</span><span class="lang-ja">主要指数なし</span></h3><strong>N/A</strong><small>missing</small></article></div>
-      <div class="market-domain-board">
-            <section class="market-domain">
-              <div class="market-domain-head"><h3><span class="lang-zh">system 表现暂缺</span><span class="lang-en">System performance missing</span><span class="lang-ja">system パフォーマンスなし</span></h3><span>missing</span></div>
-              <p>missing component or quote coverage</p>
-            </section>
-            </div>
+
     </section>
-    
-    
+
+
     <section class="lead-signals">
       <div class="lead-head">
         <h2><span class="lang-zh">今日优先阅读 Top 6</span><span class="lang-en">Priority Reads Top 6</span><span class="lang-ja">本日の優先閲覧 Top 6</span></h2>
@@ -911,35 +907,35 @@
               <strong lang="en">Deploy Long-Context Reasoning and Agentic Workflows with MiniMax M3 on NVIDIA Accelerated Infrastructure</strong>
               <small>NVIDIA Developer Blog · 2026-06-13 04:28</small>
             </a>
-            
+
             <a class="lead-card" href="#llm_giants">
               <span class="lead-index">02</span>
               <span class="lead-group"><span class="lang-zh">大模型巨头</span><span class="lang-en">LLM Giants</span><span class="lang-ja">LLM 大手</span></span>
               <strong lang="en">Anthropic disables access to Fable 5 and Mythos 5 to comply with government directive - CNBC</strong>
               <small>CNBC Technology · 2026-06-13 09:09</small>
             </a>
-            
+
             <a class="lead-card" href="#semiconductor">
               <span class="lead-index">03</span>
               <span class="lead-group"><span class="lang-zh">半导体</span><span class="lang-en">Semiconductors</span><span class="lang-ja">半導体</span></span>
               <strong lang="en">SK Hynix weighs supplier price hikes as HBM boom lifts equipment makers - digitimes</strong>
               <small>DigiTimes · 2026-06-13 08:55</small>
             </a>
-            
+
             <a class="lead-card" href="#semiconductor">
               <span class="lead-index">04</span>
               <span class="lead-group"><span class="lang-zh">半导体</span><span class="lang-en">Semiconductors</span><span class="lang-ja">半導体</span></span>
               <strong lang="en">Samsung likely to make part of Google’s Icefish AI chip after winning $16.5 bn Tesla order - KED Global</strong>
               <small>KED Global · 2026-06-12 18:58</small>
             </a>
-            
+
             <a class="lead-card" href="#compute_deployment">
               <span class="lead-index">05</span>
               <span class="lead-group"><span class="lang-zh">算力设备</span><span class="lang-en">Compute Equipment</span><span class="lang-ja">計算インフラ機器</span></span>
               <strong lang="en">AI server tracker: Taiwan&#x27;s AI server build chain widens as rack suppliers outpace peers - digitimes</strong>
               <small>DigiTimes · 2026-06-12 12:43</small>
             </a>
-            
+
             <a class="lead-card" href="#facility_infrastructure">
               <span class="lead-index">06</span>
               <span class="lead-group"><span class="lang-zh">数据中心基础设施</span><span class="lang-en">Data Center Infrastructure</span><span class="lang-ja">データセンター基盤</span></span>
@@ -948,7 +944,7 @@
             </a>
             </div>
     </section>
-    
+
     <section class="chain-layout">
       <nav class="chain-nav"><a href="#llm_giants"><span>01</span><span class="chain-name-full"><span class="lang-zh">大模型巨头</span><span class="lang-en">LLM Giants</span><span class="lang-ja">LLM 大手</span></span><span class="chain-name-short"><span class="lang-zh">大模型</span><span class="lang-en">LLM</span><span class="lang-ja">LLM</span></span><span class="nav-count">7</span></a><a href="#semiconductor"><span>02</span><span class="chain-name-full"><span class="lang-zh">半导体</span><span class="lang-en">Semiconductors</span><span class="lang-ja">半導体</span></span><span class="chain-name-short"><span class="lang-zh">半导体</span><span class="lang-en">Semi</span><span class="lang-ja">半導体</span></span><span class="nav-count">3</span></a><a href="#compute_deployment"><span>03</span><span class="chain-name-full"><span class="lang-zh">算力设备</span><span class="lang-en">Compute Equipment</span><span class="lang-ja">計算インフラ機器</span></span><span class="chain-name-short"><span class="lang-zh">算力</span><span class="lang-en">Compute</span><span class="lang-ja">計算</span></span><span class="nav-count">1</span></a><a href="#facility_infrastructure"><span>04</span><span class="chain-name-full"><span class="lang-zh">数据中心基础设施</span><span class="lang-en">Data Center Infrastructure</span><span class="lang-ja">データセンター基盤</span></span><span class="chain-name-short"><span class="lang-zh">机房</span><span class="lang-en">Facility</span><span class="lang-ja">施設</span></span><span class="nav-count">4</span></a><a href="#embodied_ai"><span>05</span><span class="chain-name-full"><span class="lang-zh">具身智能/机器人</span><span class="lang-en">Embodied AI / Robotics</span><span class="lang-ja">身体性 AI / ロボティクス</span></span><span class="chain-name-short"><span class="lang-zh">具身</span><span class="lang-en">Embodied</span><span class="lang-ja">身体性</span></span><span class="nav-count">0</span></a></nav>
       <div class="section-stack">
@@ -961,15 +957,15 @@
         </div>
         <span class="count"><span class="lang-zh">7 条</span><span class="lang-en">7 items</span><span class="lang-ja">7 件</span></span>
       </div>
-      
+
       <div class="group-digest">
         <span><span class="lang-zh">公司：Anthropic×4 / OpenAI×2 / NVIDIA×1</span><span class="lang-en">Companies: Anthropic×4 / OpenAI×2 / NVIDIA×1</span><span class="lang-ja">Companies: Anthropic×4 / OpenAI×2 / NVIDIA×1</span></span>
         <span><span class="lang-zh">叶子链：Agentic AI×6 / Frontier Model×4</span><span class="lang-en">Leaf tags: Agentic AI×6 / Frontier Model×4</span><span class="lang-ja">Leaf tags: Agentic AI×6 / Frontier Model×4</span></span>
         <span><span class="lang-zh">来源：AI 聚合发现源×3 / 权威媒体×3 / 公司官方×1</span><span class="lang-en">Sources: AI aggregator discovery×3 / Authority media×3 / Company official×1</span><span class="lang-ja">Sources: AI aggregator discovery×3 / Authority media×3 / Company official×1</span></span>
         <span><span class="lang-zh">AGY/Gemini 候选 3 条</span><span class="lang-en">AGY/Gemini candidates: 3</span><span class="lang-ja">AGY/Gemini candidates: 3</span></span>
       </div>
-    
-      
+
+
     <article class="ledger-row" data-group="llm_giants" data-source-kind="authority_media" data-region="Japan" data-access-mode="headline_link_only">
       <div class="ledger-main">
         <div class="ledger-source">
@@ -979,10 +975,10 @@
         </div>
         <div class="ledger-content">
           <div class="ledger-title">
-            
+
       <h3><a href="https://news.google.com/rss/articles/CBMi2AFBVV95cUxPWl9KcXIxckc2Z0JTRGg3TFpBeWlxclF0UzQwa3N2WHdtYzBpN2xiMlk3b0ttRGN1SHFzdzBnd2xxMWVleGtDSWdESTlyMUZ2MFMwN0Z0eEhzLXNpdkd5SGV2bkFxM1FWSGFrc0pUblhHZFdUd0Nfd0RqYXhFdGJGWkRRTlpzSzFWVjRBMDdKdWsyTkV6bGc5dkJuakxrSEVQb2VXZldTdEhzQWRGX2t2b2xTWHl6T25KTDBfalZuazdxUWw1OEs4RkJkNGxZUEJQNFFBZGVVSmk?oc=5" target="_blank" rel="noreferrer"><span class="title-original" lang="en">US orders Anthropic to halt foreign access to its most advanced AI models - Nikkei Asia</span></a></h3>
-    
-            
+
+
           </div>
           <div class="ledger-tags">
             <span class="company-tag">Anthropic</span>
@@ -992,20 +988,20 @@
             <span class="status-dot neutral"><span class="lang-zh">权威媒体</span><span class="lang-en">Authority media</span><span class="lang-ja">権威メディア</span></span>
             <span class="status-dot access"><span class="lang-zh">标题链接</span><span class="lang-en">Headline/link only</span><span class="lang-ja">見出し/リンクのみ</span></span>
             <span class="status-dot merge"><span class="lang-zh">多来源 3</span><span class="lang-en">3 sources</span><span class="lang-ja">3 sources</span></span>
-            
-            
+
+
           </div>
         </div>
       </div>
-      
+
       <details class="source-merge-detail">
         <summary><span class="lang-zh">多来源 3 条</span><span class="lang-en">3 sources</span><span class="lang-ja">3 sources</span></summary>
         <ul><li><span class="related-source-meta"><a href="https://news.google.com/rss/articles/CBMi2AFBVV95cUxPWl9KcXIxckc2Z0JTRGg3TFpBeWlxclF0UzQwa3N2WHdtYzBpN2xiMlk3b0ttRGN1SHFzdzBnd2xxMWVleGtDSWdESTlyMUZ2MFMwN0Z0eEhzLXNpdkd5SGV2bkFxM1FWSGFrc0pUblhHZFdUd0Nfd0RqYXhFdGJGWkRRTlpzSzFWVjRBMDdKdWsyTkV6bGc5dkJuakxrSEVQb2VXZldTdEhzQWRGX2t2b2xTWHl6T25KTDBfalZuazdxUWw1OEs4RkJkNGxZUEJQNFFBZGVVSmk?oc=5" target="_blank" rel="noreferrer">Nikkei Asia Technology</a><time>2026-06-13 10:44</time><span class="lang-zh">标题链接</span><span class="lang-en">Headline/link only</span><span class="lang-ja">見出し/リンクのみ</span></span><span class="related-source-title" lang="en">US orders Anthropic to halt foreign access to its most advanced AI models - Nikkei Asia</span></li><li><span class="related-source-meta"><a href="https://news.google.com/rss/articles/CBMiqAFBVV95cUxOVTZaMEVPXzdZczdjYm92RU9RR2Y0WmpvNXd3RGk3ZnV2bXJyaU9JRlJteFRnQjlrcVp2dDV5TkpXVXF0dWhKQ0ttVjlESWU4N0l5UXNfeVpUZWd1ZmY1REQ5emNCVGZOVFZvZG4waG1WTUhlOVVRYW4taWxVWTF1QU5QVnJnX280aDhmWC05N1Utc3g1OTZHUUJFbVdMN2tINTVDQ2oyNE8?oc=5" target="_blank" rel="noreferrer">Wall Street Journal Technology</a><time>2026-06-13 10:15</time><span class="lang-zh">标题链接</span><span class="lang-en">Headline/link only</span><span class="lang-ja">見出し/リンクのみ</span></span><span class="related-source-title" lang="en">Anthropic Halts Access to Top AI Models After U.S. Ban on Foreign Use - WSJ</span></li><li><span class="related-source-meta"><a href="https://news.google.com/rss/articles/CBMivAFBVV95cUxQNzRyRDNxVmtPaENsR1pja0NuWUNDSklfUXRRemdJREJlWGpHM01PbTVwSWFZdThLT0p4S3J3aEJ0UDNoM2FXYTJPV3pkSGY3TXJsNVVkejFjbWlhUDNISkoxRk1wWGpwb09Jc0QxWFl5czVtYkd4Z3R2dmFmT2dGQ0Z3UjZ0UXJXdThXVDdtamt0aWwzc3FPdXhMX21iTVpkeHVPWjJSSE80MDZKWHdGUmdCN2hXVWlvNkgwUA?oc=5" target="_blank" rel="noreferrer">Reuters Technology</a><time>2026-06-13 08:01</time><span class="lang-zh">标题链接</span><span class="lang-en">Headline/link only</span><span class="lang-ja">見出し/リンクのみ</span></span><span class="related-source-title" lang="en">Anthropic disables most advanced AI models after US order limiting foreign access - Reuters</span></li></ul>
       </details>
-    
-      
+
+
     </article>
-    
+
     <article class="ledger-row" data-group="llm_giants" data-source-kind="aggregator_discovery" data-region="Global public web" data-access-mode="aggregator_link_only">
       <div class="ledger-main">
         <div class="ledger-source">
@@ -1015,10 +1011,10 @@
         </div>
         <div class="ledger-content">
           <div class="ledger-title">
-            
+
       <h3><a href="https://www.anthropic.com/news/fable-mythos-access" target="_blank" rel="noreferrer"><span class="title-original" lang="zh-CN">关于美国政府指令暂停访问Fable 5和Mythos 5的声明</span></a></h3>
-    
-            
+
+
           </div>
           <div class="ledger-tags">
             <span class="company-tag">OpenAI</span><span class="company-tag">Anthropic</span>
@@ -1027,16 +1023,16 @@
             <span class="status-dot research-fit"><span class="lang-zh">强适配</span><span class="lang-en">strong fit</span><span class="lang-ja">強い適合</span> · 82</span>
             <span class="status-dot neutral"><span class="lang-zh">AI 聚合发现源</span><span class="lang-en">AI aggregator discovery</span><span class="lang-ja">AI 集約発見ソース</span></span>
             <span class="status-dot access"><span class="lang-zh">聚合器链接</span><span class="lang-en">Aggregator link only</span><span class="lang-ja">集約リンク</span></span>
-            
-            
+
+
             <span class="draft-mark">[UNCONTROLLED DRAFT]</span>
           </div>
         </div>
       </div>
-      
-      
+
+
     </article>
-    
+
     <article class="ledger-row" data-group="llm_giants" data-source-kind="authority_media" data-region="US" data-access-mode="headline_link_only">
       <div class="ledger-main">
         <div class="ledger-source">
@@ -1046,10 +1042,10 @@
         </div>
         <div class="ledger-content">
           <div class="ledger-title">
-            
+
       <h3><a href="https://news.google.com/rss/articles/CBMivwFBVV95cUxQQndha2NfQ0ZvbE1DU2gxUFBrLWdGU2x3RjFlbGQ0MG1TSzBVVlRrUFlqbFZnUERDbW1oYmY3cTV4UnZkelZ4TEtLa3ZabEpCcXJVQTZEZjFyT2hWdEFERXpVdDR2OUhCWnVEbklSeEJGU1gxaGdvdmt2d0psY2N3RnlHdjMtOGIxOHV2cXpuUzlqVk42TkYxbEpMOVJzenZ5VVg1b29rcUpnRFlWSDQxV3FWMm5fY3lyVnlQU29BONIBxAFBVV95cUxQUHNqZzhHU1lSVGhtUmhjSF9iS3o5VG0wM1NZM2RfckdPWWhUZURYUGVhaW1VdVZ0bWJaeHd5Uk9RUDZIRmh0X3RZY2Eyc1hzSGtqSTlzTEJrVEctMW1oUWZUNURTQV96dm42NF9nWTBnZDFuSWxTMGNIX0dGZUs2TWFYXzAwWVBKRUhFdHIxd2JXcnczX0w1UUwzZ1EzT3pXMDhxVFZaZTNGbmRKOUc4cVJWSDY3dXVpQkVxYlphWFlnYS1v?oc=5" target="_blank" rel="noreferrer"><span class="title-original" lang="en">Anthropic disables access to Fable 5 and Mythos 5 to comply with government directive - CNBC</span></a></h3>
-    
-            
+
+
           </div>
           <div class="ledger-tags">
             <span class="company-tag">Anthropic</span><span class="company-tag">OpenAI</span>
@@ -1058,16 +1054,16 @@
             <span class="status-dot research-fit"><span class="lang-zh">强适配</span><span class="lang-en">strong fit</span><span class="lang-ja">強い適合</span> · 94</span>
             <span class="status-dot neutral"><span class="lang-zh">权威媒体</span><span class="lang-en">Authority media</span><span class="lang-ja">権威メディア</span></span>
             <span class="status-dot access"><span class="lang-zh">标题链接</span><span class="lang-en">Headline/link only</span><span class="lang-ja">見出し/リンクのみ</span></span>
-            
-            
-            
+
+
+
           </div>
         </div>
       </div>
-      
-      
+
+
     </article>
-    
+
     <article class="ledger-row" data-group="llm_giants" data-source-kind="official_company" data-region="US" data-access-mode="rss_excerpt">
       <div class="ledger-main">
         <div class="ledger-source">
@@ -1077,14 +1073,14 @@
         </div>
         <div class="ledger-content">
           <div class="ledger-title">
-            
+
       <h3><a href="https://developer.nvidia.com/blog/deploy-long-context-reasoning-and-agentic-workflows-with-minimax-m3-on-nvidia-accelerated-infrastructure/" target="_blank" rel="noreferrer"><span class="title-original" lang="en">Deploy Long-Context Reasoning and Agentic Workflows with MiniMax M3 on NVIDIA Accelerated Infrastructure</span></a></h3>
-    
-            
+
+
       <p class="source-excerpt">
         <span class="summary-label"><span class="lang-zh">摘要</span><span class="lang-en">Digest</span><span class="lang-ja">要約</span></span><span class="source-excerpt-original" lang="en">As enterprise AI adoption scales, developers are increasingly forced to stitch together fragmented pipelines—separate models for text, vision, and...</span>
       </p>
-    
+
           </div>
           <div class="ledger-tags">
             <span class="company-tag">NVIDIA</span>
@@ -1093,16 +1089,16 @@
             <span class="status-dot research-fit"><span class="lang-zh">强适配</span><span class="lang-en">strong fit</span><span class="lang-ja">強い適合</span> · 98</span>
             <span class="status-dot neutral"><span class="lang-zh">公司官方</span><span class="lang-en">Company official</span><span class="lang-ja">企業公式</span></span>
             <span class="status-dot access"><span class="lang-zh">RSS 摘要</span><span class="lang-en">RSS excerpt</span><span class="lang-ja">RSS 抜粋</span></span>
-            
-            
-            
+
+
+
           </div>
         </div>
       </div>
-      
-      
+
+
     </article>
-    
+
     <article class="ledger-row" data-group="llm_giants" data-source-kind="aggregator_discovery" data-region="Global public web" data-access-mode="aggregator_link_only">
       <div class="ledger-main">
         <div class="ledger-source">
@@ -1112,10 +1108,10 @@
         </div>
         <div class="ledger-content">
           <div class="ledger-title">
-            
+
       <h3><a href="https://www.anthropic.com/news/anthropic-public-record" target="_blank" rel="noreferrer"><span class="title-original" lang="zh-CN">Anthropic首次公众调查：近半美国人盼AI治愈疾病，超六成担忧失业</span></a></h3>
-    
-            
+
+
           </div>
           <div class="ledger-tags">
             <span class="company-tag">Anthropic</span>
@@ -1124,16 +1120,16 @@
             <span class="status-dot research-fit"><span class="lang-zh">强适配</span><span class="lang-en">strong fit</span><span class="lang-ja">強い適合</span> · 82</span>
             <span class="status-dot neutral"><span class="lang-zh">AI 聚合发现源</span><span class="lang-en">AI aggregator discovery</span><span class="lang-ja">AI 集約発見ソース</span></span>
             <span class="status-dot access"><span class="lang-zh">聚合器链接</span><span class="lang-en">Aggregator link only</span><span class="lang-ja">集約リンク</span></span>
-            
-            
+
+
             <span class="draft-mark">[UNCONTROLLED DRAFT]</span>
           </div>
         </div>
       </div>
-      
-      
+
+
     </article>
-    
+
     <article class="ledger-row" data-group="llm_giants" data-source-kind="aggregator_discovery" data-region="Global public web" data-access-mode="aggregator_link_only">
       <div class="ledger-main">
         <div class="ledger-source">
@@ -1143,10 +1139,10 @@
         </div>
         <div class="ledger-content">
           <div class="ledger-title">
-            
+
       <h3><a href="https://huggingface.co/blog/allenai/olmo-eval" target="_blank" rel="noreferrer"><span class="title-original" lang="zh-CN">olmo-eval：面向模型开发循环的评估工作台</span></a></h3>
-    
-            
+
+
           </div>
           <div class="ledger-tags">
             <span class="tag muted"><span class="lang-zh">未识别</span><span class="lang-en">Unidentified</span><span class="lang-ja">未識別</span></span>
@@ -1155,16 +1151,16 @@
             <span class="status-dot research-fit"><span class="lang-zh">通过</span><span class="lang-en">pass</span><span class="lang-ja">通過</span> · 64</span>
             <span class="status-dot neutral"><span class="lang-zh">AI 聚合发现源</span><span class="lang-en">AI aggregator discovery</span><span class="lang-ja">AI 集約発見ソース</span></span>
             <span class="status-dot access"><span class="lang-zh">聚合器链接</span><span class="lang-en">Aggregator link only</span><span class="lang-ja">集約リンク</span></span>
-            
-            
+
+
             <span class="draft-mark">[UNCONTROLLED DRAFT]</span>
           </div>
         </div>
       </div>
-      
-      
+
+
     </article>
-    
+
     <article class="ledger-row" data-group="llm_giants" data-source-kind="authority_media" data-region="US" data-access-mode="headline_link_only">
       <div class="ledger-main">
         <div class="ledger-source">
@@ -1174,10 +1170,10 @@
         </div>
         <div class="ledger-content">
           <div class="ledger-title">
-            
+
       <h3><a href="https://news.google.com/rss/articles/CBMiigFBVV95cUxNOV90MWZvWDNkNXdMeXFmV0JNTV9PMV9rUTQ4ZUQ1alBjZEVUTWt2dUtwVXdsNG5xaDRiVkVHaTBncmhVdkdrMXJGc1pvX0NDQ0p2YkFTR3J4RTUxemJ1X29aa2xsX2k2ZmZqbHBleG9hdklETlg1dE4xZEU2WTNsZEU3bVoyZm9QbkHSAY8BQVVfeXFMTjkzc1ZwRldIN3prNnFyTkZ0amxUY0V3Q0ItUlRaSmFxQjdOUVgzejIyVE42WURFbVA1ZDVUMTNVSE5DTzZ2cG1DYncxVUtoWVd5LW50UFlwUkhxc3E0UEZmZVNCUXBKd3NHTmw5UHF2OHdGVUFnUHZheUpmNFNNR1U1STgzWnhoSzhMWG0xTGM?oc=5" target="_blank" rel="noreferrer"><span class="title-original" lang="en">The Tech Download: Mistral&#x27;s Arthur Mensch on agentic AI, chips and enterprise adoption - CNBC</span></a></h3>
-    
-            
+
+
           </div>
           <div class="ledger-tags">
             <span class="tag muted"><span class="lang-zh">未识别</span><span class="lang-en">Unidentified</span><span class="lang-ja">未識別</span></span>
@@ -1186,18 +1182,18 @@
             <span class="status-dot research-fit"><span class="lang-zh">通过</span><span class="lang-en">pass</span><span class="lang-ja">通過</span> · 72</span>
             <span class="status-dot neutral"><span class="lang-zh">权威媒体</span><span class="lang-en">Authority media</span><span class="lang-ja">権威メディア</span></span>
             <span class="status-dot access"><span class="lang-zh">标题链接</span><span class="lang-en">Headline/link only</span><span class="lang-ja">見出し/リンクのみ</span></span>
-            
-            
-            
+
+
+
           </div>
         </div>
       </div>
-      
-      
+
+
     </article>
-    
+
     </section>
-    
+
     <section class="chain-section" id="semiconductor" data-section-group="semiconductor" data-item-count="3">
       <div class="section-head">
         <div>
@@ -1207,15 +1203,15 @@
         </div>
         <span class="count"><span class="lang-zh">3 条</span><span class="lang-en">3 items</span><span class="lang-ja">3 件</span></span>
       </div>
-      
+
       <div class="group-digest">
         <span><span class="lang-zh">公司：Alphabet×1 / SK Hynix×1 / Samsung×1</span><span class="lang-en">Companies: Alphabet×1 / SK Hynix×1 / Samsung×1</span><span class="lang-ja">Companies: Alphabet×1 / SK Hynix×1 / Samsung×1</span></span>
         <span><span class="lang-zh">叶子链：HBM×3 / GPU×2</span><span class="lang-en">Leaf tags: HBM×3 / GPU×2</span><span class="lang-ja">Leaf tags: HBM×3 / GPU×2</span></span>
         <span><span class="lang-zh">来源：日韩台供应链媒体×3</span><span class="lang-en">Sources: Japan/Taiwan/Korea supply-chain×3</span><span class="lang-ja">Sources: Japan/Taiwan/Korea supply-chain×3</span></span>
-        
+
       </div>
-    
-      
+
+
     <article class="ledger-row" data-group="semiconductor" data-source-kind="regional_supply_chain_media" data-region="Taiwan" data-access-mode="headline_link_only">
       <div class="ledger-main">
         <div class="ledger-source">
@@ -1225,10 +1221,10 @@
         </div>
         <div class="ledger-content">
           <div class="ledger-title">
-            
+
       <h3><a href="https://news.google.com/rss/articles/CBMikgFBVV95cUxQUnppTTRpZkliNXY4TUl3U2FDZk5pWXRJekktTkJOVElrem4yYUdPXzFNTk5FMHMxaHI1LTZSMVdIV3NjT2M2RjlQNzg4TlpnbmNjejdnYmROZVBVaEVkMXNjZ252M2ticWRSX1BiOWVKZ2cyc2hjRER2Rkh5YzlOS1E5b3RkN0ZmVkhtRzBPYmhkQQ?oc=5" target="_blank" rel="noreferrer"><span class="title-original" lang="en">SK Hynix weighs supplier price hikes as HBM boom lifts equipment makers - digitimes</span></a></h3>
-    
-            
+
+
           </div>
           <div class="ledger-tags">
             <span class="company-tag">SK Hynix</span>
@@ -1237,16 +1233,16 @@
             <span class="status-dot research-fit"><span class="lang-zh">强适配</span><span class="lang-en">strong fit</span><span class="lang-ja">強い適合</span> · 86</span>
             <span class="status-dot neutral"><span class="lang-zh">日韩台供应链媒体</span><span class="lang-en">Japan/Taiwan/Korea supply-chain</span><span class="lang-ja">日韓台サプライチェーン</span></span>
             <span class="status-dot access"><span class="lang-zh">标题链接</span><span class="lang-en">Headline/link only</span><span class="lang-ja">見出し/リンクのみ</span></span>
-            
-            
-            
+
+
+
           </div>
         </div>
       </div>
-      
-      
+
+
     </article>
-    
+
     <article class="ledger-row" data-group="semiconductor" data-source-kind="regional_supply_chain_media" data-region="Korea" data-access-mode="headline_link_only">
       <div class="ledger-main">
         <div class="ledger-source">
@@ -1256,10 +1252,10 @@
         </div>
         <div class="ledger-content">
           <div class="ledger-title">
-            
+
       <h3><a href="https://news.google.com/rss/articles/CBMid0FVX3lxTE9uRmFFZ2dmMElDbkJfaWlTODV6Tl9VS2xXN2tLMFZpbjJQbGNqVjNtLUtCeGx4VUx4N20yNUtwN011LU9USXZtekZ3UVF0MENGbk9Nb2hveGh1bk9LU3hpWDR4U2xuYmduRFdNcmpIQnVzQ3VVMldz?oc=5" target="_blank" rel="noreferrer"><span class="title-original" lang="en">Samsung likely to make part of Google’s Icefish AI chip after winning $16.5 bn Tesla order - KED Global</span></a></h3>
-    
-            
+
+
           </div>
           <div class="ledger-tags">
             <span class="company-tag">Alphabet</span><span class="company-tag">Tesla</span><span class="company-tag">Samsung</span>
@@ -1268,16 +1264,16 @@
             <span class="status-dot research-fit"><span class="lang-zh">强适配</span><span class="lang-en">strong fit</span><span class="lang-ja">強い適合</span> · 86</span>
             <span class="status-dot neutral"><span class="lang-zh">日韩台供应链媒体</span><span class="lang-en">Japan/Taiwan/Korea supply-chain</span><span class="lang-ja">日韓台サプライチェーン</span></span>
             <span class="status-dot access"><span class="lang-zh">标题链接</span><span class="lang-en">Headline/link only</span><span class="lang-ja">見出し/リンクのみ</span></span>
-            
-            
-            
+
+
+
           </div>
         </div>
       </div>
-      
-      
+
+
     </article>
-    
+
     <article class="ledger-row" data-group="semiconductor" data-source-kind="regional_supply_chain_media" data-region="Taiwan" data-access-mode="headline_link_only">
       <div class="ledger-main">
         <div class="ledger-source">
@@ -1287,10 +1283,10 @@
         </div>
         <div class="ledger-content">
           <div class="ledger-title">
-            
+
       <h3><a href="https://news.google.com/rss/articles/CBMiqwFBVV95cUxNYl9jOXl1dm1zRGFCaHB0R0dGUlpFRnZ1cTNmTmNvcU03WHBKUFhXYlFiZG5KUnlaSU5fQ01jSEFxY3ExWjk0c3plX29IZHQyNUdqbEtBOUlLUjJzcW5ZMGNwMWtZWWE3eGllOXdZTTlQellNRVlLSnFUWDZ6c2JYUmZGbDFsX2hXYVJsTjNydGxlOEtxT3NDSGdJYmhxaVE0MGxndHRzanEteUU?oc=5" target="_blank" rel="noreferrer"><span class="title-original" lang="zh-Hant">記憶體還有好幾季榮景？分析：無塵室成擴產瓶頸 - TechNews 科技新報</span></a></h3>
-    
-            
+
+
           </div>
           <div class="ledger-tags">
             <span class="tag muted"><span class="lang-zh">未识别</span><span class="lang-en">Unidentified</span><span class="lang-ja">未識別</span></span>
@@ -1299,18 +1295,18 @@
             <span class="status-dot research-fit"><span class="lang-zh">通过</span><span class="lang-en">pass</span><span class="lang-ja">通過</span> · 68</span>
             <span class="status-dot neutral"><span class="lang-zh">日韩台供应链媒体</span><span class="lang-en">Japan/Taiwan/Korea supply-chain</span><span class="lang-ja">日韓台サプライチェーン</span></span>
             <span class="status-dot access"><span class="lang-zh">标题链接</span><span class="lang-en">Headline/link only</span><span class="lang-ja">見出し/リンクのみ</span></span>
-            
-            
-            
+
+
+
           </div>
         </div>
       </div>
-      
-      
+
+
     </article>
-    
+
     </section>
-    
+
     <section class="chain-section" id="compute_deployment" data-section-group="compute_deployment" data-item-count="1">
       <div class="section-head">
         <div>
@@ -1320,15 +1316,15 @@
         </div>
         <span class="count"><span class="lang-zh">1 条</span><span class="lang-en">1 items</span><span class="lang-ja">1 件</span></span>
       </div>
-      
+
       <div class="group-digest">
         <span><span class="lang-zh">公司：未识别</span><span class="lang-en">Companies: unidentified</span><span class="lang-ja">Companies: unidentified</span></span>
         <span><span class="lang-zh">叶子链：AI Server×1</span><span class="lang-en">Leaf tags: AI Server×1</span><span class="lang-ja">Leaf tags: AI Server×1</span></span>
         <span><span class="lang-zh">来源：日韩台供应链媒体×1</span><span class="lang-en">Sources: Japan/Taiwan/Korea supply-chain×1</span><span class="lang-ja">Sources: Japan/Taiwan/Korea supply-chain×1</span></span>
-        
+
       </div>
-    
-      
+
+
     <article class="ledger-row" data-group="compute_deployment" data-source-kind="regional_supply_chain_media" data-region="Taiwan" data-access-mode="headline_link_only">
       <div class="ledger-main">
         <div class="ledger-source">
@@ -1338,10 +1334,10 @@
         </div>
         <div class="ledger-content">
           <div class="ledger-title">
-            
+
       <h3><a href="https://news.google.com/rss/articles/CBMimgFBVV95cUxNUFZhNS10dHI2cUlqd3NGclpQRndyZlM2VTY4bmZybDFTRUstVHZhVXNLM0pGZDRmbS1lNXVDTnEyWTA3ZXhBYjNHWEF2OWg5QXZJT2ZtV3lFTS1TVmx5RURZV2hZNThaNkRrRlhKX1JJWHY4THdMcnJmTmVJOFRfN1RFR0RXUG01T3hITFBRbHFrY011cEo2ZWhn?oc=5" target="_blank" rel="noreferrer"><span class="title-original" lang="en">AI server tracker: Taiwan&#x27;s AI server build chain widens as rack suppliers outpace peers - digitimes</span></a></h3>
-    
-            
+
+
           </div>
           <div class="ledger-tags">
             <span class="tag muted"><span class="lang-zh">未识别</span><span class="lang-en">Unidentified</span><span class="lang-ja">未識別</span></span>
@@ -1350,18 +1346,18 @@
             <span class="status-dot research-fit"><span class="lang-zh">通过</span><span class="lang-en">pass</span><span class="lang-ja">通過</span> · 68</span>
             <span class="status-dot neutral"><span class="lang-zh">日韩台供应链媒体</span><span class="lang-en">Japan/Taiwan/Korea supply-chain</span><span class="lang-ja">日韓台サプライチェーン</span></span>
             <span class="status-dot access"><span class="lang-zh">标题链接</span><span class="lang-en">Headline/link only</span><span class="lang-ja">見出し/リンクのみ</span></span>
-            
-            
-            
+
+
+
           </div>
         </div>
       </div>
-      
-      
+
+
     </article>
-    
+
     </section>
-    
+
     <section class="chain-section" id="facility_infrastructure" data-section-group="facility_infrastructure" data-item-count="4">
       <div class="section-head">
         <div>
@@ -1371,15 +1367,15 @@
         </div>
         <span class="count"><span class="lang-zh">4 条</span><span class="lang-en">4 items</span><span class="lang-ja">4 件</span></span>
       </div>
-      
+
       <div class="group-digest">
         <span><span class="lang-zh">公司：Alphabet×1</span><span class="lang-en">Companies: Alphabet×1</span><span class="lang-ja">Companies: Alphabet×1</span></span>
         <span><span class="lang-zh">叶子链：Data Center Power×4 / Liquid Cooling×2</span><span class="lang-en">Leaf tags: Data Center Power×4 / Liquid Cooling×2</span><span class="lang-ja">Leaf tags: Data Center Power×4 / Liquid Cooling×2</span></span>
         <span><span class="lang-zh">来源：权威媒体×2 / 日韩台供应链媒体×2</span><span class="lang-en">Sources: Authority media×2 / Japan/Taiwan/Korea supply-chain×2</span><span class="lang-ja">Sources: Authority media×2 / Japan/Taiwan/Korea supply-chain×2</span></span>
-        
+
       </div>
-    
-      
+
+
     <article class="ledger-row" data-group="facility_infrastructure" data-source-kind="regional_supply_chain_media" data-region="Taiwan" data-access-mode="rss_excerpt">
       <div class="ledger-main">
         <div class="ledger-source">
@@ -1389,10 +1385,10 @@
         </div>
         <div class="ledger-content">
           <div class="ledger-title">
-            
+
       <h3><a href="https://www.taipeitimes.com/News/taiwan/archives/2026/06/13/2003859023" target="_blank" rel="noreferrer"><span class="title-original" lang="en">Industry’s need for water, electricity will be met: Lai</span></a></h3>
-    
-            
+
+
           </div>
           <div class="ledger-tags">
             <span class="tag muted"><span class="lang-zh">未识别</span><span class="lang-en">Unidentified</span><span class="lang-ja">未識別</span></span>
@@ -1401,16 +1397,16 @@
             <span class="status-dot research-fit"><span class="lang-zh">通过</span><span class="lang-en">pass</span><span class="lang-ja">通過</span> · 72</span>
             <span class="status-dot neutral"><span class="lang-zh">日韩台供应链媒体</span><span class="lang-en">Japan/Taiwan/Korea supply-chain</span><span class="lang-ja">日韓台サプライチェーン</span></span>
             <span class="status-dot access"><span class="lang-zh">RSS 摘要</span><span class="lang-en">RSS excerpt</span><span class="lang-ja">RSS 抜粋</span></span>
-            
-            
-            
+
+
+
           </div>
         </div>
       </div>
-      
-      
+
+
     </article>
-    
+
     <article class="ledger-row" data-group="facility_infrastructure" data-source-kind="authority_media" data-region="US" data-access-mode="headline_link_only">
       <div class="ledger-main">
         <div class="ledger-source">
@@ -1420,10 +1416,10 @@
         </div>
         <div class="ledger-content">
           <div class="ledger-title">
-            
+
       <h3><a href="https://news.google.com/rss/articles/CBMif0FVX3lxTFBVLUdWUVZLVHFIeGFLRkVGY1FnaDZocnVHVFJ0RTN0YzhaZ0NlSHR1WGxlcjJuQWwtT09NLWtBeHl5ejJ3OHoyc18tUDB0T2J6YW05WGxQOW5DN09CZEtNMHBYV0kyc0FVQ3ozeTR5aXBuYVNuUjBENE8xN2hpTE0?oc=5" target="_blank" rel="noreferrer"><span class="title-original" lang="en">Energy &amp; Utilities Roundup: Market Talk - WSJ</span></a></h3>
-    
-            
+
+
           </div>
           <div class="ledger-tags">
             <span class="tag muted"><span class="lang-zh">未识别</span><span class="lang-en">Unidentified</span><span class="lang-ja">未識別</span></span>
@@ -1432,16 +1428,16 @@
             <span class="status-dot research-fit"><span class="lang-zh">通过</span><span class="lang-en">pass</span><span class="lang-ja">通過</span> · 72</span>
             <span class="status-dot neutral"><span class="lang-zh">权威媒体</span><span class="lang-en">Authority media</span><span class="lang-ja">権威メディア</span></span>
             <span class="status-dot access"><span class="lang-zh">标题链接</span><span class="lang-en">Headline/link only</span><span class="lang-ja">見出し/リンクのみ</span></span>
-            
-            
-            
+
+
+
           </div>
         </div>
       </div>
-      
-      
+
+
     </article>
-    
+
     <article class="ledger-row" data-group="facility_infrastructure" data-source-kind="authority_media" data-region="US" data-access-mode="headline_link_only">
       <div class="ledger-main">
         <div class="ledger-source">
@@ -1451,10 +1447,10 @@
         </div>
         <div class="ledger-content">
           <div class="ledger-title">
-            
+
       <h3><a href="https://news.google.com/rss/articles/CBMiuAFBVV95cUxPVUY3NTh1QmdLRmNLMTc1TElTRzVtSWh0ZWJkV3gyaUFDNEg2bGg5dHBVNHpwYWh4MXdYUnZkbTJfM1NHdWxuYWltUi1LenM4OEJNY1dUZDhPVmJGbkdQTXYyYmRNOW9pZUdGZ0RWSGtMYk9XbGtrN0pKRVRJMHhvSkxzLTF4WS1xWnB1bkEyOGJJTWhVSEpYcS1YVy10cGpuMXE2dWdycjBHaThUTzRaSjV5SGI5bXEx?oc=5" target="_blank" rel="noreferrer"><span class="title-original" lang="en">A Google AI project delay may have hurt chip stocks. But data center buildout remains on track - CNBC</span></a></h3>
-    
-            
+
+
           </div>
           <div class="ledger-tags">
             <span class="company-tag">Alphabet</span>
@@ -1463,16 +1459,16 @@
             <span class="status-dot research-fit"><span class="lang-zh">强适配</span><span class="lang-en">strong fit</span><span class="lang-ja">強い適合</span> · 90</span>
             <span class="status-dot neutral"><span class="lang-zh">权威媒体</span><span class="lang-en">Authority media</span><span class="lang-ja">権威メディア</span></span>
             <span class="status-dot access"><span class="lang-zh">标题链接</span><span class="lang-en">Headline/link only</span><span class="lang-ja">見出し/リンクのみ</span></span>
-            
-            
-            
+
+
+
           </div>
         </div>
       </div>
-      
-      
+
+
     </article>
-    
+
     <article class="ledger-row" data-group="facility_infrastructure" data-source-kind="regional_supply_chain_media" data-region="Taiwan" data-access-mode="headline_link_only">
       <div class="ledger-main">
         <div class="ledger-source">
@@ -1482,10 +1478,10 @@
         </div>
         <div class="ledger-content">
           <div class="ledger-title">
-            
+
       <h3><a href="https://news.google.com/rss/articles/CBMiWEFVX3lxTE9zVUlDcnkyb1JLZXpOUXFjaDc0RUR6WlRJaHhQbUo0aHBRMzBLTC1tN2hOSHN5SnVnUHpDcVZDR2cwUGNDWjJNSlhXaVVpOEszQkNoUjBDdUY?oc=5" target="_blank" rel="noreferrer"><span class="title-original" lang="en">Kaopiz and QuantumTX Sign MOU to Co-Develop AI-Powered IoT Healthcare Solutions for Asia’s Aging Population - Taiwan News</span></a></h3>
-    
-            
+
+
           </div>
           <div class="ledger-tags">
             <span class="tag muted"><span class="lang-zh">未识别</span><span class="lang-en">Unidentified</span><span class="lang-ja">未識別</span></span>
@@ -1494,18 +1490,18 @@
             <span class="status-dot research-fit"><span class="lang-zh">通过</span><span class="lang-en">pass</span><span class="lang-ja">通過</span> · 68</span>
             <span class="status-dot neutral"><span class="lang-zh">日韩台供应链媒体</span><span class="lang-en">Japan/Taiwan/Korea supply-chain</span><span class="lang-ja">日韓台サプライチェーン</span></span>
             <span class="status-dot access"><span class="lang-zh">标题链接</span><span class="lang-en">Headline/link only</span><span class="lang-ja">見出し/リンクのみ</span></span>
-            
-            
-            
+
+
+
           </div>
         </div>
       </div>
-      
-      
+
+
     </article>
-    
+
     </section>
-    
+
     <section class="chain-section" id="embodied_ai" data-section-group="embodied_ai" data-item-count="0">
       <div class="section-head">
         <div>
@@ -1515,253 +1511,253 @@
         </div>
         <span class="count"><span class="lang-zh">0 条</span><span class="lang-en">0 items</span><span class="lang-ja">0 件</span></span>
       </div>
-      
+
         <div class="group-digest empty-digest">
           <span><span class="lang-zh">0 条同窗口新闻</span><span class="lang-en">0 same-window items</span><span class="lang-ja">同一ウィンドウのニュース 0 件</span></span>
           <span><span class="lang-zh">无同窗口可核验新闻</span><span class="lang-en">No verifiable same-window news</span><span class="lang-ja">同一ウィンドウで検証可能なニュースはありません</span></span>
         </div>
-        
+
       <div class="empty-group"><span class="lang-zh">无同窗口可核验新闻</span><span class="lang-en">No verifiable same-window news</span><span class="lang-ja">同一ウィンドウで検証可能なニュースはありません</span></div>
     </section>
     </div>
     </section>
-    
+
     <details class="source-panel source-audit"><summary><span class="lang-zh">来源审计明细</span><span class="lang-en">Source Audit Detail</span><span class="lang-ja">ソース監査詳細</span> · 38/39 publishers · 42/43 feeds</summary><div class="publisher-grid">
             <article class="publisher-card">
               <b>Alphabet</b>
               <span class="status-dot ok">1/1 feeds</span>
               <p><span class="lang-zh">公司官方</span><span class="lang-en">Company official</span><span class="lang-ja">企業公式</span> · <span class="lang-zh">展示 0 条</span><span class="lang-en">0 displayed</span><span class="lang-ja">0 displayed</span></p>
             </article>
-            
+
             <article class="publisher-card">
               <b>Amazon / AWS</b>
               <span class="status-dot ok">1/1 feeds</span>
               <p><span class="lang-zh">公司官方</span><span class="lang-en">Company official</span><span class="lang-ja">企業公式</span> · <span class="lang-zh">展示 0 条</span><span class="lang-en">0 displayed</span><span class="lang-ja">0 displayed</span></p>
             </article>
-            
+
             <article class="publisher-card">
               <b>Apple</b>
               <span class="status-dot ok">2/2 feeds</span>
               <p><span class="lang-zh">公司官方</span><span class="lang-en">Company official</span><span class="lang-ja">企業公式</span> · <span class="lang-zh">展示 0 条</span><span class="lang-en">0 displayed</span><span class="lang-ja">0 displayed</span></p>
             </article>
-            
+
             <article class="publisher-card">
               <b>Arm</b>
               <span class="status-dot ok">1/1 feeds</span>
               <p><span class="lang-zh">公司官方</span><span class="lang-en">Company official</span><span class="lang-ja">企業公式</span> · <span class="lang-zh">展示 0 条</span><span class="lang-en">0 displayed</span><span class="lang-ja">0 displayed</span></p>
             </article>
-            
+
             <article class="publisher-card">
               <b>Meta</b>
               <span class="status-dot ok">1/1 feeds</span>
               <p><span class="lang-zh">公司官方</span><span class="lang-en">Company official</span><span class="lang-ja">企業公式</span> · <span class="lang-zh">展示 0 条</span><span class="lang-en">0 displayed</span><span class="lang-ja">0 displayed</span></p>
             </article>
-            
+
             <article class="publisher-card">
               <b>Microsoft</b>
               <span class="status-dot ok">1/1 feeds</span>
               <p><span class="lang-zh">公司官方</span><span class="lang-en">Company official</span><span class="lang-ja">企業公式</span> · <span class="lang-zh">展示 0 条</span><span class="lang-en">0 displayed</span><span class="lang-ja">0 displayed</span></p>
             </article>
-            
+
             <article class="publisher-card">
               <b>NVIDIA</b>
               <span class="status-dot ok">3/3 feeds</span>
               <p><span class="lang-zh">公司官方</span><span class="lang-en">Company official</span><span class="lang-ja">企業公式</span> · <span class="lang-zh">展示 1 条</span><span class="lang-en">1 displayed</span><span class="lang-ja">1 displayed</span></p>
             </article>
-            
+
             <article class="publisher-card">
               <b>OpenAI</b>
               <span class="status-dot ok">1/1 feeds</span>
               <p><span class="lang-zh">公司官方</span><span class="lang-en">Company official</span><span class="lang-ja">企業公式</span> · <span class="lang-zh">展示 0 条</span><span class="lang-en">0 displayed</span><span class="lang-ja">0 displayed</span></p>
             </article>
-            
+
             <article class="publisher-card">
               <b>SK Hynix</b>
               <span class="status-dot ok">1/1 feeds</span>
               <p><span class="lang-zh">公司官方</span><span class="lang-en">Company official</span><span class="lang-ja">企業公式</span> · <span class="lang-zh">展示 0 条</span><span class="lang-en">0 displayed</span><span class="lang-ja">0 displayed</span></p>
             </article>
-            
+
             <article class="publisher-card">
               <b>SpaceX</b>
               <span class="status-dot ok">1/1 feeds</span>
               <p><span class="lang-zh">公司官方</span><span class="lang-en">Company official</span><span class="lang-ja">企業公式</span> · <span class="lang-zh">展示 0 条</span><span class="lang-en">0 displayed</span><span class="lang-ja">0 displayed</span></p>
             </article>
-            
+
             <article class="publisher-card">
               <b>Tesla</b>
               <span class="status-dot ok">1/1 feeds</span>
               <p><span class="lang-zh">公司官方</span><span class="lang-en">Company official</span><span class="lang-ja">企業公式</span> · <span class="lang-zh">展示 0 条</span><span class="lang-en">0 displayed</span><span class="lang-ja">0 displayed</span></p>
             </article>
-            
+
             <article class="publisher-card">
               <b>Bloomberg</b>
               <span class="status-dot ok">1/1 feeds</span>
               <p><span class="lang-zh">权威媒体</span><span class="lang-en">Authority media</span><span class="lang-ja">権威メディア</span> · <span class="lang-zh">展示 0 条</span><span class="lang-en">0 displayed</span><span class="lang-ja">0 displayed</span></p>
             </article>
-            
+
             <article class="publisher-card">
               <b>CNBC</b>
               <span class="status-dot ok">1/1 feeds</span>
               <p><span class="lang-zh">权威媒体</span><span class="lang-en">Authority media</span><span class="lang-ja">権威メディア</span> · <span class="lang-zh">展示 3 条</span><span class="lang-en">3 displayed</span><span class="lang-ja">3 displayed</span></p>
             </article>
-            
+
             <article class="publisher-card">
               <b>Financial Times</b>
               <span class="status-dot ok">1/1 feeds</span>
               <p><span class="lang-zh">权威媒体</span><span class="lang-en">Authority media</span><span class="lang-ja">権威メディア</span> · <span class="lang-zh">展示 0 条</span><span class="lang-en">0 displayed</span><span class="lang-ja">0 displayed</span></p>
             </article>
-            
+
             <article class="publisher-card">
               <b>NHK World</b>
               <span class="status-dot ok">1/1 feeds</span>
               <p><span class="lang-zh">权威媒体</span><span class="lang-en">Authority media</span><span class="lang-ja">権威メディア</span> · <span class="lang-zh">展示 0 条</span><span class="lang-en">0 displayed</span><span class="lang-ja">0 displayed</span></p>
             </article>
-            
+
             <article class="publisher-card">
               <b>Nikkei Asia</b>
               <span class="status-dot ok">1/1 feeds</span>
               <p><span class="lang-zh">权威媒体</span><span class="lang-en">Authority media</span><span class="lang-ja">権威メディア</span> · <span class="lang-zh">展示 1 条</span><span class="lang-en">1 displayed</span><span class="lang-ja">1 displayed</span></p>
             </article>
-            
+
             <article class="publisher-card">
               <b>Reuters</b>
               <span class="status-dot ok">1/1 feeds</span>
               <p><span class="lang-zh">权威媒体</span><span class="lang-en">Authority media</span><span class="lang-ja">権威メディア</span> · <span class="lang-zh">展示 0 条</span><span class="lang-en">0 displayed</span><span class="lang-ja">0 displayed</span></p>
             </article>
-            
+
             <article class="publisher-card">
               <b>The Information</b>
               <span class="status-dot ok">1/1 feeds</span>
               <p><span class="lang-zh">权威媒体</span><span class="lang-en">Authority media</span><span class="lang-ja">権威メディア</span> · <span class="lang-zh">展示 0 条</span><span class="lang-en">0 displayed</span><span class="lang-ja">0 displayed</span></p>
             </article>
-            
+
             <article class="publisher-card">
               <b>The Japan Times</b>
               <span class="status-dot ok">1/1 feeds</span>
               <p><span class="lang-zh">权威媒体</span><span class="lang-en">Authority media</span><span class="lang-ja">権威メディア</span> · <span class="lang-zh">展示 0 条</span><span class="lang-en">0 displayed</span><span class="lang-ja">0 displayed</span></p>
             </article>
-            
+
             <article class="publisher-card">
               <b>Wall Street Journal</b>
               <span class="status-dot ok">1/1 feeds</span>
               <p><span class="lang-zh">权威媒体</span><span class="lang-en">Authority media</span><span class="lang-ja">権威メディア</span> · <span class="lang-zh">展示 1 条</span><span class="lang-en">1 displayed</span><span class="lang-ja">1 displayed</span></p>
             </article>
-            
+
             <article class="publisher-card">
               <b>SemiAnalysis</b>
               <span class="status-dot ok">2/2 feeds</span>
               <p><span class="lang-zh">产业研究机构</span><span class="lang-en">Industry research</span><span class="lang-ja">産業リサーチ</span> · <span class="lang-zh">展示 0 条</span><span class="lang-en">0 displayed</span><span class="lang-ja">0 displayed</span></p>
             </article>
-            
+
             <article class="publisher-card">
               <b>TrendForce</b>
               <span class="status-dot ok">1/1 feeds</span>
               <p><span class="lang-zh">产业研究机构</span><span class="lang-en">Industry research</span><span class="lang-ja">産業リサーチ</span> · <span class="lang-zh">展示 0 条</span><span class="lang-en">0 displayed</span><span class="lang-ja">0 displayed</span></p>
             </article>
-            
+
             <article class="publisher-card">
               <b>BusinessKorea</b>
               <span class="status-dot ok">1/1 feeds</span>
               <p><span class="lang-zh">日韩台供应链媒体</span><span class="lang-en">Japan/Taiwan/Korea supply-chain</span><span class="lang-ja">日韓台サプライチェーン</span> · <span class="lang-zh">展示 0 条</span><span class="lang-en">0 displayed</span><span class="lang-ja">0 displayed</span></p>
             </article>
-            
+
             <article class="publisher-card">
               <b>DigiTimes</b>
               <span class="status-dot ok">1/1 feeds</span>
               <p><span class="lang-zh">日韩台供应链媒体</span><span class="lang-en">Japan/Taiwan/Korea supply-chain</span><span class="lang-ja">日韓台サプライチェーン</span> · <span class="lang-zh">展示 2 条</span><span class="lang-en">2 displayed</span><span class="lang-ja">2 displayed</span></p>
             </article>
-            
+
             <article class="publisher-card">
               <b>EE Times Japan</b>
               <span class="status-dot ok">1/1 feeds</span>
               <p><span class="lang-zh">日韩台供应链媒体</span><span class="lang-en">Japan/Taiwan/Korea supply-chain</span><span class="lang-ja">日韓台サプライチェーン</span> · <span class="lang-zh">展示 0 条</span><span class="lang-en">0 displayed</span><span class="lang-ja">0 displayed</span></p>
             </article>
-            
+
             <article class="publisher-card">
               <b>Focus Taiwan / CNA</b>
               <span class="status-dot ok">1/1 feeds</span>
               <p><span class="lang-zh">日韩台供应链媒体</span><span class="lang-en">Japan/Taiwan/Korea supply-chain</span><span class="lang-ja">日韓台サプライチェーン</span> · <span class="lang-zh">展示 0 条</span><span class="lang-en">0 displayed</span><span class="lang-ja">0 displayed</span></p>
             </article>
-            
+
             <article class="publisher-card">
               <b>KED Global</b>
               <span class="status-dot ok">1/1 feeds</span>
               <p><span class="lang-zh">日韩台供应链媒体</span><span class="lang-en">Japan/Taiwan/Korea supply-chain</span><span class="lang-ja">日韓台サプライチェーン</span> · <span class="lang-zh">展示 1 条</span><span class="lang-en">1 displayed</span><span class="lang-ja">1 displayed</span></p>
             </article>
-            
+
             <article class="publisher-card">
               <b>Korea JoongAng Daily</b>
               <span class="status-dot ok">1/1 feeds</span>
               <p><span class="lang-zh">日韩台供应链媒体</span><span class="lang-en">Japan/Taiwan/Korea supply-chain</span><span class="lang-ja">日韓台サプライチェーン</span> · <span class="lang-zh">展示 0 条</span><span class="lang-en">0 displayed</span><span class="lang-ja">0 displayed</span></p>
             </article>
-            
+
             <article class="publisher-card">
               <b>Maeil Business</b>
               <span class="status-dot ok">1/1 feeds</span>
               <p><span class="lang-zh">日韩台供应链媒体</span><span class="lang-en">Japan/Taiwan/Korea supply-chain</span><span class="lang-ja">日韓台サプライチェーン</span> · <span class="lang-zh">展示 0 条</span><span class="lang-en">0 displayed</span><span class="lang-ja">0 displayed</span></p>
             </article>
-            
+
             <article class="publisher-card">
               <b>Nikkei xTECH</b>
               <span class="status-dot ok">1/1 feeds</span>
               <p><span class="lang-zh">日韩台供应链媒体</span><span class="lang-en">Japan/Taiwan/Korea supply-chain</span><span class="lang-ja">日韓台サプライチェーン</span> · <span class="lang-zh">展示 0 条</span><span class="lang-en">0 displayed</span><span class="lang-ja">0 displayed</span></p>
             </article>
-            
+
             <article class="publisher-card">
               <b>Taipei Times</b>
               <span class="status-dot ok">1/1 feeds</span>
               <p><span class="lang-zh">日韩台供应链媒体</span><span class="lang-en">Japan/Taiwan/Korea supply-chain</span><span class="lang-ja">日韓台サプライチェーン</span> · <span class="lang-zh">展示 1 条</span><span class="lang-en">1 displayed</span><span class="lang-ja">1 displayed</span></p>
             </article>
-            
+
             <article class="publisher-card">
               <b>Taiwan News</b>
               <span class="status-dot ok">1/1 feeds</span>
               <p><span class="lang-zh">日韩台供应链媒体</span><span class="lang-en">Japan/Taiwan/Korea supply-chain</span><span class="lang-ja">日韓台サプライチェーン</span> · <span class="lang-zh">展示 1 条</span><span class="lang-en">1 displayed</span><span class="lang-ja">1 displayed</span></p>
             </article>
-            
+
             <article class="publisher-card">
               <b>TechNews Taiwan</b>
               <span class="status-dot ok">1/1 feeds</span>
               <p><span class="lang-zh">日韩台供应链媒体</span><span class="lang-en">Japan/Taiwan/Korea supply-chain</span><span class="lang-ja">日韓台サプライチェーン</span> · <span class="lang-zh">展示 1 条</span><span class="lang-en">1 displayed</span><span class="lang-ja">1 displayed</span></p>
             </article>
-            
+
             <article class="publisher-card">
               <b>The Elec</b>
               <span class="status-dot ok">1/1 feeds</span>
               <p><span class="lang-zh">日韩台供应链媒体</span><span class="lang-en">Japan/Taiwan/Korea supply-chain</span><span class="lang-ja">日韓台サプライチェーン</span> · <span class="lang-zh">展示 0 条</span><span class="lang-en">0 displayed</span><span class="lang-ja">0 displayed</span></p>
             </article>
-            
+
             <article class="publisher-card">
               <b>The Korea Herald</b>
               <span class="status-dot ok">1/1 feeds</span>
               <p><span class="lang-zh">日韩台供应链媒体</span><span class="lang-en">Japan/Taiwan/Korea supply-chain</span><span class="lang-ja">日韓台サプライチェーン</span> · <span class="lang-zh">展示 0 条</span><span class="lang-en">0 displayed</span><span class="lang-ja">0 displayed</span></p>
             </article>
-            
+
             <article class="publisher-card">
               <b>agy + Gemini Google Search Discovery</b>
               <span class="status-dot fail">/1 feeds</span>
               <p><span class="lang-zh">Gemini Grounding</span><span class="lang-en">Gemini Grounding</span><span class="lang-ja">Gemini Grounding</span> · <span class="lang-zh">展示 0 条</span><span class="lang-en">0 displayed</span><span class="lang-ja">0 displayed</span></p>
             </article>
-            
+
             <article class="publisher-card">
               <b>AI HOT</b>
               <span class="status-dot ok">1/1 feeds</span>
               <p><span class="lang-zh">AI 聚合发现源</span><span class="lang-en">AI aggregator discovery</span><span class="lang-ja">AI 集約発見ソース</span> · <span class="lang-zh">展示 3 条</span><span class="lang-en">3 displayed</span><span class="lang-ja">3 displayed</span></p>
             </article>
-            
+
             <article class="publisher-card">
               <b>Serenity local tweet asset</b>
               <span class="status-dot ok">1/1 feeds</span>
               <p><span class="lang-zh">产业 KOL 信号</span><span class="lang-en">Industry KOL signal</span><span class="lang-ja">産業 KOL シグナル</span> · <span class="lang-zh">展示 0 条</span><span class="lang-en">0 displayed</span><span class="lang-ja">0 displayed</span></p>
             </article>
-            
+
             <article class="publisher-card">
               <b>X / KOL local exports</b>
               <span class="status-dot ok">1/1 feeds</span>
               <p><span class="lang-zh">产业 KOL 信号</span><span class="lang-en">Industry KOL signal</span><span class="lang-ja">産業 KOL シグナル</span> · <span class="lang-zh">展示 0 条</span><span class="lang-en">0 displayed</span><span class="lang-ja">0 displayed</span></p>
             </article>
             </div><div class="table-wrap"><table><thead><tr><th><span class="lang-zh">Publisher</span><span class="lang-en">Publisher</span><span class="lang-ja">発行元</span></th><th><span class="lang-zh">Feed</span><span class="lang-en">Feed</span><span class="lang-ja">フィード</span></th><th><span class="lang-zh">频道角色</span><span class="lang-en">Channel role</span><span class="lang-ja">チャネル役割</span></th><th><span class="lang-zh">类型</span><span class="lang-en">Kind</span><span class="lang-ja">種別</span></th><th><span class="lang-zh">区域</span><span class="lang-en">Region</span><span class="lang-ja">地域</span></th><th><span class="lang-zh">访问模式</span><span class="lang-en">Access</span><span class="lang-ja">アクセス形式</span></th><th><span class="lang-zh">纳入/抓取</span><span class="lang-en">Included/Fetched</span><span class="lang-ja">採用/取得</span></th><th><span class="lang-zh">失败原因</span><span class="lang-en">Failure reason</span><span class="lang-ja">失敗理由</span></th></tr></thead><tbody><tr><td>NVIDIA</td><td>NVIDIA Press Room</td><td><span class="lang-zh">新闻稿</span><span class="lang-en">Press room</span><span class="lang-ja">Press room</span></td><td><span class="lang-zh">公司官方</span><span class="lang-en">Company official</span><span class="lang-ja">企業公式</span></td><td>US</td><td><span class="lang-zh">RSS 摘要</span><span class="lang-en">RSS excerpt</span><span class="lang-ja">RSS 抜粋</span></td><td><span class="status-dot ok">1/20</span></td><td></td></tr><tr><td>NVIDIA</td><td>NVIDIA Blog</td><td><span class="lang-zh">公司博客</span><span class="lang-en">Company blog</span><span class="lang-ja">Company blog</span></td><td><span class="lang-zh">公司官方</span><span class="lang-en">Company official</span><span class="lang-ja">企業公式</span></td><td>US</td><td><span class="lang-zh">RSS 摘要</span><span class="lang-en">RSS excerpt</span><span class="lang-ja">RSS 抜粋</span></td><td><span class="status-dot ok">1/18</span></td><td></td></tr><tr><td>NVIDIA</td><td>NVIDIA Developer Blog</td><td><span class="lang-zh">开发者博客</span><span class="lang-en">Developer blog</span><span class="lang-ja">Developer blog</span></td><td><span class="lang-zh">公司官方</span><span class="lang-en">Company official</span><span class="lang-ja">企業公式</span></td><td>US</td><td><span class="lang-zh">RSS 摘要</span><span class="lang-en">RSS excerpt</span><span class="lang-ja">RSS 抜粋</span></td><td><span class="status-dot ok">3/100</span></td><td></td></tr><tr><td>Amazon / AWS</td><td>AWS News Blog</td><td><span class="lang-zh">新闻博客</span><span class="lang-en">News blog</span><span class="lang-ja">News blog</span></td><td><span class="lang-zh">公司官方</span><span class="lang-en">Company official</span><span class="lang-ja">企業公式</span></td><td>US</td><td><span class="lang-zh">RSS 摘要</span><span class="lang-en">RSS excerpt</span><span class="lang-ja">RSS 抜粋</span></td><td><span class="status-dot ok">0/20</span></td><td></td></tr><tr><td>Meta</td><td>AI at Meta Blog</td><td><span class="lang-zh">AI 博客</span><span class="lang-en">AI blog</span><span class="lang-ja">AI blog</span></td><td><span class="lang-zh">公司官方</span><span class="lang-en">Company official</span><span class="lang-ja">企業公式</span></td><td>US</td><td><span class="lang-zh">公开网页列表</span><span class="lang-en">Public webpage listing</span><span class="lang-ja">公開ウェブ一覧</span></td><td><span class="status-dot ok">0/5</span></td><td></td></tr><tr><td>OpenAI</td><td>OpenAI News via OpenRSS</td><td><span class="lang-zh">第三方 RSS 桥</span><span class="lang-en">Third-party RSS bridge</span><span class="lang-ja">第三者 RSS ブリッジ</span></td><td><span class="lang-zh">公司官方</span><span class="lang-en">Company official</span><span class="lang-ja">企業公式</span></td><td>US</td><td><span class="lang-zh">第三方 RSS 桥</span><span class="lang-en">Third-party RSS bridge</span><span class="lang-ja">第三者 RSS ブリッジ</span></td><td><span class="status-dot ok">0/48</span></td><td></td></tr><tr><td>Microsoft</td><td>Microsoft Foundry Blog</td><td><span class="lang-zh">Foundry 博客</span><span class="lang-en">Foundry blog</span><span class="lang-ja">Foundry blog</span></td><td><span class="lang-zh">公司官方</span><span class="lang-en">Company official</span><span class="lang-ja">企業公式</span></td><td>US</td><td><span class="lang-zh">RSS 摘要</span><span class="lang-en">RSS excerpt</span><span class="lang-ja">RSS 抜粋</span></td><td><span class="status-dot ok">0/10</span></td><td></td></tr><tr><td>Alphabet</td><td>Google AI Blog</td><td><span class="lang-zh">AI 博客</span><span class="lang-en">AI blog</span><span class="lang-ja">AI blog</span></td><td><span class="lang-zh">公司官方</span><span class="lang-en">Company official</span><span class="lang-ja">企業公式</span></td><td>US</td><td><span class="lang-zh">RSS 摘要</span><span class="lang-en">RSS excerpt</span><span class="lang-ja">RSS 抜粋</span></td><td><span class="status-dot ok">0/20</span></td><td></td></tr><tr><td>Apple</td><td>Apple Newsroom</td><td><span class="lang-zh">新闻室</span><span class="lang-en">Newsroom</span><span class="lang-ja">Newsroom</span></td><td><span class="lang-zh">公司官方</span><span class="lang-en">Company official</span><span class="lang-ja">企業公式</span></td><td>US</td><td><span class="lang-zh">RSS 摘要</span><span class="lang-en">RSS excerpt</span><span class="lang-ja">RSS 抜粋</span></td><td><span class="status-dot ok">0/20</span></td><td></td></tr><tr><td>Apple</td><td>Apple Developer News</td><td><span class="lang-zh">开发者新闻</span><span class="lang-en">Developer news</span><span class="lang-ja">Developer news</span></td><td><span class="lang-zh">公司官方</span><span class="lang-en">Company official</span><span class="lang-ja">企業公式</span></td><td>US</td><td><span class="lang-zh">RSS 摘要</span><span class="lang-en">RSS excerpt</span><span class="lang-ja">RSS 抜粋</span></td><td><span class="status-dot ok">0/149</span></td><td></td></tr><tr><td>Tesla</td><td>Tesla Official Site</td><td><span class="lang-zh">官网新闻来源</span><span class="lang-en">Official-site news source</span><span class="lang-ja">Official-site news source</span></td><td><span class="lang-zh">公司官方</span><span class="lang-en">Company official</span><span class="lang-ja">企業公式</span></td><td>US</td><td><span class="lang-zh">标题链接</span><span class="lang-en">Headline/link only</span><span class="lang-ja">見出し/リンクのみ</span></td><td><span class="status-dot ok">0/100</span></td><td></td></tr><tr><td>SpaceX</td><td>SpaceX Official Site</td><td><span class="lang-zh">官网新闻来源</span><span class="lang-en">Official-site news source</span><span class="lang-ja">Official-site news source</span></td><td><span class="lang-zh">公司官方</span><span class="lang-en">Company official</span><span class="lang-ja">企業公式</span></td><td>US</td><td><span class="lang-zh">标题链接</span><span class="lang-en">Headline/link only</span><span class="lang-ja">見出し/リンクのみ</span></td><td><span class="status-dot ok">0/100</span></td><td></td></tr><tr><td>Bloomberg</td><td>Bloomberg Technology</td><td><span class="lang-zh">Google News 来源</span><span class="lang-en">Google News source</span><span class="lang-ja">Google News source</span></td><td><span class="lang-zh">权威媒体</span><span class="lang-en">Authority media</span><span class="lang-ja">権威メディア</span></td><td>US</td><td><span class="lang-zh">标题链接</span><span class="lang-en">Headline/link only</span><span class="lang-ja">見出し/リンクのみ</span></td><td><span class="status-dot ok">8/100</span></td><td></td></tr><tr><td>Wall Street Journal</td><td>Wall Street Journal Technology</td><td><span class="lang-zh">Google News 来源</span><span class="lang-en">Google News source</span><span class="lang-ja">Google News source</span></td><td><span class="lang-zh">权威媒体</span><span class="lang-en">Authority media</span><span class="lang-ja">権威メディア</span></td><td>US</td><td><span class="lang-zh">标题链接</span><span class="lang-en">Headline/link only</span><span class="lang-ja">見出し/リンクのみ</span></td><td><span class="status-dot ok">18/100</span></td><td></td></tr><tr><td>Reuters</td><td>Reuters Technology</td><td><span class="lang-zh">Google News 来源</span><span class="lang-en">Google News source</span><span class="lang-ja">Google News source</span></td><td><span class="lang-zh">权威媒体</span><span class="lang-en">Authority media</span><span class="lang-ja">権威メディア</span></td><td>US</td><td><span class="lang-zh">标题链接</span><span class="lang-en">Headline/link only</span><span class="lang-ja">見出し/リンクのみ</span></td><td><span class="status-dot ok">11/100</span></td><td></td></tr><tr><td>Financial Times</td><td>Financial Times Technology</td><td><span class="lang-zh">Google News 来源</span><span class="lang-en">Google News source</span><span class="lang-ja">Google News source</span></td><td><span class="lang-zh">权威媒体</span><span class="lang-en">Authority media</span><span class="lang-ja">権威メディア</span></td><td>Europe</td><td><span class="lang-zh">标题链接</span><span class="lang-en">Headline/link only</span><span class="lang-ja">見出し/リンクのみ</span></td><td><span class="status-dot ok">10/100</span></td><td></td></tr><tr><td>CNBC</td><td>CNBC Technology</td><td><span class="lang-zh">Google News 来源</span><span class="lang-en">Google News source</span><span class="lang-ja">Google News source</span></td><td><span class="lang-zh">权威媒体</span><span class="lang-en">Authority media</span><span class="lang-ja">権威メディア</span></td><td>US</td><td><span class="lang-zh">标题链接</span><span class="lang-en">Headline/link only</span><span class="lang-ja">見出し/リンクのみ</span></td><td><span class="status-dot ok">12/100</span></td><td></td></tr><tr><td>The Information</td><td>The Information AI</td><td><span class="lang-zh">Google News 来源</span><span class="lang-en">Google News source</span><span class="lang-ja">Google News source</span></td><td><span class="lang-zh">权威媒体</span><span class="lang-en">Authority media</span><span class="lang-ja">権威メディア</span></td><td>US</td><td><span class="lang-zh">标题链接</span><span class="lang-en">Headline/link only</span><span class="lang-ja">見出し/リンクのみ</span></td><td><span class="status-dot ok">8/100</span></td><td></td></tr><tr><td>SemiAnalysis</td><td>SemiAnalysis Newsletter</td><td><span class="lang-zh">产业研究源</span><span class="lang-en">Industry research feed</span><span class="lang-ja">Industry research feed</span></td><td><span class="lang-zh">产业研究机构</span><span class="lang-en">Industry research</span><span class="lang-ja">産業リサーチ</span></td><td>US</td><td><span class="lang-zh">标题链接</span><span class="lang-en">Headline/link only</span><span class="lang-ja">見出し/リンクのみ</span></td><td><span class="status-dot ok">0/20</span></td><td></td></tr><tr><td>SemiAnalysis</td><td>SemiAnalysis 800V/CPO delay via KuCoinFlash</td><td><span class="lang-zh">公开转载线索</span><span class="lang-en">Public report repost</span><span class="lang-ja">Public report repost</span></td><td><span class="lang-zh">产业研究机构</span><span class="lang-en">Industry research</span><span class="lang-ja">産業リサーチ</span></td><td>US</td><td><span class="lang-zh">标题链接</span><span class="lang-en">Headline/link only</span><span class="lang-ja">見出し/リンクのみ</span></td><td><span class="status-dot ok">0/1</span></td><td></td></tr><tr><td>Nikkei Asia</td><td>Nikkei Asia Technology</td><td><span class="lang-zh">Google News 来源</span><span class="lang-en">Google News source</span><span class="lang-ja">Google News source</span></td><td><span class="lang-zh">权威媒体</span><span class="lang-en">Authority media</span><span class="lang-ja">権威メディア</span></td><td>Japan</td><td><span class="lang-zh">标题链接</span><span class="lang-en">Headline/link only</span><span class="lang-ja">見出し/リンクのみ</span></td><td><span class="status-dot ok">6/100</span></td><td></td></tr><tr><td>Nikkei xTECH</td><td>Nikkei xTECH</td><td><span class="lang-zh">Google News 来源</span><span class="lang-en">Google News source</span><span class="lang-ja">Google News source</span></td><td><span class="lang-zh">日韩台供应链媒体</span><span class="lang-en">Japan/Taiwan/Korea supply-chain</span><span class="lang-ja">日韓台サプライチェーン</span></td><td>Japan</td><td><span class="lang-zh">标题链接</span><span class="lang-en">Headline/link only</span><span class="lang-ja">見出し/リンクのみ</span></td><td><span class="status-dot ok">0/2</span></td><td></td></tr><tr><td>NHK World</td><td>NHK World Business</td><td><span class="lang-zh">Google News 来源</span><span class="lang-en">Google News source</span><span class="lang-ja">Google News source</span></td><td><span class="lang-zh">权威媒体</span><span class="lang-en">Authority media</span><span class="lang-ja">権威メディア</span></td><td>Japan</td><td><span class="lang-zh">标题链接</span><span class="lang-en">Headline/link only</span><span class="lang-ja">見出し/リンクのみ</span></td><td><span class="status-dot ok">0/0</span></td><td></td></tr><tr><td>The Japan Times</td><td>The Japan Times Business</td><td><span class="lang-zh">Google News 来源</span><span class="lang-en">Google News source</span><span class="lang-ja">Google News source</span></td><td><span class="lang-zh">权威媒体</span><span class="lang-en">Authority media</span><span class="lang-ja">権威メディア</span></td><td>Japan</td><td><span class="lang-zh">标题链接</span><span class="lang-en">Headline/link only</span><span class="lang-ja">見出し/リンクのみ</span></td><td><span class="status-dot ok">5/100</span></td><td></td></tr><tr><td>DigiTimes</td><td>DigiTimes</td><td><span class="lang-zh">Google News 来源</span><span class="lang-en">Google News source</span><span class="lang-ja">Google News source</span></td><td><span class="lang-zh">日韩台供应链媒体</span><span class="lang-en">Japan/Taiwan/Korea supply-chain</span><span class="lang-ja">日韓台サプライチェーン</span></td><td>Taiwan</td><td><span class="lang-zh">标题链接</span><span class="lang-en">Headline/link only</span><span class="lang-ja">見出し/リンクのみ</span></td><td><span class="status-dot ok">8/100</span></td><td></td></tr><tr><td>Taipei Times</td><td>Taipei Times</td><td><span class="lang-zh">RSS</span><span class="lang-en">RSS</span><span class="lang-ja">RSS</span></td><td><span class="lang-zh">日韩台供应链媒体</span><span class="lang-en">Japan/Taiwan/Korea supply-chain</span><span class="lang-ja">日韓台サプライチェーン</span></td><td>Taiwan</td><td><span class="lang-zh">RSS 摘要</span><span class="lang-en">RSS excerpt</span><span class="lang-ja">RSS 抜粋</span></td><td><span class="status-dot ok">50/50</span></td><td></td></tr><tr><td>Focus Taiwan / CNA</td><td>Focus Taiwan / CNA</td><td><span class="lang-zh">Google News 来源</span><span class="lang-en">Google News source</span><span class="lang-ja">Google News source</span></td><td><span class="lang-zh">日韩台供应链媒体</span><span class="lang-en">Japan/Taiwan/Korea supply-chain</span><span class="lang-ja">日韓台サプライチェーン</span></td><td>Taiwan</td><td><span class="lang-zh">标题链接</span><span class="lang-en">Headline/link only</span><span class="lang-ja">見出し/リンクのみ</span></td><td><span class="status-dot ok">4/100</span></td><td></td></tr><tr><td>Taiwan News</td><td>Taiwan News</td><td><span class="lang-zh">Google News 来源</span><span class="lang-en">Google News source</span><span class="lang-ja">Google News source</span></td><td><span class="lang-zh">日韩台供应链媒体</span><span class="lang-en">Japan/Taiwan/Korea supply-chain</span><span class="lang-ja">日韓台サプライチェーン</span></td><td>Taiwan</td><td><span class="lang-zh">标题链接</span><span class="lang-en">Headline/link only</span><span class="lang-ja">見出し/リンクのみ</span></td><td><span class="status-dot ok">9/100</span></td><td></td></tr><tr><td>Maeil Business</td><td>Maeil Business English</td><td><span class="lang-zh">RSS</span><span class="lang-en">RSS</span><span class="lang-ja">RSS</span></td><td><span class="lang-zh">日韩台供应链媒体</span><span class="lang-en">Japan/Taiwan/Korea supply-chain</span><span class="lang-ja">日韓台サプライチェーン</span></td><td>Korea</td><td><span class="lang-zh">RSS 摘要</span><span class="lang-en">RSS excerpt</span><span class="lang-ja">RSS 抜粋</span></td><td><span class="status-dot ok">4/50</span></td><td></td></tr><tr><td>The Korea Herald</td><td>The Korea Herald</td><td><span class="lang-zh">Google News 来源</span><span class="lang-en">Google News source</span><span class="lang-ja">Google News source</span></td><td><span class="lang-zh">日韩台供应链媒体</span><span class="lang-en">Japan/Taiwan/Korea supply-chain</span><span class="lang-ja">日韓台サプライチェーン</span></td><td>Korea</td><td><span class="lang-zh">标题链接</span><span class="lang-en">Headline/link only</span><span class="lang-ja">見出し/リンクのみ</span></td><td><span class="status-dot ok">0/100</span></td><td></td></tr><tr><td>Korea JoongAng Daily</td><td>Korea JoongAng Daily</td><td><span class="lang-zh">Google News 来源</span><span class="lang-en">Google News source</span><span class="lang-ja">Google News source</span></td><td><span class="lang-zh">日韩台供应链媒体</span><span class="lang-en">Japan/Taiwan/Korea supply-chain</span><span class="lang-ja">日韓台サプライチェーン</span></td><td>Korea</td><td><span class="lang-zh">标题链接</span><span class="lang-en">Headline/link only</span><span class="lang-ja">見出し/リンクのみ</span></td><td><span class="status-dot ok">4/100</span></td><td></td></tr><tr><td>KED Global</td><td>KED Global</td><td><span class="lang-zh">Google News 来源</span><span class="lang-en">Google News source</span><span class="lang-ja">Google News source</span></td><td><span class="lang-zh">日韩台供应链媒体</span><span class="lang-en">Japan/Taiwan/Korea supply-chain</span><span class="lang-ja">日韓台サプライチェーン</span></td><td>Korea</td><td><span class="lang-zh">标题链接</span><span class="lang-en">Headline/link only</span><span class="lang-ja">見出し/リンクのみ</span></td><td><span class="status-dot ok">3/100</span></td><td></td></tr><tr><td>BusinessKorea</td><td>BusinessKorea</td><td><span class="lang-zh">Google News 来源</span><span class="lang-en">Google News source</span><span class="lang-ja">Google News source</span></td><td><span class="lang-zh">日韩台供应链媒体</span><span class="lang-en">Japan/Taiwan/Korea supply-chain</span><span class="lang-ja">日韓台サプライチェーン</span></td><td>Korea</td><td><span class="lang-zh">标题链接</span><span class="lang-en">Headline/link only</span><span class="lang-ja">見出し/リンクのみ</span></td><td><span class="status-dot ok">2/100</span></td><td></td></tr><tr><td>TrendForce</td><td>TrendForce News</td><td><span class="lang-zh">新闻 RSS</span><span class="lang-en">News RSS</span><span class="lang-ja">News RSS</span></td><td><span class="lang-zh">产业研究机构</span><span class="lang-en">Industry research</span><span class="lang-ja">産業リサーチ</span></td><td>Taiwan</td><td><span class="lang-zh">RSS 摘要</span><span class="lang-en">RSS excerpt</span><span class="lang-ja">RSS 抜粋</span></td><td><span class="status-dot ok">0/20</span></td><td></td></tr><tr><td>TechNews Taiwan</td><td>TechNews Taiwan</td><td><span class="lang-zh">新闻 RSS</span><span class="lang-en">News RSS</span><span class="lang-ja">News RSS</span></td><td><span class="lang-zh">日韩台供应链媒体</span><span class="lang-en">Japan/Taiwan/Korea supply-chain</span><span class="lang-ja">日韓台サプライチェーン</span></td><td>Taiwan</td><td><span class="lang-zh">RSS 摘要</span><span class="lang-en">RSS excerpt</span><span class="lang-ja">RSS 抜粋</span></td><td><span class="status-dot ok">22/100</span></td><td>primary url_error: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1032)</td></tr><tr><td>The Elec</td><td>The Elec</td><td><span class="lang-zh">新闻 RSS</span><span class="lang-en">News RSS</span><span class="lang-ja">News RSS</span></td><td><span class="lang-zh">日韩台供应链媒体</span><span class="lang-en">Japan/Taiwan/Korea supply-chain</span><span class="lang-ja">日韓台サプライチェーン</span></td><td>Korea</td><td><span class="lang-zh">RSS 摘要</span><span class="lang-en">RSS excerpt</span><span class="lang-ja">RSS 抜粋</span></td><td><span class="status-dot ok">0/50</span></td><td></td></tr><tr><td>EE Times Japan</td><td>EE Times Japan</td><td><span class="lang-zh">新闻 RSS</span><span class="lang-en">News RSS</span><span class="lang-ja">News RSS</span></td><td><span class="lang-zh">日韩台供应链媒体</span><span class="lang-en">Japan/Taiwan/Korea supply-chain</span><span class="lang-ja">日韓台サプライチェーン</span></td><td>Japan</td><td><span class="lang-zh">RSS 摘要</span><span class="lang-en">RSS excerpt</span><span class="lang-ja">RSS 抜粋</span></td><td><span class="status-dot ok">1/20</span></td><td></td></tr><tr><td>Arm</td><td>Arm Newsroom</td><td><span class="lang-zh">新闻室 RSS</span><span class="lang-en">Newsroom RSS</span><span class="lang-ja">Newsroom RSS</span></td><td><span class="lang-zh">公司官方</span><span class="lang-en">Company official</span><span class="lang-ja">企業公式</span></td><td>Europe</td><td><span class="lang-zh">RSS 摘要</span><span class="lang-en">RSS excerpt</span><span class="lang-ja">RSS 抜粋</span></td><td><span class="status-dot ok">0/6</span></td><td></td></tr><tr><td>SK Hynix</td><td>SK hynix Newsroom</td><td><span class="lang-zh">新闻室 RSS</span><span class="lang-en">Newsroom RSS</span><span class="lang-ja">Newsroom RSS</span></td><td><span class="lang-zh">公司官方</span><span class="lang-en">Company official</span><span class="lang-ja">企業公式</span></td><td>Korea</td><td><span class="lang-zh">RSS 摘要</span><span class="lang-en">RSS excerpt</span><span class="lang-ja">RSS 抜粋</span></td><td><span class="status-dot ok">0/9</span></td><td></td></tr><tr><td>AI HOT</td><td>AI HOT Public Items</td><td><span class="lang-zh">聚合器 API</span><span class="lang-en">Aggregator API</span><span class="lang-ja">Aggregator API</span></td><td><span class="lang-zh">AI 聚合发现源</span><span class="lang-en">AI aggregator discovery</span><span class="lang-ja">AI 集約発見ソース</span></td><td>Global public web</td><td><span class="lang-zh">聚合器链接</span><span class="lang-en">Aggregator link only</span><span class="lang-ja">集約リンク</span></td><td><span class="status-dot ok">12/12</span></td><td></td></tr><tr><td>agy + Gemini Google Search Discovery</td><td>agy + Gemini Google Search Discovery</td><td><span class="lang-zh">Grounding 搜索</span><span class="lang-en">Grounding search</span><span class="lang-ja">Grounding search</span></td><td><span class="lang-zh">Gemini Grounding</span><span class="lang-en">Gemini Grounding</span><span class="lang-ja">Gemini Grounding</span></td><td>Google Search</td><td><span class="lang-zh">Grounding 片段</span><span class="lang-en">Grounding snippets</span><span class="lang-ja">Grounding 抜粋</span></td><td><span class="status-dot fail">skipped</span></td><td>skipped_no_gemini_search_credentials</td></tr><tr><td>Serenity local tweet asset</td><td>Serenity local tweet asset</td><td><span class="lang-zh">本地 SQLite</span><span class="lang-en">Local SQLite</span><span class="lang-ja">ローカル SQLite</span></td><td><span class="lang-zh">产业 KOL 信号</span><span class="lang-en">Industry KOL signal</span><span class="lang-ja">産業 KOL シグナル</span></td><td>X/KOL</td><td><span class="lang-zh">本地 SQLite</span><span class="lang-en">Local SQLite</span><span class="lang-ja">ローカル SQLite</span></td><td><span class="status-dot ok">4/4</span></td><td></td></tr><tr><td>X / KOL local exports</td><td>X / KOL local exports</td><td><span class="lang-zh">本地导出</span><span class="lang-en">Local export</span><span class="lang-ja">ローカルエクスポート</span></td><td><span class="lang-zh">产业 KOL 信号</span><span class="lang-en">Industry KOL signal</span><span class="lang-ja">産業 KOL シグナル</span></td><td>X/KOL</td><td><span class="lang-zh">本地导出</span><span class="lang-en">Local export</span><span class="lang-ja">ローカルエクスポート</span></td><td><span class="status-dot ok">0/0</span></td><td></td></tr></tbody></table></div></details>
-    
+
     <section class="archive-nav" aria-label="AIpha Radar history archive">
       <div class="archive-head">
         <div>
@@ -1770,9 +1766,9 @@
         </div>
         <a class="archive-current" href="../../index.html"><span class="lang-zh">返回当前版</span><span class="lang-en">Back to current</span><span class="lang-ja">最新版に戻る</span></a>
       </div>
-      <div class="archive-list"><a class="archive-link" href="../../archive/2026-06-16/"><strong>2026-06-16</strong><span><span class="lang-zh">19 条</span><span class="lang-en">19 items</span><span class="lang-ja">19 件</span></span></a><a class="archive-link" href="../../archive/2026-06-15/"><strong>2026-06-15</strong><span><span class="lang-zh">28 条</span><span class="lang-en">28 items</span><span class="lang-ja">28 件</span></span></a><a class="archive-link" href="../../archive/2026-06-14/"><strong>2026-06-14</strong><span><span class="lang-zh">7 条</span><span class="lang-en">7 items</span><span class="lang-ja">7 件</span></span></a><a class="archive-link" href="../../archive/2026-06-13/"><strong>2026-06-13</strong><span><span class="lang-zh">15 条</span><span class="lang-en">15 items</span><span class="lang-ja">15 件</span></span></a><a class="archive-link" href="../../archive/2026-06-12/"><strong>2026-06-12</strong><span><span class="lang-zh">34 条</span><span class="lang-en">34 items</span><span class="lang-ja">34 件</span></span></a><a class="archive-link" href="../../archive/2026-06-11/"><strong>2026-06-11</strong><span><span class="lang-zh">40 条</span><span class="lang-en">40 items</span><span class="lang-ja">40 件</span></span></a><a class="archive-link" href="../../archive/2026-06-10/"><strong>2026-06-10</strong><span><span class="lang-zh">24 条</span><span class="lang-en">24 items</span><span class="lang-ja">24 件</span></span></a><a class="archive-link" href="../../archive/2026-06-09/"><strong>2026-06-09</strong><span><span class="lang-zh">52 条</span><span class="lang-en">52 items</span><span class="lang-ja">52 件</span></span></a></div>
+      <div class="archive-list"><a class="archive-link" href="../../archive/2026-06-16/"><strong>2026-06-16</strong><span><span class="lang-zh">0 条</span><span class="lang-en">0 items</span><span class="lang-ja">0 件</span></span></a><a class="archive-link" href="../../archive/2026-06-15/"><strong>2026-06-15</strong><span><span class="lang-zh">28 条</span><span class="lang-en">28 items</span><span class="lang-ja">28 件</span></span></a><a class="archive-link" href="../../archive/2026-06-14/"><strong>2026-06-14</strong><span><span class="lang-zh">7 条</span><span class="lang-en">7 items</span><span class="lang-ja">7 件</span></span></a><a class="archive-link" href="../../archive/2026-06-13/"><strong>2026-06-13</strong><span><span class="lang-zh">15 条</span><span class="lang-en">15 items</span><span class="lang-ja">15 件</span></span></a><a class="archive-link" href="../../archive/2026-06-12/"><strong>2026-06-12</strong><span><span class="lang-zh">34 条</span><span class="lang-en">34 items</span><span class="lang-ja">34 件</span></span></a><a class="archive-link" href="../../archive/2026-06-11/"><strong>2026-06-11</strong><span><span class="lang-zh">40 条</span><span class="lang-en">40 items</span><span class="lang-ja">40 件</span></span></a><a class="archive-link" href="../../archive/2026-06-10/"><strong>2026-06-10</strong><span><span class="lang-zh">24 条</span><span class="lang-en">24 items</span><span class="lang-ja">24 件</span></span></a><a class="archive-link" href="../../archive/2026-06-09/"><strong>2026-06-09</strong><span><span class="lang-zh">52 条</span><span class="lang-en">52 items</span><span class="lang-ja">52 件</span></span></a></div>
     </section>
-    
+
     <footer>
       <p><span class="lang-zh">公开版只展示通过严格投研筛选的海外 AI 产业链硬事件、来源、发布时间、海外公司、叶子链标签、事件类型和来源访问边界；新闻标题和摘要片段保留来源原文，界面三语切换只影响 UI 标签；不构成投资建议。</span><span class="lang-en">The public version shows overseas AI supply-chain hard events that passed the strict research-fit gate, source metadata, publication time, overseas companies, leaf-chain tags, event type and access boundary only. News titles and excerpts remain in the source language; the trilingual switch affects UI labels only. It is not investment advice.</span><span class="lang-ja">公開版は、厳格なリサーチ適合ゲートを通過した海外 AI サプライチェーンのハードイベント、ソース、公開時刻、海外企業、リーフチェーンタグ、イベント種別、アクセス境界のみを表示します。ニュース見出しと抜粋はソース原文のまま保持し、三言語切替は UI ラベルのみに作用します。投資助言ではありません。</span></p>
       <p><span class="lang-zh">Bloomberg、WSJ、Nikkei、FT、The Information 等付费/半付费来源只收集公开标题、链接、发布时间和来源，不抓取付费正文。</span><span class="lang-en">Paywalled or semi-paywalled sources such as Bloomberg, WSJ, Nikkei, FT and The Information are handled as headline/link-only sources. Paid article bodies are not fetched.</span><span class="lang-ja">Bloomberg、WSJ、Nikkei、FT、The Information など有料・半有料ソースは、公開見出し、リンク、公開時刻、ソースのみを収集し、有料本文は取得しません。</span></p>
