@@ -241,7 +241,6 @@ h1 { margin: 6px 0 12px; font-size: clamp(36px, 4vw, 54px); line-height: 1.06; l
 .brief-titlebar p { margin: 0; color: var(--muted); max-width: 760px; }
 .brief-titlebar small { color: var(--muted); font-size: 14px; }
 .brief-eyebrow { display: inline-flex; color: var(--blue); font-size: 11px; font-weight: 900; letter-spacing: 0.12em; text-transform: uppercase; }
-.brief-window-link { flex: 0 0 auto; text-decoration: none; color: #f8fafc; background: var(--dark); border: 1px solid rgba(17,27,36,0.7); padding: 8px 10px; font-size: 12px; font-weight: 900; }
 .brief-body { padding: 18px 20px 20px; }
 .brief-card h3 { margin: 0 0 8px; font-size: 22px; }
 .brief-card .headline { font-size: 17px; font-weight: 900; margin: 14px 0 2px; color: var(--blue); letter-spacing: 0.02em; }
@@ -355,11 +354,6 @@ html[data-lang="en"] .tweet-translation { display: none; }
 .brief-evidence-list b { color: var(--ink); font-size: 12px; }
 .brief-evidence-list em { font-style: normal; color: var(--blue); font-size: 12px; }
 .brief-evidence-list small { color: var(--muted); font-size: 12px; line-height: 1.5; }
-.history-list { display: grid; gap: 10px; }
-.history-item { display: grid; grid-template-columns: 110px minmax(0, 1fr) 150px; gap: 14px; align-items: start; padding: 13px; background: #fff; border: 1px solid var(--line); }
-.history-item strong { font-size: 24px; line-height: 1; }
-.history-item h4 { margin: 0 0 6px; font-size: 16px; }
-.history-item p { margin: 0; color: var(--muted); }
 .tag-row, .digest-tags { display: flex; gap: 6px; flex-wrap: wrap; }
 .tag, .digest-tag { display: inline-flex; gap: 6px; align-items: center; padding: 4px 8px; border: 1px solid var(--line); background: #fff; font-size: 12px; color: var(--muted); }
 .tag b, .digest-tag b { color: var(--ink); }
@@ -451,7 +445,6 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
   .tweet-action-row { max-width: none; font-size: 12px; }
   .brief-item-left { border-right: 0; }
   .brief-evidence-list span { grid-template-columns: 1fr; gap: 2px; }
-  .history-item { grid-template-columns: 1fr; }
   .subchain-grid, .evidence-grid { grid-template-columns: 1fr; }
   table { min-width: 680px; }
 }
@@ -490,7 +483,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
       <div class="hero-grid">
         <div class="hero-main">
           <h1><span class="lang lang-block lang-zh">X-KOL 近 3 日推文账本</span><span class="lang lang-block lang-en">X-KOL 3-day Tweet Ledger</span></h1>
-          <p class="lead"><span class="lang lang-block lang-zh">总览页按 KOL 分组展示当前 3 日窗口和最近 5 个连续窗口，Serenity 资产研究与 jukan05 新闻流分开阅读。</span><span class="lang lang-block lang-en">The overview groups the current 3-day window and five rolling windows by KOL, keeping Serenity asset research separate from the jukan05 news flow.</span></p>
+          <p class="lead"><span class="lang lang-block lang-zh">总览页按 KOL 分组展示当前 3 日推文流，Serenity 资产研究与 jukan05 新闻流分开阅读。</span><span class="lang lang-block lang-en">The overview groups the current 3-day tweet stream by KOL, keeping Serenity asset research separate from the jukan05 news flow.</span></p>
           <div class="window-status">
             <article>
               <div>
@@ -509,7 +502,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
             </article>
             </div>
         </div>
-        <div class="stat-grid"><article class="stat"><span><span class="lang lang-zh">KOL 数量</span><span class="lang lang-en">KOLs</span></span><b>2</b><small><span class="lang lang-zh">固定 registry</span><span class="lang lang-en">Fixed registry</span></small></article><article class="stat"><span><span class="lang lang-zh">Serenity 推文</span><span class="lang lang-en">Serenity Tweets</span></span><b>5,959</b><small><span class="lang lang-zh">@aleabitoreddit</span><span class="lang lang-en">@aleabitoreddit</span></small></article><article class="stat"><span><span class="lang lang-zh">jukan05 推文</span><span class="lang lang-en">jukan05 Tweets</span></span><b>249</b><small><span class="lang lang-zh">独立 X KOL 库</span><span class="lang lang-en">Separate X KOL DB</span></small></article><article class="stat"><span><span class="lang lang-zh">简报窗口</span><span class="lang lang-en">Brief Windows</span></span><b>5 x 3D</b><small><span class="lang lang-zh">滚动连续窗口</span><span class="lang lang-en">Rolling consecutive windows</span></small></article></div>
+        <div class="stat-grid"><article class="stat"><span><span class="lang lang-zh">KOL 数量</span><span class="lang lang-en">KOLs</span></span><b>2</b><small><span class="lang lang-zh">固定 registry</span><span class="lang lang-en">Fixed registry</span></small></article><article class="stat"><span><span class="lang lang-zh">Serenity 推文</span><span class="lang lang-en">Serenity Tweets</span></span><b>5,959</b><small><span class="lang lang-zh">@aleabitoreddit</span><span class="lang lang-en">@aleabitoreddit</span></small></article><article class="stat"><span><span class="lang lang-zh">jukan05 推文</span><span class="lang lang-en">jukan05 Tweets</span></span><b>249</b><small><span class="lang lang-zh">独立 X KOL 库</span><span class="lang lang-en">Separate X KOL DB</span></small></article><article class="stat"><span><span class="lang lang-zh">当前账本</span><span class="lang lang-en">Current Ledger</span></span><b>3D</b><small><span class="lang lang-zh">逐条推文流</span><span class="lang lang-en">Per-tweet stream</span></small></article></div>
       </div>
     </section>
 
@@ -528,7 +521,6 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
           <h3>Serenity <small>@aleabitoreddit</small></h3>
           <p><span class="lang lang-block lang-zh">供应链 thesis lens：七链矩阵、A股叶子链映射和历史证据资产。</span><span class="lang lang-block lang-en">Supply-chain thesis lens: seven-chain matrix, A-share leaf-lane mapping and evidence asset.</span></p>
         </div>
-        <a class="brief-window-link" href="#history-aleabitoreddit"><span class="lang lang-zh">查看 5 个窗口</span><span class="lang lang-en">View 5 windows</span></a>
       </header>
       <div class="brief-body">
 
@@ -1097,7 +1089,6 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
           <h3>jukan05 <small>@jukan05</small></h3>
           <p><span class="lang lang-block lang-zh">韩国/亚洲供应链新闻流：事件密度、原始情报和事实催化补充。</span><span class="lang lang-block lang-en">Korea/Asia supply-chain news flow: event density, raw intel and catalyst-like facts.</span></p>
         </div>
-        <a class="brief-window-link" href="#history-jukan05"><span class="lang lang-zh">查看 5 个窗口</span><span class="lang lang-en">View 5 windows</span></a>
       </header>
       <div class="brief-body">
 
@@ -2049,133 +2040,13 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
     </div>
     </section>
 
-    <section class="section-band page" id="history-aleabitoreddit">
-      <div class="section-head">
-        <div>
-          <h2><span class="lang lang-zh">Serenity 最近 5 个 3 日窗口</span><span class="lang lang-en">Serenity Last Five 3-day Windows</span></h2>
-          <p><span class="lang lang-block lang-zh">每次生成时以该 KOL 最新推文为右端，向前切连续窗口；不额外写数据库快照。</span><span class="lang lang-block lang-en">Each generation starts from that KOL&#x27;s newest tweet and rolls backward; no extra database snapshots are written.</span></p>
-        </div>
-      </div>
-      <div class="history-list">
-            <article class="history-item">
-              <strong>W1</strong>
-              <div>
-                <h4><span class="lang lang-zh">AI 半导体供应链 / HBM / 存储 / CPO / 光通信</span><span class="lang lang-en">AI Semi Supply Chain / HBM / Memory Bandwidth / CPO / Optical Interconnect</span></h4>
-                <p>2026-06-19 -> 2026-06-22｜<span class="lang lang-zh">窗口推文</span><span class="lang lang-en">tweets</span> 15</p>
-                <p><span class="lang lang-zh">高频</span><span class="lang lang-en">Top</span>: SIVE, LPK, AEHR, GFS, JBL, MRVL, AAOI, LITE</p>
-              </div>
-              <p><span class="lang lang-zh">升温</span><span class="lang lang-en">Rising</span>: SIVE +3, LPK +3, GFS +3, JBL +3, RDDT +3, AEHR +2</p>
-            </article>
-
-            <article class="history-item">
-              <strong>W2</strong>
-              <div>
-                <h4><span class="lang lang-zh">AI 半导体供应链 / CPO / 光通信 / Neocloud 融资质量</span><span class="lang lang-en">AI Semi Supply Chain / CPO / Optical Interconnect / Neocloud Financing Quality</span></h4>
-                <p>2026-06-16 -> 2026-06-19｜<span class="lang lang-zh">窗口推文</span><span class="lang lang-en">tweets</span> 23</p>
-                <p><span class="lang lang-zh">高频</span><span class="lang lang-en">Top</span>: INTC, AAOI, AMD, NVDA, SPCX, SIVE, MSFT, META</p>
-              </div>
-              <p><span class="lang lang-zh">升温</span><span class="lang lang-en">Rising</span>: INTC +3, AMD +2, META +2, MSFT +2, AVGO +2, CRWV +2</p>
-            </article>
-
-            <article class="history-item">
-              <strong>W3</strong>
-              <div>
-                <h4><span class="lang lang-zh">CPO / 光通信 / AI 半导体供应链 / InP / 化合物半导体</span><span class="lang lang-en">CPO / Optical Interconnect / AI Semi Supply Chain / InP / Compound Semis</span></h4>
-                <p>2026-06-13 -> 2026-06-16｜<span class="lang lang-zh">窗口推文</span><span class="lang lang-en">tweets</span> 21</p>
-                <p><span class="lang lang-zh">高频</span><span class="lang lang-en">Top</span>: SIVE, AXTI, NVDA, LITE, AAOI, SPCX, IQE, MU</p>
-              </div>
-              <p><span class="lang lang-zh">升温</span><span class="lang lang-en">Rising</span>: SIVE +3, AXTI +3, LITE +2, GOOGL +2, AMD +2, EWY +2</p>
-            </article>
-
-            <article class="history-item">
-              <strong>W4</strong>
-              <div>
-                <h4><span class="lang lang-zh">HBM / 存储 / AI 半导体供应链 / CPO / 光通信</span><span class="lang lang-en">HBM / Memory Bandwidth / AI Semi Supply Chain / CPO / Optical Interconnect</span></h4>
-                <p>2026-06-10 -> 2026-06-13｜<span class="lang lang-zh">窗口推文</span><span class="lang lang-en">tweets</span> 24</p>
-                <p><span class="lang lang-zh">高频</span><span class="lang lang-en">Top</span>: SIVE, AAOI, NVDA, TSM, SPCX, LITE, RKLB, AXTI</p>
-              </div>
-              <p><span class="lang lang-zh">升温</span><span class="lang lang-en">Rising</span>: SPCX +4, RKLB +3, SNDK +3, TSM +2, AXTI +2, SOI +2</p>
-            </article>
-
-            <article class="history-item">
-              <strong>W5</strong>
-              <div>
-                <h4><span class="lang lang-zh">CPO / 光通信 / AI 半导体供应链 / HBM / 存储</span><span class="lang lang-en">CPO / Optical Interconnect / AI Semi Supply Chain / HBM / Memory Bandwidth</span></h4>
-                <p>2026-06-07 -> 2026-06-10｜<span class="lang lang-zh">窗口推文</span><span class="lang lang-en">tweets</span> 32</p>
-                <p><span class="lang lang-zh">高频</span><span class="lang lang-en">Top</span>: NVDA, SIVE, LITE, AAOI, EWY, MRVL, MU, GOOGL</p>
-              </div>
-              <p><span class="lang lang-zh">升温</span><span class="lang lang-en">Rising</span>: EWY +4, LITE +3, AEHR +3, IREN +3, NBIS +3, VICR +3</p>
-            </article>
-            </div>
-    </section>
-
-    <section class="section-band page" id="history-jukan05">
-      <div class="section-head">
-        <div>
-          <h2><span class="lang lang-zh">jukan05 最近 5 个 3 日窗口</span><span class="lang lang-en">jukan05 Last Five 3-day Windows</span></h2>
-          <p><span class="lang lang-block lang-zh">每次生成时以该 KOL 最新推文为右端，向前切连续窗口；不额外写数据库快照。</span><span class="lang lang-block lang-en">Each generation starts from that KOL&#x27;s newest tweet and rolls backward; no extra database snapshots are written.</span></p>
-        </div>
-      </div>
-      <div class="history-list">
-            <article class="history-item">
-              <strong>W1</strong>
-              <div>
-                <h4><span class="lang lang-zh">HBM / 存储 / AI 半导体供应链 / Neocloud 融资质量</span><span class="lang lang-en">HBM / Memory Bandwidth / AI Semi Supply Chain / Neocloud Financing Quality</span></h4>
-                <p>2026-06-19 -> 2026-06-22｜<span class="lang lang-zh">窗口推文</span><span class="lang lang-en">tweets</span> 29</p>
-                <p><span class="lang lang-zh">高频</span><span class="lang lang-en">Top</span>: MU</p>
-              </div>
-              <p><span class="lang lang-zh">升温</span><span class="lang lang-en">Rising</span>: MU +1</p>
-            </article>
-
-            <article class="history-item">
-              <strong>W2</strong>
-              <div>
-                <h4><span class="lang lang-zh">HBM / 存储 / AI 半导体供应链 / Neocloud 融资质量</span><span class="lang lang-en">HBM / Memory Bandwidth / AI Semi Supply Chain / Neocloud Financing Quality</span></h4>
-                <p>2026-06-16 -> 2026-06-19｜<span class="lang lang-zh">窗口推文</span><span class="lang lang-en">tweets</span> 49</p>
-                <p><span class="lang lang-zh">高频</span><span class="lang lang-en">Top</span>: INTC, AAPL, GOOG, AVGO</p>
-              </div>
-              <p><span class="lang lang-zh">升温</span><span class="lang lang-en">Rising</span>: INTC +2, AAPL +1, AVGO +1, GOOG +1</p>
-            </article>
-
-            <article class="history-item">
-              <strong>W3</strong>
-              <div>
-                <h4><span class="lang lang-zh">HBM / 存储 / AI 半导体供应链 / InP / 化合物半导体</span><span class="lang lang-en">HBM / Memory Bandwidth / AI Semi Supply Chain / InP / Compound Semis</span></h4>
-                <p>2026-06-13 -> 2026-06-16｜<span class="lang lang-zh">窗口推文</span><span class="lang lang-en">tweets</span> 41</p>
-                <p><span class="lang lang-zh">高频</span><span class="lang lang-en">Top</span>: TSM</p>
-              </div>
-              <p><span class="lang lang-zh">升温</span><span class="lang lang-en">Rising</span>: TSM +1</p>
-            </article>
-
-            <article class="history-item">
-              <strong>W4</strong>
-              <div>
-                <h4><span class="lang lang-zh">AI 半导体供应链 / HBM / 存储 / Neocloud 融资质量</span><span class="lang lang-en">AI Semi Supply Chain / HBM / Memory Bandwidth / Neocloud Financing Quality</span></h4>
-                <p>2026-06-10 -> 2026-06-13｜<span class="lang lang-zh">窗口推文</span><span class="lang lang-en">tweets</span> 44</p>
-                <p><span class="lang lang-zh">高频</span><span class="lang lang-en">Top</span>: SIVE</p>
-              </div>
-              <p><span class="lang lang-zh">升温</span><span class="lang lang-en">Rising</span>: SIVE +2</p>
-            </article>
-
-            <article class="history-item">
-              <strong>W5</strong>
-              <div>
-                <h4><span class="lang lang-zh">AI 半导体供应链 / HBM / 存储 / CPO / 光通信</span><span class="lang lang-en">AI Semi Supply Chain / HBM / Memory Bandwidth / CPO / Optical Interconnect</span></h4>
-                <p>2026-06-07 -> 2026-06-10｜<span class="lang lang-zh">窗口推文</span><span class="lang lang-en">tweets</span> 47</p>
-                <p><span class="lang lang-zh">高频</span><span class="lang lang-en">Top</span>: INTC, LITE, TSEM, TSM, NVDA</p>
-              </div>
-              <p><span class="lang lang-zh">升温</span><span class="lang lang-en">Rising</span>: INTC +3, LITE +1, NVDA +1, TSEM +1, TSM +1</p>
-            </article>
-            </div>
-    </section>
-
     <section class="boundary-strip page" id="boundary">
       <h2><span class="lang lang-zh">公开边界</span><span class="lang lang-en">Public Boundary</span></h2>
       <p><span class="lang lang-block lang-zh">本页面只展示本地 X KOL 推文资产的研究归桶、证据摘录和可复核链接；不输出投资建议、评级、价格判断或交易动作。</span><span class="lang lang-block lang-en">This page shows only research buckets, evidence excerpts and traceable links from local X KOL tweet assets. It does not provide investment advice, ratings, price calls or trading actions.</span></p>
     </section>
     </main>
   <footer class="page">
-    AIpha X-KOL V1.0｜<span class="lang lang-zh">生成时间</span><span class="lang lang-en">Generated</span> 2026-06-23T19:12:12+08:00｜source_commit e216c73fe4dd
+    AIpha X-KOL V1.0｜<span class="lang lang-zh">生成时间</span><span class="lang lang-en">Generated</span> 2026-06-23T20:05:01+08:00｜source_commit e216c73fe4dd
   </footer>
 </body>
 </html>
