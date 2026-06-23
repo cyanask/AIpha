@@ -4,7 +4,7 @@ Unified GitHub Pages entry for AIpha public static HTML artifacts.
 
 - Home: https://cyanask.github.io/AIpha/
 - AIpha Radar: https://cyanask.github.io/AIpha/radar/
-- AIpha X-KOL: https://cyanask.github.io/AIpha/serenity/
+- AIpha Serenity: https://cyanask.github.io/AIpha/serenity/
 - AIpha Close: https://cyanask.github.io/AIpha/close/
 - AIpha Chains: https://cyanask.github.io/AIpha/chains/
 
