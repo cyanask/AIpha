@@ -159,10 +159,10 @@ a { color: inherit; }
 }
 html[data-lang="zh"] .lang-toggle button[data-lang-button="zh"],
 html[data-lang="en"] .lang-toggle button[data-lang-button="en"] { color: #111827; background: #f8fafc; }
-.page { width: min(1440px, calc(100% - 36px)); margin: 0 auto; }
+.page { width: min(1360px, calc(100% - 36px)); margin: 0 auto; }
 .hero {
   margin: 20px auto 18px;
-  padding: clamp(24px, 3.4vw, 42px);
+  padding: clamp(26px, 3.2vw, 40px);
   background:
     linear-gradient(90deg, rgba(255,255,255,0.98), rgba(255,255,255,0.9)),
     linear-gradient(135deg, rgba(31,83,102,0.16), rgba(198,154,74,0.08));
@@ -170,7 +170,13 @@ html[data-lang="en"] .lang-toggle button[data-lang-button="en"] { color: #111827
   border-top: 5px solid var(--blue);
   box-shadow: var(--shadow);
 }
-.hero-grid { display: grid; grid-template-columns: 1fr; gap: 22px; align-items: stretch; }
+.hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(360px, 0.52fr);
+  gap: clamp(26px, 4vw, 56px);
+  align-items: center;
+}
+.hero-main { min-width: 0; }
 .kicker {
   display: inline-flex;
   align-items: center;
@@ -186,8 +192,8 @@ html[data-lang="en"] .lang-toggle button[data-lang-button="en"] { color: #111827
   letter-spacing: 0.04em;
   line-height: 1.25;
 }
-h1 { margin: 14px 0 12px; font-size: clamp(36px, 4vw, 54px); line-height: 1.06; letter-spacing: 0; max-width: 940px; }
-.lead { max-width: 900px; margin: 0; color: var(--muted); font-size: clamp(16px, 1.35vw, 20px); }
+h1 { margin: 6px 0 12px; font-size: clamp(36px, 4vw, 54px); line-height: 1.06; letter-spacing: 0; max-width: 920px; }
+.lead { max-width: 860px; margin: 0; color: var(--muted); font-size: clamp(16px, 1.28vw, 19px); }
 .meta-line { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 18px; color: var(--muted); }
 .meta-chip { display: inline-flex; align-items: center; padding: 5px 9px; border: 1px solid var(--line); background: rgba(255,255,255,0.78); font-size: 12px; max-width: 100%; overflow-wrap: anywhere; }
 .window-status { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; margin-top: 16px; max-width: 760px; }
@@ -195,10 +201,22 @@ h1 { margin: 14px 0 12px; font-size: clamp(36px, 4vw, 54px); line-height: 1.06; 
 .window-status strong { display: block; font-size: 14px; }
 .window-status span { color: var(--muted); font-size: 12px; overflow-wrap: anywhere; }
 .window-status b { font-size: 22px; line-height: 1; color: var(--blue); }
-.stat-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; width: min(760px, 100%); justify-content: start; }
-.stat { min-width: 0; height: 72px; background: var(--dark); color: #f8fafc; padding: 10px 12px; min-height: 0; border: 1px solid rgba(255,255,255,0.08); display: flex; flex-direction: column; justify-content: center; overflow: hidden; }
-.stat span, .stat small { display: block; color: #c7d1dc; font-size: 11px; line-height: 1.16; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.stat b { display: block; margin: 4px 0 3px; font-size: 31px; line-height: 0.98; white-space: nowrap; letter-spacing: -0.01em; }
+.stat-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; width: 100%; align-self: stretch; }
+.stat {
+  min-width: 0;
+  min-height: 118px;
+  background: var(--dark);
+  color: #f8fafc;
+  padding: 16px 18px;
+  border: 1px solid rgba(255,255,255,0.08);
+  border-top: 4px solid rgba(198,154,74,0.86);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.stat span, .stat small { display: block; color: #c7d1dc; font-size: 12px; line-height: 1.22; overflow-wrap: anywhere; }
+.stat b { display: block; margin: 7px 0 6px; font-size: clamp(28px, 2.4vw, 36px); line-height: 0.98; white-space: nowrap; letter-spacing: -0.01em; }
+.stat b.long-stat-value { font-size: clamp(24px, 2vw, 28px); letter-spacing: -0.02em; }
 .section-band {
   margin: 18px auto;
   padding: clamp(20px, 2.8vw, 34px);
@@ -339,7 +357,7 @@ h1 { margin: 14px 0 12px; font-size: clamp(36px, 4vw, 54px); line-height: 1.06; 
 .table-scroll { width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; }
 table { width: 100%; border-collapse: collapse; min-width: 760px; background: #fff; }
 th, td { padding: 12px; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; }
-th { background: #eae4d7; color: var(--muted); font-size: 13px; }
+th { background: #f0eadf; color: var(--muted); font-size: 13px; }
 td small, th small { display: block; color: var(--muted); margin-top: 3px; }
 .chain-matrix .priority { font-size: 28px; font-weight: 900; }
 .metric-bar { position: relative; height: 24px; min-width: 150px; background: #ece7db; }
@@ -408,10 +426,10 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
   .brief-titlebar { display: grid; }
   h1 { font-size: 34px; }
   .lead { font-size: 16px; }
-  .stat-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 6px; width: 100%; }
-  .stat { height: 64px; padding: 7px; }
-  .stat span, .stat small { font-size: 8px; }
-  .stat b { font-size: 22px; margin: 3px 0 2px; }
+  .stat-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; width: 100%; }
+  .stat { min-height: 82px; padding: 10px; }
+  .stat span, .stat small { font-size: 9.5px; }
+  .stat b { font-size: 24px; margin: 5px 0 4px; }
   .digest-ticker-columns { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .brief-numbered-list { grid-template-columns: 1fr; }
   .brief-conclusion { grid-template-columns: 1fr; gap: 8px; }
@@ -426,9 +444,9 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
 }
 @media (max-width: 430px) {
   .stat-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
-  .stat { height: 62px; padding: 8px; }
-  .stat span, .stat small { font-size: 8px; }
-  .stat b { font-size: 22px; }
+  .stat { min-height: 82px; padding: 10px; }
+  .stat span, .stat small { font-size: 9.5px; }
+  .stat b { font-size: 24px; }
   .window-status { grid-template-columns: 1fr; }
   .brief-titlebar, .brief-body { padding-left: 14px; padding-right: 14px; }
   .brief-numbered-item { grid-template-columns: 32px minmax(0, 1fr); padding: 12px; }
@@ -457,8 +475,8 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
   <main>
     <section class="hero page">
       <div class="hero-grid">
-        <div>
-          <h1><span class="lang lang-block lang-zh">X-KOL 简报：最近 3 天他们在讨论什么</span><span class="lang lang-block lang-en">X-KOL Brief: What They Discussed in the Last 3 Days</span></h1>
+        <div class="hero-main">
+          <h1><span class="lang lang-block lang-zh">X-KOL 近 3 日推文账本</span><span class="lang lang-block lang-en">X-KOL 3-day Tweet Ledger</span></h1>
           <p class="lead"><span class="lang lang-block lang-zh">总览页按 KOL 分组展示当前 3 日窗口和最近 5 个连续窗口，Serenity 资产研究与 jukan05 新闻流分开阅读。</span><span class="lang lang-block lang-en">The overview groups the current 3-day window and five rolling windows by KOL, keeping Serenity asset research separate from the jukan05 news flow.</span></p>
           <div class="window-status">
             <article>
@@ -2584,7 +2602,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
     </section>
     </main>
   <footer class="page">
-    AIpha X-KOL V1.0｜<span class="lang lang-zh">生成时间</span><span class="lang lang-en">Generated</span> 2026-06-23T11:43:01+08:00｜source_commit e216c73fe4dd
+    AIpha X-KOL V1.0｜<span class="lang lang-zh">生成时间</span><span class="lang lang-en">Generated</span> 2026-06-23T13:00:19+08:00｜source_commit e216c73fe4dd
   </footer>
 </body>
 </html>
