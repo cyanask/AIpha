@@ -234,8 +234,8 @@ h1 { margin: 6px 0 12px; font-size: clamp(36px, 4vw, 54px); line-height: 1.06; l
 .program-card h3 { margin: 0; font-size: 26px; }
 .program-card p { margin: 0; color: var(--muted); }
 .program-card .open { color: var(--blue); font-weight: 900; letter-spacing: 0.08em; font-size: 12px; }
-.brief-grid { display: grid; grid-template-columns: 1fr; gap: 18px; }
-.brief-card { background: #fff; border: 1px solid var(--line); border-left: 5px solid var(--teal); padding: 0; box-shadow: 0 8px 26px rgba(22,33,43,0.045); overflow: hidden; }
+.brief-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; align-items: start; }
+.brief-card { min-width: 0; background: #fff; border: 1px solid var(--line); border-left: 5px solid var(--teal); padding: 0; box-shadow: 0 8px 26px rgba(22,33,43,0.045); overflow: hidden; }
 .brief-titlebar { display: flex; justify-content: space-between; gap: 18px; align-items: start; padding: 18px 20px; background: linear-gradient(180deg, #ffffff, #f8faf9); color: var(--ink); border-bottom: 1px solid var(--line); }
 .brief-titlebar h3 { margin: 3px 0 5px; font-size: 24px; line-height: 1.15; }
 .brief-titlebar p { margin: 0; color: var(--muted); max-width: 760px; }
@@ -246,7 +246,7 @@ h1 { margin: 6px 0 12px; font-size: clamp(36px, 4vw, 54px); line-height: 1.06; l
 .brief-card h3 { margin: 0 0 8px; font-size: 22px; }
 .brief-card .headline { font-size: 17px; font-weight: 900; margin: 14px 0 2px; color: var(--blue); letter-spacing: 0.02em; }
 .brief-card ul { margin: 10px 0 0; padding-left: 20px; color: var(--muted); }
-.brief-desk { display: grid; gap: 16px; }
+.brief-desk { display: grid; gap: 12px; }
 .change-summary-grid { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 8px; }
 .change-summary { min-width: 0; padding: 11px 10px; background: var(--soft-2); border: 1px solid var(--line); border-top: 4px solid var(--blue); }
 .change-summary strong { display: block; font-size: 22px; line-height: 1; }
@@ -281,8 +281,8 @@ h1 { margin: 6px 0 12px; font-size: clamp(36px, 4vw, 54px); line-height: 1.06; l
 .change-event-evidence { padding: 9px 10px; background: var(--soft); border: 1px solid var(--line); }
 .change-event-evidence b { display: block; color: var(--blue); font-size: 12px; }
 .change-event-evidence small { display: block; color: var(--muted); line-height: 1.45; overflow-wrap: anywhere; }
-.tweet-ledger { display: grid; gap: 10px; }
-.tweet-ledger-row { display: grid; grid-template-columns: 120px minmax(0, 1fr); gap: 12px; padding: 14px; background: #fff; border: 1px solid var(--line); border-left: 5px solid var(--blue); }
+.tweet-ledger { display: grid; gap: 0; border-top: 1px solid var(--line); }
+.tweet-ledger-row { display: grid; grid-template-columns: minmax(0, 1fr); gap: 10px; padding: 14px 14px 12px; background: #fff; border-bottom: 1px solid var(--line); }
 .tweet-ledger-row[data-change-type="tech_route"] { border-left-color: #6d5bd0; }
 .tweet-ledger-row[data-change-type="tech_progress"] { border-left-color: #087f5b; }
 .tweet-ledger-row[data-change-type="shortage"] { border-left-color: #9b2c2c; }
@@ -291,17 +291,28 @@ h1 { margin: 6px 0 12px; font-size: clamp(36px, 4vw, 54px); line-height: 1.06; l
 .tweet-ledger-row[data-change-type="supply_release"] { border-left-color: #2b8a3e; }
 .tweet-ledger-row[data-change-type="risk"] { border-left-color: #596a75; }
 .tweet-ledger-row[data-change-type="noise"] { border-left-color: #9aa6af; }
-.tweet-ledger-meta { display: grid; gap: 7px; align-content: start; }
-.tweet-ledger-meta b { display: block; font-size: 16px; line-height: 1.1; }
-.tweet-ledger-meta small { color: var(--muted); overflow-wrap: anywhere; font-size: 11px; line-height: 1.35; }
 .tweet-ledger-body { min-width: 0; display: grid; gap: 9px; }
+.tweet-head { display: flex; align-items: baseline; justify-content: space-between; gap: 8px; min-width: 0; }
+.tweet-author-line { min-width: 0; display: flex; align-items: baseline; gap: 6px; flex-wrap: wrap; color: var(--muted); }
+.tweet-author-name { color: var(--ink); font-size: 15px; font-weight: 950; }
+.tweet-verified { display: inline-flex; align-items: center; justify-content: center; width: 15px; height: 15px; border-radius: 999px; color: #fff; background: #1d9bf0; font-size: 10px; font-weight: 950; line-height: 1; }
+.tweet-handle, .tweet-time { color: var(--muted); font-size: 13px; }
+.tweet-more { color: var(--muted); font-size: 18px; line-height: 1; letter-spacing: 1px; }
 .tweet-ledger-tags { display: flex; gap: 6px; flex-wrap: wrap; }
-.tweet-ledger-tags span { display: inline-flex; align-items: center; padding: 4px 7px; background: var(--soft); border: 1px solid var(--line); color: var(--muted); font-size: 12px; font-weight: 800; }
+.tweet-ledger-tags span { display: inline-flex; align-items: center; padding: 3px 7px; background: var(--soft); border: 1px solid var(--line); color: var(--muted); font-size: 11px; font-weight: 800; border-radius: 999px; }
 .tweet-ledger-tags .primary { color: #fff; background: var(--dark); border-color: var(--dark); }
-.tweet-translation { margin: 0; font-size: 15px; line-height: 1.55; color: var(--ink); font-weight: 750; }
-.tweet-original { margin: 0; color: var(--muted); overflow-wrap: anywhere; }
+.tweet-translation { margin: 0; font-size: 15px; line-height: 1.55; color: var(--ink); font-weight: 720; overflow-wrap: anywhere; }
+html[data-lang="en"] .tweet-translation { display: none; }
+.tweet-original { margin: 0; color: var(--muted); overflow-wrap: anywhere; font-size: 14px; line-height: 1.48; }
 .tweet-original b { color: var(--ink); font-size: 12px; margin-right: 6px; }
-.tweet-ledger-note { margin: 0; color: var(--muted); font-size: 12px; }
+.tweet-original-details { color: var(--muted); }
+.tweet-original-details summary { cursor: pointer; color: var(--blue); font-weight: 900; font-size: 12px; }
+.tweet-original-details p { margin: 6px 0 0; color: var(--muted); overflow-wrap: anywhere; }
+.tweet-action-row { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); align-items: center; max-width: 420px; padding-top: 2px; color: var(--muted); font-size: 13px; }
+.tweet-action { display: inline-flex; align-items: center; gap: 6px; min-width: 0; color: var(--muted); white-space: nowrap; }
+.tweet-action i { font-style: normal; font-size: 16px; line-height: 1; }
+.tweet-ledger-note { margin: 0; color: var(--muted); font-size: 11px; overflow-wrap: anywhere; }
+.tweet-ledger-note a { color: var(--blue); font-weight: 900; }
 .brief-conclusion { display: grid; grid-template-columns: 126px minmax(0,1fr); gap: 14px; align-items: start; padding: 16px; background: var(--soft-2); border: 1px solid var(--line); border-left: 5px solid var(--blue); }
 .brief-conclusion span { color: var(--blue); font-size: 12px; font-weight: 900; letter-spacing: 0.1em; text-transform: uppercase; }
 .brief-conclusion strong { display: block; margin-bottom: 4px; font-size: 19px; line-height: 1.28; }
@@ -409,15 +420,15 @@ td small, th small { display: block; color: var(--muted); margin-top: 3px; }
 .boundary-strip p { color: #cbd5e1; margin: 0; max-width: 980px; }
 footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
 @media (max-width: 860px) {
-  .top-nav { grid-template-columns: auto minmax(0, 1fr) auto; grid-template-rows: auto auto; padding: 5px 8px 6px; gap: 5px 8px; }
+  .top-nav { grid-template-columns: minmax(0, 1fr); grid-template-rows: auto auto auto; padding: 6px 8px 7px; gap: 5px 8px; overflow: hidden; }
   .top-nav-main { gap: 8px; }
-  .brand { grid-column: 1; grid-row: 1; }
-  .nav-version-badge { min-height: 22px; padding: 0 6px; font-size: 9.5px; letter-spacing: 0.02em; }
-  .nav-actions { grid-column: 3; grid-row: 1; justify-self: end; gap: 4px; }
+  .brand { grid-column: 1; grid-row: 1; justify-self: start; }
+  .nav-version-badge { min-height: 22px; max-width: 128px; padding: 0 6px; font-size: 9.5px; letter-spacing: 0.02em; overflow: hidden; }
+  .nav-actions { grid-column: 1; grid-row: 2; display: grid; grid-template-columns: minmax(0, 1fr) auto auto; align-items: center; justify-self: stretch; width: 100%; gap: 4px; min-width: 0; overflow: hidden; }
   .brand img { width: 80px; }
   .nav-links { display: none; }
-  .page-switcher { grid-column: 1 / -1; grid-row: 2; width: 100%; max-width: 100%; gap: 2px; justify-self: stretch; }
-  .page-switcher a { flex: 1 1 0; min-width: 0; min-height: 26px; padding: 0 6px; font-size: 10px; line-height: 1.15; white-space: nowrap; }
+  .page-switcher { grid-column: 1; grid-row: 3; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); width: 100%; max-width: 100%; min-width: 0; gap: 2px; justify-self: stretch; overflow: hidden; }
+  .page-switcher a { min-width: 0; min-height: 26px; padding: 0 4px; font-size: 9.5px; line-height: 1.15; white-space: nowrap; justify-content: center; overflow: hidden; text-overflow: ellipsis; }
   .nav-disclaimer { min-height: 24px; padding: 0 6px; font-size: 10px; }
   .lang-toggle button { min-width: 30px; min-height: 24px; padding: 0 5px; font-size: 10.5px; }
   .page { width: min(100% - 20px, 720px); }
@@ -426,16 +437,18 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
   .brief-titlebar { display: grid; }
   h1 { font-size: 34px; }
   .lead { font-size: 16px; }
-  .stat-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; width: 100%; }
+  .stat-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; width: 100%; }
   .stat { min-height: 82px; padding: 10px; }
   .stat span, .stat small { font-size: 9.5px; }
   .stat b { font-size: 24px; margin: 5px 0 4px; }
   .digest-ticker-columns { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .window-status { grid-template-columns: 1fr; }
   .brief-numbered-list { grid-template-columns: 1fr; }
   .brief-conclusion { grid-template-columns: 1fr; gap: 8px; }
   .brief-topic-grid, .brief-side-grid, .change-radar-grid, .change-summary-grid { grid-template-columns: 1fr; }
   .change-event-card dl { grid-template-columns: 1fr; }
-  .tweet-ledger-row { grid-template-columns: 1fr; }
+  .tweet-ledger-row { grid-template-columns: minmax(0, 1fr); padding: 12px; }
+  .tweet-action-row { max-width: none; font-size: 12px; }
   .brief-item-left { border-right: 0; }
   .brief-evidence-list span { grid-template-columns: 1fr; gap: 2px; }
   .history-item { grid-template-columns: 1fr; }
@@ -456,7 +469,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
 </style>
 </head>
 <body>
-  
+
     <header class="top-nav">
       <a class="brand" href="../index.html" aria-label="AIpha X-KOL">
         <img src="../assets/nero-mark.svg" alt="AIpha Research Desk" />
@@ -471,19 +484,19 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
         </span>
       </div>
     </header>
-    
+
   <main>
     <section class="hero page">
       <div class="hero-grid">
         <div class="hero-main">
           <h1><span class="lang lang-block lang-zh">jukan05 推文资产研究</span><span class="lang lang-block lang-en">jukan05 Tweet Asset Research</span></h1>
           <p class="lead"><span class="lang lang-block lang-zh">jukan05 页面按主题矩阵、主题深挖、证据样本和 ticker 资产表组织韩国/亚洲供应链新闻流；不并入 Serenity 七链评分，也不展示 A股映射结论。</span><span class="lang lang-block lang-en">The jukan05 page organizes the Korea/Asia supply-chain news flow by theme matrix, theme deep dives, evidence samples and ticker asset tables. It does not enter Serenity seven-chain scoring or show A-share mapping conclusions.</span></p>
-          
+
         </div>
         <div class="stat-grid"><article class="stat"><span><span class="lang lang-zh">本地推文</span><span class="lang lang-en">Local Tweets</span></span><b>249</b><small><span class="lang lang-zh">独立 X KOL 库</span><span class="lang lang-en">Separate X KOL DB</span></small></article><article class="stat"><span><span class="lang lang-zh">资产截止</span><span class="lang lang-en">Asset Cutoff</span></span><b class="long-stat-value">2026-06-22</b><small><span class="lang lang-zh">11:22</span><span class="lang lang-en">11:22</span></small></article><article class="stat"><span><span class="lang lang-zh">主题数</span><span class="lang lang-en">Themes</span></span><b>6</b><small><span class="lang lang-zh">近 3 日主题桶</span><span class="lang lang-en">3-day theme buckets</span></small></article><article class="stat"><span><span class="lang lang-zh">证据样本</span><span class="lang lang-en">Evidence</span></span><b>12</b><small><span class="lang lang-zh">tweet_id / URL</span><span class="lang lang-en">tweet_id / URL</span></small></article></div>
       </div>
     </section>
-    
+
     <section class="section-band page" id="matrix">
       <div class="section-head">
         <div>
@@ -500,7 +513,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
               <td>MU</td>
               <td><span class="lang lang-block lang-zh">jukan05 近 3 日在HBM / 存储里主要说：SK hynix、HBM、内存供给、锁单和存储价格周期、CoPoS/CoWoS、先进封装、封装设备和韩国工程师原始信息。</span><span class="lang lang-block lang-en">In the last 3 days, jukan05 mainly discussed SK hynix, HBM, memory supply, allocation and the storage price cycle; CoPoS/CoWoS,…</span></td>
             </tr>
-            
+
             <tr class="chain-row tone-teal">
               <th><span><span class="lang lang-zh">AI 半导体供应链</span><span class="lang lang-en">AI Semi Supply Chain</span></span><small>ai_semicap_supply_chain</small></th>
               <td class="priority">7</td>
@@ -509,7 +522,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
               <td></td>
               <td><span class="lang lang-block lang-zh">jukan05 近 3 日在AI 半导体供应链里主要说：Samsung 代工 AMD CPU、TSMC/Intel 竞争和先进节点扩产、SK hynix、HBM、内存供给、锁单和存储价格周期、CoPoS/CoWoS…</span><span class="lang lang-block lang-en">In the last 3 days, jukan05 mainly discussed Samsung foundry for AMD CPUs, TSMC/Intel competition and leading-node expansion; S…</span></td>
             </tr>
-            
+
             <tr class="chain-row tone-amber">
               <th><span><span class="lang lang-zh">Neocloud 融资质量</span><span class="lang lang-en">Neocloud Financing Quality</span></span><small>neocloud_financing</small></th>
               <td class="priority">4</td>
@@ -518,7 +531,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
               <td></td>
               <td><span class="lang lang-block lang-zh">jukan05 近 3 日在Neocloud 融资质量里主要说：AI 股票估值、Anthropic/Mythos 和二级市场情绪。</span><span class="lang lang-block lang-en">In the last 3 days, jukan05 mainly discussed AI-stock valuation, Anthropic/Mythos and secondary-market sentiment within Neoclou…</span></td>
             </tr>
-            
+
             <tr class="chain-row tone-crimson">
               <th><span><span class="lang lang-zh">CPO / 光通信</span><span class="lang lang-en">CPO / Optical Interconnect</span></span><small>optical_cpo</small></th>
               <td class="priority">1</td>
@@ -529,7 +542,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
             </tr>
             </tbody></table></div>
     </section>
-    
+
     <section class="section-band page" id="themes-deep">
       <div class="section-head">
         <div>
@@ -537,7 +550,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
           <p><span class="lang lang-block lang-zh">按新闻主题展开 jukan05 的主要说法、ticker 线索和可回溯 tweet 证据。</span><span class="lang lang-block lang-en">Expands each news theme into jukan05 takeaways, ticker clues and traceable tweet evidence.</span></p>
         </div>
       </div>
-      
+
             <section class="chain-deep tone-blue">
               <header class="chain-head">
                 <span>01</span>
@@ -568,13 +581,13 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
               <p>JEDEC Ratifies &#x27;SPHBM4&#x27; Standard; Glass Substrate Utility Draws Attention The Joint Electron Device Engineering Council (JEDEC) has ratified a new standard that broadens the addre…</p>
               <a href="https://x.com/jukan05/status/2068489675510268060">tweet_id 2068489675510268060</a>
             </article>
-            
+
             <article class="evidence-item">
               <header><b>2026-06-22</b><span>score 23｜</span></header>
               <p>Korea&#x27;s June Memory Semiconductor Exports Poised to Set a New All Time Record June memory semiconductor exports extended their powerful upward run, with both export value and unit…</p>
               <a href="https://x.com/jukan05/status/2068961529484193930">tweet_id 2068961529484193930</a>
             </article>
-            
+
             <article class="evidence-item">
               <header><b>2026-06-21</b><span>score 15｜</span></header>
               <p>South Korea Preliminary Exports (June 1–20) - DRAM (including modules): +342% YoY, +3% MoM - Flash Memory (NAND): +336% YoY, +28% MoM - SSD: +405% YoY, +25% MoM - MCP (HBM): +209%…</p>
@@ -583,7 +596,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
             </div>
               </details>
             </section>
-            
+
             <section class="chain-deep tone-teal">
               <header class="chain-head">
                 <span>02</span>
@@ -614,13 +627,13 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
               <p>Samsung Electro Mechanics Begins Mass Production of FC BGA for Qualcomm&#x27;s &quot;AI200,&quot; Expanding Collaboration into the Data Center Segment Samsung Electro Mechanics has begun mass pr…</p>
               <a href="https://x.com/jukan05/status/2068932544347980289">tweet_id 2068932544347980289</a>
             </article>
-            
+
             <article class="evidence-item">
               <header><b>2026-06-20</b><span>score 22｜</span></header>
               <p>Weekend reading recommendations: • JPMorgan — AI Drives Resurgence in Custom Chips (ASICs): ASIC Market Overview/Update • SemiAnalysis — Stop Saying Half of 2026 US Datacenter Cap…</p>
               <a href="https://x.com/jukan05/status/2068214793333526718">tweet_id 2068214793333526718</a>
             </article>
-            
+
             <article class="evidence-item">
               <header><b>2026-06-21</b><span>score 21｜</span></header>
               <p>Samsung Electronics Breaks Ground in Earnest on Its Last Pyeongtaek Semiconductor Fab Samsung Electronics has begun preparations to break ground on &quot;P5 Fab 2,&quot; the final fab at it…</p>
@@ -629,7 +642,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
             </div>
               </details>
             </section>
-            
+
             <section class="chain-deep tone-amber">
               <header class="chain-head">
                 <span>03</span>
@@ -660,13 +673,13 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
               <p>Taiwan Makers Poised to Raise Chip Resistor Prices as China Players Hike and the Price Gap Narrows As Taiwanese chip resistor makers shift to selective order taking and cull order…</p>
               <a href="https://x.com/jukan05/status/2068158302035611724">tweet_id 2068158302035611724</a>
             </article>
-            
+
             <article class="evidence-item">
               <header><b>2026-06-22</b><span>score 19｜</span></header>
               <p>&quot;My latest industry checks indicate that Google is developing an upgraded v9 chip, likely codenamed Triggerfish, based on TPU v9 / Humufish, with MediaTek exclusively securing thi…</p>
               <a href="https://x.com/jukan05/status/2068926089800593705">tweet_id 2068926089800593705</a>
             </article>
-            
+
             <article class="evidence-item">
               <header><b>2026-06-22</b><span>score 24｜</span></header>
               <p>Samsung Electro Mechanics Begins Mass Production of FC BGA for Qualcomm&#x27;s &quot;AI200,&quot; Expanding Collaboration into the Data Center Segment Samsung Electro Mechanics has begun mass pr…</p>
@@ -675,7 +688,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
             </div>
               </details>
             </section>
-            
+
             <section class="chain-deep tone-crimson">
               <header class="chain-head">
                 <span>04</span>
@@ -709,9 +722,9 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
             </div>
               </details>
             </section>
-            
+
     </section>
-    
+
     <section class="section-band page" id="evidence">
       <div class="section-head">
         <div>
@@ -728,7 +741,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
                 <small>score 26｜｜<a href="https://x.com/jukan05/status/2068107984908251479">tweet_id 2068107984908251479</a></small>
               </div>
             </article>
-            
+
             <article class="timeline-item">
               <span>J02</span>
               <div>
@@ -737,7 +750,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
                 <small>score 25｜｜<a href="https://x.com/jukan05/status/2068158302035611724">tweet_id 2068158302035611724</a></small>
               </div>
             </article>
-            
+
             <article class="timeline-item">
               <span>J03</span>
               <div>
@@ -746,7 +759,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
                 <small>score 24｜｜<a href="https://x.com/jukan05/status/2068932544347980289">tweet_id 2068932544347980289</a></small>
               </div>
             </article>
-            
+
             <article class="timeline-item">
               <span>J04</span>
               <div>
@@ -755,7 +768,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
                 <small>score 23｜｜<a href="https://x.com/jukan05/status/2068961529484193930">tweet_id 2068961529484193930</a></small>
               </div>
             </article>
-            
+
             <article class="timeline-item">
               <span>J05</span>
               <div>
@@ -764,7 +777,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
                 <small>score 22｜｜<a href="https://x.com/jukan05/status/2068214793333526718">tweet_id 2068214793333526718</a></small>
               </div>
             </article>
-            
+
             <article class="timeline-item">
               <span>J06</span>
               <div>
@@ -773,7 +786,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
                 <small>score 21｜MU｜<a href="https://x.com/jukan05/status/2068573474453684291">tweet_id 2068573474453684291</a></small>
               </div>
             </article>
-            
+
             <article class="timeline-item">
               <span>J07</span>
               <div>
@@ -782,7 +795,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
                 <small>score 21｜｜<a href="https://x.com/jukan05/status/2068833982037565498">tweet_id 2068833982037565498</a></small>
               </div>
             </article>
-            
+
             <article class="timeline-item">
               <span>J08</span>
               <div>
@@ -791,7 +804,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
                 <small>score 19｜｜<a href="https://x.com/jukan05/status/2068926089800593705">tweet_id 2068926089800593705</a></small>
               </div>
             </article>
-            
+
             <article class="timeline-item">
               <span>J09</span>
               <div>
@@ -800,7 +813,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
                 <small>score 17｜｜<a href="https://x.com/jukan05/status/2068895341706109191">tweet_id 2068895341706109191</a></small>
               </div>
             </article>
-            
+
             <article class="timeline-item">
               <span>J10</span>
               <div>
@@ -809,7 +822,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
                 <small>score 17｜｜<a href="https://x.com/jukan05/status/2068595103233671513">tweet_id 2068595103233671513</a></small>
               </div>
             </article>
-            
+
             <article class="timeline-item">
               <span>J11</span>
               <div>
@@ -818,7 +831,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
                 <small>score 15｜｜<a href="https://x.com/jukan05/status/2068501546313437419">tweet_id 2068501546313437419</a></small>
               </div>
             </article>
-            
+
             <article class="timeline-item">
               <span>J12</span>
               <div>
@@ -829,7 +842,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
             </article>
             </div>
     </section>
-    
+
     <section class="section-band page" id="asset-table">
       <div class="section-head">
         <div>
@@ -844,49 +857,49 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
               <td>1</td>
               <td><span class="lang lang-zh">当前 3 日窗口内绝对提及次数。</span><span class="lang lang-en">Absolute mentions in the current 3-day window.</span></td>
             </tr>
-            
+
             <tr>
               <td><span class="lang lang-zh">升温 ticker</span><span class="lang lang-en">Rising Ticker</span></td>
               <td>MU</td>
               <td>+1</td>
               <td>1 vs 0｜<span class="lang lang-zh">当前 3 日减前一 3 日。</span><span class="lang lang-en">Current 3 days minus previous 3 days.</span></td>
             </tr>
-            
+
             <tr>
               <td><span class="lang lang-zh">主题桶</span><span class="lang lang-en">Theme Bucket</span></td>
               <td><span class="lang lang-zh">HBM / 存储</span><span class="lang lang-en">HBM / Memory Bandwidth</span><small>memory_hbm</small></td>
               <td>17</td>
               <td><span class="lang lang-zh">新闻流主题计数，只用于资产组织。</span><span class="lang lang-en">News-flow theme count for asset organization only.</span></td>
             </tr>
-            
+
             <tr>
               <td><span class="lang lang-zh">主题桶</span><span class="lang lang-en">Theme Bucket</span></td>
               <td><span class="lang lang-zh">AI 半导体供应链</span><span class="lang lang-en">AI Semi Supply Chain</span><small>ai_semicap_supply_chain</small></td>
               <td>7</td>
               <td><span class="lang lang-zh">新闻流主题计数，只用于资产组织。</span><span class="lang lang-en">News-flow theme count for asset organization only.</span></td>
             </tr>
-            
+
             <tr>
               <td><span class="lang lang-zh">主题桶</span><span class="lang lang-en">Theme Bucket</span></td>
               <td><span class="lang lang-zh">Neocloud 融资质量</span><span class="lang lang-en">Neocloud Financing Quality</span><small>neocloud_financing</small></td>
               <td>4</td>
               <td><span class="lang lang-zh">新闻流主题计数，只用于资产组织。</span><span class="lang lang-en">News-flow theme count for asset organization only.</span></td>
             </tr>
-            
+
             <tr>
               <td><span class="lang lang-zh">主题桶</span><span class="lang lang-en">Theme Bucket</span></td>
               <td><span class="lang lang-zh">电力 / 功率链</span><span class="lang lang-en">Power / Grid Chain</span><small>power_grid</small></td>
               <td>3</td>
               <td><span class="lang lang-zh">新闻流主题计数，只用于资产组织。</span><span class="lang lang-en">News-flow theme count for asset organization only.</span></td>
             </tr>
-            
+
             <tr>
               <td><span class="lang lang-zh">主题桶</span><span class="lang lang-en">Theme Bucket</span></td>
               <td><span class="lang lang-zh">InP / 化合物半导体</span><span class="lang lang-en">InP / Compound Semis</span><small>inp_compound_semi</small></td>
               <td>2</td>
               <td><span class="lang lang-zh">新闻流主题计数，只用于资产组织。</span><span class="lang lang-en">News-flow theme count for asset organization only.</span></td>
             </tr>
-            
+
             <tr>
               <td><span class="lang lang-zh">主题桶</span><span class="lang lang-en">Theme Bucket</span></td>
               <td><span class="lang lang-zh">CPO / 光通信</span><span class="lang lang-en">CPO / Optical Interconnect</span><small>optical_cpo</small></td>
@@ -895,7 +908,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
             </tr>
             </tbody></table></div>
     </section>
-    
+
     <section class="section-band page" id="theme-heat">
       <div class="section-head">
         <div>
@@ -910,35 +923,35 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
               <td>2026-06-19 → 2026-06-22</td>
               <td><span class="lang lang-zh">jukan05 新闻流</span><span class="lang lang-en">jukan05 news flow</span></td>
             </tr>
-            
+
             <tr>
               <td><span class="lang lang-zh">AI 半导体供应链</span><span class="lang lang-en">AI Semi Supply Chain</span><small>ai_semicap_supply_chain</small></td>
               <td>7</td>
               <td>2026-06-19 → 2026-06-22</td>
               <td><span class="lang lang-zh">jukan05 新闻流</span><span class="lang lang-en">jukan05 news flow</span></td>
             </tr>
-            
+
             <tr>
               <td><span class="lang lang-zh">Neocloud 融资质量</span><span class="lang lang-en">Neocloud Financing Quality</span><small>neocloud_financing</small></td>
               <td>4</td>
               <td>2026-06-19 → 2026-06-22</td>
               <td><span class="lang lang-zh">jukan05 新闻流</span><span class="lang lang-en">jukan05 news flow</span></td>
             </tr>
-            
+
             <tr>
               <td><span class="lang lang-zh">电力 / 功率链</span><span class="lang lang-en">Power / Grid Chain</span><small>power_grid</small></td>
               <td>3</td>
               <td>2026-06-19 → 2026-06-22</td>
               <td><span class="lang lang-zh">jukan05 新闻流</span><span class="lang lang-en">jukan05 news flow</span></td>
             </tr>
-            
+
             <tr>
               <td><span class="lang lang-zh">InP / 化合物半导体</span><span class="lang lang-en">InP / Compound Semis</span><small>inp_compound_semi</small></td>
               <td>2</td>
               <td>2026-06-19 → 2026-06-22</td>
               <td><span class="lang lang-zh">jukan05 新闻流</span><span class="lang lang-en">jukan05 news flow</span></td>
             </tr>
-            
+
             <tr>
               <td><span class="lang lang-zh">CPO / 光通信</span><span class="lang lang-en">CPO / Optical Interconnect</span><small>optical_cpo</small></td>
               <td>1</td>
@@ -947,14 +960,14 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
             </tr>
             </tbody></table></div>
     </section>
-    
+
     <section class="boundary-strip page" id="boundary">
       <h2><span class="lang lang-zh">公开边界</span><span class="lang lang-en">Public Boundary</span></h2>
       <p><span class="lang lang-block lang-zh">本页面只展示本地 X KOL 推文资产的研究归桶、证据摘录和可复核链接；不输出投资建议、评级、价格判断或交易动作。</span><span class="lang lang-block lang-en">This page shows only research buckets, evidence excerpts and traceable links from local X KOL tweet assets. It does not provide investment advice, ratings, price calls or trading actions.</span></p>
     </section>
     </main>
   <footer class="page">
-    AIpha X-KOL V1.0｜<span class="lang lang-zh">生成时间</span><span class="lang lang-en">Generated</span> 2026-06-23T13:00:19+08:00｜source_commit e216c73fe4dd
+    AIpha X-KOL V1.0｜<span class="lang lang-zh">生成时间</span><span class="lang lang-en">Generated</span> 2026-06-23T19:12:12+08:00｜source_commit e216c73fe4dd
   </footer>
 </body>
 </html>
