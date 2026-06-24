@@ -58,14 +58,14 @@ a { color: inherit; }
   position: sticky;
   top: 0;
   z-index: 20;
-  min-height: 40px;
+  min-height: 54px;
   display: grid;
-  grid-template-columns: auto auto minmax(0, 1fr);
+  grid-template-columns: auto minmax(280px, auto) minmax(0, 1fr);
   align-items: center;
-  gap: 12px;
-  padding: 4px clamp(14px, 3vw, 34px);
+  gap: clamp(14px, 2.5vw, 28px);
+  padding: 8px clamp(16px, 3vw, 38px);
   color: #f8fafc;
-  background: linear-gradient(90deg, #101923, #162434 72%, #101923);
+  background: #111b24;
   border-bottom: 1px solid rgba(255,255,255,0.1);
   box-shadow: 0 8px 22px rgba(10, 18, 26, 0.16);
 }
@@ -77,13 +77,13 @@ a { color: inherit; }
   min-width: 0;
 }
 .brand { display: inline-flex; align-items: center; gap: 10px; min-width: 0; text-decoration: none; }
-.brand img { width: 131px; height: auto; display: block; flex: 0 0 auto; }
+.brand img { width: 146px; height: auto; display: block; flex: 0 0 auto; }
 .nav-version-badge {
   display: inline-flex;
   align-items: center;
   width: fit-content;
-  min-height: 26px;
-  padding: 0 10px;
+  min-height: 30px;
+  padding: 0 12px;
   color: #7a5237;
   background: #fbf7ee;
   border: 1px solid #e3bf8f;
@@ -100,14 +100,14 @@ a { color: inherit; }
 .page-switcher a {
   text-decoration: none;
   color: #dbe4f0;
-  min-width: 112px;
-  min-height: 28px;
+  min-width: 118px;
+  min-height: 30px;
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  padding: 0 12px;
-  border: 0;
-  border-radius: 5px;
+  padding: 0 14px;
+  border: 1px solid rgba(216,224,228,0.26);
+  border-radius: 2px;
   background: transparent;
   font-size: 12px;
   font-weight: 800;
@@ -118,24 +118,25 @@ a { color: inherit; }
 .page-switcher a.active {
   color: #111827;
   background: #f8fafc;
-  box-shadow: 0 0 0 1px rgba(255,255,255,0.12);
+  border-color: #f8fafc;
+  box-shadow: none;
 }
 .page-switcher {
   display: inline-flex;
   align-items: center;
-  gap: 2px;
+  gap: 8px;
   width: auto;
   justify-self: start;
-  padding: 3px;
-  background: rgba(255,255,255,0.055);
-  border: 1px solid rgba(255,255,255,0.14);
-  border-radius: 8px;
+  padding: 0;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
 }
 .nav-disclaimer {
-  min-height: 26px;
+  min-height: 30px;
   display: inline-flex;
   align-items: center;
-  padding: 0 10px;
+  padding: 0 12px;
   color: #111827;
   background: #f2e7d1;
   border: 1px solid rgba(198,161,91,0.78);
@@ -143,14 +144,14 @@ a { color: inherit; }
   font-weight: 900;
   white-space: nowrap;
 }
-.lang-toggle { display: inline-flex; border: 1px solid rgba(255,255,255,0.22); background: rgba(255,255,255,0.06); padding: 2px; }
+.lang-toggle { display: inline-flex; min-height: 30px; border: 1px solid rgba(255,255,255,0.22); background: rgba(255,255,255,0.06); padding: 2px; }
 .lang-toggle button {
   appearance: none;
   border: 0;
   background: transparent;
   color: #cbd5e1;
   min-width: 42px;
-  min-height: 26px;
+  min-height: 24px;
   padding: 0 8px;
   font: inherit;
   font-size: 12px;
@@ -172,9 +173,9 @@ html[data-lang="en"] .lang-toggle button[data-lang-button="en"] { color: #111827
 }
 .hero-grid {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(360px, 0.52fr);
-  gap: clamp(26px, 4vw, 56px);
-  align-items: center;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 20px;
+  align-items: start;
 }
 .hero-main { min-width: 0; }
 .kicker {
@@ -201,22 +202,22 @@ h1 { margin: 6px 0 12px; font-size: clamp(36px, 4vw, 54px); line-height: 1.06; l
 .window-status strong { display: block; font-size: 14px; }
 .window-status span { color: var(--muted); font-size: 12px; overflow-wrap: anywhere; }
 .window-status b { font-size: 22px; line-height: 1; color: var(--blue); }
-.stat-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; width: 100%; align-self: stretch; }
+.stat-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; width: 100%; max-width: 980px; align-self: stretch; }
 .stat {
   min-width: 0;
-  min-height: 118px;
-  background: var(--dark);
-  color: #f8fafc;
-  padding: 16px 18px;
-  border: 1px solid rgba(255,255,255,0.08);
-  border-top: 4px solid rgba(198,154,74,0.86);
+  min-height: 72px;
+  background: rgba(255,255,255,0.82);
+  color: var(--ink);
+  padding: 10px 12px;
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--blue);
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-.stat span, .stat small { display: block; color: #c7d1dc; font-size: 12px; line-height: 1.22; overflow-wrap: anywhere; }
-.stat b { display: block; margin: 7px 0 6px; font-size: clamp(28px, 2.4vw, 36px); line-height: 0.98; white-space: nowrap; letter-spacing: -0.01em; }
-.stat b.long-stat-value { font-size: clamp(24px, 2vw, 28px); letter-spacing: -0.02em; }
+.stat span, .stat small { display: block; color: var(--muted); font-size: 11px; line-height: 1.22; overflow-wrap: anywhere; font-weight: 800; }
+.stat b { display: block; margin: 3px 0 3px; font-size: clamp(22px, 2vw, 30px); line-height: 1; white-space: nowrap; letter-spacing: -0.01em; }
+.stat b.long-stat-value { font-size: clamp(20px, 1.6vw, 26px); letter-spacing: -0.02em; }
 .section-band {
   margin: 18px auto;
   padding: clamp(20px, 2.8vw, 34px);
@@ -235,13 +236,30 @@ h1 { margin: 6px 0 12px; font-size: clamp(36px, 4vw, 54px); line-height: 1.06; l
 .program-card p { margin: 0; color: var(--muted); }
 .program-card .open { color: var(--blue); font-weight: 900; letter-spacing: 0.08em; font-size: 12px; }
 .brief-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; align-items: start; }
-.brief-card { min-width: 0; background: #fff; border: 1px solid var(--line); border-left: 5px solid var(--teal); padding: 0; box-shadow: 0 8px 26px rgba(22,33,43,0.045); overflow: hidden; }
-.brief-titlebar { display: flex; justify-content: space-between; gap: 18px; align-items: start; padding: 18px 20px; background: linear-gradient(180deg, #ffffff, #f8faf9); color: var(--ink); border-bottom: 1px solid var(--line); }
+.brief-card { min-width: 0; background: #fff; border: 1px solid var(--line); padding: 0; box-shadow: 0 8px 26px rgba(22,33,43,0.045); overflow: hidden; }
+.brief-titlebar { display: flex; justify-content: space-between; gap: 18px; align-items: center; padding: 14px 16px; background: #fff; color: var(--ink); border-bottom: 1px solid var(--line); border-top: 4px solid var(--blue); }
 .brief-titlebar h3 { margin: 3px 0 5px; font-size: 24px; line-height: 1.15; }
 .brief-titlebar p { margin: 0; color: var(--muted); max-width: 760px; }
 .brief-titlebar small { color: var(--muted); font-size: 14px; }
 .brief-eyebrow { display: inline-flex; color: var(--blue); font-size: 11px; font-weight: 900; letter-spacing: 0.12em; text-transform: uppercase; }
-.brief-body { padding: 18px 20px 20px; }
+.brief-body { padding: 0; }
+.kol-feed-head { display: grid; grid-template-columns: 42px minmax(0,1fr) auto; gap: 10px; align-items: center; min-width: 0; }
+.kol-avatar, .tweet-avatar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  color: #fff;
+  background: linear-gradient(135deg, var(--blue), var(--dark));
+  font-weight: 950;
+  flex: 0 0 auto;
+}
+.kol-avatar { width: 42px; height: 42px; font-size: 18px; }
+.tweet-avatar { width: 38px; height: 38px; font-size: 15px; }
+.kol-feed-meta { display: grid; gap: 2px; min-width: 0; }
+.kol-feed-meta h3 { margin: 0; font-size: 20px; line-height: 1.15; }
+.kol-feed-meta p { margin: 0; color: var(--muted); font-size: 12px; overflow-wrap: anywhere; }
+.kol-feed-count { color: var(--blue); font-size: 22px; font-weight: 950; line-height: 1; }
 .brief-card h3 { margin: 0 0 8px; font-size: 22px; }
 .brief-card .headline { font-size: 17px; font-weight: 900; margin: 14px 0 2px; color: var(--blue); letter-spacing: 0.02em; }
 .brief-card ul { margin: 10px 0 0; padding-left: 20px; color: var(--muted); }
@@ -280,8 +298,8 @@ h1 { margin: 6px 0 12px; font-size: clamp(36px, 4vw, 54px); line-height: 1.06; l
 .change-event-evidence { padding: 9px 10px; background: var(--soft); border: 1px solid var(--line); }
 .change-event-evidence b { display: block; color: var(--blue); font-size: 12px; }
 .change-event-evidence small { display: block; color: var(--muted); line-height: 1.45; overflow-wrap: anywhere; }
-.tweet-ledger { display: grid; gap: 0; border-top: 1px solid var(--line); }
-.tweet-ledger-row { display: grid; grid-template-columns: minmax(0, 1fr); gap: 10px; padding: 14px 14px 12px; background: #fff; border-bottom: 1px solid var(--line); }
+.tweet-ledger { display: grid; gap: 0; border-top: 0; }
+.tweet-ledger-row { display: grid; grid-template-columns: 38px minmax(0, 1fr); gap: 10px; padding: 14px 14px 12px; background: #fff; border-bottom: 1px solid var(--line); border-left: 4px solid var(--line); }
 .tweet-ledger-row[data-change-type="tech_route"] { border-left-color: #6d5bd0; }
 .tweet-ledger-row[data-change-type="tech_progress"] { border-left-color: #087f5b; }
 .tweet-ledger-row[data-change-type="shortage"] { border-left-color: #9b2c2c; }
@@ -297,9 +315,17 @@ h1 { margin: 6px 0 12px; font-size: clamp(36px, 4vw, 54px); line-height: 1.06; l
 .tweet-verified { display: inline-flex; align-items: center; justify-content: center; width: 15px; height: 15px; border-radius: 999px; color: #fff; background: #1d9bf0; font-size: 10px; font-weight: 950; line-height: 1; }
 .tweet-handle, .tweet-time { color: var(--muted); font-size: 13px; }
 .tweet-more { color: var(--muted); font-size: 18px; line-height: 1; letter-spacing: 1px; }
-.tweet-ledger-tags { display: flex; gap: 6px; flex-wrap: wrap; }
-.tweet-ledger-tags span { display: inline-flex; align-items: center; padding: 3px 7px; background: var(--soft); border: 1px solid var(--line); color: var(--muted); font-size: 11px; font-weight: 800; border-radius: 999px; }
+.tweet-ledger-tags { display: flex; gap: 6px; flex-wrap: wrap; align-items: center; }
+.tweet-ledger-tags span { display: inline-flex; align-items: center; padding: 3px 7px; background: var(--soft-2); border: 1px solid var(--line); color: var(--muted); font-size: 11px; font-weight: 800; border-radius: 999px; }
 .tweet-ledger-tags .primary { color: #fff; background: var(--dark); border-color: var(--dark); }
+.tweet-ledger-row[data-change-type="tech_route"] .tweet-ledger-tags .primary { background: #6d5bd0; border-color: #6d5bd0; }
+.tweet-ledger-row[data-change-type="tech_progress"] .tweet-ledger-tags .primary { background: #087f5b; border-color: #087f5b; }
+.tweet-ledger-row[data-change-type="shortage"] .tweet-ledger-tags .primary { background: #9b2c2c; border-color: #9b2c2c; }
+.tweet-ledger-row[data-change-type="price"] .tweet-ledger-tags .primary { background: #c39a4a; border-color: #c39a4a; }
+.tweet-ledger-row[data-change-type="demand"] .tweet-ledger-tags .primary { background: #1f5366; border-color: #1f5366; }
+.tweet-ledger-row[data-change-type="supply_release"] .tweet-ledger-tags .primary { background: #2b8a3e; border-color: #2b8a3e; }
+.tweet-ledger-row[data-change-type="risk"] .tweet-ledger-tags .primary { background: #596a75; border-color: #596a75; }
+.tweet-ledger-row[data-change-type="noise"] .tweet-ledger-tags .primary { background: #9aa6af; border-color: #9aa6af; }
 .tweet-translation { margin: 0; font-size: 15px; line-height: 1.55; color: var(--ink); font-weight: 720; overflow-wrap: anywhere; }
 html[data-lang="en"] .tweet-translation { display: none; }
 .tweet-original { margin: 0; color: var(--muted); overflow-wrap: anywhere; font-size: 14px; line-height: 1.48; }
@@ -307,9 +333,9 @@ html[data-lang="en"] .tweet-translation { display: none; }
 .tweet-original-details { color: var(--muted); }
 .tweet-original-details summary { cursor: pointer; color: var(--blue); font-weight: 900; font-size: 12px; }
 .tweet-original-details p { margin: 6px 0 0; color: var(--muted); overflow-wrap: anywhere; }
-.tweet-action-row { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); align-items: center; max-width: 420px; padding-top: 2px; color: var(--muted); font-size: 13px; }
-.tweet-action { display: inline-flex; align-items: center; gap: 6px; min-width: 0; color: var(--muted); white-space: nowrap; }
-.tweet-action i { font-style: normal; font-size: 16px; line-height: 1; }
+.tweet-action-row { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); align-items: center; max-width: 360px; padding-top: 2px; color: var(--muted); font-size: 13px; }
+.tweet-action { display: inline-flex; align-items: center; min-width: 0; color: var(--muted); white-space: nowrap; }
+.tweet-action i { font-style: normal; font-size: 17px; line-height: 1; }
 .tweet-ledger-note { margin: 0; color: var(--muted); font-size: 11px; overflow-wrap: anywhere; }
 .tweet-ledger-note a { color: var(--blue); font-weight: 900; }
 .brief-conclusion { display: grid; grid-template-columns: 126px minmax(0,1fr); gap: 14px; align-items: start; padding: 16px; background: var(--soft-2); border: 1px solid var(--line); border-left: 5px solid var(--blue); }
@@ -360,10 +386,17 @@ html[data-lang="en"] .tweet-translation { display: none; }
 .rising-tag { border-color: rgba(8,127,91,0.28); background: rgba(8,127,91,0.07); }
 .muted-note { color: var(--muted); }
 .table-scroll { width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; }
-table { width: 100%; border-collapse: collapse; min-width: 760px; background: #fff; }
-th, td { padding: 12px; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; }
-th { background: #f0eadf; color: var(--muted); font-size: 13px; }
+table { width: 100%; border-collapse: collapse; min-width: 760px; background: #fff; font-size: 13px; }
+th, td { padding: 10px 11px; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; }
+th { position: sticky; top: 54px; z-index: 2; background: #f8f5ed; color: var(--muted); font-size: 12px; letter-spacing: 0.01em; }
+tbody tr:nth-child(even) td { background: #fbfcfc; }
+tbody tr:hover td { background: #f7faf9; }
 td small, th small { display: block; color: var(--muted); margin-top: 3px; }
+.asset-snapshot-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; margin-bottom: 16px; }
+.asset-snapshot-card { min-width: 0; padding: 14px; background: #fff; border: 1px solid var(--line); border-top: 4px solid var(--blue); }
+.asset-snapshot-card h3 { margin: 0 0 8px; font-size: 17px; line-height: 1.2; }
+.asset-snapshot-card p { margin: 0; color: var(--muted); font-size: 13px; }
+.asset-snapshot-card b { display: block; margin-top: 10px; color: var(--blue); font-size: 22px; line-height: 1; }
 .chain-matrix .priority { font-size: 28px; font-weight: 900; }
 .metric-bar { position: relative; height: 24px; min-width: 150px; background: #ece7db; }
 .metric-bar span { display: block; height: 100%; background: var(--blue); }
@@ -419,7 +452,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
   .brand { grid-column: 1; grid-row: 1; justify-self: start; }
   .nav-version-badge { min-height: 22px; max-width: 128px; padding: 0 6px; font-size: 9.5px; letter-spacing: 0.02em; overflow: hidden; }
   .nav-actions { grid-column: 1; grid-row: 2; display: grid; grid-template-columns: minmax(0, 1fr) auto auto; align-items: center; justify-self: stretch; width: 100%; gap: 4px; min-width: 0; overflow: hidden; }
-  .brand img { width: 80px; }
+  .brand img { width: 88px; }
   .nav-links { display: none; }
   .page-switcher { grid-column: 1; grid-row: 3; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); width: 100%; max-width: 100%; min-width: 0; gap: 2px; justify-self: stretch; overflow: hidden; }
   .page-switcher a { min-width: 0; min-height: 26px; padding: 0 4px; font-size: 9.5px; line-height: 1.15; white-space: nowrap; justify-content: center; overflow: hidden; text-overflow: ellipsis; }
@@ -427,12 +460,12 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
   .lang-toggle button { min-width: 30px; min-height: 24px; padding: 0 5px; font-size: 10.5px; }
   .page { width: min(100% - 20px, 720px); }
   .hero { margin-top: 12px; padding: 20px; }
-  .hero-grid, .program-grid, .brief-grid, .digest-overview, .digest-card-grid, .question-list, .chain-body, .timeline-grid { grid-template-columns: 1fr; }
+  .hero-grid, .program-grid, .brief-grid, .digest-overview, .digest-card-grid, .question-list, .chain-body, .timeline-grid, .asset-snapshot-grid { grid-template-columns: 1fr; }
   .brief-titlebar { display: grid; }
   h1 { font-size: 34px; }
   .lead { font-size: 16px; }
   .stat-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; width: 100%; }
-  .stat { min-height: 82px; padding: 10px; }
+  .stat { min-height: 64px; padding: 9px 10px; }
   .stat span, .stat small { font-size: 9.5px; }
   .stat b { font-size: 24px; margin: 5px 0 4px; }
   .digest-ticker-columns { grid-template-columns: repeat(2, minmax(0, 1fr)); }
@@ -441,7 +474,8 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
   .brief-conclusion { grid-template-columns: 1fr; gap: 8px; }
   .brief-topic-grid, .brief-side-grid, .change-radar-grid, .change-summary-grid { grid-template-columns: 1fr; }
   .change-event-card dl { grid-template-columns: 1fr; }
-  .tweet-ledger-row { grid-template-columns: minmax(0, 1fr); padding: 12px; }
+  .tweet-ledger-row { grid-template-columns: 34px minmax(0, 1fr); padding: 12px; }
+  .tweet-avatar { width: 34px; height: 34px; font-size: 13px; }
   .tweet-action-row { max-width: none; font-size: 12px; }
   .brief-item-left { border-right: 0; }
   .brief-evidence-list span { grid-template-columns: 1fr; gap: 2px; }
@@ -450,7 +484,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
 }
 @media (max-width: 430px) {
   .stat-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
-  .stat { min-height: 82px; padding: 10px; }
+  .stat { min-height: 62px; padding: 9px; }
   .stat span, .stat small { font-size: 9.5px; }
   .stat b { font-size: 24px; }
   .window-status { grid-template-columns: 1fr; }
@@ -486,7 +520,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
           <p class="lead"><span class="lang lang-block lang-zh">jukan05 页面按主题矩阵、主题深挖、证据样本和 ticker 资产表组织韩国/亚洲供应链新闻流；不并入 Serenity 七链评分，也不展示 A股映射结论。</span><span class="lang lang-block lang-en">The jukan05 page organizes the Korea/Asia supply-chain news flow by theme matrix, theme deep dives, evidence samples and ticker asset tables. It does not enter Serenity seven-chain scoring or show A-share mapping conclusions.</span></p>
 
         </div>
-        <div class="stat-grid"><article class="stat"><span><span class="lang lang-zh">本地推文</span><span class="lang lang-en">Local Tweets</span></span><b>249</b><small><span class="lang lang-zh">独立 X KOL 库</span><span class="lang lang-en">Separate X KOL DB</span></small></article><article class="stat"><span><span class="lang lang-zh">资产截止</span><span class="lang lang-en">Asset Cutoff</span></span><b class="long-stat-value">2026-06-22</b><small><span class="lang lang-zh">11:22</span><span class="lang lang-en">11:22</span></small></article><article class="stat"><span><span class="lang lang-zh">主题数</span><span class="lang lang-en">Themes</span></span><b>6</b><small><span class="lang lang-zh">近 3 日主题桶</span><span class="lang lang-en">3-day theme buckets</span></small></article><article class="stat"><span><span class="lang lang-zh">证据样本</span><span class="lang lang-en">Evidence</span></span><b>12</b><small><span class="lang lang-zh">tweet_id / URL</span><span class="lang lang-en">tweet_id / URL</span></small></article></div>
+        <div class="stat-grid"><article class="stat"><span><span class="lang lang-zh">本地推文</span><span class="lang lang-en">Local Tweets</span></span><b>283</b><small><span class="lang lang-zh">独立 X KOL 库</span><span class="lang lang-en">Separate X KOL DB</span></small></article><article class="stat"><span><span class="lang lang-zh">资产截止</span><span class="lang lang-en">Asset Cutoff</span></span><b class="long-stat-value">2026-06-24</b><small><span class="lang lang-zh">10:54</span><span class="lang lang-en">10:54</span></small></article><article class="stat"><span><span class="lang lang-zh">主题数</span><span class="lang lang-en">Themes</span></span><b>5</b><small><span class="lang lang-zh">近 3 日主题桶</span><span class="lang lang-en">3-day theme buckets</span></small></article><article class="stat"><span><span class="lang lang-zh">证据样本</span><span class="lang lang-en">Evidence</span></span><b>12</b><small><span class="lang lang-zh">tweet_id / URL</span><span class="lang lang-en">tweet_id / URL</span></small></article></div>
       </div>
     </section>
 
@@ -497,41 +531,65 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
           <p><span class="lang lang-block lang-zh">基于 jukan05 近 3 日窗口的主题桶、推文数、证据密度和 ticker 线索组织新闻流。</span><span class="lang lang-block lang-en">Organizes the jukan05 3-day window by theme buckets, tweet count, evidence density and ticker clues.</span></p>
         </div>
       </div>
-      <div class="table-scroll"><table class="chain-matrix jukan-theme-matrix"><thead><tr><th><span class="lang lang-zh">主题</span><span class="lang lang-en">Theme</span><small><span class="lang lang-zh">新闻流讨论桶</span><span class="lang lang-en">News-flow bucket</span></small></th><th><span class="lang lang-zh">窗口推文</span><span class="lang lang-en">Window Tweets</span><small><span class="lang lang-zh">当前 3 日数量</span><span class="lang lang-en">Current 3-day count</span></small></th><th><span class="lang lang-zh">关注热度</span><span class="lang lang-en">Attention Heat</span><small><span class="lang lang-zh">窗口内相对热度</span><span class="lang lang-en">Relative heat in window</span></small></th><th><span class="lang lang-zh">证据密度</span><span class="lang lang-en">Evidence Density</span><small><span class="lang lang-zh">可回溯样本数量</span><span class="lang lang-en">Traceable sample count</span></small></th><th>Top tickers</th><th><span class="lang lang-zh">jukan05 读法</span><span class="lang lang-en">jukan05 Read</span><small><span class="lang lang-zh">新闻流结论</span><span class="lang lang-en">News-flow takeaway</span></small></th></tr><tr class="metric-explain-row"><th><span class="lang lang-zh">怎么参考</span><span class="lang lang-en">How to use</span></th><th><span class="lang lang-block lang-zh">高=该新闻桶在近端更活跃。</span><span class="lang lang-block lang-en">High means this news bucket is more active near term.</span></th><th><span class="lang lang-block lang-zh">只看 jukan05 当前窗口，不代表 Serenity 七链优先级。</span><span class="lang lang-block lang-en">Only jukan05 current-window heat, not Serenity seven-chain priority.</span></th><th><span class="lang lang-block lang-zh">高=证据链接更多，便于回溯。</span><span class="lang lang-block lang-en">High means more evidence links for traceability.</span></th><th><span class="lang lang-block lang-zh">只展示原始 ticker 线索。</span><span class="lang lang-block lang-en">Raw ticker clues only.</span></th><th><span class="lang lang-block lang-zh">用于组织新闻流，不输出映射或交易结论。</span><span class="lang lang-block lang-en">Organizes the news flow; no mapping or trade conclusion.</span></th></tr></thead><tbody>
+      <div class="asset-snapshot-grid">
+            <article class="asset-snapshot-card">
+              <h3>01 · HBM / 存储</h3>
+              <p>jukan05 近 3 日在HBM / 存储里主要说：SK hynix、HBM、内存供给、锁单和存储价格周期、CoPoS/CoWoS、先进封装、封装设备和韩国工程师原始信息。</p>
+              <b>23</b>
+            </article>
+
+            <article class="asset-snapshot-card">
+              <h3>02 · AI 半导体供应链</h3>
+              <p>jukan05 近 3 日在AI 半导体供应链里主要说：SK hynix、HBM、内存供给、锁单和存储价格周期、Samsung 代工 AMD CPU、TSMC/Intel 竞争和先进节点扩产…</p>
+              <b>10</b>
+            </article>
+
+            <article class="asset-snapshot-card">
+              <h3>03 · Neocloud 融资质量</h3>
+              <p>jukan05 近 3 日在Neocloud 融资质量里主要说：NBIS/IREN/CRWV 等 Neocloud 融资结构、合约质量和机构持股、AI 股票估值、Anthropic/Myth…</p>
+              <b>5</b>
+            </article>
+
+            <article class="asset-snapshot-card">
+              <h3>04 · InP / 化合物半导体</h3>
+              <p>jukan05 近 3 日在InP / 化合物半导体里主要说：InP 衬底出口/管制、CSP 分散供应和化合物半导体供给安全。</p>
+              <b>3</b>
+            </article>
+            </div><div class="table-scroll"><table class="chain-matrix jukan-theme-matrix"><thead><tr><th><span class="lang lang-zh">主题</span><span class="lang lang-en">Theme</span><small><span class="lang lang-zh">新闻流讨论桶</span><span class="lang lang-en">News-flow bucket</span></small></th><th><span class="lang lang-zh">窗口推文</span><span class="lang lang-en">Window Tweets</span><small><span class="lang lang-zh">当前 3 日数量</span><span class="lang lang-en">Current 3-day count</span></small></th><th><span class="lang lang-zh">关注热度</span><span class="lang lang-en">Attention Heat</span><small><span class="lang lang-zh">窗口内相对热度</span><span class="lang lang-en">Relative heat in window</span></small></th><th><span class="lang lang-zh">证据密度</span><span class="lang lang-en">Evidence Density</span><small><span class="lang lang-zh">可回溯样本数量</span><span class="lang lang-en">Traceable sample count</span></small></th><th>Top tickers</th><th><span class="lang lang-zh">jukan05 读法</span><span class="lang lang-en">jukan05 Read</span><small><span class="lang lang-zh">新闻流结论</span><span class="lang lang-en">News-flow takeaway</span></small></th></tr><tr class="metric-explain-row"><th><span class="lang lang-zh">怎么参考</span><span class="lang lang-en">How to use</span></th><th><span class="lang lang-block lang-zh">高=该新闻桶在近端更活跃。</span><span class="lang lang-block lang-en">High means this news bucket is more active near term.</span></th><th><span class="lang lang-block lang-zh">只看 jukan05 当前窗口，不代表 Serenity 七链优先级。</span><span class="lang lang-block lang-en">Only jukan05 current-window heat, not Serenity seven-chain priority.</span></th><th><span class="lang lang-block lang-zh">高=证据链接更多，便于回溯。</span><span class="lang lang-block lang-en">High means more evidence links for traceability.</span></th><th><span class="lang lang-block lang-zh">只展示原始 ticker 线索。</span><span class="lang lang-block lang-en">Raw ticker clues only.</span></th><th><span class="lang lang-block lang-zh">用于组织新闻流，不输出映射或交易结论。</span><span class="lang lang-block lang-en">Organizes the news flow; no mapping or trade conclusion.</span></th></tr></thead><tbody>
             <tr class="chain-row tone-blue">
               <th><span><span class="lang lang-zh">HBM / 存储</span><span class="lang lang-en">HBM / Memory Bandwidth</span></span><small>memory_hbm</small></th>
-              <td class="priority">17</td>
+              <td class="priority">23</td>
               <td><div class="metric-bar metric-blue" aria-label="jukan05 window attention 100"><span style="width:100%"></span><b>100</b></div></td>
               <td><div class="metric-bar metric-blue" aria-label="jukan05 evidence density 100"><span style="width:100%"></span><b>100</b></div></td>
-              <td>MU</td>
+              <td>TSM</td>
               <td><span class="lang lang-block lang-zh">jukan05 近 3 日在HBM / 存储里主要说：SK hynix、HBM、内存供给、锁单和存储价格周期、CoPoS/CoWoS、先进封装、封装设备和韩国工程师原始信息。</span><span class="lang lang-block lang-en">In the last 3 days, jukan05 mainly discussed SK hynix, HBM, memory supply, allocation and the storage price cycle; CoPoS/CoWoS,…</span></td>
             </tr>
 
             <tr class="chain-row tone-teal">
               <th><span><span class="lang lang-zh">AI 半导体供应链</span><span class="lang lang-en">AI Semi Supply Chain</span></span><small>ai_semicap_supply_chain</small></th>
-              <td class="priority">7</td>
-              <td><div class="metric-bar metric-teal" aria-label="jukan05 window attention 41"><span style="width:41%"></span><b>41</b></div></td>
+              <td class="priority">10</td>
+              <td><div class="metric-bar metric-teal" aria-label="jukan05 window attention 43"><span style="width:43%"></span><b>43</b></div></td>
               <td><div class="metric-bar metric-teal" aria-label="jukan05 evidence density 100"><span style="width:100%"></span><b>100</b></div></td>
-              <td></td>
-              <td><span class="lang lang-block lang-zh">jukan05 近 3 日在AI 半导体供应链里主要说：Samsung 代工 AMD CPU、TSMC/Intel 竞争和先进节点扩产、SK hynix、HBM、内存供给、锁单和存储价格周期、CoPoS/CoWoS…</span><span class="lang lang-block lang-en">In the last 3 days, jukan05 mainly discussed Samsung foundry for AMD CPUs, TSMC/Intel competition and leading-node expansion; S…</span></td>
+              <td>TSM</td>
+              <td><span class="lang lang-block lang-zh">jukan05 近 3 日在AI 半导体供应链里主要说：SK hynix、HBM、内存供给、锁单和存储价格周期、Samsung 代工 AMD CPU、TSMC/Intel 竞争和先进节点扩产、CoPoS/CoWoS…</span><span class="lang lang-block lang-en">In the last 3 days, jukan05 mainly discussed SK hynix, HBM, memory supply, allocation and the storage price cycle; Samsung foun…</span></td>
             </tr>
 
             <tr class="chain-row tone-amber">
               <th><span><span class="lang lang-zh">Neocloud 融资质量</span><span class="lang lang-en">Neocloud Financing Quality</span></span><small>neocloud_financing</small></th>
-              <td class="priority">4</td>
-              <td><div class="metric-bar metric-amber" aria-label="jukan05 window attention 24"><span style="width:24%"></span><b>24</b></div></td>
+              <td class="priority">5</td>
+              <td><div class="metric-bar metric-amber" aria-label="jukan05 window attention 22"><span style="width:22%"></span><b>22</b></div></td>
               <td><div class="metric-bar metric-amber" aria-label="jukan05 evidence density 100"><span style="width:100%"></span><b>100</b></div></td>
               <td></td>
-              <td><span class="lang lang-block lang-zh">jukan05 近 3 日在Neocloud 融资质量里主要说：AI 股票估值、Anthropic/Mythos 和二级市场情绪。</span><span class="lang lang-block lang-en">In the last 3 days, jukan05 mainly discussed AI-stock valuation, Anthropic/Mythos and secondary-market sentiment within Neoclou…</span></td>
+              <td><span class="lang lang-block lang-zh">jukan05 近 3 日在Neocloud 融资质量里主要说：NBIS/IREN/CRWV 等 Neocloud 融资结构、合约质量和机构持股、AI 股票估值、Anthropic/Mythos 和二级市场情绪。</span><span class="lang lang-block lang-en">In the last 3 days, jukan05 mainly discussed NBIS/IREN/CRWV neocloud financing structure, contract quality and institutional ow…</span></td>
             </tr>
 
             <tr class="chain-row tone-crimson">
-              <th><span><span class="lang lang-zh">CPO / 光通信</span><span class="lang lang-en">CPO / Optical Interconnect</span></span><small>optical_cpo</small></th>
-              <td class="priority">1</td>
-              <td><div class="metric-bar metric-crimson" aria-label="jukan05 window attention 6"><span style="width:6%"></span><b>6</b></div></td>
-              <td><div class="metric-bar metric-crimson" aria-label="jukan05 evidence density 34"><span style="width:34%"></span><b>34</b></div></td>
+              <th><span><span class="lang lang-zh">InP / 化合物半导体</span><span class="lang lang-en">InP / Compound Semis</span></span><small>inp_compound_semi</small></th>
+              <td class="priority">3</td>
+              <td><div class="metric-bar metric-crimson" aria-label="jukan05 window attention 13"><span style="width:13%"></span><b>13</b></div></td>
+              <td><div class="metric-bar metric-crimson" aria-label="jukan05 evidence density 100"><span style="width:100%"></span><b>100</b></div></td>
               <td></td>
-              <td><span class="lang lang-block lang-zh">jukan05 近 3 日在CPO / 光通信里主要说：硅光、CPO/NPO、1.6T、连接器和 PCB/HVLP 材料链。</span><span class="lang lang-block lang-en">In the last 3 days, jukan05 mainly discussed silicon photonics, CPO/NPO, 1.6T, connectors and PCB/HVLP materials within CPO / O…</span></td>
+              <td><span class="lang lang-block lang-zh">jukan05 近 3 日在InP / 化合物半导体里主要说：InP 衬底出口/管制、CSP 分散供应和化合物半导体供给安全。</span><span class="lang lang-block lang-en">In the last 3 days, jukan05 mainly discussed InP substrate exports, CSP supply diversification and compound-semi supply securit…</span></td>
             </tr>
             </tbody></table></div>
     </section>
@@ -551,17 +609,17 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
                   <h3><span class="lang lang-zh">HBM / 存储</span><span class="lang lang-en">HBM / Memory Bandwidth</span></h3>
                   <p><span class="lang lang-block lang-zh">jukan05 近 3 日在HBM / 存储里主要说：SK hynix、HBM、内存供给、锁单和存储价格周期、CoPoS/CoWoS、先进封装、封装设备和韩国工程师原始信息。</span><span class="lang lang-block lang-en">In the last 3 days, jukan05 mainly discussed SK hynix, HBM, memory supply, allocation and the storage price cycle; CoPoS/CoWoS, advanced packaging, packaging tools and raw Korean-engineer information within HBM / Memory Bandwidth.</span></p>
                 </div>
-                <strong>17</strong>
+                <strong>23</strong>
               </header>
               <div class="chain-body">
                 <div>
                   <p><b><span class="lang lang-zh">主要说什么</span><span class="lang lang-en">Main Takeaways</span></b></p>
-                  <ul class="lang lang-zh"><li>窗口内该主题共 17 条；主线不是模板判断，而是来自近端原文：SK hynix、HBM、内存供给、锁单和存储价格周期、CoPoS/CoWoS、先进封装、封装设备和韩国工程师原始信息。</li><li>反复出现的标的/关键词：MU。</li><li>证据锚点：2026-06-21 tweet 268060：JEDEC Ratifies &#x27;SPHBM4&#x27; Standard; Glass Substrate Utility Draws Attention The Joint Electron Device Engineering Council…；2026-06-22 tweet 193930：Korea&#x27;s June Memory Semiconductor Exports Poised to Set a New All Time Record June memory semiconductor exports extende…</li><li>阅读边界：这是 jukan05 的近端新闻/情报流摘要，不直接改写 A股映射或交易结论。</li></ul>
-                  <ul class="lang lang-en"><li>This theme has 17 tweets in the window; the line is derived from recent source text, not a static template: SK hynix, HBM, memory supply, allocation and the storage price cycle; CoPoS/CoWoS, advanced packaging, packaging tools and raw Korean-engineer information.</li><li>Recurring tickers/keywords: MU.</li><li>Evidence anchors: 2026-06-21 tweet 268060: JEDEC Ratifies &#x27;SPHBM4&#x27; Standard; Glass Substrate Utility Draws Attention The Joint Electron Device Engineering Council…; 2026-06-22 tweet 193930: Korea&#x27;s June Memory Semiconductor Exports Poised to Set a New All Time Record June memory semiconductor exports extende…</li><li>Boundary: this is a near-term jukan05 news/raw-intel feed summary, not an A-share mapping or trading conclusion.</li></ul>
-                  <p><b>Top tickers:</b> MU</p>
+                  <ul class="lang lang-zh"><li>窗口内该主题共 23 条；主线不是模板判断，而是来自近端原文：SK hynix、HBM、内存供给、锁单和存储价格周期、CoPoS/CoWoS、先进封装、封装设备和韩国工程师原始信息。</li><li>反复出现的标的/关键词：TSM。</li><li>证据锚点：2026-06-22 tweet 887767：SK Hynix Throttles HBM4 Production… Seeks Additional Profit by Expanding Supply Constrained Commodity DRAM SK Hynix is…；2026-06-23 tweet 219092：Q2 Consumer LPDDR5X Prices Rise 89% Market research firm SigmaIntell announced on the 22nd that prices for consumer pro…</li><li>阅读边界：这是 jukan05 的近端新闻/情报流摘要，不直接改写 A股映射或交易结论。</li></ul>
+                  <ul class="lang lang-en"><li>This theme has 23 tweets in the window; the line is derived from recent source text, not a static template: SK hynix, HBM, memory supply, allocation and the storage price cycle; CoPoS/CoWoS, advanced packaging, packaging tools and raw Korean-engineer information.</li><li>Recurring tickers/keywords: TSM.</li><li>Evidence anchors: 2026-06-22 tweet 887767: SK Hynix Throttles HBM4 Production… Seeks Additional Profit by Expanding Supply Constrained Commodity DRAM SK Hynix is…; 2026-06-23 tweet 219092: Q2 Consumer LPDDR5X Prices Rise 89% Market research firm SigmaIntell announced on the 22nd that prices for consumer pro…</li><li>Boundary: this is a near-term jukan05 news/raw-intel feed summary, not an A-share mapping or trading conclusion.</li></ul>
+                  <p><b>Top tickers:</b> TSM</p>
                 </div>
                 <div class="mini-metrics">
-                  <label><span class="lang lang-zh">窗口推文</span><span class="lang lang-en">Window Tweets</span><div class="metric-bar metric-blue" aria-label="window tweets 17"><span style="width:17%"></span><b>17</b></div></label>
+                  <label><span class="lang lang-zh">窗口推文</span><span class="lang lang-en">Window Tweets</span><div class="metric-bar metric-blue" aria-label="window tweets 23"><span style="width:23%"></span><b>23</b></div></label>
                   <label><span class="lang lang-zh">证据密度</span><span class="lang lang-en">Evidence Density</span><div class="metric-bar metric-blue" aria-label="evidence density 100"><span style="width:100%"></span><b>100</b></div></label>
                   <label><span class="lang lang-zh">Ticker 宽度</span><span class="lang lang-en">Ticker Breadth</span><div class="metric-bar metric-blue" aria-label="ticker breadth 12"><span style="width:12%"></span><b>12</b></div></label>
                 </div>
@@ -570,21 +628,21 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
                 <summary><span class="lang lang-zh">展开 jukan05 推文证据样本</span><span class="lang lang-en">Open jukan05 tweet evidence samples</span></summary>
                 <div class="evidence-grid">
             <article class="evidence-item">
-              <header><b>2026-06-21</b><span>score 15｜</span></header>
-              <p>JEDEC Ratifies &#x27;SPHBM4&#x27; Standard; Glass Substrate Utility Draws Attention The Joint Electron Device Engineering Council (JEDEC) has ratified a new standard that broadens the addre…</p>
-              <a href="https://x.com/jukan05/status/2068489675510268060">tweet_id 2068489675510268060</a>
+              <header><b>2026-06-22</b><span>score 37｜</span></header>
+              <p>SK Hynix Throttles HBM4 Production… Seeks Additional Profit by Expanding Supply Constrained Commodity DRAM SK Hynix is moderating the pace of its sixth generation high bandwidth m…</p>
+              <a href="https://x.com/jukan05/status/2069207209133887767">tweet_id 2069207209133887767</a>
             </article>
 
             <article class="evidence-item">
-              <header><b>2026-06-22</b><span>score 23｜</span></header>
-              <p>Korea&#x27;s June Memory Semiconductor Exports Poised to Set a New All Time Record June memory semiconductor exports extended their powerful upward run, with both export value and unit…</p>
-              <a href="https://x.com/jukan05/status/2068961529484193930">tweet_id 2068961529484193930</a>
+              <header><b>2026-06-23</b><span>score 34｜</span></header>
+              <p>Q2 Consumer LPDDR5X Prices Rise 89% Market research firm SigmaIntell announced on the 22nd that prices for consumer product categories rose in the second quarter of this year due…</p>
+              <a href="https://x.com/jukan05/status/2069263371766219092">tweet_id 2069263371766219092</a>
             </article>
 
             <article class="evidence-item">
-              <header><b>2026-06-21</b><span>score 15｜</span></header>
-              <p>South Korea Preliminary Exports (June 1–20) - DRAM (including modules): +342% YoY, +3% MoM - Flash Memory (NAND): +336% YoY, +28% MoM - SSD: +405% YoY, +25% MoM - MCP (HBM): +209%…</p>
-              <a href="https://x.com/jukan05/status/2068501546313437419">tweet_id 2068501546313437419</a>
+              <header><b>2026-06-23</b><span>score 18｜</span></header>
+              <p>This is actually a really important point. If CXMT’s DRAM ASP is only about 5–10% lower than Samsung, SK Hynix, and Micron’s, it suggests that China currently has no interest in d…</p>
+              <a href="https://x.com/jukan05/status/2069488184036307049">tweet_id 2069488184036307049</a>
             </article>
             </div>
               </details>
@@ -595,42 +653,42 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
                 <span>02</span>
                 <div>
                   <h3><span class="lang lang-zh">AI 半导体供应链</span><span class="lang lang-en">AI Semi Supply Chain</span></h3>
-                  <p><span class="lang lang-block lang-zh">jukan05 近 3 日在AI 半导体供应链里主要说：Samsung 代工 AMD CPU、TSMC/Intel 竞争和先进节点扩产、SK hynix、HBM、内存供给、锁单和存储价格周期、CoPoS/CoWoS、先进封装、封装设备和韩国工程师原始信息。</span><span class="lang lang-block lang-en">In the last 3 days, jukan05 mainly discussed Samsung foundry for AMD CPUs, TSMC/Intel competition and leading-node expansion; SK hynix, HBM, memory supply, allocation and the storage price cycle; CoPoS/CoWoS, advanced packaging, packaging tools and raw Korean-engineer information within AI Semi Supply Chain.</span></p>
+                  <p><span class="lang lang-block lang-zh">jukan05 近 3 日在AI 半导体供应链里主要说：SK hynix、HBM、内存供给、锁单和存储价格周期、Samsung 代工 AMD CPU、TSMC/Intel 竞争和先进节点扩产、CoPoS/CoWoS、先进封装、封装设备和韩国工程师原始信息。</span><span class="lang lang-block lang-en">In the last 3 days, jukan05 mainly discussed SK hynix, HBM, memory supply, allocation and the storage price cycle; Samsung foundry for AMD CPUs, TSMC/Intel competition and leading-node expansion; CoPoS/CoWoS, advanced packaging, packaging tools and raw Korean-engineer information within AI Semi Supply Chain.</span></p>
                 </div>
-                <strong>7</strong>
+                <strong>10</strong>
               </header>
               <div class="chain-body">
                 <div>
                   <p><b><span class="lang lang-zh">主要说什么</span><span class="lang lang-en">Main Takeaways</span></b></p>
-                  <ul class="lang lang-zh"><li>窗口内该主题共 7 条；主线不是模板判断，而是来自近端原文：Samsung 代工 AMD CPU、TSMC/Intel 竞争和先进节点扩产、SK hynix、HBM、内存供给、锁单和存储价格周期、CoPoS/CoWoS、先进封装、封装设备和韩国工程师原始信息。</li><li>反复出现的标的/关键词：AI、JEDEC、SPHBM4、HBM、FC BGA、AI200。</li><li>证据锚点：2026-06-21 tweet 268060：JEDEC Ratifies &#x27;SPHBM4&#x27; Standard; Glass Substrate Utility Draws Attention The Joint Electron Device Engineering Council…；2026-06-22 tweet 193930：Korea&#x27;s June Memory Semiconductor Exports Poised to Set a New All Time Record June memory semiconductor exports extende…</li><li>阅读边界：这是 jukan05 的近端新闻/情报流摘要，不直接改写 A股映射或交易结论。</li></ul>
-                  <ul class="lang lang-en"><li>This theme has 7 tweets in the window; the line is derived from recent source text, not a static template: Samsung foundry for AMD CPUs, TSMC/Intel competition and leading-node expansion; SK hynix, HBM, memory supply, allocation and the storage price cycle; CoPoS/CoWoS, advanced packaging, packaging tools and raw Korean-engineer information.</li><li>Recurring tickers/keywords: AI, JEDEC, SPHBM4, HBM, FC BGA, AI200.</li><li>Evidence anchors: 2026-06-21 tweet 268060: JEDEC Ratifies &#x27;SPHBM4&#x27; Standard; Glass Substrate Utility Draws Attention The Joint Electron Device Engineering Council…; 2026-06-22 tweet 193930: Korea&#x27;s June Memory Semiconductor Exports Poised to Set a New All Time Record June memory semiconductor exports extende…</li><li>Boundary: this is a near-term jukan05 news/raw-intel feed summary, not an A-share mapping or trading conclusion.</li></ul>
-                  <p><b>Top tickers:</b> </p>
+                  <ul class="lang lang-zh"><li>窗口内该主题共 10 条；主线不是模板判断，而是来自近端原文：SK hynix、HBM、内存供给、锁单和存储价格周期、Samsung 代工 AMD CPU、TSMC/Intel 竞争和先进节点扩产、CoPoS/CoWoS、先进封装、封装设备和韩国工程师原始信息。</li><li>反复出现的标的/关键词：TSM。</li><li>证据锚点：2026-06-23 tweet 219092：Q2 Consumer LPDDR5X Prices Rise 89% Market research firm SigmaIntell announced on the 22nd that prices for consumer pro…；2026-06-22 tweet 887767：SK Hynix Throttles HBM4 Production… Seeks Additional Profit by Expanding Supply Constrained Commodity DRAM SK Hynix is…</li><li>阅读边界：这是 jukan05 的近端新闻/情报流摘要，不直接改写 A股映射或交易结论。</li></ul>
+                  <ul class="lang lang-en"><li>This theme has 10 tweets in the window; the line is derived from recent source text, not a static template: SK hynix, HBM, memory supply, allocation and the storage price cycle; Samsung foundry for AMD CPUs, TSMC/Intel competition and leading-node expansion; CoPoS/CoWoS, advanced packaging, packaging tools and raw Korean-engineer information.</li><li>Recurring tickers/keywords: TSM.</li><li>Evidence anchors: 2026-06-23 tweet 219092: Q2 Consumer LPDDR5X Prices Rise 89% Market research firm SigmaIntell announced on the 22nd that prices for consumer pro…; 2026-06-22 tweet 887767: SK Hynix Throttles HBM4 Production… Seeks Additional Profit by Expanding Supply Constrained Commodity DRAM SK Hynix is…</li><li>Boundary: this is a near-term jukan05 news/raw-intel feed summary, not an A-share mapping or trading conclusion.</li></ul>
+                  <p><b>Top tickers:</b> TSM</p>
                 </div>
                 <div class="mini-metrics">
-                  <label><span class="lang lang-zh">窗口推文</span><span class="lang lang-en">Window Tweets</span><div class="metric-bar metric-teal" aria-label="window tweets 7"><span style="width:7%"></span><b>7</b></div></label>
+                  <label><span class="lang lang-zh">窗口推文</span><span class="lang lang-en">Window Tweets</span><div class="metric-bar metric-teal" aria-label="window tweets 10"><span style="width:10%"></span><b>10</b></div></label>
                   <label><span class="lang lang-zh">证据密度</span><span class="lang lang-en">Evidence Density</span><div class="metric-bar metric-teal" aria-label="evidence density 100"><span style="width:100%"></span><b>100</b></div></label>
-                  <label><span class="lang lang-zh">Ticker 宽度</span><span class="lang lang-en">Ticker Breadth</span><div class="metric-bar metric-teal" aria-label="ticker breadth 0"><span style="width:0%"></span><b>0</b></div></label>
+                  <label><span class="lang lang-zh">Ticker 宽度</span><span class="lang lang-en">Ticker Breadth</span><div class="metric-bar metric-teal" aria-label="ticker breadth 12"><span style="width:12%"></span><b>12</b></div></label>
                 </div>
               </div>
               <details class="evidence-drawer">
                 <summary><span class="lang lang-zh">展开 jukan05 推文证据样本</span><span class="lang lang-en">Open jukan05 tweet evidence samples</span></summary>
                 <div class="evidence-grid">
             <article class="evidence-item">
-              <header><b>2026-06-22</b><span>score 24｜</span></header>
-              <p>Samsung Electro Mechanics Begins Mass Production of FC BGA for Qualcomm&#x27;s &quot;AI200,&quot; Expanding Collaboration into the Data Center Segment Samsung Electro Mechanics has begun mass pr…</p>
-              <a href="https://x.com/jukan05/status/2068932544347980289">tweet_id 2068932544347980289</a>
+              <header><b>2026-06-22</b><span>score 26｜</span></header>
+              <p>Korea&#x27;s June Memory Semiconductor Exports Poised to Set a New All Time Record June memory semiconductor exports extended their powerful upward run, with both export value and unit…</p>
+              <a href="https://x.com/jukan05/status/2068961529484193930">tweet_id 2068961529484193930</a>
             </article>
 
             <article class="evidence-item">
-              <header><b>2026-06-20</b><span>score 22｜</span></header>
-              <p>Weekend reading recommendations: • JPMorgan — AI Drives Resurgence in Custom Chips (ASICs): ASIC Market Overview/Update • SemiAnalysis — Stop Saying Half of 2026 US Datacenter Cap…</p>
-              <a href="https://x.com/jukan05/status/2068214793333526718">tweet_id 2068214793333526718</a>
+              <header><b>2026-06-23</b><span>score 38｜</span></header>
+              <p>Why overcomplicate it? Micron is trying to build a strong relationship with Anthropic early on and make Anthropic more dependent on Micron. Anthropic is likely to consume more and…</p>
+              <a href="https://x.com/jukan05/status/2069278356193919073">tweet_id 2069278356193919073</a>
             </article>
 
             <article class="evidence-item">
-              <header><b>2026-06-21</b><span>score 21｜</span></header>
-              <p>Samsung Electronics Breaks Ground in Earnest on Its Last Pyeongtaek Semiconductor Fab Samsung Electronics has begun preparations to break ground on &quot;P5 Fab 2,&quot; the final fab at it…</p>
-              <a href="https://x.com/jukan05/status/2068833982037565498">tweet_id 2068833982037565498</a>
+              <header><b>2026-06-24</b><span>score 19｜</span></header>
+              <p>Samsung Electronics Allocates Half of HBM Capacity to HBM4 Samsung Electronics has been found to have assigned half of its high bandwidth memory (HBM) production capacity to its s…</p>
+              <a href="https://x.com/jukan05/status/2069680390978027791">tweet_id 2069680390978027791</a>
             </article>
             </div>
               </details>
@@ -641,19 +699,19 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
                 <span>03</span>
                 <div>
                   <h3><span class="lang lang-zh">Neocloud 融资质量</span><span class="lang lang-en">Neocloud Financing Quality</span></h3>
-                  <p><span class="lang lang-block lang-zh">jukan05 近 3 日在Neocloud 融资质量里主要说：AI 股票估值、Anthropic/Mythos 和二级市场情绪。</span><span class="lang lang-block lang-en">In the last 3 days, jukan05 mainly discussed AI-stock valuation, Anthropic/Mythos and secondary-market sentiment within Neocloud Financing Quality.</span></p>
+                  <p><span class="lang lang-block lang-zh">jukan05 近 3 日在Neocloud 融资质量里主要说：NBIS/IREN/CRWV 等 Neocloud 融资结构、合约质量和机构持股、AI 股票估值、Anthropic/Mythos 和二级市场情绪。</span><span class="lang lang-block lang-en">In the last 3 days, jukan05 mainly discussed NBIS/IREN/CRWV neocloud financing structure, contract quality and institutional ownership; AI-stock valuation, Anthropic/Mythos and secondary-market sentiment within Neocloud Financing Quality.</span></p>
                 </div>
-                <strong>4</strong>
+                <strong>5</strong>
               </header>
               <div class="chain-body">
                 <div>
                   <p><b><span class="lang lang-zh">主要说什么</span><span class="lang lang-en">Main Takeaways</span></b></p>
-                  <ul class="lang lang-zh"><li>窗口内该主题共 4 条；主线不是模板判断，而是来自近端原文：AI 股票估值、Anthropic/Mythos 和二级市场情绪。</li><li>反复出现的标的/关键词：FC BGA、AI200、AI、TPU。</li><li>证据锚点：2026-06-20 tweet 611724：Taiwan Makers Poised to Raise Chip Resistor Prices as China Players Hike and the Price Gap Narrows As Taiwanese chip re…；2026-06-22 tweet 980289：Samsung Electro Mechanics Begins Mass Production of FC BGA for Qualcomm&#x27;s &quot;AI200,&quot; Expanding Collaboration into the Dat…</li><li>阅读边界：这是 jukan05 的近端新闻/情报流摘要，不直接改写 A股映射或交易结论。</li></ul>
-                  <ul class="lang lang-en"><li>This theme has 4 tweets in the window; the line is derived from recent source text, not a static template: AI-stock valuation, Anthropic/Mythos and secondary-market sentiment.</li><li>Recurring tickers/keywords: FC BGA, AI200, AI, TPU.</li><li>Evidence anchors: 2026-06-20 tweet 611724: Taiwan Makers Poised to Raise Chip Resistor Prices as China Players Hike and the Price Gap Narrows As Taiwanese chip re…; 2026-06-22 tweet 980289: Samsung Electro Mechanics Begins Mass Production of FC BGA for Qualcomm&#x27;s &quot;AI200,&quot; Expanding Collaboration into the Dat…</li><li>Boundary: this is a near-term jukan05 news/raw-intel feed summary, not an A-share mapping or trading conclusion.</li></ul>
+                  <ul class="lang lang-zh"><li>窗口内该主题共 5 条；主线不是模板判断，而是来自近端原文：NBIS/IREN/CRWV 等 Neocloud 融资结构、合约质量和机构持股、AI 股票估值、Anthropic/Mythos 和二级市场情绪。</li><li>反复出现的标的/关键词：HBM4、SK、DRAM SK、DRAM、HBM。</li><li>证据锚点：2026-06-22 tweet 887767：SK Hynix Throttles HBM4 Production… Seeks Additional Profit by Expanding Supply Constrained Commodity DRAM SK Hynix is…</li><li>阅读边界：这是 jukan05 的近端新闻/情报流摘要，不直接改写 A股映射或交易结论。</li></ul>
+                  <ul class="lang lang-en"><li>This theme has 5 tweets in the window; the line is derived from recent source text, not a static template: NBIS/IREN/CRWV neocloud financing structure, contract quality and institutional ownership; AI-stock valuation, Anthropic/Mythos and secondary-market sentiment.</li><li>Recurring tickers/keywords: HBM4, SK, DRAM SK, DRAM, HBM.</li><li>Evidence anchors: 2026-06-22 tweet 887767: SK Hynix Throttles HBM4 Production… Seeks Additional Profit by Expanding Supply Constrained Commodity DRAM SK Hynix is…</li><li>Boundary: this is a near-term jukan05 news/raw-intel feed summary, not an A-share mapping or trading conclusion.</li></ul>
                   <p><b>Top tickers:</b> </p>
                 </div>
                 <div class="mini-metrics">
-                  <label><span class="lang lang-zh">窗口推文</span><span class="lang lang-en">Window Tweets</span><div class="metric-bar metric-amber" aria-label="window tweets 4"><span style="width:4%"></span><b>4</b></div></label>
+                  <label><span class="lang lang-zh">窗口推文</span><span class="lang lang-en">Window Tweets</span><div class="metric-bar metric-amber" aria-label="window tweets 5"><span style="width:5%"></span><b>5</b></div></label>
                   <label><span class="lang lang-zh">证据密度</span><span class="lang lang-en">Evidence Density</span><div class="metric-bar metric-amber" aria-label="evidence density 100"><span style="width:100%"></span><b>100</b></div></label>
                   <label><span class="lang lang-zh">Ticker 宽度</span><span class="lang lang-en">Ticker Breadth</span><div class="metric-bar metric-amber" aria-label="ticker breadth 0"><span style="width:0%"></span><b>0</b></div></label>
                 </div>
@@ -662,21 +720,21 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
                 <summary><span class="lang lang-zh">展开 jukan05 推文证据样本</span><span class="lang lang-en">Open jukan05 tweet evidence samples</span></summary>
                 <div class="evidence-grid">
             <article class="evidence-item">
-              <header><b>2026-06-20</b><span>score 25｜</span></header>
-              <p>Taiwan Makers Poised to Raise Chip Resistor Prices as China Players Hike and the Price Gap Narrows As Taiwanese chip resistor makers shift to selective order taking and cull order…</p>
-              <a href="https://x.com/jukan05/status/2068158302035611724">tweet_id 2068158302035611724</a>
+              <header><b>2026-06-22</b><span>score 24｜</span></header>
+              <p>Samsung Electro Mechanics Begins Mass Production of FC BGA for Qualcomm&#x27;s &quot;AI200,&quot; Expanding Collaboration into the Data Center Segment Samsung Electro Mechanics has begun mass pr…</p>
+              <a href="https://x.com/jukan05/status/2068932544347980289">tweet_id 2068932544347980289</a>
             </article>
 
             <article class="evidence-item">
-              <header><b>2026-06-22</b><span>score 19｜</span></header>
+              <header><b>2026-06-22</b><span>score 21｜</span></header>
               <p>&quot;My latest industry checks indicate that Google is developing an upgraded v9 chip, likely codenamed Triggerfish, based on TPU v9 / Humufish, with MediaTek exclusively securing thi…</p>
               <a href="https://x.com/jukan05/status/2068926089800593705">tweet_id 2068926089800593705</a>
             </article>
 
             <article class="evidence-item">
-              <header><b>2026-06-22</b><span>score 24｜</span></header>
-              <p>Samsung Electro Mechanics Begins Mass Production of FC BGA for Qualcomm&#x27;s &quot;AI200,&quot; Expanding Collaboration into the Data Center Segment Samsung Electro Mechanics has begun mass pr…</p>
-              <a href="https://x.com/jukan05/status/2068932544347980289">tweet_id 2068932544347980289</a>
+              <header><b>2026-06-24</b><span>score 14｜</span></header>
+              <p>Exclusive: Apple to Begin Foldable iPhone Mass Production in July, Hinge Problem Resolved Apple will begin mass production of its first foldable iPhone from late July. While specu…</p>
+              <a href="https://x.com/jukan05/status/2069689336258576813">tweet_id 2069689336258576813</a>
             </article>
             </div>
               </details>
@@ -686,21 +744,21 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
               <header class="chain-head">
                 <span>04</span>
                 <div>
-                  <h3><span class="lang lang-zh">CPO / 光通信</span><span class="lang lang-en">CPO / Optical Interconnect</span></h3>
-                  <p><span class="lang lang-block lang-zh">jukan05 近 3 日在CPO / 光通信里主要说：硅光、CPO/NPO、1.6T、连接器和 PCB/HVLP 材料链。</span><span class="lang lang-block lang-en">In the last 3 days, jukan05 mainly discussed silicon photonics, CPO/NPO, 1.6T, connectors and PCB/HVLP materials within CPO / Optical Interconnect.</span></p>
+                  <h3><span class="lang lang-zh">InP / 化合物半导体</span><span class="lang lang-en">InP / Compound Semis</span></h3>
+                  <p><span class="lang lang-block lang-zh">jukan05 近 3 日在InP / 化合物半导体里主要说：InP 衬底出口/管制、CSP 分散供应和化合物半导体供给安全。</span><span class="lang lang-block lang-en">In the last 3 days, jukan05 mainly discussed InP substrate exports, CSP supply diversification and compound-semi supply security within InP / Compound Semis.</span></p>
                 </div>
-                <strong>1</strong>
+                <strong>3</strong>
               </header>
               <div class="chain-body">
                 <div>
                   <p><b><span class="lang lang-zh">主要说什么</span><span class="lang lang-en">Main Takeaways</span></b></p>
-                  <ul class="lang lang-zh"><li>窗口内该主题共 1 条；主线不是模板判断，而是来自近端原文：硅光、CPO/NPO、1.6T、连接器和 PCB/HVLP 材料链。</li><li>反复出现的标的/关键词：AI、ASIC、US、CPU、TAM。</li><li>证据锚点：2026-06-20 tweet 526718：Weekend reading recommendations: • JPMorgan — AI Drives Resurgence in Custom Chips (ASICs): ASIC Market Overview/Update…</li><li>阅读边界：这是 jukan05 的近端新闻/情报流摘要，不直接改写 A股映射或交易结论。</li></ul>
-                  <ul class="lang lang-en"><li>This theme has 1 tweets in the window; the line is derived from recent source text, not a static template: silicon photonics, CPO/NPO, 1.6T, connectors and PCB/HVLP materials.</li><li>Recurring tickers/keywords: AI, ASIC, US, CPU, TAM.</li><li>Evidence anchors: 2026-06-20 tweet 526718: Weekend reading recommendations: • JPMorgan — AI Drives Resurgence in Custom Chips (ASICs): ASIC Market Overview/Update…</li><li>Boundary: this is a near-term jukan05 news/raw-intel feed summary, not an A-share mapping or trading conclusion.</li></ul>
+                  <ul class="lang lang-zh"><li>窗口内该主题共 3 条；主线不是模板判断，而是来自近端原文：InP 衬底出口/管制、CSP 分散供应和化合物半导体供给安全。</li><li>反复出现的标的/关键词：FC BGA、AI200、TPU。</li><li>证据锚点：2026-06-22 tweet 980289：Samsung Electro Mechanics Begins Mass Production of FC BGA for Qualcomm&#x27;s &quot;AI200,&quot; Expanding Collaboration into the Dat…；2026-06-23 tweet 350136：FundaAI: &quot;TPU Update On the previously mentioned cancellation of Pumafish, we maintain ourcurrent view. We have not obs…</li><li>阅读边界：这是 jukan05 的近端新闻/情报流摘要，不直接改写 A股映射或交易结论。</li></ul>
+                  <ul class="lang lang-en"><li>This theme has 3 tweets in the window; the line is derived from recent source text, not a static template: InP substrate exports, CSP supply diversification and compound-semi supply security.</li><li>Recurring tickers/keywords: FC BGA, AI200, TPU.</li><li>Evidence anchors: 2026-06-22 tweet 980289: Samsung Electro Mechanics Begins Mass Production of FC BGA for Qualcomm&#x27;s &quot;AI200,&quot; Expanding Collaboration into the Dat…; 2026-06-23 tweet 350136: FundaAI: &quot;TPU Update On the previously mentioned cancellation of Pumafish, we maintain ourcurrent view. We have not obs…</li><li>Boundary: this is a near-term jukan05 news/raw-intel feed summary, not an A-share mapping or trading conclusion.</li></ul>
                   <p><b>Top tickers:</b> </p>
                 </div>
                 <div class="mini-metrics">
-                  <label><span class="lang lang-zh">窗口推文</span><span class="lang lang-en">Window Tweets</span><div class="metric-bar metric-crimson" aria-label="window tweets 1"><span style="width:1%"></span><b>1</b></div></label>
-                  <label><span class="lang lang-zh">证据密度</span><span class="lang lang-en">Evidence Density</span><div class="metric-bar metric-crimson" aria-label="evidence density 34"><span style="width:34%"></span><b>34</b></div></label>
+                  <label><span class="lang lang-zh">窗口推文</span><span class="lang lang-en">Window Tweets</span><div class="metric-bar metric-crimson" aria-label="window tweets 3"><span style="width:3%"></span><b>3</b></div></label>
+                  <label><span class="lang lang-zh">证据密度</span><span class="lang lang-en">Evidence Density</span><div class="metric-bar metric-crimson" aria-label="evidence density 100"><span style="width:100%"></span><b>100</b></div></label>
                   <label><span class="lang lang-zh">Ticker 宽度</span><span class="lang lang-en">Ticker Breadth</span><div class="metric-bar metric-crimson" aria-label="ticker breadth 0"><span style="width:0%"></span><b>0</b></div></label>
                 </div>
               </div>
@@ -708,9 +766,21 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
                 <summary><span class="lang lang-zh">展开 jukan05 推文证据样本</span><span class="lang lang-en">Open jukan05 tweet evidence samples</span></summary>
                 <div class="evidence-grid">
             <article class="evidence-item">
-              <header><b>2026-06-20</b><span>score 22｜</span></header>
-              <p>Weekend reading recommendations: • JPMorgan — AI Drives Resurgence in Custom Chips (ASICs): ASIC Market Overview/Update • SemiAnalysis — Stop Saying Half of 2026 US Datacenter Cap…</p>
-              <a href="https://x.com/jukan05/status/2068214793333526718">tweet_id 2068214793333526718</a>
+              <header><b>2026-06-23</b><span>score 21｜</span></header>
+              <p>FundaAI: &quot;TPU Update On the previously mentioned cancellation of Pumafish, we maintain ourcurrent view. We have not observed any progress regarding a restart of Pumafishfrom the s…</p>
+              <a href="https://x.com/jukan05/status/2069266963965350136">tweet_id 2069266963965350136</a>
+            </article>
+
+            <article class="evidence-item">
+              <header><b>2026-06-24</b><span>score 19｜</span></header>
+              <p>Samsung Electronics Allocates Half of HBM Capacity to HBM4 Samsung Electronics has been found to have assigned half of its high bandwidth memory (HBM) production capacity to its s…</p>
+              <a href="https://x.com/jukan05/status/2069680390978027791">tweet_id 2069680390978027791</a>
+            </article>
+
+            <article class="evidence-item">
+              <header><b>2026-06-22</b><span>score 24｜</span></header>
+              <p>Samsung Electro Mechanics Begins Mass Production of FC BGA for Qualcomm&#x27;s &quot;AI200,&quot; Expanding Collaboration into the Data Center Segment Samsung Electro Mechanics has begun mass pr…</p>
+              <a href="https://x.com/jukan05/status/2068932544347980289">tweet_id 2068932544347980289</a>
             </article>
             </div>
               </details>
@@ -729,23 +799,50 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
             <article class="timeline-item">
               <span>J01</span>
               <div>
-                <h4>｜2026-06-19</h4>
-                <p>JPM just updated its price target for Kioxia, implying 42.7% upside from the current share price. https://t.co/hY3LCrvVJu</p>
-                <small>score 26｜｜<a href="https://x.com/jukan05/status/2068107984908251479">tweet_id 2068107984908251479</a></small>
+                <h4>memory_hbm｜2026-06-23</h4>
+                <p>Why did the KOSPI fall today? 1. Korean leverage trading has climbed to excessively high levels. 2. Ahead of Micron&#x27;s earnings, profit taking is underway, with talk that buyside expectation…</p>
+                <small>score 39｜｜<a href="https://x.com/jukan05/status/2069368311146815885">tweet_id 2069368311146815885</a></small>
               </div>
             </article>
 
             <article class="timeline-item">
               <span>J02</span>
               <div>
-                <h4>ai_semicap_supply_chain, memory_hbm, neocloud_financing｜2026-06-20</h4>
-                <p>Taiwan Makers Poised to Raise Chip Resistor Prices as China Players Hike and the Price Gap Narrows As Taiwanese chip resistor makers shift to selective order taking and cull orders that car…</p>
-                <small>score 25｜｜<a href="https://x.com/jukan05/status/2068158302035611724">tweet_id 2068158302035611724</a></small>
+                <h4>ai_semicap_supply_chain, memory_hbm｜2026-06-23</h4>
+                <p>Why overcomplicate it? Micron is trying to build a strong relationship with Anthropic early on and make Anthropic more dependent on Micron. Anthropic is likely to consume more and more memo…</p>
+                <small>score 38｜｜<a href="https://x.com/jukan05/status/2069278356193919073">tweet_id 2069278356193919073</a></small>
               </div>
             </article>
 
             <article class="timeline-item">
               <span>J03</span>
+              <div>
+                <h4>ai_semicap_supply_chain, memory_hbm, neocloud_financing｜2026-06-22</h4>
+                <p>SK Hynix Throttles HBM4 Production… Seeks Additional Profit by Expanding Supply Constrained Commodity DRAM SK Hynix is moderating the pace of its sixth generation high bandwidth memory (HBM…</p>
+                <small>score 37｜｜<a href="https://x.com/jukan05/status/2069207209133887767">tweet_id 2069207209133887767</a></small>
+              </div>
+            </article>
+
+            <article class="timeline-item">
+              <span>J04</span>
+              <div>
+                <h4>ai_semicap_supply_chain, memory_hbm, power_grid｜2026-06-23</h4>
+                <p>Q2 Consumer LPDDR5X Prices Rise 89% Market research firm SigmaIntell announced on the 22nd that prices for consumer product categories rose in the second quarter of this year due to a memor…</p>
+                <small>score 34｜｜<a href="https://x.com/jukan05/status/2069263371766219092">tweet_id 2069263371766219092</a></small>
+              </div>
+            </article>
+
+            <article class="timeline-item">
+              <span>J05</span>
+              <div>
+                <h4>ai_semicap_supply_chain, memory_hbm, neocloud_financing, power_grid｜2026-06-22</h4>
+                <p>Korea&#x27;s June Memory Semiconductor Exports Poised to Set a New All Time Record June memory semiconductor exports extended their powerful upward run, with both export value and unit prices su…</p>
+                <small>score 26｜｜<a href="https://x.com/jukan05/status/2068961529484193930">tweet_id 2068961529484193930</a></small>
+              </div>
+            </article>
+
+            <article class="timeline-item">
+              <span>J06</span>
               <div>
                 <h4>ai_semicap_supply_chain, inp_compound_semi, memory_hbm, neocloud_financ…｜2026-06-22</h4>
                 <p>Samsung Electro Mechanics Begins Mass Production of FC BGA for Qualcomm&#x27;s &quot;AI200,&quot; Expanding Collaboration into the Data Center Segment Samsung Electro Mechanics has begun mass production o…</p>
@@ -754,34 +851,34 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
             </article>
 
             <article class="timeline-item">
-              <span>J04</span>
-              <div>
-                <h4>ai_semicap_supply_chain, memory_hbm, neocloud_financing, power_grid｜2026-06-22</h4>
-                <p>Korea&#x27;s June Memory Semiconductor Exports Poised to Set a New All Time Record June memory semiconductor exports extended their powerful upward run, with both export value and unit prices su…</p>
-                <small>score 23｜｜<a href="https://x.com/jukan05/status/2068961529484193930">tweet_id 2068961529484193930</a></small>
-              </div>
-            </article>
-
-            <article class="timeline-item">
-              <span>J05</span>
-              <div>
-                <h4>ai_semicap_supply_chain, optical_cpo｜2026-06-20</h4>
-                <p>Weekend reading recommendations: • JPMorgan — AI Drives Resurgence in Custom Chips (ASICs): ASIC Market Overview/Update • SemiAnalysis — Stop Saying Half of 2026 US Datacenter Capacity Is C…</p>
-                <small>score 22｜｜<a href="https://x.com/jukan05/status/2068214793333526718">tweet_id 2068214793333526718</a></small>
-              </div>
-            </article>
-
-            <article class="timeline-item">
-              <span>J06</span>
-              <div>
-                <h4>memory_hbm｜2026-06-21</h4>
-                <p>What do you think about Micron’s earnings? I read Citi’s preview report, and their ASP assumptions looked way too conservative. If consensus is around that level, I’m starting to think Micr…</p>
-                <small>score 21｜MU｜<a href="https://x.com/jukan05/status/2068573474453684291">tweet_id 2068573474453684291</a></small>
-              </div>
-            </article>
-
-            <article class="timeline-item">
               <span>J07</span>
+              <div>
+                <h4>memory_hbm｜2026-06-22</h4>
+                <p>If it really plays out like this… lol, that would be amazing. Jefferies held an expert call with a memory consultant, and according to this expert, memory prices are expected to rise 40–50%…</p>
+                <small>score 23｜｜<a href="https://x.com/jukan05/status/2068895341706109191">tweet_id 2068895341706109191</a></small>
+              </div>
+            </article>
+
+            <article class="timeline-item">
+              <span>J08</span>
+              <div>
+                <h4>｜2026-06-24</h4>
+                <p>Having recently traded China A shares myself, my impression was that the market is far too easily moved, and even manipulated, by absurd rumors. At the time, I held a leading Chinese CCL st…</p>
+                <small>score 21｜｜<a href="https://x.com/jukan05/status/2069600288546451830">tweet_id 2069600288546451830</a></small>
+              </div>
+            </article>
+
+            <article class="timeline-item">
+              <span>J09</span>
+              <div>
+                <h4>memory_hbm, neocloud_financing｜2026-06-22</h4>
+                <p>&quot;My latest industry checks indicate that Google is developing an upgraded v9 chip, likely codenamed Triggerfish, based on TPU v9 / Humufish, with MediaTek exclusively securing this new, hig…</p>
+                <small>score 21｜｜<a href="https://x.com/jukan05/status/2068926089800593705">tweet_id 2068926089800593705</a></small>
+              </div>
+            </article>
+
+            <article class="timeline-item">
+              <span>J10</span>
               <div>
                 <h4>ai_semicap_supply_chain, memory_hbm｜2026-06-21</h4>
                 <p>Samsung Electronics Breaks Ground in Earnest on Its Last Pyeongtaek Semiconductor Fab Samsung Electronics has begun preparations to break ground on &quot;P5 Fab 2,&quot; the final fab at its Pyeongta…</p>
@@ -790,47 +887,20 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
             </article>
 
             <article class="timeline-item">
-              <span>J08</span>
-              <div>
-                <h4>memory_hbm, neocloud_financing｜2026-06-22</h4>
-                <p>&quot;My latest industry checks indicate that Google is developing an upgraded v9 chip, likely codenamed Triggerfish, based on TPU v9 / Humufish, with MediaTek exclusively securing this new, hig…</p>
-                <small>score 19｜｜<a href="https://x.com/jukan05/status/2068926089800593705">tweet_id 2068926089800593705</a></small>
-              </div>
-            </article>
-
-            <article class="timeline-item">
-              <span>J09</span>
-              <div>
-                <h4>memory_hbm｜2026-06-22</h4>
-                <p>If it really plays out like this… lol, that would be amazing. Jefferies held an expert call with a memory consultant, and according to this expert, memory prices are expected to rise 40–50%…</p>
-                <small>score 17｜｜<a href="https://x.com/jukan05/status/2068895341706109191">tweet_id 2068895341706109191</a></small>
-              </div>
-            </article>
-
-            <article class="timeline-item">
-              <span>J10</span>
-              <div>
-                <h4>ai_semicap_supply_chain, memory_hbm｜2026-06-21</h4>
-                <p>This is a great piece explaining why Nvidia’s CMX rack could drive massive NAND demand. I highly recommend giving it a read. https://t.co/PbmPcmFYjY</p>
-                <small>score 17｜｜<a href="https://x.com/jukan05/status/2068595103233671513">tweet_id 2068595103233671513</a></small>
-              </div>
-            </article>
-
-            <article class="timeline-item">
               <span>J11</span>
               <div>
-                <h4>memory_hbm｜2026-06-21</h4>
-                <p>South Korea Preliminary Exports (June 1–20) - DRAM (including modules): +342% YoY, +3% MoM - Flash Memory (NAND): +336% YoY, +28% MoM - SSD: +405% YoY, +25% MoM - MCP (HBM): +209% YoY, +51%…</p>
-                <small>score 15｜｜<a href="https://x.com/jukan05/status/2068501546313437419">tweet_id 2068501546313437419</a></small>
+                <h4>ai_semicap_supply_chain, inp_compound_semi, memory_hbm｜2026-06-23</h4>
+                <p>FundaAI: &quot;TPU Update On the previously mentioned cancellation of Pumafish, we maintain ourcurrent view. We have not observed any progress regarding a restart of Pumafishfrom the supply chai…</p>
+                <small>score 21｜｜<a href="https://x.com/jukan05/status/2069266963965350136">tweet_id 2069266963965350136</a></small>
               </div>
             </article>
 
             <article class="timeline-item">
               <span>J12</span>
               <div>
-                <h4>memory_hbm｜2026-06-21</h4>
-                <p>Honestly, if I had hoarded physical boxes of DRAM last September instead of buying DRAM stocks, I probably would’ve made way more money! I actually have a friend who did exactly that and ma…</p>
-                <small>score 15｜｜<a href="https://x.com/jukan05/status/2068543612963770501">tweet_id 2068543612963770501</a></small>
+                <h4>ai_semicap_supply_chain, inp_compound_semi, memory_hbm｜2026-06-24</h4>
+                <p>Samsung Electronics Allocates Half of HBM Capacity to HBM4 Samsung Electronics has been found to have assigned half of its high bandwidth memory (HBM) production capacity to its sixth gener…</p>
+                <small>score 19｜｜<a href="https://x.com/jukan05/status/2069680390978027791">tweet_id 2069680390978027791</a></small>
               </div>
             </article>
             </div>
@@ -846,14 +916,14 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
       <div class="table-scroll"><table><thead><tr><th><span class="lang lang-zh">资产类型</span><span class="lang lang-en">Asset Type</span></th><th><span class="lang lang-zh">名称</span><span class="lang lang-en">Name</span></th><th><span class="lang lang-zh">数值</span><span class="lang lang-en">Value</span></th><th><span class="lang lang-zh">解释</span><span class="lang lang-en">Interpretation</span></th></tr></thead><tbody>
             <tr>
               <td><span class="lang lang-zh">高频 ticker</span><span class="lang lang-en">Frequent Ticker</span></td>
-              <td>MU</td>
+              <td>TSM</td>
               <td>1</td>
               <td><span class="lang lang-zh">当前 3 日窗口内绝对提及次数。</span><span class="lang lang-en">Absolute mentions in the current 3-day window.</span></td>
             </tr>
 
             <tr>
               <td><span class="lang lang-zh">升温 ticker</span><span class="lang lang-en">Rising Ticker</span></td>
-              <td>MU</td>
+              <td>TSM</td>
               <td>+1</td>
               <td>1 vs 0｜<span class="lang lang-zh">当前 3 日减前一 3 日。</span><span class="lang lang-en">Current 3 days minus previous 3 days.</span></td>
             </tr>
@@ -861,21 +931,28 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
             <tr>
               <td><span class="lang lang-zh">主题桶</span><span class="lang lang-en">Theme Bucket</span></td>
               <td><span class="lang lang-zh">HBM / 存储</span><span class="lang lang-en">HBM / Memory Bandwidth</span><small>memory_hbm</small></td>
-              <td>17</td>
+              <td>23</td>
               <td><span class="lang lang-zh">新闻流主题计数，只用于资产组织。</span><span class="lang lang-en">News-flow theme count for asset organization only.</span></td>
             </tr>
 
             <tr>
               <td><span class="lang lang-zh">主题桶</span><span class="lang lang-en">Theme Bucket</span></td>
               <td><span class="lang lang-zh">AI 半导体供应链</span><span class="lang lang-en">AI Semi Supply Chain</span><small>ai_semicap_supply_chain</small></td>
-              <td>7</td>
+              <td>10</td>
               <td><span class="lang lang-zh">新闻流主题计数，只用于资产组织。</span><span class="lang lang-en">News-flow theme count for asset organization only.</span></td>
             </tr>
 
             <tr>
               <td><span class="lang lang-zh">主题桶</span><span class="lang lang-en">Theme Bucket</span></td>
               <td><span class="lang lang-zh">Neocloud 融资质量</span><span class="lang lang-en">Neocloud Financing Quality</span><small>neocloud_financing</small></td>
-              <td>4</td>
+              <td>5</td>
+              <td><span class="lang lang-zh">新闻流主题计数，只用于资产组织。</span><span class="lang lang-en">News-flow theme count for asset organization only.</span></td>
+            </tr>
+
+            <tr>
+              <td><span class="lang lang-zh">主题桶</span><span class="lang lang-en">Theme Bucket</span></td>
+              <td><span class="lang lang-zh">InP / 化合物半导体</span><span class="lang lang-en">InP / Compound Semis</span><small>inp_compound_semi</small></td>
+              <td>3</td>
               <td><span class="lang lang-zh">新闻流主题计数，只用于资产组织。</span><span class="lang lang-en">News-flow theme count for asset organization only.</span></td>
             </tr>
 
@@ -883,20 +960,6 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
               <td><span class="lang lang-zh">主题桶</span><span class="lang lang-en">Theme Bucket</span></td>
               <td><span class="lang lang-zh">电力 / 功率链</span><span class="lang lang-en">Power / Grid Chain</span><small>power_grid</small></td>
               <td>3</td>
-              <td><span class="lang lang-zh">新闻流主题计数，只用于资产组织。</span><span class="lang lang-en">News-flow theme count for asset organization only.</span></td>
-            </tr>
-
-            <tr>
-              <td><span class="lang lang-zh">主题桶</span><span class="lang lang-en">Theme Bucket</span></td>
-              <td><span class="lang lang-zh">InP / 化合物半导体</span><span class="lang lang-en">InP / Compound Semis</span><small>inp_compound_semi</small></td>
-              <td>2</td>
-              <td><span class="lang lang-zh">新闻流主题计数，只用于资产组织。</span><span class="lang lang-en">News-flow theme count for asset organization only.</span></td>
-            </tr>
-
-            <tr>
-              <td><span class="lang lang-zh">主题桶</span><span class="lang lang-en">Theme Bucket</span></td>
-              <td><span class="lang lang-zh">CPO / 光通信</span><span class="lang lang-en">CPO / Optical Interconnect</span><small>optical_cpo</small></td>
-              <td>1</td>
               <td><span class="lang lang-zh">新闻流主题计数，只用于资产组织。</span><span class="lang lang-en">News-flow theme count for asset organization only.</span></td>
             </tr>
             </tbody></table></div>
@@ -912,43 +975,36 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
       <div class="table-scroll"><table><thead><tr><th><span class="lang lang-zh">主题</span><span class="lang lang-en">Theme</span></th><th><span class="lang lang-zh">推文数</span><span class="lang lang-en">Tweets</span></th><th><span class="lang lang-zh">时间范围</span><span class="lang lang-en">Time Range</span></th><th><span class="lang lang-zh">来源定位</span><span class="lang lang-en">Source Role</span></th></tr></thead><tbody>
             <tr>
               <td><span class="lang lang-zh">HBM / 存储</span><span class="lang lang-en">HBM / Memory Bandwidth</span><small>memory_hbm</small></td>
-              <td>17</td>
-              <td>2026-06-19 → 2026-06-22</td>
+              <td>23</td>
+              <td>2026-06-21 → 2026-06-24</td>
               <td><span class="lang lang-zh">jukan05 新闻流</span><span class="lang lang-en">jukan05 news flow</span></td>
             </tr>
 
             <tr>
               <td><span class="lang lang-zh">AI 半导体供应链</span><span class="lang lang-en">AI Semi Supply Chain</span><small>ai_semicap_supply_chain</small></td>
-              <td>7</td>
-              <td>2026-06-19 → 2026-06-22</td>
+              <td>10</td>
+              <td>2026-06-21 → 2026-06-24</td>
               <td><span class="lang lang-zh">jukan05 新闻流</span><span class="lang lang-en">jukan05 news flow</span></td>
             </tr>
 
             <tr>
               <td><span class="lang lang-zh">Neocloud 融资质量</span><span class="lang lang-en">Neocloud Financing Quality</span><small>neocloud_financing</small></td>
-              <td>4</td>
-              <td>2026-06-19 → 2026-06-22</td>
+              <td>5</td>
+              <td>2026-06-21 → 2026-06-24</td>
+              <td><span class="lang lang-zh">jukan05 新闻流</span><span class="lang lang-en">jukan05 news flow</span></td>
+            </tr>
+
+            <tr>
+              <td><span class="lang lang-zh">InP / 化合物半导体</span><span class="lang lang-en">InP / Compound Semis</span><small>inp_compound_semi</small></td>
+              <td>3</td>
+              <td>2026-06-21 → 2026-06-24</td>
               <td><span class="lang lang-zh">jukan05 新闻流</span><span class="lang lang-en">jukan05 news flow</span></td>
             </tr>
 
             <tr>
               <td><span class="lang lang-zh">电力 / 功率链</span><span class="lang lang-en">Power / Grid Chain</span><small>power_grid</small></td>
               <td>3</td>
-              <td>2026-06-19 → 2026-06-22</td>
-              <td><span class="lang lang-zh">jukan05 新闻流</span><span class="lang lang-en">jukan05 news flow</span></td>
-            </tr>
-
-            <tr>
-              <td><span class="lang lang-zh">InP / 化合物半导体</span><span class="lang lang-en">InP / Compound Semis</span><small>inp_compound_semi</small></td>
-              <td>2</td>
-              <td>2026-06-19 → 2026-06-22</td>
-              <td><span class="lang lang-zh">jukan05 新闻流</span><span class="lang lang-en">jukan05 news flow</span></td>
-            </tr>
-
-            <tr>
-              <td><span class="lang lang-zh">CPO / 光通信</span><span class="lang lang-en">CPO / Optical Interconnect</span><small>optical_cpo</small></td>
-              <td>1</td>
-              <td>2026-06-19 → 2026-06-22</td>
+              <td>2026-06-21 → 2026-06-24</td>
               <td><span class="lang lang-zh">jukan05 新闻流</span><span class="lang lang-en">jukan05 news flow</span></td>
             </tr>
             </tbody></table></div>
@@ -960,7 +1016,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
     </section>
     </main>
   <footer class="page">
-    AIpha X-KOL V1.0｜<span class="lang lang-zh">生成时间</span><span class="lang lang-en">Generated</span> 2026-06-23T20:05:01+08:00｜source_commit e216c73fe4dd
+    AIpha X-KOL V1.0｜<span class="lang lang-zh">生成时间</span><span class="lang lang-en">Generated</span> 2026-06-24T19:32:21+08:00｜source_commit 8ad5eddcf6ed
   </footer>
 </body>
 </html>
