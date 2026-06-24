@@ -243,19 +243,7 @@ h1 { margin: 6px 0 12px; font-size: clamp(36px, 4vw, 54px); line-height: 1.06; l
 .brief-titlebar small { color: var(--muted); font-size: 14px; }
 .brief-eyebrow { display: inline-flex; color: var(--blue); font-size: 11px; font-weight: 900; letter-spacing: 0.12em; text-transform: uppercase; }
 .brief-body { padding: 0; }
-.kol-feed-head { display: grid; grid-template-columns: 42px minmax(0,1fr) auto; gap: 10px; align-items: center; min-width: 0; }
-.kol-avatar, .tweet-avatar {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 999px;
-  color: #fff;
-  background: linear-gradient(135deg, var(--blue), var(--dark));
-  font-weight: 950;
-  flex: 0 0 auto;
-}
-.kol-avatar { width: 42px; height: 42px; font-size: 18px; }
-.tweet-avatar { width: 38px; height: 38px; font-size: 15px; }
+.kol-feed-head { display: grid; grid-template-columns: minmax(0,1fr) auto; gap: 10px; align-items: center; min-width: 0; }
 .kol-feed-meta { display: grid; gap: 2px; min-width: 0; }
 .kol-feed-meta h3 { margin: 0; font-size: 20px; line-height: 1.15; }
 .kol-feed-meta p { margin: 0; color: var(--muted); font-size: 12px; overflow-wrap: anywhere; }
@@ -299,7 +287,7 @@ h1 { margin: 6px 0 12px; font-size: clamp(36px, 4vw, 54px); line-height: 1.06; l
 .change-event-evidence b { display: block; color: var(--blue); font-size: 12px; }
 .change-event-evidence small { display: block; color: var(--muted); line-height: 1.45; overflow-wrap: anywhere; }
 .tweet-ledger { display: grid; gap: 0; border-top: 0; }
-.tweet-ledger-row { display: grid; grid-template-columns: 38px minmax(0, 1fr); gap: 10px; padding: 14px 14px 12px; background: #fff; border-bottom: 1px solid var(--line); border-left: 4px solid var(--line); }
+.tweet-ledger-row { display: grid; grid-template-columns: minmax(0, 1fr); gap: 10px; padding: 14px 14px 12px; background: #fff; border-bottom: 1px solid var(--line); border-left: 4px solid var(--line); }
 .tweet-ledger-row[data-change-type="tech_route"] { border-left-color: #6d5bd0; }
 .tweet-ledger-row[data-change-type="tech_progress"] { border-left-color: #087f5b; }
 .tweet-ledger-row[data-change-type="shortage"] { border-left-color: #9b2c2c; }
@@ -474,8 +462,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
   .brief-conclusion { grid-template-columns: 1fr; gap: 8px; }
   .brief-topic-grid, .brief-side-grid, .change-radar-grid, .change-summary-grid { grid-template-columns: 1fr; }
   .change-event-card dl { grid-template-columns: 1fr; }
-  .tweet-ledger-row { grid-template-columns: 34px minmax(0, 1fr); padding: 12px; }
-  .tweet-avatar { width: 34px; height: 34px; font-size: 13px; }
+  .tweet-ledger-row { grid-template-columns: minmax(0, 1fr); padding: 12px; }
   .tweet-action-row { max-width: none; font-size: 12px; }
   .brief-item-left { border-right: 0; }
   .brief-evidence-list span { grid-template-columns: 1fr; gap: 2px; }
@@ -551,7 +538,6 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
     <article class="brief-card">
       <header class="brief-titlebar">
         <div class="kol-feed-head">
-          <span class="kol-avatar" aria-hidden="true">S</span>
           <div class="kol-feed-meta">
             <span class="brief-eyebrow"><span class="lang lang-zh">当前 3 日窗口</span><span class="lang lang-en">Current 3-day window</span></span>
             <h3>Serenity <small>@aleabitoreddit</small></h3>
@@ -565,7 +551,6 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
     <div class="brief-desk lang lang-zh" data-brief-desk="aleabitoreddit">
       <div class="tweet-ledger">
             <article class="tweet-ledger-row tweet-card" data-change-type="tech_route">
-              <div class="tweet-avatar" aria-hidden="true">S</div>
               <div class="tweet-ledger-body">
                 <div class="tweet-head">
                   <div class="tweet-author-line">
@@ -601,7 +586,6 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
             </article>
 
             <article class="tweet-ledger-row tweet-card" data-change-type="demand">
-              <div class="tweet-avatar" aria-hidden="true">S</div>
               <div class="tweet-ledger-body">
                 <div class="tweet-head">
                   <div class="tweet-author-line">
@@ -637,7 +621,6 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
             </article>
 
             <article class="tweet-ledger-row tweet-card" data-change-type="tech_route">
-              <div class="tweet-avatar" aria-hidden="true">S</div>
               <div class="tweet-ledger-body">
                 <div class="tweet-head">
                   <div class="tweet-author-line">
@@ -673,7 +656,6 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
             </article>
 
             <article class="tweet-ledger-row tweet-card" data-change-type="supply_release">
-              <div class="tweet-avatar" aria-hidden="true">S</div>
               <div class="tweet-ledger-body">
                 <div class="tweet-head">
                   <div class="tweet-author-line">
@@ -709,7 +691,6 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
             </article>
 
             <article class="tweet-ledger-row tweet-card" data-change-type="tech_route">
-              <div class="tweet-avatar" aria-hidden="true">S</div>
               <div class="tweet-ledger-body">
                 <div class="tweet-head">
                   <div class="tweet-author-line">
@@ -745,7 +726,6 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
             </article>
 
             <article class="tweet-ledger-row tweet-card" data-change-type="tech_route">
-              <div class="tweet-avatar" aria-hidden="true">S</div>
               <div class="tweet-ledger-body">
                 <div class="tweet-head">
                   <div class="tweet-author-line">
@@ -781,7 +761,6 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
             </article>
 
             <article class="tweet-ledger-row tweet-card" data-change-type="risk">
-              <div class="tweet-avatar" aria-hidden="true">S</div>
               <div class="tweet-ledger-body">
                 <div class="tweet-head">
                   <div class="tweet-author-line">
@@ -817,7 +796,6 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
             </article>
 
             <article class="tweet-ledger-row tweet-card" data-change-type="tech_route">
-              <div class="tweet-avatar" aria-hidden="true">S</div>
               <div class="tweet-ledger-body">
                 <div class="tweet-head">
                   <div class="tweet-author-line">
@@ -853,7 +831,6 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
             </article>
 
             <article class="tweet-ledger-row tweet-card" data-change-type="shortage">
-              <div class="tweet-avatar" aria-hidden="true">S</div>
               <div class="tweet-ledger-body">
                 <div class="tweet-head">
                   <div class="tweet-author-line">
@@ -889,7 +866,6 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
             </article>
 
             <article class="tweet-ledger-row tweet-card" data-change-type="tech_route">
-              <div class="tweet-avatar" aria-hidden="true">S</div>
               <div class="tweet-ledger-body">
                 <div class="tweet-head">
                   <div class="tweet-author-line">
@@ -925,7 +901,6 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
             </article>
 
             <article class="tweet-ledger-row tweet-card" data-change-type="tech_route">
-              <div class="tweet-avatar" aria-hidden="true">S</div>
               <div class="tweet-ledger-body">
                 <div class="tweet-head">
                   <div class="tweet-author-line">
@@ -961,7 +936,6 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
             </article>
 
             <article class="tweet-ledger-row tweet-card" data-change-type="price">
-              <div class="tweet-avatar" aria-hidden="true">S</div>
               <div class="tweet-ledger-body">
                 <div class="tweet-head">
                   <div class="tweet-author-line">
@@ -997,7 +971,6 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
             </article>
 
             <article class="tweet-ledger-row tweet-card" data-change-type="tech_route">
-              <div class="tweet-avatar" aria-hidden="true">S</div>
               <div class="tweet-ledger-body">
                 <div class="tweet-head">
                   <div class="tweet-author-line">
@@ -1033,7 +1006,6 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
             </article>
 
             <article class="tweet-ledger-row tweet-card" data-change-type="demand">
-              <div class="tweet-avatar" aria-hidden="true">S</div>
               <div class="tweet-ledger-body">
                 <div class="tweet-head">
                   <div class="tweet-author-line">
@@ -1069,7 +1041,6 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
             </article>
 
             <article class="tweet-ledger-row tweet-card" data-change-type="tech_route">
-              <div class="tweet-avatar" aria-hidden="true">S</div>
               <div class="tweet-ledger-body">
                 <div class="tweet-head">
                   <div class="tweet-author-line">
@@ -1105,7 +1076,6 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
             </article>
 
             <article class="tweet-ledger-row tweet-card" data-change-type="shortage">
-              <div class="tweet-avatar" aria-hidden="true">S</div>
               <div class="tweet-ledger-body">
                 <div class="tweet-head">
                   <div class="tweet-author-line">
@@ -1147,7 +1117,6 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
     <div class="brief-desk lang lang-en" data-brief-desk="aleabitoreddit">
       <div class="tweet-ledger">
             <article class="tweet-ledger-row tweet-card" data-change-type="tech_route">
-              <div class="tweet-avatar" aria-hidden="true">S</div>
               <div class="tweet-ledger-body">
                 <div class="tweet-head">
                   <div class="tweet-author-line">
@@ -1183,7 +1152,6 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
             </article>
 
             <article class="tweet-ledger-row tweet-card" data-change-type="demand">
-              <div class="tweet-avatar" aria-hidden="true">S</div>
               <div class="tweet-ledger-body">
                 <div class="tweet-head">
                   <div class="tweet-author-line">
@@ -1219,7 +1187,6 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
             </article>
 
             <article class="tweet-ledger-row tweet-card" data-change-type="tech_route">
-              <div class="tweet-avatar" aria-hidden="true">S</div>
               <div class="tweet-ledger-body">
                 <div class="tweet-head">
                   <div class="tweet-author-line">
@@ -1255,7 +1222,6 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
             </article>
 
             <article class="tweet-ledger-row tweet-card" data-change-type="supply_release">
-              <div class="tweet-avatar" aria-hidden="true">S</div>
               <div class="tweet-ledger-body">
                 <div class="tweet-head">
                   <div class="tweet-author-line">
@@ -1291,7 +1257,6 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
             </article>
 
             <article class="tweet-ledger-row tweet-card" data-change-type="tech_route">
-              <div class="tweet-avatar" aria-hidden="true">S</div>
               <div class="tweet-ledger-body">
                 <div class="tweet-head">
                   <div class="tweet-author-line">
@@ -1327,7 +1292,6 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
             </article>
 
             <article class="tweet-ledger-row tweet-card" data-change-type="tech_route">
-              <div class="tweet-avatar" aria-hidden="true">S</div>
               <div class="tweet-ledger-body">
                 <div class="tweet-head">
                   <div class="tweet-author-line">
@@ -1363,7 +1327,6 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
             </article>
 
             <article class="tweet-ledger-row tweet-card" data-change-type="risk">
-              <div class="tweet-avatar" aria-hidden="true">S</div>
               <div class="tweet-ledger-body">
                 <div class="tweet-head">
                   <div class="tweet-author-line">
@@ -1399,7 +1362,6 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
             </article>
 
             <article class="tweet-ledger-row tweet-card" data-change-type="tech_route">
-              <div class="tweet-avatar" aria-hidden="true">S</div>
               <div class="tweet-ledger-body">
                 <div class="tweet-head">
                   <div class="tweet-author-line">
@@ -1435,7 +1397,6 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
             </article>
 
             <article class="tweet-ledger-row tweet-card" data-change-type="shortage">
-              <div class="tweet-avatar" aria-hidden="true">S</div>
               <div class="tweet-ledger-body">
                 <div class="tweet-head">
                   <div class="tweet-author-line">
@@ -1471,7 +1432,6 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
             </article>
 
             <article class="tweet-ledger-row tweet-card" data-change-type="tech_route">
-              <div class="tweet-avatar" aria-hidden="true">S</div>
               <div class="tweet-ledger-body">
                 <div class="tweet-head">
                   <div class="tweet-author-line">
@@ -1507,7 +1467,6 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
             </article>
 
             <article class="tweet-ledger-row tweet-card" data-change-type="tech_route">
-              <div class="tweet-avatar" aria-hidden="true">S</div>
               <div class="tweet-ledger-body">
                 <div class="tweet-head">
                   <div class="tweet-author-line">
@@ -1543,7 +1502,6 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
             </article>
 
             <article class="tweet-ledger-row tweet-card" data-change-type="price">
-              <div class="tweet-avatar" aria-hidden="true">S</div>
               <div class="tweet-ledger-body">
                 <div class="tweet-head">
                   <div class="tweet-author-line">
@@ -1579,7 +1537,6 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
             </article>
 
             <article class="tweet-ledger-row tweet-card" data-change-type="tech_route">
-              <div class="tweet-avatar" aria-hidden="true">S</div>
               <div class="tweet-ledger-body">
                 <div class="tweet-head">
                   <div class="tweet-author-line">
@@ -1615,7 +1572,6 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
             </article>
 
             <article class="tweet-ledger-row tweet-card" data-change-type="demand">
-              <div class="tweet-avatar" aria-hidden="true">S</div>
               <div class="tweet-ledger-body">
                 <div class="tweet-head">
                   <div class="tweet-author-line">
@@ -1651,7 +1607,6 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
             </article>
 
             <article class="tweet-ledger-row tweet-card" data-change-type="tech_route">
-              <div class="tweet-avatar" aria-hidden="true">S</div>
               <div class="tweet-ledger-body">
                 <div class="tweet-head">
                   <div class="tweet-author-line">
@@ -1687,7 +1642,6 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
             </article>
 
             <article class="tweet-ledger-row tweet-card" data-change-type="shortage">
-              <div class="tweet-avatar" aria-hidden="true">S</div>
               <div class="tweet-ledger-body">
                 <div class="tweet-head">
                   <div class="tweet-author-line">
@@ -1731,7 +1685,6 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
     <article class="brief-card">
       <header class="brief-titlebar">
         <div class="kol-feed-head">
-          <span class="kol-avatar" aria-hidden="true">J</span>
           <div class="kol-feed-meta">
             <span class="brief-eyebrow"><span class="lang lang-zh">当前 3 日窗口</span><span class="lang lang-en">Current 3-day window</span></span>
             <h3>jukan05 <small>@jukan05</small></h3>
@@ -1745,7 +1698,6 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
     <div class="brief-desk lang lang-zh" data-brief-desk="jukan05">
       <div class="tweet-ledger">
             <article class="tweet-ledger-row tweet-card" data-change-type="tech_progress">
-              <div class="tweet-avatar" aria-hidden="true">J</div>
               <div class="tweet-ledger-body">
                 <div class="tweet-head">
                   <div class="tweet-author-line">
@@ -1781,7 +1733,6 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
             </article>
 
             <article class="tweet-ledger-row tweet-card" data-change-type="supply_release">
-              <div class="tweet-avatar" aria-hidden="true">J</div>
               <div class="tweet-ledger-body">
                 <div class="tweet-head">
                   <div class="tweet-author-line">
@@ -1817,7 +1768,6 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
             </article>
 
             <article class="tweet-ledger-row tweet-card" data-change-type="price">
-              <div class="tweet-avatar" aria-hidden="true">J</div>
               <div class="tweet-ledger-body">
                 <div class="tweet-head">
                   <div class="tweet-author-line">
@@ -1853,7 +1803,6 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
             </article>
 
             <article class="tweet-ledger-row tweet-card" data-change-type="price">
-              <div class="tweet-avatar" aria-hidden="true">J</div>
               <div class="tweet-ledger-body">
                 <div class="tweet-head">
                   <div class="tweet-author-line">
@@ -1889,7 +1838,6 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
             </article>
 
             <article class="tweet-ledger-row tweet-card" data-change-type="demand">
-              <div class="tweet-avatar" aria-hidden="true">J</div>
               <div class="tweet-ledger-body">
                 <div class="tweet-head">
                   <div class="tweet-author-line">
@@ -1925,7 +1873,6 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
             </article>
 
             <article class="tweet-ledger-row tweet-card" data-change-type="demand">
-              <div class="tweet-avatar" aria-hidden="true">J</div>
               <div class="tweet-ledger-body">
                 <div class="tweet-head">
                   <div class="tweet-author-line">
@@ -1961,7 +1908,6 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
             </article>
 
             <article class="tweet-ledger-row tweet-card" data-change-type="demand">
-              <div class="tweet-avatar" aria-hidden="true">J</div>
               <div class="tweet-ledger-body">
                 <div class="tweet-head">
                   <div class="tweet-author-line">
@@ -1997,7 +1943,6 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
             </article>
 
             <article class="tweet-ledger-row tweet-card" data-change-type="demand">
-              <div class="tweet-avatar" aria-hidden="true">J</div>
               <div class="tweet-ledger-body">
                 <div class="tweet-head">
                   <div class="tweet-author-line">
@@ -2033,7 +1978,6 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
             </article>
 
             <article class="tweet-ledger-row tweet-card" data-change-type="shortage">
-              <div class="tweet-avatar" aria-hidden="true">J</div>
               <div class="tweet-ledger-body">
                 <div class="tweet-head">
                   <div class="tweet-author-line">
@@ -2069,7 +2013,6 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
             </article>
 
             <article class="tweet-ledger-row tweet-card" data-change-type="risk">
-              <div class="tweet-avatar" aria-hidden="true">J</div>
               <div class="tweet-ledger-body">
                 <div class="tweet-head">
                   <div class="tweet-author-line">
@@ -2105,7 +2048,6 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
             </article>
 
             <article class="tweet-ledger-row tweet-card" data-change-type="demand">
-              <div class="tweet-avatar" aria-hidden="true">J</div>
               <div class="tweet-ledger-body">
                 <div class="tweet-head">
                   <div class="tweet-author-line">
@@ -2141,7 +2083,6 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
             </article>
 
             <article class="tweet-ledger-row tweet-card" data-change-type="tech_progress">
-              <div class="tweet-avatar" aria-hidden="true">J</div>
               <div class="tweet-ledger-body">
                 <div class="tweet-head">
                   <div class="tweet-author-line">
@@ -2177,7 +2118,6 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
             </article>
 
             <article class="tweet-ledger-row tweet-card" data-change-type="price">
-              <div class="tweet-avatar" aria-hidden="true">J</div>
               <div class="tweet-ledger-body">
                 <div class="tweet-head">
                   <div class="tweet-author-line">
@@ -2213,7 +2153,6 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
             </article>
 
             <article class="tweet-ledger-row tweet-card" data-change-type="price">
-              <div class="tweet-avatar" aria-hidden="true">J</div>
               <div class="tweet-ledger-body">
                 <div class="tweet-head">
                   <div class="tweet-author-line">
@@ -2249,7 +2188,6 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
             </article>
 
             <article class="tweet-ledger-row tweet-card" data-change-type="supply_release">
-              <div class="tweet-avatar" aria-hidden="true">J</div>
               <div class="tweet-ledger-body">
                 <div class="tweet-head">
                   <div class="tweet-author-line">
@@ -2291,7 +2229,6 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
     <div class="brief-desk lang lang-en" data-brief-desk="jukan05">
       <div class="tweet-ledger">
             <article class="tweet-ledger-row tweet-card" data-change-type="tech_progress">
-              <div class="tweet-avatar" aria-hidden="true">J</div>
               <div class="tweet-ledger-body">
                 <div class="tweet-head">
                   <div class="tweet-author-line">
@@ -2327,7 +2264,6 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
             </article>
 
             <article class="tweet-ledger-row tweet-card" data-change-type="supply_release">
-              <div class="tweet-avatar" aria-hidden="true">J</div>
               <div class="tweet-ledger-body">
                 <div class="tweet-head">
                   <div class="tweet-author-line">
@@ -2363,7 +2299,6 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
             </article>
 
             <article class="tweet-ledger-row tweet-card" data-change-type="price">
-              <div class="tweet-avatar" aria-hidden="true">J</div>
               <div class="tweet-ledger-body">
                 <div class="tweet-head">
                   <div class="tweet-author-line">
@@ -2399,7 +2334,6 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
             </article>
 
             <article class="tweet-ledger-row tweet-card" data-change-type="price">
-              <div class="tweet-avatar" aria-hidden="true">J</div>
               <div class="tweet-ledger-body">
                 <div class="tweet-head">
                   <div class="tweet-author-line">
@@ -2435,7 +2369,6 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
             </article>
 
             <article class="tweet-ledger-row tweet-card" data-change-type="demand">
-              <div class="tweet-avatar" aria-hidden="true">J</div>
               <div class="tweet-ledger-body">
                 <div class="tweet-head">
                   <div class="tweet-author-line">
@@ -2471,7 +2404,6 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
             </article>
 
             <article class="tweet-ledger-row tweet-card" data-change-type="demand">
-              <div class="tweet-avatar" aria-hidden="true">J</div>
               <div class="tweet-ledger-body">
                 <div class="tweet-head">
                   <div class="tweet-author-line">
@@ -2507,7 +2439,6 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
             </article>
 
             <article class="tweet-ledger-row tweet-card" data-change-type="demand">
-              <div class="tweet-avatar" aria-hidden="true">J</div>
               <div class="tweet-ledger-body">
                 <div class="tweet-head">
                   <div class="tweet-author-line">
@@ -2543,7 +2474,6 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
             </article>
 
             <article class="tweet-ledger-row tweet-card" data-change-type="demand">
-              <div class="tweet-avatar" aria-hidden="true">J</div>
               <div class="tweet-ledger-body">
                 <div class="tweet-head">
                   <div class="tweet-author-line">
@@ -2579,7 +2509,6 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
             </article>
 
             <article class="tweet-ledger-row tweet-card" data-change-type="shortage">
-              <div class="tweet-avatar" aria-hidden="true">J</div>
               <div class="tweet-ledger-body">
                 <div class="tweet-head">
                   <div class="tweet-author-line">
@@ -2615,7 +2544,6 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
             </article>
 
             <article class="tweet-ledger-row tweet-card" data-change-type="risk">
-              <div class="tweet-avatar" aria-hidden="true">J</div>
               <div class="tweet-ledger-body">
                 <div class="tweet-head">
                   <div class="tweet-author-line">
@@ -2651,7 +2579,6 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
             </article>
 
             <article class="tweet-ledger-row tweet-card" data-change-type="demand">
-              <div class="tweet-avatar" aria-hidden="true">J</div>
               <div class="tweet-ledger-body">
                 <div class="tweet-head">
                   <div class="tweet-author-line">
@@ -2687,7 +2614,6 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
             </article>
 
             <article class="tweet-ledger-row tweet-card" data-change-type="tech_progress">
-              <div class="tweet-avatar" aria-hidden="true">J</div>
               <div class="tweet-ledger-body">
                 <div class="tweet-head">
                   <div class="tweet-author-line">
@@ -2723,7 +2649,6 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
             </article>
 
             <article class="tweet-ledger-row tweet-card" data-change-type="price">
-              <div class="tweet-avatar" aria-hidden="true">J</div>
               <div class="tweet-ledger-body">
                 <div class="tweet-head">
                   <div class="tweet-author-line">
@@ -2759,7 +2684,6 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
             </article>
 
             <article class="tweet-ledger-row tweet-card" data-change-type="price">
-              <div class="tweet-avatar" aria-hidden="true">J</div>
               <div class="tweet-ledger-body">
                 <div class="tweet-head">
                   <div class="tweet-author-line">
@@ -2795,7 +2719,6 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
             </article>
 
             <article class="tweet-ledger-row tweet-card" data-change-type="supply_release">
-              <div class="tweet-avatar" aria-hidden="true">J</div>
               <div class="tweet-ledger-body">
                 <div class="tweet-head">
                   <div class="tweet-author-line">
@@ -2844,7 +2767,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
     </section>
     </main>
   <footer class="page">
-    AIpha X-KOL V1.0｜<span class="lang lang-zh">生成时间</span><span class="lang lang-en">Generated</span> 2026-06-24T19:32:21+08:00｜source_commit 8ad5eddcf6ed
+    AIpha X-KOL V1.0｜<span class="lang lang-zh">生成时间</span><span class="lang lang-en">Generated</span> 2026-06-24T19:45:59+08:00｜source_commit 8ad5eddcf6ed
   </footer>
 </body>
 </html>
