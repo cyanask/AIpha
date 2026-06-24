@@ -58,16 +58,16 @@ a { color: inherit; }
   position: sticky;
   top: 0;
   z-index: 20;
-  min-height: 54px;
+  min-height: 42px;
   display: grid;
-  grid-template-columns: auto minmax(280px, auto) minmax(0, 1fr);
+  grid-template-columns: auto minmax(0, auto) minmax(0, 1fr);
   align-items: center;
-  gap: clamp(14px, 2.5vw, 28px);
-  padding: 8px clamp(16px, 3vw, 38px);
+  gap: clamp(10px, 1.8vw, 18px);
+  padding: 5px clamp(16px, 2.4vw, 28px);
   color: #f8fafc;
   background: #111b24;
   border-bottom: 1px solid rgba(255,255,255,0.1);
-  box-shadow: 0 8px 22px rgba(10, 18, 26, 0.16);
+  box-shadow: 0 5px 16px rgba(10, 18, 26, 0.14);
 }
 .top-nav-main {
   display: flex;
@@ -76,40 +76,48 @@ a { color: inherit; }
   gap: 16px;
   min-width: 0;
 }
-.brand { display: inline-flex; align-items: center; gap: 10px; min-width: 0; text-decoration: none; }
-.brand img { width: 146px; height: auto; display: block; flex: 0 0 auto; }
+.brand {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  min-width: 0;
+  min-height: 32px;
+  padding: 2px 4px;
+  text-decoration: none;
+}
+.brand img { width: 104px; height: auto; display: block; flex: 0 0 auto; }
 .nav-version-badge {
   display: inline-flex;
   align-items: center;
   width: fit-content;
-  min-height: 30px;
-  padding: 0 12px;
+  min-height: 27px;
+  padding: 0 10px;
   color: #7a5237;
   background: #fbf7ee;
   border: 1px solid #e3bf8f;
   font-family: "SF Mono", "Roboto Mono", Menlo, Consolas, monospace;
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 900;
   letter-spacing: 0.035em;
   line-height: 1;
   white-space: nowrap;
 }
-.nav-actions { grid-column: 3; display: flex; align-items: center; justify-content: flex-end; gap: 8px; min-width: 0; }
+.nav-actions { grid-column: 3; display: flex; align-items: center; justify-content: flex-end; gap: 7px; min-width: 0; flex-wrap: nowrap; }
 .nav-links { display: flex; gap: 6px; flex-wrap: wrap; justify-content: flex-end; }
 .nav-links a,
 .page-switcher a {
   text-decoration: none;
   color: #dbe4f0;
-  min-width: 118px;
-  min-height: 30px;
+  min-width: 0;
+  min-height: 28px;
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  padding: 0 14px;
+  padding: 0 13px;
   border: 1px solid rgba(216,224,228,0.26);
-  border-radius: 2px;
+  border-radius: 7px;
   background: transparent;
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 800;
   white-space: nowrap;
   transition: background-color 140ms ease, color 140ms ease;
@@ -124,37 +132,37 @@ a { color: inherit; }
 .page-switcher {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
+  gap: 5px;
   width: auto;
   justify-self: start;
-  padding: 0;
-  background: transparent;
-  border: 0;
-  border-radius: 0;
+  padding: 3px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(216,224,228,0.18);
+  border-radius: 9px;
 }
 .nav-disclaimer {
-  min-height: 30px;
+  min-height: 27px;
   display: inline-flex;
   align-items: center;
-  padding: 0 12px;
+  padding: 0 10px;
   color: #111827;
   background: #f2e7d1;
   border: 1px solid rgba(198,161,91,0.78);
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 900;
   white-space: nowrap;
 }
-.lang-toggle { display: inline-flex; min-height: 30px; border: 1px solid rgba(255,255,255,0.22); background: rgba(255,255,255,0.06); padding: 2px; }
+.lang-toggle { display: inline-flex; min-height: 27px; border: 1px solid rgba(255,255,255,0.22); background: rgba(255,255,255,0.06); padding: 2px; }
 .lang-toggle button {
   appearance: none;
   border: 0;
   background: transparent;
   color: #cbd5e1;
-  min-width: 42px;
-  min-height: 24px;
-  padding: 0 8px;
+  min-width: 36px;
+  min-height: 21px;
+  padding: 0 7px;
   font: inherit;
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 900;
   cursor: pointer;
 }
@@ -435,17 +443,18 @@ td small, th small { display: block; color: var(--muted); margin-top: 3px; }
 .boundary-strip p { color: #cbd5e1; margin: 0; max-width: 980px; }
 footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
 @media (max-width: 860px) {
-  .top-nav { grid-template-columns: minmax(0, 1fr); grid-template-rows: auto auto auto; padding: 6px 8px 7px; gap: 5px 8px; overflow: hidden; }
+  .top-nav { grid-template-columns: auto minmax(0, 1fr); grid-template-rows: auto auto; min-height: 38px; padding: 5px 8px 6px; gap: 4px 8px; overflow: hidden; }
   .top-nav-main { gap: 8px; }
   .brand { grid-column: 1; grid-row: 1; justify-self: start; }
-  .nav-version-badge { min-height: 22px; max-width: 128px; padding: 0 6px; font-size: 9.5px; letter-spacing: 0.02em; overflow: hidden; }
-  .nav-actions { grid-column: 1; grid-row: 2; display: grid; grid-template-columns: minmax(0, 1fr) auto auto; align-items: center; justify-self: stretch; width: 100%; gap: 4px; min-width: 0; overflow: hidden; }
-  .brand img { width: 88px; }
+  .brand img { width: 76px; }
+  .nav-version-badge { min-height: 22px; max-width: 118px; padding: 0 6px; font-size: 9px; letter-spacing: 0.02em; overflow: hidden; }
+  .nav-actions { grid-column: 2; grid-row: 1; display: flex; align-items: center; justify-content: flex-end; justify-self: stretch; width: 100%; gap: 4px; min-width: 0; overflow: hidden; }
   .nav-links { display: none; }
-  .page-switcher { grid-column: 1; grid-row: 3; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); width: 100%; max-width: 100%; min-width: 0; gap: 2px; justify-self: stretch; overflow: hidden; }
-  .page-switcher a { min-width: 0; min-height: 26px; padding: 0 4px; font-size: 9.5px; line-height: 1.15; white-space: nowrap; justify-content: center; overflow: hidden; text-overflow: ellipsis; }
-  .nav-disclaimer { min-height: 24px; padding: 0 6px; font-size: 10px; }
-  .lang-toggle button { min-width: 30px; min-height: 24px; padding: 0 5px; font-size: 10.5px; }
+  .page-switcher { grid-column: 1 / -1; grid-row: 2; display: flex; width: auto; max-width: 100%; min-width: 0; gap: 3px; justify-self: start; overflow: hidden; padding: 2px; }
+  .page-switcher a { min-width: 0; min-height: 23px; padding: 0 8px; font-size: 9.5px; line-height: 1.15; white-space: nowrap; justify-content: center; overflow: hidden; text-overflow: ellipsis; }
+  .nav-disclaimer { min-height: 22px; padding: 0 6px; font-size: 9.5px; }
+  .lang-toggle { min-height: 22px; padding: 1px; }
+  .lang-toggle button { min-width: 28px; min-height: 20px; padding: 0 4px; font-size: 9.5px; }
   .page { width: min(100% - 20px, 720px); }
   .hero { margin-top: 12px; padding: 20px; }
   .hero-grid, .program-grid, .brief-grid, .digest-overview, .digest-card-grid, .question-list, .chain-body, .timeline-grid, .asset-snapshot-grid { grid-template-columns: 1fr; }
@@ -470,6 +479,14 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
   table { min-width: 680px; }
 }
 @media (max-width: 430px) {
+  .top-nav { padding: 5px 7px 6px; gap: 4px 6px; }
+  .brand { min-height: 29px; padding: 1px 3px; }
+  .brand img { width: 70px; }
+  .nav-actions { gap: 3px; }
+  .nav-version-badge { max-width: 108px; min-height: 21px; padding: 0 5px; font-size: 8.5px; }
+  .nav-disclaimer { min-height: 21px; padding: 0 5px; font-size: 9px; }
+  .lang-toggle button { min-width: 26px; min-height: 19px; padding: 0 3px; font-size: 9px; }
+  .page-switcher a { min-height: 22px; padding: 0 7px; font-size: 9px; }
   .stat-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
   .stat { min-height: 62px; padding: 9px; }
   .stat span, .stat small { font-size: 9.5px; }
@@ -483,7 +500,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
 </style>
 </head>
 <body>
-
+  
     <header class="top-nav">
       <a class="brand" href="index.html" aria-label="AIpha X-KOL">
         <img src="assets/nero-mark.svg" alt="AIpha Research Desk" />
@@ -498,7 +515,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
         </span>
       </div>
     </header>
-
+    
   <main>
     <section class="hero page">
       <div class="hero-grid">
@@ -513,7 +530,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
               </div>
               <b>24</b>
             </article>
-
+            
             <article>
               <div>
                 <strong>jukan05 <small>@jukan05</small></strong>
@@ -526,7 +543,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
         <div class="stat-grid"><article class="stat"><span><span class="lang lang-zh">KOL 数量</span><span class="lang lang-en">KOLs</span></span><b>2</b><small><span class="lang lang-zh">固定 registry</span><span class="lang lang-en">Fixed registry</span></small></article><article class="stat"><span><span class="lang lang-zh">Serenity 推文</span><span class="lang lang-en">Serenity Tweets</span></span><b>5,977</b><small><span class="lang lang-zh">@aleabitoreddit</span><span class="lang lang-en">@aleabitoreddit</span></small></article><article class="stat"><span><span class="lang lang-zh">jukan05 推文</span><span class="lang lang-en">jukan05 Tweets</span></span><b>283</b><small><span class="lang lang-zh">独立 X KOL 库</span><span class="lang lang-en">Separate X KOL DB</span></small></article><article class="stat"><span><span class="lang lang-zh">当前账本</span><span class="lang lang-en">Current Ledger</span></span><b>3D</b><small><span class="lang lang-zh">逐条推文流</span><span class="lang lang-en">Per-tweet stream</span></small></article></div>
       </div>
     </section>
-
+    
     <section class="section-band page" id="latest-briefs">
       <div class="section-head">
         <div>
@@ -547,7 +564,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
         </div>
       </header>
       <div class="brief-body">
-
+        
     <div class="brief-desk lang lang-zh" data-brief-desk="aleabitoreddit">
       <div class="tweet-ledger">
             <article class="tweet-ledger-row tweet-card" data-change-type="tech_route">
@@ -569,12 +586,12 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
                   <span>中</span>
                 </div>
                 <p class="tweet-translation">中文精翻：OpenLight（未上市）每次看都好像变得更大。如果你想了解它在 Advantest 之外的公开生态：$JBL（$SIVE 合作伙伴）用于扩大 PIC；$MRVL 和 $MXL 做 DSP；$TSEM 做晶圆代工；$300394.SZ / 天孚通信做 OSAT/子组件。光学玩家之间联系很深，非合格投资者也常常可以通过公开股票接触到未上市公司的成长。</p>
-
+                
         <details class="tweet-original-details">
           <summary>原文：OpenLight (private) seems to get bigger and bigger every time I look at it. If you’re curious about their public ecosystem outside of Advantest: $JBL ( $SIVE partner ) for scaling…</summary>
           <p>OpenLight (private) seems to get bigger and bigger every time I look at it. If you’re curious about their public ecosystem outside of Advantest: $JBL ( $SIVE partner ) for scaling PICs $MRVL and $MXL for DSPs $TSEM for the foundry. $300394.SZ / TFC Optical (OSAT/subassembly) Can often get exposure into private growth…</p>
         </details>
-
+        
                 <div class="tweet-action-row" aria-label="static tweet action bar"><span class="tweet-action" title="回复" aria-label="回复"><i>○</i></span><span class="tweet-action" title="转发" aria-label="转发"><i>↻</i></span><span class="tweet-action" title="喜欢" aria-label="喜欢"><i>♡</i></span><span class="tweet-action" title="浏览" aria-label="浏览"><i>▥</i></span><span class="tweet-action" title="保存" aria-label="保存"><i>□</i></span></div>
                 <p class="tweet-ledger-note">
                   <a href="https://x.com/aleabitoreddit/status/2069675057300082728" target="_blank" rel="noreferrer">tweet_id 2069675057300082728</a>
@@ -584,7 +601,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
                 </p>
               </div>
             </article>
-
+            
             <article class="tweet-ledger-row tweet-card" data-change-type="demand">
               <div class="tweet-ledger-body">
                 <div class="tweet-head">
@@ -604,12 +621,12 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
                   <span>强</span>
                 </div>
                 <p class="tweet-translation">中文精翻：我不太认为“被抽走”是准确说法。这是为了未来巨大收入增长或利润率提升而投入的资本开支。$AMZN 现在可能是我最喜欢的 hyperscaler，也是最好的例子。Amazon 员工数夸张，约 157 万。如果资本开支用于用 LLM 自动化劳动力，然后过渡到 Physical AI……</p>
-
+                
         <details class="tweet-original-details">
           <summary>原文：Don’t quite think “siphoned off” is the correct term. It’s capex for massive revenue increase or margin increase down the line. $AMZN is probably my favorite hyperscaler right now…</summary>
           <p>Don’t quite think “siphoned off” is the correct term. It’s capex for massive revenue increase or margin increase down the line. $AMZN is probably my favorite hyperscaler right now and example to give. Amazon’s headcount is absurd, like ~1.57M. If the capex goes into automating their workforce with LLMs. Then transitio…</p>
         </details>
-
+        
                 <div class="tweet-action-row" aria-label="static tweet action bar"><span class="tweet-action" title="回复" aria-label="回复"><i>○</i></span><span class="tweet-action" title="转发" aria-label="转发"><i>↻</i></span><span class="tweet-action" title="喜欢" aria-label="喜欢"><i>♡</i></span><span class="tweet-action" title="浏览" aria-label="浏览"><i>▥</i></span><span class="tweet-action" title="保存" aria-label="保存"><i>□</i></span></div>
                 <p class="tweet-ledger-note">
                   <a href="https://x.com/aleabitoreddit/status/2069655980456149142" target="_blank" rel="noreferrer">tweet_id 2069655980456149142</a>
@@ -619,7 +636,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
                 </p>
               </div>
             </article>
-
+            
             <article class="tweet-ledger-row tweet-card" data-change-type="tech_route">
               <div class="tweet-ledger-body">
                 <div class="tweet-head">
@@ -639,12 +656,12 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
                   <span>中</span>
                 </div>
                 <p class="tweet-translation">中文精翻：好奇今天这么精彩的一天之后，有没有人的组合还是绿的。$KORU -32.06%，$SOXL -22.98%，$IQE -13.58%，$DRAM -12.6%，$AXTI -12.57%，$FLNC -12.5%，$AAOI -11.2%，$SIVE -11.7%，$TSEM -10.24%，$SNDK -12.5%，$MU -11.8%，SK Hynix -12.35%，Samsung -9.6%，$MRVL -8.3%，$LITE -7.6%，$SOI -7.15%，$TSM -6.1%，$AMD -6.04%。感觉高 beta 或半导体都大幅下跌。</p>
-
+                
         <details class="tweet-original-details">
           <summary>原文：Curious if anyone&#x27;s portfolio is green after today&#x27;s fun day. $KORU: -32.06% $SOXL: -22.98% $IQE: -13.58% $DRAM: -12.6% $AXTI: -12.57% $FLNC: -12.5% $AAOI: -11.2% $SIVE: -11.7% $T…</summary>
           <p>Curious if anyone&#x27;s portfolio is green after today&#x27;s fun day. $KORU: -32.06% $SOXL: -22.98% $IQE: -13.58% $DRAM: -12.6% $AXTI: -12.57% $FLNC: -12.5% $AAOI: -11.2% $SIVE: -11.7% $TSEM: -10.24% $SNDK: -12.5% $MU: -11.8% Sk Hynix: -12.35% Samsung: -9.6% $MRVL: -8.3% $LITE: -7.6% $SOI -7.15% $TSM: -6.1% $AMD: -6.04% Feels…</p>
         </details>
-
+        
                 <div class="tweet-action-row" aria-label="static tweet action bar"><span class="tweet-action" title="回复" aria-label="回复"><i>○</i></span><span class="tweet-action" title="转发" aria-label="转发"><i>↻</i></span><span class="tweet-action" title="喜欢" aria-label="喜欢"><i>♡</i></span><span class="tweet-action" title="浏览" aria-label="浏览"><i>▥</i></span><span class="tweet-action" title="保存" aria-label="保存"><i>□</i></span></div>
                 <p class="tweet-ledger-note">
                   <a href="https://x.com/aleabitoreddit/status/2069445918114697463" target="_blank" rel="noreferrer">tweet_id 2069445918114697463</a>
@@ -654,7 +671,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
                 </p>
               </div>
             </article>
-
+            
             <article class="tweet-ledger-row tweet-card" data-change-type="supply_release">
               <div class="tweet-ledger-body">
                 <div class="tweet-head">
@@ -674,12 +691,12 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
                   <span>中</span>
                 </div>
                 <p class="tweet-translation">中文精翻：今天，市值 12.3 亿欧元的 $XFAB 为其 MEMS Foundry 获得《芯片法案》1.274 亿欧元资金。“位于 Erfurt 的 Fab4Micro 是德国和欧洲技术主权的关键项目”，图林根州政府负责人这样解释。按 finanzen 的说法，计划 2028 年投产。欧洲新的 CHIPS ACT 2 也是并行的基本面顺风。</p>
-
+                
         <details class="tweet-original-details">
           <summary>原文：Today, $XFAB (1.23B MC) receives €127.4 million from CHIPS ACT for their MEMS Foundry. &quot;The «Fab4Micro» in Erfurt is a key project for the technological sovereignty of Germany and…</summary>
           <p>Today, $XFAB (1.23B MC) receives €127.4 million from CHIPS ACT for their MEMS Foundry. &quot;The «Fab4Micro» in Erfurt is a key project for the technological sovereignty of Germany and Europe, explained Thuringia’s head of government.&quot; The production start is planned in 2028 (finanzen). With Europe&#x27;s new CHIPS ACT 2 as a c…</p>
         </details>
-
+        
                 <div class="tweet-action-row" aria-label="static tweet action bar"><span class="tweet-action" title="回复" aria-label="回复"><i>○</i></span><span class="tweet-action" title="转发" aria-label="转发"><i>↻</i></span><span class="tweet-action" title="喜欢" aria-label="喜欢"><i>♡</i></span><span class="tweet-action" title="浏览" aria-label="浏览"><i>▥</i></span><span class="tweet-action" title="保存" aria-label="保存"><i>□</i></span></div>
                 <p class="tweet-ledger-note">
                   <a href="https://x.com/aleabitoreddit/status/2069430169300070612" target="_blank" rel="noreferrer">tweet_id 2069430169300070612</a>
@@ -689,7 +706,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
                 </p>
               </div>
             </article>
-
+            
             <article class="tweet-ledger-row tweet-card" data-change-type="tech_route">
               <div class="tweet-ledger-body">
                 <div class="tweet-head">
@@ -709,12 +726,12 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
                   <span>中</span>
                 </div>
                 <p class="tweet-translation">中文精翻：$SIVE + Aeva 可能对应今天新 PR 里的线索，也对应 SIVE + Apple。Sivers 激光器用于机器人/Physical AI：通过 LG Innotek 给 Boston Dynamics Atlas 提供机器人激光器；进入 Nvidia Hyperion 生态，用于 Physical AI；这些都是 Aeva 可能路径。新网页也再次暗示 Apple 可能在用 Sivers。</p>
-
+                
         <details class="tweet-original-details">
           <summary>原文：$SIVE + Aeva likely coded from the new PR today and SIVE + Apple. For Sivers lasers powering robotics / physical AI. -&gt; Sivers lasers powering Boston Dynamics Atlas via. LG Innote…</summary>
           <p>$SIVE + Aeva likely coded from the new PR today and SIVE + Apple. For Sivers lasers powering robotics / physical AI. -&gt; Sivers lasers powering Boston Dynamics Atlas via. LG Innotek for robotics -&gt; Nvidia Hyperion ecosystem w/ Sivers lasers for physical AI. Are possible paths with Aeva. Apple likely using Sivers also r…</p>
         </details>
-
+        
                 <div class="tweet-action-row" aria-label="static tweet action bar"><span class="tweet-action" title="回复" aria-label="回复"><i>○</i></span><span class="tweet-action" title="转发" aria-label="转发"><i>↻</i></span><span class="tweet-action" title="喜欢" aria-label="喜欢"><i>♡</i></span><span class="tweet-action" title="浏览" aria-label="浏览"><i>▥</i></span><span class="tweet-action" title="保存" aria-label="保存"><i>□</i></span></div>
                 <p class="tweet-ledger-note">
                   <a href="https://x.com/aleabitoreddit/status/2069388279355756826" target="_blank" rel="noreferrer">tweet_id 2069388279355756826</a>
@@ -724,7 +741,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
                 </p>
               </div>
             </article>
-
+            
             <article class="tweet-ledger-row tweet-card" data-change-type="tech_route">
               <div class="tweet-ledger-body">
                 <div class="tweet-head">
@@ -744,12 +761,12 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
                   <span>中</span>
                 </div>
                 <p class="tweet-translation">中文精翻：$XFAB 被 Bernstein 从 5 欧元上调到 12.8 欧元估值目标，并升至 outperform。好吧，Bernstein，在 Kioxia 和 Intel 之后我原谅你。我仍然认为这只是基于汽车复苏、SiC/功率半导体爬坡的反应式调整，而且仍低估了很多潜力。</p>
-
+                
         <details class="tweet-original-details">
           <summary>原文：$XFAB upgraded to outperform with a PT of €12.8 by Bernstein, up from €5. Okay I forgive you Bernstein for Kioxia and Intel. I still think that’s just reactive PTs off automotive…</summary>
           <p>$XFAB upgraded to outperform with a PT of €12.8 by Bernstein, up from €5. Okay I forgive you Bernstein for Kioxia and Intel. I still think that’s just reactive PTs off automotive recovery, SiC/power semi ramp up. And undershooting potential a lot… If markets price in the possibility of xfab moving to HVM. On their sil…</p>
         </details>
-
+        
                 <div class="tweet-action-row" aria-label="static tweet action bar"><span class="tweet-action" title="回复" aria-label="回复"><i>○</i></span><span class="tweet-action" title="转发" aria-label="转发"><i>↻</i></span><span class="tweet-action" title="喜欢" aria-label="喜欢"><i>♡</i></span><span class="tweet-action" title="浏览" aria-label="浏览"><i>▥</i></span><span class="tweet-action" title="保存" aria-label="保存"><i>□</i></span></div>
                 <p class="tweet-ledger-note">
                   <a href="https://x.com/aleabitoreddit/status/2069373894398743000" target="_blank" rel="noreferrer">tweet_id 2069373894398743000</a>
@@ -759,7 +776,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
                 </p>
               </div>
             </article>
-
+            
             <article class="tweet-ledger-row tweet-card" data-change-type="risk">
               <div class="tweet-ledger-body">
                 <div class="tweet-head">
@@ -779,12 +796,12 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
                   <span>中</span>
                 </div>
                 <p class="tweet-translation">中文精翻：对散户来说，Bank of America 看起来像 Bernstein/Jim Cramer 的恶意版本：三月说 $KOSPI / $EWY 是极端泡沫，还拿白银崩盘作比较，导致散户退出仓位；之后指数几乎翻倍并创下新高。现在又说“BoA 预计 2026 年加息三次”……</p>
-
+                
         <details class="tweet-original-details">
           <summary>原文：Bank of America looks like the malicious equivalent of Bernstein/Jim Cramer to retail. - said $KOSPI / $EWY was an extreme bubble, compared it to Silver crash back in March, causi…</summary>
           <p>Bank of America looks like the malicious equivalent of Bernstein/Jim Cramer to retail. - said $KOSPI / $EWY was an extreme bubble, compared it to Silver crash back in March, causing retail to sell positions. The index proceeded to close to double and hit ATHs since that call. - saying “BoA expects 3 rate hikes in 2026…</p>
         </details>
-
+        
                 <div class="tweet-action-row" aria-label="static tweet action bar"><span class="tweet-action" title="回复" aria-label="回复"><i>○</i></span><span class="tweet-action" title="转发" aria-label="转发"><i>↻</i></span><span class="tweet-action" title="喜欢" aria-label="喜欢"><i>♡</i></span><span class="tweet-action" title="浏览" aria-label="浏览"><i>▥</i></span><span class="tweet-action" title="保存" aria-label="保存"><i>□</i></span></div>
                 <p class="tweet-ledger-note">
                   <a href="https://x.com/aleabitoreddit/status/2069271973402931511" target="_blank" rel="noreferrer">tweet_id 2069271973402931511</a>
@@ -794,7 +811,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
                 </p>
               </div>
             </article>
-
+            
             <article class="tweet-ledger-row tweet-card" data-change-type="tech_route">
               <div class="tweet-ledger-body">
                 <div class="tweet-head">
@@ -814,12 +831,12 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
                   <span>强</span>
                 </div>
                 <p class="tweet-translation">中文精翻：我认为光子主题和 CW 激光器卡点非常强。市场短期记忆缺失，忘了 $LITE 从 2024 年到现在如何从 30 亿美元涨到 650 亿美元以上，因为 $NVDA 造成 EML 瓶颈并迫使架构变化。今天我们在 CW 激光器和 1.6T/CPO 转变上看到同样的事情。</p>
-
+                
         <details class="tweet-original-details">
           <summary>原文：IMO photonics theme + CW laser chokepoint is goated. It&#x27;s legit like markets have short term memory loss and forgot how $LITE went from $3B -&gt; $65B+ from 2024 to now. Because $NVD…</summary>
           <p>IMO photonics theme + CW laser chokepoint is goated. It&#x27;s legit like markets have short term memory loss and forgot how $LITE went from $3B -&gt; $65B+ from 2024 to now. Because $NVDA caused EML bottlenecks, and forced architectural changes. We&#x27;re literally seeing the same thing today with CW lasers + 1.6T/CPO shifts wit…</p>
         </details>
-
+        
                 <div class="tweet-action-row" aria-label="static tweet action bar"><span class="tweet-action" title="回复" aria-label="回复"><i>○</i></span><span class="tweet-action" title="转发" aria-label="转发"><i>↻</i></span><span class="tweet-action" title="喜欢" aria-label="喜欢"><i>♡</i></span><span class="tweet-action" title="浏览" aria-label="浏览"><i>▥</i></span><span class="tweet-action" title="保存" aria-label="保存"><i>□</i></span></div>
                 <p class="tweet-ledger-note">
                   <a href="https://x.com/aleabitoreddit/status/2069258326505140653" target="_blank" rel="noreferrer">tweet_id 2069258326505140653</a>
@@ -829,7 +846,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
                 </p>
               </div>
             </article>
-
+            
             <article class="tweet-ledger-row tweet-card" data-change-type="shortage">
               <div class="tweet-ledger-body">
                 <div class="tweet-head">
@@ -849,12 +866,12 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
                   <span>中</span>
                 </div>
                 <p class="tweet-translation">中文精翻：我确实认为 OE Solutions（$138080.KQ）作为大型下游玩家的收购对象最合理。它现在只有约 2.15 亿美元市值，却拥有稀缺的 EML/CW 激光 IP。类似 Source Photonics / 苏州东山精密的收购，可能会给想要垂直整合的公司带来更大价值。</p>
-
+                
         <details class="tweet-original-details">
           <summary>原文：I actually think OE Solutions ($138080.KQ ) makes the most sense as an acquisition target by a large downstream player. Since it’s now trading at a stupid ~$215M MC for scarce EML…</summary>
           <p>I actually think OE Solutions ($138080.KQ ) makes the most sense as an acquisition target by a large downstream player. Since it’s now trading at a stupid ~$215M MC for scarce EML/CW laser IP. A Source Photonics / Suzhou Dongshan Precision type acquisition might add a lot more value to another company that wants to ve…</p>
         </details>
-
+        
                 <div class="tweet-action-row" aria-label="static tweet action bar"><span class="tweet-action" title="回复" aria-label="回复"><i>○</i></span><span class="tweet-action" title="转发" aria-label="转发"><i>↻</i></span><span class="tweet-action" title="喜欢" aria-label="喜欢"><i>♡</i></span><span class="tweet-action" title="浏览" aria-label="浏览"><i>▥</i></span><span class="tweet-action" title="保存" aria-label="保存"><i>□</i></span></div>
                 <p class="tweet-ledger-note">
                   <a href="https://x.com/aleabitoreddit/status/2069230221388333366" target="_blank" rel="noreferrer">tweet_id 2069230221388333366</a>
@@ -864,7 +881,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
                 </p>
               </div>
             </article>
-
+            
             <article class="tweet-ledger-row tweet-card" data-change-type="tech_route">
               <div class="tweet-ledger-body">
                 <div class="tweet-head">
@@ -884,12 +901,12 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
                   <span>中</span>
                 </div>
                 <p class="tweet-translation">中文精翻：我好奇错过 AI 超级周期会是什么感觉：光子、存储，甚至像 $NBIS 这样的 Neocloud 都在跑，而你却忙着在 $IREN 无休止的 60 亿美元 ATM 融资里被套。</p>
-
+                
         <details class="tweet-original-details">
           <summary>原文：I wonder how it feels to miss out on the AI supercycle run… With photonics, memory, and even Neoclouds like $NBIS. Because you’re busy bagholding into the endless $6,000,000,000 a…</summary>
           <p>I wonder how it feels to miss out on the AI supercycle run… With photonics, memory, and even Neoclouds like $NBIS. Because you’re busy bagholding into the endless $6,000,000,000 active ATMs with $IREN. https://t.co/AFEr84Dezd</p>
         </details>
-
+        
                 <div class="tweet-action-row" aria-label="static tweet action bar"><span class="tweet-action" title="回复" aria-label="回复"><i>○</i></span><span class="tweet-action" title="转发" aria-label="转发"><i>↻</i></span><span class="tweet-action" title="喜欢" aria-label="喜欢"><i>♡</i></span><span class="tweet-action" title="浏览" aria-label="浏览"><i>▥</i></span><span class="tweet-action" title="保存" aria-label="保存"><i>□</i></span></div>
                 <p class="tweet-ledger-note">
                   <a href="https://x.com/aleabitoreddit/status/2069214132415652048" target="_blank" rel="noreferrer">tweet_id 2069214132415652048</a>
@@ -899,7 +916,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
                 </p>
               </div>
             </article>
-
+            
             <article class="tweet-ledger-row tweet-card" data-change-type="tech_route">
               <div class="tweet-ledger-body">
                 <div class="tweet-head">
@@ -919,12 +936,12 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
                   <span>中</span>
                 </div>
                 <p class="tweet-translation">中文精翻：哇，$TSEM 今天涨了 10% 以上。好时候，回头看三月时真应该把它做成我最大的仓位之一。像 $GFS 和 $INTC 这样的晶圆代工最近都在狂飙。</p>
-
+                
         <details class="tweet-original-details">
           <summary>原文：Wow, $TSEM up 10%+ today. Good times, should have made this one of my largest positions in hindsight back in March. Foundries like $GFS and $INTC have been going brrr lately. http…</summary>
           <p>Wow, $TSEM up 10%+ today. Good times, should have made this one of my largest positions in hindsight back in March. Foundries like $GFS and $INTC have been going brrr lately. https://t.co/m5KVJ8vOAS</p>
         </details>
-
+        
                 <div class="tweet-action-row" aria-label="static tweet action bar"><span class="tweet-action" title="回复" aria-label="回复"><i>○</i></span><span class="tweet-action" title="转发" aria-label="转发"><i>↻</i></span><span class="tweet-action" title="喜欢" aria-label="喜欢"><i>♡</i></span><span class="tweet-action" title="浏览" aria-label="浏览"><i>▥</i></span><span class="tweet-action" title="保存" aria-label="保存"><i>□</i></span></div>
                 <p class="tweet-ledger-note">
                   <a href="https://x.com/aleabitoreddit/status/2069188398825566318" target="_blank" rel="noreferrer">tweet_id 2069188398825566318</a>
@@ -934,7 +951,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
                 </p>
               </div>
             </article>
-
+            
             <article class="tweet-ledger-row tweet-card" data-change-type="price">
               <div class="tweet-ledger-body">
                 <div class="tweet-head">
@@ -954,12 +971,12 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
                   <span>中</span>
                 </div>
                 <p class="tweet-translation">中文精翻：这要由你自己判断。但我只是把这个摆出来：如果 $AAOI 达到预测，那就是同比 800% 以上增长，在 128 亿美元市值上对应年化 56 亿美元收入。我猜每月 4.71 亿美元还会继续上升，因为需求似乎正以指数级扩展到 2028 年。</p>
-
+                
         <details class="tweet-original-details">
           <summary>原文：That’s for you to decide. But just throwing this out there: If $AAOI hits projections, that’s over 800%+ Y/Y growth, and $5.6B revenue annualized off $12.8B MC. My guess is that t…</summary>
           <p>That’s for you to decide. But just throwing this out there: If $AAOI hits projections, that’s over 800%+ Y/Y growth, and $5.6B revenue annualized off $12.8B MC. My guess is that the $471m/month will keep going up as demand seems to scale exponentially into 2028. I’d expect ASP/margins to go up across the board as well…</p>
         </details>
-
+        
                 <div class="tweet-action-row" aria-label="static tweet action bar"><span class="tweet-action" title="回复" aria-label="回复"><i>○</i></span><span class="tweet-action" title="转发" aria-label="转发"><i>↻</i></span><span class="tweet-action" title="喜欢" aria-label="喜欢"><i>♡</i></span><span class="tweet-action" title="浏览" aria-label="浏览"><i>▥</i></span><span class="tweet-action" title="保存" aria-label="保存"><i>□</i></span></div>
                 <p class="tweet-ledger-note">
                   <a href="https://x.com/aleabitoreddit/status/2069062745308254434" target="_blank" rel="noreferrer">tweet_id 2069062745308254434</a>
@@ -969,7 +986,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
                 </p>
               </div>
             </article>
-
+            
             <article class="tweet-ledger-row tweet-card" data-change-type="tech_route">
               <div class="tweet-ledger-body">
                 <div class="tweet-head">
@@ -989,12 +1006,12 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
                   <span>强</span>
                 </div>
                 <p class="tweet-translation">中文精翻：关于 $LPK：如果让我猜，在它们完全放量爬坡后，30亿到50亿美元也许是合理的。对我个人来说，它看起来更具非对称性，因为现在只是等待游戏，而且他们已经有玻璃基板客户。小型设备供应商的卡点通常会受 TAM 限制，除非你是 ASM…</p>
-
+                
         <details class="tweet-original-details">
           <summary>原文：As for $LPK: Maybe $3B-$5B seems reasonable when they fully volume ramp if I had to guess. Feels more asymmetrical to me personally since it&#x27;s just a waiting game and they have th…</summary>
           <p>As for $LPK: Maybe $3B-$5B seems reasonable when they fully volume ramp if I had to guess. Feels more asymmetrical to me personally since it&#x27;s just a waiting game and they have the customers for glass substrates. Small machine supplier chokepoints usually cap out from TAM though and don&#x27;t go to $20B+ unless you&#x27;re ASM…</p>
         </details>
-
+        
                 <div class="tweet-action-row" aria-label="static tweet action bar"><span class="tweet-action" title="回复" aria-label="回复"><i>○</i></span><span class="tweet-action" title="转发" aria-label="转发"><i>↻</i></span><span class="tweet-action" title="喜欢" aria-label="喜欢"><i>♡</i></span><span class="tweet-action" title="浏览" aria-label="浏览"><i>▥</i></span><span class="tweet-action" title="保存" aria-label="保存"><i>□</i></span></div>
                 <p class="tweet-ledger-note">
                   <a href="https://x.com/aleabitoreddit/status/2069005921318281566" target="_blank" rel="noreferrer">tweet_id 2069005921318281566</a>
@@ -1004,7 +1021,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
                 </p>
               </div>
             </article>
-
+            
             <article class="tweet-ledger-row tweet-card" data-change-type="demand">
               <div class="tweet-ledger-body">
                 <div class="tweet-head">
@@ -1024,12 +1041,12 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
                   <span>中</span>
                 </div>
                 <p class="tweet-translation">中文精翻：哇，WUS TW 连续三个涨停。挺遗憾我没有拿更大的仓位。WUS TW 是我两个 NAV 套利 + 独立成长交易之一。背景：WUS TW 是一家约 11.2 亿美元的 PCB 公司，受益于 AI 数据中心增长。其持有 WUS Kunshan 的股权价值为 47.9 亿美元（420.4 亿的 11.4%）。所以基本上…</p>
-
+                
         <details class="tweet-original-details">
           <summary>原文：Wow, 3 limit ups in a row with WUS TW. Pretty sad I didn&#x27;t take larger positions. WUS TW is 1 my 2 NAV arbitrage + independent growth trades. If you want context: WUS TW is a ~$1.…</summary>
           <p>Wow, 3 limit ups in a row with WUS TW. Pretty sad I didn&#x27;t take larger positions. WUS TW is 1 my 2 NAV arbitrage + independent growth trades. If you want context: WUS TW is a ~$1.12B PCB player with AI DC growth. Their stake in WUS Kunshan is $4.79B (11.4% of 42.04 billion) So basically they&#x27;re a $1.1B PCB player grow…</p>
         </details>
-
+        
                 <div class="tweet-action-row" aria-label="static tweet action bar"><span class="tweet-action" title="回复" aria-label="回复"><i>○</i></span><span class="tweet-action" title="转发" aria-label="转发"><i>↻</i></span><span class="tweet-action" title="喜欢" aria-label="喜欢"><i>♡</i></span><span class="tweet-action" title="浏览" aria-label="浏览"><i>▥</i></span><span class="tweet-action" title="保存" aria-label="保存"><i>□</i></span></div>
                 <p class="tweet-ledger-note">
                   <a href="https://x.com/aleabitoreddit/status/2068866709667406286" target="_blank" rel="noreferrer">tweet_id 2068866709667406286</a>
@@ -1039,7 +1056,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
                 </p>
               </div>
             </article>
-
+            
             <article class="tweet-ledger-row tweet-card" data-change-type="tech_route">
               <div class="tweet-ledger-body">
                 <div class="tweet-head">
@@ -1059,12 +1076,12 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
                   <span>强</span>
                 </div>
                 <p class="tweet-translation">中文精翻：这是误解：$SIVE 是下一代架构的激光供应商，不只是 CPO scale up。可插拔、scale-out CPO、scale-up CPO、NPO 等。Sivers 和 $JBL 开了外挂，用 CW 激光器开发了 1.6T 光模块。实际上是在绕开 EML 瓶颈，甚至还让功耗更…</p>
-
+                
         <details class="tweet-original-details">
           <summary>原文：That’s a misconception: $SIVE is the laser supplier for next gen architectures, not just CPO scale up. Pluggable, scale out CPO, scale up CPO, NPO, etc. - Sivers and $JBL went god…</summary>
           <p>That’s a misconception: $SIVE is the laser supplier for next gen architectures, not just CPO scale up. Pluggable, scale out CPO, scale up CPO, NPO, etc. - Sivers and $JBL went god-mode and developed 1.6T optical transceivers with CW lasers. Effectively designing around the EML bottlenecks, and even made things more po…</p>
         </details>
-
+        
                 <div class="tweet-action-row" aria-label="static tweet action bar"><span class="tweet-action" title="回复" aria-label="回复"><i>○</i></span><span class="tweet-action" title="转发" aria-label="转发"><i>↻</i></span><span class="tweet-action" title="喜欢" aria-label="喜欢"><i>♡</i></span><span class="tweet-action" title="浏览" aria-label="浏览"><i>▥</i></span><span class="tweet-action" title="保存" aria-label="保存"><i>□</i></span></div>
                 <p class="tweet-ledger-note">
                   <a href="https://x.com/aleabitoreddit/status/2068651355422814294" target="_blank" rel="noreferrer">tweet_id 2068651355422814294</a>
@@ -1074,7 +1091,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
                 </p>
               </div>
             </article>
-
+            
             <article class="tweet-ledger-row tweet-card" data-change-type="shortage">
               <div class="tweet-ledger-body">
                 <div class="tweet-head">
@@ -1094,12 +1111,12 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
                   <span>强</span>
                 </div>
                 <p class="tweet-translation">中文精翻：最近很多人问我 OE Solutions（138080）。这是我目前的研究/想法：他们是一家韩国小型光模块公司，类似 $AAOI。他们已经成为全球少数 EML 玩家之一（如 $COHR、$LITE、Mitsubishi、Source、Sumitomo），拥有稀缺的 100G EML 激光器…</p>
-
+                
         <details class="tweet-original-details">
           <summary>原文：I&#x27;ve been getting a lot of questions about OE Solutions (138080) recently. Here&#x27;s my research/thoughts so far on it: They&#x27;re a small Korean optical transceiver company, similar to…</summary>
           <p>I&#x27;ve been getting a lot of questions about OE Solutions (138080) recently. Here&#x27;s my research/thoughts so far on it: They&#x27;re a small Korean optical transceiver company, similar to $AAOI. And they&#x27;ve become one the few EML players in the world (eg. $COHR, $LITE, Mitsubishi, Source, Sumitomo), with scarce 100G EML laser…</p>
         </details>
-
+        
                 <div class="tweet-action-row" aria-label="static tweet action bar"><span class="tweet-action" title="回复" aria-label="回复"><i>○</i></span><span class="tweet-action" title="转发" aria-label="转发"><i>↻</i></span><span class="tweet-action" title="喜欢" aria-label="喜欢"><i>♡</i></span><span class="tweet-action" title="浏览" aria-label="浏览"><i>▥</i></span><span class="tweet-action" title="保存" aria-label="保存"><i>□</i></span></div>
                 <p class="tweet-ledger-note">
                   <a href="https://x.com/aleabitoreddit/status/2068603148311404902" target="_blank" rel="noreferrer">tweet_id 2068603148311404902</a>
@@ -1112,8 +1129,8 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
             </div>
       <p class="muted-note">Serenity 是供应链 thesis lens，适合看瓶颈和映射方向；它不替代公告、财报、行情事实或正式研究判断。</p>
     </div>
-
-
+    
+        
     <div class="brief-desk lang lang-en" data-brief-desk="aleabitoreddit">
       <div class="tweet-ledger">
             <article class="tweet-ledger-row tweet-card" data-change-type="tech_route">
@@ -1134,13 +1151,13 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
                   <span>CPO / NPO / optical interconnect</span>
                   <span>Medium</span>
                 </div>
-
-
+                
+                
         <details class="tweet-original-details">
           <summary>Original：OpenLight (private) seems to get bigger and bigger every time I look at it. If you’re curious about their public ecosystem outside of Advantest: $JBL ( $SIVE partner ) for scaling…</summary>
           <p>OpenLight (private) seems to get bigger and bigger every time I look at it. If you’re curious about their public ecosystem outside of Advantest: $JBL ( $SIVE partner ) for scaling PICs $MRVL and $MXL for DSPs $TSEM for the foundry. $300394.SZ / TFC Optical (OSAT/subassembly) Can often get exposure into private growth…</p>
         </details>
-
+        
                 <div class="tweet-action-row" aria-label="static tweet action bar"><span class="tweet-action" title="Reply" aria-label="Reply"><i>○</i></span><span class="tweet-action" title="Repost" aria-label="Repost"><i>↻</i></span><span class="tweet-action" title="Like" aria-label="Like"><i>♡</i></span><span class="tweet-action" title="View" aria-label="View"><i>▥</i></span><span class="tweet-action" title="Save" aria-label="Save"><i>□</i></span></div>
                 <p class="tweet-ledger-note">
                   <a href="https://x.com/aleabitoreddit/status/2069675057300082728" target="_blank" rel="noreferrer">tweet_id 2069675057300082728</a>
@@ -1150,7 +1167,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
                 </p>
               </div>
             </article>
-
+            
             <article class="tweet-ledger-row tweet-card" data-change-type="demand">
               <div class="tweet-ledger-body">
                 <div class="tweet-head">
@@ -1169,13 +1186,13 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
                   <span>InP / lasers</span>
                   <span>Strong</span>
                 </div>
-
-
+                
+                
         <details class="tweet-original-details">
           <summary>Original：Don’t quite think “siphoned off” is the correct term. It’s capex for massive revenue increase or margin increase down the line. $AMZN is probably my favorite hyperscaler right now…</summary>
           <p>Don’t quite think “siphoned off” is the correct term. It’s capex for massive revenue increase or margin increase down the line. $AMZN is probably my favorite hyperscaler right now and example to give. Amazon’s headcount is absurd, like ~1.57M. If the capex goes into automating their workforce with LLMs. Then transitio…</p>
         </details>
-
+        
                 <div class="tweet-action-row" aria-label="static tweet action bar"><span class="tweet-action" title="Reply" aria-label="Reply"><i>○</i></span><span class="tweet-action" title="Repost" aria-label="Repost"><i>↻</i></span><span class="tweet-action" title="Like" aria-label="Like"><i>♡</i></span><span class="tweet-action" title="View" aria-label="View"><i>▥</i></span><span class="tweet-action" title="Save" aria-label="Save"><i>□</i></span></div>
                 <p class="tweet-ledger-note">
                   <a href="https://x.com/aleabitoreddit/status/2069655980456149142" target="_blank" rel="noreferrer">tweet_id 2069655980456149142</a>
@@ -1185,7 +1202,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
                 </p>
               </div>
             </article>
-
+            
             <article class="tweet-ledger-row tweet-card" data-change-type="tech_route">
               <div class="tweet-ledger-body">
                 <div class="tweet-head">
@@ -1204,13 +1221,13 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
                   <span>InP / lasers</span>
                   <span>Medium</span>
                 </div>
-
-
+                
+                
         <details class="tweet-original-details">
           <summary>Original：Curious if anyone&#x27;s portfolio is green after today&#x27;s fun day. $KORU: -32.06% $SOXL: -22.98% $IQE: -13.58% $DRAM: -12.6% $AXTI: -12.57% $FLNC: -12.5% $AAOI: -11.2% $SIVE: -11.7% $T…</summary>
           <p>Curious if anyone&#x27;s portfolio is green after today&#x27;s fun day. $KORU: -32.06% $SOXL: -22.98% $IQE: -13.58% $DRAM: -12.6% $AXTI: -12.57% $FLNC: -12.5% $AAOI: -11.2% $SIVE: -11.7% $TSEM: -10.24% $SNDK: -12.5% $MU: -11.8% Sk Hynix: -12.35% Samsung: -9.6% $MRVL: -8.3% $LITE: -7.6% $SOI -7.15% $TSM: -6.1% $AMD: -6.04% Feels…</p>
         </details>
-
+        
                 <div class="tweet-action-row" aria-label="static tweet action bar"><span class="tweet-action" title="Reply" aria-label="Reply"><i>○</i></span><span class="tweet-action" title="Repost" aria-label="Repost"><i>↻</i></span><span class="tweet-action" title="Like" aria-label="Like"><i>♡</i></span><span class="tweet-action" title="View" aria-label="View"><i>▥</i></span><span class="tweet-action" title="Save" aria-label="Save"><i>□</i></span></div>
                 <p class="tweet-ledger-note">
                   <a href="https://x.com/aleabitoreddit/status/2069445918114697463" target="_blank" rel="noreferrer">tweet_id 2069445918114697463</a>
@@ -1220,7 +1237,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
                 </p>
               </div>
             </article>
-
+            
             <article class="tweet-ledger-row tweet-card" data-change-type="supply_release">
               <div class="tweet-ledger-body">
                 <div class="tweet-head">
@@ -1239,13 +1256,13 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
                   <span>Read original text for object</span>
                   <span>Medium</span>
                 </div>
-
-
+                
+                
         <details class="tweet-original-details">
           <summary>Original：Today, $XFAB (1.23B MC) receives €127.4 million from CHIPS ACT for their MEMS Foundry. &quot;The «Fab4Micro» in Erfurt is a key project for the technological sovereignty of Germany and…</summary>
           <p>Today, $XFAB (1.23B MC) receives €127.4 million from CHIPS ACT for their MEMS Foundry. &quot;The «Fab4Micro» in Erfurt is a key project for the technological sovereignty of Germany and Europe, explained Thuringia’s head of government.&quot; The production start is planned in 2028 (finanzen). With Europe&#x27;s new CHIPS ACT 2 as a c…</p>
         </details>
-
+        
                 <div class="tweet-action-row" aria-label="static tweet action bar"><span class="tweet-action" title="Reply" aria-label="Reply"><i>○</i></span><span class="tweet-action" title="Repost" aria-label="Repost"><i>↻</i></span><span class="tweet-action" title="Like" aria-label="Like"><i>♡</i></span><span class="tweet-action" title="View" aria-label="View"><i>▥</i></span><span class="tweet-action" title="Save" aria-label="Save"><i>□</i></span></div>
                 <p class="tweet-ledger-note">
                   <a href="https://x.com/aleabitoreddit/status/2069430169300070612" target="_blank" rel="noreferrer">tweet_id 2069430169300070612</a>
@@ -1255,7 +1272,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
                 </p>
               </div>
             </article>
-
+            
             <article class="tweet-ledger-row tweet-card" data-change-type="tech_route">
               <div class="tweet-ledger-body">
                 <div class="tweet-head">
@@ -1274,13 +1291,13 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
                   <span>InP / lasers</span>
                   <span>Medium</span>
                 </div>
-
-
+                
+                
         <details class="tweet-original-details">
           <summary>Original：$SIVE + Aeva likely coded from the new PR today and SIVE + Apple. For Sivers lasers powering robotics / physical AI. -&gt; Sivers lasers powering Boston Dynamics Atlas via. LG Innote…</summary>
           <p>$SIVE + Aeva likely coded from the new PR today and SIVE + Apple. For Sivers lasers powering robotics / physical AI. -&gt; Sivers lasers powering Boston Dynamics Atlas via. LG Innotek for robotics -&gt; Nvidia Hyperion ecosystem w/ Sivers lasers for physical AI. Are possible paths with Aeva. Apple likely using Sivers also r…</p>
         </details>
-
+        
                 <div class="tweet-action-row" aria-label="static tweet action bar"><span class="tweet-action" title="Reply" aria-label="Reply"><i>○</i></span><span class="tweet-action" title="Repost" aria-label="Repost"><i>↻</i></span><span class="tweet-action" title="Like" aria-label="Like"><i>♡</i></span><span class="tweet-action" title="View" aria-label="View"><i>▥</i></span><span class="tweet-action" title="Save" aria-label="Save"><i>□</i></span></div>
                 <p class="tweet-ledger-note">
                   <a href="https://x.com/aleabitoreddit/status/2069388279355756826" target="_blank" rel="noreferrer">tweet_id 2069388279355756826</a>
@@ -1290,7 +1307,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
                 </p>
               </div>
             </article>
-
+            
             <article class="tweet-ledger-row tweet-card" data-change-type="tech_route">
               <div class="tweet-ledger-body">
                 <div class="tweet-head">
@@ -1309,13 +1326,13 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
                   <span>800V / power equipment</span>
                   <span>Medium</span>
                 </div>
-
-
+                
+                
         <details class="tweet-original-details">
           <summary>Original：$XFAB upgraded to outperform with a PT of €12.8 by Bernstein, up from €5. Okay I forgive you Bernstein for Kioxia and Intel. I still think that’s just reactive PTs off automotive…</summary>
           <p>$XFAB upgraded to outperform with a PT of €12.8 by Bernstein, up from €5. Okay I forgive you Bernstein for Kioxia and Intel. I still think that’s just reactive PTs off automotive recovery, SiC/power semi ramp up. And undershooting potential a lot… If markets price in the possibility of xfab moving to HVM. On their sil…</p>
         </details>
-
+        
                 <div class="tweet-action-row" aria-label="static tweet action bar"><span class="tweet-action" title="Reply" aria-label="Reply"><i>○</i></span><span class="tweet-action" title="Repost" aria-label="Repost"><i>↻</i></span><span class="tweet-action" title="Like" aria-label="Like"><i>♡</i></span><span class="tweet-action" title="View" aria-label="View"><i>▥</i></span><span class="tweet-action" title="Save" aria-label="Save"><i>□</i></span></div>
                 <p class="tweet-ledger-note">
                   <a href="https://x.com/aleabitoreddit/status/2069373894398743000" target="_blank" rel="noreferrer">tweet_id 2069373894398743000</a>
@@ -1325,7 +1342,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
                 </p>
               </div>
             </article>
-
+            
             <article class="tweet-ledger-row tweet-card" data-change-type="risk">
               <div class="tweet-ledger-body">
                 <div class="tweet-head">
@@ -1344,13 +1361,13 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
                   <span>Read original text for object</span>
                   <span>Medium</span>
                 </div>
-
-
+                
+                
         <details class="tweet-original-details">
           <summary>Original：Bank of America looks like the malicious equivalent of Bernstein/Jim Cramer to retail. - said $KOSPI / $EWY was an extreme bubble, compared it to Silver crash back in March, causi…</summary>
           <p>Bank of America looks like the malicious equivalent of Bernstein/Jim Cramer to retail. - said $KOSPI / $EWY was an extreme bubble, compared it to Silver crash back in March, causing retail to sell positions. The index proceeded to close to double and hit ATHs since that call. - saying “BoA expects 3 rate hikes in 2026…</p>
         </details>
-
+        
                 <div class="tweet-action-row" aria-label="static tweet action bar"><span class="tweet-action" title="Reply" aria-label="Reply"><i>○</i></span><span class="tweet-action" title="Repost" aria-label="Repost"><i>↻</i></span><span class="tweet-action" title="Like" aria-label="Like"><i>♡</i></span><span class="tweet-action" title="View" aria-label="View"><i>▥</i></span><span class="tweet-action" title="Save" aria-label="Save"><i>□</i></span></div>
                 <p class="tweet-ledger-note">
                   <a href="https://x.com/aleabitoreddit/status/2069271973402931511" target="_blank" rel="noreferrer">tweet_id 2069271973402931511</a>
@@ -1360,7 +1377,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
                 </p>
               </div>
             </article>
-
+            
             <article class="tweet-ledger-row tweet-card" data-change-type="tech_route">
               <div class="tweet-ledger-body">
                 <div class="tweet-head">
@@ -1379,13 +1396,13 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
                   <span>CPO / NPO / optical interconnect</span>
                   <span>Strong</span>
                 </div>
-
-
+                
+                
         <details class="tweet-original-details">
           <summary>Original：IMO photonics theme + CW laser chokepoint is goated. It&#x27;s legit like markets have short term memory loss and forgot how $LITE went from $3B -&gt; $65B+ from 2024 to now. Because $NVD…</summary>
           <p>IMO photonics theme + CW laser chokepoint is goated. It&#x27;s legit like markets have short term memory loss and forgot how $LITE went from $3B -&gt; $65B+ from 2024 to now. Because $NVDA caused EML bottlenecks, and forced architectural changes. We&#x27;re literally seeing the same thing today with CW lasers + 1.6T/CPO shifts wit…</p>
         </details>
-
+        
                 <div class="tweet-action-row" aria-label="static tweet action bar"><span class="tweet-action" title="Reply" aria-label="Reply"><i>○</i></span><span class="tweet-action" title="Repost" aria-label="Repost"><i>↻</i></span><span class="tweet-action" title="Like" aria-label="Like"><i>♡</i></span><span class="tweet-action" title="View" aria-label="View"><i>▥</i></span><span class="tweet-action" title="Save" aria-label="Save"><i>□</i></span></div>
                 <p class="tweet-ledger-note">
                   <a href="https://x.com/aleabitoreddit/status/2069258326505140653" target="_blank" rel="noreferrer">tweet_id 2069258326505140653</a>
@@ -1395,7 +1412,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
                 </p>
               </div>
             </article>
-
+            
             <article class="tweet-ledger-row tweet-card" data-change-type="shortage">
               <div class="tweet-ledger-body">
                 <div class="tweet-head">
@@ -1414,13 +1431,13 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
                   <span>InP / lasers</span>
                   <span>Medium</span>
                 </div>
-
-
+                
+                
         <details class="tweet-original-details">
           <summary>Original：I actually think OE Solutions ($138080.KQ ) makes the most sense as an acquisition target by a large downstream player. Since it’s now trading at a stupid ~$215M MC for scarce EML…</summary>
           <p>I actually think OE Solutions ($138080.KQ ) makes the most sense as an acquisition target by a large downstream player. Since it’s now trading at a stupid ~$215M MC for scarce EML/CW laser IP. A Source Photonics / Suzhou Dongshan Precision type acquisition might add a lot more value to another company that wants to ve…</p>
         </details>
-
+        
                 <div class="tweet-action-row" aria-label="static tweet action bar"><span class="tweet-action" title="Reply" aria-label="Reply"><i>○</i></span><span class="tweet-action" title="Repost" aria-label="Repost"><i>↻</i></span><span class="tweet-action" title="Like" aria-label="Like"><i>♡</i></span><span class="tweet-action" title="View" aria-label="View"><i>▥</i></span><span class="tweet-action" title="Save" aria-label="Save"><i>□</i></span></div>
                 <p class="tweet-ledger-note">
                   <a href="https://x.com/aleabitoreddit/status/2069230221388333366" target="_blank" rel="noreferrer">tweet_id 2069230221388333366</a>
@@ -1430,7 +1447,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
                 </p>
               </div>
             </article>
-
+            
             <article class="tweet-ledger-row tweet-card" data-change-type="tech_route">
               <div class="tweet-ledger-body">
                 <div class="tweet-head">
@@ -1449,13 +1466,13 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
                   <span>HBM / DRAM</span>
                   <span>Medium</span>
                 </div>
-
-
+                
+                
         <details class="tweet-original-details">
           <summary>Original：I wonder how it feels to miss out on the AI supercycle run… With photonics, memory, and even Neoclouds like $NBIS. Because you’re busy bagholding into the endless $6,000,000,000 a…</summary>
           <p>I wonder how it feels to miss out on the AI supercycle run… With photonics, memory, and even Neoclouds like $NBIS. Because you’re busy bagholding into the endless $6,000,000,000 active ATMs with $IREN. https://t.co/AFEr84Dezd</p>
         </details>
-
+        
                 <div class="tweet-action-row" aria-label="static tweet action bar"><span class="tweet-action" title="Reply" aria-label="Reply"><i>○</i></span><span class="tweet-action" title="Repost" aria-label="Repost"><i>↻</i></span><span class="tweet-action" title="Like" aria-label="Like"><i>♡</i></span><span class="tweet-action" title="View" aria-label="View"><i>▥</i></span><span class="tweet-action" title="Save" aria-label="Save"><i>□</i></span></div>
                 <p class="tweet-ledger-note">
                   <a href="https://x.com/aleabitoreddit/status/2069214132415652048" target="_blank" rel="noreferrer">tweet_id 2069214132415652048</a>
@@ -1465,7 +1482,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
                 </p>
               </div>
             </article>
-
+            
             <article class="tweet-ledger-row tweet-card" data-change-type="tech_route">
               <div class="tweet-ledger-body">
                 <div class="tweet-head">
@@ -1484,13 +1501,13 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
                   <span>CPO / NPO / optical interconnect</span>
                   <span>Medium</span>
                 </div>
-
-
+                
+                
         <details class="tweet-original-details">
           <summary>Original：Wow, $TSEM up 10%+ today. Good times, should have made this one of my largest positions in hindsight back in March. Foundries like $GFS and $INTC have been going brrr lately. http…</summary>
           <p>Wow, $TSEM up 10%+ today. Good times, should have made this one of my largest positions in hindsight back in March. Foundries like $GFS and $INTC have been going brrr lately. https://t.co/m5KVJ8vOAS</p>
         </details>
-
+        
                 <div class="tweet-action-row" aria-label="static tweet action bar"><span class="tweet-action" title="Reply" aria-label="Reply"><i>○</i></span><span class="tweet-action" title="Repost" aria-label="Repost"><i>↻</i></span><span class="tweet-action" title="Like" aria-label="Like"><i>♡</i></span><span class="tweet-action" title="View" aria-label="View"><i>▥</i></span><span class="tweet-action" title="Save" aria-label="Save"><i>□</i></span></div>
                 <p class="tweet-ledger-note">
                   <a href="https://x.com/aleabitoreddit/status/2069188398825566318" target="_blank" rel="noreferrer">tweet_id 2069188398825566318</a>
@@ -1500,7 +1517,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
                 </p>
               </div>
             </article>
-
+            
             <article class="tweet-ledger-row tweet-card" data-change-type="price">
               <div class="tweet-ledger-body">
                 <div class="tweet-head">
@@ -1519,13 +1536,13 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
                   <span>CPO / NPO / optical interconnect</span>
                   <span>Medium</span>
                 </div>
-
-
+                
+                
         <details class="tweet-original-details">
           <summary>Original：That’s for you to decide. But just throwing this out there: If $AAOI hits projections, that’s over 800%+ Y/Y growth, and $5.6B revenue annualized off $12.8B MC. My guess is that t…</summary>
           <p>That’s for you to decide. But just throwing this out there: If $AAOI hits projections, that’s over 800%+ Y/Y growth, and $5.6B revenue annualized off $12.8B MC. My guess is that the $471m/month will keep going up as demand seems to scale exponentially into 2028. I’d expect ASP/margins to go up across the board as well…</p>
         </details>
-
+        
                 <div class="tweet-action-row" aria-label="static tweet action bar"><span class="tweet-action" title="Reply" aria-label="Reply"><i>○</i></span><span class="tweet-action" title="Repost" aria-label="Repost"><i>↻</i></span><span class="tweet-action" title="Like" aria-label="Like"><i>♡</i></span><span class="tweet-action" title="View" aria-label="View"><i>▥</i></span><span class="tweet-action" title="Save" aria-label="Save"><i>□</i></span></div>
                 <p class="tweet-ledger-note">
                   <a href="https://x.com/aleabitoreddit/status/2069062745308254434" target="_blank" rel="noreferrer">tweet_id 2069062745308254434</a>
@@ -1535,7 +1552,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
                 </p>
               </div>
             </article>
-
+            
             <article class="tweet-ledger-row tweet-card" data-change-type="tech_route">
               <div class="tweet-ledger-body">
                 <div class="tweet-head">
@@ -1554,13 +1571,13 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
                   <span>FC-BGA / package substrate</span>
                   <span>Strong</span>
                 </div>
-
-
+                
+                
         <details class="tweet-original-details">
           <summary>Original：As for $LPK: Maybe $3B-$5B seems reasonable when they fully volume ramp if I had to guess. Feels more asymmetrical to me personally since it&#x27;s just a waiting game and they have th…</summary>
           <p>As for $LPK: Maybe $3B-$5B seems reasonable when they fully volume ramp if I had to guess. Feels more asymmetrical to me personally since it&#x27;s just a waiting game and they have the customers for glass substrates. Small machine supplier chokepoints usually cap out from TAM though and don&#x27;t go to $20B+ unless you&#x27;re ASM…</p>
         </details>
-
+        
                 <div class="tweet-action-row" aria-label="static tweet action bar"><span class="tweet-action" title="Reply" aria-label="Reply"><i>○</i></span><span class="tweet-action" title="Repost" aria-label="Repost"><i>↻</i></span><span class="tweet-action" title="Like" aria-label="Like"><i>♡</i></span><span class="tweet-action" title="View" aria-label="View"><i>▥</i></span><span class="tweet-action" title="Save" aria-label="Save"><i>□</i></span></div>
                 <p class="tweet-ledger-note">
                   <a href="https://x.com/aleabitoreddit/status/2069005921318281566" target="_blank" rel="noreferrer">tweet_id 2069005921318281566</a>
@@ -1570,7 +1587,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
                 </p>
               </div>
             </article>
-
+            
             <article class="tweet-ledger-row tweet-card" data-change-type="demand">
               <div class="tweet-ledger-body">
                 <div class="tweet-head">
@@ -1589,13 +1606,13 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
                   <span>AI ASIC / TPU / custom silicon</span>
                   <span>Medium</span>
                 </div>
-
-
+                
+                
         <details class="tweet-original-details">
           <summary>Original：Wow, 3 limit ups in a row with WUS TW. Pretty sad I didn&#x27;t take larger positions. WUS TW is 1 my 2 NAV arbitrage + independent growth trades. If you want context: WUS TW is a ~$1.…</summary>
           <p>Wow, 3 limit ups in a row with WUS TW. Pretty sad I didn&#x27;t take larger positions. WUS TW is 1 my 2 NAV arbitrage + independent growth trades. If you want context: WUS TW is a ~$1.12B PCB player with AI DC growth. Their stake in WUS Kunshan is $4.79B (11.4% of 42.04 billion) So basically they&#x27;re a $1.1B PCB player grow…</p>
         </details>
-
+        
                 <div class="tweet-action-row" aria-label="static tweet action bar"><span class="tweet-action" title="Reply" aria-label="Reply"><i>○</i></span><span class="tweet-action" title="Repost" aria-label="Repost"><i>↻</i></span><span class="tweet-action" title="Like" aria-label="Like"><i>♡</i></span><span class="tweet-action" title="View" aria-label="View"><i>▥</i></span><span class="tweet-action" title="Save" aria-label="Save"><i>□</i></span></div>
                 <p class="tweet-ledger-note">
                   <a href="https://x.com/aleabitoreddit/status/2068866709667406286" target="_blank" rel="noreferrer">tweet_id 2068866709667406286</a>
@@ -1605,7 +1622,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
                 </p>
               </div>
             </article>
-
+            
             <article class="tweet-ledger-row tweet-card" data-change-type="tech_route">
               <div class="tweet-ledger-body">
                 <div class="tweet-head">
@@ -1624,13 +1641,13 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
                   <span>CPO / NPO / optical interconnect</span>
                   <span>Strong</span>
                 </div>
-
-
+                
+                
         <details class="tweet-original-details">
           <summary>Original：That’s a misconception: $SIVE is the laser supplier for next gen architectures, not just CPO scale up. Pluggable, scale out CPO, scale up CPO, NPO, etc. - Sivers and $JBL went god…</summary>
           <p>That’s a misconception: $SIVE is the laser supplier for next gen architectures, not just CPO scale up. Pluggable, scale out CPO, scale up CPO, NPO, etc. - Sivers and $JBL went god-mode and developed 1.6T optical transceivers with CW lasers. Effectively designing around the EML bottlenecks, and even made things more po…</p>
         </details>
-
+        
                 <div class="tweet-action-row" aria-label="static tweet action bar"><span class="tweet-action" title="Reply" aria-label="Reply"><i>○</i></span><span class="tweet-action" title="Repost" aria-label="Repost"><i>↻</i></span><span class="tweet-action" title="Like" aria-label="Like"><i>♡</i></span><span class="tweet-action" title="View" aria-label="View"><i>▥</i></span><span class="tweet-action" title="Save" aria-label="Save"><i>□</i></span></div>
                 <p class="tweet-ledger-note">
                   <a href="https://x.com/aleabitoreddit/status/2068651355422814294" target="_blank" rel="noreferrer">tweet_id 2068651355422814294</a>
@@ -1640,7 +1657,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
                 </p>
               </div>
             </article>
-
+            
             <article class="tweet-ledger-row tweet-card" data-change-type="shortage">
               <div class="tweet-ledger-body">
                 <div class="tweet-head">
@@ -1659,13 +1676,13 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
                   <span>CPO / NPO / optical interconnect</span>
                   <span>Strong</span>
                 </div>
-
-
+                
+                
         <details class="tweet-original-details">
           <summary>Original：I&#x27;ve been getting a lot of questions about OE Solutions (138080) recently. Here&#x27;s my research/thoughts so far on it: They&#x27;re a small Korean optical transceiver company, similar to…</summary>
           <p>I&#x27;ve been getting a lot of questions about OE Solutions (138080) recently. Here&#x27;s my research/thoughts so far on it: They&#x27;re a small Korean optical transceiver company, similar to $AAOI. And they&#x27;ve become one the few EML players in the world (eg. $COHR, $LITE, Mitsubishi, Source, Sumitomo), with scarce 100G EML laser…</p>
         </details>
-
+        
                 <div class="tweet-action-row" aria-label="static tweet action bar"><span class="tweet-action" title="Reply" aria-label="Reply"><i>○</i></span><span class="tweet-action" title="Repost" aria-label="Repost"><i>↻</i></span><span class="tweet-action" title="Like" aria-label="Like"><i>♡</i></span><span class="tweet-action" title="View" aria-label="View"><i>▥</i></span><span class="tweet-action" title="Save" aria-label="Save"><i>□</i></span></div>
                 <p class="tweet-ledger-note">
                   <a href="https://x.com/aleabitoreddit/status/2068603148311404902" target="_blank" rel="noreferrer">tweet_id 2068603148311404902</a>
@@ -1678,10 +1695,10 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
             </div>
       <p class="muted-note">Serenity is a supply-chain thesis lens for bottlenecks and mapping direction; it does not replace filings, financials, market facts or formal research judgment.</p>
     </div>
-
+    
       </div>
     </article>
-
+    
     <article class="brief-card">
       <header class="brief-titlebar">
         <div class="kol-feed-head">
@@ -1694,7 +1711,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
         </div>
       </header>
       <div class="brief-body">
-
+        
     <div class="brief-desk lang lang-zh" data-brief-desk="jukan05">
       <div class="tweet-ledger">
             <article class="tweet-ledger-row tweet-card" data-change-type="tech_progress">
@@ -1716,12 +1733,12 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
                   <span>中</span>
                 </div>
                 <p class="tweet-translation">中文精翻：独家：Apple 将于 7 月开始折叠 iPhone 量产，铰链问题已解决。Apple 将从 7 月下旬开始量产首款折叠 iPhone。尽管最近因铰链问题出现推迟发布的猜测，但已确认 Apple 正按原计划推进 9 月发布。</p>
-
+                
         <details class="tweet-original-details">
           <summary>原文：Exclusive: Apple to Begin Foldable iPhone Mass Production in July, Hinge Problem Resolved Apple will begin mass production of its first foldable iPhone from late July. While specu…</summary>
           <p>Exclusive: Apple to Begin Foldable iPhone Mass Production in July, Hinge Problem Resolved Apple will begin mass production of its first foldable iPhone from late July. While speculation about a launch delay recently emerged due to hinge problems, it has been confirmed that Apple is pushing ahead with a September unvei…</p>
         </details>
-
+        
                 <div class="tweet-action-row" aria-label="static tweet action bar"><span class="tweet-action" title="回复" aria-label="回复"><i>○</i></span><span class="tweet-action" title="转发" aria-label="转发"><i>↻</i></span><span class="tweet-action" title="喜欢" aria-label="喜欢"><i>♡</i></span><span class="tweet-action" title="浏览" aria-label="浏览"><i>▥</i></span><span class="tweet-action" title="保存" aria-label="保存"><i>□</i></span></div>
                 <p class="tweet-ledger-note">
                   <a href="https://x.com/jukan05/status/2069689336258576813" target="_blank" rel="noreferrer">tweet_id 2069689336258576813</a>
@@ -1731,7 +1748,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
                 </p>
               </div>
             </article>
-
+            
             <article class="tweet-ledger-row tweet-card" data-change-type="supply_release">
               <div class="tweet-ledger-body">
                 <div class="tweet-head">
@@ -1751,12 +1768,12 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
                   <span>中</span>
                 </div>
                 <p class="tweet-translation">中文精翻：Samsung Electronics 将一半 HBM 产能分配给 HBM4。据悉，三星已把高带宽内存 HBM 产能的一半分配给第六代 HBM4。在今年 2 月率先出货 HBM4 后，公司正正式扩大生产并试图恢复市场份额。</p>
-
+                
         <details class="tweet-original-details">
           <summary>原文：Samsung Electronics Allocates Half of HBM Capacity to HBM4 Samsung Electronics has been found to have assigned half of its high bandwidth memory (HBM) production capacity to its s…</summary>
           <p>Samsung Electronics Allocates Half of HBM Capacity to HBM4 Samsung Electronics has been found to have assigned half of its high bandwidth memory (HBM) production capacity to its sixth generation HBM4. After becoming the first in the world to ship HBM4 this past February, the company is now expanding production in earn…</p>
         </details>
-
+        
                 <div class="tweet-action-row" aria-label="static tweet action bar"><span class="tweet-action" title="回复" aria-label="回复"><i>○</i></span><span class="tweet-action" title="转发" aria-label="转发"><i>↻</i></span><span class="tweet-action" title="喜欢" aria-label="喜欢"><i>♡</i></span><span class="tweet-action" title="浏览" aria-label="浏览"><i>▥</i></span><span class="tweet-action" title="保存" aria-label="保存"><i>□</i></span></div>
                 <p class="tweet-ledger-note">
                   <a href="https://x.com/jukan05/status/2069680390978027791" target="_blank" rel="noreferrer">tweet_id 2069680390978027791</a>
@@ -1766,7 +1783,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
                 </p>
               </div>
             </article>
-
+            
             <article class="tweet-ledger-row tweet-card" data-change-type="price">
               <div class="tweet-ledger-body">
                 <div class="tweet-head">
@@ -1786,12 +1803,12 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
                   <span>中</span>
                 </div>
                 <p class="tweet-translation">中文精翻：这其实是一个非常重要的点。如果 CXMT 的 DRAM ASP 只比 Samsung、SK Hynix 和 Micron 低约 5-10%，这说明中国目前没有兴趣倾销存储。他们也想赚钱，不是吗？</p>
-
+                
         <details class="tweet-original-details">
           <summary>原文：This is actually a really important point. If CXMT’s DRAM ASP is only about 5–10% lower than Samsung, SK Hynix, and Micron’s, it suggests that China currently has no interest in d…</summary>
           <p>This is actually a really important point. If CXMT’s DRAM ASP is only about 5–10% lower than Samsung, SK Hynix, and Micron’s, it suggests that China currently has no interest in dumping memory. They want to make money too, don’t they? https://t.co/FZaxOg6KHP</p>
         </details>
-
+        
                 <div class="tweet-action-row" aria-label="static tweet action bar"><span class="tweet-action" title="回复" aria-label="回复"><i>○</i></span><span class="tweet-action" title="转发" aria-label="转发"><i>↻</i></span><span class="tweet-action" title="喜欢" aria-label="喜欢"><i>♡</i></span><span class="tweet-action" title="浏览" aria-label="浏览"><i>▥</i></span><span class="tweet-action" title="保存" aria-label="保存"><i>□</i></span></div>
                 <p class="tweet-ledger-note">
                   <a href="https://x.com/jukan05/status/2069488184036307049" target="_blank" rel="noreferrer">tweet_id 2069488184036307049</a>
@@ -1801,7 +1818,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
                 </p>
               </div>
             </article>
-
+            
             <article class="tweet-ledger-row tweet-card" data-change-type="price">
               <div class="tweet-ledger-body">
                 <div class="tweet-head">
@@ -1821,12 +1838,12 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
                   <span>强</span>
                 </div>
                 <p class="tweet-translation">中文精翻：Culpium：TSMC 正推动包括 7nm 在内的所有先进节点涨价 5-10%。推动因素是管理层看到竞争的存储公司享受更高价格后，也希望从同样趋势中受益。$TSM</p>
-
+                
         <details class="tweet-original-details">
           <summary>原文：Culpium: TSMC is pushing for a 5–10% price increase across all advanced nodes, including 7nm. This was driven by management’s directive after seeing competing memory companies enj…</summary>
           <p>Culpium: TSMC is pushing for a 5–10% price increase across all advanced nodes, including 7nm. This was driven by management’s directive after seeing competing memory companies enjoy higher pricing and wanting to benefit from the same trend. $TSM</p>
         </details>
-
+        
                 <div class="tweet-action-row" aria-label="static tweet action bar"><span class="tweet-action" title="回复" aria-label="回复"><i>○</i></span><span class="tweet-action" title="转发" aria-label="转发"><i>↻</i></span><span class="tweet-action" title="喜欢" aria-label="喜欢"><i>♡</i></span><span class="tweet-action" title="浏览" aria-label="浏览"><i>▥</i></span><span class="tweet-action" title="保存" aria-label="保存"><i>□</i></span></div>
                 <p class="tweet-ledger-note">
                   <a href="https://x.com/jukan05/status/2069388829841363242" target="_blank" rel="noreferrer">tweet_id 2069388829841363242</a>
@@ -1836,7 +1853,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
                 </p>
               </div>
             </article>
-
+            
             <article class="tweet-ledger-row tweet-card" data-change-type="demand">
               <div class="tweet-ledger-body">
                 <div class="tweet-head">
@@ -1856,12 +1873,12 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
                   <span>中</span>
                 </div>
                 <p class="tweet-translation">中文精翻：为什么要把事情复杂化？Micron 正试图尽早与 Anthropic 建立强关系，并让 Anthropic 更依赖 Micron。随着 Anthropic 未来消耗越来越多内存，尤其是转向设计自有 ASIC，Micron 需要提前锁定这层关系。</p>
-
+                
         <details class="tweet-original-details">
           <summary>原文：Why overcomplicate it? Micron is trying to build a strong relationship with Anthropic early on and make Anthropic more dependent on Micron. Anthropic is likely to consume more and…</summary>
           <p>Why overcomplicate it? Micron is trying to build a strong relationship with Anthropic early on and make Anthropic more dependent on Micron. Anthropic is likely to consume more and more memory over time, especially as it moves toward designing its own ASICs, so Micron needs to secure that relationship ahead of time. Wh…</p>
         </details>
-
+        
                 <div class="tweet-action-row" aria-label="static tweet action bar"><span class="tweet-action" title="回复" aria-label="回复"><i>○</i></span><span class="tweet-action" title="转发" aria-label="转发"><i>↻</i></span><span class="tweet-action" title="喜欢" aria-label="喜欢"><i>♡</i></span><span class="tweet-action" title="浏览" aria-label="浏览"><i>▥</i></span><span class="tweet-action" title="保存" aria-label="保存"><i>□</i></span></div>
                 <p class="tweet-ledger-note">
                   <a href="https://x.com/jukan05/status/2069278356193919073" target="_blank" rel="noreferrer">tweet_id 2069278356193919073</a>
@@ -1871,7 +1888,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
                 </p>
               </div>
             </article>
-
+            
             <article class="tweet-ledger-row tweet-card" data-change-type="demand">
               <div class="tweet-ledger-body">
                 <div class="tweet-head">
@@ -1891,12 +1908,12 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
                   <span>中</span>
                 </div>
                 <p class="tweet-translation">中文精翻：FundaAI：TPU 更新。关于此前提到的 Pumafish 取消，我们维持当前观点；从供应链端尚未观察到 Pumafish 重启的进展。关于 MediaTek，我们把 Humufish + Triggerfish 的生命周期出货预期从 500 万颗上调到 600-700 万颗。</p>
-
+                
         <details class="tweet-original-details">
           <summary>原文：FundaAI: &quot;TPU Update On the previously mentioned cancellation of Pumafish, we maintain ourcurrent view. We have not observed any progress regarding a restart of Pumafishfrom the s…</summary>
           <p>FundaAI: &quot;TPU Update On the previously mentioned cancellation of Pumafish, we maintain ourcurrent view. We have not observed any progress regarding a restart of Pumafishfrom the supply chain side. Also on MediaTek, we are raising the life cycle volume expectations for Humufish+ Triggerfish to 6-7 million units (up fro…</p>
         </details>
-
+        
                 <div class="tweet-action-row" aria-label="static tweet action bar"><span class="tweet-action" title="回复" aria-label="回复"><i>○</i></span><span class="tweet-action" title="转发" aria-label="转发"><i>↻</i></span><span class="tweet-action" title="喜欢" aria-label="喜欢"><i>♡</i></span><span class="tweet-action" title="浏览" aria-label="浏览"><i>▥</i></span><span class="tweet-action" title="保存" aria-label="保存"><i>□</i></span></div>
                 <p class="tweet-ledger-note">
                   <a href="https://x.com/jukan05/status/2069266963965350136" target="_blank" rel="noreferrer">tweet_id 2069266963965350136</a>
@@ -1906,7 +1923,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
                 </p>
               </div>
             </article>
-
+            
             <article class="tweet-ledger-row tweet-card" data-change-type="demand">
               <div class="tweet-ledger-body">
                 <div class="tweet-head">
@@ -1926,12 +1943,12 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
                   <span>中</span>
                 </div>
                 <p class="tweet-translation">中文精翻：二季度消费级 LPDDR5X 价格上涨 89%。市场研究机构 SigmaIntell 表示，由于存储供需失衡，今年二季度消费类产品价格上涨。在低功耗 DRAM（LPDDR）类别中，LPDDR4X 4GB 产品价格环比上涨 75%，LPDDR5X 12GB 产品上涨 89%。</p>
-
+                
         <details class="tweet-original-details">
           <summary>原文：Q2 Consumer LPDDR5X Prices Rise 89% Market research firm SigmaIntell announced on the 22nd that prices for consumer product categories rose in the second quarter of this year due…</summary>
           <p>Q2 Consumer LPDDR5X Prices Rise 89% Market research firm SigmaIntell announced on the 22nd that prices for consumer product categories rose in the second quarter of this year due to a memory supply and demand imbalance. In the low power DRAM (LPDDR) product category, the price of the LPDDR4X 4GB product rose 75% quart…</p>
         </details>
-
+        
                 <div class="tweet-action-row" aria-label="static tweet action bar"><span class="tweet-action" title="回复" aria-label="回复"><i>○</i></span><span class="tweet-action" title="转发" aria-label="转发"><i>↻</i></span><span class="tweet-action" title="喜欢" aria-label="喜欢"><i>♡</i></span><span class="tweet-action" title="浏览" aria-label="浏览"><i>▥</i></span><span class="tweet-action" title="保存" aria-label="保存"><i>□</i></span></div>
                 <p class="tweet-ledger-note">
                   <a href="https://x.com/jukan05/status/2069263371766219092" target="_blank" rel="noreferrer">tweet_id 2069263371766219092</a>
@@ -1941,7 +1958,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
                 </p>
               </div>
             </article>
-
+            
             <article class="tweet-ledger-row tweet-card" data-change-type="demand">
               <div class="tweet-ledger-body">
                 <div class="tweet-head">
@@ -1961,12 +1978,12 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
                   <span>中</span>
                 </div>
                 <p class="tweet-translation">中文精翻：Morgan Stanley 更新了对中国 AI 芯片的模型，其中特别有意思的是，他们预计从 2028 年起，中国公司会开始在中国以外的海外区域数据中心部署国产 AI 加速器。</p>
-
+                
         <details class="tweet-original-details">
           <summary>原文：Morgan Stanley updated its modeling for China AI chips, and the particularly interesting part is that they expect Chinese companies to start deploying Chinese-made AI accelerators…</summary>
           <p>Morgan Stanley updated its modeling for China AI chips, and the particularly interesting part is that they expect Chinese companies to start deploying Chinese-made AI accelerators in overseas regional data centers outside China from 2028 onward. https://t.co/gZ6E6xaaaP</p>
         </details>
-
+        
                 <div class="tweet-action-row" aria-label="static tweet action bar"><span class="tweet-action" title="回复" aria-label="回复"><i>○</i></span><span class="tweet-action" title="转发" aria-label="转发"><i>↻</i></span><span class="tweet-action" title="喜欢" aria-label="喜欢"><i>♡</i></span><span class="tweet-action" title="浏览" aria-label="浏览"><i>▥</i></span><span class="tweet-action" title="保存" aria-label="保存"><i>□</i></span></div>
                 <p class="tweet-ledger-note">
                   <a href="https://x.com/jukan05/status/2069226465812713682" target="_blank" rel="noreferrer">tweet_id 2069226465812713682</a>
@@ -1976,7 +1993,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
                 </p>
               </div>
             </article>
-
+            
             <article class="tweet-ledger-row tweet-card" data-change-type="shortage">
               <div class="tweet-ledger-body">
                 <div class="tweet-head">
@@ -1996,12 +2013,12 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
                   <span>中</span>
                 </div>
                 <p class="tweet-translation">中文精翻：SK Hynix 放缓 HBM4 生产，寻求通过扩大供应受限的通用 DRAM 获得额外利润。SK Hynix 正放缓第六代高带宽内存 HBM4 的爬坡节奏，并更重视抓住通用 DRAM 市场。其 HBM 收入占比已超过 40%，领先地位明显。</p>
-
+                
         <details class="tweet-original-details">
           <summary>原文：SK Hynix Throttles HBM4 Production… Seeks Additional Profit by Expanding Supply Constrained Commodity DRAM SK Hynix is moderating the pace of its sixth generation high bandwidth m…</summary>
           <p>SK Hynix Throttles HBM4 Production… Seeks Additional Profit by Expanding Supply Constrained Commodity DRAM SK Hynix is moderating the pace of its sixth generation high bandwidth memory (HBM4) ramp and placing greater weight on capturing the commodity DRAM market. With its HBM revenue share already exceeding 40 percent…</p>
         </details>
-
+        
                 <div class="tweet-action-row" aria-label="static tweet action bar"><span class="tweet-action" title="回复" aria-label="回复"><i>○</i></span><span class="tweet-action" title="转发" aria-label="转发"><i>↻</i></span><span class="tweet-action" title="喜欢" aria-label="喜欢"><i>♡</i></span><span class="tweet-action" title="浏览" aria-label="浏览"><i>▥</i></span><span class="tweet-action" title="保存" aria-label="保存"><i>□</i></span></div>
                 <p class="tweet-ledger-note">
                   <a href="https://x.com/jukan05/status/2069207209133887767" target="_blank" rel="noreferrer">tweet_id 2069207209133887767</a>
@@ -2011,7 +2028,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
                 </p>
               </div>
             </article>
-
+            
             <article class="tweet-ledger-row tweet-card" data-change-type="risk">
               <div class="tweet-ledger-body">
                 <div class="tweet-head">
@@ -2031,12 +2048,12 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
                   <span>中</span>
                 </div>
                 <p class="tweet-translation">中文精翻：Samsung Electronics HBM4 收入突破 10 亿美元，距离率先量产仅四个月。据报道，三星第六代高带宽内存 HBM4 成为行业首个收入超过 10 亿美元（约 1.54 万亿韩元）的 HBM4 产品。</p>
-
+                
         <details class="tweet-original-details">
           <summary>原文：Samsung Electronics HBM4 Revenue Tops $1 Billion, Just Four Months After Becoming First to Mass Produce Samsung Electronics&#x27; sixth generation high bandwidth memory (HBM), HBM4, is…</summary>
           <p>Samsung Electronics HBM4 Revenue Tops $1 Billion, Just Four Months After Becoming First to Mass Produce Samsung Electronics&#x27; sixth generation high bandwidth memory (HBM), HBM4, is reported to have become the first in the industry to surpass $1 billion (about 1.54 trillion won) in revenue. According to industry sources…</p>
         </details>
-
+        
                 <div class="tweet-action-row" aria-label="static tweet action bar"><span class="tweet-action" title="回复" aria-label="回复"><i>○</i></span><span class="tweet-action" title="转发" aria-label="转发"><i>↻</i></span><span class="tweet-action" title="喜欢" aria-label="喜欢"><i>♡</i></span><span class="tweet-action" title="浏览" aria-label="浏览"><i>▥</i></span><span class="tweet-action" title="保存" aria-label="保存"><i>□</i></span></div>
                 <p class="tweet-ledger-note">
                   <a href="https://x.com/jukan05/status/2069199186516701474" target="_blank" rel="noreferrer">tweet_id 2069199186516701474</a>
@@ -2046,7 +2063,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
                 </p>
               </div>
             </article>
-
+            
             <article class="tweet-ledger-row tweet-card" data-change-type="demand">
               <div class="tweet-ledger-body">
                 <div class="tweet-head">
@@ -2066,12 +2083,12 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
                   <span>强</span>
                 </div>
                 <p class="tweet-translation">中文精翻：韩国 6 月存储半导体出口有望创下历史新高。受 AI 需求和供给短缺推动，6 月存储半导体出口延续强劲上行，出口金额和单价同步大涨。尤其是随着高带宽存储器…</p>
-
+                
         <details class="tweet-original-details">
           <summary>原文：Korea&#x27;s June Memory Semiconductor Exports Poised to Set a New All Time Record June memory semiconductor exports extended their powerful upward run, with both export value and unit…</summary>
           <p>Korea&#x27;s June Memory Semiconductor Exports Poised to Set a New All Time Record June memory semiconductor exports extended their powerful upward run, with both export value and unit prices surging together on the back of AI demand and supply shortages. In particular, as the spillover effect of the high bandwidth memory…</p>
         </details>
-
+        
                 <div class="tweet-action-row" aria-label="static tweet action bar"><span class="tweet-action" title="回复" aria-label="回复"><i>○</i></span><span class="tweet-action" title="转发" aria-label="转发"><i>↻</i></span><span class="tweet-action" title="喜欢" aria-label="喜欢"><i>♡</i></span><span class="tweet-action" title="浏览" aria-label="浏览"><i>▥</i></span><span class="tweet-action" title="保存" aria-label="保存"><i>□</i></span></div>
                 <p class="tweet-ledger-note">
                   <a href="https://x.com/jukan05/status/2068961529484193930" target="_blank" rel="noreferrer">tweet_id 2068961529484193930</a>
@@ -2081,7 +2098,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
                 </p>
               </div>
             </article>
-
+            
             <article class="tweet-ledger-row tweet-card" data-change-type="tech_progress">
               <div class="tweet-ledger-body">
                 <div class="tweet-head">
@@ -2101,12 +2118,12 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
                   <span>强</span>
                 </div>
                 <p class="tweet-translation">中文精翻：Samsung Electro-Mechanics 已开始为 Qualcomm “AI200” 量产 FC-BGA，合作扩展至数据中心领域。三星电机已开始量产将用于 Qualcomm 首款数据中心 AI 加速器的封装基板。这笔供货交易…</p>
-
+                
         <details class="tweet-original-details">
           <summary>原文：Samsung Electro Mechanics Begins Mass Production of FC BGA for Qualcomm&#x27;s &quot;AI200,&quot; Expanding Collaboration into the Data Center Segment Samsung Electro Mechanics has begun mass pr…</summary>
           <p>Samsung Electro Mechanics Begins Mass Production of FC BGA for Qualcomm&#x27;s &quot;AI200,&quot; Expanding Collaboration into the Data Center Segment Samsung Electro Mechanics has begun mass production of the package substrate that will be used in Qualcomm&#x27;s first data center artificial intelligence (AI) accelerator. The supply dea…</p>
         </details>
-
+        
                 <div class="tweet-action-row" aria-label="static tweet action bar"><span class="tweet-action" title="回复" aria-label="回复"><i>○</i></span><span class="tweet-action" title="转发" aria-label="转发"><i>↻</i></span><span class="tweet-action" title="喜欢" aria-label="喜欢"><i>♡</i></span><span class="tweet-action" title="浏览" aria-label="浏览"><i>▥</i></span><span class="tweet-action" title="保存" aria-label="保存"><i>□</i></span></div>
                 <p class="tweet-ledger-note">
                   <a href="https://x.com/jukan05/status/2068932544347980289" target="_blank" rel="noreferrer">tweet_id 2068932544347980289</a>
@@ -2116,7 +2133,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
                 </p>
               </div>
             </article>
-
+            
             <article class="tweet-ledger-row tweet-card" data-change-type="price">
               <div class="tweet-ledger-body">
                 <div class="tweet-head">
@@ -2136,12 +2153,12 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
                   <span>中</span>
                 </div>
                 <p class="tweet-translation">中文精翻：“我最新的产业链调研显示，Google 正在开发基于 TPU v9 / Humufish 的升级版 v9 芯片，代号可能是 Triggerfish，MediaTek 独家拿下了这笔价格更高的新订单。（……）该项目也进一步确认 MediaTek 是 Google TPU v9 世代的首选开发伙伴…</p>
-
+                
         <details class="tweet-original-details">
           <summary>原文：&quot;My latest industry checks indicate that Google is developing an upgraded v9 chip, likely codenamed Triggerfish, based on TPU v9 / Humufish, with MediaTek exclusively securing thi…</summary>
           <p>&quot;My latest industry checks indicate that Google is developing an upgraded v9 chip, likely codenamed Triggerfish, based on TPU v9 / Humufish, with MediaTek exclusively securing this new, higher-priced order. (...) The project also further confirms MediaTek as Google’s preferred development partner for the TPU v9 genera…</p>
         </details>
-
+        
                 <div class="tweet-action-row" aria-label="static tweet action bar"><span class="tweet-action" title="回复" aria-label="回复"><i>○</i></span><span class="tweet-action" title="转发" aria-label="转发"><i>↻</i></span><span class="tweet-action" title="喜欢" aria-label="喜欢"><i>♡</i></span><span class="tweet-action" title="浏览" aria-label="浏览"><i>▥</i></span><span class="tweet-action" title="保存" aria-label="保存"><i>□</i></span></div>
                 <p class="tweet-ledger-note">
                   <a href="https://x.com/jukan05/status/2068926089800593705" target="_blank" rel="noreferrer">tweet_id 2068926089800593705</a>
@@ -2151,7 +2168,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
                 </p>
               </div>
             </article>
-
+            
             <article class="tweet-ledger-row tweet-card" data-change-type="price">
               <div class="tweet-ledger-body">
                 <div class="tweet-head">
@@ -2171,12 +2188,12 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
                   <span>强</span>
                 </div>
                 <p class="tweet-translation">中文精翻：如果真的按这样发展……哈哈，那就太惊人了。Jefferies 与一位存储顾问举行了专家电话会；据这位专家称，存储价格预计在 2026 年第三季度环比上涨 40-50%，第四季度再环比上涨 30-40%。这明显高于当前市场一致预期…</p>
-
+                
         <details class="tweet-original-details">
           <summary>原文：If it really plays out like this… lol, that would be amazing. Jefferies held an expert call with a memory consultant, and according to this expert, memory prices are expected to r…</summary>
           <p>If it really plays out like this… lol, that would be amazing. Jefferies held an expert call with a memory consultant, and according to this expert, memory prices are expected to rise 40–50% QoQ in 3Q26, followed by another 30–40% QoQ increase in 4Q26. This is significantly above the current consensus expectations of 1…</p>
         </details>
-
+        
                 <div class="tweet-action-row" aria-label="static tweet action bar"><span class="tweet-action" title="回复" aria-label="回复"><i>○</i></span><span class="tweet-action" title="转发" aria-label="转发"><i>↻</i></span><span class="tweet-action" title="喜欢" aria-label="喜欢"><i>♡</i></span><span class="tweet-action" title="浏览" aria-label="浏览"><i>▥</i></span><span class="tweet-action" title="保存" aria-label="保存"><i>□</i></span></div>
                 <p class="tweet-ledger-note">
                   <a href="https://x.com/jukan05/status/2068895341706109191" target="_blank" rel="noreferrer">tweet_id 2068895341706109191</a>
@@ -2186,7 +2203,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
                 </p>
               </div>
             </article>
-
+            
             <article class="tweet-ledger-row tweet-card" data-change-type="supply_release">
               <div class="tweet-ledger-body">
                 <div class="tweet-head">
@@ -2206,12 +2223,12 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
                   <span>强</span>
                 </div>
                 <p class="tweet-translation">中文精翻：三星电子正式启动其平泽最后一座半导体 fab 的破土准备。三星电子已开始为京畿道平泽园区最后一座 fab “P5 Fab 2” 的开工做准备。随着 AI 基础设施投资浪潮带动存储芯片订单激增，公司已将资本开支时间较原计划提前…</p>
-
+                
         <details class="tweet-original-details">
           <summary>原文：Samsung Electronics Breaks Ground in Earnest on Its Last Pyeongtaek Semiconductor Fab Samsung Electronics has begun preparations to break ground on &quot;P5 Fab 2,&quot; the final fab at it…</summary>
           <p>Samsung Electronics Breaks Ground in Earnest on Its Last Pyeongtaek Semiconductor Fab Samsung Electronics has begun preparations to break ground on &quot;P5 Fab 2,&quot; the final fab at its Pyeongtaek campus in Gyeonggi Province. As a wave of artificial intelligence (AI) infrastructure investment has driven a surge in memory c…</p>
         </details>
-
+        
                 <div class="tweet-action-row" aria-label="static tweet action bar"><span class="tweet-action" title="回复" aria-label="回复"><i>○</i></span><span class="tweet-action" title="转发" aria-label="转发"><i>↻</i></span><span class="tweet-action" title="喜欢" aria-label="喜欢"><i>♡</i></span><span class="tweet-action" title="浏览" aria-label="浏览"><i>▥</i></span><span class="tweet-action" title="保存" aria-label="保存"><i>□</i></span></div>
                 <p class="tweet-ledger-note">
                   <a href="https://x.com/jukan05/status/2068833982037565498" target="_blank" rel="noreferrer">tweet_id 2068833982037565498</a>
@@ -2224,8 +2241,8 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
             </div>
       <p class="muted-note">jukan05 是韩国/亚洲供应链新闻与情报流，适合补事实密度和时间顺序；它不直接进入 Serenity 七链排序或资产映射结论。</p>
     </div>
-
-
+    
+        
     <div class="brief-desk lang lang-en" data-brief-desk="jukan05">
       <div class="tweet-ledger">
             <article class="tweet-ledger-row tweet-card" data-change-type="tech_progress">
@@ -2246,13 +2263,13 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
                   <span>InP / lasers</span>
                   <span>Medium</span>
                 </div>
-
-
+                
+                
         <details class="tweet-original-details">
           <summary>Original：Exclusive: Apple to Begin Foldable iPhone Mass Production in July, Hinge Problem Resolved Apple will begin mass production of its first foldable iPhone from late July. While specu…</summary>
           <p>Exclusive: Apple to Begin Foldable iPhone Mass Production in July, Hinge Problem Resolved Apple will begin mass production of its first foldable iPhone from late July. While speculation about a launch delay recently emerged due to hinge problems, it has been confirmed that Apple is pushing ahead with a September unvei…</p>
         </details>
-
+        
                 <div class="tweet-action-row" aria-label="static tweet action bar"><span class="tweet-action" title="Reply" aria-label="Reply"><i>○</i></span><span class="tweet-action" title="Repost" aria-label="Repost"><i>↻</i></span><span class="tweet-action" title="Like" aria-label="Like"><i>♡</i></span><span class="tweet-action" title="View" aria-label="View"><i>▥</i></span><span class="tweet-action" title="Save" aria-label="Save"><i>□</i></span></div>
                 <p class="tweet-ledger-note">
                   <a href="https://x.com/jukan05/status/2069689336258576813" target="_blank" rel="noreferrer">tweet_id 2069689336258576813</a>
@@ -2262,7 +2279,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
                 </p>
               </div>
             </article>
-
+            
             <article class="tweet-ledger-row tweet-card" data-change-type="supply_release">
               <div class="tweet-ledger-body">
                 <div class="tweet-head">
@@ -2281,13 +2298,13 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
                   <span>HBM / DRAM</span>
                   <span>Medium</span>
                 </div>
-
-
+                
+                
         <details class="tweet-original-details">
           <summary>Original：Samsung Electronics Allocates Half of HBM Capacity to HBM4 Samsung Electronics has been found to have assigned half of its high bandwidth memory (HBM) production capacity to its s…</summary>
           <p>Samsung Electronics Allocates Half of HBM Capacity to HBM4 Samsung Electronics has been found to have assigned half of its high bandwidth memory (HBM) production capacity to its sixth generation HBM4. After becoming the first in the world to ship HBM4 this past February, the company is now expanding production in earn…</p>
         </details>
-
+        
                 <div class="tweet-action-row" aria-label="static tweet action bar"><span class="tweet-action" title="Reply" aria-label="Reply"><i>○</i></span><span class="tweet-action" title="Repost" aria-label="Repost"><i>↻</i></span><span class="tweet-action" title="Like" aria-label="Like"><i>♡</i></span><span class="tweet-action" title="View" aria-label="View"><i>▥</i></span><span class="tweet-action" title="Save" aria-label="Save"><i>□</i></span></div>
                 <p class="tweet-ledger-note">
                   <a href="https://x.com/jukan05/status/2069680390978027791" target="_blank" rel="noreferrer">tweet_id 2069680390978027791</a>
@@ -2297,7 +2314,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
                 </p>
               </div>
             </article>
-
+            
             <article class="tweet-ledger-row tweet-card" data-change-type="price">
               <div class="tweet-ledger-body">
                 <div class="tweet-head">
@@ -2316,13 +2333,13 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
                   <span>HBM / DRAM</span>
                   <span>Medium</span>
                 </div>
-
-
+                
+                
         <details class="tweet-original-details">
           <summary>Original：This is actually a really important point. If CXMT’s DRAM ASP is only about 5–10% lower than Samsung, SK Hynix, and Micron’s, it suggests that China currently has no interest in d…</summary>
           <p>This is actually a really important point. If CXMT’s DRAM ASP is only about 5–10% lower than Samsung, SK Hynix, and Micron’s, it suggests that China currently has no interest in dumping memory. They want to make money too, don’t they? https://t.co/FZaxOg6KHP</p>
         </details>
-
+        
                 <div class="tweet-action-row" aria-label="static tweet action bar"><span class="tweet-action" title="Reply" aria-label="Reply"><i>○</i></span><span class="tweet-action" title="Repost" aria-label="Repost"><i>↻</i></span><span class="tweet-action" title="Like" aria-label="Like"><i>♡</i></span><span class="tweet-action" title="View" aria-label="View"><i>▥</i></span><span class="tweet-action" title="Save" aria-label="Save"><i>□</i></span></div>
                 <p class="tweet-ledger-note">
                   <a href="https://x.com/jukan05/status/2069488184036307049" target="_blank" rel="noreferrer">tweet_id 2069488184036307049</a>
@@ -2332,7 +2349,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
                 </p>
               </div>
             </article>
-
+            
             <article class="tweet-ledger-row tweet-card" data-change-type="price">
               <div class="tweet-ledger-body">
                 <div class="tweet-head">
@@ -2351,13 +2368,13 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
                   <span>HBM / DRAM</span>
                   <span>Strong</span>
                 </div>
-
-
+                
+                
         <details class="tweet-original-details">
           <summary>Original：Culpium: TSMC is pushing for a 5–10% price increase across all advanced nodes, including 7nm. This was driven by management’s directive after seeing competing memory companies enj…</summary>
           <p>Culpium: TSMC is pushing for a 5–10% price increase across all advanced nodes, including 7nm. This was driven by management’s directive after seeing competing memory companies enjoy higher pricing and wanting to benefit from the same trend. $TSM</p>
         </details>
-
+        
                 <div class="tweet-action-row" aria-label="static tweet action bar"><span class="tweet-action" title="Reply" aria-label="Reply"><i>○</i></span><span class="tweet-action" title="Repost" aria-label="Repost"><i>↻</i></span><span class="tweet-action" title="Like" aria-label="Like"><i>♡</i></span><span class="tweet-action" title="View" aria-label="View"><i>▥</i></span><span class="tweet-action" title="Save" aria-label="Save"><i>□</i></span></div>
                 <p class="tweet-ledger-note">
                   <a href="https://x.com/jukan05/status/2069388829841363242" target="_blank" rel="noreferrer">tweet_id 2069388829841363242</a>
@@ -2367,7 +2384,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
                 </p>
               </div>
             </article>
-
+            
             <article class="tweet-ledger-row tweet-card" data-change-type="demand">
               <div class="tweet-ledger-body">
                 <div class="tweet-head">
@@ -2386,13 +2403,13 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
                   <span>AI ASIC / TPU / custom silicon</span>
                   <span>Medium</span>
                 </div>
-
-
+                
+                
         <details class="tweet-original-details">
           <summary>Original：Why overcomplicate it? Micron is trying to build a strong relationship with Anthropic early on and make Anthropic more dependent on Micron. Anthropic is likely to consume more and…</summary>
           <p>Why overcomplicate it? Micron is trying to build a strong relationship with Anthropic early on and make Anthropic more dependent on Micron. Anthropic is likely to consume more and more memory over time, especially as it moves toward designing its own ASICs, so Micron needs to secure that relationship ahead of time. Wh…</p>
         </details>
-
+        
                 <div class="tweet-action-row" aria-label="static tweet action bar"><span class="tweet-action" title="Reply" aria-label="Reply"><i>○</i></span><span class="tweet-action" title="Repost" aria-label="Repost"><i>↻</i></span><span class="tweet-action" title="Like" aria-label="Like"><i>♡</i></span><span class="tweet-action" title="View" aria-label="View"><i>▥</i></span><span class="tweet-action" title="Save" aria-label="Save"><i>□</i></span></div>
                 <p class="tweet-ledger-note">
                   <a href="https://x.com/jukan05/status/2069278356193919073" target="_blank" rel="noreferrer">tweet_id 2069278356193919073</a>
@@ -2402,7 +2419,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
                 </p>
               </div>
             </article>
-
+            
             <article class="tweet-ledger-row tweet-card" data-change-type="demand">
               <div class="tweet-ledger-body">
                 <div class="tweet-head">
@@ -2421,13 +2438,13 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
                   <span>AI ASIC / TPU / custom silicon</span>
                   <span>Medium</span>
                 </div>
-
-
+                
+                
         <details class="tweet-original-details">
           <summary>Original：FundaAI: &quot;TPU Update On the previously mentioned cancellation of Pumafish, we maintain ourcurrent view. We have not observed any progress regarding a restart of Pumafishfrom the s…</summary>
           <p>FundaAI: &quot;TPU Update On the previously mentioned cancellation of Pumafish, we maintain ourcurrent view. We have not observed any progress regarding a restart of Pumafishfrom the supply chain side. Also on MediaTek, we are raising the life cycle volume expectations for Humufish+ Triggerfish to 6-7 million units (up fro…</p>
         </details>
-
+        
                 <div class="tweet-action-row" aria-label="static tweet action bar"><span class="tweet-action" title="Reply" aria-label="Reply"><i>○</i></span><span class="tweet-action" title="Repost" aria-label="Repost"><i>↻</i></span><span class="tweet-action" title="Like" aria-label="Like"><i>♡</i></span><span class="tweet-action" title="View" aria-label="View"><i>▥</i></span><span class="tweet-action" title="Save" aria-label="Save"><i>□</i></span></div>
                 <p class="tweet-ledger-note">
                   <a href="https://x.com/jukan05/status/2069266963965350136" target="_blank" rel="noreferrer">tweet_id 2069266963965350136</a>
@@ -2437,7 +2454,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
                 </p>
               </div>
             </article>
-
+            
             <article class="tweet-ledger-row tweet-card" data-change-type="demand">
               <div class="tweet-ledger-body">
                 <div class="tweet-head">
@@ -2456,13 +2473,13 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
                   <span>HBM / DRAM</span>
                   <span>Medium</span>
                 </div>
-
-
+                
+                
         <details class="tweet-original-details">
           <summary>Original：Q2 Consumer LPDDR5X Prices Rise 89% Market research firm SigmaIntell announced on the 22nd that prices for consumer product categories rose in the second quarter of this year due…</summary>
           <p>Q2 Consumer LPDDR5X Prices Rise 89% Market research firm SigmaIntell announced on the 22nd that prices for consumer product categories rose in the second quarter of this year due to a memory supply and demand imbalance. In the low power DRAM (LPDDR) product category, the price of the LPDDR4X 4GB product rose 75% quart…</p>
         </details>
-
+        
                 <div class="tweet-action-row" aria-label="static tweet action bar"><span class="tweet-action" title="Reply" aria-label="Reply"><i>○</i></span><span class="tweet-action" title="Repost" aria-label="Repost"><i>↻</i></span><span class="tweet-action" title="Like" aria-label="Like"><i>♡</i></span><span class="tweet-action" title="View" aria-label="View"><i>▥</i></span><span class="tweet-action" title="Save" aria-label="Save"><i>□</i></span></div>
                 <p class="tweet-ledger-note">
                   <a href="https://x.com/jukan05/status/2069263371766219092" target="_blank" rel="noreferrer">tweet_id 2069263371766219092</a>
@@ -2472,7 +2489,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
                 </p>
               </div>
             </article>
-
+            
             <article class="tweet-ledger-row tweet-card" data-change-type="demand">
               <div class="tweet-ledger-body">
                 <div class="tweet-head">
@@ -2491,13 +2508,13 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
                   <span>Read original text for object</span>
                   <span>Medium</span>
                 </div>
-
-
+                
+                
         <details class="tweet-original-details">
           <summary>Original：Morgan Stanley updated its modeling for China AI chips, and the particularly interesting part is that they expect Chinese companies to start deploying Chinese-made AI accelerators…</summary>
           <p>Morgan Stanley updated its modeling for China AI chips, and the particularly interesting part is that they expect Chinese companies to start deploying Chinese-made AI accelerators in overseas regional data centers outside China from 2028 onward. https://t.co/gZ6E6xaaaP</p>
         </details>
-
+        
                 <div class="tweet-action-row" aria-label="static tweet action bar"><span class="tweet-action" title="Reply" aria-label="Reply"><i>○</i></span><span class="tweet-action" title="Repost" aria-label="Repost"><i>↻</i></span><span class="tweet-action" title="Like" aria-label="Like"><i>♡</i></span><span class="tweet-action" title="View" aria-label="View"><i>▥</i></span><span class="tweet-action" title="Save" aria-label="Save"><i>□</i></span></div>
                 <p class="tweet-ledger-note">
                   <a href="https://x.com/jukan05/status/2069226465812713682" target="_blank" rel="noreferrer">tweet_id 2069226465812713682</a>
@@ -2507,7 +2524,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
                 </p>
               </div>
             </article>
-
+            
             <article class="tweet-ledger-row tweet-card" data-change-type="shortage">
               <div class="tweet-ledger-body">
                 <div class="tweet-head">
@@ -2526,13 +2543,13 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
                   <span>HBM / DRAM</span>
                   <span>Medium</span>
                 </div>
-
-
+                
+                
         <details class="tweet-original-details">
           <summary>Original：SK Hynix Throttles HBM4 Production… Seeks Additional Profit by Expanding Supply Constrained Commodity DRAM SK Hynix is moderating the pace of its sixth generation high bandwidth m…</summary>
           <p>SK Hynix Throttles HBM4 Production… Seeks Additional Profit by Expanding Supply Constrained Commodity DRAM SK Hynix is moderating the pace of its sixth generation high bandwidth memory (HBM4) ramp and placing greater weight on capturing the commodity DRAM market. With its HBM revenue share already exceeding 40 percent…</p>
         </details>
-
+        
                 <div class="tweet-action-row" aria-label="static tweet action bar"><span class="tweet-action" title="Reply" aria-label="Reply"><i>○</i></span><span class="tweet-action" title="Repost" aria-label="Repost"><i>↻</i></span><span class="tweet-action" title="Like" aria-label="Like"><i>♡</i></span><span class="tweet-action" title="View" aria-label="View"><i>▥</i></span><span class="tweet-action" title="Save" aria-label="Save"><i>□</i></span></div>
                 <p class="tweet-ledger-note">
                   <a href="https://x.com/jukan05/status/2069207209133887767" target="_blank" rel="noreferrer">tweet_id 2069207209133887767</a>
@@ -2542,7 +2559,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
                 </p>
               </div>
             </article>
-
+            
             <article class="tweet-ledger-row tweet-card" data-change-type="risk">
               <div class="tweet-ledger-body">
                 <div class="tweet-head">
@@ -2561,13 +2578,13 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
                   <span>HBM / DRAM</span>
                   <span>Medium</span>
                 </div>
-
-
+                
+                
         <details class="tweet-original-details">
           <summary>Original：Samsung Electronics HBM4 Revenue Tops $1 Billion, Just Four Months After Becoming First to Mass Produce Samsung Electronics&#x27; sixth generation high bandwidth memory (HBM), HBM4, is…</summary>
           <p>Samsung Electronics HBM4 Revenue Tops $1 Billion, Just Four Months After Becoming First to Mass Produce Samsung Electronics&#x27; sixth generation high bandwidth memory (HBM), HBM4, is reported to have become the first in the industry to surpass $1 billion (about 1.54 trillion won) in revenue. According to industry sources…</p>
         </details>
-
+        
                 <div class="tweet-action-row" aria-label="static tweet action bar"><span class="tweet-action" title="Reply" aria-label="Reply"><i>○</i></span><span class="tweet-action" title="Repost" aria-label="Repost"><i>↻</i></span><span class="tweet-action" title="Like" aria-label="Like"><i>♡</i></span><span class="tweet-action" title="View" aria-label="View"><i>▥</i></span><span class="tweet-action" title="Save" aria-label="Save"><i>□</i></span></div>
                 <p class="tweet-ledger-note">
                   <a href="https://x.com/jukan05/status/2069199186516701474" target="_blank" rel="noreferrer">tweet_id 2069199186516701474</a>
@@ -2577,7 +2594,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
                 </p>
               </div>
             </article>
-
+            
             <article class="tweet-ledger-row tweet-card" data-change-type="demand">
               <div class="tweet-ledger-body">
                 <div class="tweet-head">
@@ -2596,13 +2613,13 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
                   <span>HBM / DRAM</span>
                   <span>Strong</span>
                 </div>
-
-
+                
+                
         <details class="tweet-original-details">
           <summary>Original：Korea&#x27;s June Memory Semiconductor Exports Poised to Set a New All Time Record June memory semiconductor exports extended their powerful upward run, with both export value and unit…</summary>
           <p>Korea&#x27;s June Memory Semiconductor Exports Poised to Set a New All Time Record June memory semiconductor exports extended their powerful upward run, with both export value and unit prices surging together on the back of AI demand and supply shortages. In particular, as the spillover effect of the high bandwidth memory…</p>
         </details>
-
+        
                 <div class="tweet-action-row" aria-label="static tweet action bar"><span class="tweet-action" title="Reply" aria-label="Reply"><i>○</i></span><span class="tweet-action" title="Repost" aria-label="Repost"><i>↻</i></span><span class="tweet-action" title="Like" aria-label="Like"><i>♡</i></span><span class="tweet-action" title="View" aria-label="View"><i>▥</i></span><span class="tweet-action" title="Save" aria-label="Save"><i>□</i></span></div>
                 <p class="tweet-ledger-note">
                   <a href="https://x.com/jukan05/status/2068961529484193930" target="_blank" rel="noreferrer">tweet_id 2068961529484193930</a>
@@ -2612,7 +2629,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
                 </p>
               </div>
             </article>
-
+            
             <article class="tweet-ledger-row tweet-card" data-change-type="tech_progress">
               <div class="tweet-ledger-body">
                 <div class="tweet-head">
@@ -2631,13 +2648,13 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
                   <span>AI ASIC / TPU / custom silicon</span>
                   <span>Strong</span>
                 </div>
-
-
+                
+                
         <details class="tweet-original-details">
           <summary>Original：Samsung Electro Mechanics Begins Mass Production of FC BGA for Qualcomm&#x27;s &quot;AI200,&quot; Expanding Collaboration into the Data Center Segment Samsung Electro Mechanics has begun mass pr…</summary>
           <p>Samsung Electro Mechanics Begins Mass Production of FC BGA for Qualcomm&#x27;s &quot;AI200,&quot; Expanding Collaboration into the Data Center Segment Samsung Electro Mechanics has begun mass production of the package substrate that will be used in Qualcomm&#x27;s first data center artificial intelligence (AI) accelerator. The supply dea…</p>
         </details>
-
+        
                 <div class="tweet-action-row" aria-label="static tweet action bar"><span class="tweet-action" title="Reply" aria-label="Reply"><i>○</i></span><span class="tweet-action" title="Repost" aria-label="Repost"><i>↻</i></span><span class="tweet-action" title="Like" aria-label="Like"><i>♡</i></span><span class="tweet-action" title="View" aria-label="View"><i>▥</i></span><span class="tweet-action" title="Save" aria-label="Save"><i>□</i></span></div>
                 <p class="tweet-ledger-note">
                   <a href="https://x.com/jukan05/status/2068932544347980289" target="_blank" rel="noreferrer">tweet_id 2068932544347980289</a>
@@ -2647,7 +2664,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
                 </p>
               </div>
             </article>
-
+            
             <article class="tweet-ledger-row tweet-card" data-change-type="price">
               <div class="tweet-ledger-body">
                 <div class="tweet-head">
@@ -2666,13 +2683,13 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
                   <span>AI ASIC / TPU / custom silicon</span>
                   <span>Medium</span>
                 </div>
-
-
+                
+                
         <details class="tweet-original-details">
           <summary>Original：&quot;My latest industry checks indicate that Google is developing an upgraded v9 chip, likely codenamed Triggerfish, based on TPU v9 / Humufish, with MediaTek exclusively securing thi…</summary>
           <p>&quot;My latest industry checks indicate that Google is developing an upgraded v9 chip, likely codenamed Triggerfish, based on TPU v9 / Humufish, with MediaTek exclusively securing this new, higher-priced order. (...) The project also further confirms MediaTek as Google’s preferred development partner for the TPU v9 genera…</p>
         </details>
-
+        
                 <div class="tweet-action-row" aria-label="static tweet action bar"><span class="tweet-action" title="Reply" aria-label="Reply"><i>○</i></span><span class="tweet-action" title="Repost" aria-label="Repost"><i>↻</i></span><span class="tweet-action" title="Like" aria-label="Like"><i>♡</i></span><span class="tweet-action" title="View" aria-label="View"><i>▥</i></span><span class="tweet-action" title="Save" aria-label="Save"><i>□</i></span></div>
                 <p class="tweet-ledger-note">
                   <a href="https://x.com/jukan05/status/2068926089800593705" target="_blank" rel="noreferrer">tweet_id 2068926089800593705</a>
@@ -2682,7 +2699,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
                 </p>
               </div>
             </article>
-
+            
             <article class="tweet-ledger-row tweet-card" data-change-type="price">
               <div class="tweet-ledger-body">
                 <div class="tweet-head">
@@ -2701,13 +2718,13 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
                   <span>HBM / DRAM</span>
                   <span>Strong</span>
                 </div>
-
-
+                
+                
         <details class="tweet-original-details">
           <summary>Original：If it really plays out like this… lol, that would be amazing. Jefferies held an expert call with a memory consultant, and according to this expert, memory prices are expected to r…</summary>
           <p>If it really plays out like this… lol, that would be amazing. Jefferies held an expert call with a memory consultant, and according to this expert, memory prices are expected to rise 40–50% QoQ in 3Q26, followed by another 30–40% QoQ increase in 4Q26. This is significantly above the current consensus expectations of 1…</p>
         </details>
-
+        
                 <div class="tweet-action-row" aria-label="static tweet action bar"><span class="tweet-action" title="Reply" aria-label="Reply"><i>○</i></span><span class="tweet-action" title="Repost" aria-label="Repost"><i>↻</i></span><span class="tweet-action" title="Like" aria-label="Like"><i>♡</i></span><span class="tweet-action" title="View" aria-label="View"><i>▥</i></span><span class="tweet-action" title="Save" aria-label="Save"><i>□</i></span></div>
                 <p class="tweet-ledger-note">
                   <a href="https://x.com/jukan05/status/2068895341706109191" target="_blank" rel="noreferrer">tweet_id 2068895341706109191</a>
@@ -2717,7 +2734,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
                 </p>
               </div>
             </article>
-
+            
             <article class="tweet-ledger-row tweet-card" data-change-type="supply_release">
               <div class="tweet-ledger-body">
                 <div class="tweet-head">
@@ -2736,13 +2753,13 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
                   <span>HBM / DRAM</span>
                   <span>Strong</span>
                 </div>
-
-
+                
+                
         <details class="tweet-original-details">
           <summary>Original：Samsung Electronics Breaks Ground in Earnest on Its Last Pyeongtaek Semiconductor Fab Samsung Electronics has begun preparations to break ground on &quot;P5 Fab 2,&quot; the final fab at it…</summary>
           <p>Samsung Electronics Breaks Ground in Earnest on Its Last Pyeongtaek Semiconductor Fab Samsung Electronics has begun preparations to break ground on &quot;P5 Fab 2,&quot; the final fab at its Pyeongtaek campus in Gyeonggi Province. As a wave of artificial intelligence (AI) infrastructure investment has driven a surge in memory c…</p>
         </details>
-
+        
                 <div class="tweet-action-row" aria-label="static tweet action bar"><span class="tweet-action" title="Reply" aria-label="Reply"><i>○</i></span><span class="tweet-action" title="Repost" aria-label="Repost"><i>↻</i></span><span class="tweet-action" title="Like" aria-label="Like"><i>♡</i></span><span class="tweet-action" title="View" aria-label="View"><i>▥</i></span><span class="tweet-action" title="Save" aria-label="Save"><i>□</i></span></div>
                 <p class="tweet-ledger-note">
                   <a href="https://x.com/jukan05/status/2068833982037565498" target="_blank" rel="noreferrer">tweet_id 2068833982037565498</a>
@@ -2755,19 +2772,19 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
             </div>
       <p class="muted-note">jukan05 is a Korea/Asia supply-chain news and raw-intel feed for fact density and timing; it does not directly drive Serenity chain ranking or asset-mapping conclusions.</p>
     </div>
-
+    
       </div>
     </article>
     </div>
     </section>
-
+    
     <section class="boundary-strip page" id="boundary">
       <h2><span class="lang lang-zh">公开边界</span><span class="lang lang-en">Public Boundary</span></h2>
       <p><span class="lang lang-block lang-zh">本页面只展示本地 X KOL 推文资产的研究归桶、证据摘录和可复核链接；不输出投资建议、评级、价格判断或交易动作。</span><span class="lang lang-block lang-en">This page shows only research buckets, evidence excerpts and traceable links from local X KOL tweet assets. It does not provide investment advice, ratings, price calls or trading actions.</span></p>
     </section>
     </main>
   <footer class="page">
-    AIpha X-KOL V1.0｜<span class="lang lang-zh">生成时间</span><span class="lang lang-en">Generated</span> 2026-06-24T19:45:59+08:00｜source_commit 8ad5eddcf6ed
+    AIpha X-KOL V1.0｜<span class="lang lang-zh">生成时间</span><span class="lang lang-en">Generated</span> 2026-06-24T21:33:29+08:00｜source_commit 8ad5eddcf6ed
   </footer>
 </body>
 </html>
