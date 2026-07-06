@@ -4,11 +4,11 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="AIpha X-KOL：多账号 X KOL 周报与推文研究资产。" />
-  <meta property="og:title" content="AIpha X-KOL V1.1" />
+  <meta property="og:title" content="AIpha X-KOL V1.2" />
   <meta property="og:description" content="Weekly X KOL brief, Serenity asset research and multi-account evidence flows." />
   <meta property="og:type" content="article" />
-  <meta name="aipha-x-kol:legacy-lineage" content="AIpha Serenity V4.6 -&gt; AIpha X-KOL V1.0 -&gt; AIpha X-KOL V1.1" />
-  <title>AIpha X-KOL 简报｜AIpha X-KOL V1.1</title>
+  <meta name="aipha-x-kol:legacy-lineage" content="AIpha Serenity V4.6 -&gt; AIpha X-KOL V1.0 -&gt; AIpha X-KOL V1.1 -&gt; AIpha X-KOL V1.2" />
+  <title>AIpha X-KOL 简报｜AIpha X-KOL V1.2</title>
   <script>
 (function () {
   const params = new URLSearchParams(window.location.search);
@@ -277,6 +277,48 @@ h1 { margin: 6px 0 12px; font-size: clamp(36px, 4vw, 54px); line-height: 1.06; l
 .weekly-event-label { color: var(--blue); font-size: 12px; font-weight: 900; }
 .weekly-event strong { display: block; font-size: 14px; line-height: 1.35; }
 .weekly-event small { display: block; margin-top: 4px; color: var(--muted); overflow-wrap: anywhere; }
+.weekly-report-paper { display: grid; gap: 22px; max-width: 1180px; }
+.weekly-report-memo { display: grid; gap: 26px; }
+.weekly-narrative { display: grid; gap: 26px; }
+.weekly-narrative section { display: grid; gap: 10px; }
+.weekly-narrative h3 { margin: 0; font-size: 23px; line-height: 1.2; }
+.weekly-narrative p { margin: 0; color: var(--ink); font-size: clamp(17px, 1.55vw, 22px); line-height: 1.7; letter-spacing: 0; }
+.weekly-narrative .weekly-intro { font-size: clamp(19px, 1.9vw, 27px); line-height: 1.65; font-weight: 720; }
+.account-pill {
+  display: inline-flex;
+  align-items: center;
+  margin: 0 2px;
+  padding: 1px 8px 2px;
+  border-radius: 7px;
+  background: #eef1f2;
+  color: var(--ink);
+  border: 1px solid rgba(216,224,228,0.9);
+  font-family: "SF Mono", "Roboto Mono", Menlo, Consolas, monospace;
+  font-size: 0.92em;
+  line-height: 1.25;
+  white-space: nowrap;
+}
+.weekly-kol-list { display: grid; gap: 18px; }
+.weekly-kol-paragraph { display: grid; grid-template-columns: 132px minmax(0, 1fr); gap: 14px; align-items: start; padding-top: 16px; border-top: 1px solid var(--line); }
+.weekly-kol-paragraph:first-child { border-top: 0; padding-top: 0; }
+.weekly-kol-label { color: var(--blue); font-family: "SF Mono", "Roboto Mono", Menlo, Consolas, monospace; font-size: 15px; font-weight: 900; line-height: 1.4; overflow-wrap: anywhere; }
+.weekly-kol-paragraph p { margin: 0; color: var(--ink); font-size: clamp(16px, 1.42vw, 21px); line-height: 1.68; }
+.industry-merge-list { display: grid; gap: 13px; margin: 0; padding: 0; list-style: none; counter-reset: industry; }
+.industry-merge-list li { counter-increment: industry; display: grid; grid-template-columns: 38px minmax(0, 1fr); gap: 12px; align-items: start; color: var(--ink); font-size: clamp(16px, 1.35vw, 20px); line-height: 1.6; }
+.industry-merge-list li::before {
+  content: counter(industry);
+  display: grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  margin-top: 2px;
+  background: var(--dark);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 950;
+}
+.industry-merge-list b { color: var(--ink); }
+.weekly-evidence-line { color: var(--muted); font-size: 14px; line-height: 1.55; }
 .kol-feed-head { display: grid; grid-template-columns: minmax(0,1fr) auto; gap: 10px; align-items: center; min-width: 0; }
 .kol-feed-meta { display: grid; gap: 2px; min-width: 0; }
 .kol-feed-meta h3 { margin: 0; font-size: 20px; line-height: 1.15; }
@@ -533,7 +575,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
       </a>
       <nav class="page-switcher" aria-label="AIpha X-KOL pages"><a class="active" href="index.html"><span class="lang lang-zh">KOL 周报</span><span class="lang lang-en">KOL Weekly</span></a><a class="" href="aleabitoreddit/index.html"><span class="lang lang-zh">Serenity 资产</span><span class="lang lang-en">Serenity Asset</span></a><a class="" href="jukan05/index.html"><span class="lang lang-zh">jukan05 资产</span><span class="lang lang-en">jukan05 Asset</span></a><a class="" href="paurooteri/index.html"><span class="lang lang-zh">Paurooteri</span><span class="lang lang-en">Paurooteri</span></a><a class="" href="stock6688/index.html"><span class="lang lang-zh">Stock6688</span><span class="lang lang-en">Stock6688</span></a></nav>
       <div class="nav-actions">
-        <span class="nav-version-badge">AIpha X-KOL | v1.1</span>
+        <span class="nav-version-badge">AIpha X-KOL | v1.2</span>
         <span class="nav-disclaimer"><span class="lang lang-zh">非投资建议</span><span class="lang lang-en">Not Advice</span></span>
         <span class="lang-toggle" aria-label="language switcher">
           <button type="button" data-lang-button="zh" onclick="setAiphaXKolLang('zh')">中文</button>
@@ -590,670 +632,86 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
       <div class="section-head">
         <div>
           <h2><span class="lang lang-zh">本周 KOL 产业周报</span><span class="lang lang-en">Weekly KOL Industry Brief</span></h2>
-          <p><span class="lang lang-block lang-zh">每张卡先给本周判断，再列产业链环节、高频/升温 ticker、产业变化标签和可回溯 tweet 证据。</span><span class="lang lang-block lang-en">Each card starts with the weekly read, then shows supply-chain links, frequent/rising tickers, industry-change tags and traceable tweet evidence.</span></p>
+          <p><span class="lang lang-block lang-zh">按研究备忘录方式合并核心结论、按 KOL 看、产业判断合并；底层仍来自产业变化标签、ticker 和可回溯 tweet 证据。</span><span class="lang lang-block lang-en">A research-memo style brief combining the core conclusion, by-KOL reads and industry read-through; still grounded in Industry-change Tags, tickers and traceable tweet evidence.</span></p>
         </div>
       </div>
-      <div class="weekly-grid">
-    <article class="weekly-card">
-      <header>
-        <div>
-          <span class="brief-eyebrow"><span class="lang lang-zh">本周 KOL 周报</span><span class="lang lang-en">Weekly KOL Report</span></span>
-          <h3>Serenity <small>@aleabitoreddit</small></h3>
-          <p>2026-06-27 -> 2026-07-04 · <span class="lang lang-zh">供应链 thesis lens：七链矩阵、A股叶子链映射和历史证据资产。</span><span class="lang lang-en">Supply-chain thesis lens: seven-chain matrix, A-share leaf-lane mapping and evidence asset.</span></p>
+      <div class="weekly-report-paper">
+        <div class="weekly-report-memo lang lang-zh">
+          <div class="weekly-narrative">
+            <section>
+              <h3>核心结论</h3>
+              <p class="weekly-intro">6 月 27 日-7 月 4 日这批推文的共同判断很清楚：AI 需求没有降温，讨论正在从 GPU 主链扩散到 存储/HBM/SSD、AI 服务器上游、光通信/光子、Neocloud/算力融资、人形机器人/Physical AI、IDC/电力/功率链 这些上游和配套瓶颈。几个 KOL 的分歧不大，差别主要在关注市场：<span class="account-pill">jukan05</span> 更重 日韩/台湾半导体供需、出口、元件价格和原始产业新闻，<span class="account-pill">paurooteri</span> 更重 存储、HBM、电子部件通胀、锁料周期和底部利润率修复，<span class="account-pill">stock6688</span> 更重 国产算力、A股产业映射、IDC、电连接/光连接和半导体材料，<span class="account-pill">aleabitoreddit</span> 更重 美股光子、Neocloud、机器人和 AI 上游瓶颈。</p>
+            </section>
+            <section>
+              <h3>按 KOL 看</h3>
+              <div class="weekly-kol-list">
+    <div class="weekly-kol-paragraph">
+      <div class="weekly-kol-label">@aleabitoreddit</div>
+      <p><span class="account-pill">aleabitoreddit</span>：主线是 AI 服务器上游、人形机器人/Physical AI、存储/HBM/SSD、光通信/光子。相对更重 美股光子、Neocloud、机器人和 AI 上游瓶颈；本窗口 47 条推文里，产业变化标签集中在 供需紧张、技术路线变化、技术进步、需求结构变化、供给释放，具体对象反复落到 具体对象需回看原文、CPO / NPO / 光互连、Neocloud 融资与合约、机器人执行器/光学、FC-BGA / 封装载板、InP / 激光器。高频 ticker：META、AMZN、NVDA、TSLA、CCXI、NBIS、SIVE；近端升温：META +11、CCXI +8、AMZN +7、TSLA +6、NVDA +5、NBIS +4。</p>
+    </div>
+    
+    <div class="weekly-kol-paragraph">
+      <div class="weekly-kol-label">@jukan05</div>
+      <p><span class="account-pill">jukan05</span>：主线是 存储/HBM/SSD、AI 服务器上游、Neocloud/算力融资、IDC/电力/功率链。相对更重 日韩/台湾半导体供需、出口、元件价格和原始产业新闻；本窗口 65 条推文里，产业变化标签集中在 技术路线变化、供需紧张、涨价/ASP、技术进步、供给释放，具体对象反复落到 具体对象需回看原文、HBM / DRAM、FC-BGA / 封装载板、Neocloud 融资与合约、AI ASIC / TPU / 定制芯片、InP / 激光器。高频 ticker：INTC、AAPL、META、MU、AMD、GOOGL、NVDA；近端升温：INTC +4、AAPL +2、META +2、AMD +1、ASML +1、ASX +1。</p>
+    </div>
+    
+    <div class="weekly-kol-paragraph">
+      <div class="weekly-kol-label">@paurooteri</div>
+      <p><span class="account-pill">paurooteri</span>：主线是 存储/HBM/SSD、AI 服务器上游、Neocloud/算力融资、光通信/光子。相对更重 存储、HBM、电子部件通胀、锁料周期和底部利润率修复；本窗口 207 条推文里，产业变化标签集中在 技术进步、需求结构变化、供需紧张、技术路线变化、涨价/ASP，具体对象反复落到 具体对象需回看原文、AI ASIC / TPU / 定制芯片、InP / 激光器、FC-BGA / 封装载板、芯片电阻 / MLCC、CPO / NPO / 光互连。高频 ticker：MU、NVDA、AAPL、TSM、SKHY；近端升温：MU +2、AAPL +2、NVDA +2、SKHY +1、TSM +1。</p>
+    </div>
+    
+    <div class="weekly-kol-paragraph">
+      <div class="weekly-kol-label">@stock6688</div>
+      <p><span class="account-pill">stock6688</span>：主线是 存储/HBM/SSD、光通信/光子、IDC/电力/功率链。相对更重 国产算力、A股产业映射、IDC、电连接/光连接和半导体材料；本窗口 26 条推文里，产业变化标签集中在 涨价/ASP、技术进步、技术路线变化、需求结构变化、供给释放，具体对象反复落到 HBM / DRAM、具体对象需回看原文、CPO / NPO / 光互连、HBF / TC bonder。高频 ticker：暂无高频 ticker；近端升温：暂无明显升温 ticker。</p>
+    </div>
+    </div>
+            </section>
+            <section>
+              <h3>产业判断合并</h3>
+              <p>这几天最强的产业方向是：</p>
+              <ol class="industry-merge-list"><li><b>存储/HBM/SSD</b>：最集中的产业变化标签是 需求结构变化、供需紧张、技术路线变化、涨价/ASP；具体对象包括 HBM / DRAM、AI ASIC / TPU / 定制芯片、机器人执行器/光学、InP / 激光器、芯片电阻 / MLCC、CPO / NPO / 光互连；相关 ticker 包括 NVDA、AMZN、TSLA、CCXI、META、GOOGL；主要由 <span class="account-pill">aleabitoreddit</span>、<span class="account-pill">jukan05</span>、<span class="account-pill">paurooteri</span>、<span class="account-pill">stock6688</span> 提及。</li><li><b>AI 服务器上游</b>：最集中的产业变化标签是 需求结构变化、供需紧张、技术路线变化、供给释放；具体对象包括 AI ASIC / TPU / 定制芯片、HBM / DRAM、InP / 激光器、具体对象需回看原文、机器人执行器/光学、CPO / NPO / 光互连；相关 ticker 包括 META、NBIS、AAOI、NVDA、SIVE、LITE；主要由 <span class="account-pill">aleabitoreddit</span>、<span class="account-pill">jukan05</span>、<span class="account-pill">paurooteri</span> 提及。</li><li><b>光通信/光子</b>：最集中的产业变化标签是 技术路线变化、供需紧张、供给释放、需求结构变化；具体对象包括 CPO / NPO / 光互连、InP / 激光器、FC-BGA / 封装载板、机器人执行器/光学、HBM / DRAM、Neocloud 融资与合约；相关 ticker 包括 SIVE、NVDA、LITE、META、NBIS、AXTI；主要由 <span class="account-pill">aleabitoreddit</span>、<span class="account-pill">jukan05</span>、<span class="account-pill">paurooteri</span>、<span class="account-pill">stock6688</span> 提及。</li><li><b>Neocloud/算力融资</b>：最集中的产业变化标签是 技术路线变化、需求结构变化、供需紧张、技术进步；具体对象包括 InP / 激光器、HBM / DRAM、Neocloud 融资与合约、CPO / NPO / 光互连、AI ASIC / TPU / 定制芯片、芯片电阻 / MLCC；相关 ticker 包括 NBIS、META、LITE、GOOGL、HIMX、AAOI；主要由 <span class="account-pill">aleabitoreddit</span>、<span class="account-pill">jukan05</span>、<span class="account-pill">paurooteri</span> 提及。</li><li><b>人形机器人/Physical AI</b>：最集中的产业变化标签是 技术路线变化、供需紧张、需求结构变化、技术进步；具体对象包括 机器人执行器/光学、AI ASIC / TPU / 定制芯片、HBM / DRAM、InP / 激光器、芯片电阻 / MLCC；相关 ticker 包括 TSLA、AMZN、NVDA、CCXI、MELI、GOOGL；主要由 <span class="account-pill">aleabitoreddit</span>、<span class="account-pill">jukan05</span> 提及。</li><li><b>IDC/电力/功率链</b>：最集中的产业变化标签是 供需紧张、技术路线变化、需求结构变化、供给释放；具体对象包括 HBM / DRAM、CPO / NPO / 光互连、芯片电阻 / MLCC、InP / 激光器、AI ASIC / TPU / 定制芯片、800V / 电力设备；相关 ticker 包括 GOOGL、META、LITE、HIMX、AMZN、CCXI；主要由 <span class="account-pill">aleabitoreddit</span>、<span class="account-pill">jukan05</span>、<span class="account-pill">paurooteri</span>、<span class="account-pill">stock6688</span> 提及。</li></ol>
+            </section>
+          </div>
         </div>
-        <strong class="weekly-count">47</strong>
-      </header>
-      
-    <div class="weekly-body lang lang-zh">
-      <section class="weekly-block">
-        <h4>本周判断</h4>
-        <ol class="weekly-judgments"><li><span>01</span><p>本周窗口共 47 条推文，核心讨论集中在：AI 半导体供应链 25；Physical AI / 国防光学 20；HBM / 存储 18；CPO / 光通信 17；Neocloud 融资质量 14。</p></li><li><span>02</span><p>Serenity 近 7 日在CPO / 光通信里主要说：AAOI 多头 thesis、空头分歧和光模块涨幅争议、InP 衬底出口/管制、CSP 分散供应和化合物半导体供给安全、硅光、CPO/NPO、1.6T、连接器和 PCB/HVLP 材料链。</p></li><li><span>03</span><p>Serenity 近 7 日在HBM / 存储里主要说：SK hynix、HBM、内存供给、锁单和存储价格周期、CoPoS/CoWoS、先进封装、封装设备和韩国工程师原始信息。</p></li><li><span>04</span><p>Serenity 近 7 日在AI 半导体供应链里主要说：SK hynix、HBM、内存供给、锁单和存储价格周期、InP 衬底出口/管制、CSP 分散供应和化合物半导体供给安全、Samsung 代工 AMD CPU、TSMC/Intel 竞争和先进节点扩产。</p></li><li><span>05</span><p>结构化事件主要落在：供需紧张、技术路线变化；这些只是推文资产中的研究线索。</p></li></ol>
-      </section>
-      <div class="weekly-signal-grid">
-        <section class="weekly-signal">
-          <b>产业链环节</b>
-          <div class="ticker-pill-row"><span class="ticker-pill"><b>AI 半导体供应链</b>25</span><span class="ticker-pill"><b>Physical AI / 国防光学</b>20</span><span class="ticker-pill"><b>HBM / 存储</b>18</span><span class="ticker-pill"><b>CPO / 光通信</b>17</span><span class="ticker-pill"><b>Neocloud 融资质量</b>14</span><span class="ticker-pill"><b>电力 / 功率链</b>7</span><span class="ticker-pill"><b>InP / 化合物半导体</b>7</span></div>
-        </section>
-        <section class="weekly-signal">
-          <b>高频 ticker</b>
-          <div class="ticker-pill-row"><span class="ticker-pill"><b>META</b>11</span><span class="ticker-pill"><b>AMZN</b>9</span><span class="ticker-pill"><b>NVDA</b>9</span><span class="ticker-pill"><b>TSLA</b>9</span><span class="ticker-pill"><b>CCXI</b>8</span><span class="ticker-pill"><b>NBIS</b>7</span><span class="ticker-pill"><b>SIVE</b>6</span><span class="ticker-pill"><b>LITE</b>5</span><span class="ticker-pill"><b>AAOI</b>4</span><span class="ticker-pill"><b>GOOGL</b>4</span></div>
-        </section>
-        <section class="weekly-signal">
-          <b>近端升温 ticker</b>
-          <div class="ticker-pill-row"><span class="ticker-pill ticker-pill-rising"><b>META</b>+11</span><span class="ticker-pill ticker-pill-rising"><b>CCXI</b>+8</span><span class="ticker-pill ticker-pill-rising"><b>AMZN</b>+7</span><span class="ticker-pill ticker-pill-rising"><b>TSLA</b>+6</span><span class="ticker-pill ticker-pill-rising"><b>NVDA</b>+5</span><span class="ticker-pill ticker-pill-rising"><b>NBIS</b>+4</span><span class="ticker-pill ticker-pill-rising"><b>GOOGL</b>+3</span><span class="ticker-pill ticker-pill-rising"><b>MELI</b>+3</span><span class="ticker-pill ticker-pill-rising"><b>CBRS</b>+1</span><span class="ticker-pill ticker-pill-rising"><b>COHR</b>+1</span></div>
-        </section>
-        <section class="weekly-signal">
-          <b>证据锚点</b>
-          <div class="brief-anchor-list">
-            <span class="brief-anchor">
-              <b>2026-07-02</b>
-              <span><em>tweet_id 2072726120706007465</em><small>Photonics is backed by actual revenue numbers and it&#x27;s an architectural shift championed by $NVDA. Quantum barely h…</small></span>
-            </span>
-            
-            <span class="brief-anchor">
-              <b>2026-07-02</b>
-              <span><em>tweet_id 2072760446617280650</em><small>Always a fun time seeing semi markets crash from Bloomberg report framing once again… UBS analyst on $META report:…</small></span>
-            </span>
-            
-            <span class="brief-anchor">
-              <b>2026-07-03</b>
-              <span><em>tweet_id 2072936659369517341</em><small>Be SemiAnalysis: - Post a scathing piece on CPO delays + optical company valuations, causing a crash. Which $NVDA,…</small></span>
-            </span>
-            
-            <span class="brief-anchor">
-              <b>2026-07-01</b>
-              <span><em>tweet_id 2072178393878290789</em><small>Just some of the more interesting news I came across recently: 1. MS: Revised China humanoid shipments to reach 50,…</small></span>
-            </span>
-            </div>
-        </section>
-      </div>
-      <section class="weekly-block">
-        <h4>产业变化标签</h4>
-        <div class="weekly-event-list">
-            <article class="weekly-event" data-change-type="shortage">
-              <span class="weekly-event-label">供需紧张</span>
-              <div>
-                <strong>Serenity 指向 先进封装/载板/键合 中 机器人执行器/光学 的供需紧张，先当作瓶颈线索，不当作已核验事实。</strong>
-                <small>2026-07-01｜tweet_id 2072161782005936487｜机器人执行器/光学</small>
-              </div>
-            </article>
-            
-            <article class="weekly-event" data-change-type="tech_route">
-              <span class="weekly-event-label">技术路线变化</span>
-              <div>
-                <strong>Serenity 的讨论重心转向 CPO/光通信/激光器 的技术路线或架构变化，具体对象是 CPO / NPO / 光互连。</strong>
-                <small>2026-07-02｜tweet_id 2072726120706007465｜CPO / NPO / 光互连</small>
-              </div>
-            </article>
-            
-            <article class="weekly-event" data-change-type="tech_route">
-              <span class="weekly-event-label">技术路线变化</span>
-              <div>
-                <strong>Serenity 的讨论重心转向 先进封装/载板/键合 的技术路线或架构变化，具体对象是 InP / 激光器。</strong>
-                <small>2026-07-02｜tweet_id 2072760446617280650｜InP / 激光器</small>
-              </div>
-            </article>
-            
-            <article class="weekly-event" data-change-type="tech_route">
-              <span class="weekly-event-label">技术路线变化</span>
-              <div>
-                <strong>Serenity 的讨论重心转向 Physical AI/机器人/光学 的技术路线或架构变化，具体对象是 机器人执行器/光学。</strong>
-                <small>2026-07-02｜tweet_id 2072741541404406008｜机器人执行器/光学</small>
-              </div>
-            </article>
-            </div>
-      </section>
-      <p class="muted-note">Serenity 是供应链 thesis lens，适合看瓶颈和映射方向；它不替代公告、财报、行情事实或正式研究判断。</p>
+        
+            <div class="weekly-report-memo lang lang-en">
+              <div class="weekly-narrative">
+                <section>
+                  <h3>Core Conclusion</h3>
+                  <p class="weekly-intro">2026-06-27 to 2026-07-04 points to a common read: AI demand is not cooling; the debate is moving from the GPU main lane into Memory / HBM / SSD, AI server upstream, Optical / photonics, Neocloud / compute financing, Humanoid / Physical AI, IDC / power chain. The KOLs do not diverge sharply; they differ mainly by market lens: <span class="account-pill">jukan05</span> leans toward Korea/Taiwan semi supply-demand, exports, component pricing and raw industry news; <span class="account-pill">paurooteri</span> leans toward memory, HBM, electronic-component inflation, locked-in supply and bottom-margin recovery; <span class="account-pill">stock6688</span> leans toward domestic compute, A-share industrial mapping, IDC, electrical/optical interconnect and semi materials; <span class="account-pill">aleabitoreddit</span> leans toward US photonics, Neocloud, robotics and upstream AI bottlenecks.</p>
+                </section>
+                <section>
+                  <h3>By KOL</h3>
+                  <div class="weekly-kol-list">
+    <div class="weekly-kol-paragraph">
+      <div class="weekly-kol-label">@aleabitoreddit</div>
+      <p><span class="account-pill">aleabitoreddit</span>: the main lane is AI server upstream, Humanoid / Physical AI, Memory / HBM / SSD, Optical / photonics. The account's relative focus is US photonics, Neocloud, robotics and upstream AI bottlenecks; this window has 47 tweets, with industry-change tags around Supply Tightness, Technology Route Shift, Technology Progress, Demand Structure, Supply Release and concrete objects such as Read original text for object, CPO / NPO / optical interconnect, Neocloud financing and contracts, robot actuators / optics, FC-BGA / package substrate, InP / lasers. Frequent tickers: META, AMZN, NVDA, TSLA, CCXI, NBIS, SIVE; rising tickers: META +11, CCXI +8, AMZN +7, TSLA +6, NVDA +5, NBIS +4.</p>
     </div>
     
-      
-    <div class="weekly-body lang lang-en">
-      <section class="weekly-block">
-        <h4>Weekly Read</h4>
-        <ol class="weekly-judgments"><li><span>01</span><p>This weekly window contains 47 tweets; core themes: AI Semi Supply Chain 25；Physical AI / Defense Optics 20；HBM / Memory Bandwidth 18；CPO / Optical Interconnect 17；Neocloud Financing Quality 14.</p></li><li><span>02</span><p>In the last 7 days, Serenity mainly discussed AAOI long thesis, bear debate and optical-module rerating; InP substrate exports, CSP supply diversification and compound-semi supply security;…</p></li><li><span>03</span><p>In the last 7 days, Serenity mainly discussed SK hynix, HBM, memory supply, allocation and the storage price cycle; CoPoS/CoWoS, advanced packaging, packaging tools and raw Korean-engineer…</p></li><li><span>04</span><p>In the last 7 days, Serenity mainly discussed SK hynix, HBM, memory supply, allocation and the storage price cycle; InP substrate exports, CSP supply diversification and compound-semi suppl…</p></li><li><span>05</span><p>Structured event tags cluster around: Supply Tightness, Technology Route Shift; these are research clues from tweet assets only.</p></li></ol>
-      </section>
-      <div class="weekly-signal-grid">
-        <section class="weekly-signal">
-          <b>Supply-chain Links</b>
-          <div class="ticker-pill-row"><span class="ticker-pill"><b>AI Semi Supply Chain</b>25</span><span class="ticker-pill"><b>Physical AI / Defense Optics</b>20</span><span class="ticker-pill"><b>HBM / Memory Bandwidth</b>18</span><span class="ticker-pill"><b>CPO / Optical Interconnect</b>17</span><span class="ticker-pill"><b>Neocloud Financing Quality</b>14</span><span class="ticker-pill"><b>Power / Grid Chain</b>7</span><span class="ticker-pill"><b>InP / Compound Semis</b>7</span></div>
-        </section>
-        <section class="weekly-signal">
-          <b>Frequent Tickers</b>
-          <div class="ticker-pill-row"><span class="ticker-pill"><b>META</b>11</span><span class="ticker-pill"><b>AMZN</b>9</span><span class="ticker-pill"><b>NVDA</b>9</span><span class="ticker-pill"><b>TSLA</b>9</span><span class="ticker-pill"><b>CCXI</b>8</span><span class="ticker-pill"><b>NBIS</b>7</span><span class="ticker-pill"><b>SIVE</b>6</span><span class="ticker-pill"><b>LITE</b>5</span><span class="ticker-pill"><b>AAOI</b>4</span><span class="ticker-pill"><b>GOOGL</b>4</span></div>
-        </section>
-        <section class="weekly-signal">
-          <b>Rising Tickers</b>
-          <div class="ticker-pill-row"><span class="ticker-pill ticker-pill-rising"><b>META</b>+11</span><span class="ticker-pill ticker-pill-rising"><b>CCXI</b>+8</span><span class="ticker-pill ticker-pill-rising"><b>AMZN</b>+7</span><span class="ticker-pill ticker-pill-rising"><b>TSLA</b>+6</span><span class="ticker-pill ticker-pill-rising"><b>NVDA</b>+5</span><span class="ticker-pill ticker-pill-rising"><b>NBIS</b>+4</span><span class="ticker-pill ticker-pill-rising"><b>GOOGL</b>+3</span><span class="ticker-pill ticker-pill-rising"><b>MELI</b>+3</span><span class="ticker-pill ticker-pill-rising"><b>CBRS</b>+1</span><span class="ticker-pill ticker-pill-rising"><b>COHR</b>+1</span></div>
-        </section>
-        <section class="weekly-signal">
-          <b>Evidence Anchors</b>
-          <div class="brief-anchor-list">
-            <span class="brief-anchor">
-              <b>2026-07-02</b>
-              <span><em>tweet_id 2072726120706007465</em><small>Photonics is backed by actual revenue numbers and it&#x27;s an architectural shift championed by $NVDA. Quantum barely h…</small></span>
-            </span>
-            
-            <span class="brief-anchor">
-              <b>2026-07-02</b>
-              <span><em>tweet_id 2072760446617280650</em><small>Always a fun time seeing semi markets crash from Bloomberg report framing once again… UBS analyst on $META report:…</small></span>
-            </span>
-            
-            <span class="brief-anchor">
-              <b>2026-07-03</b>
-              <span><em>tweet_id 2072936659369517341</em><small>Be SemiAnalysis: - Post a scathing piece on CPO delays + optical company valuations, causing a crash. Which $NVDA,…</small></span>
-            </span>
-            
-            <span class="brief-anchor">
-              <b>2026-07-01</b>
-              <span><em>tweet_id 2072178393878290789</em><small>Just some of the more interesting news I came across recently: 1. MS: Revised China humanoid shipments to reach 50,…</small></span>
-            </span>
-            </div>
-        </section>
-      </div>
-      <section class="weekly-block">
-        <h4>Industry-change Tags</h4>
-        <div class="weekly-event-list">
-            <article class="weekly-event" data-change-type="shortage">
-              <span class="weekly-event-label">Supply Tightness</span>
-              <div>
-                <strong>Serenity points to tightness around robot actuators / optics within Advanced Packaging / Substrates; read it as a bottleneck clue, not a verified market fact.</strong>
-                <small>2026-07-01｜tweet_id 2072161782005936487｜robot actuators / optics</small>
-              </div>
-            </article>
-            
-            <article class="weekly-event" data-change-type="tech_route">
-              <span class="weekly-event-label">Technology Route Shift</span>
-              <div>
-                <strong>Serenity is shifting the discussion toward route or architecture change in CPO / Optical / Lasers, with CPO / NPO / optical interconnect as the concrete object.</strong>
-                <small>2026-07-02｜tweet_id 2072726120706007465｜CPO / NPO / optical interconnect</small>
-              </div>
-            </article>
-            
-            <article class="weekly-event" data-change-type="tech_route">
-              <span class="weekly-event-label">Technology Route Shift</span>
-              <div>
-                <strong>Serenity is shifting the discussion toward route or architecture change in Advanced Packaging / Substrates, with InP / lasers as the concrete object.</strong>
-                <small>2026-07-02｜tweet_id 2072760446617280650｜InP / lasers</small>
-              </div>
-            </article>
-            
-            <article class="weekly-event" data-change-type="tech_route">
-              <span class="weekly-event-label">Technology Route Shift</span>
-              <div>
-                <strong>Serenity is shifting the discussion toward route or architecture change in Physical AI / Robotics / Optics, with robot actuators / optics as the concrete object.</strong>
-                <small>2026-07-02｜tweet_id 2072741541404406008｜robot actuators / optics</small>
-              </div>
-            </article>
-            </div>
-      </section>
-      <p class="muted-note">Serenity is a supply-chain thesis lens for bottlenecks and mapping direction; it does not replace filings, financials, market facts or formal research judgment.</p>
+    <div class="weekly-kol-paragraph">
+      <div class="weekly-kol-label">@jukan05</div>
+      <p><span class="account-pill">jukan05</span>: the main lane is Memory / HBM / SSD, AI server upstream, Neocloud / compute financing, IDC / power chain. The account's relative focus is Korea/Taiwan semi supply-demand, exports, component pricing and raw industry news; this window has 65 tweets, with industry-change tags around Technology Route Shift, Supply Tightness, Pricing / ASP, Technology Progress, Supply Release and concrete objects such as Read original text for object, HBM / DRAM, FC-BGA / package substrate, Neocloud financing and contracts, AI ASIC / TPU / custom silicon, InP / lasers. Frequent tickers: INTC, AAPL, META, MU, AMD, GOOGL, NVDA; rising tickers: INTC +4, AAPL +2, META +2, AMD +1, ASML +1, ASX +1.</p>
     </div>
     
-    </article>
-    
-    <article class="weekly-card">
-      <header>
-        <div>
-          <span class="brief-eyebrow"><span class="lang lang-zh">本周 KOL 周报</span><span class="lang lang-en">Weekly KOL Report</span></span>
-          <h3>jukan05 <small>@jukan05</small></h3>
-          <p>2026-06-27 -> 2026-07-04 · <span class="lang lang-zh">韩国/亚洲供应链新闻流：事件密度、原始情报和事实催化补充。</span><span class="lang lang-en">Korea/Asia supply-chain news flow: event density, raw intel and catalyst-like facts.</span></p>
-        </div>
-        <strong class="weekly-count">65</strong>
-      </header>
-      
-    <div class="weekly-body lang lang-zh">
-      <section class="weekly-block">
-        <h4>本周判断</h4>
-        <ol class="weekly-judgments"><li><span>01</span><p>本周窗口共 65 条推文，核心讨论集中在：HBM / 存储 38；AI 半导体供应链 27；Neocloud 融资质量 13；电力 / 功率链 8；InP / 化合物半导体 4。</p></li><li><span>02</span><p>jukan05 近 7 日在HBM / 存储里主要说：SK hynix、HBM、内存供给、锁单和存储价格周期、CoPoS/CoWoS、先进封装、封装设备和韩国工程师原始信息。</p></li><li><span>03</span><p>jukan05 近 7 日在AI 半导体供应链里主要说：SK hynix、HBM、内存供给、锁单和存储价格周期、Samsung 代工 AMD CPU、TSMC/Intel 竞争和先进节点扩产、CoPoS/CoWoS、先进封装、封装设备和韩国工程师原始信息。</p></li><li><span>04</span><p>jukan05 近 7 日在Neocloud 融资质量里主要说：NBIS/IREN/CRWV 等 Neocloud 融资结构、合约质量和机构持股、AI 股票估值、Anthropic/Mythos 和二级市场情绪。</p></li><li><span>05</span><p>结构化事件主要落在：供需紧张、涨价/ASP；这些只是推文资产中的研究线索。</p></li></ol>
-      </section>
-      <div class="weekly-signal-grid">
-        <section class="weekly-signal">
-          <b>产业链环节</b>
-          <div class="ticker-pill-row"><span class="ticker-pill"><b>HBM / 存储</b>38</span><span class="ticker-pill"><b>AI 半导体供应链</b>27</span><span class="ticker-pill"><b>Neocloud 融资质量</b>13</span><span class="ticker-pill"><b>电力 / 功率链</b>8</span><span class="ticker-pill"><b>InP / 化合物半导体</b>4</span><span class="ticker-pill"><b>Physical AI / 国防光学</b>2</span></div>
-        </section>
-        <section class="weekly-signal">
-          <b>高频 ticker</b>
-          <div class="ticker-pill-row"><span class="ticker-pill"><b>INTC</b>4</span><span class="ticker-pill"><b>AAPL</b>2</span><span class="ticker-pill"><b>META</b>2</span><span class="ticker-pill"><b>MU</b>2</span><span class="ticker-pill"><b>AMD</b>1</span><span class="ticker-pill"><b>GOOGL</b>1</span><span class="ticker-pill"><b>NVDA</b>1</span><span class="ticker-pill"><b>AVGO</b>1</span><span class="ticker-pill"><b>MRVL</b>1</span><span class="ticker-pill"><b>QCOM</b>1</span></div>
-        </section>
-        <section class="weekly-signal">
-          <b>近端升温 ticker</b>
-          <div class="ticker-pill-row"><span class="ticker-pill ticker-pill-rising"><b>INTC</b>+4</span><span class="ticker-pill ticker-pill-rising"><b>AAPL</b>+2</span><span class="ticker-pill ticker-pill-rising"><b>META</b>+2</span><span class="ticker-pill ticker-pill-rising"><b>AMD</b>+1</span><span class="ticker-pill ticker-pill-rising"><b>ASML</b>+1</span><span class="ticker-pill ticker-pill-rising"><b>ASX</b>+1</span><span class="ticker-pill ticker-pill-rising"><b>AVGO</b>+1</span><span class="ticker-pill ticker-pill-rising"><b>GOOGL</b>+1</span><span class="ticker-pill ticker-pill-rising"><b>MRVL</b>+1</span><span class="ticker-pill ticker-pill-rising"><b>NVDA</b>+1</span></div>
-        </section>
-        <section class="weekly-signal">
-          <b>证据锚点</b>
-          <div class="brief-anchor-list">
-            <span class="brief-anchor">
-              <b>2026-06-29</b>
-              <span><em>tweet_id 2071745275325190339</em><small>KIS: On Memory LTAs With suppliers&#x27; commodity DRAM operating margins already at 80% and gross margins above 90%, pr…</small></span>
-            </span>
-            
-            <span class="brief-anchor">
-              <b>2026-06-28</b>
-              <span><em>tweet_id 2071366174408085902</em><small>&gt;&gt;TSMC Teams Up with Winbond to Build a Homegrown DRAM Supply Chain for AI • Amid deepening global memory shortages…</small></span>
-            </span>
-            
-            <span class="brief-anchor">
-              <b>2026-06-28</b>
-              <span><em>tweet_id 2071139712082022855</em><small>Yes, MU is not Nvidia. But going forward, it may become even more important than Nvidia. Think about it. Inference…</small></span>
-            </span>
-            
-            <span class="brief-anchor">
-              <b>2026-07-02</b>
-              <span><em>tweet_id 2072799162559840616</em><small>What surprised me most in the Anthropic–Samsung Foundry news is that Anthropic is also considering Samsung Foundry’…</small></span>
-            </span>
-            </div>
-        </section>
-      </div>
-      <section class="weekly-block">
-        <h4>产业变化标签</h4>
-        <div class="weekly-event-list">
-            <article class="weekly-event" data-change-type="shortage">
-              <span class="weekly-event-label">供需紧张</span>
-              <div>
-                <strong>jukan05 指向 电力/功率/供配电 中 800V / 电力设备 的供需紧张，先当作瓶颈线索，不当作已核验事实。</strong>
-                <small>2026-06-28｜tweet_id 2071126659307385321｜800V / 电力设备</small>
-              </div>
-            </article>
-            
-            <article class="weekly-event" data-change-type="shortage">
-              <span class="weekly-event-label">供需紧张</span>
-              <div>
-                <strong>jukan05 指向 先进封装/载板/键合 中 HBM / DRAM 的供需紧张，先当作瓶颈线索，不当作已核验事实。</strong>
-                <small>2026-06-28｜tweet_id 2071366174408085902｜HBM / DRAM</small>
-              </div>
-            </article>
-            
-            <article class="weekly-event" data-change-type="price">
-              <span class="weekly-event-label">涨价/ASP</span>
-              <div>
-                <strong>jukan05 提到 HBM / DRAM 的价格变化，需要区分产品 ASP、元件涨价和单纯资本市场价格表述。</strong>
-                <small>2026-07-03｜tweet_id 2072901006682427875｜HBM / DRAM</small>
-              </div>
-            </article>
-            
-            <article class="weekly-event" data-change-type="price">
-              <span class="weekly-event-label">涨价/ASP</span>
-              <div>
-                <strong>jukan05 提到 HBM / DRAM 的价格变化，需要区分产品 ASP、元件涨价和单纯资本市场价格表述。</strong>
-                <small>2026-07-03｜tweet_id 2072908815868330276｜HBM / DRAM</small>
-              </div>
-            </article>
-            </div>
-      </section>
-      <p class="muted-note">jukan05 是韩国/亚洲供应链新闻与情报流，适合补事实密度和时间顺序；它不直接进入 Serenity 七链排序或资产映射结论。</p>
+    <div class="weekly-kol-paragraph">
+      <div class="weekly-kol-label">@paurooteri</div>
+      <p><span class="account-pill">paurooteri</span>: the main lane is Memory / HBM / SSD, AI server upstream, Neocloud / compute financing, Optical / photonics. The account's relative focus is memory, HBM, electronic-component inflation, locked-in supply and bottom-margin recovery; this window has 207 tweets, with industry-change tags around Technology Progress, Demand Structure, Supply Tightness, Technology Route Shift, Pricing / ASP and concrete objects such as Read original text for object, AI ASIC / TPU / custom silicon, InP / lasers, FC-BGA / package substrate, chip resistors / MLCC, CPO / NPO / optical interconnect. Frequent tickers: MU, NVDA, AAPL, TSM, SKHY; rising tickers: MU +2, AAPL +2, NVDA +2, SKHY +1, TSM +1.</p>
     </div>
     
-      
-    <div class="weekly-body lang lang-en">
-      <section class="weekly-block">
-        <h4>Weekly Read</h4>
-        <ol class="weekly-judgments"><li><span>01</span><p>This weekly window contains 65 tweets; core themes: HBM / Memory Bandwidth 38；AI Semi Supply Chain 27；Neocloud Financing Quality 13；Power / Grid Chain 8；InP / Compound Semis 4.</p></li><li><span>02</span><p>In the last 7 days, jukan05 mainly discussed SK hynix, HBM, memory supply, allocation and the storage price cycle; CoPoS/CoWoS, advanced packaging, packaging tools and raw Korean-engineer i…</p></li><li><span>03</span><p>In the last 7 days, jukan05 mainly discussed SK hynix, HBM, memory supply, allocation and the storage price cycle; Samsung foundry for AMD CPUs, TSMC/Intel competition and leading-node expa…</p></li><li><span>04</span><p>In the last 7 days, jukan05 mainly discussed NBIS/IREN/CRWV neocloud financing structure, contract quality and institutional ownership; AI-stock valuation, Anthropic/Mythos and secondary-ma…</p></li><li><span>05</span><p>Structured event tags cluster around: Supply Tightness, Pricing / ASP; these are research clues from tweet assets only.</p></li></ol>
-      </section>
-      <div class="weekly-signal-grid">
-        <section class="weekly-signal">
-          <b>Supply-chain Links</b>
-          <div class="ticker-pill-row"><span class="ticker-pill"><b>HBM / Memory Bandwidth</b>38</span><span class="ticker-pill"><b>AI Semi Supply Chain</b>27</span><span class="ticker-pill"><b>Neocloud Financing Quality</b>13</span><span class="ticker-pill"><b>Power / Grid Chain</b>8</span><span class="ticker-pill"><b>InP / Compound Semis</b>4</span><span class="ticker-pill"><b>Physical AI / Defense Optics</b>2</span></div>
-        </section>
-        <section class="weekly-signal">
-          <b>Frequent Tickers</b>
-          <div class="ticker-pill-row"><span class="ticker-pill"><b>INTC</b>4</span><span class="ticker-pill"><b>AAPL</b>2</span><span class="ticker-pill"><b>META</b>2</span><span class="ticker-pill"><b>MU</b>2</span><span class="ticker-pill"><b>AMD</b>1</span><span class="ticker-pill"><b>GOOGL</b>1</span><span class="ticker-pill"><b>NVDA</b>1</span><span class="ticker-pill"><b>AVGO</b>1</span><span class="ticker-pill"><b>MRVL</b>1</span><span class="ticker-pill"><b>QCOM</b>1</span></div>
-        </section>
-        <section class="weekly-signal">
-          <b>Rising Tickers</b>
-          <div class="ticker-pill-row"><span class="ticker-pill ticker-pill-rising"><b>INTC</b>+4</span><span class="ticker-pill ticker-pill-rising"><b>AAPL</b>+2</span><span class="ticker-pill ticker-pill-rising"><b>META</b>+2</span><span class="ticker-pill ticker-pill-rising"><b>AMD</b>+1</span><span class="ticker-pill ticker-pill-rising"><b>ASML</b>+1</span><span class="ticker-pill ticker-pill-rising"><b>ASX</b>+1</span><span class="ticker-pill ticker-pill-rising"><b>AVGO</b>+1</span><span class="ticker-pill ticker-pill-rising"><b>GOOGL</b>+1</span><span class="ticker-pill ticker-pill-rising"><b>MRVL</b>+1</span><span class="ticker-pill ticker-pill-rising"><b>NVDA</b>+1</span></div>
-        </section>
-        <section class="weekly-signal">
-          <b>Evidence Anchors</b>
-          <div class="brief-anchor-list">
-            <span class="brief-anchor">
-              <b>2026-06-29</b>
-              <span><em>tweet_id 2071745275325190339</em><small>KIS: On Memory LTAs With suppliers&#x27; commodity DRAM operating margins already at 80% and gross margins above 90%, pr…</small></span>
-            </span>
-            
-            <span class="brief-anchor">
-              <b>2026-06-28</b>
-              <span><em>tweet_id 2071366174408085902</em><small>&gt;&gt;TSMC Teams Up with Winbond to Build a Homegrown DRAM Supply Chain for AI • Amid deepening global memory shortages…</small></span>
-            </span>
-            
-            <span class="brief-anchor">
-              <b>2026-06-28</b>
-              <span><em>tweet_id 2071139712082022855</em><small>Yes, MU is not Nvidia. But going forward, it may become even more important than Nvidia. Think about it. Inference…</small></span>
-            </span>
-            
-            <span class="brief-anchor">
-              <b>2026-07-02</b>
-              <span><em>tweet_id 2072799162559840616</em><small>What surprised me most in the Anthropic–Samsung Foundry news is that Anthropic is also considering Samsung Foundry’…</small></span>
-            </span>
-            </div>
-        </section>
-      </div>
-      <section class="weekly-block">
-        <h4>Industry-change Tags</h4>
-        <div class="weekly-event-list">
-            <article class="weekly-event" data-change-type="shortage">
-              <span class="weekly-event-label">Supply Tightness</span>
-              <div>
-                <strong>jukan05 points to tightness around 800V / power equipment within Power / Grid / Power Semis; read it as a bottleneck clue, not a verified market fact.</strong>
-                <small>2026-06-28｜tweet_id 2071126659307385321｜800V / power equipment</small>
-              </div>
-            </article>
-            
-            <article class="weekly-event" data-change-type="shortage">
-              <span class="weekly-event-label">Supply Tightness</span>
-              <div>
-                <strong>jukan05 points to tightness around HBM / DRAM within Advanced Packaging / Substrates; read it as a bottleneck clue, not a verified market fact.</strong>
-                <small>2026-06-28｜tweet_id 2071366174408085902｜HBM / DRAM</small>
-              </div>
-            </article>
-            
-            <article class="weekly-event" data-change-type="price">
-              <span class="weekly-event-label">Pricing / ASP</span>
-              <div>
-                <strong>jukan05 flags pricing movement around HBM / DRAM; check whether it is product ASP, component price or only equity-price language.</strong>
-                <small>2026-07-03｜tweet_id 2072901006682427875｜HBM / DRAM</small>
-              </div>
-            </article>
-            
-            <article class="weekly-event" data-change-type="price">
-              <span class="weekly-event-label">Pricing / ASP</span>
-              <div>
-                <strong>jukan05 flags pricing movement around HBM / DRAM; check whether it is product ASP, component price or only equity-price language.</strong>
-                <small>2026-07-03｜tweet_id 2072908815868330276｜HBM / DRAM</small>
-              </div>
-            </article>
-            </div>
-      </section>
-      <p class="muted-note">jukan05 is a Korea/Asia supply-chain news and raw-intel feed for fact density and timing; it does not directly drive Serenity chain ranking or asset-mapping conclusions.</p>
+    <div class="weekly-kol-paragraph">
+      <div class="weekly-kol-label">@stock6688</div>
+      <p><span class="account-pill">stock6688</span>: the main lane is Memory / HBM / SSD, Optical / photonics, IDC / power chain. The account's relative focus is domestic compute, A-share industrial mapping, IDC, electrical/optical interconnect and semi materials; this window has 26 tweets, with industry-change tags around Pricing / ASP, Technology Progress, Technology Route Shift, Demand Structure, Supply Release and concrete objects such as HBM / DRAM, Read original text for object, CPO / NPO / optical interconnect, HBF / TC bonder. Frequent tickers: no frequent ticker; rising tickers: no clear rising ticker.</p>
     </div>
-    
-    </article>
-    
-    <article class="weekly-card">
-      <header>
-        <div>
-          <span class="brief-eyebrow"><span class="lang lang-zh">本周 KOL 周报</span><span class="lang lang-en">Weekly KOL Report</span></span>
-          <h3>Paurooteri <small>@paurooteri</small></h3>
-          <p>2026-06-27 -> 2026-07-04 · <span class="lang lang-zh">存储/HBM 与半导体供应链观点流：偏周期、供需和产业链变化观察。</span><span class="lang lang-en">Memory/HBM and semi supply-chain view stream focused on cycles, supply-demand and chain shifts.</span></p>
-        </div>
-        <strong class="weekly-count">207</strong>
-      </header>
-      
-    <div class="weekly-body lang lang-zh">
-      <section class="weekly-block">
-        <h4>本周判断</h4>
-        <ol class="weekly-judgments"><li><span>01</span><p>本周窗口共 207 条推文，核心讨论集中在：HBM / 存储 90；AI 半导体供应链 44；Neocloud 融资质量 4；InP / 化合物半导体 3；电力 / 功率链 3。</p></li><li><span>02</span><p>paurooteri 近 7 日在HBM / 存储里主要说：SK hynix、HBM、内存供给、锁单和存储价格周期、CoPoS/CoWoS、先进封装、封装设备和韩国工程师原始信息。</p></li><li><span>03</span><p>paurooteri 近 7 日在AI 半导体供应链里主要说：SK hynix、HBM、内存供给、锁单和存储价格周期、CoPoS/CoWoS、先进封装、封装设备和韩国工程师原始信息、Samsung 代工 AMD CPU、TSMC/Intel 竞争和先进节点扩产。</p></li><li><span>04</span><p>paurooteri 近 7 日在CPO / 光通信里主要说：硅光、CPO/NPO、1.6T、连接器和 PCB/HVLP 材料链。</p></li><li><span>05</span><p>结构化事件主要落在：技术路线变化；这些只是推文资产中的研究线索。</p></li></ol>
-      </section>
-      <div class="weekly-signal-grid">
-        <section class="weekly-signal">
-          <b>产业链环节</b>
-          <div class="ticker-pill-row"><span class="ticker-pill"><b>HBM / 存储</b>90</span><span class="ticker-pill"><b>AI 半导体供应链</b>44</span><span class="ticker-pill"><b>Neocloud 融资质量</b>4</span><span class="ticker-pill"><b>InP / 化合物半导体</b>3</span><span class="ticker-pill"><b>电力 / 功率链</b>3</span><span class="ticker-pill"><b>CPO / 光通信</b>1</span></div>
-        </section>
-        <section class="weekly-signal">
-          <b>高频 ticker</b>
-          <div class="ticker-pill-row"><span class="ticker-pill"><b>MU</b>6</span><span class="ticker-pill"><b>NVDA</b>2</span><span class="ticker-pill"><b>AAPL</b>2</span><span class="ticker-pill"><b>TSM</b>1</span><span class="ticker-pill"><b>SKHY</b>1</span></div>
-        </section>
-        <section class="weekly-signal">
-          <b>近端升温 ticker</b>
-          <div class="ticker-pill-row"><span class="ticker-pill ticker-pill-rising"><b>MU</b>+2</span><span class="ticker-pill ticker-pill-rising"><b>AAPL</b>+2</span><span class="ticker-pill ticker-pill-rising"><b>NVDA</b>+2</span><span class="ticker-pill ticker-pill-rising"><b>SKHY</b>+1</span><span class="ticker-pill ticker-pill-rising"><b>TSM</b>+1</span></div>
-        </section>
-        <section class="weekly-signal">
-          <b>证据锚点</b>
-          <div class="brief-anchor-list">
-            <span class="brief-anchor">
-              <b>2026-06-28</b>
-              <span><em>tweet_id 2071206757091983428</em><small>メモリはもう少し上かな ストレージはそんなもので済む訳がない</small></span>
-            </span>
-            
-            <span class="brief-anchor">
-              <b>2026-07-03</b>
-              <span><em>tweet_id 2073056725293576272</em><small>重要な規格がきましたね</small></span>
-            </span>
-            
-            <span class="brief-anchor">
-              <b>2026-07-04</b>
-              <span><em>tweet_id 2073230637591670824</em><small>😂😂</small></span>
-            </span>
-            
-            <span class="brief-anchor">
-              <b>2026-06-30</b>
-              <span><em>tweet_id 2072078596391436550</em><small>310mm x 310mm ならば端っこ無駄にするぐらいで、このためにわざわざCoPoSにするかなぁ パイロットライン キャリアウェハなのかコア材なのか 上記含めてサイズとRDL、ABF基板含めて、旭化成とイビデンの状況とも照らし…</small></span>
-            </span>
-            </div>
-        </section>
-      </div>
-      <section class="weekly-block">
-        <h4>产业变化标签</h4>
-        <div class="weekly-event-list">
-            <article class="weekly-event" data-change-type="tech_route">
-              <span class="weekly-event-label">技术路线变化</span>
-              <div>
-                <strong>jukan05 的讨论重心转向 先进封装/载板/键合 的技术路线或架构变化，具体对象是 CPO / NPO / 光互连。</strong>
-                <small>2026-06-30｜tweet_id 2072074013409755187｜CPO / NPO / 光互连</small>
-              </div>
-            </article>
-            </div>
-      </section>
-      <p class="muted-note">Paurooteri 是 X KOL 观点/新闻流研究资产，只用于补充产业链讨论线索；不直接进入 Serenity 七链排序或 A股映射结论。</p>
     </div>
-    
-      
-    <div class="weekly-body lang lang-en">
-      <section class="weekly-block">
-        <h4>Weekly Read</h4>
-        <ol class="weekly-judgments"><li><span>01</span><p>This weekly window contains 207 tweets; core themes: HBM / Memory Bandwidth 90；AI Semi Supply Chain 44；Neocloud Financing Quality 4；InP / Compound Semis 3；Power / Grid Chain 3.</p></li><li><span>02</span><p>In the last 7 days, paurooteri mainly discussed SK hynix, HBM, memory supply, allocation and the storage price cycle; CoPoS/CoWoS, advanced packaging, packaging tools and raw Korean-enginee…</p></li><li><span>03</span><p>In the last 7 days, paurooteri mainly discussed SK hynix, HBM, memory supply, allocation and the storage price cycle; CoPoS/CoWoS, advanced packaging, packaging tools and raw Korean-enginee…</p></li><li><span>04</span><p>In the last 7 days, paurooteri mainly discussed silicon photonics, CPO/NPO, 1.6T, connectors and PCB/HVLP materials within CPO / Optical Interconnect.</p></li><li><span>05</span><p>Structured event tags cluster around: Technology Route Shift; these are research clues from tweet assets only.</p></li></ol>
-      </section>
-      <div class="weekly-signal-grid">
-        <section class="weekly-signal">
-          <b>Supply-chain Links</b>
-          <div class="ticker-pill-row"><span class="ticker-pill"><b>HBM / Memory Bandwidth</b>90</span><span class="ticker-pill"><b>AI Semi Supply Chain</b>44</span><span class="ticker-pill"><b>Neocloud Financing Quality</b>4</span><span class="ticker-pill"><b>InP / Compound Semis</b>3</span><span class="ticker-pill"><b>Power / Grid Chain</b>3</span><span class="ticker-pill"><b>CPO / Optical Interconnect</b>1</span></div>
-        </section>
-        <section class="weekly-signal">
-          <b>Frequent Tickers</b>
-          <div class="ticker-pill-row"><span class="ticker-pill"><b>MU</b>6</span><span class="ticker-pill"><b>NVDA</b>2</span><span class="ticker-pill"><b>AAPL</b>2</span><span class="ticker-pill"><b>TSM</b>1</span><span class="ticker-pill"><b>SKHY</b>1</span></div>
-        </section>
-        <section class="weekly-signal">
-          <b>Rising Tickers</b>
-          <div class="ticker-pill-row"><span class="ticker-pill ticker-pill-rising"><b>MU</b>+2</span><span class="ticker-pill ticker-pill-rising"><b>AAPL</b>+2</span><span class="ticker-pill ticker-pill-rising"><b>NVDA</b>+2</span><span class="ticker-pill ticker-pill-rising"><b>SKHY</b>+1</span><span class="ticker-pill ticker-pill-rising"><b>TSM</b>+1</span></div>
-        </section>
-        <section class="weekly-signal">
-          <b>Evidence Anchors</b>
-          <div class="brief-anchor-list">
-            <span class="brief-anchor">
-              <b>2026-06-28</b>
-              <span><em>tweet_id 2071206757091983428</em><small>メモリはもう少し上かな ストレージはそんなもので済む訳がない</small></span>
-            </span>
-            
-            <span class="brief-anchor">
-              <b>2026-07-03</b>
-              <span><em>tweet_id 2073056725293576272</em><small>重要な規格がきましたね</small></span>
-            </span>
-            
-            <span class="brief-anchor">
-              <b>2026-07-04</b>
-              <span><em>tweet_id 2073230637591670824</em><small>😂😂</small></span>
-            </span>
-            
-            <span class="brief-anchor">
-              <b>2026-06-30</b>
-              <span><em>tweet_id 2072078596391436550</em><small>310mm x 310mm ならば端っこ無駄にするぐらいで、このためにわざわざCoPoSにするかなぁ パイロットライン キャリアウェハなのかコア材なのか 上記含めてサイズとRDL、ABF基板含めて、旭化成とイビデンの状況とも照らし…</small></span>
-            </span>
+                </section>
+                <section>
+                  <h3>Industry Read-Through</h3>
+                  <p>The strongest supply-chain directions in this window are:</p>
+                  <ol class="industry-merge-list"><li><b>Memory / HBM / SSD</b>: the strongest tags are Demand Structure, Supply Tightness, Technology Route Shift, Pricing / ASP; objects include HBM / DRAM, AI ASIC / TPU / custom silicon, robot actuators / optics, InP / lasers, chip resistors / MLCC, CPO / NPO / optical interconnect; tickers include NVDA, AMZN, TSLA, CCXI, META, GOOGL; mainly surfaced by <span class="account-pill">aleabitoreddit</span>, <span class="account-pill">jukan05</span>, <span class="account-pill">paurooteri</span>, <span class="account-pill">stock6688</span>.</li><li><b>AI server upstream</b>: the strongest tags are Demand Structure, Supply Tightness, Technology Route Shift, Supply Release; objects include AI ASIC / TPU / custom silicon, HBM / DRAM, InP / lasers, Read original text for object, robot actuators / optics, CPO / NPO / optical interconnect; tickers include META, NBIS, AAOI, NVDA, SIVE, LITE; mainly surfaced by <span class="account-pill">aleabitoreddit</span>, <span class="account-pill">jukan05</span>, <span class="account-pill">paurooteri</span>.</li><li><b>Optical / photonics</b>: the strongest tags are Technology Route Shift, Supply Tightness, Supply Release, Demand Structure; objects include CPO / NPO / optical interconnect, InP / lasers, FC-BGA / package substrate, robot actuators / optics, HBM / DRAM, Neocloud financing and contracts; tickers include SIVE, NVDA, LITE, META, NBIS, AXTI; mainly surfaced by <span class="account-pill">aleabitoreddit</span>, <span class="account-pill">jukan05</span>, <span class="account-pill">paurooteri</span>, <span class="account-pill">stock6688</span>.</li><li><b>Neocloud / compute financing</b>: the strongest tags are Technology Route Shift, Demand Structure, Supply Tightness, Technology Progress; objects include InP / lasers, HBM / DRAM, Neocloud financing and contracts, CPO / NPO / optical interconnect, AI ASIC / TPU / custom silicon, chip resistors / MLCC; tickers include NBIS, META, LITE, GOOGL, HIMX, AAOI; mainly surfaced by <span class="account-pill">aleabitoreddit</span>, <span class="account-pill">jukan05</span>, <span class="account-pill">paurooteri</span>.</li><li><b>Humanoid / Physical AI</b>: the strongest tags are Technology Route Shift, Supply Tightness, Demand Structure, Technology Progress; objects include robot actuators / optics, AI ASIC / TPU / custom silicon, HBM / DRAM, InP / lasers, chip resistors / MLCC; tickers include TSLA, AMZN, NVDA, CCXI, MELI, GOOGL; mainly surfaced by <span class="account-pill">aleabitoreddit</span>, <span class="account-pill">jukan05</span>.</li><li><b>IDC / power chain</b>: the strongest tags are Supply Tightness, Technology Route Shift, Demand Structure, Supply Release; objects include HBM / DRAM, CPO / NPO / optical interconnect, chip resistors / MLCC, InP / lasers, AI ASIC / TPU / custom silicon, 800V / power equipment; tickers include GOOGL, META, LITE, HIMX, AMZN, CCXI; mainly surfaced by <span class="account-pill">aleabitoreddit</span>, <span class="account-pill">jukan05</span>, <span class="account-pill">paurooteri</span>, <span class="account-pill">stock6688</span>.</li></ol>
+                </section>
+              </div>
             </div>
-        </section>
-      </div>
-      <section class="weekly-block">
-        <h4>Industry-change Tags</h4>
-        <div class="weekly-event-list">
-            <article class="weekly-event" data-change-type="tech_route">
-              <span class="weekly-event-label">Technology Route Shift</span>
-              <div>
-                <strong>jukan05 is shifting the discussion toward route or architecture change in Advanced Packaging / Substrates, with CPO / NPO / optical interconnect as the concrete object.</strong>
-                <small>2026-06-30｜tweet_id 2072074013409755187｜CPO / NPO / optical interconnect</small>
-              </div>
-            </article>
             </div>
-      </section>
-      <p class="muted-note">Paurooteri is an X KOL view/news-flow research asset for additional supply-chain discussion clues; it does not directly drive Serenity ranking or A-share mapping conclusions.</p>
-    </div>
-    
-    </article>
-    
-    <article class="weekly-card">
-      <header>
-        <div>
-          <span class="brief-eyebrow"><span class="lang lang-zh">本周 KOL 周报</span><span class="lang lang-en">Weekly KOL Report</span></span>
-          <h3>Stock6688 <small>@stock6688</small></h3>
-          <p>2026-06-27 -> 2026-07-04 · <span class="lang lang-zh">中文供应链观察流：偏光通信、存储、半导体和市场情绪补充。</span><span class="lang lang-en">Chinese supply-chain observation stream covering optical, memory, semi and market-color context.</span></p>
-        </div>
-        <strong class="weekly-count">26</strong>
-      </header>
-      
-    <div class="weekly-body lang lang-zh">
-      <section class="weekly-block">
-        <h4>本周判断</h4>
-        <ol class="weekly-judgments"><li><span>01</span><p>本周窗口共 26 条推文，核心讨论集中在：HBM / 存储 3；CPO / 光通信 3；电力 / 功率链 1。</p></li><li><span>02</span><p>stock6688 近 7 日在HBM / 存储里主要说：SK hynix、HBM、内存供给、锁单和存储价格周期、CoPoS/CoWoS、先进封装、封装设备和韩国工程师原始信息。</p></li><li><span>03</span><p>CPO/硅光仍是主轴，焦点继续向激光、InP、代工和本土供给安全扩散。</p></li><li><span>04</span><p>stock6688 近 7 日在电力 / 功率链里主要说：800V DC、数据中心供电、变压器、并网和功率器件可靠性。</p></li><li><span>05</span><p>结构化事件主要落在：涨价/ASP、技术路线变化、技术进步；这些只是推文资产中的研究线索。</p></li></ol>
-      </section>
-      <div class="weekly-signal-grid">
-        <section class="weekly-signal">
-          <b>产业链环节</b>
-          <div class="ticker-pill-row"><span class="ticker-pill"><b>HBM / 存储</b>3</span><span class="ticker-pill"><b>CPO / 光通信</b>3</span><span class="ticker-pill"><b>电力 / 功率链</b>1</span></div>
-        </section>
-        <section class="weekly-signal">
-          <b>高频 ticker</b>
-          <p class="muted-note">暂无高频 ticker</p>
-        </section>
-        <section class="weekly-signal">
-          <b>近端升温 ticker</b>
-          <p class="muted-note">暂无正向升温</p>
-        </section>
-        <section class="weekly-signal">
-          <b>证据锚点</b>
-          <div class="brief-anchor-list">
-            <span class="brief-anchor">
-              <b>2026-06-29</b>
-              <span><em>tweet_id 2071567617232605588</em><small>①【半导体设备＆零部件估值表】 ②【主要半导体设备公司2030年收入利润＆市值空间测算】（太远期了，只具备参考价值） 两份券商的表格内容太复杂，全是数据预算，还不如5/10的表格更有操作性；5/10表格内的个股均为已推荐标的，是结…</small></span>
-            </span>
-            
-            <span class="brief-anchor">
-              <b>2026-06-29</b>
-              <span><em>tweet_id 2071593563402748134</em><small>【韩国扩大AI相关投资概念整理】29日韩国政府宣布预计未来15年将在新一代存储、边缘人工智能、国防等芯片领域投资至少30万亿韩元。韩国官员表示，预计五年内将DRAM生产能力翻倍，预计全球内存市场将在5年内增长四倍。 https:/…</small></span>
-            </span>
-            
-            <span class="brief-anchor">
-              <b>2026-07-03</b>
-              <span><em>tweet_id 2072859288654303442</em><small>【昇腾950超节点7月17真机首秀】 出海订单密集、验证需求外溢： ① 俄罗斯Sberbank拟采购中国芯片支撑自研大模型GigaChat； ②韩国云厂商锁定首批2000片昇腾950订单； ③马来西亚计划部署3000台昇腾AI服务…</small></span>
-            </span>
-            
-            <span class="brief-anchor">
-              <b>2026-06-28</b>
-              <span><em>tweet_id 2071066051971076439</em><small>【康宁玻璃桥概念整理】24日，在韩国首尔举行的AI数据中心光通信互连技术大会上，康宁发布了多项与共封装光学及玻璃基板相关的新技术与产品。其中“玻璃桥”是一种由玻璃制成的光连接器，可直接连接光芯片与光纤。此外康宁还推出融合玻璃基板与…</small></span>
-            </span>
-            </div>
-        </section>
-      </div>
-      <section class="weekly-block">
-        <h4>产业变化标签</h4>
-        <div class="weekly-event-list">
-            <article class="weekly-event" data-change-type="price">
-              <span class="weekly-event-label">涨价/ASP</span>
-              <div>
-                <strong>jukan05 提到 具体对象需回看原文 的价格变化，需要区分产品 ASP、元件涨价和单纯资本市场价格表述。</strong>
-                <small>2026-07-01｜tweet_id 2072291280005349883｜具体对象需回看原文</small>
-              </div>
-            </article>
-            
-            <article class="weekly-event" data-change-type="tech_route">
-              <span class="weekly-event-label">技术路线变化</span>
-              <div>
-                <strong>jukan05 的讨论重心转向 CPO/光通信/激光器 的技术路线或架构变化，具体对象是 CPO / NPO / 光互连。</strong>
-                <small>2026-06-28｜tweet_id 2071066051971076439｜CPO / NPO / 光互连</small>
-              </div>
-            </article>
-            
-            <article class="weekly-event" data-change-type="tech_route">
-              <span class="weekly-event-label">技术路线变化</span>
-              <div>
-                <strong>jukan05 的讨论重心转向 电力/功率/供配电 的技术路线或架构变化，具体对象是 HBM / DRAM。</strong>
-                <small>2026-07-01｜tweet_id 2072124396635074707｜HBM / DRAM</small>
-              </div>
-            </article>
-            
-            <article class="weekly-event" data-change-type="tech_progress">
-              <span class="weekly-event-label">技术进步</span>
-              <div>
-                <strong>jukan05 提到 HBM / DRAM 的量产、验证或性能进展，这可能改变瓶颈位置，而不只是加剧短缺。</strong>
-                <small>2026-07-03｜tweet_id 2072859288654303442｜HBM / DRAM</small>
-              </div>
-            </article>
-            </div>
-      </section>
-      <p class="muted-note">Stock6688 是 X KOL 观点/新闻流研究资产，只用于补充产业链讨论线索；不直接进入 Serenity 七链排序或 A股映射结论。</p>
-    </div>
-    
-      
-    <div class="weekly-body lang lang-en">
-      <section class="weekly-block">
-        <h4>Weekly Read</h4>
-        <ol class="weekly-judgments"><li><span>01</span><p>This weekly window contains 26 tweets; core themes: HBM / Memory Bandwidth 3；CPO / Optical Interconnect 3；Power / Grid Chain 1.</p></li><li><span>02</span><p>In the last 7 days, stock6688 mainly discussed SK hynix, HBM, memory supply, allocation and the storage price cycle; CoPoS/CoWoS, advanced packaging, packaging tools and raw Korean-engineer…</p></li><li><span>03</span><p>CPO and silicon photonics remain the anchor, with focus spreading into lasers, InP, foundry paths and supply security.</p></li><li><span>04</span><p>In the last 7 days, stock6688 mainly discussed 800V DC, data-center power delivery, transformers, grid access and power-device reliability within Power / Grid Chain.</p></li><li><span>05</span><p>Structured event tags cluster around: Pricing / ASP, Technology Route Shift, Technology Progress; these are research clues from tweet assets only.</p></li></ol>
-      </section>
-      <div class="weekly-signal-grid">
-        <section class="weekly-signal">
-          <b>Supply-chain Links</b>
-          <div class="ticker-pill-row"><span class="ticker-pill"><b>HBM / Memory Bandwidth</b>3</span><span class="ticker-pill"><b>CPO / Optical Interconnect</b>3</span><span class="ticker-pill"><b>Power / Grid Chain</b>1</span></div>
-        </section>
-        <section class="weekly-signal">
-          <b>Frequent Tickers</b>
-          <p class="muted-note">No frequent tickers</p>
-        </section>
-        <section class="weekly-signal">
-          <b>Rising Tickers</b>
-          <p class="muted-note">No positive delta</p>
-        </section>
-        <section class="weekly-signal">
-          <b>Evidence Anchors</b>
-          <div class="brief-anchor-list">
-            <span class="brief-anchor">
-              <b>2026-06-29</b>
-              <span><em>tweet_id 2071567617232605588</em><small>①【半导体设备＆零部件估值表】 ②【主要半导体设备公司2030年收入利润＆市值空间测算】（太远期了，只具备参考价值） 两份券商的表格内容太复杂，全是数据预算，还不如5/10的表格更有操作性；5/10表格内的个股均为已推荐标的，是结…</small></span>
-            </span>
-            
-            <span class="brief-anchor">
-              <b>2026-06-29</b>
-              <span><em>tweet_id 2071593563402748134</em><small>【韩国扩大AI相关投资概念整理】29日韩国政府宣布预计未来15年将在新一代存储、边缘人工智能、国防等芯片领域投资至少30万亿韩元。韩国官员表示，预计五年内将DRAM生产能力翻倍，预计全球内存市场将在5年内增长四倍。 https:/…</small></span>
-            </span>
-            
-            <span class="brief-anchor">
-              <b>2026-07-03</b>
-              <span><em>tweet_id 2072859288654303442</em><small>【昇腾950超节点7月17真机首秀】 出海订单密集、验证需求外溢： ① 俄罗斯Sberbank拟采购中国芯片支撑自研大模型GigaChat； ②韩国云厂商锁定首批2000片昇腾950订单； ③马来西亚计划部署3000台昇腾AI服务…</small></span>
-            </span>
-            
-            <span class="brief-anchor">
-              <b>2026-06-28</b>
-              <span><em>tweet_id 2071066051971076439</em><small>【康宁玻璃桥概念整理】24日，在韩国首尔举行的AI数据中心光通信互连技术大会上，康宁发布了多项与共封装光学及玻璃基板相关的新技术与产品。其中“玻璃桥”是一种由玻璃制成的光连接器，可直接连接光芯片与光纤。此外康宁还推出融合玻璃基板与…</small></span>
-            </span>
-            </div>
-        </section>
-      </div>
-      <section class="weekly-block">
-        <h4>Industry-change Tags</h4>
-        <div class="weekly-event-list">
-            <article class="weekly-event" data-change-type="price">
-              <span class="weekly-event-label">Pricing / ASP</span>
-              <div>
-                <strong>jukan05 flags pricing movement around Read original text for object; check whether it is product ASP, component price or only equity-price language.</strong>
-                <small>2026-07-01｜tweet_id 2072291280005349883｜Read original text for object</small>
-              </div>
-            </article>
-            
-            <article class="weekly-event" data-change-type="tech_route">
-              <span class="weekly-event-label">Technology Route Shift</span>
-              <div>
-                <strong>jukan05 is shifting the discussion toward route or architecture change in CPO / Optical / Lasers, with CPO / NPO / optical interconnect as the concrete object.</strong>
-                <small>2026-06-28｜tweet_id 2071066051971076439｜CPO / NPO / optical interconnect</small>
-              </div>
-            </article>
-            
-            <article class="weekly-event" data-change-type="tech_route">
-              <span class="weekly-event-label">Technology Route Shift</span>
-              <div>
-                <strong>jukan05 is shifting the discussion toward route or architecture change in Power / Grid / Power Semis, with HBM / DRAM as the concrete object.</strong>
-                <small>2026-07-01｜tweet_id 2072124396635074707｜HBM / DRAM</small>
-              </div>
-            </article>
-            
-            <article class="weekly-event" data-change-type="tech_progress">
-              <span class="weekly-event-label">Technology Progress</span>
-              <div>
-                <strong>jukan05 mentions production, validation or performance progress around HBM / DRAM; this may move the bottleneck rather than only intensify it.</strong>
-                <small>2026-07-03｜tweet_id 2072859288654303442｜HBM / DRAM</small>
-              </div>
-            </article>
-            </div>
-      </section>
-      <p class="muted-note">Stock6688 is an X KOL view/news-flow research asset for additional supply-chain discussion clues; it does not directly drive Serenity ranking or A-share mapping conclusions.</p>
-    </div>
-    
-    </article>
-    </div>
     </section>
     
     <section class="boundary-strip page" id="boundary">
@@ -1262,7 +720,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
     </section>
     </main>
   <footer class="page">
-    AIpha X-KOL V1.1｜<span class="lang lang-zh">生成时间</span><span class="lang lang-en">Generated</span> 2026-07-06T14:09:27+08:00｜source_commit 1c2f854fca94
+    AIpha X-KOL V1.2｜<span class="lang lang-zh">生成时间</span><span class="lang lang-en">Generated</span> 2026-07-06T20:15:09+08:00｜source_commit 1c2f854fca94
   </footer>
 </body>
 </html>
