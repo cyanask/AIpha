@@ -3,12 +3,12 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="AIpha X-KOL：X KOL 推文研究资产与滚动简报。" />
-  <meta property="og:title" content="AIpha X-KOL V1.0" />
-  <meta property="og:description" content="KOL brief, Serenity asset research and jukan05 evidence flow." />
+  <meta name="description" content="AIpha X-KOL：多账号 X KOL 周报与推文研究资产。" />
+  <meta property="og:title" content="AIpha X-KOL V1.1" />
+  <meta property="og:description" content="Weekly X KOL brief, Serenity asset research and multi-account evidence flows." />
   <meta property="og:type" content="article" />
-  <meta name="aipha-x-kol:legacy-lineage" content="AIpha Serenity V4.6 -&gt; AIpha X-KOL V1.0" />
-  <title>Serenity 推文资产研究｜AIpha X-KOL V1.0</title>
+  <meta name="aipha-x-kol:legacy-lineage" content="AIpha Serenity V4.6 -&gt; AIpha X-KOL V1.0 -&gt; AIpha X-KOL V1.1" />
+  <title>Serenity 推文资产研究｜AIpha X-KOL V1.1</title>
   <script>
 (function () {
   const params = new URLSearchParams(window.location.search);
@@ -251,6 +251,32 @@ h1 { margin: 6px 0 12px; font-size: clamp(36px, 4vw, 54px); line-height: 1.06; l
 .brief-titlebar small { color: var(--muted); font-size: 14px; }
 .brief-eyebrow { display: inline-flex; color: var(--blue); font-size: 11px; font-weight: 900; letter-spacing: 0.12em; text-transform: uppercase; }
 .brief-body { padding: 0; }
+.weekly-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; align-items: start; }
+.weekly-card { min-width: 0; background: #fff; border: 1px solid var(--line); border-top: 4px solid var(--blue); box-shadow: 0 8px 26px rgba(22,33,43,0.045); }
+.weekly-card header { display: grid; grid-template-columns: minmax(0,1fr) auto; gap: 16px; align-items: start; padding: 16px 18px 14px; border-bottom: 1px solid var(--line); }
+.weekly-card h3 { margin: 3px 0 6px; font-size: 25px; line-height: 1.15; }
+.weekly-card p { margin: 0; color: var(--muted); }
+.weekly-count { color: var(--blue); font-size: 30px; font-weight: 950; line-height: 1; }
+.weekly-body { display: grid; gap: 16px; padding: 18px; }
+.weekly-block { display: grid; gap: 9px; }
+.weekly-block h4 { margin: 0; font-size: 14px; color: var(--blue); letter-spacing: 0.08em; text-transform: uppercase; }
+.weekly-judgments { display: grid; gap: 8px; margin: 0; padding: 0; list-style: none; }
+.weekly-judgments li { display: grid; grid-template-columns: 28px minmax(0,1fr); gap: 10px; padding: 10px 0; border-top: 1px solid rgba(216,224,228,0.86); color: var(--muted); }
+.weekly-judgments li:first-child { border-top: 0; }
+.weekly-judgments span { display: grid; place-items: center; width: 28px; height: 28px; color: #fff; background: var(--dark); font-size: 12px; font-weight: 900; }
+.weekly-signal-grid { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 12px; }
+.weekly-signal { min-width: 0; padding: 12px; background: var(--soft-2); border: 1px solid var(--line); }
+.weekly-signal b { display: block; margin-bottom: 8px; font-size: 13px; color: var(--ink); }
+.weekly-event-list { display: grid; gap: 8px; }
+.weekly-event { display: grid; grid-template-columns: 92px minmax(0,1fr); gap: 10px; padding: 10px 12px; background: #fff; border: 1px solid var(--line); border-left: 4px solid var(--teal); }
+.weekly-event[data-change-type="tech_route"] { border-left-color: #6d5bd0; }
+.weekly-event[data-change-type="tech_progress"] { border-left-color: #087f5b; }
+.weekly-event[data-change-type="shortage"] { border-left-color: #9b2c2c; }
+.weekly-event[data-change-type="price"] { border-left-color: #c39a4a; }
+.weekly-event[data-change-type="demand"] { border-left-color: #1f5366; }
+.weekly-event-label { color: var(--blue); font-size: 12px; font-weight: 900; }
+.weekly-event strong { display: block; font-size: 14px; line-height: 1.35; }
+.weekly-event small { display: block; margin-top: 4px; color: var(--muted); overflow-wrap: anywhere; }
 .kol-feed-head { display: grid; grid-template-columns: minmax(0,1fr) auto; gap: 10px; align-items: center; min-width: 0; }
 .kol-feed-meta { display: grid; gap: 2px; min-width: 0; }
 .kol-feed-meta h3 { margin: 0; font-size: 20px; line-height: 1.15; }
@@ -457,7 +483,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
   .lang-toggle button { min-width: 28px; min-height: 20px; padding: 0 4px; font-size: 9.5px; }
   .page { width: min(100% - 20px, 720px); }
   .hero { margin-top: 12px; padding: 20px; }
-  .hero-grid, .program-grid, .brief-grid, .digest-overview, .digest-card-grid, .question-list, .chain-body, .timeline-grid, .asset-snapshot-grid { grid-template-columns: 1fr; }
+  .hero-grid, .program-grid, .brief-grid, .weekly-grid, .weekly-signal-grid, .digest-overview, .digest-card-grid, .question-list, .chain-body, .timeline-grid, .asset-snapshot-grid { grid-template-columns: 1fr; }
   .brief-titlebar { display: grid; }
   h1 { font-size: 34px; }
   .lead { font-size: 16px; }
@@ -505,9 +531,9 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
       <a class="brand" href="/AIpha/" aria-label="AIpha Research Desk">
         <img src="../assets/nero-mark.svg" alt="AIpha Research Desk" />
       </a>
-      <nav class="page-switcher" aria-label="AIpha X-KOL pages"><a class="" href="../index.html"><span class="lang lang-zh">KOL 简报</span><span class="lang lang-en">KOL Brief</span></a><a class="active" href="../aleabitoreddit/index.html"><span class="lang lang-zh">Serenity 资产</span><span class="lang lang-en">Serenity Asset</span></a><a class="" href="../jukan05/index.html"><span class="lang lang-zh">jukan05 资产</span><span class="lang lang-en">jukan05 Asset</span></a></nav>
+      <nav class="page-switcher" aria-label="AIpha X-KOL pages"><a class="" href="../index.html"><span class="lang lang-zh">KOL 周报</span><span class="lang lang-en">KOL Weekly</span></a><a class="active" href="../aleabitoreddit/index.html"><span class="lang lang-zh">Serenity 资产</span><span class="lang lang-en">Serenity Asset</span></a><a class="" href="../jukan05/index.html"><span class="lang lang-zh">jukan05 资产</span><span class="lang lang-en">jukan05 Asset</span></a><a class="" href="../paurooteri/index.html"><span class="lang lang-zh">Paurooteri</span><span class="lang lang-en">Paurooteri</span></a><a class="" href="../stock6688/index.html"><span class="lang lang-zh">Stock6688</span><span class="lang lang-en">Stock6688</span></a></nav>
       <div class="nav-actions">
-        <span class="nav-version-badge">AIpha X-KOL | v1.0</span>
+        <span class="nav-version-badge">AIpha X-KOL | v1.1</span>
         <span class="nav-disclaimer"><span class="lang lang-zh">非投资建议</span><span class="lang lang-en">Not Advice</span></span>
         <span class="lang-toggle" aria-label="language switcher">
           <button type="button" data-lang-button="zh" onclick="setAiphaXKolLang('zh')">中文</button>
@@ -524,7 +550,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
           <p class="lead"><span class="lang lang-block lang-zh">@aleabitoreddit 页面保留七链矩阵、链条深挖、A股叶子链映射和 Serenity 证据表；不混入 jukan05 新闻流。</span><span class="lang lang-block lang-en">The @aleabitoreddit page keeps the seven-chain matrix, chain deep dives, A-share leaf-lane mapping and Serenity evidence, without mixing in the jukan05 feed.</span></p>
           
         </div>
-        <div class="stat-grid"><article class="stat"><span><span class="lang lang-zh">本地推文</span><span class="lang lang-en">Local Tweets</span></span><b>6,002</b><small><span class="lang lang-zh">SQLite 去重样本</span><span class="lang lang-en">Deduped SQLite sample</span></small></article><article class="stat"><span><span class="lang lang-zh">资产截止</span><span class="lang lang-en">Asset Cutoff</span></span><b class="long-stat-value">2026-06-28</b><small><span class="lang lang-zh">09:32</span><span class="lang lang-en">09:32</span></small></article><article class="stat"><span><span class="lang lang-zh">瓶颈链</span><span class="lang lang-en">Bottleneck Chains</span></span><b>7</b><small><span class="lang lang-zh">七链归因</span><span class="lang lang-en">Seven-chain attribution</span></small></article><article class="stat"><span><span class="lang lang-zh">A股映射</span><span class="lang lang-en">A-share Mapping</span></span><b>187</b><small><span class="lang lang-zh">只读映射表</span><span class="lang lang-en">Read-only mapping table</span></small></article></div>
+        <div class="stat-grid"><article class="stat"><span><span class="lang lang-zh">本地推文</span><span class="lang lang-en">Local Tweets</span></span><b>6,046</b><small><span class="lang lang-zh">SQLite 去重样本</span><span class="lang lang-en">Deduped SQLite sample</span></small></article><article class="stat"><span><span class="lang lang-zh">资产截止</span><span class="lang lang-en">Asset Cutoff</span></span><b class="long-stat-value">2026-07-04</b><small><span class="lang lang-zh">21:44</span><span class="lang lang-en">21:44</span></small></article><article class="stat"><span><span class="lang lang-zh">瓶颈链</span><span class="lang lang-en">Bottleneck Chains</span></span><b>7</b><small><span class="lang lang-zh">七链归因</span><span class="lang lang-en">Seven-chain attribution</span></small></article><article class="stat"><span><span class="lang lang-zh">A股映射</span><span class="lang lang-en">A-share Mapping</span></span><b>187</b><small><span class="lang lang-zh">只读映射表</span><span class="lang lang-en">Read-only mapping table</span></small></article></div>
       </div>
     </section>
     
@@ -612,8 +638,8 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
             
             <tr class="chain-row tone-violet">
               <th><span><span class="lang lang-zh">玻璃基板</span><span class="lang lang-en">Glass Substrate</span></span><small><span class="lang lang-zh">玻璃基板 / 先进载板</span><span class="lang lang-en">Glass Substrate / Advanced Substrates</span></small></th>
-              <td class="priority">61.7</td>
-              <td><div class="metric-bar metric-violet" aria-label="attention 51"><span style="width:51%"></span><b>51</b></div></td>
+              <td class="priority">62.1</td>
+              <td><div class="metric-bar metric-violet" aria-label="attention 52"><span style="width:52%"></span><b>52</b></div></td>
               <td><div class="metric-bar metric-violet" aria-label="bottleneck 84"><span style="width:84%"></span><b>84</b></div></td>
               <td><div class="metric-bar metric-violet" aria-label="mapping 67"><span style="width:67%"></span><b>67</b></div></td>
               <td><div class="metric-bar metric-violet" aria-label="crowding 58"><span style="width:58%"></span><b>58</b></div></td>
@@ -662,7 +688,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
                   <label><span class="lang lang-zh">瓶颈硬度</span><span class="lang lang-en">Bottleneck Hardness</span><div class="metric-bar metric-blue" aria-label="bottleneck hardness 95"><span style="width:95%"></span><b>95</b></div></label>
                   <label><span class="lang lang-zh">映射清晰度</span><span class="lang lang-en">Mapping Clarity</span><div class="metric-bar metric-blue" aria-label="mapping clarity 96"><span style="width:96%"></span><b>96</b></div></label>
                   <label><span class="lang lang-zh">拥挤 proxy</span><span class="lang lang-en">Crowding Proxy</span><div class="metric-bar metric-blue" aria-label="crowding proxy 91"><span style="width:91%"></span><b>91</b></div></label>
-                  <p>2231 tweets｜Top tickers: SIVE, AXTI, LITE, AAOI, NVDA, COHR, MRVL, GOOGL, AMZN, MSFT</p>
+                  <p>2254 tweets｜Top tickers: SIVE, AXTI, LITE, AAOI, NVDA, COHR, MRVL, GOOGL, AMZN, MSFT</p>
                 </div>
                 <div class="mapping-block">
                   <h4><span class="lang lang-zh">A股叶子链映射</span><span class="lang lang-en">A-share Leaf-lane Mapping</span></h4>
@@ -779,9 +805,9 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
             </article>
             
             <article class="evidence-item">
-              <header><b>2026-03-16</b><span>score 90</span><em>AAOI, AXTI, COHR, FN, INTC, LITE, LWLG, MTSI, NVDA, POE…</em></header>
-              <p>I’m long $SIVE at $140M. I believe this is the next $LITE that markets and institutions missed. $SIVE makes InP CW DFB lasers. Closest comparison is $LITE in the current EML laser bottleneck. But instead of supplying to Innolight/Eoptolink for current optical transceivers cycles…</p>
-              <a href="https://x.com/aleabitoreddit/status/2033466880661606646">tweet_id 2033466880661606646</a>
+              <header><b>2026-06-30</b><span>score 90</span><em>ALAB, AXTI, CBRS, GFS, JBL, NBIS, RDDT, RPI, SIVE, XFAB</em></header>
+              <p>I&#x27;ve reached 900k followers, thank you everyone! Just some reflection, it&#x27;s actually a nightmare at higher counts... Which is new to me, since I started at almost nothing earlier this year. 1. Threats of safety, which I don&#x27;t enjoy. - Random new accounts sending personal threats…</p>
+              <a href="https://x.com/aleabitoreddit/status/2071763387948859506">tweet_id 2071763387948859506</a>
             </article>
             </div>
               </details>
@@ -809,7 +835,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
                   <label><span class="lang lang-zh">瓶颈硬度</span><span class="lang lang-en">Bottleneck Hardness</span><div class="metric-bar metric-teal" aria-label="bottleneck hardness 88"><span style="width:88%"></span><b>88</b></div></label>
                   <label><span class="lang lang-zh">映射清晰度</span><span class="lang lang-en">Mapping Clarity</span><div class="metric-bar metric-teal" aria-label="mapping clarity 88"><span style="width:88%"></span><b>88</b></div></label>
                   <label><span class="lang lang-zh">拥挤 proxy</span><span class="lang lang-en">Crowding Proxy</span><div class="metric-bar metric-teal" aria-label="crowding proxy 81"><span style="width:81%"></span><b>81</b></div></label>
-                  <p>1475 tweets｜Top tickers: NVDA, LITE, NBIS, AXTI, MU, SIVE, GOOGL, TSM, SNDK, AAOI</p>
+                  <p>1493 tweets｜Top tickers: NVDA, LITE, NBIS, AXTI, MU, SIVE, GOOGL, AAOI, SNDK, TSM</p>
                 </div>
                 <div class="mapping-block">
                   <h4><span class="lang lang-zh">A股叶子链映射</span><span class="lang lang-en">A-share Leaf-lane Mapping</span></h4>
@@ -932,9 +958,9 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
             </article>
             
             <article class="evidence-item">
-              <header><b>2026-03-16</b><span>score 90</span><em>AAOI, AXTI, COHR, FN, INTC, LITE, LWLG, MTSI, NVDA, POE…</em></header>
-              <p>I’m long $SIVE at $140M. I believe this is the next $LITE that markets and institutions missed. $SIVE makes InP CW DFB lasers. Closest comparison is $LITE in the current EML laser bottleneck. But instead of supplying to Innolight/Eoptolink for current optical transceivers cycles…</p>
-              <a href="https://x.com/aleabitoreddit/status/2033466880661606646">tweet_id 2033466880661606646</a>
+              <header><b>2026-06-30</b><span>score 90</span><em>ALAB, AXTI, CBRS, GFS, JBL, NBIS, RDDT, RPI, SIVE, XFAB</em></header>
+              <p>I&#x27;ve reached 900k followers, thank you everyone! Just some reflection, it&#x27;s actually a nightmare at higher counts... Which is new to me, since I started at almost nothing earlier this year. 1. Threats of safety, which I don&#x27;t enjoy. - Random new accounts sending personal threats…</p>
+              <a href="https://x.com/aleabitoreddit/status/2071763387948859506">tweet_id 2071763387948859506</a>
             </article>
             </div>
               </details>
@@ -962,7 +988,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
                   <label><span class="lang lang-zh">瓶颈硬度</span><span class="lang lang-en">Bottleneck Hardness</span><div class="metric-bar metric-amber" aria-label="bottleneck hardness 90"><span style="width:90%"></span><b>90</b></div></label>
                   <label><span class="lang lang-zh">映射清晰度</span><span class="lang lang-en">Mapping Clarity</span><div class="metric-bar metric-amber" aria-label="mapping clarity 91"><span style="width:91%"></span><b>91</b></div></label>
                   <label><span class="lang lang-zh">拥挤 proxy</span><span class="lang lang-en">Crowding Proxy</span><div class="metric-bar metric-amber" aria-label="crowding proxy 88"><span style="width:88%"></span><b>88</b></div></label>
-                  <p>1428 tweets｜Top tickers: LITE, NVDA, NBIS, MU, AXTI, GOOGL, SNDK, AAOI, SIVE, TSM</p>
+                  <p>1445 tweets｜Top tickers: LITE, NVDA, NBIS, MU, AXTI, GOOGL, SNDK, AAOI, AMZN, SIVE</p>
                 </div>
                 <div class="mapping-block">
                   <h4><span class="lang lang-zh">A股叶子链映射</span><span class="lang lang-en">A-share Leaf-lane Mapping</span></h4>
@@ -1079,9 +1105,9 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
             </article>
             
             <article class="evidence-item">
-              <header><b>2026-03-16</b><span>score 90</span><em>AAOI, AXTI, COHR, FN, INTC, LITE, LWLG, MTSI, NVDA, POE…</em></header>
-              <p>I’m long $SIVE at $140M. I believe this is the next $LITE that markets and institutions missed. $SIVE makes InP CW DFB lasers. Closest comparison is $LITE in the current EML laser bottleneck. But instead of supplying to Innolight/Eoptolink for current optical transceivers cycles…</p>
-              <a href="https://x.com/aleabitoreddit/status/2033466880661606646">tweet_id 2033466880661606646</a>
+              <header><b>2026-06-30</b><span>score 90</span><em>ALAB, AXTI, CBRS, GFS, JBL, NBIS, RDDT, RPI, SIVE, XFAB</em></header>
+              <p>I&#x27;ve reached 900k followers, thank you everyone! Just some reflection, it&#x27;s actually a nightmare at higher counts... Which is new to me, since I started at almost nothing earlier this year. 1. Threats of safety, which I don&#x27;t enjoy. - Random new accounts sending personal threats…</p>
+              <a href="https://x.com/aleabitoreddit/status/2071763387948859506">tweet_id 2071763387948859506</a>
             </article>
             </div>
               </details>
@@ -1109,7 +1135,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
                   <label><span class="lang lang-zh">瓶颈硬度</span><span class="lang lang-en">Bottleneck Hardness</span><div class="metric-bar metric-crimson" aria-label="bottleneck hardness 86"><span style="width:86%"></span><b>86</b></div></label>
                   <label><span class="lang lang-zh">映射清晰度</span><span class="lang lang-en">Mapping Clarity</span><div class="metric-bar metric-crimson" aria-label="mapping clarity 84"><span style="width:84%"></span><b>84</b></div></label>
                   <label><span class="lang lang-zh">拥挤 proxy</span><span class="lang lang-en">Crowding Proxy</span><div class="metric-bar metric-crimson" aria-label="crowding proxy 49"><span style="width:49%"></span><b>49</b></div></label>
-                  <p>804 tweets｜Top tickers: NVDA, LITE, GOOGL, AMZN, NBIS, MSFT, AXTI, COHR, TSM, META</p>
+                  <p>815 tweets｜Top tickers: NVDA, LITE, GOOGL, AMZN, NBIS, MSFT, AXTI, COHR, TSM, META</p>
                 </div>
                 <div class="mapping-block">
                   <h4><span class="lang lang-zh">A股叶子链映射</span><span class="lang lang-en">A-share Leaf-lane Mapping</span></h4>
@@ -1250,7 +1276,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
                   <label><span class="lang lang-zh">瓶颈硬度</span><span class="lang lang-en">Bottleneck Hardness</span><div class="metric-bar metric-green" aria-label="bottleneck hardness 76"><span style="width:76%"></span><b>76</b></div></label>
                   <label><span class="lang lang-zh">映射清晰度</span><span class="lang lang-en">Mapping Clarity</span><div class="metric-bar metric-green" aria-label="mapping clarity 64"><span style="width:64%"></span><b>64</b></div></label>
                   <label><span class="lang lang-zh">拥挤 proxy</span><span class="lang lang-en">Crowding Proxy</span><div class="metric-bar metric-green" aria-label="crowding proxy 78"><span style="width:78%"></span><b>78</b></div></label>
-                  <p>1409 tweets｜Top tickers: NBIS, IREN, MSFT, CIFR, NVDA, CRWV, GOOGL, META, AMZN, LITE</p>
+                  <p>1420 tweets｜Top tickers: NBIS, IREN, MSFT, CIFR, NVDA, CRWV, GOOGL, META, AMZN, LITE</p>
                 </div>
                 <div class="mapping-block">
                   <h4><span class="lang lang-zh">A股叶子链映射</span><span class="lang lang-en">A-share Leaf-lane Mapping</span></h4>
@@ -1361,15 +1387,15 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
             </article>
             
             <article class="evidence-item">
-              <header><b>2026-03-16</b><span>score 90</span><em>AAOI, AXTI, COHR, FN, INTC, LITE, LWLG, MTSI, NVDA, POE…</em></header>
-              <p>I’m long $SIVE at $140M. I believe this is the next $LITE that markets and institutions missed. $SIVE makes InP CW DFB lasers. Closest comparison is $LITE in the current EML laser bottleneck. But instead of supplying to Innolight/Eoptolink for current optical transceivers cycles…</p>
-              <a href="https://x.com/aleabitoreddit/status/2033466880661606646">tweet_id 2033466880661606646</a>
+              <header><b>2026-06-30</b><span>score 90</span><em>ALAB, AXTI, CBRS, GFS, JBL, NBIS, RDDT, RPI, SIVE, XFAB</em></header>
+              <p>I&#x27;ve reached 900k followers, thank you everyone! Just some reflection, it&#x27;s actually a nightmare at higher counts... Which is new to me, since I started at almost nothing earlier this year. 1. Threats of safety, which I don&#x27;t enjoy. - Random new accounts sending personal threats…</p>
+              <a href="https://x.com/aleabitoreddit/status/2071763387948859506">tweet_id 2071763387948859506</a>
             </article>
             
             <article class="evidence-item">
-              <header><b>2026-01-14</b><span>score 89</span><em>LPTH, ONDS, UMAC, VLN</em></header>
-              <p>I&#x27;ve initiated positions in $LPTH ($621M). Lightpath is incredible. Every modern thermal weapon (Missiles, Drones) requires Germanium glass, which China owns (70%) LPTH is the only US alternative with: Black Diamond Users? - $ONDS - L3Harris - Lockheed - Andruil (likely) - $UMAC…</p>
-              <a href="https://x.com/aleabitoreddit/status/2011496801548058735">tweet_id 2011496801548058735</a>
+              <header><b>2026-03-16</b><span>score 90</span><em>AAOI, AXTI, COHR, FN, INTC, LITE, LWLG, MTSI, NVDA, POE…</em></header>
+              <p>I’m long $SIVE at $140M. I believe this is the next $LITE that markets and institutions missed. $SIVE makes InP CW DFB lasers. Closest comparison is $LITE in the current EML laser bottleneck. But instead of supplying to Innolight/Eoptolink for current optical transceivers cycles…</p>
+              <a href="https://x.com/aleabitoreddit/status/2033466880661606646">tweet_id 2033466880661606646</a>
             </article>
             </div>
               </details>
@@ -1382,7 +1408,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
                   <h3><span class="lang lang-zh">玻璃基板 / 先进载板</span><span class="lang lang-en">Glass Substrate / Advanced Substrates</span></h3>
                   <p><span class="lang lang-block lang-zh">新近升温链：推文样本少于 CPO/HBM，但处在供应链重新定价的早期观察区。</span><span class="lang lang-block lang-en">Newly heating chain: fewer tweets than CPO or HBM, but it sits in an early supply-chain repricing zone.</span></p>
                 </div>
-                <strong>61.7</strong>
+                <strong>62.1</strong>
               </div>
               <div class="chain-body">
                 <div class="read-block">
@@ -1393,11 +1419,11 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
                   <p><span class="lang lang-block lang-zh">玻璃基板良率不足；客户导入时间后移；传统 ABF 继续满足需求；设备资本开支不兑现。</span><span class="lang lang-block lang-en">Glass-substrate yield remains poor; customer adoption moves out; traditional ABF keeps meeting demand; equipment CapEx fails to materialize.</span></p>
                 </div>
                 <div class="mini-metrics">
-                  <label><span class="lang lang-zh">关注强度</span><span class="lang lang-en">Attention</span><div class="metric-bar metric-violet" aria-label="attention 51"><span style="width:51%"></span><b>51</b></div></label>
+                  <label><span class="lang lang-zh">关注强度</span><span class="lang lang-en">Attention</span><div class="metric-bar metric-violet" aria-label="attention 52"><span style="width:52%"></span><b>52</b></div></label>
                   <label><span class="lang lang-zh">瓶颈硬度</span><span class="lang lang-en">Bottleneck Hardness</span><div class="metric-bar metric-violet" aria-label="bottleneck hardness 84"><span style="width:84%"></span><b>84</b></div></label>
                   <label><span class="lang lang-zh">映射清晰度</span><span class="lang lang-en">Mapping Clarity</span><div class="metric-bar metric-violet" aria-label="mapping clarity 67"><span style="width:67%"></span><b>67</b></div></label>
                   <label><span class="lang lang-zh">拥挤 proxy</span><span class="lang lang-en">Crowding Proxy</span><div class="metric-bar metric-violet" aria-label="crowding proxy 58"><span style="width:58%"></span><b>58</b></div></label>
-                  <p>591 tweets｜Top tickers: NVDA, LITE, AXTI, AVGO, COHR, TSM, AMD, SIVE, MRVL, GOOGL</p>
+                  <p>598 tweets｜Top tickers: NVDA, LITE, AXTI, AVGO, COHR, AMD, TSM, SIVE, MRVL, GOOGL</p>
                 </div>
                 <div class="mapping-block">
                   <h4><span class="lang lang-zh">A股叶子链映射</span><span class="lang lang-en">A-share Leaf-lane Mapping</span></h4>
@@ -1508,9 +1534,9 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
             </article>
             
             <article class="evidence-item">
-              <header><b>2026-03-16</b><span>score 90</span><em>AAOI, AXTI, COHR, FN, INTC, LITE, LWLG, MTSI, NVDA, POE…</em></header>
-              <p>I’m long $SIVE at $140M. I believe this is the next $LITE that markets and institutions missed. $SIVE makes InP CW DFB lasers. Closest comparison is $LITE in the current EML laser bottleneck. But instead of supplying to Innolight/Eoptolink for current optical transceivers cycles…</p>
-              <a href="https://x.com/aleabitoreddit/status/2033466880661606646">tweet_id 2033466880661606646</a>
+              <header><b>2026-06-30</b><span>score 90</span><em>ALAB, AXTI, CBRS, GFS, JBL, NBIS, RDDT, RPI, SIVE, XFAB</em></header>
+              <p>I&#x27;ve reached 900k followers, thank you everyone! Just some reflection, it&#x27;s actually a nightmare at higher counts... Which is new to me, since I started at almost nothing earlier this year. 1. Threats of safety, which I don&#x27;t enjoy. - Random new accounts sending personal threats…</p>
+              <a href="https://x.com/aleabitoreddit/status/2071763387948859506">tweet_id 2071763387948859506</a>
             </article>
             </div>
               </details>
@@ -1538,7 +1564,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
                   <label><span class="lang lang-zh">瓶颈硬度</span><span class="lang lang-en">Bottleneck Hardness</span><div class="metric-bar metric-slate" aria-label="bottleneck hardness 70"><span style="width:70%"></span><b>70</b></div></label>
                   <label><span class="lang lang-zh">映射清晰度</span><span class="lang lang-en">Mapping Clarity</span><div class="metric-bar metric-slate" aria-label="mapping clarity 69"><span style="width:69%"></span><b>69</b></div></label>
                   <label><span class="lang lang-zh">拥挤 proxy</span><span class="lang lang-en">Crowding Proxy</span><div class="metric-bar metric-slate" aria-label="crowding proxy 60"><span style="width:60%"></span><b>60</b></div></label>
-                  <p>640 tweets｜Top tickers: RKLB, NBIS, NVDA, AMZN, GOOGL, META, TSM, LITE, AXTI, MSFT</p>
+                  <p>660 tweets｜Top tickers: RKLB, NBIS, NVDA, AMZN, GOOGL, META, TSM, LITE, AXTI, TSLA</p>
                 </div>
                 <div class="mapping-block">
                   <h4><span class="lang lang-zh">A股叶子链映射</span><span class="lang lang-en">A-share Leaf-lane Mapping</span></h4>
@@ -1682,90 +1708,90 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
             <article class="timeline-item">
               <span>E01</span>
               <div>
-                <h4><span class="lang lang-zh">CPO / InP 光通信</span><span class="lang lang-en">CPO / InP Optical Interconnect</span>｜2026-06-26</h4>
-                <p>OFC I&#x27;m aware. But I&#x27;m personally sleeping comfortably since I have conviction in my hyperscaler mapping research with $SIVE. And yes, I still have my million+ share position. Not sure if people realize this: but I&#x27;m only here to share my thoughts/ideas. I don&#x27;t control market v…</p>
-                <small>score 86｜EWY, IREN, LITE, NBIS, QQQ, SIVE｜tweet_id 2070444675337503166</small>
+                <h4><span class="lang lang-zh">CPO / InP 光通信</span><span class="lang lang-en">CPO / InP Optical Interconnect</span>｜2026-06-30</h4>
+                <p>I&#x27;ve reached 900k followers, thank you everyone! Just some reflection, it&#x27;s actually a nightmare at higher counts... Which is new to me, since I started at almost nothing earlier this year. 1. Threats of safety, which I don&#x27;t enjoy. - Random new accounts sending personal threats…</p>
+                <small>score 90｜ALAB, AXTI, CBRS, GFS, JBL, NBIS, RDDT, RPI, SIVE, XFAB｜tweet_id 2071763387948859506</small>
               </div>
             </article>
             
             <article class="timeline-item">
               <span>E02</span>
               <div>
-                <h4><span class="lang lang-zh">先进封装 / 关键设备</span><span class="lang lang-en">Advanced Packaging / Critical Equipment</span>｜2026-06-26</h4>
-                <p>OFC I&#x27;m aware. But I&#x27;m personally sleeping comfortably since I have conviction in my hyperscaler mapping research with $SIVE. And yes, I still have my million+ share position. Not sure if people realize this: but I&#x27;m only here to share my thoughts/ideas. I don&#x27;t control market v…</p>
-                <small>score 86｜EWY, IREN, LITE, NBIS, QQQ, SIVE｜tweet_id 2070444675337503166</small>
+                <h4><span class="lang lang-zh">先进封装 / 关键设备</span><span class="lang lang-en">Advanced Packaging / Critical Equipment</span>｜2026-06-30</h4>
+                <p>I&#x27;ve reached 900k followers, thank you everyone! Just some reflection, it&#x27;s actually a nightmare at higher counts... Which is new to me, since I started at almost nothing earlier this year. 1. Threats of safety, which I don&#x27;t enjoy. - Random new accounts sending personal threats…</p>
+                <small>score 90｜ALAB, AXTI, CBRS, GFS, JBL, NBIS, RDDT, RPI, SIVE, XFAB｜tweet_id 2071763387948859506</small>
               </div>
             </article>
             
             <article class="timeline-item">
               <span>E03</span>
               <div>
-                <h4><span class="lang lang-zh">HBM / HBF / 存储带宽</span><span class="lang lang-en">HBM / HBF / Memory Bandwidth</span>｜2026-06-26</h4>
-                <p>OFC I&#x27;m aware. But I&#x27;m personally sleeping comfortably since I have conviction in my hyperscaler mapping research with $SIVE. And yes, I still have my million+ share position. Not sure if people realize this: but I&#x27;m only here to share my thoughts/ideas. I don&#x27;t control market v…</p>
-                <small>score 86｜EWY, IREN, LITE, NBIS, QQQ, SIVE｜tweet_id 2070444675337503166</small>
+                <h4><span class="lang lang-zh">HBM / HBF / 存储带宽</span><span class="lang lang-en">HBM / HBF / Memory Bandwidth</span>｜2026-06-30</h4>
+                <p>I&#x27;ve reached 900k followers, thank you everyone! Just some reflection, it&#x27;s actually a nightmare at higher counts... Which is new to me, since I started at almost nothing earlier this year. 1. Threats of safety, which I don&#x27;t enjoy. - Random new accounts sending personal threats…</p>
+                <small>score 90｜ALAB, AXTI, CBRS, GFS, JBL, NBIS, RDDT, RPI, SIVE, XFAB｜tweet_id 2071763387948859506</small>
               </div>
             </article>
             
             <article class="timeline-item">
               <span>E04</span>
               <div>
-                <h4><span class="lang lang-zh">电力 / 功率半导体</span><span class="lang lang-en">Power / Power Semiconductors</span>｜2026-06-26</h4>
-                <p>OFC I&#x27;m aware. But I&#x27;m personally sleeping comfortably since I have conviction in my hyperscaler mapping research with $SIVE. And yes, I still have my million+ share position. Not sure if people realize this: but I&#x27;m only here to share my thoughts/ideas. I don&#x27;t control market v…</p>
-                <small>score 86｜EWY, IREN, LITE, NBIS, QQQ, SIVE｜tweet_id 2070444675337503166</small>
+                <h4><span class="lang lang-zh">Neocloud / 算力融资质量</span><span class="lang lang-en">Neocloud / Compute Financing Quality</span>｜2026-06-30</h4>
+                <p>I&#x27;ve reached 900k followers, thank you everyone! Just some reflection, it&#x27;s actually a nightmare at higher counts... Which is new to me, since I started at almost nothing earlier this year. 1. Threats of safety, which I don&#x27;t enjoy. - Random new accounts sending personal threats…</p>
+                <small>score 90｜ALAB, AXTI, CBRS, GFS, JBL, NBIS, RDDT, RPI, SIVE, XFAB｜tweet_id 2071763387948859506</small>
               </div>
             </article>
             
             <article class="timeline-item">
               <span>E05</span>
               <div>
-                <h4><span class="lang lang-zh">Neocloud / 算力融资质量</span><span class="lang lang-en">Neocloud / Compute Financing Quality</span>｜2026-06-26</h4>
-                <p>OFC I&#x27;m aware. But I&#x27;m personally sleeping comfortably since I have conviction in my hyperscaler mapping research with $SIVE. And yes, I still have my million+ share position. Not sure if people realize this: but I&#x27;m only here to share my thoughts/ideas. I don&#x27;t control market v…</p>
-                <small>score 86｜EWY, IREN, LITE, NBIS, QQQ, SIVE｜tweet_id 2070444675337503166</small>
+                <h4><span class="lang lang-zh">玻璃基板 / 先进载板</span><span class="lang lang-en">Glass Substrate / Advanced Substrates</span>｜2026-06-30</h4>
+                <p>I&#x27;ve reached 900k followers, thank you everyone! Just some reflection, it&#x27;s actually a nightmare at higher counts... Which is new to me, since I started at almost nothing earlier this year. 1. Threats of safety, which I don&#x27;t enjoy. - Random new accounts sending personal threats…</p>
+                <small>score 90｜ALAB, AXTI, CBRS, GFS, JBL, NBIS, RDDT, RPI, SIVE, XFAB｜tweet_id 2071763387948859506</small>
               </div>
             </article>
             
             <article class="timeline-item">
               <span>E06</span>
               <div>
-                <h4><span class="lang lang-zh">CPO / InP 光通信</span><span class="lang lang-en">CPO / InP Optical Interconnect</span>｜2026-06-25</h4>
-                <p>oh i think u misunderstand... I&#x27;m actually more bullish than ever as prices go down. $SIVE at ~$1.9B MC you have: - $GFS reference laser - laser for Ayar and others in $NVDA NVLink ecosystem for CPO scale up - $POET and others for CPO scale out - $JBL and others for 1.6T+ plugga…</p>
-                <small>score 85｜AAOI, AMD, GFS, JBL, NBIS, NVDA, POET, SIVE｜tweet_id 2070179074048409662</small>
+                <h4><span class="lang lang-zh">CPO / InP 光通信</span><span class="lang lang-en">CPO / InP Optical Interconnect</span>｜2026-06-26</h4>
+                <p>OFC I&#x27;m aware. But I&#x27;m personally sleeping comfortably since I have conviction in my hyperscaler mapping research with $SIVE. And yes, I still have my million+ share position. Not sure if people realize this: but I&#x27;m only here to share my thoughts/ideas. I don&#x27;t control market v…</p>
+                <small>score 87｜EWY, IREN, LITE, NBIS, QQQ, SIVE｜tweet_id 2070444675337503166</small>
               </div>
             </article>
             
             <article class="timeline-item">
               <span>E07</span>
               <div>
-                <h4><span class="lang lang-zh">先进封装 / 关键设备</span><span class="lang lang-en">Advanced Packaging / Critical Equipment</span>｜2026-06-25</h4>
-                <p>oh i think u misunderstand... I&#x27;m actually more bullish than ever as prices go down. $SIVE at ~$1.9B MC you have: - $GFS reference laser - laser for Ayar and others in $NVDA NVLink ecosystem for CPO scale up - $POET and others for CPO scale out - $JBL and others for 1.6T+ plugga…</p>
-                <small>score 85｜AAOI, AMD, GFS, JBL, NBIS, NVDA, POET, SIVE｜tweet_id 2070179074048409662</small>
+                <h4><span class="lang lang-zh">先进封装 / 关键设备</span><span class="lang lang-en">Advanced Packaging / Critical Equipment</span>｜2026-06-26</h4>
+                <p>OFC I&#x27;m aware. But I&#x27;m personally sleeping comfortably since I have conviction in my hyperscaler mapping research with $SIVE. And yes, I still have my million+ share position. Not sure if people realize this: but I&#x27;m only here to share my thoughts/ideas. I don&#x27;t control market v…</p>
+                <small>score 87｜EWY, IREN, LITE, NBIS, QQQ, SIVE｜tweet_id 2070444675337503166</small>
               </div>
             </article>
             
             <article class="timeline-item">
               <span>E08</span>
               <div>
-                <h4><span class="lang lang-zh">HBM / HBF / 存储带宽</span><span class="lang lang-en">HBM / HBF / Memory Bandwidth</span>｜2026-06-25</h4>
-                <p>oh i think u misunderstand... I&#x27;m actually more bullish than ever as prices go down. $SIVE at ~$1.9B MC you have: - $GFS reference laser - laser for Ayar and others in $NVDA NVLink ecosystem for CPO scale up - $POET and others for CPO scale out - $JBL and others for 1.6T+ plugga…</p>
-                <small>score 85｜AAOI, AMD, GFS, JBL, NBIS, NVDA, POET, SIVE｜tweet_id 2070179074048409662</small>
+                <h4><span class="lang lang-zh">HBM / HBF / 存储带宽</span><span class="lang lang-en">HBM / HBF / Memory Bandwidth</span>｜2026-06-26</h4>
+                <p>OFC I&#x27;m aware. But I&#x27;m personally sleeping comfortably since I have conviction in my hyperscaler mapping research with $SIVE. And yes, I still have my million+ share position. Not sure if people realize this: but I&#x27;m only here to share my thoughts/ideas. I don&#x27;t control market v…</p>
+                <small>score 87｜EWY, IREN, LITE, NBIS, QQQ, SIVE｜tweet_id 2070444675337503166</small>
               </div>
             </article>
             
             <article class="timeline-item">
               <span>E09</span>
               <div>
-                <h4><span class="lang lang-zh">Neocloud / 算力融资质量</span><span class="lang lang-en">Neocloud / Compute Financing Quality</span>｜2026-06-25</h4>
-                <p>oh i think u misunderstand... I&#x27;m actually more bullish than ever as prices go down. $SIVE at ~$1.9B MC you have: - $GFS reference laser - laser for Ayar and others in $NVDA NVLink ecosystem for CPO scale up - $POET and others for CPO scale out - $JBL and others for 1.6T+ plugga…</p>
-                <small>score 85｜AAOI, AMD, GFS, JBL, NBIS, NVDA, POET, SIVE｜tweet_id 2070179074048409662</small>
+                <h4><span class="lang lang-zh">电力 / 功率半导体</span><span class="lang lang-en">Power / Power Semiconductors</span>｜2026-06-26</h4>
+                <p>OFC I&#x27;m aware. But I&#x27;m personally sleeping comfortably since I have conviction in my hyperscaler mapping research with $SIVE. And yes, I still have my million+ share position. Not sure if people realize this: but I&#x27;m only here to share my thoughts/ideas. I don&#x27;t control market v…</p>
+                <small>score 87｜EWY, IREN, LITE, NBIS, QQQ, SIVE｜tweet_id 2070444675337503166</small>
               </div>
             </article>
             
             <article class="timeline-item">
               <span>E10</span>
               <div>
-                <h4><span class="lang lang-zh">玻璃基板 / 先进载板</span><span class="lang lang-en">Glass Substrate / Advanced Substrates</span>｜2026-06-25</h4>
-                <p>oh i think u misunderstand... I&#x27;m actually more bullish than ever as prices go down. $SIVE at ~$1.9B MC you have: - $GFS reference laser - laser for Ayar and others in $NVDA NVLink ecosystem for CPO scale up - $POET and others for CPO scale out - $JBL and others for 1.6T+ plugga…</p>
-                <small>score 85｜AAOI, AMD, GFS, JBL, NBIS, NVDA, POET, SIVE｜tweet_id 2070179074048409662</small>
+                <h4><span class="lang lang-zh">Neocloud / 算力融资质量</span><span class="lang lang-en">Neocloud / Compute Financing Quality</span>｜2026-06-26</h4>
+                <p>OFC I&#x27;m aware. But I&#x27;m personally sleeping comfortably since I have conviction in my hyperscaler mapping research with $SIVE. And yes, I still have my million+ share position. Not sure if people realize this: but I&#x27;m only here to share my thoughts/ideas. I don&#x27;t control market v…</p>
+                <small>score 87｜EWY, IREN, LITE, NBIS, QQQ, SIVE｜tweet_id 2070444675337503166</small>
               </div>
             </article>
             
@@ -1773,8 +1799,8 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
               <span>E11</span>
               <div>
                 <h4><span class="lang lang-zh">CPO / InP 光通信</span><span class="lang lang-en">CPO / InP Optical Interconnect</span>｜2026-06-25</h4>
-                <p>Feels like the only thing that hasn’t crashed… Is memory like $MU, indexes, or large cap semis like Intel so far. - Photonics from $AXTI to $SIVE down 40%. - Space from $ASTS and $RKLB down 40% 1M. - Popular AI names like $PLTR is down ~35% YTD. - Software like $CRM down -40%. -…</p>
-                <small>score 84｜ASTS, AXTI, CRM, MU, PLTR, RKLB, SIVE｜tweet_id 2070157835137434015</small>
+                <p>oh i think u misunderstand... I&#x27;m actually more bullish than ever as prices go down. $SIVE at ~$1.9B MC you have: - $GFS reference laser - laser for Ayar and others in $NVDA NVLink ecosystem for CPO scale up - $POET and others for CPO scale out - $JBL and others for 1.6T+ plugga…</p>
+                <small>score 86｜AAOI, AMD, GFS, JBL, NBIS, NVDA, POET, SIVE｜tweet_id 2070179074048409662</small>
               </div>
             </article>
             
@@ -1782,8 +1808,8 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
               <span>E12</span>
               <div>
                 <h4><span class="lang lang-zh">先进封装 / 关键设备</span><span class="lang lang-en">Advanced Packaging / Critical Equipment</span>｜2026-06-25</h4>
-                <p>Feels like the only thing that hasn’t crashed… Is memory like $MU, indexes, or large cap semis like Intel so far. - Photonics from $AXTI to $SIVE down 40%. - Space from $ASTS and $RKLB down 40% 1M. - Popular AI names like $PLTR is down ~35% YTD. - Software like $CRM down -40%. -…</p>
-                <small>score 84｜ASTS, AXTI, CRM, MU, PLTR, RKLB, SIVE｜tweet_id 2070157835137434015</small>
+                <p>oh i think u misunderstand... I&#x27;m actually more bullish than ever as prices go down. $SIVE at ~$1.9B MC you have: - $GFS reference laser - laser for Ayar and others in $NVDA NVLink ecosystem for CPO scale up - $POET and others for CPO scale out - $JBL and others for 1.6T+ plugga…</p>
+                <small>score 86｜AAOI, AMD, GFS, JBL, NBIS, NVDA, POET, SIVE｜tweet_id 2070179074048409662</small>
               </div>
             </article>
             </div>
@@ -2097,58 +2123,58 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
       <div class="table-scroll"><table><thead><tr><th><span class="lang lang-zh">主题</span><span class="lang lang-en">Theme</span></th><th><span class="lang lang-zh">推文数</span><span class="lang lang-en">Tweets</span></th><th><span class="lang lang-zh">时间范围</span><span class="lang lang-en">Time Range</span></th><th><span class="lang lang-zh">均分</span><span class="lang lang-en">Avg Score</span></th><th>Top tickers</th></tr></thead><tbody>
             <tr>
               <td><span class="lang lang-zh">CPO / 光通信</span><span class="lang lang-en">CPO / Optical Interconnect</span><small>optical_cpo</small></td>
-              <td>1467</td>
-              <td>2025-07-03 → 2026-06-27</td>
-              <td>31.9</td>
+              <td>1484</td>
+              <td>2025-07-03 → 2026-07-04</td>
+              <td>32.2</td>
               <td>LITE, AAOI, SIVE, AXTI, NVDA, COHR, MRVL, GOOGL</td>
             </tr>
             
             <tr>
               <td><span class="lang lang-zh">HBM / 存储</span><span class="lang lang-en">HBM / Memory Bandwidth</span><small>memory_hbm</small></td>
-              <td>1423</td>
-              <td>2025-07-07 → 2026-06-28</td>
-              <td>30.4</td>
-              <td>LITE, NVDA, NBIS, MU, AXTI, GOOGL, SNDK, AAOI</td>
+              <td>1440</td>
+              <td>2025-07-07 → 2026-07-02</td>
+              <td>30.7</td>
+              <td>LITE, NVDA, NBIS, MU, AXTI, GOOGL, SNDK, AMZN</td>
             </tr>
             
             <tr>
               <td><span class="lang lang-zh">Neocloud 融资质量</span><span class="lang lang-en">Neocloud Financing Quality</span><small>neocloud_financing</small></td>
-              <td>1409</td>
-              <td>2025-07-02 → 2026-06-28</td>
-              <td>28.0</td>
+              <td>1420</td>
+              <td>2025-07-02 → 2026-07-04</td>
+              <td>28.2</td>
               <td>NBIS, IREN, MSFT, CIFR, NVDA, CRWV, GOOGL, META</td>
             </tr>
             
             <tr>
               <td><span class="lang lang-zh">AI 半导体供应链</span><span class="lang lang-en">AI Semi Supply Chain</span><small>ai_semicap_supply_chain</small></td>
-              <td>1343</td>
-              <td>2025-07-21 → 2026-06-28</td>
-              <td>35.5</td>
-              <td>NVDA, LITE, AXTI, GOOGL, SIVE, AMZN, COHR, AAOI</td>
+              <td>1364</td>
+              <td>2025-07-21 → 2026-07-04</td>
+              <td>35.7</td>
+              <td>NVDA, LITE, AXTI, SIVE, GOOGL, AMZN, COHR, AAOI</td>
             </tr>
             
             <tr>
               <td><span class="lang lang-zh">InP / 化合物半导体</span><span class="lang lang-en">InP / Compound Semis</span><small>inp_compound_semi</small></td>
-              <td>783</td>
-              <td>2025-12-22 → 2026-06-26</td>
-              <td>33.0</td>
-              <td>AXTI, LITE, IQE, AAOI, COHR, SIVE, NVDA, SOI</td>
+              <td>790</td>
+              <td>2025-12-22 → 2026-07-03</td>
+              <td>33.2</td>
+              <td>AXTI, LITE, IQE, COHR, AAOI, SIVE, NVDA, SOI</td>
             </tr>
             
             <tr>
               <td><span class="lang lang-zh">电力 / 功率链</span><span class="lang lang-en">Power / Grid Chain</span><small>power_grid</small></td>
-              <td>346</td>
-              <td>2025-09-17 → 2026-06-28</td>
-              <td>38.7</td>
-              <td>NBIS, NVDA, GOOGL, IREN, AMZN, MSFT, LITE, TSM</td>
+              <td>351</td>
+              <td>2025-09-17 → 2026-07-04</td>
+              <td>38.9</td>
+              <td>NVDA, NBIS, GOOGL, IREN, AMZN, LITE, MSFT, TSM</td>
             </tr>
             
             <tr>
               <td><span class="lang lang-zh">Physical AI / 国防光学</span><span class="lang lang-en">Physical AI / Defense Optics</span><small>robotics_physical_ai</small></td>
-              <td>294</td>
-              <td>2025-09-17 → 2026-06-28</td>
-              <td>35.7</td>
-              <td>NBIS, AMZN, NVDA, GOOGL, TSLA, META, MSFT, LITE</td>
+              <td>313</td>
+              <td>2025-09-17 → 2026-07-04</td>
+              <td>36.7</td>
+              <td>AMZN, NVDA, NBIS, TSLA, GOOGL, META, MSFT, LITE</td>
             </tr>
             </tbody></table></div>
     </section>
@@ -2159,7 +2185,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
     </section>
     </main>
   <footer class="page">
-    AIpha X-KOL V1.0｜<span class="lang lang-zh">生成时间</span><span class="lang lang-en">Generated</span> 2026-07-02T16:49:47+08:00｜source_commit cdb77c25b051
+    AIpha X-KOL V1.1｜<span class="lang lang-zh">生成时间</span><span class="lang lang-en">Generated</span> 2026-07-06T14:09:27+08:00｜source_commit 1c2f854fca94
   </footer>
 </body>
 </html>

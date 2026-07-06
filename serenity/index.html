@@ -3,12 +3,12 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="AIpha X-KOL：X KOL 推文研究资产与滚动简报。" />
-  <meta property="og:title" content="AIpha X-KOL V1.0" />
-  <meta property="og:description" content="KOL brief, Serenity asset research and jukan05 evidence flow." />
+  <meta name="description" content="AIpha X-KOL：多账号 X KOL 周报与推文研究资产。" />
+  <meta property="og:title" content="AIpha X-KOL V1.1" />
+  <meta property="og:description" content="Weekly X KOL brief, Serenity asset research and multi-account evidence flows." />
   <meta property="og:type" content="article" />
-  <meta name="aipha-x-kol:legacy-lineage" content="AIpha Serenity V4.6 -&gt; AIpha X-KOL V1.0" />
-  <title>AIpha X-KOL 简报｜AIpha X-KOL V1.0</title>
+  <meta name="aipha-x-kol:legacy-lineage" content="AIpha Serenity V4.6 -&gt; AIpha X-KOL V1.0 -&gt; AIpha X-KOL V1.1" />
+  <title>AIpha X-KOL 简报｜AIpha X-KOL V1.1</title>
   <script>
 (function () {
   const params = new URLSearchParams(window.location.search);
@@ -251,6 +251,32 @@ h1 { margin: 6px 0 12px; font-size: clamp(36px, 4vw, 54px); line-height: 1.06; l
 .brief-titlebar small { color: var(--muted); font-size: 14px; }
 .brief-eyebrow { display: inline-flex; color: var(--blue); font-size: 11px; font-weight: 900; letter-spacing: 0.12em; text-transform: uppercase; }
 .brief-body { padding: 0; }
+.weekly-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; align-items: start; }
+.weekly-card { min-width: 0; background: #fff; border: 1px solid var(--line); border-top: 4px solid var(--blue); box-shadow: 0 8px 26px rgba(22,33,43,0.045); }
+.weekly-card header { display: grid; grid-template-columns: minmax(0,1fr) auto; gap: 16px; align-items: start; padding: 16px 18px 14px; border-bottom: 1px solid var(--line); }
+.weekly-card h3 { margin: 3px 0 6px; font-size: 25px; line-height: 1.15; }
+.weekly-card p { margin: 0; color: var(--muted); }
+.weekly-count { color: var(--blue); font-size: 30px; font-weight: 950; line-height: 1; }
+.weekly-body { display: grid; gap: 16px; padding: 18px; }
+.weekly-block { display: grid; gap: 9px; }
+.weekly-block h4 { margin: 0; font-size: 14px; color: var(--blue); letter-spacing: 0.08em; text-transform: uppercase; }
+.weekly-judgments { display: grid; gap: 8px; margin: 0; padding: 0; list-style: none; }
+.weekly-judgments li { display: grid; grid-template-columns: 28px minmax(0,1fr); gap: 10px; padding: 10px 0; border-top: 1px solid rgba(216,224,228,0.86); color: var(--muted); }
+.weekly-judgments li:first-child { border-top: 0; }
+.weekly-judgments span { display: grid; place-items: center; width: 28px; height: 28px; color: #fff; background: var(--dark); font-size: 12px; font-weight: 900; }
+.weekly-signal-grid { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 12px; }
+.weekly-signal { min-width: 0; padding: 12px; background: var(--soft-2); border: 1px solid var(--line); }
+.weekly-signal b { display: block; margin-bottom: 8px; font-size: 13px; color: var(--ink); }
+.weekly-event-list { display: grid; gap: 8px; }
+.weekly-event { display: grid; grid-template-columns: 92px minmax(0,1fr); gap: 10px; padding: 10px 12px; background: #fff; border: 1px solid var(--line); border-left: 4px solid var(--teal); }
+.weekly-event[data-change-type="tech_route"] { border-left-color: #6d5bd0; }
+.weekly-event[data-change-type="tech_progress"] { border-left-color: #087f5b; }
+.weekly-event[data-change-type="shortage"] { border-left-color: #9b2c2c; }
+.weekly-event[data-change-type="price"] { border-left-color: #c39a4a; }
+.weekly-event[data-change-type="demand"] { border-left-color: #1f5366; }
+.weekly-event-label { color: var(--blue); font-size: 12px; font-weight: 900; }
+.weekly-event strong { display: block; font-size: 14px; line-height: 1.35; }
+.weekly-event small { display: block; margin-top: 4px; color: var(--muted); overflow-wrap: anywhere; }
 .kol-feed-head { display: grid; grid-template-columns: minmax(0,1fr) auto; gap: 10px; align-items: center; min-width: 0; }
 .kol-feed-meta { display: grid; gap: 2px; min-width: 0; }
 .kol-feed-meta h3 { margin: 0; font-size: 20px; line-height: 1.15; }
@@ -457,7 +483,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
   .lang-toggle button { min-width: 28px; min-height: 20px; padding: 0 4px; font-size: 9.5px; }
   .page { width: min(100% - 20px, 720px); }
   .hero { margin-top: 12px; padding: 20px; }
-  .hero-grid, .program-grid, .brief-grid, .digest-overview, .digest-card-grid, .question-list, .chain-body, .timeline-grid, .asset-snapshot-grid { grid-template-columns: 1fr; }
+  .hero-grid, .program-grid, .brief-grid, .weekly-grid, .weekly-signal-grid, .digest-overview, .digest-card-grid, .question-list, .chain-body, .timeline-grid, .asset-snapshot-grid { grid-template-columns: 1fr; }
   .brief-titlebar { display: grid; }
   h1 { font-size: 34px; }
   .lead { font-size: 16px; }
@@ -505,9 +531,9 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
       <a class="brand" href="/AIpha/" aria-label="AIpha Research Desk">
         <img src="assets/nero-mark.svg" alt="AIpha Research Desk" />
       </a>
-      <nav class="page-switcher" aria-label="AIpha X-KOL pages"><a class="active" href="index.html"><span class="lang lang-zh">KOL 简报</span><span class="lang lang-en">KOL Brief</span></a><a class="" href="aleabitoreddit/index.html"><span class="lang lang-zh">Serenity 资产</span><span class="lang lang-en">Serenity Asset</span></a><a class="" href="jukan05/index.html"><span class="lang lang-zh">jukan05 资产</span><span class="lang lang-en">jukan05 Asset</span></a></nav>
+      <nav class="page-switcher" aria-label="AIpha X-KOL pages"><a class="active" href="index.html"><span class="lang lang-zh">KOL 周报</span><span class="lang lang-en">KOL Weekly</span></a><a class="" href="aleabitoreddit/index.html"><span class="lang lang-zh">Serenity 资产</span><span class="lang lang-en">Serenity Asset</span></a><a class="" href="jukan05/index.html"><span class="lang lang-zh">jukan05 资产</span><span class="lang lang-en">jukan05 Asset</span></a><a class="" href="paurooteri/index.html"><span class="lang lang-zh">Paurooteri</span><span class="lang lang-en">Paurooteri</span></a><a class="" href="stock6688/index.html"><span class="lang lang-zh">Stock6688</span><span class="lang lang-en">Stock6688</span></a></nav>
       <div class="nav-actions">
-        <span class="nav-version-badge">AIpha X-KOL | v1.0</span>
+        <span class="nav-version-badge">AIpha X-KOL | v1.1</span>
         <span class="nav-disclaimer"><span class="lang lang-zh">非投资建议</span><span class="lang lang-en">Not Advice</span></span>
         <span class="lang-toggle" aria-label="language switcher">
           <button type="button" data-lang-button="zh" onclick="setAiphaXKolLang('zh')">中文</button>
@@ -520,1630 +546,712 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
     <section class="hero page">
       <div class="hero-grid">
         <div class="hero-main">
-          <h1><span class="lang lang-block lang-zh">X-KOL 近 3 日推文账本</span><span class="lang lang-block lang-en">X-KOL 3-day Tweet Ledger</span></h1>
-          <p class="lead"><span class="lang lang-block lang-zh">总览页按 KOL 分组展示当前 3 日推文流，Serenity 资产研究与 jukan05 新闻流分开阅读。</span><span class="lang lang-block lang-en">The overview groups the current 3-day tweet stream by KOL, keeping Serenity asset research separate from the jukan05 news flow.</span></p>
+          <h1><span class="lang lang-block lang-zh">X-KOL 周报：本周他们如何判断 AI 供应链</span><span class="lang lang-block lang-en">X-KOL Weekly: How They Read the AI Supply Chain</span></h1>
+          <p class="lead"><span class="lang lang-block lang-zh">总览页按 KOL 分组整理最近一周的产业判断、关键环节、升温 ticker 和证据锚点；各账号资产页保留更完整的主题矩阵和证据样本。</span><span class="lang lang-block lang-en">The overview groups each KOL&#x27;s weekly industry read, key supply-chain links, rising tickers and evidence anchors; individual asset pages keep fuller matrices and evidence samples.</span></p>
           <div class="window-status">
             <article>
               <div>
                 <strong>Serenity <small>@aleabitoreddit</small></strong>
-                <span>2026-06-25 -> 2026-06-28</span>
+                <span>2026-06-27 -> 2026-07-04</span>
               </div>
-              <b>17</b>
+              <b>47</b>
             </article>
             
             <article>
               <div>
                 <strong>jukan05 <small>@jukan05</small></strong>
-                <span>2026-06-25 -> 2026-06-28</span>
+                <span>2026-06-27 -> 2026-07-04</span>
               </div>
-              <b>21</b>
+              <b>65</b>
+            </article>
+            
+            <article>
+              <div>
+                <strong>Paurooteri <small>@paurooteri</small></strong>
+                <span>2026-06-27 -> 2026-07-04</span>
+              </div>
+              <b>207</b>
+            </article>
+            
+            <article>
+              <div>
+                <strong>Stock6688 <small>@stock6688</small></strong>
+                <span>2026-06-27 -> 2026-07-04</span>
+              </div>
+              <b>26</b>
             </article>
             </div>
         </div>
-        <div class="stat-grid"><article class="stat"><span><span class="lang lang-zh">KOL 数量</span><span class="lang lang-en">KOLs</span></span><b>2</b><small><span class="lang lang-zh">固定 registry</span><span class="lang lang-en">Fixed registry</span></small></article><article class="stat"><span><span class="lang lang-zh">Serenity 推文</span><span class="lang lang-en">Serenity Tweets</span></span><b>6,002</b><small><span class="lang lang-zh">@aleabitoreddit</span><span class="lang lang-en">@aleabitoreddit</span></small></article><article class="stat"><span><span class="lang lang-zh">jukan05 推文</span><span class="lang lang-en">jukan05 Tweets</span></span><b>402</b><small><span class="lang lang-zh">独立 X KOL 库</span><span class="lang lang-en">Separate X KOL DB</span></small></article><article class="stat"><span><span class="lang lang-zh">当前账本</span><span class="lang lang-en">Current Ledger</span></span><b>3D</b><small><span class="lang lang-zh">逐条推文流</span><span class="lang lang-en">Per-tweet stream</span></small></article></div>
+        <div class="stat-grid"><article class="stat"><span><span class="lang lang-zh">KOL 数量</span><span class="lang lang-en">KOLs</span></span><b>4</b><small><span class="lang lang-zh">固定 registry</span><span class="lang lang-en">Fixed registry</span></small></article><article class="stat"><span><span class="lang lang-zh">Serenity 推文</span><span class="lang lang-en">Serenity Tweets</span></span><b>6,046</b><small><span class="lang lang-zh">@aleabitoreddit</span><span class="lang lang-en">@aleabitoreddit</span></small></article><article class="stat"><span><span class="lang lang-zh">X-KOL 推文</span><span class="lang lang-en">X-KOL Tweets</span></span><b>970</b><small><span class="lang lang-zh">多账号本地库</span><span class="lang lang-en">Multi-account local DB</span></small></article><article class="stat"><span><span class="lang lang-zh">周报窗口</span><span class="lang lang-en">Weekly Window</span></span><b>7D</b><small><span class="lang lang-zh">滚动窗口</span><span class="lang lang-en">Rolling window</span></small></article></div>
       </div>
     </section>
     
     <section class="section-band page" id="latest-briefs">
       <div class="section-head">
         <div>
-          <h2><span class="lang lang-zh">近 3 日逐条推文账本</span><span class="lang lang-en">3-day Per-tweet Ledger</span></h2>
-          <p><span class="lang lang-block lang-zh">过滤情绪、链接和估值类噪音，只保留当前窗口中有产业链信息量的推文：中文精翻、事件标签、产业链环节、具体对象、原文和 tweet_id。</span><span class="lang lang-block lang-en">Sentiment, link-only and valuation noise is filtered out; the feed keeps current-window tweets with supply-chain information: precise Chinese translation, event tag, chain link, object, original text and tweet_id.</span></p>
+          <h2><span class="lang lang-zh">本周 KOL 产业周报</span><span class="lang lang-en">Weekly KOL Industry Brief</span></h2>
+          <p><span class="lang lang-block lang-zh">每张卡先给本周判断，再列产业链环节、高频/升温 ticker、产业变化标签和可回溯 tweet 证据。</span><span class="lang lang-block lang-en">Each card starts with the weekly read, then shows supply-chain links, frequent/rising tickers, industry-change tags and traceable tweet evidence.</span></p>
         </div>
       </div>
-      <div class="brief-grid">
-    <article class="brief-card">
-      <header class="brief-titlebar">
-        <div class="kol-feed-head">
-          <div class="kol-feed-meta">
-            <span class="brief-eyebrow"><span class="lang lang-zh">当前 3 日窗口</span><span class="lang lang-en">Current 3-day window</span></span>
-            <h3>Serenity <small>@aleabitoreddit</small></h3>
-            <p>2026-06-25 -> 2026-06-28 · <span class="lang lang-zh">供应链 thesis lens：七链矩阵、A股叶子链映射和历史证据资产。</span><span class="lang lang-en">Supply-chain thesis lens: seven-chain matrix, A-share leaf-lane mapping and evidence asset.</span></p>
-          </div>
-          <strong class="kol-feed-count">17</strong>
+      <div class="weekly-grid">
+    <article class="weekly-card">
+      <header>
+        <div>
+          <span class="brief-eyebrow"><span class="lang lang-zh">本周 KOL 周报</span><span class="lang lang-en">Weekly KOL Report</span></span>
+          <h3>Serenity <small>@aleabitoreddit</small></h3>
+          <p>2026-06-27 -> 2026-07-04 · <span class="lang lang-zh">供应链 thesis lens：七链矩阵、A股叶子链映射和历史证据资产。</span><span class="lang lang-en">Supply-chain thesis lens: seven-chain matrix, A-share leaf-lane mapping and evidence asset.</span></p>
         </div>
+        <strong class="weekly-count">47</strong>
       </header>
-      <div class="brief-body">
-        
-    <div class="brief-desk lang lang-zh" data-brief-desk="aleabitoreddit">
-      <div class="tweet-ledger">
-            <article class="tweet-ledger-row tweet-card" data-change-type="supply_release">
-              <div class="tweet-ledger-body">
-                <div class="tweet-head">
-                  <div class="tweet-author-line">
-                    <span class="tweet-author-name">Serenity</span>
-                    <span class="tweet-verified" aria-label="verified">✓</span>
-                    <span class="tweet-handle">@aleabitoreddit</span>
-                    <span class="tweet-time">· 01 · 2026-06-28</span>
-                  </div>
-                  <span class="tweet-more" aria-hidden="true">•••</span>
-                </div>
-                <div class="tweet-ledger-tags">
-                  <span class="primary">供给释放</span>
-                  <span>升温</span>
-                  <span>被动元件/电阻电容</span>
-                  <span>InP / 激光器</span>
-                  <span>中</span>
-                </div>
-                <p class="tweet-translation">中文精翻：我们大概终于知道为什么 $META 早在 3 月就和 $NBIS 这类 Neocloud 签下大规模协议，也知道为什么 Gemini 被大幅削弱。报道称，由于算力受限，$GOOGL 在 2026 年 3 月限制了 Meta 的容量。Google CEO 在上次财报中表示，算力限制让 Google Cloud 无法承接更多客户需求，并使该部门 backlog 几乎较上一季度翻倍。这可能对 AI 数据中心资本开支建设是正面的，因为 hyperscaler 的容量远低于实际需求，尤其是在它们不能互相依赖容量的时候。</p>
-                
-        <details class="tweet-original-details">
-          <summary>原文：Guess we finally found why $META signed massive agreements with Neoclouds like $NBIS back in March... And why Gemini got super nerfed. $GOOGL reportedly restricted Meta&#x27;s capacity…</summary>
-          <p>Guess we finally found why $META signed massive agreements with Neoclouds like $NBIS back in March... And why Gemini got super nerfed. $GOOGL reportedly restricted Meta&#x27;s capacity in March 2026 because of compute restraints. Google&#x27;s CEO said from last earnings computing power restrictions prevented Google Cloud from…</p>
-        </details>
-        
-                <div class="tweet-action-row" aria-label="static tweet action bar"><span class="tweet-action" title="回复" aria-label="回复"><i>○</i></span><span class="tweet-action" title="转发" aria-label="转发"><i>↻</i></span><span class="tweet-action" title="喜欢" aria-label="喜欢"><i>♡</i></span><span class="tweet-action" title="浏览" aria-label="浏览"><i>▥</i></span><span class="tweet-action" title="保存" aria-label="保存"><i>□</i></span></div>
-                <p class="tweet-ledger-note">
-                  <a href="https://x.com/aleabitoreddit/status/2071135874100990438" target="_blank" rel="noreferrer">tweet_id 2071135874100990438</a>
-                  <span>｜score 57</span>
-                  <span>｜Ticker: GOOGL, META, NBIS</span>
-                  <span>｜主题: neocloud_financing, power_grid, ai_semicap_supply_chain</span>
-                </p>
+      
+    <div class="weekly-body lang lang-zh">
+      <section class="weekly-block">
+        <h4>本周判断</h4>
+        <ol class="weekly-judgments"><li><span>01</span><p>本周窗口共 47 条推文，核心讨论集中在：AI 半导体供应链 25；Physical AI / 国防光学 20；HBM / 存储 18；CPO / 光通信 17；Neocloud 融资质量 14。</p></li><li><span>02</span><p>Serenity 近 7 日在CPO / 光通信里主要说：AAOI 多头 thesis、空头分歧和光模块涨幅争议、InP 衬底出口/管制、CSP 分散供应和化合物半导体供给安全、硅光、CPO/NPO、1.6T、连接器和 PCB/HVLP 材料链。</p></li><li><span>03</span><p>Serenity 近 7 日在HBM / 存储里主要说：SK hynix、HBM、内存供给、锁单和存储价格周期、CoPoS/CoWoS、先进封装、封装设备和韩国工程师原始信息。</p></li><li><span>04</span><p>Serenity 近 7 日在AI 半导体供应链里主要说：SK hynix、HBM、内存供给、锁单和存储价格周期、InP 衬底出口/管制、CSP 分散供应和化合物半导体供给安全、Samsung 代工 AMD CPU、TSMC/Intel 竞争和先进节点扩产。</p></li><li><span>05</span><p>结构化事件主要落在：供需紧张、技术路线变化；这些只是推文资产中的研究线索。</p></li></ol>
+      </section>
+      <div class="weekly-signal-grid">
+        <section class="weekly-signal">
+          <b>产业链环节</b>
+          <div class="ticker-pill-row"><span class="ticker-pill"><b>AI 半导体供应链</b>25</span><span class="ticker-pill"><b>Physical AI / 国防光学</b>20</span><span class="ticker-pill"><b>HBM / 存储</b>18</span><span class="ticker-pill"><b>CPO / 光通信</b>17</span><span class="ticker-pill"><b>Neocloud 融资质量</b>14</span><span class="ticker-pill"><b>电力 / 功率链</b>7</span><span class="ticker-pill"><b>InP / 化合物半导体</b>7</span></div>
+        </section>
+        <section class="weekly-signal">
+          <b>高频 ticker</b>
+          <div class="ticker-pill-row"><span class="ticker-pill"><b>META</b>11</span><span class="ticker-pill"><b>AMZN</b>9</span><span class="ticker-pill"><b>NVDA</b>9</span><span class="ticker-pill"><b>TSLA</b>9</span><span class="ticker-pill"><b>CCXI</b>8</span><span class="ticker-pill"><b>NBIS</b>7</span><span class="ticker-pill"><b>SIVE</b>6</span><span class="ticker-pill"><b>LITE</b>5</span><span class="ticker-pill"><b>AAOI</b>4</span><span class="ticker-pill"><b>GOOGL</b>4</span></div>
+        </section>
+        <section class="weekly-signal">
+          <b>近端升温 ticker</b>
+          <div class="ticker-pill-row"><span class="ticker-pill ticker-pill-rising"><b>META</b>+11</span><span class="ticker-pill ticker-pill-rising"><b>CCXI</b>+8</span><span class="ticker-pill ticker-pill-rising"><b>AMZN</b>+7</span><span class="ticker-pill ticker-pill-rising"><b>TSLA</b>+6</span><span class="ticker-pill ticker-pill-rising"><b>NVDA</b>+5</span><span class="ticker-pill ticker-pill-rising"><b>NBIS</b>+4</span><span class="ticker-pill ticker-pill-rising"><b>GOOGL</b>+3</span><span class="ticker-pill ticker-pill-rising"><b>MELI</b>+3</span><span class="ticker-pill ticker-pill-rising"><b>CBRS</b>+1</span><span class="ticker-pill ticker-pill-rising"><b>COHR</b>+1</span></div>
+        </section>
+        <section class="weekly-signal">
+          <b>证据锚点</b>
+          <div class="brief-anchor-list">
+            <span class="brief-anchor">
+              <b>2026-07-02</b>
+              <span><em>tweet_id 2072726120706007465</em><small>Photonics is backed by actual revenue numbers and it&#x27;s an architectural shift championed by $NVDA. Quantum barely h…</small></span>
+            </span>
+            
+            <span class="brief-anchor">
+              <b>2026-07-02</b>
+              <span><em>tweet_id 2072760446617280650</em><small>Always a fun time seeing semi markets crash from Bloomberg report framing once again… UBS analyst on $META report:…</small></span>
+            </span>
+            
+            <span class="brief-anchor">
+              <b>2026-07-03</b>
+              <span><em>tweet_id 2072936659369517341</em><small>Be SemiAnalysis: - Post a scathing piece on CPO delays + optical company valuations, causing a crash. Which $NVDA,…</small></span>
+            </span>
+            
+            <span class="brief-anchor">
+              <b>2026-07-01</b>
+              <span><em>tweet_id 2072178393878290789</em><small>Just some of the more interesting news I came across recently: 1. MS: Revised China humanoid shipments to reach 50,…</small></span>
+            </span>
+            </div>
+        </section>
+      </div>
+      <section class="weekly-block">
+        <h4>产业变化标签</h4>
+        <div class="weekly-event-list">
+            <article class="weekly-event" data-change-type="shortage">
+              <span class="weekly-event-label">供需紧张</span>
+              <div>
+                <strong>Serenity 指向 先进封装/载板/键合 中 机器人执行器/光学 的供需紧张，先当作瓶颈线索，不当作已核验事实。</strong>
+                <small>2026-07-01｜tweet_id 2072161782005936487｜机器人执行器/光学</small>
               </div>
             </article>
             
-            <article class="tweet-ledger-row tweet-card" data-change-type="tech_route">
-              <div class="tweet-ledger-body">
-                <div class="tweet-head">
-                  <div class="tweet-author-line">
-                    <span class="tweet-author-name">Serenity</span>
-                    <span class="tweet-verified" aria-label="verified">✓</span>
-                    <span class="tweet-handle">@aleabitoreddit</span>
-                    <span class="tweet-time">· 02 · 2026-06-27</span>
-                  </div>
-                  <span class="tweet-more" aria-hidden="true">•••</span>
-                </div>
-                <div class="tweet-ledger-tags">
-                  <span class="primary">技术路线变化</span>
-                  <span>新增/升温</span>
-                  <span>HBM/存储/内存带宽</span>
-                  <span>InP / 激光器</span>
-                  <span>中</span>
-                </div>
-                <p class="tweet-translation">中文精翻：机器人是下一站。根据 PitchBook 3 月数据（来源：a16z），交易数量和投资金额都在飙升。好的一点是，同一批 AI 数据中心敞口往往也有对人形机器人爬坡的交叉敞口，例如存储里的 DRAM/NAND（用于人形机器人的推理和存储），或者光子里的 DFB 激光器（用于 FMCW LiDAR 视觉/感知）。目前大多数敞口仍在上游零部件，或者在 $AMZN、$TSLA 这类大型企业内部项目里。因此，2026 年下半年到 2027 年全球纯人形机器人/机器人公司 IPO 季会很有意思。</p>
-                
-        <details class="tweet-original-details">
-          <summary>原文：Robotics is next. Both deal count and investment amounts are skyrocketing per pitchbook March data (source: a16z) Good thing is: the same AI DC exposure often has cross-exposure t…</summary>
-          <p>Robotics is next. Both deal count and investment amounts are skyrocketing per pitchbook March data (source: a16z) Good thing is: the same AI DC exposure often has cross-exposure to humanoid ramp. Like DRAM/NAND with memory (on humanoid inference/storage) or DFB lasers with photonics (FMCW LiDAR vision/sensing). Right…</p>
-        </details>
-        
-                <div class="tweet-action-row" aria-label="static tweet action bar"><span class="tweet-action" title="回复" aria-label="回复"><i>○</i></span><span class="tweet-action" title="转发" aria-label="转发"><i>↻</i></span><span class="tweet-action" title="喜欢" aria-label="喜欢"><i>♡</i></span><span class="tweet-action" title="浏览" aria-label="浏览"><i>▥</i></span><span class="tweet-action" title="保存" aria-label="保存"><i>□</i></span></div>
-                <p class="tweet-ledger-note">
-                  <a href="https://x.com/aleabitoreddit/status/2070789923108798545" target="_blank" rel="noreferrer">tweet_id 2070789923108798545</a>
-                  <span>｜score 62</span>
-                  <span>｜Ticker: AMZN, TSLA</span>
-                  <span>｜主题: optical_cpo, memory_hbm, robotics_physical_ai</span>
-                </p>
+            <article class="weekly-event" data-change-type="tech_route">
+              <span class="weekly-event-label">技术路线变化</span>
+              <div>
+                <strong>Serenity 的讨论重心转向 CPO/光通信/激光器 的技术路线或架构变化，具体对象是 CPO / NPO / 光互连。</strong>
+                <small>2026-07-02｜tweet_id 2072726120706007465｜CPO / NPO / 光互连</small>
               </div>
             </article>
             
-            <article class="tweet-ledger-row tweet-card" data-change-type="tech_progress">
-              <div class="tweet-ledger-body">
-                <div class="tweet-head">
-                  <div class="tweet-author-line">
-                    <span class="tweet-author-name">Serenity</span>
-                    <span class="tweet-verified" aria-label="verified">✓</span>
-                    <span class="tweet-handle">@aleabitoreddit</span>
-                    <span class="tweet-time">· 03 · 2026-06-27</span>
-                  </div>
-                  <span class="tweet-more" aria-hidden="true">•••</span>
-                </div>
-                <div class="tweet-ledger-tags">
-                  <span class="primary">技术进步</span>
-                  <span>新增</span>
-                  <span>未归桶环节</span>
-                  <span>具体对象需回看原文</span>
-                  <span>中</span>
-                </div>
-                <p class="tweet-translation">中文精翻：OpenAI 把重量级前沿模型 5.6 Sol 放在 $CBRS 上发布，这有点疯狂。最高 750 tokens/sec，性能非常夸张。美国推理开始狂飙。我昨天看到这个消息后，第一次在 170 美元附近（低于 185 美元 IPO 价）试探性持有了一点 Cerebras。感觉这是对它技术的验证。我的看法是，相比 $JBL 这类同等估值但已经盈利的公司，它有点偏贵；但只要 OpenAI 仍保持领先，OpenAI 敞口可能会带来溢价。</p>
-                
-        <details class="tweet-original-details">
-          <summary>原文：Kinda nutty OpenAI’s is launching its heavyweight 5.6 Sol frontier model on $CBRS. At up to 750 tokens/sec, which is obscene performance. American inference go brrr. I actually pi…</summary>
-          <p>Kinda nutty OpenAI’s is launching its heavyweight 5.6 Sol frontier model on $CBRS. At up to 750 tokens/sec, which is obscene performance. American inference go brrr. I actually picked up starter positions on Cerebras for the first time in the ~170s (below $185 IPO price) after seeing this news yesterday. Feels like va…</p>
-        </details>
-        
-                <div class="tweet-action-row" aria-label="static tweet action bar"><span class="tweet-action" title="回复" aria-label="回复"><i>○</i></span><span class="tweet-action" title="转发" aria-label="转发"><i>↻</i></span><span class="tweet-action" title="喜欢" aria-label="喜欢"><i>♡</i></span><span class="tweet-action" title="浏览" aria-label="浏览"><i>▥</i></span><span class="tweet-action" title="保存" aria-label="保存"><i>□</i></span></div>
-                <p class="tweet-ledger-note">
-                  <a href="https://x.com/aleabitoreddit/status/2070754658868687086" target="_blank" rel="noreferrer">tweet_id 2070754658868687086</a>
-                  <span>｜score 42</span>
-                  <span>｜Ticker: CBRS, JBL</span>
-                  <span>｜主题: n/a</span>
-                </p>
+            <article class="weekly-event" data-change-type="tech_route">
+              <span class="weekly-event-label">技术路线变化</span>
+              <div>
+                <strong>Serenity 的讨论重心转向 先进封装/载板/键合 的技术路线或架构变化，具体对象是 InP / 激光器。</strong>
+                <small>2026-07-02｜tweet_id 2072760446617280650｜InP / 激光器</small>
               </div>
             </article>
             
-            <article class="tweet-ledger-row tweet-card" data-change-type="tech_route">
-              <div class="tweet-ledger-body">
-                <div class="tweet-head">
-                  <div class="tweet-author-line">
-                    <span class="tweet-author-name">Serenity</span>
-                    <span class="tweet-verified" aria-label="verified">✓</span>
-                    <span class="tweet-handle">@aleabitoreddit</span>
-                    <span class="tweet-time">· 04 · 2026-06-27</span>
-                  </div>
-                  <span class="tweet-more" aria-hidden="true">•••</span>
-                </div>
-                <div class="tweet-ledger-tags">
-                  <span class="primary">技术路线变化</span>
-                  <span>升温</span>
-                  <span>CPO/光通信/激光器</span>
-                  <span>CPO / NPO / 光互连</span>
-                  <span>强</span>
-                </div>
-                <p class="tweet-translation">中文精翻：$SPCX / Elon Musk 收购了光网络初创公司 Mesh。Mesh 正在做 1.6T OSFP（可插拔）。看起来它们拥有光引擎/封装侧能力，但很可能从商用公司采购 CW DFB 激光器。从 Ayar 到 $POET 的案例看，$SIVE 是更适合初创公司的潜在商用供应商之一。$LITE 和 $MTSI 也有一些历史，但可能没那么明显。无论如何，Celestial 最近被 Marvell 收购，这类初创公司被收购对很多方面都很正面：一是商用激光供应商收入，因为先和初创公司合作、完成设计导入后，再由 SpaceX 这样的 hyperscaler 拉动收入；二是 M&amp;A 吸引力带来的估值。Elon Musk 直接收购这些公司，也说明光互连方向是对的。</p>
-                
-        <details class="tweet-original-details">
-          <summary>原文：$SPCX / Elon Musk acquires Mesh, an optical networking startup. Which is working on 1.6T OSFP (pluggable). It’s seems they own the optical engine/packaging side of things, but lik…</summary>
-          <p>$SPCX / Elon Musk acquires Mesh, an optical networking startup. Which is working on 1.6T OSFP (pluggable). It’s seems they own the optical engine/packaging side of things, but likely sources CW DFB lasers off merchant companies. $SIVE is one of the more startup friendly plausible merchant suppliers as seen with Ayar t…</p>
-        </details>
-        
-                <div class="tweet-action-row" aria-label="static tweet action bar"><span class="tweet-action" title="回复" aria-label="回复"><i>○</i></span><span class="tweet-action" title="转发" aria-label="转发"><i>↻</i></span><span class="tweet-action" title="喜欢" aria-label="喜欢"><i>♡</i></span><span class="tweet-action" title="浏览" aria-label="浏览"><i>▥</i></span><span class="tweet-action" title="保存" aria-label="保存"><i>□</i></span></div>
-                <p class="tweet-ledger-note">
-                  <a href="https://x.com/aleabitoreddit/status/2070691462354993543" target="_blank" rel="noreferrer">tweet_id 2070691462354993543</a>
-                  <span>｜score 54</span>
-                  <span>｜Ticker: LITE, MTSI, POET, SIVE, SPCX</span>
-                  <span>｜主题: optical_cpo, memory_hbm</span>
-                </p>
-              </div>
-            </article>
-            
-            <article class="tweet-ledger-row tweet-card" data-change-type="tech_route">
-              <div class="tweet-ledger-body">
-                <div class="tweet-head">
-                  <div class="tweet-author-line">
-                    <span class="tweet-author-name">Serenity</span>
-                    <span class="tweet-verified" aria-label="verified">✓</span>
-                    <span class="tweet-handle">@aleabitoreddit</span>
-                    <span class="tweet-time">· 05 · 2026-06-26</span>
-                  </div>
-                  <span class="tweet-more" aria-hidden="true">•••</span>
-                </div>
-                <div class="tweet-ledger-tags">
-                  <span class="primary">技术路线变化</span>
-                  <span>升温</span>
-                  <span>CPO/光通信/激光器</span>
-                  <span>InP / 激光器</span>
-                  <span>强</span>
-                </div>
-                <p class="tweet-translation">中文精翻：我当然知道。但我个人睡得很踏实，因为我对自己关于 $SIVE 的 hyperscaler 映射研究有信心。是的，我仍然持有超过 100 万股。不确定大家是否意识到：我在这里其实只是分享自己的想法和思路。我不能控制市场波动，不能控制你们做什么决定，也不能控制市场如何反应新的信息综合。对分析师来说，更安全的做法是等 Morgan Stanley、JP Morgan、Goldman Sachs 出研究后再跟着反应和总结，而不是通过 OSINT 映射提出新想法，然后等待验证。因为当你发现一个新角度时，所有人都会围绕 4-6 英寸 InP fab、员工数量、hyperscaler 客户是谁、放量爬坡时间表等问题激烈争论，试图反驳这个 thesis，并盯着每一个 5-20% 的价格波动。我被迫更多停留在这个话题上，因为它验证度还没那么高，而且讨论一直很激烈。就像 2 月的 $EWY，我当时做了存储预测以及氦气/LNG/石油分析。几个月后大家都看到，存储看起来是结构性的，Micron 有 16 个以上 LTA，LNG 也没有击穿 SK Hynix 的利润率。或者去年关于 $NBIS 的部分，讨论的是 sum-of-parts / 稀释结构与 $IREN 的对比。现在它接近历史高点并进入 $QQQ。我个人只是在等 Sivers 2027 年放量爬坡，以及在纳斯达克上市以支持 M&amp;A。这样它就能走上 $LITE 从 30 亿美元扩到 600 亿美元以上的路径。</p>
-                
-        <details class="tweet-original-details">
-          <summary>原文：OFC I&#x27;m aware. But I&#x27;m personally sleeping comfortably since I have conviction in my hyperscaler mapping research with $SIVE. And yes, I still have my million+ share position. Not…</summary>
-          <p>OFC I&#x27;m aware. But I&#x27;m personally sleeping comfortably since I have conviction in my hyperscaler mapping research with $SIVE. And yes, I still have my million+ share position. Not sure if people realize this: but I&#x27;m only here to share my thoughts/ideas. I don&#x27;t control market volatility, what decisions you all make,…</p>
-        </details>
-        
-                <div class="tweet-action-row" aria-label="static tweet action bar"><span class="tweet-action" title="回复" aria-label="回复"><i>○</i></span><span class="tweet-action" title="转发" aria-label="转发"><i>↻</i></span><span class="tweet-action" title="喜欢" aria-label="喜欢"><i>♡</i></span><span class="tweet-action" title="浏览" aria-label="浏览"><i>▥</i></span><span class="tweet-action" title="保存" aria-label="保存"><i>□</i></span></div>
-                <p class="tweet-ledger-note">
-                  <a href="https://x.com/aleabitoreddit/status/2070444675337503166" target="_blank" rel="noreferrer">tweet_id 2070444675337503166</a>
-                  <span>｜score 86</span>
-                  <span>｜Ticker: EWY, IREN, LITE, NBIS, QQQ, SIVE</span>
-                  <span>｜主题: optical_cpo, inp_compound_semi, memory_hbm, neocloud_financing</span>
-                </p>
-              </div>
-            </article>
-            
-            <article class="tweet-ledger-row tweet-card" data-change-type="shortage">
-              <div class="tweet-ledger-body">
-                <div class="tweet-head">
-                  <div class="tweet-author-line">
-                    <span class="tweet-author-name">Serenity</span>
-                    <span class="tweet-verified" aria-label="verified">✓</span>
-                    <span class="tweet-handle">@aleabitoreddit</span>
-                    <span class="tweet-time">· 06 · 2026-06-26</span>
-                  </div>
-                  <span class="tweet-more" aria-hidden="true">•••</span>
-                </div>
-                <div class="tweet-ledger-tags">
-                  <span class="primary">供需紧张</span>
-                  <span>延续</span>
-                  <span>先进封装/载板/键合</span>
-                  <span>InP / 激光器</span>
-                  <span>中</span>
-                </div>
-                <p class="tweet-translation">中文精翻：Elon Musk 只是在随口拉响警报：相对于供应，$MU / SK Hynix / Samsung 存储的需求巨大且价格上涨。他对存储瓶颈的能见度可能比其他人更高。</p>
-                
-        <details class="tweet-original-details">
-          <summary>原文：Just Elon Musk casually sounding the alarm. On the massive demand + price hikes for $MU / SK Hynix / Samsung memory relative to supply. He probably has higher visibility into the…</summary>
-          <p>Just Elon Musk casually sounding the alarm. On the massive demand + price hikes for $MU / SK Hynix / Samsung memory relative to supply. He probably has higher visibility into the memory bottleneck than others… https://t.co/iszX0YJHuS</p>
-        </details>
-        
-                <div class="tweet-action-row" aria-label="static tweet action bar"><span class="tweet-action" title="回复" aria-label="回复"><i>○</i></span><span class="tweet-action" title="转发" aria-label="转发"><i>↻</i></span><span class="tweet-action" title="喜欢" aria-label="喜欢"><i>♡</i></span><span class="tweet-action" title="浏览" aria-label="浏览"><i>▥</i></span><span class="tweet-action" title="保存" aria-label="保存"><i>□</i></span></div>
-                <p class="tweet-ledger-note">
-                  <a href="https://x.com/aleabitoreddit/status/2070413682996347069" target="_blank" rel="noreferrer">tweet_id 2070413682996347069</a>
-                  <span>｜score 66</span>
-                  <span>｜Ticker: MU</span>
-                  <span>｜主题: memory_hbm, ai_semicap_supply_chain</span>
-                </p>
-              </div>
-            </article>
-            
-            <article class="tweet-ledger-row tweet-card" data-change-type="risk">
-              <div class="tweet-ledger-body">
-                <div class="tweet-head">
-                  <div class="tweet-author-line">
-                    <span class="tweet-author-name">Serenity</span>
-                    <span class="tweet-verified" aria-label="verified">✓</span>
-                    <span class="tweet-handle">@aleabitoreddit</span>
-                    <span class="tweet-time">· 07 · 2026-06-26</span>
-                  </div>
-                  <span class="tweet-more" aria-hidden="true">•••</span>
-                </div>
-                <div class="tweet-ledger-tags">
-                  <span class="primary">风险扰动</span>
-                  <span>扰动</span>
-                  <span>未归桶环节</span>
-                  <span>具体对象需回看原文</span>
-                  <span>强</span>
-                </div>
-                <p class="tweet-translation">中文精翻：“重要的不是蛋，而是那只鹅本身。” 市场看到今天这份投资者演示后，SoftBank 今天可能下跌了 13.5%。另外，Altman 想要 1 万亿美元估值导致 OpenAI IPO 可能推迟到 2027 年，也可能是一个小原因。</p>
-                
-        <details class="tweet-original-details">
-          <summary>原文：“What matters is not the eggs, it is the Goose itself” SoftBank probably down -13.5% today after markets saw this investor presentation today. Also the OpenAI IPO possible 2027 de…</summary>
-          <p>“What matters is not the eggs, it is the Goose itself” SoftBank probably down -13.5% today after markets saw this investor presentation today. Also the OpenAI IPO possible 2027 delay cause Altman wanted a $1T valuation might have been a small cause… https://t.co/q3edagxCBd</p>
-        </details>
-        
-                <div class="tweet-action-row" aria-label="static tweet action bar"><span class="tweet-action" title="回复" aria-label="回复"><i>○</i></span><span class="tweet-action" title="转发" aria-label="转发"><i>↻</i></span><span class="tweet-action" title="喜欢" aria-label="喜欢"><i>♡</i></span><span class="tweet-action" title="浏览" aria-label="浏览"><i>▥</i></span><span class="tweet-action" title="保存" aria-label="保存"><i>□</i></span></div>
-                <p class="tweet-ledger-note">
-                  <a href="https://x.com/aleabitoreddit/status/2070373235452162540" target="_blank" rel="noreferrer">tweet_id 2070373235452162540</a>
-                  <span>｜score 17</span>
-                  <span>｜Ticker: n/a</span>
-                  <span>｜主题: n/a</span>
-                </p>
-              </div>
-            </article>
-            
-            <article class="tweet-ledger-row tweet-card" data-change-type="price">
-              <div class="tweet-ledger-body">
-                <div class="tweet-head">
-                  <div class="tweet-author-line">
-                    <span class="tweet-author-name">Serenity</span>
-                    <span class="tweet-verified" aria-label="verified">✓</span>
-                    <span class="tweet-handle">@aleabitoreddit</span>
-                    <span class="tweet-time">· 08 · 2026-06-26</span>
-                  </div>
-                  <span class="tweet-more" aria-hidden="true">•••</span>
-                </div>
-                <div class="tweet-ledger-tags">
-                  <span class="primary">涨价/ASP</span>
-                  <span>升温</span>
-                  <span>电力/功率/供配电</span>
-                  <span>800V / 电力设备</span>
-                  <span>强</span>
-                </div>
-                <p class="tweet-translation">中文精翻：看起来功率半导体已经开始涨价。这个主题上对美国功率半导体链条是正面信号，从 $AOSL 到 $POWI，在 800V DC 转换完全到来之前就已经有迹象。中国扬杰科技宣布今年第二次涨价，自 7 月 1 日起全产品线提价 10%-15%。重庆华润微、士兰微和新洁能也涨价了。Digitimes 引述称，这一轮涨价中“需求比成本发挥了更大作用”，需求来自 AI 数据中心、能源系统和新能源车。另一个潜在受益方向是制造这些产品的上游材料公司，包括铜、锡等有色金属，塑封料、化学品和封装耗材。报道还称，“几乎所有主要中国功率半导体厂商都已在 2026 年涨价。” 因此，对功率半导体相邻链条是正向传导：减少中国驱动的价格压力、改善定价、验证需求。</p>
-                
-        <details class="tweet-original-details">
-          <summary>原文：Looks like Power Semis are already starting price hikes. Which is bullish thematically for US power semi trade from $AOSL to $POWI, before the 800V DC shift fully hits. China&#x27;s Ya…</summary>
-          <p>Looks like Power Semis are already starting price hikes. Which is bullish thematically for US power semi trade from $AOSL to $POWI, before the 800V DC shift fully hits. China&#x27;s Yangjie Technology, announced a 2nd price increase this year, raising prices across its full product range by 10%-15%, July 1. Chongqing China…</p>
-        </details>
-        
-                <div class="tweet-action-row" aria-label="static tweet action bar"><span class="tweet-action" title="回复" aria-label="回复"><i>○</i></span><span class="tweet-action" title="转发" aria-label="转发"><i>↻</i></span><span class="tweet-action" title="喜欢" aria-label="喜欢"><i>♡</i></span><span class="tweet-action" title="浏览" aria-label="浏览"><i>▥</i></span><span class="tweet-action" title="保存" aria-label="保存"><i>□</i></span></div>
-                <p class="tweet-ledger-note">
-                  <a href="https://x.com/aleabitoreddit/status/2070304723262210194" target="_blank" rel="noreferrer">tweet_id 2070304723262210194</a>
-                  <span>｜score 33</span>
-                  <span>｜Ticker: AOSL, POWI</span>
-                  <span>｜主题: power_grid</span>
-                </p>
-              </div>
-            </article>
-            
-            <article class="tweet-ledger-row tweet-card" data-change-type="tech_progress">
-              <div class="tweet-ledger-body">
-                <div class="tweet-head">
-                  <div class="tweet-author-line">
-                    <span class="tweet-author-name">Serenity</span>
-                    <span class="tweet-verified" aria-label="verified">✓</span>
-                    <span class="tweet-handle">@aleabitoreddit</span>
-                    <span class="tweet-time">· 09 · 2026-06-25</span>
-                  </div>
-                  <span class="tweet-more" aria-hidden="true">•••</span>
-                </div>
-                <div class="tweet-ledger-tags">
-                  <span class="primary">技术进步</span>
-                  <span>新增/升温</span>
-                  <span>HBM/存储/内存带宽</span>
-                  <span>HBM / DRAM</span>
-                  <span>中</span>
-                </div>
-                <p class="tweet-translation">中文精翻：算了，我要去填 $WEN 的工作申请，然后在垃圾箱后面扎营。就算 $MU 和 $SNDK 今天表现这么夸张，也救不了我的组合。不过我还是给日本加油，希望瑞典被 2-0 碾压，用来代表那 20% 的下跌。</p>
-                
-        <details class="tweet-original-details">
-          <summary>原文：Nah, gonna fill out the job application for $WEN and set up camp behind the dumpsters. Even $MU and $SNDK ridiculous performance today couldn&#x27;t save my port. Cheering on Japan tho…</summary>
-          <p>Nah, gonna fill out the job application for $WEN and set up camp behind the dumpsters. Even $MU and $SNDK ridiculous performance today couldn&#x27;t save my port. Cheering on Japan though, hoping Sweden gets mogged with a 2-0 to represent the 20% drop.</p>
-        </details>
-        
-                <div class="tweet-action-row" aria-label="static tweet action bar"><span class="tweet-action" title="回复" aria-label="回复"><i>○</i></span><span class="tweet-action" title="转发" aria-label="转发"><i>↻</i></span><span class="tweet-action" title="喜欢" aria-label="喜欢"><i>♡</i></span><span class="tweet-action" title="浏览" aria-label="浏览"><i>▥</i></span><span class="tweet-action" title="保存" aria-label="保存"><i>□</i></span></div>
-                <p class="tweet-ledger-note">
-                  <a href="https://x.com/aleabitoreddit/status/2070189253573890167" target="_blank" rel="noreferrer">tweet_id 2070189253573890167</a>
-                  <span>｜score 39</span>
-                  <span>｜Ticker: MU, SNDK, WEN</span>
-                  <span>｜主题: memory_hbm</span>
-                </p>
-              </div>
-            </article>
-            
-            <article class="tweet-ledger-row tweet-card" data-change-type="tech_route">
-              <div class="tweet-ledger-body">
-                <div class="tweet-head">
-                  <div class="tweet-author-line">
-                    <span class="tweet-author-name">Serenity</span>
-                    <span class="tweet-verified" aria-label="verified">✓</span>
-                    <span class="tweet-handle">@aleabitoreddit</span>
-                    <span class="tweet-time">· 10 · 2026-06-25</span>
-                  </div>
-                  <span class="tweet-more" aria-hidden="true">•••</span>
-                </div>
-                <div class="tweet-ledger-tags">
-                  <span class="primary">技术路线变化</span>
-                  <span>升温</span>
-                  <span>CPO/光通信/激光器</span>
-                  <span>CPO / NPO / 光互连</span>
-                  <span>强</span>
-                </div>
-                <p class="tweet-translation">中文精翻：哦，我觉得你误解了。价格下跌时，我其实比以往任何时候都更乐观。$SIVE 约 19 亿美元市值下，你有：$GFS 参考激光器；用于 $NVDA NVLink 生态中 Ayar 等公司的 CPO scale-up 激光器；用于 $POET 等公司的 CPO scale-out；用于 $JBL 等公司的 1.6T+ 可插拔光模块；以及用于 ELS 量产的 O-Net。也就是说，这些 hyperscaler 供应商都在尽可能围绕 Sivers 这个激光瓶颈创造产出。问题只是 Win Semi 和其他合作伙伴能生产多少，而 $SIVE 能拿到约 60% 毛利率，并有向下扩展 TAM 的可选性。瑞典媒体一直看空的最近 15% 股本扩张，是为了纳斯达克上市流通盘和 M&amp;A（而且只是授权）。你现在看到的，是潜在做空者运行非法机器人农场、瑞典媒体在瑞典交易所看空一家瑞典公司，再叠加总体宏观下跌。约 1.4 亿美元可转债是真实存在的，但对美国机构来说是小钱。等数据出来后，我们可能会看到更多机构持有。但这也是为什么 $SIVE 应优先推进纳斯达克上市，避免继续处理这种噪音和本地媒体。至于 $AAOI 在 100 亿美元市值下，你有：一家端到端美国激光/设计/组装企业，预测 2027 年下半年初 H1 月收入 4.71 亿美元；还有 $AMD 等其他 hyperscaler 显然在讨论 LTA。它们可能在通过约 14 亿美元 ATM 融资后手里有大量现金（4 亿 + 4 亿多 + 6 亿）。只要管理层不是胡说，这些夸张收入预测基本就是关键。它让我想起去年 $NBIS 在预测 70-90 亿美元 ARR 时跌到 70 美元，随着时间线接近又恢复到 250 美元以上。感觉像既视感。我只是等两者都进入放量爬坡。光子类通常比其他方向波动更大。</p>
-                
-        <details class="tweet-original-details">
-          <summary>原文：oh i think u misunderstand... I&#x27;m actually more bullish than ever as prices go down. $SIVE at ~$1.9B MC you have: - $GFS reference laser - laser for Ayar and others in $NVDA NVLin…</summary>
-          <p>oh i think u misunderstand... I&#x27;m actually more bullish than ever as prices go down. $SIVE at ~$1.9B MC you have: - $GFS reference laser - laser for Ayar and others in $NVDA NVLink ecosystem for CPO scale up - $POET and others for CPO scale out - $JBL and others for 1.6T+ pluggable optical transcivers - O-Net for ELS…</p>
-        </details>
-        
-                <div class="tweet-action-row" aria-label="static tweet action bar"><span class="tweet-action" title="回复" aria-label="回复"><i>○</i></span><span class="tweet-action" title="转发" aria-label="转发"><i>↻</i></span><span class="tweet-action" title="喜欢" aria-label="喜欢"><i>♡</i></span><span class="tweet-action" title="浏览" aria-label="浏览"><i>▥</i></span><span class="tweet-action" title="保存" aria-label="保存"><i>□</i></span></div>
-                <p class="tweet-ledger-note">
-                  <a href="https://x.com/aleabitoreddit/status/2070179074048409662" target="_blank" rel="noreferrer">tweet_id 2070179074048409662</a>
-                  <span>｜score 85</span>
-                  <span>｜Ticker: AAOI, AMD, GFS, JBL, NBIS, NVDA, POET, SIVE</span>
-                  <span>｜主题: optical_cpo, memory_hbm, neocloud_financing, ai_semicap_supply_chain</span>
-                </p>
-              </div>
-            </article>
-            
-            <article class="tweet-ledger-row tweet-card" data-change-type="tech_route">
-              <div class="tweet-ledger-body">
-                <div class="tweet-head">
-                  <div class="tweet-author-line">
-                    <span class="tweet-author-name">Serenity</span>
-                    <span class="tweet-verified" aria-label="verified">✓</span>
-                    <span class="tweet-handle">@aleabitoreddit</span>
-                    <span class="tweet-time">· 11 · 2026-06-25</span>
-                  </div>
-                  <span class="tweet-more" aria-hidden="true">•••</span>
-                </div>
-                <div class="tweet-ledger-tags">
-                  <span class="primary">技术路线变化</span>
-                  <span>升温</span>
-                  <span>CPO/光通信/激光器</span>
-                  <span>InP / 激光器</span>
-                  <span>强</span>
-                </div>
-                <p class="tweet-translation">中文精翻：感觉唯一没崩的，只有 $MU 这类存储、指数，或者 Intel 这种大盘半导体。光子链从 $AXTI 到 $SIVE 跌了 40%；航天从 $ASTS 到 $RKLB 一个月跌了 40%；热门 AI 名字如 $PLTR 年初至今跌约 35%；软件如 $CRM 下跌 40%；比特币跌破 6 万美元，以太坊跌破 1,600 美元。在鹰派美联储叙事和潜在加息下，确实不好受。不过，相比 mega cap，这种下跌也有点像流动性较差资产的保证金清算导致的过度反应。再看后续会怎样，通常长期来看基本面会压过流动性冲击。我个人仍然看好 AI 建设和上游 AI capex 受益方向，但 1-2 次潜在加息确实不帮忙。</p>
-                
-        <details class="tweet-original-details">
-          <summary>原文：Feels like the only thing that hasn’t crashed… Is memory like $MU, indexes, or large cap semis like Intel so far. - Photonics from $AXTI to $SIVE down 40%. - Space from $ASTS and…</summary>
-          <p>Feels like the only thing that hasn’t crashed… Is memory like $MU, indexes, or large cap semis like Intel so far. - Photonics from $AXTI to $SIVE down 40%. - Space from $ASTS and $RKLB down 40% 1M. - Popular AI names like $PLTR is down ~35% YTD. - Software like $CRM down -40%. - Bitcoin sub &lt;60k, Ethereum sub &lt;$16k. N…</p>
-        </details>
-        
-                <div class="tweet-action-row" aria-label="static tweet action bar"><span class="tweet-action" title="回复" aria-label="回复"><i>○</i></span><span class="tweet-action" title="转发" aria-label="转发"><i>↻</i></span><span class="tweet-action" title="喜欢" aria-label="喜欢"><i>♡</i></span><span class="tweet-action" title="浏览" aria-label="浏览"><i>▥</i></span><span class="tweet-action" title="保存" aria-label="保存"><i>□</i></span></div>
-                <p class="tweet-ledger-note">
-                  <a href="https://x.com/aleabitoreddit/status/2070157835137434015" target="_blank" rel="noreferrer">tweet_id 2070157835137434015</a>
-                  <span>｜score 84</span>
-                  <span>｜Ticker: ASTS, AXTI, CRM, MU, PLTR, RKLB, SIVE</span>
-                  <span>｜主题: optical_cpo, inp_compound_semi, memory_hbm, neocloud_financing, ai_semicap_supply_chain</span>
-                </p>
+            <article class="weekly-event" data-change-type="tech_route">
+              <span class="weekly-event-label">技术路线变化</span>
+              <div>
+                <strong>Serenity 的讨论重心转向 Physical AI/机器人/光学 的技术路线或架构变化，具体对象是 机器人执行器/光学。</strong>
+                <small>2026-07-02｜tweet_id 2072741541404406008｜机器人执行器/光学</small>
               </div>
             </article>
             </div>
+      </section>
       <p class="muted-note">Serenity 是供应链 thesis lens，适合看瓶颈和映射方向；它不替代公告、财报、行情事实或正式研究判断。</p>
     </div>
     
-        
-    <div class="brief-desk lang lang-en" data-brief-desk="aleabitoreddit">
-      <div class="tweet-ledger">
-            <article class="tweet-ledger-row tweet-card" data-change-type="supply_release">
-              <div class="tweet-ledger-body">
-                <div class="tweet-head">
-                  <div class="tweet-author-line">
-                    <span class="tweet-author-name">Serenity</span>
-                    <span class="tweet-verified" aria-label="verified">✓</span>
-                    <span class="tweet-handle">@aleabitoreddit</span>
-                    <span class="tweet-time">· 01 · 2026-06-28</span>
-                  </div>
-                  <span class="tweet-more" aria-hidden="true">•••</span>
-                </div>
-                <div class="tweet-ledger-tags">
-                  <span class="primary">Supply Release</span>
-                  <span>Heating up</span>
-                  <span>Passives / Resistors</span>
-                  <span>InP / lasers</span>
-                  <span>Medium</span>
-                </div>
-                
-                
-        <details class="tweet-original-details">
-          <summary>Original：Guess we finally found why $META signed massive agreements with Neoclouds like $NBIS back in March... And why Gemini got super nerfed. $GOOGL reportedly restricted Meta&#x27;s capacity…</summary>
-          <p>Guess we finally found why $META signed massive agreements with Neoclouds like $NBIS back in March... And why Gemini got super nerfed. $GOOGL reportedly restricted Meta&#x27;s capacity in March 2026 because of compute restraints. Google&#x27;s CEO said from last earnings computing power restrictions prevented Google Cloud from…</p>
-        </details>
-        
-                <div class="tweet-action-row" aria-label="static tweet action bar"><span class="tweet-action" title="Reply" aria-label="Reply"><i>○</i></span><span class="tweet-action" title="Repost" aria-label="Repost"><i>↻</i></span><span class="tweet-action" title="Like" aria-label="Like"><i>♡</i></span><span class="tweet-action" title="View" aria-label="View"><i>▥</i></span><span class="tweet-action" title="Save" aria-label="Save"><i>□</i></span></div>
-                <p class="tweet-ledger-note">
-                  <a href="https://x.com/aleabitoreddit/status/2071135874100990438" target="_blank" rel="noreferrer">tweet_id 2071135874100990438</a>
-                  <span>｜score 57</span>
-                  <span>｜Tickers: GOOGL, META, NBIS</span>
-                  <span>｜Themes: neocloud_financing, power_grid, ai_semicap_supply_chain</span>
-                </p>
+      
+    <div class="weekly-body lang lang-en">
+      <section class="weekly-block">
+        <h4>Weekly Read</h4>
+        <ol class="weekly-judgments"><li><span>01</span><p>This weekly window contains 47 tweets; core themes: AI Semi Supply Chain 25；Physical AI / Defense Optics 20；HBM / Memory Bandwidth 18；CPO / Optical Interconnect 17；Neocloud Financing Quality 14.</p></li><li><span>02</span><p>In the last 7 days, Serenity mainly discussed AAOI long thesis, bear debate and optical-module rerating; InP substrate exports, CSP supply diversification and compound-semi supply security;…</p></li><li><span>03</span><p>In the last 7 days, Serenity mainly discussed SK hynix, HBM, memory supply, allocation and the storage price cycle; CoPoS/CoWoS, advanced packaging, packaging tools and raw Korean-engineer…</p></li><li><span>04</span><p>In the last 7 days, Serenity mainly discussed SK hynix, HBM, memory supply, allocation and the storage price cycle; InP substrate exports, CSP supply diversification and compound-semi suppl…</p></li><li><span>05</span><p>Structured event tags cluster around: Supply Tightness, Technology Route Shift; these are research clues from tweet assets only.</p></li></ol>
+      </section>
+      <div class="weekly-signal-grid">
+        <section class="weekly-signal">
+          <b>Supply-chain Links</b>
+          <div class="ticker-pill-row"><span class="ticker-pill"><b>AI Semi Supply Chain</b>25</span><span class="ticker-pill"><b>Physical AI / Defense Optics</b>20</span><span class="ticker-pill"><b>HBM / Memory Bandwidth</b>18</span><span class="ticker-pill"><b>CPO / Optical Interconnect</b>17</span><span class="ticker-pill"><b>Neocloud Financing Quality</b>14</span><span class="ticker-pill"><b>Power / Grid Chain</b>7</span><span class="ticker-pill"><b>InP / Compound Semis</b>7</span></div>
+        </section>
+        <section class="weekly-signal">
+          <b>Frequent Tickers</b>
+          <div class="ticker-pill-row"><span class="ticker-pill"><b>META</b>11</span><span class="ticker-pill"><b>AMZN</b>9</span><span class="ticker-pill"><b>NVDA</b>9</span><span class="ticker-pill"><b>TSLA</b>9</span><span class="ticker-pill"><b>CCXI</b>8</span><span class="ticker-pill"><b>NBIS</b>7</span><span class="ticker-pill"><b>SIVE</b>6</span><span class="ticker-pill"><b>LITE</b>5</span><span class="ticker-pill"><b>AAOI</b>4</span><span class="ticker-pill"><b>GOOGL</b>4</span></div>
+        </section>
+        <section class="weekly-signal">
+          <b>Rising Tickers</b>
+          <div class="ticker-pill-row"><span class="ticker-pill ticker-pill-rising"><b>META</b>+11</span><span class="ticker-pill ticker-pill-rising"><b>CCXI</b>+8</span><span class="ticker-pill ticker-pill-rising"><b>AMZN</b>+7</span><span class="ticker-pill ticker-pill-rising"><b>TSLA</b>+6</span><span class="ticker-pill ticker-pill-rising"><b>NVDA</b>+5</span><span class="ticker-pill ticker-pill-rising"><b>NBIS</b>+4</span><span class="ticker-pill ticker-pill-rising"><b>GOOGL</b>+3</span><span class="ticker-pill ticker-pill-rising"><b>MELI</b>+3</span><span class="ticker-pill ticker-pill-rising"><b>CBRS</b>+1</span><span class="ticker-pill ticker-pill-rising"><b>COHR</b>+1</span></div>
+        </section>
+        <section class="weekly-signal">
+          <b>Evidence Anchors</b>
+          <div class="brief-anchor-list">
+            <span class="brief-anchor">
+              <b>2026-07-02</b>
+              <span><em>tweet_id 2072726120706007465</em><small>Photonics is backed by actual revenue numbers and it&#x27;s an architectural shift championed by $NVDA. Quantum barely h…</small></span>
+            </span>
+            
+            <span class="brief-anchor">
+              <b>2026-07-02</b>
+              <span><em>tweet_id 2072760446617280650</em><small>Always a fun time seeing semi markets crash from Bloomberg report framing once again… UBS analyst on $META report:…</small></span>
+            </span>
+            
+            <span class="brief-anchor">
+              <b>2026-07-03</b>
+              <span><em>tweet_id 2072936659369517341</em><small>Be SemiAnalysis: - Post a scathing piece on CPO delays + optical company valuations, causing a crash. Which $NVDA,…</small></span>
+            </span>
+            
+            <span class="brief-anchor">
+              <b>2026-07-01</b>
+              <span><em>tweet_id 2072178393878290789</em><small>Just some of the more interesting news I came across recently: 1. MS: Revised China humanoid shipments to reach 50,…</small></span>
+            </span>
+            </div>
+        </section>
+      </div>
+      <section class="weekly-block">
+        <h4>Industry-change Tags</h4>
+        <div class="weekly-event-list">
+            <article class="weekly-event" data-change-type="shortage">
+              <span class="weekly-event-label">Supply Tightness</span>
+              <div>
+                <strong>Serenity points to tightness around robot actuators / optics within Advanced Packaging / Substrates; read it as a bottleneck clue, not a verified market fact.</strong>
+                <small>2026-07-01｜tweet_id 2072161782005936487｜robot actuators / optics</small>
               </div>
             </article>
             
-            <article class="tweet-ledger-row tweet-card" data-change-type="tech_route">
-              <div class="tweet-ledger-body">
-                <div class="tweet-head">
-                  <div class="tweet-author-line">
-                    <span class="tweet-author-name">Serenity</span>
-                    <span class="tweet-verified" aria-label="verified">✓</span>
-                    <span class="tweet-handle">@aleabitoreddit</span>
-                    <span class="tweet-time">· 02 · 2026-06-27</span>
-                  </div>
-                  <span class="tweet-more" aria-hidden="true">•••</span>
-                </div>
-                <div class="tweet-ledger-tags">
-                  <span class="primary">Technology Route Shift</span>
-                  <span>New / heating</span>
-                  <span>HBM / Memory Bandwidth</span>
-                  <span>InP / lasers</span>
-                  <span>Medium</span>
-                </div>
-                
-                
-        <details class="tweet-original-details">
-          <summary>Original：Robotics is next. Both deal count and investment amounts are skyrocketing per pitchbook March data (source: a16z) Good thing is: the same AI DC exposure often has cross-exposure t…</summary>
-          <p>Robotics is next. Both deal count and investment amounts are skyrocketing per pitchbook March data (source: a16z) Good thing is: the same AI DC exposure often has cross-exposure to humanoid ramp. Like DRAM/NAND with memory (on humanoid inference/storage) or DFB lasers with photonics (FMCW LiDAR vision/sensing). Right…</p>
-        </details>
-        
-                <div class="tweet-action-row" aria-label="static tweet action bar"><span class="tweet-action" title="Reply" aria-label="Reply"><i>○</i></span><span class="tweet-action" title="Repost" aria-label="Repost"><i>↻</i></span><span class="tweet-action" title="Like" aria-label="Like"><i>♡</i></span><span class="tweet-action" title="View" aria-label="View"><i>▥</i></span><span class="tweet-action" title="Save" aria-label="Save"><i>□</i></span></div>
-                <p class="tweet-ledger-note">
-                  <a href="https://x.com/aleabitoreddit/status/2070789923108798545" target="_blank" rel="noreferrer">tweet_id 2070789923108798545</a>
-                  <span>｜score 62</span>
-                  <span>｜Tickers: AMZN, TSLA</span>
-                  <span>｜Themes: optical_cpo, memory_hbm, robotics_physical_ai</span>
-                </p>
+            <article class="weekly-event" data-change-type="tech_route">
+              <span class="weekly-event-label">Technology Route Shift</span>
+              <div>
+                <strong>Serenity is shifting the discussion toward route or architecture change in CPO / Optical / Lasers, with CPO / NPO / optical interconnect as the concrete object.</strong>
+                <small>2026-07-02｜tweet_id 2072726120706007465｜CPO / NPO / optical interconnect</small>
               </div>
             </article>
             
-            <article class="tweet-ledger-row tweet-card" data-change-type="tech_progress">
-              <div class="tweet-ledger-body">
-                <div class="tweet-head">
-                  <div class="tweet-author-line">
-                    <span class="tweet-author-name">Serenity</span>
-                    <span class="tweet-verified" aria-label="verified">✓</span>
-                    <span class="tweet-handle">@aleabitoreddit</span>
-                    <span class="tweet-time">· 03 · 2026-06-27</span>
-                  </div>
-                  <span class="tweet-more" aria-hidden="true">•••</span>
-                </div>
-                <div class="tweet-ledger-tags">
-                  <span class="primary">Technology Progress</span>
-                  <span>New</span>
-                  <span>Unbucketed link</span>
-                  <span>Read original text for object</span>
-                  <span>Medium</span>
-                </div>
-                
-                
-        <details class="tweet-original-details">
-          <summary>Original：Kinda nutty OpenAI’s is launching its heavyweight 5.6 Sol frontier model on $CBRS. At up to 750 tokens/sec, which is obscene performance. American inference go brrr. I actually pi…</summary>
-          <p>Kinda nutty OpenAI’s is launching its heavyweight 5.6 Sol frontier model on $CBRS. At up to 750 tokens/sec, which is obscene performance. American inference go brrr. I actually picked up starter positions on Cerebras for the first time in the ~170s (below $185 IPO price) after seeing this news yesterday. Feels like va…</p>
-        </details>
-        
-                <div class="tweet-action-row" aria-label="static tweet action bar"><span class="tweet-action" title="Reply" aria-label="Reply"><i>○</i></span><span class="tweet-action" title="Repost" aria-label="Repost"><i>↻</i></span><span class="tweet-action" title="Like" aria-label="Like"><i>♡</i></span><span class="tweet-action" title="View" aria-label="View"><i>▥</i></span><span class="tweet-action" title="Save" aria-label="Save"><i>□</i></span></div>
-                <p class="tweet-ledger-note">
-                  <a href="https://x.com/aleabitoreddit/status/2070754658868687086" target="_blank" rel="noreferrer">tweet_id 2070754658868687086</a>
-                  <span>｜score 42</span>
-                  <span>｜Tickers: CBRS, JBL</span>
-                  <span>｜Themes: n/a</span>
-                </p>
+            <article class="weekly-event" data-change-type="tech_route">
+              <span class="weekly-event-label">Technology Route Shift</span>
+              <div>
+                <strong>Serenity is shifting the discussion toward route or architecture change in Advanced Packaging / Substrates, with InP / lasers as the concrete object.</strong>
+                <small>2026-07-02｜tweet_id 2072760446617280650｜InP / lasers</small>
               </div>
             </article>
             
-            <article class="tweet-ledger-row tweet-card" data-change-type="tech_route">
-              <div class="tweet-ledger-body">
-                <div class="tweet-head">
-                  <div class="tweet-author-line">
-                    <span class="tweet-author-name">Serenity</span>
-                    <span class="tweet-verified" aria-label="verified">✓</span>
-                    <span class="tweet-handle">@aleabitoreddit</span>
-                    <span class="tweet-time">· 04 · 2026-06-27</span>
-                  </div>
-                  <span class="tweet-more" aria-hidden="true">•••</span>
-                </div>
-                <div class="tweet-ledger-tags">
-                  <span class="primary">Technology Route Shift</span>
-                  <span>Heating up</span>
-                  <span>CPO / Optical / Lasers</span>
-                  <span>CPO / NPO / optical interconnect</span>
-                  <span>Strong</span>
-                </div>
-                
-                
-        <details class="tweet-original-details">
-          <summary>Original：$SPCX / Elon Musk acquires Mesh, an optical networking startup. Which is working on 1.6T OSFP (pluggable). It’s seems they own the optical engine/packaging side of things, but lik…</summary>
-          <p>$SPCX / Elon Musk acquires Mesh, an optical networking startup. Which is working on 1.6T OSFP (pluggable). It’s seems they own the optical engine/packaging side of things, but likely sources CW DFB lasers off merchant companies. $SIVE is one of the more startup friendly plausible merchant suppliers as seen with Ayar t…</p>
-        </details>
-        
-                <div class="tweet-action-row" aria-label="static tweet action bar"><span class="tweet-action" title="Reply" aria-label="Reply"><i>○</i></span><span class="tweet-action" title="Repost" aria-label="Repost"><i>↻</i></span><span class="tweet-action" title="Like" aria-label="Like"><i>♡</i></span><span class="tweet-action" title="View" aria-label="View"><i>▥</i></span><span class="tweet-action" title="Save" aria-label="Save"><i>□</i></span></div>
-                <p class="tweet-ledger-note">
-                  <a href="https://x.com/aleabitoreddit/status/2070691462354993543" target="_blank" rel="noreferrer">tweet_id 2070691462354993543</a>
-                  <span>｜score 54</span>
-                  <span>｜Tickers: LITE, MTSI, POET, SIVE, SPCX</span>
-                  <span>｜Themes: optical_cpo, memory_hbm</span>
-                </p>
-              </div>
-            </article>
-            
-            <article class="tweet-ledger-row tweet-card" data-change-type="tech_route">
-              <div class="tweet-ledger-body">
-                <div class="tweet-head">
-                  <div class="tweet-author-line">
-                    <span class="tweet-author-name">Serenity</span>
-                    <span class="tweet-verified" aria-label="verified">✓</span>
-                    <span class="tweet-handle">@aleabitoreddit</span>
-                    <span class="tweet-time">· 05 · 2026-06-26</span>
-                  </div>
-                  <span class="tweet-more" aria-hidden="true">•••</span>
-                </div>
-                <div class="tweet-ledger-tags">
-                  <span class="primary">Technology Route Shift</span>
-                  <span>Heating up</span>
-                  <span>CPO / Optical / Lasers</span>
-                  <span>InP / lasers</span>
-                  <span>Strong</span>
-                </div>
-                
-                
-        <details class="tweet-original-details">
-          <summary>Original：OFC I&#x27;m aware. But I&#x27;m personally sleeping comfortably since I have conviction in my hyperscaler mapping research with $SIVE. And yes, I still have my million+ share position. Not…</summary>
-          <p>OFC I&#x27;m aware. But I&#x27;m personally sleeping comfortably since I have conviction in my hyperscaler mapping research with $SIVE. And yes, I still have my million+ share position. Not sure if people realize this: but I&#x27;m only here to share my thoughts/ideas. I don&#x27;t control market volatility, what decisions you all make,…</p>
-        </details>
-        
-                <div class="tweet-action-row" aria-label="static tweet action bar"><span class="tweet-action" title="Reply" aria-label="Reply"><i>○</i></span><span class="tweet-action" title="Repost" aria-label="Repost"><i>↻</i></span><span class="tweet-action" title="Like" aria-label="Like"><i>♡</i></span><span class="tweet-action" title="View" aria-label="View"><i>▥</i></span><span class="tweet-action" title="Save" aria-label="Save"><i>□</i></span></div>
-                <p class="tweet-ledger-note">
-                  <a href="https://x.com/aleabitoreddit/status/2070444675337503166" target="_blank" rel="noreferrer">tweet_id 2070444675337503166</a>
-                  <span>｜score 86</span>
-                  <span>｜Tickers: EWY, IREN, LITE, NBIS, QQQ, SIVE</span>
-                  <span>｜Themes: optical_cpo, inp_compound_semi, memory_hbm, neocloud_financing</span>
-                </p>
-              </div>
-            </article>
-            
-            <article class="tweet-ledger-row tweet-card" data-change-type="shortage">
-              <div class="tweet-ledger-body">
-                <div class="tweet-head">
-                  <div class="tweet-author-line">
-                    <span class="tweet-author-name">Serenity</span>
-                    <span class="tweet-verified" aria-label="verified">✓</span>
-                    <span class="tweet-handle">@aleabitoreddit</span>
-                    <span class="tweet-time">· 06 · 2026-06-26</span>
-                  </div>
-                  <span class="tweet-more" aria-hidden="true">•••</span>
-                </div>
-                <div class="tweet-ledger-tags">
-                  <span class="primary">Supply Tightness</span>
-                  <span>Continuing</span>
-                  <span>Advanced Packaging / Substrates</span>
-                  <span>InP / lasers</span>
-                  <span>Medium</span>
-                </div>
-                
-                
-        <details class="tweet-original-details">
-          <summary>Original：Just Elon Musk casually sounding the alarm. On the massive demand + price hikes for $MU / SK Hynix / Samsung memory relative to supply. He probably has higher visibility into the…</summary>
-          <p>Just Elon Musk casually sounding the alarm. On the massive demand + price hikes for $MU / SK Hynix / Samsung memory relative to supply. He probably has higher visibility into the memory bottleneck than others… https://t.co/iszX0YJHuS</p>
-        </details>
-        
-                <div class="tweet-action-row" aria-label="static tweet action bar"><span class="tweet-action" title="Reply" aria-label="Reply"><i>○</i></span><span class="tweet-action" title="Repost" aria-label="Repost"><i>↻</i></span><span class="tweet-action" title="Like" aria-label="Like"><i>♡</i></span><span class="tweet-action" title="View" aria-label="View"><i>▥</i></span><span class="tweet-action" title="Save" aria-label="Save"><i>□</i></span></div>
-                <p class="tweet-ledger-note">
-                  <a href="https://x.com/aleabitoreddit/status/2070413682996347069" target="_blank" rel="noreferrer">tweet_id 2070413682996347069</a>
-                  <span>｜score 66</span>
-                  <span>｜Tickers: MU</span>
-                  <span>｜Themes: memory_hbm, ai_semicap_supply_chain</span>
-                </p>
-              </div>
-            </article>
-            
-            <article class="tweet-ledger-row tweet-card" data-change-type="risk">
-              <div class="tweet-ledger-body">
-                <div class="tweet-head">
-                  <div class="tweet-author-line">
-                    <span class="tweet-author-name">Serenity</span>
-                    <span class="tweet-verified" aria-label="verified">✓</span>
-                    <span class="tweet-handle">@aleabitoreddit</span>
-                    <span class="tweet-time">· 07 · 2026-06-26</span>
-                  </div>
-                  <span class="tweet-more" aria-hidden="true">•••</span>
-                </div>
-                <div class="tweet-ledger-tags">
-                  <span class="primary">Risk / Disruption</span>
-                  <span>Disruption</span>
-                  <span>Unbucketed link</span>
-                  <span>Read original text for object</span>
-                  <span>Strong</span>
-                </div>
-                
-                
-        <details class="tweet-original-details">
-          <summary>Original：“What matters is not the eggs, it is the Goose itself” SoftBank probably down -13.5% today after markets saw this investor presentation today. Also the OpenAI IPO possible 2027 de…</summary>
-          <p>“What matters is not the eggs, it is the Goose itself” SoftBank probably down -13.5% today after markets saw this investor presentation today. Also the OpenAI IPO possible 2027 delay cause Altman wanted a $1T valuation might have been a small cause… https://t.co/q3edagxCBd</p>
-        </details>
-        
-                <div class="tweet-action-row" aria-label="static tweet action bar"><span class="tweet-action" title="Reply" aria-label="Reply"><i>○</i></span><span class="tweet-action" title="Repost" aria-label="Repost"><i>↻</i></span><span class="tweet-action" title="Like" aria-label="Like"><i>♡</i></span><span class="tweet-action" title="View" aria-label="View"><i>▥</i></span><span class="tweet-action" title="Save" aria-label="Save"><i>□</i></span></div>
-                <p class="tweet-ledger-note">
-                  <a href="https://x.com/aleabitoreddit/status/2070373235452162540" target="_blank" rel="noreferrer">tweet_id 2070373235452162540</a>
-                  <span>｜score 17</span>
-                  <span>｜Tickers: n/a</span>
-                  <span>｜Themes: n/a</span>
-                </p>
-              </div>
-            </article>
-            
-            <article class="tweet-ledger-row tweet-card" data-change-type="price">
-              <div class="tweet-ledger-body">
-                <div class="tweet-head">
-                  <div class="tweet-author-line">
-                    <span class="tweet-author-name">Serenity</span>
-                    <span class="tweet-verified" aria-label="verified">✓</span>
-                    <span class="tweet-handle">@aleabitoreddit</span>
-                    <span class="tweet-time">· 08 · 2026-06-26</span>
-                  </div>
-                  <span class="tweet-more" aria-hidden="true">•••</span>
-                </div>
-                <div class="tweet-ledger-tags">
-                  <span class="primary">Pricing / ASP</span>
-                  <span>Heating up</span>
-                  <span>Power / Grid / Power Semis</span>
-                  <span>800V / power equipment</span>
-                  <span>Strong</span>
-                </div>
-                
-                
-        <details class="tweet-original-details">
-          <summary>Original：Looks like Power Semis are already starting price hikes. Which is bullish thematically for US power semi trade from $AOSL to $POWI, before the 800V DC shift fully hits. China&#x27;s Ya…</summary>
-          <p>Looks like Power Semis are already starting price hikes. Which is bullish thematically for US power semi trade from $AOSL to $POWI, before the 800V DC shift fully hits. China&#x27;s Yangjie Technology, announced a 2nd price increase this year, raising prices across its full product range by 10%-15%, July 1. Chongqing China…</p>
-        </details>
-        
-                <div class="tweet-action-row" aria-label="static tweet action bar"><span class="tweet-action" title="Reply" aria-label="Reply"><i>○</i></span><span class="tweet-action" title="Repost" aria-label="Repost"><i>↻</i></span><span class="tweet-action" title="Like" aria-label="Like"><i>♡</i></span><span class="tweet-action" title="View" aria-label="View"><i>▥</i></span><span class="tweet-action" title="Save" aria-label="Save"><i>□</i></span></div>
-                <p class="tweet-ledger-note">
-                  <a href="https://x.com/aleabitoreddit/status/2070304723262210194" target="_blank" rel="noreferrer">tweet_id 2070304723262210194</a>
-                  <span>｜score 33</span>
-                  <span>｜Tickers: AOSL, POWI</span>
-                  <span>｜Themes: power_grid</span>
-                </p>
-              </div>
-            </article>
-            
-            <article class="tweet-ledger-row tweet-card" data-change-type="tech_progress">
-              <div class="tweet-ledger-body">
-                <div class="tweet-head">
-                  <div class="tweet-author-line">
-                    <span class="tweet-author-name">Serenity</span>
-                    <span class="tweet-verified" aria-label="verified">✓</span>
-                    <span class="tweet-handle">@aleabitoreddit</span>
-                    <span class="tweet-time">· 09 · 2026-06-25</span>
-                  </div>
-                  <span class="tweet-more" aria-hidden="true">•••</span>
-                </div>
-                <div class="tweet-ledger-tags">
-                  <span class="primary">Technology Progress</span>
-                  <span>New / heating</span>
-                  <span>HBM / Memory Bandwidth</span>
-                  <span>HBM / DRAM</span>
-                  <span>Medium</span>
-                </div>
-                
-                
-        <details class="tweet-original-details">
-          <summary>Original：Nah, gonna fill out the job application for $WEN and set up camp behind the dumpsters. Even $MU and $SNDK ridiculous performance today couldn&#x27;t save my port. Cheering on Japan tho…</summary>
-          <p>Nah, gonna fill out the job application for $WEN and set up camp behind the dumpsters. Even $MU and $SNDK ridiculous performance today couldn&#x27;t save my port. Cheering on Japan though, hoping Sweden gets mogged with a 2-0 to represent the 20% drop.</p>
-        </details>
-        
-                <div class="tweet-action-row" aria-label="static tweet action bar"><span class="tweet-action" title="Reply" aria-label="Reply"><i>○</i></span><span class="tweet-action" title="Repost" aria-label="Repost"><i>↻</i></span><span class="tweet-action" title="Like" aria-label="Like"><i>♡</i></span><span class="tweet-action" title="View" aria-label="View"><i>▥</i></span><span class="tweet-action" title="Save" aria-label="Save"><i>□</i></span></div>
-                <p class="tweet-ledger-note">
-                  <a href="https://x.com/aleabitoreddit/status/2070189253573890167" target="_blank" rel="noreferrer">tweet_id 2070189253573890167</a>
-                  <span>｜score 39</span>
-                  <span>｜Tickers: MU, SNDK, WEN</span>
-                  <span>｜Themes: memory_hbm</span>
-                </p>
-              </div>
-            </article>
-            
-            <article class="tweet-ledger-row tweet-card" data-change-type="tech_route">
-              <div class="tweet-ledger-body">
-                <div class="tweet-head">
-                  <div class="tweet-author-line">
-                    <span class="tweet-author-name">Serenity</span>
-                    <span class="tweet-verified" aria-label="verified">✓</span>
-                    <span class="tweet-handle">@aleabitoreddit</span>
-                    <span class="tweet-time">· 10 · 2026-06-25</span>
-                  </div>
-                  <span class="tweet-more" aria-hidden="true">•••</span>
-                </div>
-                <div class="tweet-ledger-tags">
-                  <span class="primary">Technology Route Shift</span>
-                  <span>Heating up</span>
-                  <span>CPO / Optical / Lasers</span>
-                  <span>CPO / NPO / optical interconnect</span>
-                  <span>Strong</span>
-                </div>
-                
-                
-        <details class="tweet-original-details">
-          <summary>Original：oh i think u misunderstand... I&#x27;m actually more bullish than ever as prices go down. $SIVE at ~$1.9B MC you have: - $GFS reference laser - laser for Ayar and others in $NVDA NVLin…</summary>
-          <p>oh i think u misunderstand... I&#x27;m actually more bullish than ever as prices go down. $SIVE at ~$1.9B MC you have: - $GFS reference laser - laser for Ayar and others in $NVDA NVLink ecosystem for CPO scale up - $POET and others for CPO scale out - $JBL and others for 1.6T+ pluggable optical transcivers - O-Net for ELS…</p>
-        </details>
-        
-                <div class="tweet-action-row" aria-label="static tweet action bar"><span class="tweet-action" title="Reply" aria-label="Reply"><i>○</i></span><span class="tweet-action" title="Repost" aria-label="Repost"><i>↻</i></span><span class="tweet-action" title="Like" aria-label="Like"><i>♡</i></span><span class="tweet-action" title="View" aria-label="View"><i>▥</i></span><span class="tweet-action" title="Save" aria-label="Save"><i>□</i></span></div>
-                <p class="tweet-ledger-note">
-                  <a href="https://x.com/aleabitoreddit/status/2070179074048409662" target="_blank" rel="noreferrer">tweet_id 2070179074048409662</a>
-                  <span>｜score 85</span>
-                  <span>｜Tickers: AAOI, AMD, GFS, JBL, NBIS, NVDA, POET, SIVE</span>
-                  <span>｜Themes: optical_cpo, memory_hbm, neocloud_financing, ai_semicap_supply_chain</span>
-                </p>
-              </div>
-            </article>
-            
-            <article class="tweet-ledger-row tweet-card" data-change-type="tech_route">
-              <div class="tweet-ledger-body">
-                <div class="tweet-head">
-                  <div class="tweet-author-line">
-                    <span class="tweet-author-name">Serenity</span>
-                    <span class="tweet-verified" aria-label="verified">✓</span>
-                    <span class="tweet-handle">@aleabitoreddit</span>
-                    <span class="tweet-time">· 11 · 2026-06-25</span>
-                  </div>
-                  <span class="tweet-more" aria-hidden="true">•••</span>
-                </div>
-                <div class="tweet-ledger-tags">
-                  <span class="primary">Technology Route Shift</span>
-                  <span>Heating up</span>
-                  <span>CPO / Optical / Lasers</span>
-                  <span>InP / lasers</span>
-                  <span>Strong</span>
-                </div>
-                
-                
-        <details class="tweet-original-details">
-          <summary>Original：Feels like the only thing that hasn’t crashed… Is memory like $MU, indexes, or large cap semis like Intel so far. - Photonics from $AXTI to $SIVE down 40%. - Space from $ASTS and…</summary>
-          <p>Feels like the only thing that hasn’t crashed… Is memory like $MU, indexes, or large cap semis like Intel so far. - Photonics from $AXTI to $SIVE down 40%. - Space from $ASTS and $RKLB down 40% 1M. - Popular AI names like $PLTR is down ~35% YTD. - Software like $CRM down -40%. - Bitcoin sub &lt;60k, Ethereum sub &lt;$16k. N…</p>
-        </details>
-        
-                <div class="tweet-action-row" aria-label="static tweet action bar"><span class="tweet-action" title="Reply" aria-label="Reply"><i>○</i></span><span class="tweet-action" title="Repost" aria-label="Repost"><i>↻</i></span><span class="tweet-action" title="Like" aria-label="Like"><i>♡</i></span><span class="tweet-action" title="View" aria-label="View"><i>▥</i></span><span class="tweet-action" title="Save" aria-label="Save"><i>□</i></span></div>
-                <p class="tweet-ledger-note">
-                  <a href="https://x.com/aleabitoreddit/status/2070157835137434015" target="_blank" rel="noreferrer">tweet_id 2070157835137434015</a>
-                  <span>｜score 84</span>
-                  <span>｜Tickers: ASTS, AXTI, CRM, MU, PLTR, RKLB, SIVE</span>
-                  <span>｜Themes: optical_cpo, inp_compound_semi, memory_hbm, neocloud_financing, ai_semicap_supply_chain</span>
-                </p>
+            <article class="weekly-event" data-change-type="tech_route">
+              <span class="weekly-event-label">Technology Route Shift</span>
+              <div>
+                <strong>Serenity is shifting the discussion toward route or architecture change in Physical AI / Robotics / Optics, with robot actuators / optics as the concrete object.</strong>
+                <small>2026-07-02｜tweet_id 2072741541404406008｜robot actuators / optics</small>
               </div>
             </article>
             </div>
+      </section>
       <p class="muted-note">Serenity is a supply-chain thesis lens for bottlenecks and mapping direction; it does not replace filings, financials, market facts or formal research judgment.</p>
     </div>
     
-      </div>
     </article>
     
-    <article class="brief-card">
-      <header class="brief-titlebar">
-        <div class="kol-feed-head">
-          <div class="kol-feed-meta">
-            <span class="brief-eyebrow"><span class="lang lang-zh">当前 3 日窗口</span><span class="lang lang-en">Current 3-day window</span></span>
-            <h3>jukan05 <small>@jukan05</small></h3>
-            <p>2026-06-25 -> 2026-06-28 · <span class="lang lang-zh">韩国/亚洲供应链新闻流：事件密度、原始情报和事实催化补充。</span><span class="lang lang-en">Korea/Asia supply-chain news flow: event density, raw intel and catalyst-like facts.</span></p>
-          </div>
-          <strong class="kol-feed-count">21</strong>
+    <article class="weekly-card">
+      <header>
+        <div>
+          <span class="brief-eyebrow"><span class="lang lang-zh">本周 KOL 周报</span><span class="lang lang-en">Weekly KOL Report</span></span>
+          <h3>jukan05 <small>@jukan05</small></h3>
+          <p>2026-06-27 -> 2026-07-04 · <span class="lang lang-zh">韩国/亚洲供应链新闻流：事件密度、原始情报和事实催化补充。</span><span class="lang lang-en">Korea/Asia supply-chain news flow: event density, raw intel and catalyst-like facts.</span></p>
         </div>
+        <strong class="weekly-count">65</strong>
       </header>
-      <div class="brief-body">
-        
-    <div class="brief-desk lang lang-zh" data-brief-desk="jukan05">
-      <div class="tweet-ledger">
-            <article class="tweet-ledger-row tweet-card" data-change-type="price">
-              <div class="tweet-ledger-body">
-                <div class="tweet-head">
-                  <div class="tweet-author-line">
-                    <span class="tweet-author-name">jukan05</span>
-                    <span class="tweet-verified" aria-label="verified">✓</span>
-                    <span class="tweet-handle">@jukan05</span>
-                    <span class="tweet-time">· 01 · 2026-06-28</span>
-                  </div>
-                  <span class="tweet-more" aria-hidden="true">•••</span>
-                </div>
-                <div class="tweet-ledger-tags">
-                  <span class="primary">涨价/ASP</span>
-                  <span>新增</span>
-                  <span>被动元件/电阻电容</span>
-                  <span>芯片电阻 / MLCC</span>
-                  <span>强</span>
-                </div>
-                <p class="tweet-translation">中文精翻：中日铝电解电容龙头加入涨价。随着下半年开始，铝电解电容进入新一轮涨价。日本第三大铝电解电容厂 Rubycon 已发布涨价通知，自 8 月 1 日起提价，且不排除之后再次提价。巧合的是，中国铝电解电容龙头江海也宣布涨价。随着中日两地龙头厂商陆续加入涨价，台湾厂商向客户转嫁成本压力的条件也变得有利。Rubycon 加入后，日本前三大铝电解电容厂 Nippon Chemi-Con、Nichicon 和 Rubycon 实际上都已行动涨价。由于铝电解电容在终端设备中的用量少于 MLCC 或芯片电阻，过去涨价周期中涨幅相对温和。但这次在 AI 基础设施热潮下，日本龙头厂商同步涨价，被供应链视为少见现象。除了三家日本厂商向 AI 服务器出货量不小以外，导针、铝壳等上游原材料成本压力大幅上升，也支撑了这轮日本铝电解电容厂涨价。Rubycon 在通知中强调，尽管中东冲突趋于结束，但原油价格仍在高位，并已显著影响石油相关产品价格和供应，因此其供应商已在原材料、辅材甚至物流成本上全面涨价。Rubycon 还指出，以铝、铜、锡为中心的金属材料价格自去年以来持续攀升，并在当前环境下进一步加剧，主要原材料价格仍处在前所未有的高位。在现有条件下，仅靠公司自身努力吸收成本已极为困难。为了稳定供应和维持业务，公司不得不调整产品价格，未来还可能根据国际形势再次调整。根据 Rubycon 通知，涨价范围覆盖铝电解电容、固态铝电容和薄膜电容，新价格预计自 2026 年 8 月 1 日生效。6 月下旬，中国铝电解电容龙头江海也向客户发出涨价通知，同样称铝箔、化工原料、碳粉等原材料以及电力成本持续大幅上涨，且涨势尚未缓解。由于当前成本结构已远超原定定价模型，公司表示产品调价不可避免，调整范围覆盖铝电解电容、薄膜电容和超级电容三类产品。</p>
-                
-        <details class="tweet-original-details">
-          <summary>原文：Chinese and Japanese Aluminum Capacitor Leaders Join the Price Hike As the second half of the year begins, aluminum capacitors have entered a new round of price increases. Rubycon…</summary>
-          <p>Chinese and Japanese Aluminum Capacitor Leaders Join the Price Hike As the second half of the year begins, aluminum capacitors have entered a new round of price increases. Rubycon, Japan&#x27;s third largest aluminum capacitor maker, has issued a price increase notice, raising prices starting August 1, and has not ruled ou…</p>
-        </details>
-        
-                <div class="tweet-action-row" aria-label="static tweet action bar"><span class="tweet-action" title="回复" aria-label="回复"><i>○</i></span><span class="tweet-action" title="转发" aria-label="转发"><i>↻</i></span><span class="tweet-action" title="喜欢" aria-label="喜欢"><i>♡</i></span><span class="tweet-action" title="浏览" aria-label="浏览"><i>▥</i></span><span class="tweet-action" title="保存" aria-label="保存"><i>□</i></span></div>
-                <p class="tweet-ledger-note">
-                  <a href="https://x.com/jukan05/status/2071372409194926132" target="_blank" rel="noreferrer">tweet_id 2071372409194926132</a>
-                  <span>｜score 17</span>
-                  <span>｜Ticker: n/a</span>
-                  <span>｜主题: ai_semicap_supply_chain, memory_hbm, power_grid</span>
-                </p>
+      
+    <div class="weekly-body lang lang-zh">
+      <section class="weekly-block">
+        <h4>本周判断</h4>
+        <ol class="weekly-judgments"><li><span>01</span><p>本周窗口共 65 条推文，核心讨论集中在：HBM / 存储 38；AI 半导体供应链 27；Neocloud 融资质量 13；电力 / 功率链 8；InP / 化合物半导体 4。</p></li><li><span>02</span><p>jukan05 近 7 日在HBM / 存储里主要说：SK hynix、HBM、内存供给、锁单和存储价格周期、CoPoS/CoWoS、先进封装、封装设备和韩国工程师原始信息。</p></li><li><span>03</span><p>jukan05 近 7 日在AI 半导体供应链里主要说：SK hynix、HBM、内存供给、锁单和存储价格周期、Samsung 代工 AMD CPU、TSMC/Intel 竞争和先进节点扩产、CoPoS/CoWoS、先进封装、封装设备和韩国工程师原始信息。</p></li><li><span>04</span><p>jukan05 近 7 日在Neocloud 融资质量里主要说：NBIS/IREN/CRWV 等 Neocloud 融资结构、合约质量和机构持股、AI 股票估值、Anthropic/Mythos 和二级市场情绪。</p></li><li><span>05</span><p>结构化事件主要落在：供需紧张、涨价/ASP；这些只是推文资产中的研究线索。</p></li></ol>
+      </section>
+      <div class="weekly-signal-grid">
+        <section class="weekly-signal">
+          <b>产业链环节</b>
+          <div class="ticker-pill-row"><span class="ticker-pill"><b>HBM / 存储</b>38</span><span class="ticker-pill"><b>AI 半导体供应链</b>27</span><span class="ticker-pill"><b>Neocloud 融资质量</b>13</span><span class="ticker-pill"><b>电力 / 功率链</b>8</span><span class="ticker-pill"><b>InP / 化合物半导体</b>4</span><span class="ticker-pill"><b>Physical AI / 国防光学</b>2</span></div>
+        </section>
+        <section class="weekly-signal">
+          <b>高频 ticker</b>
+          <div class="ticker-pill-row"><span class="ticker-pill"><b>INTC</b>4</span><span class="ticker-pill"><b>AAPL</b>2</span><span class="ticker-pill"><b>META</b>2</span><span class="ticker-pill"><b>MU</b>2</span><span class="ticker-pill"><b>AMD</b>1</span><span class="ticker-pill"><b>GOOGL</b>1</span><span class="ticker-pill"><b>NVDA</b>1</span><span class="ticker-pill"><b>AVGO</b>1</span><span class="ticker-pill"><b>MRVL</b>1</span><span class="ticker-pill"><b>QCOM</b>1</span></div>
+        </section>
+        <section class="weekly-signal">
+          <b>近端升温 ticker</b>
+          <div class="ticker-pill-row"><span class="ticker-pill ticker-pill-rising"><b>INTC</b>+4</span><span class="ticker-pill ticker-pill-rising"><b>AAPL</b>+2</span><span class="ticker-pill ticker-pill-rising"><b>META</b>+2</span><span class="ticker-pill ticker-pill-rising"><b>AMD</b>+1</span><span class="ticker-pill ticker-pill-rising"><b>ASML</b>+1</span><span class="ticker-pill ticker-pill-rising"><b>ASX</b>+1</span><span class="ticker-pill ticker-pill-rising"><b>AVGO</b>+1</span><span class="ticker-pill ticker-pill-rising"><b>GOOGL</b>+1</span><span class="ticker-pill ticker-pill-rising"><b>MRVL</b>+1</span><span class="ticker-pill ticker-pill-rising"><b>NVDA</b>+1</span></div>
+        </section>
+        <section class="weekly-signal">
+          <b>证据锚点</b>
+          <div class="brief-anchor-list">
+            <span class="brief-anchor">
+              <b>2026-06-29</b>
+              <span><em>tweet_id 2071745275325190339</em><small>KIS: On Memory LTAs With suppliers&#x27; commodity DRAM operating margins already at 80% and gross margins above 90%, pr…</small></span>
+            </span>
+            
+            <span class="brief-anchor">
+              <b>2026-06-28</b>
+              <span><em>tweet_id 2071366174408085902</em><small>&gt;&gt;TSMC Teams Up with Winbond to Build a Homegrown DRAM Supply Chain for AI • Amid deepening global memory shortages…</small></span>
+            </span>
+            
+            <span class="brief-anchor">
+              <b>2026-06-28</b>
+              <span><em>tweet_id 2071139712082022855</em><small>Yes, MU is not Nvidia. But going forward, it may become even more important than Nvidia. Think about it. Inference…</small></span>
+            </span>
+            
+            <span class="brief-anchor">
+              <b>2026-07-02</b>
+              <span><em>tweet_id 2072799162559840616</em><small>What surprised me most in the Anthropic–Samsung Foundry news is that Anthropic is also considering Samsung Foundry’…</small></span>
+            </span>
+            </div>
+        </section>
+      </div>
+      <section class="weekly-block">
+        <h4>产业变化标签</h4>
+        <div class="weekly-event-list">
+            <article class="weekly-event" data-change-type="shortage">
+              <span class="weekly-event-label">供需紧张</span>
+              <div>
+                <strong>jukan05 指向 电力/功率/供配电 中 800V / 电力设备 的供需紧张，先当作瓶颈线索，不当作已核验事实。</strong>
+                <small>2026-06-28｜tweet_id 2071126659307385321｜800V / 电力设备</small>
               </div>
             </article>
             
-            <article class="tweet-ledger-row tweet-card" data-change-type="shortage">
-              <div class="tweet-ledger-body">
-                <div class="tweet-head">
-                  <div class="tweet-author-line">
-                    <span class="tweet-author-name">jukan05</span>
-                    <span class="tweet-verified" aria-label="verified">✓</span>
-                    <span class="tweet-handle">@jukan05</span>
-                    <span class="tweet-time">· 02 · 2026-06-28</span>
-                  </div>
-                  <span class="tweet-more" aria-hidden="true">•••</span>
-                </div>
-                <div class="tweet-ledger-tags">
-                  <span class="primary">供需紧张</span>
-                  <span>延续</span>
-                  <span>先进封装/载板/键合</span>
-                  <span>HBM / DRAM</span>
-                  <span>中</span>
-                </div>
-                <p class="tweet-translation">中文精翻：TSMC 联手 Winbond，为 AI 建立本土 DRAM 供应链。在全球存储短缺加深之际，TSMC 已将 Winbond 纳入其 AI 芯片供应链。双方将合作下一代 WoW（Wafer on Wafer）3D 堆叠技术，由 Winbond 供应 DRAM 晶圆，TSMC 将其与逻辑晶圆堆叠，用于 AI 芯片。TSMC 过去主要依赖 Samsung Electronics、SK Hynix 和 Micron，但随着供应短缺加剧，它被认为正在推动采购来源多元化。业内认为，这一合作不是简单供货协议，而是 TSMC 培育台湾本土存储供应链、增强 AI 芯片供应稳定性的战略组成部分。对 Winbond 来说，这预计将成为正式进入 AI 服务器和高性能计算供应链的跳板。</p>
-                
-        <details class="tweet-original-details">
-          <summary>原文：&gt;&gt;TSMC Teams Up with Winbond to Build a Homegrown DRAM Supply Chain for AI • Amid deepening global memory shortages, TSMC has brought Winbond into its AI chip supply chain. The tw…</summary>
-          <p>&gt;&gt;TSMC Teams Up with Winbond to Build a Homegrown DRAM Supply Chain for AI • Amid deepening global memory shortages, TSMC has brought Winbond into its AI chip supply chain. The two companies will collaborate on next generation WoW (Wafer on Wafer) 3D stacking technology, with Winbond supplying DRAM wafers and TSMC sta…</p>
-        </details>
-        
-                <div class="tweet-action-row" aria-label="static tweet action bar"><span class="tweet-action" title="回复" aria-label="回复"><i>○</i></span><span class="tweet-action" title="转发" aria-label="转发"><i>↻</i></span><span class="tweet-action" title="喜欢" aria-label="喜欢"><i>♡</i></span><span class="tweet-action" title="浏览" aria-label="浏览"><i>▥</i></span><span class="tweet-action" title="保存" aria-label="保存"><i>□</i></span></div>
-                <p class="tweet-ledger-note">
-                  <a href="https://x.com/jukan05/status/2071366174408085902" target="_blank" rel="noreferrer">tweet_id 2071366174408085902</a>
-                  <span>｜score 15</span>
-                  <span>｜Ticker: n/a</span>
-                  <span>｜主题: ai_semicap_supply_chain, memory_hbm</span>
-                </p>
+            <article class="weekly-event" data-change-type="shortage">
+              <span class="weekly-event-label">供需紧张</span>
+              <div>
+                <strong>jukan05 指向 先进封装/载板/键合 中 HBM / DRAM 的供需紧张，先当作瓶颈线索，不当作已核验事实。</strong>
+                <small>2026-06-28｜tweet_id 2071366174408085902｜HBM / DRAM</small>
               </div>
             </article>
             
-            <article class="tweet-ledger-row tweet-card" data-change-type="shortage">
-              <div class="tweet-ledger-body">
-                <div class="tweet-head">
-                  <div class="tweet-author-line">
-                    <span class="tweet-author-name">jukan05</span>
-                    <span class="tweet-verified" aria-label="verified">✓</span>
-                    <span class="tweet-handle">@jukan05</span>
-                    <span class="tweet-time">· 03 · 2026-06-28</span>
-                  </div>
-                  <span class="tweet-more" aria-hidden="true">•••</span>
-                </div>
-                <div class="tweet-ledger-tags">
-                  <span class="primary">供需紧张</span>
-                  <span>延续</span>
-                  <span>被动元件/电阻电容</span>
-                  <span>InP / 激光器</span>
-                  <span>中</span>
-                </div>
-                <p class="tweet-translation">中文精翻：听听 @GavinSBaker 在 All-In 1:04:06 处说的话：“DRAM 是最重要的瓶颈，Elon 把 Terafab 的重点放在存储上，因为他认为存储是最重要的瓶颈。不是激光器，不是电容，不是功率半导体，不是 NAND，也不是 HDD，而是 DRAM。” 连 Elon 都把存储，特别是 DRAM，作为 Terafab 的关键重点。你还认为 DRAM 只是随时可以被中国产品替代的大宗商品吗？这是 Elon 对 DRAM 战略重要性的验证。</p>
-                
-        <details class="tweet-original-details">
-          <summary>原文：Listen to what @GavinSBaker said on All-In at 1:04:06: “DRAM is the most important bottleneck, and Elon is focusing the Terafab on memory because he believes memory is the most im…</summary>
-          <p>Listen to what @GavinSBaker said on All-In at 1:04:06: “DRAM is the most important bottleneck, and Elon is focusing the Terafab on memory because he believes memory is the most important bottleneck. Not lasers, not capacitors, not power semis, not NAND, not HDDs. DRAM.” Even Elon is prioritizing memory, specifically D…</p>
-        </details>
-        
-                <div class="tweet-action-row" aria-label="static tweet action bar"><span class="tweet-action" title="回复" aria-label="回复"><i>○</i></span><span class="tweet-action" title="转发" aria-label="转发"><i>↻</i></span><span class="tweet-action" title="喜欢" aria-label="喜欢"><i>♡</i></span><span class="tweet-action" title="浏览" aria-label="浏览"><i>▥</i></span><span class="tweet-action" title="保存" aria-label="保存"><i>□</i></span></div>
-                <p class="tweet-ledger-note">
-                  <a href="https://x.com/jukan05/status/2071188353131962740" target="_blank" rel="noreferrer">tweet_id 2071188353131962740</a>
-                  <span>｜score 34</span>
-                  <span>｜Ticker: n/a</span>
-                  <span>｜主题: ai_semicap_supply_chain, memory_hbm, power_grid</span>
-                </p>
+            <article class="weekly-event" data-change-type="price">
+              <span class="weekly-event-label">涨价/ASP</span>
+              <div>
+                <strong>jukan05 提到 HBM / DRAM 的价格变化，需要区分产品 ASP、元件涨价和单纯资本市场价格表述。</strong>
+                <small>2026-07-03｜tweet_id 2072901006682427875｜HBM / DRAM</small>
               </div>
             </article>
             
-            <article class="tweet-ledger-row tweet-card" data-change-type="demand">
-              <div class="tweet-ledger-body">
-                <div class="tweet-head">
-                  <div class="tweet-author-line">
-                    <span class="tweet-author-name">jukan05</span>
-                    <span class="tweet-verified" aria-label="verified">✓</span>
-                    <span class="tweet-handle">@jukan05</span>
-                    <span class="tweet-time">· 04 · 2026-06-28</span>
-                  </div>
-                  <span class="tweet-more" aria-hidden="true">•••</span>
-                </div>
-                <div class="tweet-ledger-tags">
-                  <span class="primary">需求结构变化</span>
-                  <span>新增</span>
-                  <span>未归桶环节</span>
-                  <span>具体对象需回看原文</span>
-                  <span>中</span>
-                </div>
-                <p class="tweet-translation">中文精翻：根据 Counterpoint Research 最新分析，Apple 预计将在 2026 年于智能手机、平板电脑和 PC 三个市场都取得历史最高市场份额。$AAPL</p>
-                
-        <details class="tweet-original-details">
-          <summary>原文：According to the latest analysis from Counterpoint Research, Apple is expected to achieve record-high market share across smartphones, tablets, and PCs in 2026. $AAPL https://t.co…</summary>
-          <p>According to the latest analysis from Counterpoint Research, Apple is expected to achieve record-high market share across smartphones, tablets, and PCs in 2026. $AAPL https://t.co/NBFB5rySra</p>
-        </details>
-        
-                <div class="tweet-action-row" aria-label="static tweet action bar"><span class="tweet-action" title="回复" aria-label="回复"><i>○</i></span><span class="tweet-action" title="转发" aria-label="转发"><i>↻</i></span><span class="tweet-action" title="喜欢" aria-label="喜欢"><i>♡</i></span><span class="tweet-action" title="浏览" aria-label="浏览"><i>▥</i></span><span class="tweet-action" title="保存" aria-label="保存"><i>□</i></span></div>
-                <p class="tweet-ledger-note">
-                  <a href="https://x.com/jukan05/status/2071181361956983138" target="_blank" rel="noreferrer">tweet_id 2071181361956983138</a>
-                  <span>｜score 8</span>
-                  <span>｜Ticker: AAPL</span>
-                  <span>｜主题: n/a</span>
-                </p>
-              </div>
-            </article>
-            
-            <article class="tweet-ledger-row tweet-card" data-change-type="tech_route">
-              <div class="tweet-ledger-body">
-                <div class="tweet-head">
-                  <div class="tweet-author-line">
-                    <span class="tweet-author-name">jukan05</span>
-                    <span class="tweet-verified" aria-label="verified">✓</span>
-                    <span class="tweet-handle">@jukan05</span>
-                    <span class="tweet-time">· 05 · 2026-06-28</span>
-                  </div>
-                  <span class="tweet-more" aria-hidden="true">•••</span>
-                </div>
-                <div class="tweet-ledger-tags">
-                  <span class="primary">技术路线变化</span>
-                  <span>新增/升温</span>
-                  <span>CPO/光通信/激光器</span>
-                  <span>FC-BGA / 封装载板</span>
-                  <span>中</span>
-                </div>
-                <p class="tweet-translation">中文精翻：韩国媒体报道称，Samsung Electro-Mechanics 预计本周与 Sumitomo Chemical 签署正式协议，成立玻璃基板合资公司。两家公司将投资 5,000 亿韩元，约合 3.2 亿美元，设立该实体。Samsung Electro-Mechanics 预计将持有合资公司过半股权，并出资约 3,000 亿韩元。报道称，计划是在 Sumitomo Chemical 韩国子公司 Dongwoo Fine-Chem 的平泽厂区设立实体，并于 2028 年初开始运行生产设备。</p>
-                
-        <details class="tweet-original-details">
-          <summary>原文：Korean media reported that Samsung Electro-Mechanics is expected to sign a formal agreement this week with Sumitomo Chemical to establish a glass substrate JV. The two companies w…</summary>
-          <p>Korean media reported that Samsung Electro-Mechanics is expected to sign a formal agreement this week with Sumitomo Chemical to establish a glass substrate JV. The two companies will invest KRW 500 billion, or about USD 320 million, to set up the entity. Samsung Electro-Mechanics is expected to own more than half of t…</p>
-        </details>
-        
-                <div class="tweet-action-row" aria-label="static tweet action bar"><span class="tweet-action" title="回复" aria-label="回复"><i>○</i></span><span class="tweet-action" title="转发" aria-label="转发"><i>↻</i></span><span class="tweet-action" title="喜欢" aria-label="喜欢"><i>♡</i></span><span class="tweet-action" title="浏览" aria-label="浏览"><i>▥</i></span><span class="tweet-action" title="保存" aria-label="保存"><i>□</i></span></div>
-                <p class="tweet-ledger-note">
-                  <a href="https://x.com/jukan05/status/2071177572910850097" target="_blank" rel="noreferrer">tweet_id 2071177572910850097</a>
-                  <span>｜score 10</span>
-                  <span>｜Ticker: n/a</span>
-                  <span>｜主题: inp_compound_semi</span>
-                </p>
-              </div>
-            </article>
-            
-            <article class="tweet-ledger-row tweet-card" data-change-type="shortage">
-              <div class="tweet-ledger-body">
-                <div class="tweet-head">
-                  <div class="tweet-author-line">
-                    <span class="tweet-author-name">jukan05</span>
-                    <span class="tweet-verified" aria-label="verified">✓</span>
-                    <span class="tweet-handle">@jukan05</span>
-                    <span class="tweet-time">· 06 · 2026-06-28</span>
-                  </div>
-                  <span class="tweet-more" aria-hidden="true">•••</span>
-                </div>
-                <div class="tweet-ledger-tags">
-                  <span class="primary">供需紧张</span>
-                  <span>延续</span>
-                  <span>先进封装/载板/键合</span>
-                  <span>HBM / DRAM</span>
-                  <span>中</span>
-                </div>
-                <p class="tweet-translation">中文精翻：是的，MU 不是 Nvidia。但往前看，它可能会变得比 Nvidia 还重要。想想看，推理现在已经直接和钱绑定。但推理并不会因为增加更多 Nvidia GPU 就自动变好。事实上，在推理场景中，GPU 经常因为存储瓶颈而利用率不足、处于闲置。对推理而言，增加更多内存远比增加更多 GPU 更有价值。最终，推理 ROI 取决于存储，而不是 GPU。那为什么大家仍然用 Nvidia 的框架来看 Micron？格局要更大。推理就是存储。</p>
-                
-        <details class="tweet-original-details">
-          <summary>原文：Yes, MU is not Nvidia. But going forward, it may become even more important than Nvidia. Think about it. Inference is now directly tied to money. But inference does not get better…</summary>
-          <p>Yes, MU is not Nvidia. But going forward, it may become even more important than Nvidia. Think about it. Inference is now directly tied to money. But inference does not get better simply by adding more Nvidia GPUs. In fact, GPUs are often underutilized in inference, sitting idle due to memory bottlenecks. For inferenc…</p>
-        </details>
-        
-                <div class="tweet-action-row" aria-label="static tweet action bar"><span class="tweet-action" title="回复" aria-label="回复"><i>○</i></span><span class="tweet-action" title="转发" aria-label="转发"><i>↻</i></span><span class="tweet-action" title="喜欢" aria-label="喜欢"><i>♡</i></span><span class="tweet-action" title="浏览" aria-label="浏览"><i>▥</i></span><span class="tweet-action" title="保存" aria-label="保存"><i>□</i></span></div>
-                <p class="tweet-ledger-note">
-                  <a href="https://x.com/jukan05/status/2071139712082022855" target="_blank" rel="noreferrer">tweet_id 2071139712082022855</a>
-                  <span>｜score 49</span>
-                  <span>｜Ticker: n/a</span>
-                  <span>｜主题: ai_semicap_supply_chain, memory_hbm</span>
-                </p>
-              </div>
-            </article>
-            
-            <article class="tweet-ledger-row tweet-card" data-change-type="shortage">
-              <div class="tweet-ledger-body">
-                <div class="tweet-head">
-                  <div class="tweet-author-line">
-                    <span class="tweet-author-name">jukan05</span>
-                    <span class="tweet-verified" aria-label="verified">✓</span>
-                    <span class="tweet-handle">@jukan05</span>
-                    <span class="tweet-time">· 07 · 2026-06-28</span>
-                  </div>
-                  <span class="tweet-more" aria-hidden="true">•••</span>
-                </div>
-                <div class="tweet-ledger-tags">
-                  <span class="primary">供需紧张</span>
-                  <span>延续</span>
-                  <span>电力/功率/供配电</span>
-                  <span>800V / 电力设备</span>
-                  <span>强</span>
-                </div>
-                <p class="tweet-translation">中文精翻：据 FT 报道，由于算力资源短缺，Google 限制了 Meta 使用 Gemini。Google 现在处在一种并不能像自己希望的那样自由把 Gemini 卖给 Meta 的位置。算力仍然是权力，也是 AI 中最稀缺的资源。</p>
-                
-        <details class="tweet-original-details">
-          <summary>原文：Google reportedly limited Meta’s use of Gemini due to a shortage of compute resources. — FT Google is in a position where it can’t sell Gemini to Meta as freely as it might want t…</summary>
-          <p>Google reportedly limited Meta’s use of Gemini due to a shortage of compute resources. — FT Google is in a position where it can’t sell Gemini to Meta as freely as it might want to. Compute remains power, and the scarcest resource in AI.</p>
-        </details>
-        
-                <div class="tweet-action-row" aria-label="static tweet action bar"><span class="tweet-action" title="回复" aria-label="回复"><i>○</i></span><span class="tweet-action" title="转发" aria-label="转发"><i>↻</i></span><span class="tweet-action" title="喜欢" aria-label="喜欢"><i>♡</i></span><span class="tweet-action" title="浏览" aria-label="浏览"><i>▥</i></span><span class="tweet-action" title="保存" aria-label="保存"><i>□</i></span></div>
-                <p class="tweet-ledger-note">
-                  <a href="https://x.com/jukan05/status/2071126659307385321" target="_blank" rel="noreferrer">tweet_id 2071126659307385321</a>
-                  <span>｜score 24</span>
-                  <span>｜Ticker: n/a</span>
-                  <span>｜主题: power_grid</span>
-                </p>
-              </div>
-            </article>
-            
-            <article class="tweet-ledger-row tweet-card" data-change-type="demand">
-              <div class="tweet-ledger-body">
-                <div class="tweet-head">
-                  <div class="tweet-author-line">
-                    <span class="tweet-author-name">jukan05</span>
-                    <span class="tweet-verified" aria-label="verified">✓</span>
-                    <span class="tweet-handle">@jukan05</span>
-                    <span class="tweet-time">· 08 · 2026-06-28</span>
-                  </div>
-                  <span class="tweet-more" aria-hidden="true">•••</span>
-                </div>
-                <div class="tweet-ledger-tags">
-                  <span class="primary">需求结构变化</span>
-                  <span>延续</span>
-                  <span>AI ASIC/TPU/定制芯片</span>
-                  <span>具体对象需回看原文</span>
-                  <span>中</span>
-                </div>
-                <p class="tweet-translation">中文精翻：很多人指着 CSP 已经出现负现金流，问资本开支怎么还能继续增长。这是个愚蠢的问题。看看 IBM CEO Arvind Krishna 在播客里说的话：“企业 AI 的第一年是净亏损。这正是为什么现在 80% 的公司看起来像失败了。问题在于需要更多工程师、更高 token 成本以及机会成本。第二年才是 10 倍回报开始出现的时候。大多数公司并不是 AI 失败，只是正处在曲线最糟糕的位置，也就是 ROI 压缩并改善之前。” 最终，在这个 10 倍回报拐点上，CSP 自身收入基数会被 AI 扩大，所以即便资本开支绝对额增长，CAPEX/收入比也会放缓，最终形成正循环和飞轮效应。为什么人们判断 CAPEX 时会看未来，判断现金流时却只看现在？现金流也应该把未来现金流提前纳入判断。</p>
-                
-        <details class="tweet-original-details">
-          <summary>原文：Many people point to CSPs already running negative cash flow and ask how on earth CAPEX can keep growing from here. It is a foolish question. Look at what Arvind Krishna (IBM CEO)…</summary>
-          <p>Many people point to CSPs already running negative cash flow and ask how on earth CAPEX can keep growing from here. It is a foolish question. Look at what Arvind Krishna (IBM CEO) said in a podcast conversation. “Year one of enterprise AI is a net loss. That is exactly why 80 percent of companies right now look like t…</p>
-        </details>
-        
-                <div class="tweet-action-row" aria-label="static tweet action bar"><span class="tweet-action" title="回复" aria-label="回复"><i>○</i></span><span class="tweet-action" title="转发" aria-label="转发"><i>↻</i></span><span class="tweet-action" title="喜欢" aria-label="喜欢"><i>♡</i></span><span class="tweet-action" title="浏览" aria-label="浏览"><i>▥</i></span><span class="tweet-action" title="保存" aria-label="保存"><i>□</i></span></div>
-                <p class="tweet-ledger-note">
-                  <a href="https://x.com/jukan05/status/2071122361328476235" target="_blank" rel="noreferrer">tweet_id 2071122361328476235</a>
-                  <span>｜score 12</span>
-                  <span>｜Ticker: n/a</span>
-                  <span>｜主题: ai_semicap_supply_chain</span>
-                </p>
-              </div>
-            </article>
-            
-            <article class="tweet-ledger-row tweet-card" data-change-type="demand">
-              <div class="tweet-ledger-body">
-                <div class="tweet-head">
-                  <div class="tweet-author-line">
-                    <span class="tweet-author-name">jukan05</span>
-                    <span class="tweet-verified" aria-label="verified">✓</span>
-                    <span class="tweet-handle">@jukan05</span>
-                    <span class="tweet-time">· 09 · 2026-06-27</span>
-                  </div>
-                  <span class="tweet-more" aria-hidden="true">•••</span>
-                </div>
-                <div class="tweet-ledger-tags">
-                  <span class="primary">需求结构变化</span>
-                  <span>新增</span>
-                  <span>HBM/存储/内存带宽</span>
-                  <span>HBM / DRAM</span>
-                  <span>中</span>
-                </div>
-                <p class="tweet-translation">中文精翻：本周推荐阅读：SemiAnalysis——中国 CXMT 将挑战 DRAM 既有厂商；Goldman Sachs——美洲科技：硬件，专家网络系列，CPU 服务器需求由更新换代和 Agentic AI 驱动；Morgan Stanley——Old Memory: Better to Buy More；J.P. Morgan——第一性原理，AI 电力基础设施：跟踪电力。</p>
-                
-        <details class="tweet-original-details">
-          <summary>原文：Recommended reads for the week SemiAnalysis — China’s CXMT Is Set to Challenge DRAM Incumbents Goldman Sachs — Americas Technology: Hardware — Expert Network Series: CPU Server De…</summary>
-          <p>Recommended reads for the week SemiAnalysis — China’s CXMT Is Set to Challenge DRAM Incumbents Goldman Sachs — Americas Technology: Hardware — Expert Network Series: CPU Server Demand Driven by Refresh, Agentic AI Morgan Stanley — Old Memory: Better to Buy More J.P. Morgan — First Principles — AI Power Infrastructure:…</p>
-        </details>
-        
-                <div class="tweet-action-row" aria-label="static tweet action bar"><span class="tweet-action" title="回复" aria-label="回复"><i>○</i></span><span class="tweet-action" title="转发" aria-label="转发"><i>↻</i></span><span class="tweet-action" title="喜欢" aria-label="喜欢"><i>♡</i></span><span class="tweet-action" title="浏览" aria-label="浏览"><i>▥</i></span><span class="tweet-action" title="保存" aria-label="保存"><i>□</i></span></div>
-                <p class="tweet-ledger-note">
-                  <a href="https://x.com/jukan05/status/2070800684325179899" target="_blank" rel="noreferrer">tweet_id 2070800684325179899</a>
-                  <span>｜score 29</span>
-                  <span>｜Ticker: n/a</span>
-                  <span>｜主题: memory_hbm, power_grid</span>
-                </p>
-              </div>
-            </article>
-            
-            <article class="tweet-ledger-row tweet-card" data-change-type="tech_route">
-              <div class="tweet-ledger-body">
-                <div class="tweet-head">
-                  <div class="tweet-author-line">
-                    <span class="tweet-author-name">jukan05</span>
-                    <span class="tweet-verified" aria-label="verified">✓</span>
-                    <span class="tweet-handle">@jukan05</span>
-                    <span class="tweet-time">· 10 · 2026-06-26</span>
-                  </div>
-                  <span class="tweet-more" aria-hidden="true">•••</span>
-                </div>
-                <div class="tweet-ledger-tags">
-                  <span class="primary">技术路线变化</span>
-                  <span>新增/升温</span>
-                  <span>被动元件/电阻电容</span>
-                  <span>800V / 电力设备</span>
-                  <span>中</span>
-                </div>
-                <p class="tweet-translation">中文精翻：台湾功率半导体公司 Episil Technologies / 汉磊科技董事长 J. H. Shyu（徐建华）今天对 Tech Taiwan 表示，800V 延迟传闻并不成立。他说：“Nvidia 的目标一直是在 2027 年导入 800VDC 架构。就我所知，一切仍按这个时间表推进。”</p>
-                
-        <details class="tweet-original-details">
-          <summary>原文：J. H. Shyu (徐建華), chairman of Taiwan-based power semiconductor company Episil Technologies / 漢磊科技, pushed back against rumors of an 800V delay in comments to Tech Taiwan today. “N…</summary>
-          <p>J. H. Shyu (徐建華), chairman of Taiwan-based power semiconductor company Episil Technologies / 漢磊科技, pushed back against rumors of an 800V delay in comments to Tech Taiwan today. “Nvidia’s goal has always been to introduce the 800VDC architecture in 2027,” he said. “As far as I know, everything is still proceeding accor…</p>
-        </details>
-        
-                <div class="tweet-action-row" aria-label="static tweet action bar"><span class="tweet-action" title="回复" aria-label="回复"><i>○</i></span><span class="tweet-action" title="转发" aria-label="转发"><i>↻</i></span><span class="tweet-action" title="喜欢" aria-label="喜欢"><i>♡</i></span><span class="tweet-action" title="浏览" aria-label="浏览"><i>▥</i></span><span class="tweet-action" title="保存" aria-label="保存"><i>□</i></span></div>
-                <p class="tweet-ledger-note">
-                  <a href="https://x.com/jukan05/status/2070475755759567125" target="_blank" rel="noreferrer">tweet_id 2070475755759567125</a>
-                  <span>｜score 10</span>
-                  <span>｜Ticker: n/a</span>
-                  <span>｜主题: ai_semicap_supply_chain, power_grid</span>
-                </p>
-              </div>
-            </article>
-            
-            <article class="tweet-ledger-row tweet-card" data-change-type="price">
-              <div class="tweet-ledger-body">
-                <div class="tweet-head">
-                  <div class="tweet-author-line">
-                    <span class="tweet-author-name">jukan05</span>
-                    <span class="tweet-verified" aria-label="verified">✓</span>
-                    <span class="tweet-handle">@jukan05</span>
-                    <span class="tweet-time">· 11 · 2026-06-26</span>
-                  </div>
-                  <span class="tweet-more" aria-hidden="true">•••</span>
-                </div>
-                <div class="tweet-ledger-tags">
-                  <span class="primary">涨价/ASP</span>
-                  <span>新增</span>
-                  <span>HBM/存储/内存带宽</span>
-                  <span>HBM / DRAM</span>
-                  <span>中</span>
-                </div>
-                <p class="tweet-translation">中文精翻：联想：存储价格上涨是“新常态”；高位 DRAM 和 NAND 价格将持续到 2030 年以后。廉价数字设备时代正在结束。联想警告称，DRAM 和 NAND flash 价格已经进入结构性上行周期，即便主要供应商继续扩产，价格也不太可能回到 2025 年初水平。更高成本正在向整个行业传导。未来，包括 PC 和智能手机在内的各类电子设备预计都将面临持续涨价压力，2030 年以后高价格将成为“新常态”。</p>
-                
-        <details class="tweet-original-details">
-          <summary>原文：&gt;&gt; Lenovo: Rising memory prices are the “new normal”; elevated DRAM and NAND pricing to persist beyond 2030 • The era of cheap digital devices is coming to an end. Lenovo warned t…</summary>
-          <p>&gt;&gt; Lenovo: Rising memory prices are the “new normal”; elevated DRAM and NAND pricing to persist beyond 2030 • The era of cheap digital devices is coming to an end. Lenovo warned that DRAM and NAND flash prices have already entered a structural upcycle, and that even if major suppliers continue to expand capacity, pric…</p>
-        </details>
-        
-                <div class="tweet-action-row" aria-label="static tweet action bar"><span class="tweet-action" title="回复" aria-label="回复"><i>○</i></span><span class="tweet-action" title="转发" aria-label="转发"><i>↻</i></span><span class="tweet-action" title="喜欢" aria-label="喜欢"><i>♡</i></span><span class="tweet-action" title="浏览" aria-label="浏览"><i>▥</i></span><span class="tweet-action" title="保存" aria-label="保存"><i>□</i></span></div>
-                <p class="tweet-ledger-note">
-                  <a href="https://x.com/jukan05/status/2070404701510893726" target="_blank" rel="noreferrer">tweet_id 2070404701510893726</a>
-                  <span>｜score 14</span>
-                  <span>｜Ticker: n/a</span>
-                  <span>｜主题: memory_hbm</span>
-                </p>
+            <article class="weekly-event" data-change-type="price">
+              <span class="weekly-event-label">涨价/ASP</span>
+              <div>
+                <strong>jukan05 提到 HBM / DRAM 的价格变化，需要区分产品 ASP、元件涨价和单纯资本市场价格表述。</strong>
+                <small>2026-07-03｜tweet_id 2072908815868330276｜HBM / DRAM</small>
               </div>
             </article>
             </div>
+      </section>
       <p class="muted-note">jukan05 是韩国/亚洲供应链新闻与情报流，适合补事实密度和时间顺序；它不直接进入 Serenity 七链排序或资产映射结论。</p>
     </div>
     
-        
-    <div class="brief-desk lang lang-en" data-brief-desk="jukan05">
-      <div class="tweet-ledger">
-            <article class="tweet-ledger-row tweet-card" data-change-type="price">
-              <div class="tweet-ledger-body">
-                <div class="tweet-head">
-                  <div class="tweet-author-line">
-                    <span class="tweet-author-name">jukan05</span>
-                    <span class="tweet-verified" aria-label="verified">✓</span>
-                    <span class="tweet-handle">@jukan05</span>
-                    <span class="tweet-time">· 01 · 2026-06-28</span>
-                  </div>
-                  <span class="tweet-more" aria-hidden="true">•••</span>
-                </div>
-                <div class="tweet-ledger-tags">
-                  <span class="primary">Pricing / ASP</span>
-                  <span>New</span>
-                  <span>Passives / Resistors</span>
-                  <span>chip resistors / MLCC</span>
-                  <span>Strong</span>
-                </div>
-                
-                
-        <details class="tweet-original-details">
-          <summary>Original：Chinese and Japanese Aluminum Capacitor Leaders Join the Price Hike As the second half of the year begins, aluminum capacitors have entered a new round of price increases. Rubycon…</summary>
-          <p>Chinese and Japanese Aluminum Capacitor Leaders Join the Price Hike As the second half of the year begins, aluminum capacitors have entered a new round of price increases. Rubycon, Japan&#x27;s third largest aluminum capacitor maker, has issued a price increase notice, raising prices starting August 1, and has not ruled ou…</p>
-        </details>
-        
-                <div class="tweet-action-row" aria-label="static tweet action bar"><span class="tweet-action" title="Reply" aria-label="Reply"><i>○</i></span><span class="tweet-action" title="Repost" aria-label="Repost"><i>↻</i></span><span class="tweet-action" title="Like" aria-label="Like"><i>♡</i></span><span class="tweet-action" title="View" aria-label="View"><i>▥</i></span><span class="tweet-action" title="Save" aria-label="Save"><i>□</i></span></div>
-                <p class="tweet-ledger-note">
-                  <a href="https://x.com/jukan05/status/2071372409194926132" target="_blank" rel="noreferrer">tweet_id 2071372409194926132</a>
-                  <span>｜score 17</span>
-                  <span>｜Tickers: n/a</span>
-                  <span>｜Themes: ai_semicap_supply_chain, memory_hbm, power_grid</span>
-                </p>
+      
+    <div class="weekly-body lang lang-en">
+      <section class="weekly-block">
+        <h4>Weekly Read</h4>
+        <ol class="weekly-judgments"><li><span>01</span><p>This weekly window contains 65 tweets; core themes: HBM / Memory Bandwidth 38；AI Semi Supply Chain 27；Neocloud Financing Quality 13；Power / Grid Chain 8；InP / Compound Semis 4.</p></li><li><span>02</span><p>In the last 7 days, jukan05 mainly discussed SK hynix, HBM, memory supply, allocation and the storage price cycle; CoPoS/CoWoS, advanced packaging, packaging tools and raw Korean-engineer i…</p></li><li><span>03</span><p>In the last 7 days, jukan05 mainly discussed SK hynix, HBM, memory supply, allocation and the storage price cycle; Samsung foundry for AMD CPUs, TSMC/Intel competition and leading-node expa…</p></li><li><span>04</span><p>In the last 7 days, jukan05 mainly discussed NBIS/IREN/CRWV neocloud financing structure, contract quality and institutional ownership; AI-stock valuation, Anthropic/Mythos and secondary-ma…</p></li><li><span>05</span><p>Structured event tags cluster around: Supply Tightness, Pricing / ASP; these are research clues from tweet assets only.</p></li></ol>
+      </section>
+      <div class="weekly-signal-grid">
+        <section class="weekly-signal">
+          <b>Supply-chain Links</b>
+          <div class="ticker-pill-row"><span class="ticker-pill"><b>HBM / Memory Bandwidth</b>38</span><span class="ticker-pill"><b>AI Semi Supply Chain</b>27</span><span class="ticker-pill"><b>Neocloud Financing Quality</b>13</span><span class="ticker-pill"><b>Power / Grid Chain</b>8</span><span class="ticker-pill"><b>InP / Compound Semis</b>4</span><span class="ticker-pill"><b>Physical AI / Defense Optics</b>2</span></div>
+        </section>
+        <section class="weekly-signal">
+          <b>Frequent Tickers</b>
+          <div class="ticker-pill-row"><span class="ticker-pill"><b>INTC</b>4</span><span class="ticker-pill"><b>AAPL</b>2</span><span class="ticker-pill"><b>META</b>2</span><span class="ticker-pill"><b>MU</b>2</span><span class="ticker-pill"><b>AMD</b>1</span><span class="ticker-pill"><b>GOOGL</b>1</span><span class="ticker-pill"><b>NVDA</b>1</span><span class="ticker-pill"><b>AVGO</b>1</span><span class="ticker-pill"><b>MRVL</b>1</span><span class="ticker-pill"><b>QCOM</b>1</span></div>
+        </section>
+        <section class="weekly-signal">
+          <b>Rising Tickers</b>
+          <div class="ticker-pill-row"><span class="ticker-pill ticker-pill-rising"><b>INTC</b>+4</span><span class="ticker-pill ticker-pill-rising"><b>AAPL</b>+2</span><span class="ticker-pill ticker-pill-rising"><b>META</b>+2</span><span class="ticker-pill ticker-pill-rising"><b>AMD</b>+1</span><span class="ticker-pill ticker-pill-rising"><b>ASML</b>+1</span><span class="ticker-pill ticker-pill-rising"><b>ASX</b>+1</span><span class="ticker-pill ticker-pill-rising"><b>AVGO</b>+1</span><span class="ticker-pill ticker-pill-rising"><b>GOOGL</b>+1</span><span class="ticker-pill ticker-pill-rising"><b>MRVL</b>+1</span><span class="ticker-pill ticker-pill-rising"><b>NVDA</b>+1</span></div>
+        </section>
+        <section class="weekly-signal">
+          <b>Evidence Anchors</b>
+          <div class="brief-anchor-list">
+            <span class="brief-anchor">
+              <b>2026-06-29</b>
+              <span><em>tweet_id 2071745275325190339</em><small>KIS: On Memory LTAs With suppliers&#x27; commodity DRAM operating margins already at 80% and gross margins above 90%, pr…</small></span>
+            </span>
+            
+            <span class="brief-anchor">
+              <b>2026-06-28</b>
+              <span><em>tweet_id 2071366174408085902</em><small>&gt;&gt;TSMC Teams Up with Winbond to Build a Homegrown DRAM Supply Chain for AI • Amid deepening global memory shortages…</small></span>
+            </span>
+            
+            <span class="brief-anchor">
+              <b>2026-06-28</b>
+              <span><em>tweet_id 2071139712082022855</em><small>Yes, MU is not Nvidia. But going forward, it may become even more important than Nvidia. Think about it. Inference…</small></span>
+            </span>
+            
+            <span class="brief-anchor">
+              <b>2026-07-02</b>
+              <span><em>tweet_id 2072799162559840616</em><small>What surprised me most in the Anthropic–Samsung Foundry news is that Anthropic is also considering Samsung Foundry’…</small></span>
+            </span>
+            </div>
+        </section>
+      </div>
+      <section class="weekly-block">
+        <h4>Industry-change Tags</h4>
+        <div class="weekly-event-list">
+            <article class="weekly-event" data-change-type="shortage">
+              <span class="weekly-event-label">Supply Tightness</span>
+              <div>
+                <strong>jukan05 points to tightness around 800V / power equipment within Power / Grid / Power Semis; read it as a bottleneck clue, not a verified market fact.</strong>
+                <small>2026-06-28｜tweet_id 2071126659307385321｜800V / power equipment</small>
               </div>
             </article>
             
-            <article class="tweet-ledger-row tweet-card" data-change-type="shortage">
-              <div class="tweet-ledger-body">
-                <div class="tweet-head">
-                  <div class="tweet-author-line">
-                    <span class="tweet-author-name">jukan05</span>
-                    <span class="tweet-verified" aria-label="verified">✓</span>
-                    <span class="tweet-handle">@jukan05</span>
-                    <span class="tweet-time">· 02 · 2026-06-28</span>
-                  </div>
-                  <span class="tweet-more" aria-hidden="true">•••</span>
-                </div>
-                <div class="tweet-ledger-tags">
-                  <span class="primary">Supply Tightness</span>
-                  <span>Continuing</span>
-                  <span>Advanced Packaging / Substrates</span>
-                  <span>HBM / DRAM</span>
-                  <span>Medium</span>
-                </div>
-                
-                
-        <details class="tweet-original-details">
-          <summary>Original：&gt;&gt;TSMC Teams Up with Winbond to Build a Homegrown DRAM Supply Chain for AI • Amid deepening global memory shortages, TSMC has brought Winbond into its AI chip supply chain. The tw…</summary>
-          <p>&gt;&gt;TSMC Teams Up with Winbond to Build a Homegrown DRAM Supply Chain for AI • Amid deepening global memory shortages, TSMC has brought Winbond into its AI chip supply chain. The two companies will collaborate on next generation WoW (Wafer on Wafer) 3D stacking technology, with Winbond supplying DRAM wafers and TSMC sta…</p>
-        </details>
-        
-                <div class="tweet-action-row" aria-label="static tweet action bar"><span class="tweet-action" title="Reply" aria-label="Reply"><i>○</i></span><span class="tweet-action" title="Repost" aria-label="Repost"><i>↻</i></span><span class="tweet-action" title="Like" aria-label="Like"><i>♡</i></span><span class="tweet-action" title="View" aria-label="View"><i>▥</i></span><span class="tweet-action" title="Save" aria-label="Save"><i>□</i></span></div>
-                <p class="tweet-ledger-note">
-                  <a href="https://x.com/jukan05/status/2071366174408085902" target="_blank" rel="noreferrer">tweet_id 2071366174408085902</a>
-                  <span>｜score 15</span>
-                  <span>｜Tickers: n/a</span>
-                  <span>｜Themes: ai_semicap_supply_chain, memory_hbm</span>
-                </p>
+            <article class="weekly-event" data-change-type="shortage">
+              <span class="weekly-event-label">Supply Tightness</span>
+              <div>
+                <strong>jukan05 points to tightness around HBM / DRAM within Advanced Packaging / Substrates; read it as a bottleneck clue, not a verified market fact.</strong>
+                <small>2026-06-28｜tweet_id 2071366174408085902｜HBM / DRAM</small>
               </div>
             </article>
             
-            <article class="tweet-ledger-row tweet-card" data-change-type="shortage">
-              <div class="tweet-ledger-body">
-                <div class="tweet-head">
-                  <div class="tweet-author-line">
-                    <span class="tweet-author-name">jukan05</span>
-                    <span class="tweet-verified" aria-label="verified">✓</span>
-                    <span class="tweet-handle">@jukan05</span>
-                    <span class="tweet-time">· 03 · 2026-06-28</span>
-                  </div>
-                  <span class="tweet-more" aria-hidden="true">•••</span>
-                </div>
-                <div class="tweet-ledger-tags">
-                  <span class="primary">Supply Tightness</span>
-                  <span>Continuing</span>
-                  <span>Passives / Resistors</span>
-                  <span>InP / lasers</span>
-                  <span>Medium</span>
-                </div>
-                
-                
-        <details class="tweet-original-details">
-          <summary>Original：Listen to what @GavinSBaker said on All-In at 1:04:06: “DRAM is the most important bottleneck, and Elon is focusing the Terafab on memory because he believes memory is the most im…</summary>
-          <p>Listen to what @GavinSBaker said on All-In at 1:04:06: “DRAM is the most important bottleneck, and Elon is focusing the Terafab on memory because he believes memory is the most important bottleneck. Not lasers, not capacitors, not power semis, not NAND, not HDDs. DRAM.” Even Elon is prioritizing memory, specifically D…</p>
-        </details>
-        
-                <div class="tweet-action-row" aria-label="static tweet action bar"><span class="tweet-action" title="Reply" aria-label="Reply"><i>○</i></span><span class="tweet-action" title="Repost" aria-label="Repost"><i>↻</i></span><span class="tweet-action" title="Like" aria-label="Like"><i>♡</i></span><span class="tweet-action" title="View" aria-label="View"><i>▥</i></span><span class="tweet-action" title="Save" aria-label="Save"><i>□</i></span></div>
-                <p class="tweet-ledger-note">
-                  <a href="https://x.com/jukan05/status/2071188353131962740" target="_blank" rel="noreferrer">tweet_id 2071188353131962740</a>
-                  <span>｜score 34</span>
-                  <span>｜Tickers: n/a</span>
-                  <span>｜Themes: ai_semicap_supply_chain, memory_hbm, power_grid</span>
-                </p>
+            <article class="weekly-event" data-change-type="price">
+              <span class="weekly-event-label">Pricing / ASP</span>
+              <div>
+                <strong>jukan05 flags pricing movement around HBM / DRAM; check whether it is product ASP, component price or only equity-price language.</strong>
+                <small>2026-07-03｜tweet_id 2072901006682427875｜HBM / DRAM</small>
               </div>
             </article>
             
-            <article class="tweet-ledger-row tweet-card" data-change-type="demand">
-              <div class="tweet-ledger-body">
-                <div class="tweet-head">
-                  <div class="tweet-author-line">
-                    <span class="tweet-author-name">jukan05</span>
-                    <span class="tweet-verified" aria-label="verified">✓</span>
-                    <span class="tweet-handle">@jukan05</span>
-                    <span class="tweet-time">· 04 · 2026-06-28</span>
-                  </div>
-                  <span class="tweet-more" aria-hidden="true">•••</span>
-                </div>
-                <div class="tweet-ledger-tags">
-                  <span class="primary">Demand Structure</span>
-                  <span>New</span>
-                  <span>Unbucketed link</span>
-                  <span>Read original text for object</span>
-                  <span>Medium</span>
-                </div>
-                
-                
-        <details class="tweet-original-details">
-          <summary>Original：According to the latest analysis from Counterpoint Research, Apple is expected to achieve record-high market share across smartphones, tablets, and PCs in 2026. $AAPL https://t.co…</summary>
-          <p>According to the latest analysis from Counterpoint Research, Apple is expected to achieve record-high market share across smartphones, tablets, and PCs in 2026. $AAPL https://t.co/NBFB5rySra</p>
-        </details>
-        
-                <div class="tweet-action-row" aria-label="static tweet action bar"><span class="tweet-action" title="Reply" aria-label="Reply"><i>○</i></span><span class="tweet-action" title="Repost" aria-label="Repost"><i>↻</i></span><span class="tweet-action" title="Like" aria-label="Like"><i>♡</i></span><span class="tweet-action" title="View" aria-label="View"><i>▥</i></span><span class="tweet-action" title="Save" aria-label="Save"><i>□</i></span></div>
-                <p class="tweet-ledger-note">
-                  <a href="https://x.com/jukan05/status/2071181361956983138" target="_blank" rel="noreferrer">tweet_id 2071181361956983138</a>
-                  <span>｜score 8</span>
-                  <span>｜Tickers: AAPL</span>
-                  <span>｜Themes: n/a</span>
-                </p>
-              </div>
-            </article>
-            
-            <article class="tweet-ledger-row tweet-card" data-change-type="tech_route">
-              <div class="tweet-ledger-body">
-                <div class="tweet-head">
-                  <div class="tweet-author-line">
-                    <span class="tweet-author-name">jukan05</span>
-                    <span class="tweet-verified" aria-label="verified">✓</span>
-                    <span class="tweet-handle">@jukan05</span>
-                    <span class="tweet-time">· 05 · 2026-06-28</span>
-                  </div>
-                  <span class="tweet-more" aria-hidden="true">•••</span>
-                </div>
-                <div class="tweet-ledger-tags">
-                  <span class="primary">Technology Route Shift</span>
-                  <span>New / heating</span>
-                  <span>CPO / Optical / Lasers</span>
-                  <span>FC-BGA / package substrate</span>
-                  <span>Medium</span>
-                </div>
-                
-                
-        <details class="tweet-original-details">
-          <summary>Original：Korean media reported that Samsung Electro-Mechanics is expected to sign a formal agreement this week with Sumitomo Chemical to establish a glass substrate JV. The two companies w…</summary>
-          <p>Korean media reported that Samsung Electro-Mechanics is expected to sign a formal agreement this week with Sumitomo Chemical to establish a glass substrate JV. The two companies will invest KRW 500 billion, or about USD 320 million, to set up the entity. Samsung Electro-Mechanics is expected to own more than half of t…</p>
-        </details>
-        
-                <div class="tweet-action-row" aria-label="static tweet action bar"><span class="tweet-action" title="Reply" aria-label="Reply"><i>○</i></span><span class="tweet-action" title="Repost" aria-label="Repost"><i>↻</i></span><span class="tweet-action" title="Like" aria-label="Like"><i>♡</i></span><span class="tweet-action" title="View" aria-label="View"><i>▥</i></span><span class="tweet-action" title="Save" aria-label="Save"><i>□</i></span></div>
-                <p class="tweet-ledger-note">
-                  <a href="https://x.com/jukan05/status/2071177572910850097" target="_blank" rel="noreferrer">tweet_id 2071177572910850097</a>
-                  <span>｜score 10</span>
-                  <span>｜Tickers: n/a</span>
-                  <span>｜Themes: inp_compound_semi</span>
-                </p>
-              </div>
-            </article>
-            
-            <article class="tweet-ledger-row tweet-card" data-change-type="shortage">
-              <div class="tweet-ledger-body">
-                <div class="tweet-head">
-                  <div class="tweet-author-line">
-                    <span class="tweet-author-name">jukan05</span>
-                    <span class="tweet-verified" aria-label="verified">✓</span>
-                    <span class="tweet-handle">@jukan05</span>
-                    <span class="tweet-time">· 06 · 2026-06-28</span>
-                  </div>
-                  <span class="tweet-more" aria-hidden="true">•••</span>
-                </div>
-                <div class="tweet-ledger-tags">
-                  <span class="primary">Supply Tightness</span>
-                  <span>Continuing</span>
-                  <span>Advanced Packaging / Substrates</span>
-                  <span>HBM / DRAM</span>
-                  <span>Medium</span>
-                </div>
-                
-                
-        <details class="tweet-original-details">
-          <summary>Original：Yes, MU is not Nvidia. But going forward, it may become even more important than Nvidia. Think about it. Inference is now directly tied to money. But inference does not get better…</summary>
-          <p>Yes, MU is not Nvidia. But going forward, it may become even more important than Nvidia. Think about it. Inference is now directly tied to money. But inference does not get better simply by adding more Nvidia GPUs. In fact, GPUs are often underutilized in inference, sitting idle due to memory bottlenecks. For inferenc…</p>
-        </details>
-        
-                <div class="tweet-action-row" aria-label="static tweet action bar"><span class="tweet-action" title="Reply" aria-label="Reply"><i>○</i></span><span class="tweet-action" title="Repost" aria-label="Repost"><i>↻</i></span><span class="tweet-action" title="Like" aria-label="Like"><i>♡</i></span><span class="tweet-action" title="View" aria-label="View"><i>▥</i></span><span class="tweet-action" title="Save" aria-label="Save"><i>□</i></span></div>
-                <p class="tweet-ledger-note">
-                  <a href="https://x.com/jukan05/status/2071139712082022855" target="_blank" rel="noreferrer">tweet_id 2071139712082022855</a>
-                  <span>｜score 49</span>
-                  <span>｜Tickers: n/a</span>
-                  <span>｜Themes: ai_semicap_supply_chain, memory_hbm</span>
-                </p>
-              </div>
-            </article>
-            
-            <article class="tweet-ledger-row tweet-card" data-change-type="shortage">
-              <div class="tweet-ledger-body">
-                <div class="tweet-head">
-                  <div class="tweet-author-line">
-                    <span class="tweet-author-name">jukan05</span>
-                    <span class="tweet-verified" aria-label="verified">✓</span>
-                    <span class="tweet-handle">@jukan05</span>
-                    <span class="tweet-time">· 07 · 2026-06-28</span>
-                  </div>
-                  <span class="tweet-more" aria-hidden="true">•••</span>
-                </div>
-                <div class="tweet-ledger-tags">
-                  <span class="primary">Supply Tightness</span>
-                  <span>Continuing</span>
-                  <span>Power / Grid / Power Semis</span>
-                  <span>800V / power equipment</span>
-                  <span>Strong</span>
-                </div>
-                
-                
-        <details class="tweet-original-details">
-          <summary>Original：Google reportedly limited Meta’s use of Gemini due to a shortage of compute resources. — FT Google is in a position where it can’t sell Gemini to Meta as freely as it might want t…</summary>
-          <p>Google reportedly limited Meta’s use of Gemini due to a shortage of compute resources. — FT Google is in a position where it can’t sell Gemini to Meta as freely as it might want to. Compute remains power, and the scarcest resource in AI.</p>
-        </details>
-        
-                <div class="tweet-action-row" aria-label="static tweet action bar"><span class="tweet-action" title="Reply" aria-label="Reply"><i>○</i></span><span class="tweet-action" title="Repost" aria-label="Repost"><i>↻</i></span><span class="tweet-action" title="Like" aria-label="Like"><i>♡</i></span><span class="tweet-action" title="View" aria-label="View"><i>▥</i></span><span class="tweet-action" title="Save" aria-label="Save"><i>□</i></span></div>
-                <p class="tweet-ledger-note">
-                  <a href="https://x.com/jukan05/status/2071126659307385321" target="_blank" rel="noreferrer">tweet_id 2071126659307385321</a>
-                  <span>｜score 24</span>
-                  <span>｜Tickers: n/a</span>
-                  <span>｜Themes: power_grid</span>
-                </p>
-              </div>
-            </article>
-            
-            <article class="tweet-ledger-row tweet-card" data-change-type="demand">
-              <div class="tweet-ledger-body">
-                <div class="tweet-head">
-                  <div class="tweet-author-line">
-                    <span class="tweet-author-name">jukan05</span>
-                    <span class="tweet-verified" aria-label="verified">✓</span>
-                    <span class="tweet-handle">@jukan05</span>
-                    <span class="tweet-time">· 08 · 2026-06-28</span>
-                  </div>
-                  <span class="tweet-more" aria-hidden="true">•••</span>
-                </div>
-                <div class="tweet-ledger-tags">
-                  <span class="primary">Demand Structure</span>
-                  <span>Continuing</span>
-                  <span>AI ASIC / TPU / Custom Silicon</span>
-                  <span>Read original text for object</span>
-                  <span>Medium</span>
-                </div>
-                
-                
-        <details class="tweet-original-details">
-          <summary>Original：Many people point to CSPs already running negative cash flow and ask how on earth CAPEX can keep growing from here. It is a foolish question. Look at what Arvind Krishna (IBM CEO)…</summary>
-          <p>Many people point to CSPs already running negative cash flow and ask how on earth CAPEX can keep growing from here. It is a foolish question. Look at what Arvind Krishna (IBM CEO) said in a podcast conversation. “Year one of enterprise AI is a net loss. That is exactly why 80 percent of companies right now look like t…</p>
-        </details>
-        
-                <div class="tweet-action-row" aria-label="static tweet action bar"><span class="tweet-action" title="Reply" aria-label="Reply"><i>○</i></span><span class="tweet-action" title="Repost" aria-label="Repost"><i>↻</i></span><span class="tweet-action" title="Like" aria-label="Like"><i>♡</i></span><span class="tweet-action" title="View" aria-label="View"><i>▥</i></span><span class="tweet-action" title="Save" aria-label="Save"><i>□</i></span></div>
-                <p class="tweet-ledger-note">
-                  <a href="https://x.com/jukan05/status/2071122361328476235" target="_blank" rel="noreferrer">tweet_id 2071122361328476235</a>
-                  <span>｜score 12</span>
-                  <span>｜Tickers: n/a</span>
-                  <span>｜Themes: ai_semicap_supply_chain</span>
-                </p>
-              </div>
-            </article>
-            
-            <article class="tweet-ledger-row tweet-card" data-change-type="demand">
-              <div class="tweet-ledger-body">
-                <div class="tweet-head">
-                  <div class="tweet-author-line">
-                    <span class="tweet-author-name">jukan05</span>
-                    <span class="tweet-verified" aria-label="verified">✓</span>
-                    <span class="tweet-handle">@jukan05</span>
-                    <span class="tweet-time">· 09 · 2026-06-27</span>
-                  </div>
-                  <span class="tweet-more" aria-hidden="true">•••</span>
-                </div>
-                <div class="tweet-ledger-tags">
-                  <span class="primary">Demand Structure</span>
-                  <span>New</span>
-                  <span>HBM / Memory Bandwidth</span>
-                  <span>HBM / DRAM</span>
-                  <span>Medium</span>
-                </div>
-                
-                
-        <details class="tweet-original-details">
-          <summary>Original：Recommended reads for the week SemiAnalysis — China’s CXMT Is Set to Challenge DRAM Incumbents Goldman Sachs — Americas Technology: Hardware — Expert Network Series: CPU Server De…</summary>
-          <p>Recommended reads for the week SemiAnalysis — China’s CXMT Is Set to Challenge DRAM Incumbents Goldman Sachs — Americas Technology: Hardware — Expert Network Series: CPU Server Demand Driven by Refresh, Agentic AI Morgan Stanley — Old Memory: Better to Buy More J.P. Morgan — First Principles — AI Power Infrastructure:…</p>
-        </details>
-        
-                <div class="tweet-action-row" aria-label="static tweet action bar"><span class="tweet-action" title="Reply" aria-label="Reply"><i>○</i></span><span class="tweet-action" title="Repost" aria-label="Repost"><i>↻</i></span><span class="tweet-action" title="Like" aria-label="Like"><i>♡</i></span><span class="tweet-action" title="View" aria-label="View"><i>▥</i></span><span class="tweet-action" title="Save" aria-label="Save"><i>□</i></span></div>
-                <p class="tweet-ledger-note">
-                  <a href="https://x.com/jukan05/status/2070800684325179899" target="_blank" rel="noreferrer">tweet_id 2070800684325179899</a>
-                  <span>｜score 29</span>
-                  <span>｜Tickers: n/a</span>
-                  <span>｜Themes: memory_hbm, power_grid</span>
-                </p>
-              </div>
-            </article>
-            
-            <article class="tweet-ledger-row tweet-card" data-change-type="tech_route">
-              <div class="tweet-ledger-body">
-                <div class="tweet-head">
-                  <div class="tweet-author-line">
-                    <span class="tweet-author-name">jukan05</span>
-                    <span class="tweet-verified" aria-label="verified">✓</span>
-                    <span class="tweet-handle">@jukan05</span>
-                    <span class="tweet-time">· 10 · 2026-06-26</span>
-                  </div>
-                  <span class="tweet-more" aria-hidden="true">•••</span>
-                </div>
-                <div class="tweet-ledger-tags">
-                  <span class="primary">Technology Route Shift</span>
-                  <span>New / heating</span>
-                  <span>Passives / Resistors</span>
-                  <span>800V / power equipment</span>
-                  <span>Medium</span>
-                </div>
-                
-                
-        <details class="tweet-original-details">
-          <summary>Original：J. H. Shyu (徐建華), chairman of Taiwan-based power semiconductor company Episil Technologies / 漢磊科技, pushed back against rumors of an 800V delay in comments to Tech Taiwan today. “N…</summary>
-          <p>J. H. Shyu (徐建華), chairman of Taiwan-based power semiconductor company Episil Technologies / 漢磊科技, pushed back against rumors of an 800V delay in comments to Tech Taiwan today. “Nvidia’s goal has always been to introduce the 800VDC architecture in 2027,” he said. “As far as I know, everything is still proceeding accor…</p>
-        </details>
-        
-                <div class="tweet-action-row" aria-label="static tweet action bar"><span class="tweet-action" title="Reply" aria-label="Reply"><i>○</i></span><span class="tweet-action" title="Repost" aria-label="Repost"><i>↻</i></span><span class="tweet-action" title="Like" aria-label="Like"><i>♡</i></span><span class="tweet-action" title="View" aria-label="View"><i>▥</i></span><span class="tweet-action" title="Save" aria-label="Save"><i>□</i></span></div>
-                <p class="tweet-ledger-note">
-                  <a href="https://x.com/jukan05/status/2070475755759567125" target="_blank" rel="noreferrer">tweet_id 2070475755759567125</a>
-                  <span>｜score 10</span>
-                  <span>｜Tickers: n/a</span>
-                  <span>｜Themes: ai_semicap_supply_chain, power_grid</span>
-                </p>
-              </div>
-            </article>
-            
-            <article class="tweet-ledger-row tweet-card" data-change-type="price">
-              <div class="tweet-ledger-body">
-                <div class="tweet-head">
-                  <div class="tweet-author-line">
-                    <span class="tweet-author-name">jukan05</span>
-                    <span class="tweet-verified" aria-label="verified">✓</span>
-                    <span class="tweet-handle">@jukan05</span>
-                    <span class="tweet-time">· 11 · 2026-06-26</span>
-                  </div>
-                  <span class="tweet-more" aria-hidden="true">•••</span>
-                </div>
-                <div class="tweet-ledger-tags">
-                  <span class="primary">Pricing / ASP</span>
-                  <span>New</span>
-                  <span>HBM / Memory Bandwidth</span>
-                  <span>HBM / DRAM</span>
-                  <span>Medium</span>
-                </div>
-                
-                
-        <details class="tweet-original-details">
-          <summary>Original：&gt;&gt; Lenovo: Rising memory prices are the “new normal”; elevated DRAM and NAND pricing to persist beyond 2030 • The era of cheap digital devices is coming to an end. Lenovo warned t…</summary>
-          <p>&gt;&gt; Lenovo: Rising memory prices are the “new normal”; elevated DRAM and NAND pricing to persist beyond 2030 • The era of cheap digital devices is coming to an end. Lenovo warned that DRAM and NAND flash prices have already entered a structural upcycle, and that even if major suppliers continue to expand capacity, pric…</p>
-        </details>
-        
-                <div class="tweet-action-row" aria-label="static tweet action bar"><span class="tweet-action" title="Reply" aria-label="Reply"><i>○</i></span><span class="tweet-action" title="Repost" aria-label="Repost"><i>↻</i></span><span class="tweet-action" title="Like" aria-label="Like"><i>♡</i></span><span class="tweet-action" title="View" aria-label="View"><i>▥</i></span><span class="tweet-action" title="Save" aria-label="Save"><i>□</i></span></div>
-                <p class="tweet-ledger-note">
-                  <a href="https://x.com/jukan05/status/2070404701510893726" target="_blank" rel="noreferrer">tweet_id 2070404701510893726</a>
-                  <span>｜score 14</span>
-                  <span>｜Tickers: n/a</span>
-                  <span>｜Themes: memory_hbm</span>
-                </p>
+            <article class="weekly-event" data-change-type="price">
+              <span class="weekly-event-label">Pricing / ASP</span>
+              <div>
+                <strong>jukan05 flags pricing movement around HBM / DRAM; check whether it is product ASP, component price or only equity-price language.</strong>
+                <small>2026-07-03｜tweet_id 2072908815868330276｜HBM / DRAM</small>
               </div>
             </article>
             </div>
+      </section>
       <p class="muted-note">jukan05 is a Korea/Asia supply-chain news and raw-intel feed for fact density and timing; it does not directly drive Serenity chain ranking or asset-mapping conclusions.</p>
     </div>
     
+    </article>
+    
+    <article class="weekly-card">
+      <header>
+        <div>
+          <span class="brief-eyebrow"><span class="lang lang-zh">本周 KOL 周报</span><span class="lang lang-en">Weekly KOL Report</span></span>
+          <h3>Paurooteri <small>@paurooteri</small></h3>
+          <p>2026-06-27 -> 2026-07-04 · <span class="lang lang-zh">存储/HBM 与半导体供应链观点流：偏周期、供需和产业链变化观察。</span><span class="lang lang-en">Memory/HBM and semi supply-chain view stream focused on cycles, supply-demand and chain shifts.</span></p>
+        </div>
+        <strong class="weekly-count">207</strong>
+      </header>
+      
+    <div class="weekly-body lang lang-zh">
+      <section class="weekly-block">
+        <h4>本周判断</h4>
+        <ol class="weekly-judgments"><li><span>01</span><p>本周窗口共 207 条推文，核心讨论集中在：HBM / 存储 90；AI 半导体供应链 44；Neocloud 融资质量 4；InP / 化合物半导体 3；电力 / 功率链 3。</p></li><li><span>02</span><p>paurooteri 近 7 日在HBM / 存储里主要说：SK hynix、HBM、内存供给、锁单和存储价格周期、CoPoS/CoWoS、先进封装、封装设备和韩国工程师原始信息。</p></li><li><span>03</span><p>paurooteri 近 7 日在AI 半导体供应链里主要说：SK hynix、HBM、内存供给、锁单和存储价格周期、CoPoS/CoWoS、先进封装、封装设备和韩国工程师原始信息、Samsung 代工 AMD CPU、TSMC/Intel 竞争和先进节点扩产。</p></li><li><span>04</span><p>paurooteri 近 7 日在CPO / 光通信里主要说：硅光、CPO/NPO、1.6T、连接器和 PCB/HVLP 材料链。</p></li><li><span>05</span><p>结构化事件主要落在：技术路线变化；这些只是推文资产中的研究线索。</p></li></ol>
+      </section>
+      <div class="weekly-signal-grid">
+        <section class="weekly-signal">
+          <b>产业链环节</b>
+          <div class="ticker-pill-row"><span class="ticker-pill"><b>HBM / 存储</b>90</span><span class="ticker-pill"><b>AI 半导体供应链</b>44</span><span class="ticker-pill"><b>Neocloud 融资质量</b>4</span><span class="ticker-pill"><b>InP / 化合物半导体</b>3</span><span class="ticker-pill"><b>电力 / 功率链</b>3</span><span class="ticker-pill"><b>CPO / 光通信</b>1</span></div>
+        </section>
+        <section class="weekly-signal">
+          <b>高频 ticker</b>
+          <div class="ticker-pill-row"><span class="ticker-pill"><b>MU</b>6</span><span class="ticker-pill"><b>NVDA</b>2</span><span class="ticker-pill"><b>AAPL</b>2</span><span class="ticker-pill"><b>TSM</b>1</span><span class="ticker-pill"><b>SKHY</b>1</span></div>
+        </section>
+        <section class="weekly-signal">
+          <b>近端升温 ticker</b>
+          <div class="ticker-pill-row"><span class="ticker-pill ticker-pill-rising"><b>MU</b>+2</span><span class="ticker-pill ticker-pill-rising"><b>AAPL</b>+2</span><span class="ticker-pill ticker-pill-rising"><b>NVDA</b>+2</span><span class="ticker-pill ticker-pill-rising"><b>SKHY</b>+1</span><span class="ticker-pill ticker-pill-rising"><b>TSM</b>+1</span></div>
+        </section>
+        <section class="weekly-signal">
+          <b>证据锚点</b>
+          <div class="brief-anchor-list">
+            <span class="brief-anchor">
+              <b>2026-06-28</b>
+              <span><em>tweet_id 2071206757091983428</em><small>メモリはもう少し上かな ストレージはそんなもので済む訳がない</small></span>
+            </span>
+            
+            <span class="brief-anchor">
+              <b>2026-07-03</b>
+              <span><em>tweet_id 2073056725293576272</em><small>重要な規格がきましたね</small></span>
+            </span>
+            
+            <span class="brief-anchor">
+              <b>2026-07-04</b>
+              <span><em>tweet_id 2073230637591670824</em><small>😂😂</small></span>
+            </span>
+            
+            <span class="brief-anchor">
+              <b>2026-06-30</b>
+              <span><em>tweet_id 2072078596391436550</em><small>310mm x 310mm ならば端っこ無駄にするぐらいで、このためにわざわざCoPoSにするかなぁ パイロットライン キャリアウェハなのかコア材なのか 上記含めてサイズとRDL、ABF基板含めて、旭化成とイビデンの状況とも照らし…</small></span>
+            </span>
+            </div>
+        </section>
       </div>
+      <section class="weekly-block">
+        <h4>产业变化标签</h4>
+        <div class="weekly-event-list">
+            <article class="weekly-event" data-change-type="tech_route">
+              <span class="weekly-event-label">技术路线变化</span>
+              <div>
+                <strong>jukan05 的讨论重心转向 先进封装/载板/键合 的技术路线或架构变化，具体对象是 CPO / NPO / 光互连。</strong>
+                <small>2026-06-30｜tweet_id 2072074013409755187｜CPO / NPO / 光互连</small>
+              </div>
+            </article>
+            </div>
+      </section>
+      <p class="muted-note">Paurooteri 是 X KOL 观点/新闻流研究资产，只用于补充产业链讨论线索；不直接进入 Serenity 七链排序或 A股映射结论。</p>
+    </div>
+    
+      
+    <div class="weekly-body lang lang-en">
+      <section class="weekly-block">
+        <h4>Weekly Read</h4>
+        <ol class="weekly-judgments"><li><span>01</span><p>This weekly window contains 207 tweets; core themes: HBM / Memory Bandwidth 90；AI Semi Supply Chain 44；Neocloud Financing Quality 4；InP / Compound Semis 3；Power / Grid Chain 3.</p></li><li><span>02</span><p>In the last 7 days, paurooteri mainly discussed SK hynix, HBM, memory supply, allocation and the storage price cycle; CoPoS/CoWoS, advanced packaging, packaging tools and raw Korean-enginee…</p></li><li><span>03</span><p>In the last 7 days, paurooteri mainly discussed SK hynix, HBM, memory supply, allocation and the storage price cycle; CoPoS/CoWoS, advanced packaging, packaging tools and raw Korean-enginee…</p></li><li><span>04</span><p>In the last 7 days, paurooteri mainly discussed silicon photonics, CPO/NPO, 1.6T, connectors and PCB/HVLP materials within CPO / Optical Interconnect.</p></li><li><span>05</span><p>Structured event tags cluster around: Technology Route Shift; these are research clues from tweet assets only.</p></li></ol>
+      </section>
+      <div class="weekly-signal-grid">
+        <section class="weekly-signal">
+          <b>Supply-chain Links</b>
+          <div class="ticker-pill-row"><span class="ticker-pill"><b>HBM / Memory Bandwidth</b>90</span><span class="ticker-pill"><b>AI Semi Supply Chain</b>44</span><span class="ticker-pill"><b>Neocloud Financing Quality</b>4</span><span class="ticker-pill"><b>InP / Compound Semis</b>3</span><span class="ticker-pill"><b>Power / Grid Chain</b>3</span><span class="ticker-pill"><b>CPO / Optical Interconnect</b>1</span></div>
+        </section>
+        <section class="weekly-signal">
+          <b>Frequent Tickers</b>
+          <div class="ticker-pill-row"><span class="ticker-pill"><b>MU</b>6</span><span class="ticker-pill"><b>NVDA</b>2</span><span class="ticker-pill"><b>AAPL</b>2</span><span class="ticker-pill"><b>TSM</b>1</span><span class="ticker-pill"><b>SKHY</b>1</span></div>
+        </section>
+        <section class="weekly-signal">
+          <b>Rising Tickers</b>
+          <div class="ticker-pill-row"><span class="ticker-pill ticker-pill-rising"><b>MU</b>+2</span><span class="ticker-pill ticker-pill-rising"><b>AAPL</b>+2</span><span class="ticker-pill ticker-pill-rising"><b>NVDA</b>+2</span><span class="ticker-pill ticker-pill-rising"><b>SKHY</b>+1</span><span class="ticker-pill ticker-pill-rising"><b>TSM</b>+1</span></div>
+        </section>
+        <section class="weekly-signal">
+          <b>Evidence Anchors</b>
+          <div class="brief-anchor-list">
+            <span class="brief-anchor">
+              <b>2026-06-28</b>
+              <span><em>tweet_id 2071206757091983428</em><small>メモリはもう少し上かな ストレージはそんなもので済む訳がない</small></span>
+            </span>
+            
+            <span class="brief-anchor">
+              <b>2026-07-03</b>
+              <span><em>tweet_id 2073056725293576272</em><small>重要な規格がきましたね</small></span>
+            </span>
+            
+            <span class="brief-anchor">
+              <b>2026-07-04</b>
+              <span><em>tweet_id 2073230637591670824</em><small>😂😂</small></span>
+            </span>
+            
+            <span class="brief-anchor">
+              <b>2026-06-30</b>
+              <span><em>tweet_id 2072078596391436550</em><small>310mm x 310mm ならば端っこ無駄にするぐらいで、このためにわざわざCoPoSにするかなぁ パイロットライン キャリアウェハなのかコア材なのか 上記含めてサイズとRDL、ABF基板含めて、旭化成とイビデンの状況とも照らし…</small></span>
+            </span>
+            </div>
+        </section>
+      </div>
+      <section class="weekly-block">
+        <h4>Industry-change Tags</h4>
+        <div class="weekly-event-list">
+            <article class="weekly-event" data-change-type="tech_route">
+              <span class="weekly-event-label">Technology Route Shift</span>
+              <div>
+                <strong>jukan05 is shifting the discussion toward route or architecture change in Advanced Packaging / Substrates, with CPO / NPO / optical interconnect as the concrete object.</strong>
+                <small>2026-06-30｜tweet_id 2072074013409755187｜CPO / NPO / optical interconnect</small>
+              </div>
+            </article>
+            </div>
+      </section>
+      <p class="muted-note">Paurooteri is an X KOL view/news-flow research asset for additional supply-chain discussion clues; it does not directly drive Serenity ranking or A-share mapping conclusions.</p>
+    </div>
+    
+    </article>
+    
+    <article class="weekly-card">
+      <header>
+        <div>
+          <span class="brief-eyebrow"><span class="lang lang-zh">本周 KOL 周报</span><span class="lang lang-en">Weekly KOL Report</span></span>
+          <h3>Stock6688 <small>@stock6688</small></h3>
+          <p>2026-06-27 -> 2026-07-04 · <span class="lang lang-zh">中文供应链观察流：偏光通信、存储、半导体和市场情绪补充。</span><span class="lang lang-en">Chinese supply-chain observation stream covering optical, memory, semi and market-color context.</span></p>
+        </div>
+        <strong class="weekly-count">26</strong>
+      </header>
+      
+    <div class="weekly-body lang lang-zh">
+      <section class="weekly-block">
+        <h4>本周判断</h4>
+        <ol class="weekly-judgments"><li><span>01</span><p>本周窗口共 26 条推文，核心讨论集中在：HBM / 存储 3；CPO / 光通信 3；电力 / 功率链 1。</p></li><li><span>02</span><p>stock6688 近 7 日在HBM / 存储里主要说：SK hynix、HBM、内存供给、锁单和存储价格周期、CoPoS/CoWoS、先进封装、封装设备和韩国工程师原始信息。</p></li><li><span>03</span><p>CPO/硅光仍是主轴，焦点继续向激光、InP、代工和本土供给安全扩散。</p></li><li><span>04</span><p>stock6688 近 7 日在电力 / 功率链里主要说：800V DC、数据中心供电、变压器、并网和功率器件可靠性。</p></li><li><span>05</span><p>结构化事件主要落在：涨价/ASP、技术路线变化、技术进步；这些只是推文资产中的研究线索。</p></li></ol>
+      </section>
+      <div class="weekly-signal-grid">
+        <section class="weekly-signal">
+          <b>产业链环节</b>
+          <div class="ticker-pill-row"><span class="ticker-pill"><b>HBM / 存储</b>3</span><span class="ticker-pill"><b>CPO / 光通信</b>3</span><span class="ticker-pill"><b>电力 / 功率链</b>1</span></div>
+        </section>
+        <section class="weekly-signal">
+          <b>高频 ticker</b>
+          <p class="muted-note">暂无高频 ticker</p>
+        </section>
+        <section class="weekly-signal">
+          <b>近端升温 ticker</b>
+          <p class="muted-note">暂无正向升温</p>
+        </section>
+        <section class="weekly-signal">
+          <b>证据锚点</b>
+          <div class="brief-anchor-list">
+            <span class="brief-anchor">
+              <b>2026-06-29</b>
+              <span><em>tweet_id 2071567617232605588</em><small>①【半导体设备＆零部件估值表】 ②【主要半导体设备公司2030年收入利润＆市值空间测算】（太远期了，只具备参考价值） 两份券商的表格内容太复杂，全是数据预算，还不如5/10的表格更有操作性；5/10表格内的个股均为已推荐标的，是结…</small></span>
+            </span>
+            
+            <span class="brief-anchor">
+              <b>2026-06-29</b>
+              <span><em>tweet_id 2071593563402748134</em><small>【韩国扩大AI相关投资概念整理】29日韩国政府宣布预计未来15年将在新一代存储、边缘人工智能、国防等芯片领域投资至少30万亿韩元。韩国官员表示，预计五年内将DRAM生产能力翻倍，预计全球内存市场将在5年内增长四倍。 https:/…</small></span>
+            </span>
+            
+            <span class="brief-anchor">
+              <b>2026-07-03</b>
+              <span><em>tweet_id 2072859288654303442</em><small>【昇腾950超节点7月17真机首秀】 出海订单密集、验证需求外溢： ① 俄罗斯Sberbank拟采购中国芯片支撑自研大模型GigaChat； ②韩国云厂商锁定首批2000片昇腾950订单； ③马来西亚计划部署3000台昇腾AI服务…</small></span>
+            </span>
+            
+            <span class="brief-anchor">
+              <b>2026-06-28</b>
+              <span><em>tweet_id 2071066051971076439</em><small>【康宁玻璃桥概念整理】24日，在韩国首尔举行的AI数据中心光通信互连技术大会上，康宁发布了多项与共封装光学及玻璃基板相关的新技术与产品。其中“玻璃桥”是一种由玻璃制成的光连接器，可直接连接光芯片与光纤。此外康宁还推出融合玻璃基板与…</small></span>
+            </span>
+            </div>
+        </section>
+      </div>
+      <section class="weekly-block">
+        <h4>产业变化标签</h4>
+        <div class="weekly-event-list">
+            <article class="weekly-event" data-change-type="price">
+              <span class="weekly-event-label">涨价/ASP</span>
+              <div>
+                <strong>jukan05 提到 具体对象需回看原文 的价格变化，需要区分产品 ASP、元件涨价和单纯资本市场价格表述。</strong>
+                <small>2026-07-01｜tweet_id 2072291280005349883｜具体对象需回看原文</small>
+              </div>
+            </article>
+            
+            <article class="weekly-event" data-change-type="tech_route">
+              <span class="weekly-event-label">技术路线变化</span>
+              <div>
+                <strong>jukan05 的讨论重心转向 CPO/光通信/激光器 的技术路线或架构变化，具体对象是 CPO / NPO / 光互连。</strong>
+                <small>2026-06-28｜tweet_id 2071066051971076439｜CPO / NPO / 光互连</small>
+              </div>
+            </article>
+            
+            <article class="weekly-event" data-change-type="tech_route">
+              <span class="weekly-event-label">技术路线变化</span>
+              <div>
+                <strong>jukan05 的讨论重心转向 电力/功率/供配电 的技术路线或架构变化，具体对象是 HBM / DRAM。</strong>
+                <small>2026-07-01｜tweet_id 2072124396635074707｜HBM / DRAM</small>
+              </div>
+            </article>
+            
+            <article class="weekly-event" data-change-type="tech_progress">
+              <span class="weekly-event-label">技术进步</span>
+              <div>
+                <strong>jukan05 提到 HBM / DRAM 的量产、验证或性能进展，这可能改变瓶颈位置，而不只是加剧短缺。</strong>
+                <small>2026-07-03｜tweet_id 2072859288654303442｜HBM / DRAM</small>
+              </div>
+            </article>
+            </div>
+      </section>
+      <p class="muted-note">Stock6688 是 X KOL 观点/新闻流研究资产，只用于补充产业链讨论线索；不直接进入 Serenity 七链排序或 A股映射结论。</p>
+    </div>
+    
+      
+    <div class="weekly-body lang lang-en">
+      <section class="weekly-block">
+        <h4>Weekly Read</h4>
+        <ol class="weekly-judgments"><li><span>01</span><p>This weekly window contains 26 tweets; core themes: HBM / Memory Bandwidth 3；CPO / Optical Interconnect 3；Power / Grid Chain 1.</p></li><li><span>02</span><p>In the last 7 days, stock6688 mainly discussed SK hynix, HBM, memory supply, allocation and the storage price cycle; CoPoS/CoWoS, advanced packaging, packaging tools and raw Korean-engineer…</p></li><li><span>03</span><p>CPO and silicon photonics remain the anchor, with focus spreading into lasers, InP, foundry paths and supply security.</p></li><li><span>04</span><p>In the last 7 days, stock6688 mainly discussed 800V DC, data-center power delivery, transformers, grid access and power-device reliability within Power / Grid Chain.</p></li><li><span>05</span><p>Structured event tags cluster around: Pricing / ASP, Technology Route Shift, Technology Progress; these are research clues from tweet assets only.</p></li></ol>
+      </section>
+      <div class="weekly-signal-grid">
+        <section class="weekly-signal">
+          <b>Supply-chain Links</b>
+          <div class="ticker-pill-row"><span class="ticker-pill"><b>HBM / Memory Bandwidth</b>3</span><span class="ticker-pill"><b>CPO / Optical Interconnect</b>3</span><span class="ticker-pill"><b>Power / Grid Chain</b>1</span></div>
+        </section>
+        <section class="weekly-signal">
+          <b>Frequent Tickers</b>
+          <p class="muted-note">No frequent tickers</p>
+        </section>
+        <section class="weekly-signal">
+          <b>Rising Tickers</b>
+          <p class="muted-note">No positive delta</p>
+        </section>
+        <section class="weekly-signal">
+          <b>Evidence Anchors</b>
+          <div class="brief-anchor-list">
+            <span class="brief-anchor">
+              <b>2026-06-29</b>
+              <span><em>tweet_id 2071567617232605588</em><small>①【半导体设备＆零部件估值表】 ②【主要半导体设备公司2030年收入利润＆市值空间测算】（太远期了，只具备参考价值） 两份券商的表格内容太复杂，全是数据预算，还不如5/10的表格更有操作性；5/10表格内的个股均为已推荐标的，是结…</small></span>
+            </span>
+            
+            <span class="brief-anchor">
+              <b>2026-06-29</b>
+              <span><em>tweet_id 2071593563402748134</em><small>【韩国扩大AI相关投资概念整理】29日韩国政府宣布预计未来15年将在新一代存储、边缘人工智能、国防等芯片领域投资至少30万亿韩元。韩国官员表示，预计五年内将DRAM生产能力翻倍，预计全球内存市场将在5年内增长四倍。 https:/…</small></span>
+            </span>
+            
+            <span class="brief-anchor">
+              <b>2026-07-03</b>
+              <span><em>tweet_id 2072859288654303442</em><small>【昇腾950超节点7月17真机首秀】 出海订单密集、验证需求外溢： ① 俄罗斯Sberbank拟采购中国芯片支撑自研大模型GigaChat； ②韩国云厂商锁定首批2000片昇腾950订单； ③马来西亚计划部署3000台昇腾AI服务…</small></span>
+            </span>
+            
+            <span class="brief-anchor">
+              <b>2026-06-28</b>
+              <span><em>tweet_id 2071066051971076439</em><small>【康宁玻璃桥概念整理】24日，在韩国首尔举行的AI数据中心光通信互连技术大会上，康宁发布了多项与共封装光学及玻璃基板相关的新技术与产品。其中“玻璃桥”是一种由玻璃制成的光连接器，可直接连接光芯片与光纤。此外康宁还推出融合玻璃基板与…</small></span>
+            </span>
+            </div>
+        </section>
+      </div>
+      <section class="weekly-block">
+        <h4>Industry-change Tags</h4>
+        <div class="weekly-event-list">
+            <article class="weekly-event" data-change-type="price">
+              <span class="weekly-event-label">Pricing / ASP</span>
+              <div>
+                <strong>jukan05 flags pricing movement around Read original text for object; check whether it is product ASP, component price or only equity-price language.</strong>
+                <small>2026-07-01｜tweet_id 2072291280005349883｜Read original text for object</small>
+              </div>
+            </article>
+            
+            <article class="weekly-event" data-change-type="tech_route">
+              <span class="weekly-event-label">Technology Route Shift</span>
+              <div>
+                <strong>jukan05 is shifting the discussion toward route or architecture change in CPO / Optical / Lasers, with CPO / NPO / optical interconnect as the concrete object.</strong>
+                <small>2026-06-28｜tweet_id 2071066051971076439｜CPO / NPO / optical interconnect</small>
+              </div>
+            </article>
+            
+            <article class="weekly-event" data-change-type="tech_route">
+              <span class="weekly-event-label">Technology Route Shift</span>
+              <div>
+                <strong>jukan05 is shifting the discussion toward route or architecture change in Power / Grid / Power Semis, with HBM / DRAM as the concrete object.</strong>
+                <small>2026-07-01｜tweet_id 2072124396635074707｜HBM / DRAM</small>
+              </div>
+            </article>
+            
+            <article class="weekly-event" data-change-type="tech_progress">
+              <span class="weekly-event-label">Technology Progress</span>
+              <div>
+                <strong>jukan05 mentions production, validation or performance progress around HBM / DRAM; this may move the bottleneck rather than only intensify it.</strong>
+                <small>2026-07-03｜tweet_id 2072859288654303442｜HBM / DRAM</small>
+              </div>
+            </article>
+            </div>
+      </section>
+      <p class="muted-note">Stock6688 is an X KOL view/news-flow research asset for additional supply-chain discussion clues; it does not directly drive Serenity ranking or A-share mapping conclusions.</p>
+    </div>
+    
     </article>
     </div>
     </section>
@@ -2154,7 +1262,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
     </section>
     </main>
   <footer class="page">
-    AIpha X-KOL V1.0｜<span class="lang lang-zh">生成时间</span><span class="lang lang-en">Generated</span> 2026-07-02T16:49:47+08:00｜source_commit cdb77c25b051
+    AIpha X-KOL V1.1｜<span class="lang lang-zh">生成时间</span><span class="lang lang-en">Generated</span> 2026-07-06T14:09:27+08:00｜source_commit 1c2f854fca94
   </footer>
 </body>
 </html>
