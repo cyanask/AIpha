@@ -170,8 +170,8 @@ html[data-lang="zh"] .lang-toggle button[data-lang-button="zh"],
 html[data-lang="en"] .lang-toggle button[data-lang-button="en"] { color: #111827; background: #f8fafc; }
 .page { width: min(1360px, calc(100% - 36px)); margin: 0 auto; }
 .hero {
-  margin: 20px auto 18px;
-  padding: clamp(26px, 3.2vw, 40px);
+  margin: 14px auto 14px;
+  padding: clamp(20px, 2.5vw, 32px);
   background:
     linear-gradient(90deg, rgba(255,255,255,0.98), rgba(255,255,255,0.9)),
     linear-gradient(135deg, rgba(31,83,102,0.16), rgba(198,154,74,0.08));
@@ -201,15 +201,15 @@ html[data-lang="en"] .lang-toggle button[data-lang-button="en"] { color: #111827
   letter-spacing: 0.04em;
   line-height: 1.25;
 }
-h1 { margin: 6px 0 12px; font-size: clamp(36px, 4vw, 54px); line-height: 1.06; letter-spacing: 0; max-width: 920px; }
-.lead { max-width: 860px; margin: 0; color: var(--muted); font-size: clamp(16px, 1.28vw, 19px); }
+h1 { margin: 4px 0 10px; font-size: clamp(34px, 3.35vw, 48px); line-height: 1.08; letter-spacing: 0; max-width: 940px; }
+.lead { max-width: 880px; margin: 0; color: var(--muted); font-size: clamp(15px, 1.18vw, 18px); }
 .meta-line { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 18px; color: var(--muted); }
 .meta-chip { display: inline-flex; align-items: center; padding: 5px 9px; border: 1px solid var(--line); background: rgba(255,255,255,0.78); font-size: 12px; max-width: 100%; overflow-wrap: anywhere; }
-.window-status { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; margin-top: 16px; max-width: 760px; }
-.window-status article { display: grid; grid-template-columns: minmax(0,1fr) auto; gap: 8px; align-items: center; padding: 10px 12px; background: #fff; border: 1px solid var(--line); border-left: 4px solid var(--blue); }
-.window-status strong { display: block; font-size: 14px; }
+.window-status { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; margin-top: 14px; max-width: 1000px; }
+.window-status article { display: grid; grid-template-columns: minmax(0,1fr) auto; gap: 8px; align-items: center; padding: 9px 11px; background: #fff; border: 1px solid var(--line); border-left: 4px solid var(--blue); }
+.window-status strong { display: block; font-size: 13px; }
 .window-status span { color: var(--muted); font-size: 12px; overflow-wrap: anywhere; }
-.window-status b { font-size: 22px; line-height: 1; color: var(--blue); }
+.window-status b { font-size: 21px; line-height: 1; color: var(--blue); }
 .stat-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; width: 100%; max-width: 980px; align-self: stretch; }
 .stat {
   min-width: 0;
@@ -227,14 +227,14 @@ h1 { margin: 6px 0 12px; font-size: clamp(36px, 4vw, 54px); line-height: 1.06; l
 .stat b { display: block; margin: 3px 0 3px; font-size: clamp(22px, 2vw, 30px); line-height: 1; white-space: nowrap; letter-spacing: -0.01em; }
 .stat b.long-stat-value { font-size: clamp(20px, 1.6vw, 26px); letter-spacing: -0.02em; }
 .section-band {
-  margin: 18px auto;
-  padding: clamp(20px, 2.8vw, 34px);
+  margin: 14px auto;
+  padding: clamp(18px, 2.35vw, 30px);
   background: rgba(255,255,255,0.94);
   border: 1px solid rgba(216,224,228,0.92);
   box-shadow: 0 10px 30px rgba(22,33,43,0.045);
 }
-.section-head { display: flex; justify-content: space-between; gap: 18px; align-items: end; border-bottom: 1px solid var(--line); padding-bottom: 14px; margin-bottom: 18px; }
-.section-head h2 { margin: 0; font-size: clamp(24px, 2.55vw, 34px); line-height: 1.12; }
+.section-head { display: flex; justify-content: space-between; gap: 18px; align-items: end; border-bottom: 1px solid var(--line); padding-bottom: 12px; margin-bottom: 16px; }
+.section-head h2 { margin: 0; font-size: clamp(23px, 2.3vw, 32px); line-height: 1.12; }
 .section-head p { margin: 6px 0 0; color: var(--muted); max-width: 780px; }
 .program-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
 .program-card { display: grid; gap: 14px; padding: 18px; background: linear-gradient(180deg, #ffffff, #f8faf9); border: 1px solid var(--line); border-left: 5px solid var(--blue); text-decoration: none; transition: transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease; }
@@ -277,44 +277,46 @@ h1 { margin: 6px 0 12px; font-size: clamp(36px, 4vw, 54px); line-height: 1.06; l
 .weekly-event-label { color: var(--blue); font-size: 12px; font-weight: 900; }
 .weekly-event strong { display: block; font-size: 14px; line-height: 1.35; }
 .weekly-event small { display: block; margin-top: 4px; color: var(--muted); overflow-wrap: anywhere; }
-.weekly-report-paper { display: grid; gap: 22px; max-width: 1180px; }
-.weekly-report-memo { display: grid; gap: 26px; }
-.weekly-narrative { display: grid; gap: 26px; }
-.weekly-narrative section { display: grid; gap: 10px; }
-.weekly-narrative h3 { margin: 0; font-size: 23px; line-height: 1.2; }
-.weekly-narrative p { margin: 0; color: var(--ink); font-size: clamp(17px, 1.55vw, 22px); line-height: 1.7; letter-spacing: 0; }
-.weekly-narrative .weekly-intro { font-size: clamp(19px, 1.9vw, 27px); line-height: 1.65; font-weight: 720; }
+.weekly-report-paper { display: grid; gap: 18px; max-width: 1120px; }
+.weekly-report-memo { display: grid; gap: 22px; }
+.weekly-narrative { display: grid; gap: 22px; }
+.weekly-narrative section { display: grid; gap: 9px; }
+.weekly-narrative h3 { margin: 0; font-size: 20px; line-height: 1.2; color: var(--ink); }
+.weekly-narrative p { margin: 0; color: var(--ink); font-size: clamp(15px, 1.12vw, 18px); line-height: 1.72; letter-spacing: 0; }
+.weekly-narrative .weekly-intro { font-size: clamp(17px, 1.42vw, 21px); line-height: 1.68; font-weight: 700; max-width: 1080px; }
 .account-pill {
   display: inline-flex;
   align-items: center;
   margin: 0 2px;
-  padding: 1px 8px 2px;
-  border-radius: 7px;
+  padding: 1px 7px 2px;
+  border-radius: 6px;
   background: #eef1f2;
   color: var(--ink);
   border: 1px solid rgba(216,224,228,0.9);
   font-family: "SF Mono", "Roboto Mono", Menlo, Consolas, monospace;
-  font-size: 0.92em;
+  font-size: 0.88em;
   line-height: 1.25;
   white-space: nowrap;
 }
-.weekly-kol-list { display: grid; gap: 18px; }
-.weekly-kol-paragraph { display: grid; grid-template-columns: 132px minmax(0, 1fr); gap: 14px; align-items: start; padding-top: 16px; border-top: 1px solid var(--line); }
+.weekly-kol-list { display: grid; gap: 12px; }
+.weekly-kol-paragraph { display: grid; grid-template-columns: 116px minmax(0, 1fr); gap: 14px; align-items: start; padding: 12px 0 0; border-top: 1px solid var(--line); }
 .weekly-kol-paragraph:first-child { border-top: 0; padding-top: 0; }
-.weekly-kol-label { color: var(--blue); font-family: "SF Mono", "Roboto Mono", Menlo, Consolas, monospace; font-size: 15px; font-weight: 900; line-height: 1.4; overflow-wrap: anywhere; }
-.weekly-kol-paragraph p { margin: 0; color: var(--ink); font-size: clamp(16px, 1.42vw, 21px); line-height: 1.68; }
-.industry-merge-list { display: grid; gap: 13px; margin: 0; padding: 0; list-style: none; counter-reset: industry; }
-.industry-merge-list li { counter-increment: industry; display: grid; grid-template-columns: 38px minmax(0, 1fr); gap: 12px; align-items: start; color: var(--ink); font-size: clamp(16px, 1.35vw, 20px); line-height: 1.6; }
+.weekly-kol-label { color: var(--blue); font-family: "SF Mono", "Roboto Mono", Menlo, Consolas, monospace; font-size: 13px; font-weight: 900; line-height: 1.4; overflow-wrap: anywhere; }
+.weekly-kol-paragraph p { margin: 0; color: var(--ink); font-size: clamp(15px, 1.08vw, 17px); line-height: 1.66; }
+.industry-merge-list { display: grid; gap: 10px; margin: 0; padding: 0; list-style: none; counter-reset: industry; }
+.industry-merge-list li { counter-increment: industry; position: relative; min-height: 28px; padding-left: 42px; color: var(--ink); font-size: clamp(15px, 1.08vw, 17px); line-height: 1.62; }
 .industry-merge-list li::before {
   content: counter(industry);
-  display: grid;
+  position: absolute;
+  left: 0;
+  top: 1px;
+  display: inline-grid;
   place-items: center;
   width: 30px;
   height: 30px;
-  margin-top: 2px;
   background: var(--dark);
   color: #fff;
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 950;
 }
 .industry-merge-list b { color: var(--ink); }
@@ -527,14 +529,22 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
   .hero { margin-top: 12px; padding: 20px; }
   .hero-grid, .program-grid, .brief-grid, .weekly-grid, .weekly-signal-grid, .digest-overview, .digest-card-grid, .question-list, .chain-body, .timeline-grid, .asset-snapshot-grid { grid-template-columns: 1fr; }
   .brief-titlebar { display: grid; }
-  h1 { font-size: 34px; }
+  h1 { font-size: 32px; }
   .lead { font-size: 16px; }
   .stat-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; width: 100%; }
   .stat { min-height: 64px; padding: 9px 10px; }
   .stat span, .stat small { font-size: 9.5px; }
   .stat b { font-size: 24px; margin: 5px 0 4px; }
   .digest-ticker-columns { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .window-status { grid-template-columns: 1fr; }
+  .window-status { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 7px; }
+  .window-status article { grid-template-columns: minmax(0, 1fr); align-items: start; gap: 6px; padding: 9px; }
+  .window-status strong { font-size: 12px; }
+  .window-status span { font-size: 11px; }
+  .window-status b { font-size: 20px; }
+  .weekly-kol-paragraph { grid-template-columns: 1fr; gap: 5px; }
+  .weekly-kol-label { font-size: 12px; }
+  .industry-merge-list li { padding-left: 36px; font-size: 15px; }
+  .industry-merge-list li::before { width: 26px; height: 26px; font-size: 11px; }
   .brief-numbered-list { grid-template-columns: 1fr; }
   .brief-conclusion { grid-template-columns: 1fr; gap: 8px; }
   .brief-topic-grid, .brief-side-grid, .change-radar-grid, .change-summary-grid { grid-template-columns: 1fr; }
@@ -555,20 +565,21 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
   .nav-disclaimer { min-height: 21px; padding: 0 5px; font-size: 9px; }
   .lang-toggle button { min-width: 26px; min-height: 19px; padding: 0 3px; font-size: 9px; }
   .page-switcher a { min-height: 22px; padding: 0 7px; font-size: 9px; }
+  .hero { padding: 16px; }
   .stat-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
   .stat { min-height: 62px; padding: 9px; }
   .stat span, .stat small { font-size: 9.5px; }
   .stat b { font-size: 24px; }
-  .window-status { grid-template-columns: 1fr; }
+  .window-status { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .brief-titlebar, .brief-body { padding-left: 14px; padding-right: 14px; }
   .brief-numbered-item { grid-template-columns: 32px minmax(0, 1fr); padding: 12px; }
-  h1 { font-size: 31px; }
+  h1 { font-size: 29px; }
   .section-head { display: block; }
 }
 </style>
 </head>
 <body>
-  
+
     <header class="top-nav">
       <a class="brand" href="/AIpha/" aria-label="AIpha Research Desk">
         <img src="../assets/nero-mark.svg" alt="AIpha Research Desk" />
@@ -583,19 +594,19 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
         </span>
       </div>
     </header>
-    
+
   <main>
     <section class="hero page">
       <div class="hero-grid">
         <div class="hero-main">
           <h1><span class="lang lang-block lang-zh">jukan05 推文资产总结</span><span class="lang lang-block lang-en">jukan05 Tweet Asset Summary</span></h1>
           <p class="lead"><span class="lang lang-block lang-zh">jukan05 页面按主题矩阵、主题深挖、证据样本和 ticker 资产表组织 X KOL 推文资产；不并入 Serenity 七链评分，也不展示 A股映射结论。</span><span class="lang lang-block lang-en">The jukan05 page organizes the X KOL tweet asset by theme matrix, theme deep dives, evidence samples and ticker asset tables. It does not enter Serenity seven-chain scoring or show A-share mapping conclusions.</span></p>
-          
+
         </div>
         <div class="stat-grid"><article class="stat"><span><span class="lang lang-zh">本地推文</span><span class="lang lang-en">Local Tweets</span></span><b>497</b><small><span class="lang lang-zh">独立 X KOL 库</span><span class="lang lang-en">Separate X KOL DB</span></small></article><article class="stat"><span><span class="lang lang-zh">资产截止</span><span class="lang lang-en">Asset Cutoff</span></span><b class="long-stat-value">2026-07-04</b><small><span class="lang lang-zh">06:36</span><span class="lang lang-en">06:36</span></small></article><article class="stat"><span><span class="lang lang-zh">主题数</span><span class="lang lang-en">Themes</span></span><b>6</b><small><span class="lang lang-zh">近 7 日主题桶</span><span class="lang lang-en">7-day theme buckets</span></small></article><article class="stat"><span><span class="lang lang-zh">证据样本</span><span class="lang lang-en">Evidence</span></span><b>12</b><small><span class="lang lang-zh">tweet_id / URL</span><span class="lang lang-en">tweet_id / URL</span></small></article></div>
       </div>
     </section>
-    
+
     <section class="section-band page" id="matrix">
       <div class="section-head">
         <div>
@@ -609,19 +620,19 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
               <p>jukan05 近 7 日在HBM / 存储里主要说：SK hynix、HBM、内存供给、锁单和存储价格周期、CoPoS/CoWoS、先进封装、封装设备和韩国工程师原始信息。</p>
               <b>38</b>
             </article>
-            
+
             <article class="asset-snapshot-card">
               <h3>02 · AI 半导体供应链</h3>
               <p>jukan05 近 7 日在AI 半导体供应链里主要说：SK hynix、HBM、内存供给、锁单和存储价格周期、Samsung 代工 AMD CPU、TSMC/Intel 竞争和先进节点扩产…</p>
               <b>27</b>
             </article>
-            
+
             <article class="asset-snapshot-card">
               <h3>03 · Neocloud 融资质量</h3>
               <p>jukan05 近 7 日在Neocloud 融资质量里主要说：NBIS/IREN/CRWV 等 Neocloud 融资结构、合约质量和机构持股、AI 股票估值、Anthropic/Myth…</p>
               <b>13</b>
             </article>
-            
+
             <article class="asset-snapshot-card">
               <h3>04 · 电力 / 功率链</h3>
               <p>jukan05 近 7 日在电力 / 功率链里主要说：800V DC、数据中心供电、变压器、并网和功率器件可靠性。</p>
@@ -636,7 +647,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
               <td>MU, AMD, GOOGL, META, NVDA, ASX, ASML, DRAM</td>
               <td><span class="lang lang-block lang-zh">jukan05 近 7 日在HBM / 存储里主要说：SK hynix、HBM、内存供给、锁单和存储价格周期、CoPoS/CoWoS、先进封装、封装设备和韩国工程师原始信息。</span><span class="lang lang-block lang-en">In the last 7 days, jukan05 mainly discussed SK hynix, HBM, memory supply, allocation and the storage price cycle; CoPoS/CoWoS,…</span></td>
             </tr>
-            
+
             <tr class="chain-row tone-teal">
               <th><span><span class="lang lang-zh">AI 半导体供应链</span><span class="lang lang-en">AI Semi Supply Chain</span></span><small>ai_semicap_supply_chain</small></th>
               <td class="priority">27</td>
@@ -645,7 +656,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
               <td>ASX, AVGO, MRVL, QCOM, ASML</td>
               <td><span class="lang lang-block lang-zh">jukan05 近 7 日在AI 半导体供应链里主要说：SK hynix、HBM、内存供给、锁单和存储价格周期、Samsung 代工 AMD CPU、TSMC/Intel 竞争和先进节点扩产、CoPoS/CoWoS…</span><span class="lang lang-block lang-en">In the last 7 days, jukan05 mainly discussed SK hynix, HBM, memory supply, allocation and the storage price cycle; Samsung foun…</span></td>
             </tr>
-            
+
             <tr class="chain-row tone-amber">
               <th><span><span class="lang lang-zh">Neocloud 融资质量</span><span class="lang lang-en">Neocloud Financing Quality</span></span><small>neocloud_financing</small></th>
               <td class="priority">13</td>
@@ -654,7 +665,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
               <td>ASML</td>
               <td><span class="lang lang-block lang-zh">jukan05 近 7 日在Neocloud 融资质量里主要说：NBIS/IREN/CRWV 等 Neocloud 融资结构、合约质量和机构持股、AI 股票估值、Anthropic/Mythos 和二级市场情绪。</span><span class="lang lang-block lang-en">In the last 7 days, jukan05 mainly discussed NBIS/IREN/CRWV neocloud financing structure, contract quality and institutional ow…</span></td>
             </tr>
-            
+
             <tr class="chain-row tone-crimson">
               <th><span><span class="lang lang-zh">电力 / 功率链</span><span class="lang lang-en">Power / Grid Chain</span></span><small>power_grid</small></th>
               <td class="priority">8</td>
@@ -665,7 +676,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
             </tr>
             </tbody></table></div>
     </section>
-    
+
     <section class="section-band page" id="themes-deep">
       <div class="section-head">
         <div>
@@ -673,7 +684,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
           <p><span class="lang lang-block lang-zh">按新闻主题展开 jukan05 的主要说法、ticker 线索和可回溯 tweet 证据。</span><span class="lang lang-block lang-en">Expands each news theme into jukan05 takeaways, ticker clues and traceable tweet evidence.</span></p>
         </div>
       </div>
-      
+
             <section class="chain-deep tone-blue">
               <header class="chain-head">
                 <span>01</span>
@@ -704,13 +715,13 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
               <p>KIS: On Memory LTAs With suppliers&#x27; commodity DRAM operating margins already at 80% and gross margins above 90%, prices cannot be raised endlessly on supply and demand dynamics al…</p>
               <a href="https://x.com/jukan05/status/2071745275325190339">tweet_id 2071745275325190339</a>
             </article>
-            
+
             <article class="evidence-item">
               <header><b>2026-06-28</b><span>score 20｜</span></header>
               <p>&gt;&gt;TSMC Teams Up with Winbond to Build a Homegrown DRAM Supply Chain for AI • Amid deepening global memory shortages, TSMC has brought Winbond into its AI chip supply chain. The tw…</p>
               <a href="https://x.com/jukan05/status/2071366174408085902">tweet_id 2071366174408085902</a>
             </article>
-            
+
             <article class="evidence-item">
               <header><b>2026-06-28</b><span>score 55｜</span></header>
               <p>Yes, MU is not Nvidia. But going forward, it may become even more important than Nvidia. Think about it. Inference is now directly tied to money. But inference does not get better…</p>
@@ -719,7 +730,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
             </div>
               </details>
             </section>
-            
+
             <section class="chain-deep tone-teal">
               <header class="chain-head">
                 <span>02</span>
@@ -750,13 +761,13 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
               <p>What surprised me most in the Anthropic–Samsung Foundry news is that Anthropic is also considering Samsung Foundry’s packaging. That’s really interesting. Not Intel EMIB or TSMC C…</p>
               <a href="https://x.com/jukan05/status/2072799162559840616">tweet_id 2072799162559840616</a>
             </article>
-            
+
             <article class="evidence-item">
               <header><b>2026-06-28</b><span>score 55｜</span></header>
               <p>Yes, MU is not Nvidia. But going forward, it may become even more important than Nvidia. Think about it. Inference is now directly tied to money. But inference does not get better…</p>
               <a href="https://x.com/jukan05/status/2071139712082022855">tweet_id 2071139712082022855</a>
             </article>
-            
+
             <article class="evidence-item">
               <header><b>2026-06-28</b><span>score 41｜</span></header>
               <p>Listen to what @GavinSBaker said on All-In at 1:04:06: “DRAM is the most important bottleneck, and Elon is focusing the Terafab on memory because he believes memory is the most im…</p>
@@ -765,7 +776,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
             </div>
               </details>
             </section>
-            
+
             <section class="chain-deep tone-amber">
               <header class="chain-head">
                 <span>03</span>
@@ -796,13 +807,13 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
               <p>Samsung Foundry in Talks with Meta on Mass Production of Third Generation MTIA Samsung Electronics is establishing itself as a key player in the artificial intelligence (AI) chip…</p>
               <a href="https://x.com/jukan05/status/2072946656933495049">tweet_id 2072946656933495049</a>
             </article>
-            
+
             <article class="evidence-item">
               <header><b>2026-07-03</b><span>score 26｜</span></header>
               <p>&gt;&gt; TrendForce: AI server demand underpins memory prices… Q3 DRAM +13 to 18%, NAND +10 to 15% QoQ increase expected • According to TrendForce&#x27;s latest memory price survey, the DRAM…</p>
               <a href="https://x.com/jukan05/status/2072908815868330276">tweet_id 2072908815868330276</a>
             </article>
-            
+
             <article class="evidence-item">
               <header><b>2026-07-01</b><span>score 16｜</span></header>
               <p>Huawei AI NPU Servers to Land in Korea in Q4, Throwing Down the Gauntlet to NVIDIA Huawei will launch its artificial intelligence (AI) accelerator chips in the Korean market for t…</p>
@@ -811,7 +822,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
             </div>
               </details>
             </section>
-            
+
             <section class="chain-deep tone-crimson">
               <header class="chain-head">
                 <span>04</span>
@@ -842,13 +853,13 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
               <p>Listen to what @GavinSBaker said on All-In at 1:04:06: “DRAM is the most important bottleneck, and Elon is focusing the Terafab on memory because he believes memory is the most im…</p>
               <a href="https://x.com/jukan05/status/2071188353131962740">tweet_id 2071188353131962740</a>
             </article>
-            
+
             <article class="evidence-item">
               <header><b>2026-06-27</b><span>score 30｜</span></header>
               <p>Recommended reads for the week SemiAnalysis — China’s CXMT Is Set to Challenge DRAM Incumbents Goldman Sachs — Americas Technology: Hardware — Expert Network Series: CPU Server De…</p>
               <a href="https://x.com/jukan05/status/2070800684325179899">tweet_id 2070800684325179899</a>
             </article>
-            
+
             <article class="evidence-item">
               <header><b>2026-06-28</b><span>score 27｜</span></header>
               <p>Google reportedly limited Meta’s use of Gemini due to a shortage of compute resources. — FT Google is in a position where it can’t sell Gemini to Meta as freely as it might want t…</p>
@@ -857,9 +868,9 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
             </div>
               </details>
             </section>
-            
+
     </section>
-    
+
     <section class="section-band page" id="evidence">
       <div class="section-head">
         <div>
@@ -876,7 +887,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
                 <small>score 56｜AMD, GOOGL, META, MU, NVDA｜<a href="https://x.com/jukan05/status/2073005976731754920">tweet_id 2073005976731754920</a></small>
               </div>
             </article>
-            
+
             <article class="timeline-item">
               <span>J02</span>
               <div>
@@ -885,7 +896,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
                 <small>score 55｜｜<a href="https://x.com/jukan05/status/2071139712082022855">tweet_id 2071139712082022855</a></small>
               </div>
             </article>
-            
+
             <article class="timeline-item">
               <span>J03</span>
               <div>
@@ -894,7 +905,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
                 <small>score 48｜｜<a href="https://x.com/jukan05/status/2072901006682427875">tweet_id 2072901006682427875</a></small>
               </div>
             </article>
-            
+
             <article class="timeline-item">
               <span>J04</span>
               <div>
@@ -903,7 +914,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
                 <small>score 41｜｜<a href="https://x.com/jukan05/status/2071188353131962740">tweet_id 2071188353131962740</a></small>
               </div>
             </article>
-            
+
             <article class="timeline-item">
               <span>J05</span>
               <div>
@@ -912,7 +923,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
                 <small>score 35｜｜<a href="https://x.com/jukan05/status/2071745275325190339">tweet_id 2071745275325190339</a></small>
               </div>
             </article>
-            
+
             <article class="timeline-item">
               <span>J06</span>
               <div>
@@ -921,7 +932,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
                 <small>score 33｜｜<a href="https://x.com/jukan05/status/2072613106237550893">tweet_id 2072613106237550893</a></small>
               </div>
             </article>
-            
+
             <article class="timeline-item">
               <span>J07</span>
               <div>
@@ -930,7 +941,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
                 <small>score 32｜｜<a href="https://x.com/jukan05/status/2073032040451366952">tweet_id 2073032040451366952</a></small>
               </div>
             </article>
-            
+
             <article class="timeline-item">
               <span>J08</span>
               <div>
@@ -939,7 +950,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
                 <small>score 32｜ASX｜<a href="https://x.com/jukan05/status/2072291210912559484">tweet_id 2072291210912559484</a></small>
               </div>
             </article>
-            
+
             <article class="timeline-item">
               <span>J09</span>
               <div>
@@ -948,7 +959,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
                 <small>score 32｜AVGO, MRVL, QCOM｜<a href="https://x.com/jukan05/status/2072923398653821326">tweet_id 2072923398653821326</a></small>
               </div>
             </article>
-            
+
             <article class="timeline-item">
               <span>J10</span>
               <div>
@@ -957,7 +968,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
                 <small>score 31｜META｜<a href="https://x.com/jukan05/status/2072298808692834658">tweet_id 2072298808692834658</a></small>
               </div>
             </article>
-            
+
             <article class="timeline-item">
               <span>J11</span>
               <div>
@@ -966,7 +977,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
                 <small>score 30｜｜<a href="https://x.com/jukan05/status/2070800684325179899">tweet_id 2070800684325179899</a></small>
               </div>
             </article>
-            
+
             <article class="timeline-item">
               <span>J12</span>
               <div>
@@ -977,7 +988,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
             </article>
             </div>
     </section>
-    
+
     <section class="section-band page" id="asset-table">
       <div class="section-head">
         <div>
@@ -992,196 +1003,196 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
               <td>4</td>
               <td><span class="lang lang-zh">当前 7 日窗口内绝对提及次数。</span><span class="lang lang-en">Absolute mentions in the current 7-day window.</span></td>
             </tr>
-            
+
             <tr>
               <td><span class="lang lang-zh">高频 ticker</span><span class="lang lang-en">Frequent Ticker</span></td>
               <td>AAPL</td>
               <td>2</td>
               <td><span class="lang lang-zh">当前 7 日窗口内绝对提及次数。</span><span class="lang lang-en">Absolute mentions in the current 7-day window.</span></td>
             </tr>
-            
+
             <tr>
               <td><span class="lang lang-zh">高频 ticker</span><span class="lang lang-en">Frequent Ticker</span></td>
               <td>META</td>
               <td>2</td>
               <td><span class="lang lang-zh">当前 7 日窗口内绝对提及次数。</span><span class="lang lang-en">Absolute mentions in the current 7-day window.</span></td>
             </tr>
-            
+
             <tr>
               <td><span class="lang lang-zh">高频 ticker</span><span class="lang lang-en">Frequent Ticker</span></td>
               <td>MU</td>
               <td>2</td>
               <td><span class="lang lang-zh">当前 7 日窗口内绝对提及次数。</span><span class="lang lang-en">Absolute mentions in the current 7-day window.</span></td>
             </tr>
-            
+
             <tr>
               <td><span class="lang lang-zh">高频 ticker</span><span class="lang lang-en">Frequent Ticker</span></td>
               <td>AMD</td>
               <td>1</td>
               <td><span class="lang lang-zh">当前 7 日窗口内绝对提及次数。</span><span class="lang lang-en">Absolute mentions in the current 7-day window.</span></td>
             </tr>
-            
+
             <tr>
               <td><span class="lang lang-zh">高频 ticker</span><span class="lang lang-en">Frequent Ticker</span></td>
               <td>GOOGL</td>
               <td>1</td>
               <td><span class="lang lang-zh">当前 7 日窗口内绝对提及次数。</span><span class="lang lang-en">Absolute mentions in the current 7-day window.</span></td>
             </tr>
-            
+
             <tr>
               <td><span class="lang lang-zh">高频 ticker</span><span class="lang lang-en">Frequent Ticker</span></td>
               <td>NVDA</td>
               <td>1</td>
               <td><span class="lang lang-zh">当前 7 日窗口内绝对提及次数。</span><span class="lang lang-en">Absolute mentions in the current 7-day window.</span></td>
             </tr>
-            
+
             <tr>
               <td><span class="lang lang-zh">高频 ticker</span><span class="lang lang-en">Frequent Ticker</span></td>
               <td>AVGO</td>
               <td>1</td>
               <td><span class="lang lang-zh">当前 7 日窗口内绝对提及次数。</span><span class="lang lang-en">Absolute mentions in the current 7-day window.</span></td>
             </tr>
-            
+
             <tr>
               <td><span class="lang lang-zh">高频 ticker</span><span class="lang lang-en">Frequent Ticker</span></td>
               <td>MRVL</td>
               <td>1</td>
               <td><span class="lang lang-zh">当前 7 日窗口内绝对提及次数。</span><span class="lang lang-en">Absolute mentions in the current 7-day window.</span></td>
             </tr>
-            
+
             <tr>
               <td><span class="lang lang-zh">高频 ticker</span><span class="lang lang-en">Frequent Ticker</span></td>
               <td>QCOM</td>
               <td>1</td>
               <td><span class="lang lang-zh">当前 7 日窗口内绝对提及次数。</span><span class="lang lang-en">Absolute mentions in the current 7-day window.</span></td>
             </tr>
-            
+
             <tr>
               <td><span class="lang lang-zh">高频 ticker</span><span class="lang lang-en">Frequent Ticker</span></td>
               <td>ASX</td>
               <td>1</td>
               <td><span class="lang lang-zh">当前 7 日窗口内绝对提及次数。</span><span class="lang lang-en">Absolute mentions in the current 7-day window.</span></td>
             </tr>
-            
+
             <tr>
               <td><span class="lang lang-zh">高频 ticker</span><span class="lang lang-en">Frequent Ticker</span></td>
               <td>DRAM</td>
               <td>1</td>
               <td><span class="lang lang-zh">当前 7 日窗口内绝对提及次数。</span><span class="lang lang-en">Absolute mentions in the current 7-day window.</span></td>
             </tr>
-            
+
             <tr>
               <td><span class="lang lang-zh">升温 ticker</span><span class="lang lang-en">Rising Ticker</span></td>
               <td>INTC</td>
               <td>+4</td>
               <td>4 vs 0｜<span class="lang lang-zh">当前 7 日减前一 7 日。</span><span class="lang lang-en">Current 7 days minus previous 7 days.</span></td>
             </tr>
-            
+
             <tr>
               <td><span class="lang lang-zh">升温 ticker</span><span class="lang lang-en">Rising Ticker</span></td>
               <td>AAPL</td>
               <td>+2</td>
               <td>2 vs 0｜<span class="lang lang-zh">当前 7 日减前一 7 日。</span><span class="lang lang-en">Current 7 days minus previous 7 days.</span></td>
             </tr>
-            
+
             <tr>
               <td><span class="lang lang-zh">升温 ticker</span><span class="lang lang-en">Rising Ticker</span></td>
               <td>META</td>
               <td>+2</td>
               <td>2 vs 0｜<span class="lang lang-zh">当前 7 日减前一 7 日。</span><span class="lang lang-en">Current 7 days minus previous 7 days.</span></td>
             </tr>
-            
+
             <tr>
               <td><span class="lang lang-zh">升温 ticker</span><span class="lang lang-en">Rising Ticker</span></td>
               <td>AMD</td>
               <td>+1</td>
               <td>1 vs 0｜<span class="lang lang-zh">当前 7 日减前一 7 日。</span><span class="lang lang-en">Current 7 days minus previous 7 days.</span></td>
             </tr>
-            
+
             <tr>
               <td><span class="lang lang-zh">升温 ticker</span><span class="lang lang-en">Rising Ticker</span></td>
               <td>ASML</td>
               <td>+1</td>
               <td>1 vs 0｜<span class="lang lang-zh">当前 7 日减前一 7 日。</span><span class="lang lang-en">Current 7 days minus previous 7 days.</span></td>
             </tr>
-            
+
             <tr>
               <td><span class="lang lang-zh">升温 ticker</span><span class="lang lang-en">Rising Ticker</span></td>
               <td>ASX</td>
               <td>+1</td>
               <td>1 vs 0｜<span class="lang lang-zh">当前 7 日减前一 7 日。</span><span class="lang lang-en">Current 7 days minus previous 7 days.</span></td>
             </tr>
-            
+
             <tr>
               <td><span class="lang lang-zh">升温 ticker</span><span class="lang lang-en">Rising Ticker</span></td>
               <td>AVGO</td>
               <td>+1</td>
               <td>1 vs 0｜<span class="lang lang-zh">当前 7 日减前一 7 日。</span><span class="lang lang-en">Current 7 days minus previous 7 days.</span></td>
             </tr>
-            
+
             <tr>
               <td><span class="lang lang-zh">升温 ticker</span><span class="lang lang-en">Rising Ticker</span></td>
               <td>GOOGL</td>
               <td>+1</td>
               <td>1 vs 0｜<span class="lang lang-zh">当前 7 日减前一 7 日。</span><span class="lang lang-en">Current 7 days minus previous 7 days.</span></td>
             </tr>
-            
+
             <tr>
               <td><span class="lang lang-zh">升温 ticker</span><span class="lang lang-en">Rising Ticker</span></td>
               <td>MRVL</td>
               <td>+1</td>
               <td>1 vs 0｜<span class="lang lang-zh">当前 7 日减前一 7 日。</span><span class="lang lang-en">Current 7 days minus previous 7 days.</span></td>
             </tr>
-            
+
             <tr>
               <td><span class="lang lang-zh">升温 ticker</span><span class="lang lang-en">Rising Ticker</span></td>
               <td>NVDA</td>
               <td>+1</td>
               <td>1 vs 0｜<span class="lang lang-zh">当前 7 日减前一 7 日。</span><span class="lang lang-en">Current 7 days minus previous 7 days.</span></td>
             </tr>
-            
+
             <tr>
               <td><span class="lang lang-zh">升温 ticker</span><span class="lang lang-en">Rising Ticker</span></td>
               <td>QCOM</td>
               <td>+1</td>
               <td>1 vs 0｜<span class="lang lang-zh">当前 7 日减前一 7 日。</span><span class="lang lang-en">Current 7 days minus previous 7 days.</span></td>
             </tr>
-            
+
             <tr>
               <td><span class="lang lang-zh">主题桶</span><span class="lang lang-en">Theme Bucket</span></td>
               <td><span class="lang lang-zh">HBM / 存储</span><span class="lang lang-en">HBM / Memory Bandwidth</span><small>memory_hbm</small></td>
               <td>38</td>
               <td><span class="lang lang-zh">新闻流主题计数，只用于资产组织。</span><span class="lang lang-en">News-flow theme count for asset organization only.</span></td>
             </tr>
-            
+
             <tr>
               <td><span class="lang lang-zh">主题桶</span><span class="lang lang-en">Theme Bucket</span></td>
               <td><span class="lang lang-zh">AI 半导体供应链</span><span class="lang lang-en">AI Semi Supply Chain</span><small>ai_semicap_supply_chain</small></td>
               <td>27</td>
               <td><span class="lang lang-zh">新闻流主题计数，只用于资产组织。</span><span class="lang lang-en">News-flow theme count for asset organization only.</span></td>
             </tr>
-            
+
             <tr>
               <td><span class="lang lang-zh">主题桶</span><span class="lang lang-en">Theme Bucket</span></td>
               <td><span class="lang lang-zh">Neocloud 融资质量</span><span class="lang lang-en">Neocloud Financing Quality</span><small>neocloud_financing</small></td>
               <td>13</td>
               <td><span class="lang lang-zh">新闻流主题计数，只用于资产组织。</span><span class="lang lang-en">News-flow theme count for asset organization only.</span></td>
             </tr>
-            
+
             <tr>
               <td><span class="lang lang-zh">主题桶</span><span class="lang lang-en">Theme Bucket</span></td>
               <td><span class="lang lang-zh">电力 / 功率链</span><span class="lang lang-en">Power / Grid Chain</span><small>power_grid</small></td>
               <td>8</td>
               <td><span class="lang lang-zh">新闻流主题计数，只用于资产组织。</span><span class="lang lang-en">News-flow theme count for asset organization only.</span></td>
             </tr>
-            
+
             <tr>
               <td><span class="lang lang-zh">主题桶</span><span class="lang lang-en">Theme Bucket</span></td>
               <td><span class="lang lang-zh">InP / 化合物半导体</span><span class="lang lang-en">InP / Compound Semis</span><small>inp_compound_semi</small></td>
               <td>4</td>
               <td><span class="lang lang-zh">新闻流主题计数，只用于资产组织。</span><span class="lang lang-en">News-flow theme count for asset organization only.</span></td>
             </tr>
-            
+
             <tr>
               <td><span class="lang lang-zh">主题桶</span><span class="lang lang-en">Theme Bucket</span></td>
               <td><span class="lang lang-zh">Physical AI / 国防光学</span><span class="lang lang-en">Physical AI / Defense Optics</span><small>robotics_physical_ai</small></td>
@@ -1190,7 +1201,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
             </tr>
             </tbody></table></div>
     </section>
-    
+
     <section class="section-band page" id="theme-heat">
       <div class="section-head">
         <div>
@@ -1205,35 +1216,35 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
               <td>2026-06-27 → 2026-07-04</td>
               <td><span class="lang lang-zh">jukan05 新闻流</span><span class="lang lang-en">jukan05 news flow</span></td>
             </tr>
-            
+
             <tr>
               <td><span class="lang lang-zh">AI 半导体供应链</span><span class="lang lang-en">AI Semi Supply Chain</span><small>ai_semicap_supply_chain</small></td>
               <td>27</td>
               <td>2026-06-27 → 2026-07-04</td>
               <td><span class="lang lang-zh">jukan05 新闻流</span><span class="lang lang-en">jukan05 news flow</span></td>
             </tr>
-            
+
             <tr>
               <td><span class="lang lang-zh">Neocloud 融资质量</span><span class="lang lang-en">Neocloud Financing Quality</span><small>neocloud_financing</small></td>
               <td>13</td>
               <td>2026-06-27 → 2026-07-04</td>
               <td><span class="lang lang-zh">jukan05 新闻流</span><span class="lang lang-en">jukan05 news flow</span></td>
             </tr>
-            
+
             <tr>
               <td><span class="lang lang-zh">电力 / 功率链</span><span class="lang lang-en">Power / Grid Chain</span><small>power_grid</small></td>
               <td>8</td>
               <td>2026-06-27 → 2026-07-04</td>
               <td><span class="lang lang-zh">jukan05 新闻流</span><span class="lang lang-en">jukan05 news flow</span></td>
             </tr>
-            
+
             <tr>
               <td><span class="lang lang-zh">InP / 化合物半导体</span><span class="lang lang-en">InP / Compound Semis</span><small>inp_compound_semi</small></td>
               <td>4</td>
               <td>2026-06-27 → 2026-07-04</td>
               <td><span class="lang lang-zh">jukan05 新闻流</span><span class="lang lang-en">jukan05 news flow</span></td>
             </tr>
-            
+
             <tr>
               <td><span class="lang lang-zh">Physical AI / 国防光学</span><span class="lang lang-en">Physical AI / Defense Optics</span><small>robotics_physical_ai</small></td>
               <td>2</td>
@@ -1242,14 +1253,14 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
             </tr>
             </tbody></table></div>
     </section>
-    
+
     <section class="boundary-strip page" id="boundary">
       <h2><span class="lang lang-zh">公开边界</span><span class="lang lang-en">Public Boundary</span></h2>
       <p><span class="lang lang-block lang-zh">本页面只展示本地 X KOL 推文资产的研究归桶、证据摘录和可复核链接；不输出投资建议、评级、价格判断或交易动作。</span><span class="lang lang-block lang-en">This page shows only research buckets, evidence excerpts and traceable links from local X KOL tweet assets. It does not provide investment advice, ratings, price calls or trading actions.</span></p>
     </section>
     </main>
   <footer class="page">
-    AIpha X-KOL V1.2｜<span class="lang lang-zh">生成时间</span><span class="lang lang-en">Generated</span> 2026-07-06T20:15:09+08:00｜source_commit 1c2f854fca94
+    AIpha X-KOL V1.2｜<span class="lang lang-zh">生成时间</span><span class="lang lang-en">Generated</span> 2026-07-06T21:08:21+08:00｜source_commit 1c2f854fca94
   </footer>
 </body>
 </html>

@@ -170,8 +170,8 @@ html[data-lang="zh"] .lang-toggle button[data-lang-button="zh"],
 html[data-lang="en"] .lang-toggle button[data-lang-button="en"] { color: #111827; background: #f8fafc; }
 .page { width: min(1360px, calc(100% - 36px)); margin: 0 auto; }
 .hero {
-  margin: 20px auto 18px;
-  padding: clamp(26px, 3.2vw, 40px);
+  margin: 14px auto 14px;
+  padding: clamp(20px, 2.5vw, 32px);
   background:
     linear-gradient(90deg, rgba(255,255,255,0.98), rgba(255,255,255,0.9)),
     linear-gradient(135deg, rgba(31,83,102,0.16), rgba(198,154,74,0.08));
@@ -201,15 +201,15 @@ html[data-lang="en"] .lang-toggle button[data-lang-button="en"] { color: #111827
   letter-spacing: 0.04em;
   line-height: 1.25;
 }
-h1 { margin: 6px 0 12px; font-size: clamp(36px, 4vw, 54px); line-height: 1.06; letter-spacing: 0; max-width: 920px; }
-.lead { max-width: 860px; margin: 0; color: var(--muted); font-size: clamp(16px, 1.28vw, 19px); }
+h1 { margin: 4px 0 10px; font-size: clamp(34px, 3.35vw, 48px); line-height: 1.08; letter-spacing: 0; max-width: 940px; }
+.lead { max-width: 880px; margin: 0; color: var(--muted); font-size: clamp(15px, 1.18vw, 18px); }
 .meta-line { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 18px; color: var(--muted); }
 .meta-chip { display: inline-flex; align-items: center; padding: 5px 9px; border: 1px solid var(--line); background: rgba(255,255,255,0.78); font-size: 12px; max-width: 100%; overflow-wrap: anywhere; }
-.window-status { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; margin-top: 16px; max-width: 760px; }
-.window-status article { display: grid; grid-template-columns: minmax(0,1fr) auto; gap: 8px; align-items: center; padding: 10px 12px; background: #fff; border: 1px solid var(--line); border-left: 4px solid var(--blue); }
-.window-status strong { display: block; font-size: 14px; }
+.window-status { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; margin-top: 14px; max-width: 1000px; }
+.window-status article { display: grid; grid-template-columns: minmax(0,1fr) auto; gap: 8px; align-items: center; padding: 9px 11px; background: #fff; border: 1px solid var(--line); border-left: 4px solid var(--blue); }
+.window-status strong { display: block; font-size: 13px; }
 .window-status span { color: var(--muted); font-size: 12px; overflow-wrap: anywhere; }
-.window-status b { font-size: 22px; line-height: 1; color: var(--blue); }
+.window-status b { font-size: 21px; line-height: 1; color: var(--blue); }
 .stat-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; width: 100%; max-width: 980px; align-self: stretch; }
 .stat {
   min-width: 0;
@@ -227,14 +227,14 @@ h1 { margin: 6px 0 12px; font-size: clamp(36px, 4vw, 54px); line-height: 1.06; l
 .stat b { display: block; margin: 3px 0 3px; font-size: clamp(22px, 2vw, 30px); line-height: 1; white-space: nowrap; letter-spacing: -0.01em; }
 .stat b.long-stat-value { font-size: clamp(20px, 1.6vw, 26px); letter-spacing: -0.02em; }
 .section-band {
-  margin: 18px auto;
-  padding: clamp(20px, 2.8vw, 34px);
+  margin: 14px auto;
+  padding: clamp(18px, 2.35vw, 30px);
   background: rgba(255,255,255,0.94);
   border: 1px solid rgba(216,224,228,0.92);
   box-shadow: 0 10px 30px rgba(22,33,43,0.045);
 }
-.section-head { display: flex; justify-content: space-between; gap: 18px; align-items: end; border-bottom: 1px solid var(--line); padding-bottom: 14px; margin-bottom: 18px; }
-.section-head h2 { margin: 0; font-size: clamp(24px, 2.55vw, 34px); line-height: 1.12; }
+.section-head { display: flex; justify-content: space-between; gap: 18px; align-items: end; border-bottom: 1px solid var(--line); padding-bottom: 12px; margin-bottom: 16px; }
+.section-head h2 { margin: 0; font-size: clamp(23px, 2.3vw, 32px); line-height: 1.12; }
 .section-head p { margin: 6px 0 0; color: var(--muted); max-width: 780px; }
 .program-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
 .program-card { display: grid; gap: 14px; padding: 18px; background: linear-gradient(180deg, #ffffff, #f8faf9); border: 1px solid var(--line); border-left: 5px solid var(--blue); text-decoration: none; transition: transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease; }
@@ -277,44 +277,46 @@ h1 { margin: 6px 0 12px; font-size: clamp(36px, 4vw, 54px); line-height: 1.06; l
 .weekly-event-label { color: var(--blue); font-size: 12px; font-weight: 900; }
 .weekly-event strong { display: block; font-size: 14px; line-height: 1.35; }
 .weekly-event small { display: block; margin-top: 4px; color: var(--muted); overflow-wrap: anywhere; }
-.weekly-report-paper { display: grid; gap: 22px; max-width: 1180px; }
-.weekly-report-memo { display: grid; gap: 26px; }
-.weekly-narrative { display: grid; gap: 26px; }
-.weekly-narrative section { display: grid; gap: 10px; }
-.weekly-narrative h3 { margin: 0; font-size: 23px; line-height: 1.2; }
-.weekly-narrative p { margin: 0; color: var(--ink); font-size: clamp(17px, 1.55vw, 22px); line-height: 1.7; letter-spacing: 0; }
-.weekly-narrative .weekly-intro { font-size: clamp(19px, 1.9vw, 27px); line-height: 1.65; font-weight: 720; }
+.weekly-report-paper { display: grid; gap: 18px; max-width: 1120px; }
+.weekly-report-memo { display: grid; gap: 22px; }
+.weekly-narrative { display: grid; gap: 22px; }
+.weekly-narrative section { display: grid; gap: 9px; }
+.weekly-narrative h3 { margin: 0; font-size: 20px; line-height: 1.2; color: var(--ink); }
+.weekly-narrative p { margin: 0; color: var(--ink); font-size: clamp(15px, 1.12vw, 18px); line-height: 1.72; letter-spacing: 0; }
+.weekly-narrative .weekly-intro { font-size: clamp(17px, 1.42vw, 21px); line-height: 1.68; font-weight: 700; max-width: 1080px; }
 .account-pill {
   display: inline-flex;
   align-items: center;
   margin: 0 2px;
-  padding: 1px 8px 2px;
-  border-radius: 7px;
+  padding: 1px 7px 2px;
+  border-radius: 6px;
   background: #eef1f2;
   color: var(--ink);
   border: 1px solid rgba(216,224,228,0.9);
   font-family: "SF Mono", "Roboto Mono", Menlo, Consolas, monospace;
-  font-size: 0.92em;
+  font-size: 0.88em;
   line-height: 1.25;
   white-space: nowrap;
 }
-.weekly-kol-list { display: grid; gap: 18px; }
-.weekly-kol-paragraph { display: grid; grid-template-columns: 132px minmax(0, 1fr); gap: 14px; align-items: start; padding-top: 16px; border-top: 1px solid var(--line); }
+.weekly-kol-list { display: grid; gap: 12px; }
+.weekly-kol-paragraph { display: grid; grid-template-columns: 116px minmax(0, 1fr); gap: 14px; align-items: start; padding: 12px 0 0; border-top: 1px solid var(--line); }
 .weekly-kol-paragraph:first-child { border-top: 0; padding-top: 0; }
-.weekly-kol-label { color: var(--blue); font-family: "SF Mono", "Roboto Mono", Menlo, Consolas, monospace; font-size: 15px; font-weight: 900; line-height: 1.4; overflow-wrap: anywhere; }
-.weekly-kol-paragraph p { margin: 0; color: var(--ink); font-size: clamp(16px, 1.42vw, 21px); line-height: 1.68; }
-.industry-merge-list { display: grid; gap: 13px; margin: 0; padding: 0; list-style: none; counter-reset: industry; }
-.industry-merge-list li { counter-increment: industry; display: grid; grid-template-columns: 38px minmax(0, 1fr); gap: 12px; align-items: start; color: var(--ink); font-size: clamp(16px, 1.35vw, 20px); line-height: 1.6; }
+.weekly-kol-label { color: var(--blue); font-family: "SF Mono", "Roboto Mono", Menlo, Consolas, monospace; font-size: 13px; font-weight: 900; line-height: 1.4; overflow-wrap: anywhere; }
+.weekly-kol-paragraph p { margin: 0; color: var(--ink); font-size: clamp(15px, 1.08vw, 17px); line-height: 1.66; }
+.industry-merge-list { display: grid; gap: 10px; margin: 0; padding: 0; list-style: none; counter-reset: industry; }
+.industry-merge-list li { counter-increment: industry; position: relative; min-height: 28px; padding-left: 42px; color: var(--ink); font-size: clamp(15px, 1.08vw, 17px); line-height: 1.62; }
 .industry-merge-list li::before {
   content: counter(industry);
-  display: grid;
+  position: absolute;
+  left: 0;
+  top: 1px;
+  display: inline-grid;
   place-items: center;
   width: 30px;
   height: 30px;
-  margin-top: 2px;
   background: var(--dark);
   color: #fff;
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 950;
 }
 .industry-merge-list b { color: var(--ink); }
@@ -527,14 +529,22 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
   .hero { margin-top: 12px; padding: 20px; }
   .hero-grid, .program-grid, .brief-grid, .weekly-grid, .weekly-signal-grid, .digest-overview, .digest-card-grid, .question-list, .chain-body, .timeline-grid, .asset-snapshot-grid { grid-template-columns: 1fr; }
   .brief-titlebar { display: grid; }
-  h1 { font-size: 34px; }
+  h1 { font-size: 32px; }
   .lead { font-size: 16px; }
   .stat-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; width: 100%; }
   .stat { min-height: 64px; padding: 9px 10px; }
   .stat span, .stat small { font-size: 9.5px; }
   .stat b { font-size: 24px; margin: 5px 0 4px; }
   .digest-ticker-columns { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .window-status { grid-template-columns: 1fr; }
+  .window-status { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 7px; }
+  .window-status article { grid-template-columns: minmax(0, 1fr); align-items: start; gap: 6px; padding: 9px; }
+  .window-status strong { font-size: 12px; }
+  .window-status span { font-size: 11px; }
+  .window-status b { font-size: 20px; }
+  .weekly-kol-paragraph { grid-template-columns: 1fr; gap: 5px; }
+  .weekly-kol-label { font-size: 12px; }
+  .industry-merge-list li { padding-left: 36px; font-size: 15px; }
+  .industry-merge-list li::before { width: 26px; height: 26px; font-size: 11px; }
   .brief-numbered-list { grid-template-columns: 1fr; }
   .brief-conclusion { grid-template-columns: 1fr; gap: 8px; }
   .brief-topic-grid, .brief-side-grid, .change-radar-grid, .change-summary-grid { grid-template-columns: 1fr; }
@@ -555,20 +565,21 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
   .nav-disclaimer { min-height: 21px; padding: 0 5px; font-size: 9px; }
   .lang-toggle button { min-width: 26px; min-height: 19px; padding: 0 3px; font-size: 9px; }
   .page-switcher a { min-height: 22px; padding: 0 7px; font-size: 9px; }
+  .hero { padding: 16px; }
   .stat-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
   .stat { min-height: 62px; padding: 9px; }
   .stat span, .stat small { font-size: 9.5px; }
   .stat b { font-size: 24px; }
-  .window-status { grid-template-columns: 1fr; }
+  .window-status { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .brief-titlebar, .brief-body { padding-left: 14px; padding-right: 14px; }
   .brief-numbered-item { grid-template-columns: 32px minmax(0, 1fr); padding: 12px; }
-  h1 { font-size: 31px; }
+  h1 { font-size: 29px; }
   .section-head { display: block; }
 }
 </style>
 </head>
 <body>
-  
+
     <header class="top-nav">
       <a class="brand" href="/AIpha/" aria-label="AIpha Research Desk">
         <img src="../assets/nero-mark.svg" alt="AIpha Research Desk" />
@@ -583,19 +594,19 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
         </span>
       </div>
     </header>
-    
+
   <main>
     <section class="hero page">
       <div class="hero-grid">
         <div class="hero-main">
           <h1><span class="lang lang-block lang-zh">Serenity 推文资产研究</span><span class="lang lang-block lang-en">Serenity Tweet Asset Research</span></h1>
           <p class="lead"><span class="lang lang-block lang-zh">@aleabitoreddit 页面保留七链矩阵、链条深挖、A股叶子链映射和 Serenity 证据表；不混入 jukan05 新闻流。</span><span class="lang lang-block lang-en">The @aleabitoreddit page keeps the seven-chain matrix, chain deep dives, A-share leaf-lane mapping and Serenity evidence, without mixing in the jukan05 feed.</span></p>
-          
+
         </div>
         <div class="stat-grid"><article class="stat"><span><span class="lang lang-zh">本地推文</span><span class="lang lang-en">Local Tweets</span></span><b>6,046</b><small><span class="lang lang-zh">SQLite 去重样本</span><span class="lang lang-en">Deduped SQLite sample</span></small></article><article class="stat"><span><span class="lang lang-zh">资产截止</span><span class="lang lang-en">Asset Cutoff</span></span><b class="long-stat-value">2026-07-04</b><small><span class="lang lang-zh">21:44</span><span class="lang lang-en">21:44</span></small></article><article class="stat"><span><span class="lang lang-zh">瓶颈链</span><span class="lang lang-en">Bottleneck Chains</span></span><b>7</b><small><span class="lang lang-zh">七链归因</span><span class="lang lang-en">Seven-chain attribution</span></small></article><article class="stat"><span><span class="lang lang-zh">A股映射</span><span class="lang lang-en">A-share Mapping</span></span><b>187</b><small><span class="lang lang-zh">只读映射表</span><span class="lang lang-en">Read-only mapping table</span></small></article></div>
       </div>
     </section>
-    
+
     <section class="section-band page" id="matrix">
       <div class="section-head">
         <div>
@@ -609,19 +620,19 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
               <p>高权重主链：推文密度最高，具备多跳 BOM 映射、海外 anchor 和材料/设备约束。</p>
               <b>83.3</b>
             </article>
-            
+
             <article class="asset-snapshot-card">
               <h3>02 · 先进封装 / 关键设备</h3>
               <p>结构性主链：单个 A股标的业务相关性差异很大，需要按设备/材料/封测环节拆开看。</p>
               <b>74.3</b>
             </article>
-            
+
             <article class="asset-snapshot-card">
               <h3>03 · HBM / HBF / 存储带宽</h3>
               <p>高热度但已显性化：更适合拆成 HBF、TC bonder、材料和后道设备等叶子链。</p>
               <b>73.9</b>
             </article>
-            
+
             <article class="asset-snapshot-card">
               <h3>04 · 电力 / 功率半导体</h3>
               <p>中热度链：推文数量低于 CPO/HBM，但瓶颈硬度高，适合作为拥挤主线之外的补充研究。</p>
@@ -637,7 +648,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
               <td><div class="metric-bar metric-blue" aria-label="crowding 91"><span style="width:91%"></span><b>91</b></div></td>
               <td><span class="lang lang-block lang-zh">高权重主链：推文密度最高，具备多跳 BOM 映射、海外 anchor 和材料/设备约束。</span><span class="lang lang-block lang-en">Highest-weight chain: dense tweet evidence, multi-hop BOM mapping, overseas anchors and material or equipment constraints.</span></td>
             </tr>
-            
+
             <tr class="chain-row tone-teal">
               <th><span><span class="lang lang-zh">先进封装</span><span class="lang lang-en">Advanced Packaging</span></span><small><span class="lang lang-zh">先进封装 / 关键设备</span><span class="lang lang-en">Advanced Packaging / Critical Equipment</span></small></th>
               <td class="priority">74.3</td>
@@ -647,7 +658,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
               <td><div class="metric-bar metric-teal" aria-label="crowding 81"><span style="width:81%"></span><b>81</b></div></td>
               <td><span class="lang lang-block lang-zh">结构性主链：单个 A股标的业务相关性差异很大，需要按设备/材料/封测环节拆开看。</span><span class="lang lang-block lang-en">Structural chain: A-share business relevance varies widely, so equipment, materials and OSAT links must be separated.</span></td>
             </tr>
-            
+
             <tr class="chain-row tone-amber">
               <th><span><span class="lang lang-zh">HBM/HBF</span><span class="lang lang-en">HBM/HBF</span></span><small><span class="lang lang-zh">HBM / HBF / 存储带宽</span><span class="lang lang-en">HBM / HBF / Memory Bandwidth</span></small></th>
               <td class="priority">73.9</td>
@@ -657,7 +668,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
               <td><div class="metric-bar metric-amber" aria-label="crowding 88"><span style="width:88%"></span><b>88</b></div></td>
               <td><span class="lang lang-block lang-zh">高热度但已显性化：更适合拆成 HBF、TC bonder、材料和后道设备等叶子链。</span><span class="lang lang-block lang-en">High-heat but already visible: better decomposed into HBF, TC bonders, materials and back-end equipment leaf chains.</span></td>
             </tr>
-            
+
             <tr class="chain-row tone-crimson">
               <th><span><span class="lang lang-zh">电力功率</span><span class="lang lang-en">Power Semis</span></span><small><span class="lang lang-zh">电力 / 功率半导体</span><span class="lang lang-en">Power / Power Semiconductors</span></small></th>
               <td class="priority">70.2</td>
@@ -667,7 +678,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
               <td><div class="metric-bar metric-crimson" aria-label="crowding 49"><span style="width:49%"></span><b>49</b></div></td>
               <td><span class="lang lang-block lang-zh">中热度链：推文数量低于 CPO/HBM，但瓶颈硬度高，适合作为拥挤主线之外的补充研究。</span><span class="lang lang-block lang-en">Mid-heat chain: lower tweet count than CPO or HBM, but high bottleneck hardness makes it useful as a second-order research lane.</span></td>
             </tr>
-            
+
             <tr class="chain-row tone-green">
               <th><span><span class="lang lang-zh">Neocloud</span><span class="lang lang-en">Neocloud</span></span><small><span class="lang lang-zh">Neocloud / 算力融资质量</span><span class="lang lang-en">Neocloud / Compute Financing Quality</span></small></th>
               <td class="priority">66.3</td>
@@ -677,7 +688,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
               <td><div class="metric-bar metric-green" aria-label="crowding 78"><span style="width:78%"></span><b>78</b></div></td>
               <td><span class="lang lang-block lang-zh">高推文密度但 A股映射间接：国内更多体现为 IDC、液冷、电源、服务器和国产算力链。</span><span class="lang lang-block lang-en">Dense tweet chain but indirect for A-shares: domestic mapping is mostly IDC, liquid cooling, power, servers and local compute.</span></td>
             </tr>
-            
+
             <tr class="chain-row tone-violet">
               <th><span><span class="lang lang-zh">玻璃基板</span><span class="lang lang-en">Glass Substrate</span></span><small><span class="lang lang-zh">玻璃基板 / 先进载板</span><span class="lang lang-en">Glass Substrate / Advanced Substrates</span></small></th>
               <td class="priority">62.1</td>
@@ -687,7 +698,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
               <td><div class="metric-bar metric-violet" aria-label="crowding 58"><span style="width:58%"></span><b>58</b></div></td>
               <td><span class="lang lang-block lang-zh">新近升温链：推文样本少于 CPO/HBM，但处在供应链重新定价的早期观察区。</span><span class="lang lang-block lang-en">Newly heating chain: fewer tweets than CPO or HBM, but it sits in an early supply-chain repricing zone.</span></td>
             </tr>
-            
+
             <tr class="chain-row tone-slate">
               <th><span><span class="lang lang-zh">Physical AI</span><span class="lang lang-en">Physical AI</span></span><small><span class="lang lang-zh">Physical AI / 国防光学</span><span class="lang lang-en">Physical AI / Defense Optics</span></small></th>
               <td class="priority">58.9</td>
@@ -699,7 +710,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
             </tr>
             </tbody></table></div>
     </section>
-    
+
     <section class="section-band page" id="chains">
       <div class="section-head">
         <div>
@@ -707,7 +718,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
           <p><span class="lang lang-block lang-zh">按七条瓶颈链展开 Serenity 证据、叶子链拆分和只读 A股映射。</span><span class="lang lang-block lang-en">Seven bottleneck lanes with Serenity evidence, leaf-lane splits and read-only A-share mapping.</span></p>
         </div>
       </div>
-      
+
             <section class="chain-deep tone-blue" id="chain-cpo_inp">
               <div class="chain-head">
                 <span>01</span>
@@ -740,43 +751,43 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
               <td><span class="lang lang-zh">高速光模块</span><span class="lang lang-en">High-speed Optical Modules</span><small>beneficiary · high</small></td>
               <td>800G/1.6T可插拔光模块</td>
             </tr>
-            
+
             <tr>
               <td>新易盛<small>300502.SZ</small></td>
               <td><span class="lang lang-zh">高速光模块</span><span class="lang lang-en">High-speed Optical Modules</span><small>beneficiary · high</small></td>
               <td>800G/1.6T可插拔光模块</td>
             </tr>
-            
+
             <tr>
               <td>仕佳光子<small>688313.SH</small></td>
               <td><span class="lang lang-zh">光芯片 / 硅光 / 上游光器件</span><span class="lang lang-en">Optical Chips / Silicon Photonics / Upstream Optical Components</span><small>bottleneck · high</small></td>
               <td>AWG/PLC/DFB光芯片/光器件</td>
             </tr>
-            
+
             <tr>
               <td>长飞光纤<small>601869.SH</small></td>
               <td><span class="lang lang-zh">光纤预制棒 / 数据中心光缆</span><span class="lang lang-en">Optical Fiber Preforms / Data-center Cables</span><small>enabler · medium</small></td>
               <td>光纤预制棒/新型数据中心光纤</td>
             </tr>
-            
+
             <tr>
               <td>亨通光电<small>600487.SH</small></td>
               <td><span class="lang lang-zh">光纤预制棒 / 数据中心光缆</span><span class="lang lang-en">Optical Fiber Preforms / Data-center Cables</span><small>enabler · medium</small></td>
               <td>数据中心光缆/光模块/光纤平台</td>
             </tr>
-            
+
             <tr>
               <td>中天科技<small>600522.SH</small></td>
               <td><span class="lang lang-zh">光纤预制棒 / 数据中心光缆</span><span class="lang lang-en">Optical Fiber Preforms / Data-center Cables</span><small>enabler · medium</small></td>
               <td>超大芯数光缆/224G铜缆/800G光模块</td>
             </tr>
-            
+
             <tr>
               <td>烽火通信<small>600498.SH</small></td>
               <td><span class="lang lang-zh">光纤预制棒 / 数据中心光缆</span><span class="lang lang-en">Optical Fiber Preforms / Data-center Cables</span><small>enabler · medium</small></td>
               <td>DCI光传输系统/预连接光缆</td>
             </tr>
-            
+
             <tr>
               <td>三安光电<small>600703.SH</small></td>
               <td><span class="lang lang-zh">InP / 化合物材料</span><span class="lang lang-en">InP / Compound Materials</span><small>bottleneck · medium</small></td>
@@ -792,25 +803,25 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
               <p>中际旭创、新易盛、兆驰股份、华工科技、东山精密、剑桥科技</p>
               <small><span class="lang lang-zh">映射依据</span><span class="lang lang-en">Mapping Basis</span>：800G/1.6T收入占比；北美云厂商客户；海外产能；毛利率斜率</small>
             </article>
-            
+
             <article class="subchain-card">
               <header><b><span class="lang lang-zh">光芯片 / 硅光 / 上游光器件</span><span class="lang lang-en">Optical Chips / Silicon Photonics / Upstream Optical Components</span></b><span>bottleneck · high</span></header>
               <p>仕佳光子、源杰科技、长光华芯、光迅科技、光库科技、福晶科技</p>
               <small><span class="lang lang-zh">映射依据</span><span class="lang lang-en">Mapping Basis</span>：高速光芯片出货；硅光客户导入；外延良率；海外客户认证</small>
             </article>
-            
+
             <article class="subchain-card">
               <header><b><span class="lang lang-zh">InP / 化合物材料</span><span class="lang lang-en">InP / Compound Materials</span></b><span>bottleneck · medium</span></header>
               <p>三安光电、云南锗业、有研新材</p>
               <small><span class="lang lang-zh">映射依据</span><span class="lang lang-en">Mapping Basis</span>：衬底收入占比；外延片良率；材料自供率；客户认证周期</small>
             </article>
-            
+
             <article class="subchain-card">
               <header><b><span class="lang lang-zh">光连接器 / 陶瓷插芯</span><span class="lang lang-en">Optical Connectors / Ceramic Ferrules</span></b><span>enabler · medium</span></header>
               <p>三环集团</p>
               <small><span class="lang lang-zh">映射依据</span><span class="lang lang-en">Mapping Basis</span>：MPO/MTP订单；陶瓷插芯产能；高速连接器客户；价格与交期</small>
             </article>
-            
+
             <article class="subchain-card">
               <header><b><span class="lang lang-zh">光纤预制棒 / 数据中心光缆</span><span class="lang lang-en">Optical Fiber Preforms / Data-center Cables</span></b><span>enabler · medium</span></header>
               <p>长飞光纤、亨通光电、中天科技、烽火通信</p>
@@ -827,25 +838,25 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
               <p>US has now invaded Venezuela. Everyone is probably wondering the same thing: How do you profit off the situation? 1. Heavy Sour, Ammonia, and Nitrogen Fertilizers disruption ( $CF , $CVE). These are Venezuela&#x27;s biggest exports. Most people will buy generic oil ETFs or light swee…</p>
               <a href="https://x.com/aleabitoreddit/status/2007387427820978510">tweet_id 2007387427820978510</a>
             </article>
-            
+
             <article class="evidence-item">
               <header><b>2026-01-02</b><span>score 102</span><em>AAOI, AIRO, AKAM, ALAB, AMD, AMKR, AMZN, ASOZF, ASTS, A…</em></header>
               <p>Welcome to 2026. Jan 1st ratings: Strong Buy: $TTD $SMCI $AIRO $INTC $HIMS $AXTI $TSM $NBIS $CIFR Samsung Electronics (KRX: 005930) $HUT $IREN $WULF $GLXY $TSSI $META $ETOR $CRCL Buy: $KRKNF $ONDS $GEMI $NVDA $MU $AMKR SK Hynix $SNAP $RDDT $AAOI $COHR $FISV $FLY $DJT $LITE $AMZN…</p>
               <a href="https://x.com/aleabitoreddit/status/2007071108831338685">tweet_id 2007071108831338685</a>
             </article>
-            
+
             <article class="evidence-item">
               <header><b>2026-06-07</b><span>score 97</span><em>AAOI, AXTI, INTC, IQE, JBL, LITE, MRVL, NVDA, RPI, SIVE…</em></header>
               <p>I think my personal style of investing is a bit different, just some reflection: It&#x27;s inherently discretionary, based on stuff markets don&#x27;t know yet. And a culmination of life experiences? If you look at $AXTI, $RPI, $SIVE, $IQE and others. Lot of it is guessing on unstructured…</p>
               <a href="https://x.com/aleabitoreddit/status/2063465386960736396">tweet_id 2063465386960736396</a>
             </article>
-            
+
             <article class="evidence-item">
               <header><b>2026-05-17</b><span>score 96</span><em>AAOI, AMD, ASML, COHR, DGXX, FN, INTC, IQE, JBL, KOPN,…</em></header>
               <p>When I see comments like this (and there are a lot) from retail investors: I immediately think they lack the technical depth. I&#x27;ll walk through each one from $SIVE to $LPK: 1. Photonics TAM goes from $14B -&gt; $154B In just two years time, and it&#x27;s likely going to keep scaling pas…</p>
               <a href="https://x.com/aleabitoreddit/status/2055822766600016238">tweet_id 2055822766600016238</a>
             </article>
-            
+
             <article class="evidence-item">
               <header><b>2026-06-30</b><span>score 90</span><em>ALAB, AXTI, CBRS, GFS, JBL, NBIS, RDDT, RPI, SIVE, XFAB</em></header>
               <p>I&#x27;ve reached 900k followers, thank you everyone! Just some reflection, it&#x27;s actually a nightmare at higher counts... Which is new to me, since I started at almost nothing earlier this year. 1. Threats of safety, which I don&#x27;t enjoy. - Random new accounts sending personal threats…</p>
@@ -854,7 +865,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
             </div>
               </details>
             </section>
-            
+
             <section class="chain-deep tone-teal" id="chain-advanced_packaging">
               <div class="chain-head">
                 <span>02</span>
@@ -887,43 +898,43 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
               <td><span class="lang lang-zh">HBF / TC bonder / 混合键合设备</span><span class="lang lang-en">HBF / TC Bonder / Hybrid Bonding Equipment</span><small>bottleneck · high</small></td>
               <td>W2W/D2W混合键合设备</td>
             </tr>
-            
+
             <tr>
               <td>百傲化学<small>603360.SH</small></td>
               <td><span class="lang lang-zh">HBF / TC bonder / 混合键合设备</span><span class="lang lang-en">HBF / TC Bonder / Hybrid Bonding Equipment</span><small>bottleneck · high</small></td>
               <td>W2W/D2W混合键合设备</td>
             </tr>
-            
+
             <tr>
               <td>长川科技<small>300604.SZ</small></td>
               <td><span class="lang lang-zh">测试 / 量测 / 探针</span><span class="lang lang-en">Test / Metrology / Probe</span><small>enabler · medium</small></td>
               <td>SoC/存储测试机/分选机</td>
             </tr>
-            
+
             <tr>
               <td>长电科技<small>600584.SH</small></td>
               <td><span class="lang lang-zh">OSAT / 先进封装产能</span><span class="lang lang-en">OSAT / Advanced Packaging Capacity</span><small>beneficiary · medium</small></td>
               <td>2.5D/3D/Chiplet/Fan-Out先进封测</td>
             </tr>
-            
+
             <tr>
               <td>通富微电<small>002156.SZ</small></td>
               <td><span class="lang lang-zh">OSAT / 先进封装产能</span><span class="lang lang-en">OSAT / Advanced Packaging Capacity</span><small>beneficiary · medium</small></td>
               <td>2.5D/3D/Chiplet/Fan-Out先进封测</td>
             </tr>
-            
+
             <tr>
               <td>华峰测控<small>688200.SH</small></td>
               <td><span class="lang lang-zh">测试 / 量测 / 探针</span><span class="lang lang-en">Test / Metrology / Probe</span><small>enabler · medium</small></td>
               <td>SoC/存储测试机/分选机</td>
             </tr>
-            
+
             <tr>
               <td>快克智能<small>603203.SH</small></td>
               <td><span class="lang lang-zh">HBF / TC bonder / 混合键合设备</span><span class="lang lang-en">HBF / TC Bonder / Hybrid Bonding Equipment</span><small>bottleneck · high</small></td>
               <td>TCB热压键合设备</td>
             </tr>
-            
+
             <tr>
               <td>北方华创<small>002371.SZ</small></td>
               <td><span class="lang lang-zh">前道半导体设备 / 刻蚀薄膜</span><span class="lang lang-en">Front-end Semi Equipment / Etch and Deposition</span><small>enabler · medium</small></td>
@@ -939,31 +950,31 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
               <p>拓荆科技、快克智能、百傲化学</p>
               <small><span class="lang lang-zh">映射依据</span><span class="lang lang-en">Mapping Basis</span>：设备订单；HBM扩产节奏；客户验证；交付周期</small>
             </article>
-            
+
             <article class="subchain-card">
               <header><b><span class="lang lang-zh">先进封装工艺设备</span><span class="lang lang-en">Advanced Packaging Process Tools</span></b><span>bottleneck · high</span></header>
               <p>盛美上海、华海清科</p>
               <small><span class="lang lang-zh">映射依据</span><span class="lang lang-en">Mapping Basis</span>：先进封装订单；客户导入；国产替代比例；设备毛利率</small>
             </article>
-            
+
             <article class="subchain-card">
               <header><b><span class="lang lang-zh">前道半导体设备 / 刻蚀薄膜</span><span class="lang lang-en">Front-end Semi Equipment / Etch and Deposition</span></b><span>enabler · medium</span></header>
               <p>北方华创、中微公司</p>
               <small><span class="lang lang-zh">映射依据</span><span class="lang lang-en">Mapping Basis</span>：新签订单；合同负债；发出商品；先进逻辑/存储客户验证</small>
             </article>
-            
+
             <article class="subchain-card">
               <header><b><span class="lang lang-zh">测试 / 量测 / 探针</span><span class="lang lang-en">Test / Metrology / Probe</span></b><span>enabler · medium</span></header>
               <p>长川科技、华峰测控、中科飞测、精测电子、矩子科技、赛腾股份</p>
               <small><span class="lang lang-zh">映射依据</span><span class="lang lang-en">Mapping Basis</span>：测试设备订单；探针卡客户；载板良率；验证周期</small>
             </article>
-            
+
             <article class="subchain-card">
               <header><b><span class="lang lang-zh">封装基板 / ABF / FC-BGA验证</span><span class="lang lang-en">Packaging Substrate / ABF / FC-BGA Validation</span></b><span>enabler · medium</span></header>
               <p>深南电路、兴森科技</p>
               <small><span class="lang lang-zh">映射依据</span><span class="lang lang-en">Mapping Basis</span>：封装基板收入；FC-BGA良率；HBM/AI客户认证；产能爬坡</small>
             </article>
-            
+
             <article class="subchain-card">
               <header><b><span class="lang lang-zh">封装材料 / CMP材料</span><span class="lang lang-en">Packaging Materials / CMP Materials</span></b><span>bottleneck · medium</span></header>
               <p>华海诚科、德邦科技、生益科技</p>
@@ -980,25 +991,25 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
               <p>US has now invaded Venezuela. Everyone is probably wondering the same thing: How do you profit off the situation? 1. Heavy Sour, Ammonia, and Nitrogen Fertilizers disruption ( $CF , $CVE). These are Venezuela&#x27;s biggest exports. Most people will buy generic oil ETFs or light swee…</p>
               <a href="https://x.com/aleabitoreddit/status/2007387427820978510">tweet_id 2007387427820978510</a>
             </article>
-            
+
             <article class="evidence-item">
               <header><b>2026-01-02</b><span>score 102</span><em>AAOI, AIRO, AKAM, ALAB, AMD, AMKR, AMZN, ASOZF, ASTS, A…</em></header>
               <p>Welcome to 2026. Jan 1st ratings: Strong Buy: $TTD $SMCI $AIRO $INTC $HIMS $AXTI $TSM $NBIS $CIFR Samsung Electronics (KRX: 005930) $HUT $IREN $WULF $GLXY $TSSI $META $ETOR $CRCL Buy: $KRKNF $ONDS $GEMI $NVDA $MU $AMKR SK Hynix $SNAP $RDDT $AAOI $COHR $FISV $FLY $DJT $LITE $AMZN…</p>
               <a href="https://x.com/aleabitoreddit/status/2007071108831338685">tweet_id 2007071108831338685</a>
             </article>
-            
+
             <article class="evidence-item">
               <header><b>2026-06-07</b><span>score 97</span><em>AAOI, AXTI, INTC, IQE, JBL, LITE, MRVL, NVDA, RPI, SIVE…</em></header>
               <p>I think my personal style of investing is a bit different, just some reflection: It&#x27;s inherently discretionary, based on stuff markets don&#x27;t know yet. And a culmination of life experiences? If you look at $AXTI, $RPI, $SIVE, $IQE and others. Lot of it is guessing on unstructured…</p>
               <a href="https://x.com/aleabitoreddit/status/2063465386960736396">tweet_id 2063465386960736396</a>
             </article>
-            
+
             <article class="evidence-item">
               <header><b>2026-05-17</b><span>score 96</span><em>AAOI, AMD, ASML, COHR, DGXX, FN, INTC, IQE, JBL, KOPN,…</em></header>
               <p>When I see comments like this (and there are a lot) from retail investors: I immediately think they lack the technical depth. I&#x27;ll walk through each one from $SIVE to $LPK: 1. Photonics TAM goes from $14B -&gt; $154B In just two years time, and it&#x27;s likely going to keep scaling pas…</p>
               <a href="https://x.com/aleabitoreddit/status/2055822766600016238">tweet_id 2055822766600016238</a>
             </article>
-            
+
             <article class="evidence-item">
               <header><b>2026-06-30</b><span>score 90</span><em>ALAB, AXTI, CBRS, GFS, JBL, NBIS, RDDT, RPI, SIVE, XFAB</em></header>
               <p>I&#x27;ve reached 900k followers, thank you everyone! Just some reflection, it&#x27;s actually a nightmare at higher counts... Which is new to me, since I started at almost nothing earlier this year. 1. Threats of safety, which I don&#x27;t enjoy. - Random new accounts sending personal threats…</p>
@@ -1007,7 +1018,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
             </div>
               </details>
             </section>
-            
+
             <section class="chain-deep tone-amber" id="chain-memory_hbf">
               <div class="chain-head">
                 <span>03</span>
@@ -1040,43 +1051,43 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
               <td><span class="lang lang-zh">未归类子链</span><span class="lang lang-en">Unclassified Leaf Lane</span><small>watchlist · watch</small></td>
               <td>CMP设备/减薄设备</td>
             </tr>
-            
+
             <tr>
               <td>长川科技<small>300604.SZ</small></td>
               <td><span class="lang lang-zh">未归类子链</span><span class="lang lang-en">Unclassified Leaf Lane</span><small>watchlist · watch</small></td>
               <td>SoC/存储测试机/分选机</td>
             </tr>
-            
+
             <tr>
               <td>拓荆科技<small>688072.SH</small></td>
               <td><span class="lang lang-zh">HBF / TC bonder / 混合键合设备</span><span class="lang lang-en">HBF / TC Bonder / Hybrid Bonding Equipment</span><small>bottleneck · high</small></td>
               <td>W2W/D2W混合键合设备</td>
             </tr>
-            
+
             <tr>
               <td>快克智能<small>603203.SH</small></td>
               <td><span class="lang lang-zh">HBF / TC bonder / 混合键合设备</span><span class="lang lang-en">HBF / TC Bonder / Hybrid Bonding Equipment</span><small>bottleneck · high</small></td>
               <td>TCB热压键合设备</td>
             </tr>
-            
+
             <tr>
               <td>百傲化学<small>603360.SH</small></td>
               <td><span class="lang lang-zh">HBF / TC bonder / 混合键合设备</span><span class="lang lang-en">HBF / TC Bonder / Hybrid Bonding Equipment</span><small>bottleneck · high</small></td>
               <td>W2W/D2W混合键合设备</td>
             </tr>
-            
+
             <tr>
               <td>深南电路<small>002916.SZ</small></td>
               <td><span class="lang lang-zh">HBM 封装基板 / FC-BGA</span><span class="lang lang-en">HBM Packaging Substrates / FC-BGA</span><small>enabler · medium</small></td>
               <td>HBM/先进封装基板</td>
             </tr>
-            
+
             <tr>
               <td>兴森科技<small>002436.SZ</small></td>
               <td><span class="lang lang-zh">HBM 封装基板 / FC-BGA</span><span class="lang lang-en">HBM Packaging Substrates / FC-BGA</span><small>enabler · medium</small></td>
               <td>HBM/先进封装基板</td>
             </tr>
-            
+
             <tr>
               <td>生益科技<small>600183.SH</small></td>
               <td><span class="lang lang-zh">HBM / 先进封装材料</span><span class="lang lang-en">HBM / Advanced Packaging Materials</span><small>bottleneck · medium</small></td>
@@ -1092,25 +1103,25 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
               <p>江波龙、香农芯创</p>
               <small><span class="lang lang-zh">映射依据</span><span class="lang lang-en">Mapping Basis</span>：企业级SSD收入；DDR5 RDIMM客户；存储价格周期；库存水位</small>
             </article>
-            
+
             <article class="subchain-card">
               <header><b><span class="lang lang-zh">HBF / TC bonder / 混合键合设备</span><span class="lang lang-en">HBF / TC Bonder / Hybrid Bonding Equipment</span></b><span>bottleneck · high</span></header>
               <p>拓荆科技、快克智能、百傲化学</p>
               <small><span class="lang lang-zh">映射依据</span><span class="lang lang-en">Mapping Basis</span>：W2W/D2W订单；TCB客户打样；HBM/3D IC导入；设备验收</small>
             </article>
-            
+
             <article class="subchain-card">
               <header><b><span class="lang lang-zh">HBM 封装基板 / FC-BGA</span><span class="lang lang-en">HBM Packaging Substrates / FC-BGA</span></b><span>enabler · medium</span></header>
               <p>深南电路、兴森科技</p>
               <small><span class="lang lang-zh">映射依据</span><span class="lang lang-en">Mapping Basis</span>：封装基板收入；FC-BGA产线良率；HBM客户认证；产能爬坡</small>
             </article>
-            
+
             <article class="subchain-card">
               <header><b><span class="lang lang-zh">HBM / 先进封装材料</span><span class="lang lang-en">HBM / Advanced Packaging Materials</span></b><span>bottleneck · medium</span></header>
               <p>生益科技、南亚新材、华海诚科、德邦科技、联瑞新材</p>
               <small><span class="lang lang-zh">映射依据</span><span class="lang lang-en">Mapping Basis</span>：高端基材等级；先进封装材料订单；客户导入；材料良率</small>
             </article>
-            
+
             <article class="subchain-card">
               <header><b><span class="lang lang-zh">存储芯片设计 / 周期弹性</span><span class="lang lang-en">Memory Chip Design / Cycle Leverage</span></b><span>proxy · watch</span></header>
               <p>兆易创新</p>
@@ -1127,25 +1138,25 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
               <p>US has now invaded Venezuela. Everyone is probably wondering the same thing: How do you profit off the situation? 1. Heavy Sour, Ammonia, and Nitrogen Fertilizers disruption ( $CF , $CVE). These are Venezuela&#x27;s biggest exports. Most people will buy generic oil ETFs or light swee…</p>
               <a href="https://x.com/aleabitoreddit/status/2007387427820978510">tweet_id 2007387427820978510</a>
             </article>
-            
+
             <article class="evidence-item">
               <header><b>2026-01-02</b><span>score 102</span><em>AAOI, AIRO, AKAM, ALAB, AMD, AMKR, AMZN, ASOZF, ASTS, A…</em></header>
               <p>Welcome to 2026. Jan 1st ratings: Strong Buy: $TTD $SMCI $AIRO $INTC $HIMS $AXTI $TSM $NBIS $CIFR Samsung Electronics (KRX: 005930) $HUT $IREN $WULF $GLXY $TSSI $META $ETOR $CRCL Buy: $KRKNF $ONDS $GEMI $NVDA $MU $AMKR SK Hynix $SNAP $RDDT $AAOI $COHR $FISV $FLY $DJT $LITE $AMZN…</p>
               <a href="https://x.com/aleabitoreddit/status/2007071108831338685">tweet_id 2007071108831338685</a>
             </article>
-            
+
             <article class="evidence-item">
               <header><b>2026-06-07</b><span>score 97</span><em>AAOI, AXTI, INTC, IQE, JBL, LITE, MRVL, NVDA, RPI, SIVE…</em></header>
               <p>I think my personal style of investing is a bit different, just some reflection: It&#x27;s inherently discretionary, based on stuff markets don&#x27;t know yet. And a culmination of life experiences? If you look at $AXTI, $RPI, $SIVE, $IQE and others. Lot of it is guessing on unstructured…</p>
               <a href="https://x.com/aleabitoreddit/status/2063465386960736396">tweet_id 2063465386960736396</a>
             </article>
-            
+
             <article class="evidence-item">
               <header><b>2026-05-17</b><span>score 96</span><em>AAOI, AMD, ASML, COHR, DGXX, FN, INTC, IQE, JBL, KOPN,…</em></header>
               <p>When I see comments like this (and there are a lot) from retail investors: I immediately think they lack the technical depth. I&#x27;ll walk through each one from $SIVE to $LPK: 1. Photonics TAM goes from $14B -&gt; $154B In just two years time, and it&#x27;s likely going to keep scaling pas…</p>
               <a href="https://x.com/aleabitoreddit/status/2055822766600016238">tweet_id 2055822766600016238</a>
             </article>
-            
+
             <article class="evidence-item">
               <header><b>2026-06-30</b><span>score 90</span><em>ALAB, AXTI, CBRS, GFS, JBL, NBIS, RDDT, RPI, SIVE, XFAB</em></header>
               <p>I&#x27;ve reached 900k followers, thank you everyone! Just some reflection, it&#x27;s actually a nightmare at higher counts... Which is new to me, since I started at almost nothing earlier this year. 1. Threats of safety, which I don&#x27;t enjoy. - Random new accounts sending personal threats…</p>
@@ -1154,7 +1165,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
             </div>
               </details>
             </section>
-            
+
             <section class="chain-deep tone-crimson" id="chain-power_semis">
               <div class="chain-head">
                 <span>04</span>
@@ -1187,43 +1198,43 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
               <td><span class="lang lang-zh">SiC/GaN/IGBT 功率器件</span><span class="lang lang-en">SiC/GaN/IGBT Power Devices</span><small>bottleneck · high</small></td>
               <td>MOSFET/SiC/GaN功率器件</td>
             </tr>
-            
+
             <tr>
               <td>斯达半导<small>603290.SH</small></td>
               <td><span class="lang lang-zh">SiC/GaN/IGBT 功率器件</span><span class="lang lang-en">SiC/GaN/IGBT Power Devices</span><small>bottleneck · high</small></td>
               <td>SiC/GaN功率模块/分立器件</td>
             </tr>
-            
+
             <tr>
               <td>华润微<small>688396.SH</small></td>
               <td><span class="lang lang-zh">SiC/GaN/IGBT 功率器件</span><span class="lang lang-en">SiC/GaN/IGBT Power Devices</span><small>bottleneck · high</small></td>
               <td>功率半导体IDM/IGBT/GaN/SiC</td>
             </tr>
-            
+
             <tr>
               <td>欧陆通<small>300870.SZ</small></td>
               <td><span class="lang lang-zh">服务器电源模块 / 电源管理</span><span class="lang lang-en">Server Power Modules / Power Management</span><small>enabler · medium</small></td>
               <td>高功率GPU服务器PSU/CRPS/PowerShelf</td>
             </tr>
-            
+
             <tr>
               <td>麦格米特<small>002851.SZ</small></td>
               <td><span class="lang lang-zh">服务器电源模块 / 电源管理</span><span class="lang lang-en">Server Power Modules / Power Management</span><small>enabler · medium</small></td>
               <td>高功率GPU服务器PSU/CRPS/PowerShelf</td>
             </tr>
-            
+
             <tr>
               <td>金盘科技<small>688676.SH</small></td>
               <td><span class="lang lang-zh">并网 / 变压器 / 电力接入</span><span class="lang lang-en">Grid Access / Transformers</span><small>bottleneck · medium</small></td>
               <td>数据中心干式变压器/中压供配电</td>
             </tr>
-            
+
             <tr>
               <td>法拉电子<small>600563.SH</small></td>
               <td><span class="lang lang-zh">高压电容 / MLCC / 被动件</span><span class="lang lang-en">High-voltage Capacitors / MLCC / Passives</span><small>proxy · watch</small></td>
               <td>AI服务器电源/UPS薄膜电容</td>
             </tr>
-            
+
             <tr>
               <td>时代电气<small>688187.SH</small></td>
               <td><span class="lang lang-zh">SiC/GaN/IGBT 功率器件</span><span class="lang lang-en">SiC/GaN/IGBT Power Devices</span><small>bottleneck · high</small></td>
@@ -1239,19 +1250,19 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
               <p>东微半导、斯达半导、华润微、新洁能、士兰微、时代电气</p>
               <small><span class="lang lang-zh">映射依据</span><span class="lang lang-en">Mapping Basis</span>：服务器电源导入；SiC/GaN价格；库存周期；车规与数据中心收入</small>
             </article>
-            
+
             <article class="subchain-card">
               <header><b><span class="lang lang-zh">服务器电源模块 / 电源管理</span><span class="lang lang-en">Server Power Modules / Power Management</span></b><span>enabler · medium</span></header>
               <p>茂硕电源、京泉华、南都电源、英可瑞、欧陆通、麦格米特</p>
               <small><span class="lang lang-zh">映射依据</span><span class="lang lang-en">Mapping Basis</span>：AI服务器电源订单；客户认证；功率密度；模块毛利率</small>
             </article>
-            
+
             <article class="subchain-card">
               <header><b><span class="lang lang-zh">并网 / 变压器 / 电力接入</span><span class="lang lang-en">Grid Access / Transformers</span></b><span>bottleneck · medium</span></header>
               <p>金盘科技</p>
               <small><span class="lang lang-zh">映射依据</span><span class="lang lang-en">Mapping Basis</span>：数据中心订单；变压器交期；海外收入；产能扩张</small>
             </article>
-            
+
             <article class="subchain-card">
               <header><b><span class="lang lang-zh">高压电容 / MLCC / 被动件</span><span class="lang lang-en">High-voltage Capacitors / MLCC / Passives</span></b><span>proxy · watch</span></header>
               <p>博杰股份、法拉电子</p>
@@ -1268,25 +1279,25 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
               <p>US has now invaded Venezuela. Everyone is probably wondering the same thing: How do you profit off the situation? 1. Heavy Sour, Ammonia, and Nitrogen Fertilizers disruption ( $CF , $CVE). These are Venezuela&#x27;s biggest exports. Most people will buy generic oil ETFs or light swee…</p>
               <a href="https://x.com/aleabitoreddit/status/2007387427820978510">tweet_id 2007387427820978510</a>
             </article>
-            
+
             <article class="evidence-item">
               <header><b>2026-01-02</b><span>score 102</span><em>AAOI, AIRO, AKAM, ALAB, AMD, AMKR, AMZN, ASOZF, ASTS, A…</em></header>
               <p>Welcome to 2026. Jan 1st ratings: Strong Buy: $TTD $SMCI $AIRO $INTC $HIMS $AXTI $TSM $NBIS $CIFR Samsung Electronics (KRX: 005930) $HUT $IREN $WULF $GLXY $TSSI $META $ETOR $CRCL Buy: $KRKNF $ONDS $GEMI $NVDA $MU $AMKR SK Hynix $SNAP $RDDT $AAOI $COHR $FISV $FLY $DJT $LITE $AMZN…</p>
               <a href="https://x.com/aleabitoreddit/status/2007071108831338685">tweet_id 2007071108831338685</a>
             </article>
-            
+
             <article class="evidence-item">
               <header><b>2026-05-17</b><span>score 96</span><em>AAOI, AMD, ASML, COHR, DGXX, FN, INTC, IQE, JBL, KOPN,…</em></header>
               <p>When I see comments like this (and there are a lot) from retail investors: I immediately think they lack the technical depth. I&#x27;ll walk through each one from $SIVE to $LPK: 1. Photonics TAM goes from $14B -&gt; $154B In just two years time, and it&#x27;s likely going to keep scaling pas…</p>
               <a href="https://x.com/aleabitoreddit/status/2055822766600016238">tweet_id 2055822766600016238</a>
             </article>
-            
+
             <article class="evidence-item">
               <header><b>2026-01-14</b><span>score 89</span><em>LPTH, ONDS, UMAC, VLN</em></header>
               <p>I&#x27;ve initiated positions in $LPTH ($621M). Lightpath is incredible. Every modern thermal weapon (Missiles, Drones) requires Germanium glass, which China owns (70%) LPTH is the only US alternative with: Black Diamond Users? - $ONDS - L3Harris - Lockheed - Andruil (likely) - $UMAC…</p>
               <a href="https://x.com/aleabitoreddit/status/2011496801548058735">tweet_id 2011496801548058735</a>
             </article>
-            
+
             <article class="evidence-item">
               <header><b>2026-04-09</b><span>score 88</span><em>AAOI, AEHR, AMKR, AMZN, ARM, AVGO, CEG, COHR, CRCL, CVX…</em></header>
               <p>Here&#x27;s a bunch of random 30 US-available random stocks I like today and why: 1. $INTC - America&#x27;s hope for foundry, national security 2. $MRVL - scales rev from future maia asics and add ons like cpo, they do everything lost count 3. $TSM - backbone of semis/ai 4. $COHR - They d…</p>
@@ -1295,7 +1306,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
             </div>
               </details>
             </section>
-            
+
             <section class="chain-deep tone-green" id="chain-neocloud">
               <div class="chain-head">
                 <span>05</span>
@@ -1328,43 +1339,43 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
               <td><span class="lang lang-zh">AIDC / IDC 运营与电力资源</span><span class="lang lang-en">AIDC / IDC Operators and Power Resources</span><small>enabler · medium</small></td>
               <td>AIDC/IDC机柜电力资源与算力运营</td>
             </tr>
-            
+
             <tr>
               <td>润建股份<small>002929.SZ</small></td>
               <td><span class="lang lang-zh">AIDC / IDC 运营与电力资源</span><span class="lang lang-en">AIDC / IDC Operators and Power Resources</span><small>enabler · medium</small></td>
               <td>AIDC/IDC机柜电力资源与算力运营</td>
             </tr>
-            
+
             <tr>
               <td>工业富联<small>601138.SH</small></td>
               <td><span class="lang lang-zh">AI服务器整机 / ODM-OEM</span><span class="lang lang-en">AI Server ODM / OEM</span><small>beneficiary · medium</small></td>
               <td>AI服务器整机/机柜级系统/ODM-OEM</td>
             </tr>
-            
+
             <tr>
               <td>浪潮信息<small>000977.SZ</small></td>
               <td><span class="lang lang-zh">AI服务器整机 / ODM-OEM</span><span class="lang lang-en">AI Server ODM / OEM</span><small>beneficiary · medium</small></td>
               <td>AI服务器整机/机柜级系统/ODM-OEM</td>
             </tr>
-            
+
             <tr>
               <td>中科曙光<small>603019.SH</small></td>
               <td><span class="lang lang-zh">国产算力集成 / 政企集群</span><span class="lang lang-en">Domestic Compute Integration / Enterprise Clusters</span><small>proxy · watch</small></td>
               <td>AI服务器整机/机柜级系统/ODM-OEM</td>
             </tr>
-            
+
             <tr>
               <td>紫光股份<small>000938.SZ</small></td>
               <td><span class="lang lang-zh">国产算力集成 / 政企集群</span><span class="lang lang-en">Domestic Compute Integration / Enterprise Clusters</span><small>proxy · watch</small></td>
               <td>AI服务器整机/机柜级系统/ODM-OEM</td>
             </tr>
-            
+
             <tr>
               <td>华勤技术<small>603296.SH</small></td>
               <td><span class="lang lang-zh">AI服务器整机 / ODM-OEM</span><span class="lang lang-en">AI Server ODM / OEM</span><small>beneficiary · medium</small></td>
               <td>AI服务器整机/机柜级系统/ODM-OEM</td>
             </tr>
-            
+
             <tr>
               <td>神州数码<small>000034.SZ</small></td>
               <td><span class="lang lang-zh">融资质量 / 低毛利集成观察</span><span class="lang lang-en">Financing Quality / Low-margin Integration Watchlist</span><small>watchlist · watch</small></td>
@@ -1380,25 +1391,25 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
               <p>工业富联、浪潮信息、华勤技术、深科技</p>
               <small><span class="lang lang-zh">映射依据</span><span class="lang lang-en">Mapping Basis</span>：AI服务器收入；海外客户；毛利率；存货与应收</small>
             </article>
-            
+
             <article class="subchain-card">
               <header><b><span class="lang lang-zh">AIDC / IDC 运营与电力资源</span><span class="lang lang-en">AIDC / IDC Operators and Power Resources</span></b><span>enabler · medium</span></header>
               <p>润泽科技、奥飞数据、光环新网、数据港、宝信软件、首都在线</p>
               <small><span class="lang lang-zh">映射依据</span><span class="lang lang-en">Mapping Basis</span>：机柜上架率；电力指标；客户合同质量；租赁价格</small>
             </article>
-            
+
             <article class="subchain-card">
               <header><b><span class="lang lang-zh">液冷 / 热管理</span><span class="lang lang-en">Liquid Cooling / Thermal Management</span></b><span>enabler · medium</span></header>
               <p>英维克、申菱环境、高澜股份、同飞股份、飞荣达、中石科技</p>
               <small><span class="lang lang-zh">映射依据</span><span class="lang lang-en">Mapping Basis</span>：液冷订单；海外客户；CDU/冷板收入；毛利率</small>
             </article>
-            
+
             <article class="subchain-card">
               <header><b><span class="lang lang-zh">国产算力集成 / 政企集群</span><span class="lang lang-en">Domestic Compute Integration / Enterprise Clusters</span></b><span>proxy · watch</span></header>
               <p>中科曙光、紫光股份</p>
               <small><span class="lang lang-zh">映射依据</span><span class="lang lang-en">Mapping Basis</span>：国产算力订单；项目回款；集群交付；利润率</small>
             </article>
-            
+
             <article class="subchain-card">
               <header><b><span class="lang lang-zh">融资质量 / 低毛利集成观察</span><span class="lang lang-en">Financing Quality / Low-margin Integration Watchlist</span></b><span>watchlist · watch</span></header>
               <p>神州数码</p>
@@ -1415,25 +1426,25 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
               <p>US has now invaded Venezuela. Everyone is probably wondering the same thing: How do you profit off the situation? 1. Heavy Sour, Ammonia, and Nitrogen Fertilizers disruption ( $CF , $CVE). These are Venezuela&#x27;s biggest exports. Most people will buy generic oil ETFs or light swee…</p>
               <a href="https://x.com/aleabitoreddit/status/2007387427820978510">tweet_id 2007387427820978510</a>
             </article>
-            
+
             <article class="evidence-item">
               <header><b>2026-01-02</b><span>score 102</span><em>AAOI, AIRO, AKAM, ALAB, AMD, AMKR, AMZN, ASOZF, ASTS, A…</em></header>
               <p>Welcome to 2026. Jan 1st ratings: Strong Buy: $TTD $SMCI $AIRO $INTC $HIMS $AXTI $TSM $NBIS $CIFR Samsung Electronics (KRX: 005930) $HUT $IREN $WULF $GLXY $TSSI $META $ETOR $CRCL Buy: $KRKNF $ONDS $GEMI $NVDA $MU $AMKR SK Hynix $SNAP $RDDT $AAOI $COHR $FISV $FLY $DJT $LITE $AMZN…</p>
               <a href="https://x.com/aleabitoreddit/status/2007071108831338685">tweet_id 2007071108831338685</a>
             </article>
-            
+
             <article class="evidence-item">
               <header><b>2026-05-17</b><span>score 96</span><em>AAOI, AMD, ASML, COHR, DGXX, FN, INTC, IQE, JBL, KOPN,…</em></header>
               <p>When I see comments like this (and there are a lot) from retail investors: I immediately think they lack the technical depth. I&#x27;ll walk through each one from $SIVE to $LPK: 1. Photonics TAM goes from $14B -&gt; $154B In just two years time, and it&#x27;s likely going to keep scaling pas…</p>
               <a href="https://x.com/aleabitoreddit/status/2055822766600016238">tweet_id 2055822766600016238</a>
             </article>
-            
+
             <article class="evidence-item">
               <header><b>2026-06-30</b><span>score 90</span><em>ALAB, AXTI, CBRS, GFS, JBL, NBIS, RDDT, RPI, SIVE, XFAB</em></header>
               <p>I&#x27;ve reached 900k followers, thank you everyone! Just some reflection, it&#x27;s actually a nightmare at higher counts... Which is new to me, since I started at almost nothing earlier this year. 1. Threats of safety, which I don&#x27;t enjoy. - Random new accounts sending personal threats…</p>
               <a href="https://x.com/aleabitoreddit/status/2071763387948859506">tweet_id 2071763387948859506</a>
             </article>
-            
+
             <article class="evidence-item">
               <header><b>2026-03-16</b><span>score 90</span><em>AAOI, AXTI, COHR, FN, INTC, LITE, LWLG, MTSI, NVDA, POE…</em></header>
               <p>I’m long $SIVE at $140M. I believe this is the next $LITE that markets and institutions missed. $SIVE makes InP CW DFB lasers. Closest comparison is $LITE in the current EML laser bottleneck. But instead of supplying to Innolight/Eoptolink for current optical transceivers cycles…</p>
@@ -1442,7 +1453,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
             </div>
               </details>
             </section>
-            
+
             <section class="chain-deep tone-violet" id="chain-glass_substrate">
               <div class="chain-head">
                 <span>06</span>
@@ -1475,43 +1486,43 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
               <td><span class="lang lang-zh">玻璃基板 / TGV</span><span class="lang lang-en">Glass Substrate / TGV</span><small>bottleneck · medium</small></td>
               <td>玻璃基板/TGV</td>
             </tr>
-            
+
             <tr>
               <td>凯盛科技<small>600552.SH</small></td>
               <td><span class="lang lang-zh">玻璃基板 / TGV</span><span class="lang lang-en">Glass Substrate / TGV</span><small>bottleneck · medium</small></td>
               <td>玻璃基板/TGV</td>
             </tr>
-            
+
             <tr>
               <td>深南电路<small>002916.SZ</small></td>
               <td><span class="lang lang-zh">ABF / FC-BGA / BT 载板</span><span class="lang lang-en">ABF / FC-BGA / BT Substrates</span><small>enabler · medium</small></td>
               <td>ABF/FC-BGA封装基板</td>
             </tr>
-            
+
             <tr>
               <td>兴森科技<small>002436.SZ</small></td>
               <td><span class="lang lang-zh">ABF / FC-BGA / BT 载板</span><span class="lang lang-en">ABF / FC-BGA / BT Substrates</span><small>enabler · medium</small></td>
               <td>ABF/FC-BGA封装基板</td>
             </tr>
-            
+
             <tr>
               <td>生益科技<small>600183.SH</small></td>
               <td><span class="lang lang-zh">先进载板基材 / 低 CTE 材料</span><span class="lang lang-en">Advanced Substrate Materials / Low-CTE Materials</span><small>bottleneck · medium</small></td>
               <td>载板用高端基材/低CTE材料</td>
             </tr>
-            
+
             <tr>
               <td>南亚新材<small>688519.SH</small></td>
               <td><span class="lang lang-zh">先进载板基材 / 低 CTE 材料</span><span class="lang lang-en">Advanced Substrate Materials / Low-CTE Materials</span><small>bottleneck · medium</small></td>
               <td>载板用高端基材/低CTE材料</td>
             </tr>
-            
+
             <tr>
               <td>东岳硅材<small>300821.SZ</small></td>
               <td><span class="lang lang-zh">未归类子链</span><span class="lang lang-en">Unclassified Leaf Lane</span><small>watchlist · watch</small></td>
               <td>半导体与高速电子无机材料</td>
             </tr>
-            
+
             <tr>
               <td>菲利华<small>300395.SZ</small></td>
               <td><span class="lang lang-zh">未归类子链</span><span class="lang lang-en">Unclassified Leaf Lane</span><small>watchlist · watch</small></td>
@@ -1527,19 +1538,19 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
               <p>沃格光电、凯盛科技</p>
               <small><span class="lang lang-zh">映射依据</span><span class="lang lang-en">Mapping Basis</span>：TGV良率；半导体玻璃基板收入；客户认证；量产时间表</small>
             </article>
-            
+
             <article class="subchain-card">
               <header><b><span class="lang lang-zh">ABF / FC-BGA / BT 载板</span><span class="lang lang-en">ABF / FC-BGA / BT Substrates</span></b><span>enabler · medium</span></header>
               <p>深南电路、兴森科技、东威科技</p>
               <small><span class="lang lang-zh">映射依据</span><span class="lang lang-en">Mapping Basis</span>：ABF/FC-BGA产能；良率；客户认证；AI封装导入</small>
             </article>
-            
+
             <article class="subchain-card">
               <header><b><span class="lang lang-zh">先进载板基材 / 低 CTE 材料</span><span class="lang lang-en">Advanced Substrate Materials / Low-CTE Materials</span></b><span>bottleneck · medium</span></header>
               <p>生益科技、南亚新材</p>
               <small><span class="lang lang-zh">映射依据</span><span class="lang lang-en">Mapping Basis</span>：材料等级；低CTE产品；载板客户；收入结构</small>
             </article>
-            
+
             <article class="subchain-card">
               <header><b><span class="lang lang-zh">面板级封装 / IC载板设备</span><span class="lang lang-en">Panel-level Packaging / IC Substrate Tools</span></b><span>enabler · watch</span></header>
               <p>芯碁微装</p>
@@ -1556,25 +1567,25 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
               <p>US has now invaded Venezuela. Everyone is probably wondering the same thing: How do you profit off the situation? 1. Heavy Sour, Ammonia, and Nitrogen Fertilizers disruption ( $CF , $CVE). These are Venezuela&#x27;s biggest exports. Most people will buy generic oil ETFs or light swee…</p>
               <a href="https://x.com/aleabitoreddit/status/2007387427820978510">tweet_id 2007387427820978510</a>
             </article>
-            
+
             <article class="evidence-item">
               <header><b>2026-01-02</b><span>score 102</span><em>AAOI, AIRO, AKAM, ALAB, AMD, AMKR, AMZN, ASOZF, ASTS, A…</em></header>
               <p>Welcome to 2026. Jan 1st ratings: Strong Buy: $TTD $SMCI $AIRO $INTC $HIMS $AXTI $TSM $NBIS $CIFR Samsung Electronics (KRX: 005930) $HUT $IREN $WULF $GLXY $TSSI $META $ETOR $CRCL Buy: $KRKNF $ONDS $GEMI $NVDA $MU $AMKR SK Hynix $SNAP $RDDT $AAOI $COHR $FISV $FLY $DJT $LITE $AMZN…</p>
               <a href="https://x.com/aleabitoreddit/status/2007071108831338685">tweet_id 2007071108831338685</a>
             </article>
-            
+
             <article class="evidence-item">
               <header><b>2026-06-07</b><span>score 97</span><em>AAOI, AXTI, INTC, IQE, JBL, LITE, MRVL, NVDA, RPI, SIVE…</em></header>
               <p>I think my personal style of investing is a bit different, just some reflection: It&#x27;s inherently discretionary, based on stuff markets don&#x27;t know yet. And a culmination of life experiences? If you look at $AXTI, $RPI, $SIVE, $IQE and others. Lot of it is guessing on unstructured…</p>
               <a href="https://x.com/aleabitoreddit/status/2063465386960736396">tweet_id 2063465386960736396</a>
             </article>
-            
+
             <article class="evidence-item">
               <header><b>2026-05-17</b><span>score 96</span><em>AAOI, AMD, ASML, COHR, DGXX, FN, INTC, IQE, JBL, KOPN,…</em></header>
               <p>When I see comments like this (and there are a lot) from retail investors: I immediately think they lack the technical depth. I&#x27;ll walk through each one from $SIVE to $LPK: 1. Photonics TAM goes from $14B -&gt; $154B In just two years time, and it&#x27;s likely going to keep scaling pas…</p>
               <a href="https://x.com/aleabitoreddit/status/2055822766600016238">tweet_id 2055822766600016238</a>
             </article>
-            
+
             <article class="evidence-item">
               <header><b>2026-06-30</b><span>score 90</span><em>ALAB, AXTI, CBRS, GFS, JBL, NBIS, RDDT, RPI, SIVE, XFAB</em></header>
               <p>I&#x27;ve reached 900k followers, thank you everyone! Just some reflection, it&#x27;s actually a nightmare at higher counts... Which is new to me, since I started at almost nothing earlier this year. 1. Threats of safety, which I don&#x27;t enjoy. - Random new accounts sending personal threats…</p>
@@ -1583,7 +1594,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
             </div>
               </details>
             </section>
-            
+
             <section class="chain-deep tone-slate" id="chain-physical_ai">
               <div class="chain-head">
                 <span>07</span>
@@ -1616,43 +1627,43 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
               <td><span class="lang lang-zh">一体化关节 / Tier1执行器</span><span class="lang lang-en">Integrated Joints / Tier-1 Actuator Modules</span><small>enabler · medium</small></td>
               <td>一体化关节模组/Tier1执行器平台</td>
             </tr>
-            
+
             <tr>
               <td>兆威机电<small>003021.SZ</small></td>
               <td><span class="lang lang-zh">一体化关节 / Tier1执行器</span><span class="lang lang-en">Integrated Joints / Tier-1 Actuator Modules</span><small>enabler · medium</small></td>
               <td>旋转执行器总成：电机+减速器+编码器+驱动</td>
             </tr>
-            
+
             <tr>
               <td>拓普集团<small>601689.SH</small></td>
               <td><span class="lang lang-zh">一体化关节 / Tier1执行器</span><span class="lang lang-en">Integrated Joints / Tier-1 Actuator Modules</span><small>enabler · medium</small></td>
               <td>旋转执行器总成：电机+减速器+编码器+驱动</td>
             </tr>
-            
+
             <tr>
               <td>三花智控<small>002050.SZ</small></td>
               <td><span class="lang lang-zh">一体化关节 / Tier1执行器</span><span class="lang lang-en">Integrated Joints / Tier-1 Actuator Modules</span><small>enabler · medium</small></td>
               <td>旋转执行器总成：电机+减速器+编码器+驱动</td>
             </tr>
-            
+
             <tr>
               <td>绿的谐波<small>688017.SH</small></td>
               <td><span class="lang lang-zh">精密减速器 / 一体化关节</span><span class="lang lang-en">Precision Reducers / Integrated Joints</span><small>bottleneck · high</small></td>
               <td>谐波减速器/应变波减速器</td>
             </tr>
-            
+
             <tr>
               <td>东华测试<small>300354.SZ</small></td>
               <td><span class="lang lang-zh">力觉 / 扭矩 / 关节传感</span><span class="lang lang-en">Force / Torque / Joint Sensors</span><small>bottleneck · medium</small></td>
               <td>关节扭矩传感器/应变片/力矩闭环</td>
             </tr>
-            
+
             <tr>
               <td>柯力传感<small>603662.SH</small></td>
               <td><span class="lang lang-zh">力觉 / 扭矩 / 关节传感</span><span class="lang lang-en">Force / Torque / Joint Sensors</span><small>bottleneck · medium</small></td>
               <td>机器人六维力/关节力矩传感器</td>
             </tr>
-            
+
             <tr>
               <td>奥比中光<small>688322.SH</small></td>
               <td><span class="lang lang-zh">机器视觉 / 传感器 / 光学</span><span class="lang lang-en">Machine Vision / Sensors / Optics</span><small>enabler · medium</small></td>
@@ -1668,31 +1679,31 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
               <p>绿的谐波、双环传动、汉宇集团、国茂股份</p>
               <small><span class="lang lang-zh">映射依据</span><span class="lang lang-en">Mapping Basis</span>：人形机器人客户；一体化关节量产；减速器良率；单位价值量</small>
             </article>
-            
+
             <article class="subchain-card">
               <header><b><span class="lang lang-zh">一体化关节 / Tier1执行器</span><span class="lang lang-en">Integrated Joints / Tier-1 Actuator Modules</span></b><span>enabler · medium</span></header>
               <p>步科股份、兆威机电、拓普集团、三花智控、中大力德</p>
               <small><span class="lang lang-zh">映射依据</span><span class="lang lang-en">Mapping Basis</span>：执行器平台订单；Tier1客户认证；电机/减速器/丝杠集成度；量产节奏</small>
             </article>
-            
+
             <article class="subchain-card">
               <header><b><span class="lang lang-zh">电机 / 伺服 / 运动控制</span><span class="lang lang-en">Motors / Servo / Motion Control</span></b><span>enabler · medium</span></header>
               <p>鸣志电器、汇川技术</p>
               <small><span class="lang lang-zh">映射依据</span><span class="lang lang-en">Mapping Basis</span>：机器人电机订单；控制器客户；批量交付；毛利率</small>
             </article>
-            
+
             <article class="subchain-card">
               <header><b><span class="lang lang-zh">丝杠 / 轴承 / 精密传动</span><span class="lang lang-en">Screws / Bearings / Precision Transmission</span></b><span>bottleneck · medium</span></header>
               <p>国机精工、五洲新春、力星股份</p>
               <small><span class="lang lang-zh">映射依据</span><span class="lang lang-en">Mapping Basis</span>：丝杠量产；机器人客户；精度等级；产能爬坡</small>
             </article>
-            
+
             <article class="subchain-card">
               <header><b><span class="lang lang-zh">力觉 / 扭矩 / 关节传感</span><span class="lang lang-en">Force / Torque / Joint Sensors</span></b><span>bottleneck · medium</span></header>
               <p>东华测试、柯力传感</p>
               <small><span class="lang lang-zh">映射依据</span><span class="lang lang-en">Mapping Basis</span>：关节传感订单；力控闭环验证；机器人客户导入；量产良率</small>
             </article>
-            
+
             <article class="subchain-card">
               <header><b><span class="lang lang-zh">机器视觉 / 传感器 / 光学</span><span class="lang lang-en">Machine Vision / Sensors / Optics</span></b><span>enabler · medium</span></header>
               <p>奥比中光、韦尔股份、奥普特</p>
@@ -1709,25 +1720,25 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
               <p>US has now invaded Venezuela. Everyone is probably wondering the same thing: How do you profit off the situation? 1. Heavy Sour, Ammonia, and Nitrogen Fertilizers disruption ( $CF , $CVE). These are Venezuela&#x27;s biggest exports. Most people will buy generic oil ETFs or light swee…</p>
               <a href="https://x.com/aleabitoreddit/status/2007387427820978510">tweet_id 2007387427820978510</a>
             </article>
-            
+
             <article class="evidence-item">
               <header><b>2026-01-02</b><span>score 102</span><em>AAOI, AIRO, AKAM, ALAB, AMD, AMKR, AMZN, ASOZF, ASTS, A…</em></header>
               <p>Welcome to 2026. Jan 1st ratings: Strong Buy: $TTD $SMCI $AIRO $INTC $HIMS $AXTI $TSM $NBIS $CIFR Samsung Electronics (KRX: 005930) $HUT $IREN $WULF $GLXY $TSSI $META $ETOR $CRCL Buy: $KRKNF $ONDS $GEMI $NVDA $MU $AMKR SK Hynix $SNAP $RDDT $AAOI $COHR $FISV $FLY $DJT $LITE $AMZN…</p>
               <a href="https://x.com/aleabitoreddit/status/2007071108831338685">tweet_id 2007071108831338685</a>
             </article>
-            
+
             <article class="evidence-item">
               <header><b>2026-03-16</b><span>score 90</span><em>AAOI, AXTI, COHR, FN, INTC, LITE, LWLG, MTSI, NVDA, POE…</em></header>
               <p>I’m long $SIVE at $140M. I believe this is the next $LITE that markets and institutions missed. $SIVE makes InP CW DFB lasers. Closest comparison is $LITE in the current EML laser bottleneck. But instead of supplying to Innolight/Eoptolink for current optical transceivers cycles…</p>
               <a href="https://x.com/aleabitoreddit/status/2033466880661606646">tweet_id 2033466880661606646</a>
             </article>
-            
+
             <article class="evidence-item">
               <header><b>2026-01-14</b><span>score 89</span><em>LPTH, ONDS, UMAC, VLN</em></header>
               <p>I&#x27;ve initiated positions in $LPTH ($621M). Lightpath is incredible. Every modern thermal weapon (Missiles, Drones) requires Germanium glass, which China owns (70%) LPTH is the only US alternative with: Black Diamond Users? - $ONDS - L3Harris - Lockheed - Andruil (likely) - $UMAC…</p>
               <a href="https://x.com/aleabitoreddit/status/2011496801548058735">tweet_id 2011496801548058735</a>
             </article>
-            
+
             <article class="evidence-item">
               <header><b>2026-04-09</b><span>score 88</span><em>AAOI, AEHR, AMKR, AMZN, ARM, AVGO, CEG, COHR, CRCL, CVX…</em></header>
               <p>Here&#x27;s a bunch of random 30 US-available random stocks I like today and why: 1. $INTC - America&#x27;s hope for foundry, national security 2. $MRVL - scales rev from future maia asics and add ons like cpo, they do everything lost count 3. $TSM - backbone of semis/ai 4. $COHR - They d…</p>
@@ -1736,9 +1747,9 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
             </div>
               </details>
             </section>
-            
+
     </section>
-    
+
     <section class="section-band page" id="evidence">
       <div class="section-head">
         <div>
@@ -1755,7 +1766,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
                 <small>score 90｜ALAB, AXTI, CBRS, GFS, JBL, NBIS, RDDT, RPI, SIVE, XFAB｜tweet_id 2071763387948859506</small>
               </div>
             </article>
-            
+
             <article class="timeline-item">
               <span>E02</span>
               <div>
@@ -1764,7 +1775,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
                 <small>score 90｜ALAB, AXTI, CBRS, GFS, JBL, NBIS, RDDT, RPI, SIVE, XFAB｜tweet_id 2071763387948859506</small>
               </div>
             </article>
-            
+
             <article class="timeline-item">
               <span>E03</span>
               <div>
@@ -1773,7 +1784,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
                 <small>score 90｜ALAB, AXTI, CBRS, GFS, JBL, NBIS, RDDT, RPI, SIVE, XFAB｜tweet_id 2071763387948859506</small>
               </div>
             </article>
-            
+
             <article class="timeline-item">
               <span>E04</span>
               <div>
@@ -1782,7 +1793,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
                 <small>score 90｜ALAB, AXTI, CBRS, GFS, JBL, NBIS, RDDT, RPI, SIVE, XFAB｜tweet_id 2071763387948859506</small>
               </div>
             </article>
-            
+
             <article class="timeline-item">
               <span>E05</span>
               <div>
@@ -1791,7 +1802,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
                 <small>score 90｜ALAB, AXTI, CBRS, GFS, JBL, NBIS, RDDT, RPI, SIVE, XFAB｜tweet_id 2071763387948859506</small>
               </div>
             </article>
-            
+
             <article class="timeline-item">
               <span>E06</span>
               <div>
@@ -1800,7 +1811,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
                 <small>score 87｜EWY, IREN, LITE, NBIS, QQQ, SIVE｜tweet_id 2070444675337503166</small>
               </div>
             </article>
-            
+
             <article class="timeline-item">
               <span>E07</span>
               <div>
@@ -1809,7 +1820,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
                 <small>score 87｜EWY, IREN, LITE, NBIS, QQQ, SIVE｜tweet_id 2070444675337503166</small>
               </div>
             </article>
-            
+
             <article class="timeline-item">
               <span>E08</span>
               <div>
@@ -1818,7 +1829,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
                 <small>score 87｜EWY, IREN, LITE, NBIS, QQQ, SIVE｜tweet_id 2070444675337503166</small>
               </div>
             </article>
-            
+
             <article class="timeline-item">
               <span>E09</span>
               <div>
@@ -1827,7 +1838,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
                 <small>score 87｜EWY, IREN, LITE, NBIS, QQQ, SIVE｜tweet_id 2070444675337503166</small>
               </div>
             </article>
-            
+
             <article class="timeline-item">
               <span>E10</span>
               <div>
@@ -1836,7 +1847,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
                 <small>score 87｜EWY, IREN, LITE, NBIS, QQQ, SIVE｜tweet_id 2070444675337503166</small>
               </div>
             </article>
-            
+
             <article class="timeline-item">
               <span>E11</span>
               <div>
@@ -1845,7 +1856,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
                 <small>score 86｜AAOI, AMD, GFS, JBL, NBIS, NVDA, POET, SIVE｜tweet_id 2070179074048409662</small>
               </div>
             </article>
-            
+
             <article class="timeline-item">
               <span>E12</span>
               <div>
@@ -1856,7 +1867,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
             </article>
             </div>
     </section>
-    
+
     <section class="section-band page" id="mapping">
       <div class="section-head">
         <div>
@@ -1873,7 +1884,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
               <td>29.2</td>
               <td>LED等传统业务会稀释AI光通信纯度，需看具体产品导入。</td>
             </tr>
-            
+
             <tr>
               <td><span class="lang lang-zh">CPO / InP 光通信</span><span class="lang lang-en">CPO / InP Optical Interconnect</span></td>
               <td><span class="lang lang-zh">光芯片 / 硅光 / 上游光器件</span><span class="lang lang-en">Optical Chips / Silicon Photonics / Upstream Optical Components</span><small>bottleneck · high</small></td>
@@ -1882,7 +1893,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
               <td>29.2</td>
               <td>此行是InP器件链观察，不等同于InP衬底或铟材料上游。</td>
             </tr>
-            
+
             <tr>
               <td><span class="lang lang-zh">CPO / InP 光通信</span><span class="lang lang-en">CPO / InP Optical Interconnect</span></td>
               <td><span class="lang lang-zh">光芯片 / 硅光 / 上游光器件</span><span class="lang lang-en">Optical Chips / Silicon Photonics / Upstream Optical Components</span><small>bottleneck · high</small></td>
@@ -1891,7 +1902,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
               <td>27.8</td>
               <td>如果只有研发无量产，不能纳入核心。</td>
             </tr>
-            
+
             <tr>
               <td><span class="lang lang-zh">CPO / InP 光通信</span><span class="lang lang-en">CPO / InP Optical Interconnect</span></td>
               <td><span class="lang lang-zh">光芯片 / 硅光 / 上游光器件</span><span class="lang lang-en">Optical Chips / Silicon Photonics / Upstream Optical Components</span><small>bottleneck · high</small></td>
@@ -1900,7 +1911,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
               <td>24.8</td>
               <td>高端产品量产节奏不及预期。</td>
             </tr>
-            
+
             <tr>
               <td><span class="lang lang-zh">CPO / InP 光通信</span><span class="lang lang-en">CPO / InP Optical Interconnect</span></td>
               <td><span class="lang lang-zh">高速光模块</span><span class="lang lang-en">High-speed Optical Modules</span><small>beneficiary · high</small></td>
@@ -1909,7 +1920,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
               <td>24.6</td>
               <td>本行仅可在 NERO 确认后写入；官方公告标题已命中相关业务，但仍需验证收入占比、客户和订单，默认观察层。</td>
             </tr>
-            
+
             <tr>
               <td><span class="lang lang-zh">CPO / InP 光通信</span><span class="lang lang-en">CPO / InP Optical Interconnect</span></td>
               <td><span class="lang lang-zh">InP / 化合物材料</span><span class="lang lang-en">InP / Compound Materials</span><small>bottleneck · medium</small></td>
@@ -1918,7 +1929,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
               <td>23.2</td>
               <td>映射偏材料资源端，需防止被金属价格和非AI需求稀释。</td>
             </tr>
-            
+
             <tr>
               <td><span class="lang lang-zh">CPO / InP 光通信</span><span class="lang lang-en">CPO / InP Optical Interconnect</span></td>
               <td><span class="lang lang-zh">InP / 化合物材料</span><span class="lang lang-en">InP / Compound Materials</span><small>bottleneck · medium</small></td>
@@ -1927,7 +1938,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
               <td>23.2</td>
               <td>公司业务较分散，若半导体材料收入占比不足应降权。</td>
             </tr>
-            
+
             <tr>
               <td><span class="lang lang-zh">CPO / InP 光通信</span><span class="lang lang-en">CPO / InP Optical Interconnect</span></td>
               <td><span class="lang lang-zh">高速光模块</span><span class="lang lang-en">High-speed Optical Modules</span><small>beneficiary · high</small></td>
@@ -1936,7 +1947,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
               <td>21.8</td>
               <td>业务复杂导致纯度不足。</td>
             </tr>
-            
+
             <tr>
               <td><span class="lang lang-zh">CPO / InP 光通信</span><span class="lang lang-en">CPO / InP Optical Interconnect</span></td>
               <td><span class="lang lang-zh">光芯片 / 硅光 / 上游光器件</span><span class="lang lang-en">Optical Chips / Silicon Photonics / Upstream Optical Components</span><small>bottleneck · high</small></td>
@@ -1945,7 +1956,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
               <td>21.6</td>
               <td>若应用仍偏工业激光/电信，AI纯度低。</td>
             </tr>
-            
+
             <tr>
               <td><span class="lang lang-zh">CPO / InP 光通信</span><span class="lang lang-en">CPO / InP Optical Interconnect</span></td>
               <td><span class="lang lang-zh">高速光模块</span><span class="lang lang-en">High-speed Optical Modules</span><small>beneficiary · high</small></td>
@@ -1954,7 +1965,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
               <td>21.0</td>
               <td>并购整合、商誉、客户集中、价格竞争和AI数据中心收入占比不确定；若光模块增长主要来自传统通信或并表一次性因素，AI纯度需下调。</td>
             </tr>
-            
+
             <tr>
               <td><span class="lang lang-zh">CPO / InP 光通信</span><span class="lang lang-en">CPO / InP Optical Interconnect</span></td>
               <td><span class="lang lang-zh">光连接器 / 陶瓷插芯</span><span class="lang lang-en">Optical Connectors / Ceramic Ferrules</span><small>enabler · medium</small></td>
@@ -1963,7 +1974,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
               <td>19.8</td>
               <td>若光通信陶瓷件占比低或订单不清晰，纯度降低。</td>
             </tr>
-            
+
             <tr>
               <td><span class="lang lang-zh">CPO / InP 光通信</span><span class="lang lang-en">CPO / InP Optical Interconnect</span></td>
               <td><span class="lang lang-zh">高速光模块</span><span class="lang lang-en">High-speed Optical Modules</span><small>beneficiary · high</small></td>
@@ -1972,7 +1983,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
               <td>18.8</td>
               <td>客户波动和盈利不稳定。</td>
             </tr>
-            
+
             <tr>
               <td><span class="lang lang-zh">CPO / InP 光通信</span><span class="lang lang-en">CPO / InP Optical Interconnect</span></td>
               <td><span class="lang lang-zh">高速光模块</span><span class="lang lang-en">High-speed Optical Modules</span><small>beneficiary · high</small></td>
@@ -1981,7 +1992,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
               <td>18.8</td>
               <td>客户和量产验证不足。</td>
             </tr>
-            
+
             <tr>
               <td><span class="lang lang-zh">CPO / InP 光通信</span><span class="lang lang-en">CPO / InP Optical Interconnect</span></td>
               <td><span class="lang lang-zh">高速光模块</span><span class="lang lang-en">High-speed Optical Modules</span><small>beneficiary · high</small></td>
@@ -1990,7 +2001,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
               <td>18.4</td>
               <td>本行仅可在 NERO 确认后写入；官方公告标题已命中相关业务，但仍需验证收入占比、客户和订单，默认观察层。</td>
             </tr>
-            
+
             <tr>
               <td><span class="lang lang-zh">CPO / InP 光通信</span><span class="lang lang-en">CPO / InP Optical Interconnect</span></td>
               <td><span class="lang lang-zh">光芯片 / 硅光 / 上游光器件</span><span class="lang lang-en">Optical Chips / Silicon Photonics / Upstream Optical Components</span><small>bottleneck · high</small></td>
@@ -1999,7 +2010,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
               <td>18.2</td>
               <td>V9第一阶段本地观察吸收；已落到现有leaf，但需继续验证AI相关收入占比、客户、订单或公告证据。</td>
             </tr>
-            
+
             <tr>
               <td><span class="lang lang-zh">CPO / InP 光通信</span><span class="lang lang-en">CPO / InP Optical Interconnect</span></td>
               <td><span class="lang lang-zh">光芯片 / 硅光 / 上游光器件</span><span class="lang lang-en">Optical Chips / Silicon Photonics / Upstream Optical Components</span><small>bottleneck · high</small></td>
@@ -2008,7 +2019,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
               <td>18.2</td>
               <td>V9第一阶段本地观察吸收；已落到现有leaf，但需继续验证AI相关收入占比、客户、订单或公告证据。</td>
             </tr>
-            
+
             <tr>
               <td><span class="lang lang-zh">CPO / InP 光通信</span><span class="lang lang-en">CPO / InP Optical Interconnect</span></td>
               <td><span class="lang lang-zh">光芯片 / 硅光 / 上游光器件</span><span class="lang lang-en">Optical Chips / Silicon Photonics / Upstream Optical Components</span><small>bottleneck · high</small></td>
@@ -2017,7 +2028,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
               <td>18.2</td>
               <td>V9第一阶段本地观察吸收；已落到现有leaf，但需继续验证AI相关收入占比、客户、订单或公告证据。</td>
             </tr>
-            
+
             <tr>
               <td><span class="lang lang-zh">CPO / InP 光通信</span><span class="lang lang-en">CPO / InP Optical Interconnect</span></td>
               <td><span class="lang lang-zh">光芯片 / 硅光 / 上游光器件</span><span class="lang lang-en">Optical Chips / Silicon Photonics / Upstream Optical Components</span><small>bottleneck · high</small></td>
@@ -2026,7 +2037,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
               <td>18.2</td>
               <td>V10供应侧扩容观察层；原分层=T2明确二阶供应/待收入占比核验，未按L2/L3证据确认，需补收入占比、客户认证、订单或公告原文验证。</td>
             </tr>
-            
+
             <tr>
               <td><span class="lang lang-zh">CPO / InP 光通信</span><span class="lang lang-en">CPO / InP Optical Interconnect</span></td>
               <td><span class="lang lang-zh">光芯片 / 硅光 / 上游光器件</span><span class="lang lang-en">Optical Chips / Silicon Photonics / Upstream Optical Components</span><small>bottleneck · high</small></td>
@@ -2035,7 +2046,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
               <td>18.2</td>
               <td>V10供应侧扩容观察层；原分层=T2明确二阶供应/待收入占比核验，未按L2/L3证据确认，需补收入占比、客户认证、订单或公告原文验证。</td>
             </tr>
-            
+
             <tr>
               <td><span class="lang lang-zh">CPO / InP 光通信</span><span class="lang lang-en">CPO / InP Optical Interconnect</span></td>
               <td><span class="lang lang-zh">光芯片 / 硅光 / 上游光器件</span><span class="lang lang-en">Optical Chips / Silicon Photonics / Upstream Optical Components</span><small>bottleneck · high</small></td>
@@ -2044,7 +2055,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
               <td>18.2</td>
               <td>V10供应侧扩容观察层；原分层=T2明确二阶供应/待收入占比核验，未按L2/L3证据确认，需补收入占比、客户认证、订单或公告原文验证。</td>
             </tr>
-            
+
             <tr>
               <td><span class="lang lang-zh">CPO / InP 光通信</span><span class="lang lang-en">CPO / InP Optical Interconnect</span></td>
               <td><span class="lang lang-zh">光芯片 / 硅光 / 上游光器件</span><span class="lang lang-en">Optical Chips / Silicon Photonics / Upstream Optical Components</span><small>bottleneck · high</small></td>
@@ -2053,7 +2064,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
               <td>18.2</td>
               <td>V10供应侧扩容观察层；原分层=T2明确二阶供应/待收入占比核验，未按L2/L3证据确认，需补收入占比、客户认证、订单或公告原文验证。</td>
             </tr>
-            
+
             <tr>
               <td><span class="lang lang-zh">CPO / InP 光通信</span><span class="lang lang-en">CPO / InP Optical Interconnect</span></td>
               <td><span class="lang lang-zh">高速光模块</span><span class="lang lang-en">High-speed Optical Modules</span><small>beneficiary · high</small></td>
@@ -2062,7 +2073,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
               <td>18.8</td>
               <td>CSP CapEx放缓、价格下行、客户集中、汇率。</td>
             </tr>
-            
+
             <tr>
               <td><span class="lang lang-zh">CPO / InP 光通信</span><span class="lang lang-en">CPO / InP Optical Interconnect</span></td>
               <td><span class="lang lang-zh">高速光模块</span><span class="lang lang-en">High-speed Optical Modules</span><small>beneficiary · high</small></td>
@@ -2071,7 +2082,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
               <td>21.8</td>
               <td>单一客户或价格竞争。</td>
             </tr>
-            
+
             <tr>
               <td><span class="lang lang-zh">CPO / InP 光通信</span><span class="lang lang-en">CPO / InP Optical Interconnect</span></td>
               <td><span class="lang lang-zh">光芯片 / 硅光 / 上游光器件</span><span class="lang lang-en">Optical Chips / Silicon Photonics / Upstream Optical Components</span><small>bottleneck · high</small></td>
@@ -2080,7 +2091,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
               <td>18.4</td>
               <td>若增长仍主要来自接入网或传统光纤业务，AI纯度下调。</td>
             </tr>
-            
+
             <tr>
               <td><span class="lang lang-zh">CPO / InP 光通信</span><span class="lang lang-en">CPO / InP Optical Interconnect</span></td>
               <td><span class="lang lang-zh">光纤预制棒 / 数据中心光缆</span><span class="lang lang-en">Optical Fiber Preforms / Data-center Cables</span><small>enabler · medium</small></td>
@@ -2089,7 +2100,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
               <td>11.6</td>
               <td>若增长来自传统运营商集采，AI纯度下降。</td>
             </tr>
-            
+
             <tr>
               <td><span class="lang lang-zh">CPO / InP 光通信</span><span class="lang lang-en">CPO / InP Optical Interconnect</span></td>
               <td><span class="lang lang-zh">光纤预制棒 / 数据中心光缆</span><span class="lang lang-en">Optical Fiber Preforms / Data-center Cables</span><small>enabler · medium</small></td>
@@ -2098,7 +2109,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
               <td>25.8</td>
               <td>海缆/电力业务会稀释AI纯度。</td>
             </tr>
-            
+
             <tr>
               <td><span class="lang lang-zh">CPO / InP 光通信</span><span class="lang lang-en">CPO / InP Optical Interconnect</span></td>
               <td><span class="lang lang-zh">光纤预制棒 / 数据中心光缆</span><span class="lang lang-en">Optical Fiber Preforms / Data-center Cables</span><small>enabler · medium</small></td>
@@ -2107,7 +2118,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
               <td>19.8</td>
               <td>若主要是电力/海缆或传统光缆，AI权重下降。</td>
             </tr>
-            
+
             <tr>
               <td><span class="lang lang-zh">CPO / InP 光通信</span><span class="lang lang-en">CPO / InP Optical Interconnect</span></td>
               <td><span class="lang lang-zh">光纤预制棒 / 数据中心光缆</span><span class="lang lang-en">Optical Fiber Preforms / Data-center Cables</span><small>enabler · medium</small></td>
@@ -2116,7 +2127,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
               <td>19.6</td>
               <td>运营商传统投资下滑拖累。</td>
             </tr>
-            
+
             <tr>
               <td><span class="lang lang-zh">先进封装 / 关键设备</span><span class="lang lang-en">Advanced Packaging / Critical Equipment</span></td>
               <td><span class="lang lang-zh">HBF / TC bonder / 混合键合设备</span><span class="lang lang-en">HBF / TC Bonder / Hybrid Bonding Equipment</span><small>bottleneck · high</small></td>
@@ -2125,7 +2136,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
               <td>75.6</td>
               <td>薄膜沉积仍是主业，先进键合收入基数小；若客户验证或收入占比不足需降权。</td>
             </tr>
-            
+
             <tr>
               <td><span class="lang lang-zh">先进封装 / 关键设备</span><span class="lang lang-en">Advanced Packaging / Critical Equipment</span></td>
               <td><span class="lang lang-zh">HBF / TC bonder / 混合键合设备</span><span class="lang lang-en">HBF / TC Bonder / Hybrid Bonding Equipment</span><small>bottleneck · high</small></td>
@@ -2134,7 +2145,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
               <td>64.2</td>
               <td>百傲化学通过子公司参股10.4822%，非直接控股并表；主营业务与键合设备距离远，收入弹性高度不确定。</td>
             </tr>
-            
+
             <tr>
               <td><span class="lang lang-zh">先进封装 / 关键设备</span><span class="lang lang-en">Advanced Packaging / Critical Equipment</span></td>
               <td><span class="lang lang-zh">测试 / 量测 / 探针</span><span class="lang lang-en">Test / Metrology / Probe</span><small>enabler · medium</small></td>
@@ -2143,7 +2154,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
               <td>55.8</td>
               <td>周期下行和并购整合风险。</td>
             </tr>
-            
+
             <tr>
               <td><span class="lang lang-zh">先进封装 / 关键设备</span><span class="lang lang-en">Advanced Packaging / Critical Equipment</span></td>
               <td><span class="lang lang-zh">测试 / 量测 / 探针</span><span class="lang lang-en">Test / Metrology / Probe</span><small>enabler · medium</small></td>
@@ -2154,7 +2165,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
             </tr>
             </tbody></table></div>
     </section>
-    
+
     <section class="section-band page" id="themes">
       <div class="section-head">
         <div>
@@ -2170,7 +2181,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
               <td>32.2</td>
               <td>LITE, AAOI, SIVE, AXTI, NVDA, COHR, MRVL, GOOGL</td>
             </tr>
-            
+
             <tr>
               <td><span class="lang lang-zh">HBM / 存储</span><span class="lang lang-en">HBM / Memory Bandwidth</span><small>memory_hbm</small></td>
               <td>1440</td>
@@ -2178,7 +2189,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
               <td>30.7</td>
               <td>LITE, NVDA, NBIS, MU, AXTI, GOOGL, SNDK, AMZN</td>
             </tr>
-            
+
             <tr>
               <td><span class="lang lang-zh">Neocloud 融资质量</span><span class="lang lang-en">Neocloud Financing Quality</span><small>neocloud_financing</small></td>
               <td>1420</td>
@@ -2186,7 +2197,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
               <td>28.2</td>
               <td>NBIS, IREN, MSFT, CIFR, NVDA, CRWV, GOOGL, META</td>
             </tr>
-            
+
             <tr>
               <td><span class="lang lang-zh">AI 半导体供应链</span><span class="lang lang-en">AI Semi Supply Chain</span><small>ai_semicap_supply_chain</small></td>
               <td>1364</td>
@@ -2194,7 +2205,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
               <td>35.7</td>
               <td>NVDA, LITE, AXTI, SIVE, GOOGL, AMZN, COHR, AAOI</td>
             </tr>
-            
+
             <tr>
               <td><span class="lang lang-zh">InP / 化合物半导体</span><span class="lang lang-en">InP / Compound Semis</span><small>inp_compound_semi</small></td>
               <td>790</td>
@@ -2202,7 +2213,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
               <td>33.2</td>
               <td>AXTI, LITE, IQE, COHR, AAOI, SIVE, NVDA, SOI</td>
             </tr>
-            
+
             <tr>
               <td><span class="lang lang-zh">电力 / 功率链</span><span class="lang lang-en">Power / Grid Chain</span><small>power_grid</small></td>
               <td>351</td>
@@ -2210,7 +2221,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
               <td>38.9</td>
               <td>NVDA, NBIS, GOOGL, IREN, AMZN, LITE, MSFT, TSM</td>
             </tr>
-            
+
             <tr>
               <td><span class="lang lang-zh">Physical AI / 国防光学</span><span class="lang lang-en">Physical AI / Defense Optics</span><small>robotics_physical_ai</small></td>
               <td>313</td>
@@ -2220,14 +2231,14 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
             </tr>
             </tbody></table></div>
     </section>
-    
+
     <section class="boundary-strip page" id="boundary">
       <h2><span class="lang lang-zh">公开边界</span><span class="lang lang-en">Public Boundary</span></h2>
       <p><span class="lang lang-block lang-zh">本页面只展示本地 X KOL 推文资产的研究归桶、证据摘录和可复核链接；不输出投资建议、评级、价格判断或交易动作。</span><span class="lang lang-block lang-en">This page shows only research buckets, evidence excerpts and traceable links from local X KOL tweet assets. It does not provide investment advice, ratings, price calls or trading actions.</span></p>
     </section>
     </main>
   <footer class="page">
-    AIpha X-KOL V1.2｜<span class="lang lang-zh">生成时间</span><span class="lang lang-en">Generated</span> 2026-07-06T20:15:09+08:00｜source_commit 1c2f854fca94
+    AIpha X-KOL V1.2｜<span class="lang lang-zh">生成时间</span><span class="lang lang-en">Generated</span> 2026-07-06T21:08:21+08:00｜source_commit 1c2f854fca94
   </footer>
 </body>
 </html>

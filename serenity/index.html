@@ -170,8 +170,8 @@ html[data-lang="zh"] .lang-toggle button[data-lang-button="zh"],
 html[data-lang="en"] .lang-toggle button[data-lang-button="en"] { color: #111827; background: #f8fafc; }
 .page { width: min(1360px, calc(100% - 36px)); margin: 0 auto; }
 .hero {
-  margin: 20px auto 18px;
-  padding: clamp(26px, 3.2vw, 40px);
+  margin: 14px auto 14px;
+  padding: clamp(20px, 2.5vw, 32px);
   background:
     linear-gradient(90deg, rgba(255,255,255,0.98), rgba(255,255,255,0.9)),
     linear-gradient(135deg, rgba(31,83,102,0.16), rgba(198,154,74,0.08));
@@ -201,15 +201,15 @@ html[data-lang="en"] .lang-toggle button[data-lang-button="en"] { color: #111827
   letter-spacing: 0.04em;
   line-height: 1.25;
 }
-h1 { margin: 6px 0 12px; font-size: clamp(36px, 4vw, 54px); line-height: 1.06; letter-spacing: 0; max-width: 920px; }
-.lead { max-width: 860px; margin: 0; color: var(--muted); font-size: clamp(16px, 1.28vw, 19px); }
+h1 { margin: 4px 0 10px; font-size: clamp(34px, 3.35vw, 48px); line-height: 1.08; letter-spacing: 0; max-width: 940px; }
+.lead { max-width: 880px; margin: 0; color: var(--muted); font-size: clamp(15px, 1.18vw, 18px); }
 .meta-line { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 18px; color: var(--muted); }
 .meta-chip { display: inline-flex; align-items: center; padding: 5px 9px; border: 1px solid var(--line); background: rgba(255,255,255,0.78); font-size: 12px; max-width: 100%; overflow-wrap: anywhere; }
-.window-status { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; margin-top: 16px; max-width: 760px; }
-.window-status article { display: grid; grid-template-columns: minmax(0,1fr) auto; gap: 8px; align-items: center; padding: 10px 12px; background: #fff; border: 1px solid var(--line); border-left: 4px solid var(--blue); }
-.window-status strong { display: block; font-size: 14px; }
+.window-status { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; margin-top: 14px; max-width: 1000px; }
+.window-status article { display: grid; grid-template-columns: minmax(0,1fr) auto; gap: 8px; align-items: center; padding: 9px 11px; background: #fff; border: 1px solid var(--line); border-left: 4px solid var(--blue); }
+.window-status strong { display: block; font-size: 13px; }
 .window-status span { color: var(--muted); font-size: 12px; overflow-wrap: anywhere; }
-.window-status b { font-size: 22px; line-height: 1; color: var(--blue); }
+.window-status b { font-size: 21px; line-height: 1; color: var(--blue); }
 .stat-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; width: 100%; max-width: 980px; align-self: stretch; }
 .stat {
   min-width: 0;
@@ -227,14 +227,14 @@ h1 { margin: 6px 0 12px; font-size: clamp(36px, 4vw, 54px); line-height: 1.06; l
 .stat b { display: block; margin: 3px 0 3px; font-size: clamp(22px, 2vw, 30px); line-height: 1; white-space: nowrap; letter-spacing: -0.01em; }
 .stat b.long-stat-value { font-size: clamp(20px, 1.6vw, 26px); letter-spacing: -0.02em; }
 .section-band {
-  margin: 18px auto;
-  padding: clamp(20px, 2.8vw, 34px);
+  margin: 14px auto;
+  padding: clamp(18px, 2.35vw, 30px);
   background: rgba(255,255,255,0.94);
   border: 1px solid rgba(216,224,228,0.92);
   box-shadow: 0 10px 30px rgba(22,33,43,0.045);
 }
-.section-head { display: flex; justify-content: space-between; gap: 18px; align-items: end; border-bottom: 1px solid var(--line); padding-bottom: 14px; margin-bottom: 18px; }
-.section-head h2 { margin: 0; font-size: clamp(24px, 2.55vw, 34px); line-height: 1.12; }
+.section-head { display: flex; justify-content: space-between; gap: 18px; align-items: end; border-bottom: 1px solid var(--line); padding-bottom: 12px; margin-bottom: 16px; }
+.section-head h2 { margin: 0; font-size: clamp(23px, 2.3vw, 32px); line-height: 1.12; }
 .section-head p { margin: 6px 0 0; color: var(--muted); max-width: 780px; }
 .program-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
 .program-card { display: grid; gap: 14px; padding: 18px; background: linear-gradient(180deg, #ffffff, #f8faf9); border: 1px solid var(--line); border-left: 5px solid var(--blue); text-decoration: none; transition: transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease; }
@@ -277,44 +277,46 @@ h1 { margin: 6px 0 12px; font-size: clamp(36px, 4vw, 54px); line-height: 1.06; l
 .weekly-event-label { color: var(--blue); font-size: 12px; font-weight: 900; }
 .weekly-event strong { display: block; font-size: 14px; line-height: 1.35; }
 .weekly-event small { display: block; margin-top: 4px; color: var(--muted); overflow-wrap: anywhere; }
-.weekly-report-paper { display: grid; gap: 22px; max-width: 1180px; }
-.weekly-report-memo { display: grid; gap: 26px; }
-.weekly-narrative { display: grid; gap: 26px; }
-.weekly-narrative section { display: grid; gap: 10px; }
-.weekly-narrative h3 { margin: 0; font-size: 23px; line-height: 1.2; }
-.weekly-narrative p { margin: 0; color: var(--ink); font-size: clamp(17px, 1.55vw, 22px); line-height: 1.7; letter-spacing: 0; }
-.weekly-narrative .weekly-intro { font-size: clamp(19px, 1.9vw, 27px); line-height: 1.65; font-weight: 720; }
+.weekly-report-paper { display: grid; gap: 18px; max-width: 1120px; }
+.weekly-report-memo { display: grid; gap: 22px; }
+.weekly-narrative { display: grid; gap: 22px; }
+.weekly-narrative section { display: grid; gap: 9px; }
+.weekly-narrative h3 { margin: 0; font-size: 20px; line-height: 1.2; color: var(--ink); }
+.weekly-narrative p { margin: 0; color: var(--ink); font-size: clamp(15px, 1.12vw, 18px); line-height: 1.72; letter-spacing: 0; }
+.weekly-narrative .weekly-intro { font-size: clamp(17px, 1.42vw, 21px); line-height: 1.68; font-weight: 700; max-width: 1080px; }
 .account-pill {
   display: inline-flex;
   align-items: center;
   margin: 0 2px;
-  padding: 1px 8px 2px;
-  border-radius: 7px;
+  padding: 1px 7px 2px;
+  border-radius: 6px;
   background: #eef1f2;
   color: var(--ink);
   border: 1px solid rgba(216,224,228,0.9);
   font-family: "SF Mono", "Roboto Mono", Menlo, Consolas, monospace;
-  font-size: 0.92em;
+  font-size: 0.88em;
   line-height: 1.25;
   white-space: nowrap;
 }
-.weekly-kol-list { display: grid; gap: 18px; }
-.weekly-kol-paragraph { display: grid; grid-template-columns: 132px minmax(0, 1fr); gap: 14px; align-items: start; padding-top: 16px; border-top: 1px solid var(--line); }
+.weekly-kol-list { display: grid; gap: 12px; }
+.weekly-kol-paragraph { display: grid; grid-template-columns: 116px minmax(0, 1fr); gap: 14px; align-items: start; padding: 12px 0 0; border-top: 1px solid var(--line); }
 .weekly-kol-paragraph:first-child { border-top: 0; padding-top: 0; }
-.weekly-kol-label { color: var(--blue); font-family: "SF Mono", "Roboto Mono", Menlo, Consolas, monospace; font-size: 15px; font-weight: 900; line-height: 1.4; overflow-wrap: anywhere; }
-.weekly-kol-paragraph p { margin: 0; color: var(--ink); font-size: clamp(16px, 1.42vw, 21px); line-height: 1.68; }
-.industry-merge-list { display: grid; gap: 13px; margin: 0; padding: 0; list-style: none; counter-reset: industry; }
-.industry-merge-list li { counter-increment: industry; display: grid; grid-template-columns: 38px minmax(0, 1fr); gap: 12px; align-items: start; color: var(--ink); font-size: clamp(16px, 1.35vw, 20px); line-height: 1.6; }
+.weekly-kol-label { color: var(--blue); font-family: "SF Mono", "Roboto Mono", Menlo, Consolas, monospace; font-size: 13px; font-weight: 900; line-height: 1.4; overflow-wrap: anywhere; }
+.weekly-kol-paragraph p { margin: 0; color: var(--ink); font-size: clamp(15px, 1.08vw, 17px); line-height: 1.66; }
+.industry-merge-list { display: grid; gap: 10px; margin: 0; padding: 0; list-style: none; counter-reset: industry; }
+.industry-merge-list li { counter-increment: industry; position: relative; min-height: 28px; padding-left: 42px; color: var(--ink); font-size: clamp(15px, 1.08vw, 17px); line-height: 1.62; }
 .industry-merge-list li::before {
   content: counter(industry);
-  display: grid;
+  position: absolute;
+  left: 0;
+  top: 1px;
+  display: inline-grid;
   place-items: center;
   width: 30px;
   height: 30px;
-  margin-top: 2px;
   background: var(--dark);
   color: #fff;
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 950;
 }
 .industry-merge-list b { color: var(--ink); }
@@ -527,14 +529,22 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
   .hero { margin-top: 12px; padding: 20px; }
   .hero-grid, .program-grid, .brief-grid, .weekly-grid, .weekly-signal-grid, .digest-overview, .digest-card-grid, .question-list, .chain-body, .timeline-grid, .asset-snapshot-grid { grid-template-columns: 1fr; }
   .brief-titlebar { display: grid; }
-  h1 { font-size: 34px; }
+  h1 { font-size: 32px; }
   .lead { font-size: 16px; }
   .stat-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; width: 100%; }
   .stat { min-height: 64px; padding: 9px 10px; }
   .stat span, .stat small { font-size: 9.5px; }
   .stat b { font-size: 24px; margin: 5px 0 4px; }
   .digest-ticker-columns { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .window-status { grid-template-columns: 1fr; }
+  .window-status { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 7px; }
+  .window-status article { grid-template-columns: minmax(0, 1fr); align-items: start; gap: 6px; padding: 9px; }
+  .window-status strong { font-size: 12px; }
+  .window-status span { font-size: 11px; }
+  .window-status b { font-size: 20px; }
+  .weekly-kol-paragraph { grid-template-columns: 1fr; gap: 5px; }
+  .weekly-kol-label { font-size: 12px; }
+  .industry-merge-list li { padding-left: 36px; font-size: 15px; }
+  .industry-merge-list li::before { width: 26px; height: 26px; font-size: 11px; }
   .brief-numbered-list { grid-template-columns: 1fr; }
   .brief-conclusion { grid-template-columns: 1fr; gap: 8px; }
   .brief-topic-grid, .brief-side-grid, .change-radar-grid, .change-summary-grid { grid-template-columns: 1fr; }
@@ -555,20 +565,21 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
   .nav-disclaimer { min-height: 21px; padding: 0 5px; font-size: 9px; }
   .lang-toggle button { min-width: 26px; min-height: 19px; padding: 0 3px; font-size: 9px; }
   .page-switcher a { min-height: 22px; padding: 0 7px; font-size: 9px; }
+  .hero { padding: 16px; }
   .stat-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
   .stat { min-height: 62px; padding: 9px; }
   .stat span, .stat small { font-size: 9.5px; }
   .stat b { font-size: 24px; }
-  .window-status { grid-template-columns: 1fr; }
+  .window-status { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .brief-titlebar, .brief-body { padding-left: 14px; padding-right: 14px; }
   .brief-numbered-item { grid-template-columns: 32px minmax(0, 1fr); padding: 12px; }
-  h1 { font-size: 31px; }
+  h1 { font-size: 29px; }
   .section-head { display: block; }
 }
 </style>
 </head>
 <body>
-  
+
     <header class="top-nav">
       <a class="brand" href="/AIpha/" aria-label="AIpha Research Desk">
         <img src="assets/nero-mark.svg" alt="AIpha Research Desk" />
@@ -583,7 +594,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
         </span>
       </div>
     </header>
-    
+
   <main>
     <section class="hero page">
       <div class="hero-grid">
@@ -598,7 +609,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
               </div>
               <b>47</b>
             </article>
-            
+
             <article>
               <div>
                 <strong>jukan05 <small>@jukan05</small></strong>
@@ -606,7 +617,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
               </div>
               <b>65</b>
             </article>
-            
+
             <article>
               <div>
                 <strong>Paurooteri <small>@paurooteri</small></strong>
@@ -614,7 +625,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
               </div>
               <b>207</b>
             </article>
-            
+
             <article>
               <div>
                 <strong>Stock6688 <small>@stock6688</small></strong>
@@ -627,7 +638,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
         <div class="stat-grid"><article class="stat"><span><span class="lang lang-zh">KOL 数量</span><span class="lang lang-en">KOLs</span></span><b>4</b><small><span class="lang lang-zh">固定 registry</span><span class="lang lang-en">Fixed registry</span></small></article><article class="stat"><span><span class="lang lang-zh">Serenity 推文</span><span class="lang lang-en">Serenity Tweets</span></span><b>6,046</b><small><span class="lang lang-zh">@aleabitoreddit</span><span class="lang lang-en">@aleabitoreddit</span></small></article><article class="stat"><span><span class="lang lang-zh">X-KOL 推文</span><span class="lang lang-en">X-KOL Tweets</span></span><b>970</b><small><span class="lang lang-zh">多账号本地库</span><span class="lang lang-en">Multi-account local DB</span></small></article><article class="stat"><span><span class="lang lang-zh">周报窗口</span><span class="lang lang-en">Weekly Window</span></span><b>7D</b><small><span class="lang lang-zh">滚动窗口</span><span class="lang lang-en">Rolling window</span></small></article></div>
       </div>
     </section>
-    
+
     <section class="section-band page" id="latest-briefs">
       <div class="section-head">
         <div>
@@ -649,17 +660,17 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
       <div class="weekly-kol-label">@aleabitoreddit</div>
       <p><span class="account-pill">aleabitoreddit</span>：主线是 AI 服务器上游、人形机器人/Physical AI、存储/HBM/SSD、光通信/光子。相对更重 美股光子、Neocloud、机器人和 AI 上游瓶颈；本窗口 47 条推文里，产业变化标签集中在 供需紧张、技术路线变化、技术进步、需求结构变化、供给释放，具体对象反复落到 具体对象需回看原文、CPO / NPO / 光互连、Neocloud 融资与合约、机器人执行器/光学、FC-BGA / 封装载板、InP / 激光器。高频 ticker：META、AMZN、NVDA、TSLA、CCXI、NBIS、SIVE；近端升温：META +11、CCXI +8、AMZN +7、TSLA +6、NVDA +5、NBIS +4。</p>
     </div>
-    
+
     <div class="weekly-kol-paragraph">
       <div class="weekly-kol-label">@jukan05</div>
       <p><span class="account-pill">jukan05</span>：主线是 存储/HBM/SSD、AI 服务器上游、Neocloud/算力融资、IDC/电力/功率链。相对更重 日韩/台湾半导体供需、出口、元件价格和原始产业新闻；本窗口 65 条推文里，产业变化标签集中在 技术路线变化、供需紧张、涨价/ASP、技术进步、供给释放，具体对象反复落到 具体对象需回看原文、HBM / DRAM、FC-BGA / 封装载板、Neocloud 融资与合约、AI ASIC / TPU / 定制芯片、InP / 激光器。高频 ticker：INTC、AAPL、META、MU、AMD、GOOGL、NVDA；近端升温：INTC +4、AAPL +2、META +2、AMD +1、ASML +1、ASX +1。</p>
     </div>
-    
+
     <div class="weekly-kol-paragraph">
       <div class="weekly-kol-label">@paurooteri</div>
       <p><span class="account-pill">paurooteri</span>：主线是 存储/HBM/SSD、AI 服务器上游、Neocloud/算力融资、光通信/光子。相对更重 存储、HBM、电子部件通胀、锁料周期和底部利润率修复；本窗口 207 条推文里，产业变化标签集中在 技术进步、需求结构变化、供需紧张、技术路线变化、涨价/ASP，具体对象反复落到 具体对象需回看原文、AI ASIC / TPU / 定制芯片、InP / 激光器、FC-BGA / 封装载板、芯片电阻 / MLCC、CPO / NPO / 光互连。高频 ticker：MU、NVDA、AAPL、TSM、SKHY；近端升温：MU +2、AAPL +2、NVDA +2、SKHY +1、TSM +1。</p>
     </div>
-    
+
     <div class="weekly-kol-paragraph">
       <div class="weekly-kol-label">@stock6688</div>
       <p><span class="account-pill">stock6688</span>：主线是 存储/HBM/SSD、光通信/光子、IDC/电力/功率链。相对更重 国产算力、A股产业映射、IDC、电连接/光连接和半导体材料；本窗口 26 条推文里，产业变化标签集中在 涨价/ASP、技术进步、技术路线变化、需求结构变化、供给释放，具体对象反复落到 HBM / DRAM、具体对象需回看原文、CPO / NPO / 光互连、HBF / TC bonder。高频 ticker：暂无高频 ticker；近端升温：暂无明显升温 ticker。</p>
@@ -673,7 +684,7 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
             </section>
           </div>
         </div>
-        
+
             <div class="weekly-report-memo lang lang-en">
               <div class="weekly-narrative">
                 <section>
@@ -687,17 +698,17 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
       <div class="weekly-kol-label">@aleabitoreddit</div>
       <p><span class="account-pill">aleabitoreddit</span>: the main lane is AI server upstream, Humanoid / Physical AI, Memory / HBM / SSD, Optical / photonics. The account's relative focus is US photonics, Neocloud, robotics and upstream AI bottlenecks; this window has 47 tweets, with industry-change tags around Supply Tightness, Technology Route Shift, Technology Progress, Demand Structure, Supply Release and concrete objects such as Read original text for object, CPO / NPO / optical interconnect, Neocloud financing and contracts, robot actuators / optics, FC-BGA / package substrate, InP / lasers. Frequent tickers: META, AMZN, NVDA, TSLA, CCXI, NBIS, SIVE; rising tickers: META +11, CCXI +8, AMZN +7, TSLA +6, NVDA +5, NBIS +4.</p>
     </div>
-    
+
     <div class="weekly-kol-paragraph">
       <div class="weekly-kol-label">@jukan05</div>
       <p><span class="account-pill">jukan05</span>: the main lane is Memory / HBM / SSD, AI server upstream, Neocloud / compute financing, IDC / power chain. The account's relative focus is Korea/Taiwan semi supply-demand, exports, component pricing and raw industry news; this window has 65 tweets, with industry-change tags around Technology Route Shift, Supply Tightness, Pricing / ASP, Technology Progress, Supply Release and concrete objects such as Read original text for object, HBM / DRAM, FC-BGA / package substrate, Neocloud financing and contracts, AI ASIC / TPU / custom silicon, InP / lasers. Frequent tickers: INTC, AAPL, META, MU, AMD, GOOGL, NVDA; rising tickers: INTC +4, AAPL +2, META +2, AMD +1, ASML +1, ASX +1.</p>
     </div>
-    
+
     <div class="weekly-kol-paragraph">
       <div class="weekly-kol-label">@paurooteri</div>
       <p><span class="account-pill">paurooteri</span>: the main lane is Memory / HBM / SSD, AI server upstream, Neocloud / compute financing, Optical / photonics. The account's relative focus is memory, HBM, electronic-component inflation, locked-in supply and bottom-margin recovery; this window has 207 tweets, with industry-change tags around Technology Progress, Demand Structure, Supply Tightness, Technology Route Shift, Pricing / ASP and concrete objects such as Read original text for object, AI ASIC / TPU / custom silicon, InP / lasers, FC-BGA / package substrate, chip resistors / MLCC, CPO / NPO / optical interconnect. Frequent tickers: MU, NVDA, AAPL, TSM, SKHY; rising tickers: MU +2, AAPL +2, NVDA +2, SKHY +1, TSM +1.</p>
     </div>
-    
+
     <div class="weekly-kol-paragraph">
       <div class="weekly-kol-label">@stock6688</div>
       <p><span class="account-pill">stock6688</span>: the main lane is Memory / HBM / SSD, Optical / photonics, IDC / power chain. The account's relative focus is domestic compute, A-share industrial mapping, IDC, electrical/optical interconnect and semi materials; this window has 26 tweets, with industry-change tags around Pricing / ASP, Technology Progress, Technology Route Shift, Demand Structure, Supply Release and concrete objects such as HBM / DRAM, Read original text for object, CPO / NPO / optical interconnect, HBF / TC bonder. Frequent tickers: no frequent ticker; rising tickers: no clear rising ticker.</p>
@@ -713,14 +724,14 @@ footer { color: var(--muted); padding: 24px 0 40px; font-size: 12px; }
             </div>
             </div>
     </section>
-    
+
     <section class="boundary-strip page" id="boundary">
       <h2><span class="lang lang-zh">公开边界</span><span class="lang lang-en">Public Boundary</span></h2>
       <p><span class="lang lang-block lang-zh">本页面只展示本地 X KOL 推文资产的研究归桶、证据摘录和可复核链接；不输出投资建议、评级、价格判断或交易动作。</span><span class="lang lang-block lang-en">This page shows only research buckets, evidence excerpts and traceable links from local X KOL tweet assets. It does not provide investment advice, ratings, price calls or trading actions.</span></p>
     </section>
     </main>
   <footer class="page">
-    AIpha X-KOL V1.2｜<span class="lang lang-zh">生成时间</span><span class="lang lang-en">Generated</span> 2026-07-06T20:15:09+08:00｜source_commit 1c2f854fca94
+    AIpha X-KOL V1.2｜<span class="lang lang-zh">生成时间</span><span class="lang lang-en">Generated</span> 2026-07-06T21:08:21+08:00｜source_commit 1c2f854fca94
   </footer>
 </body>
 </html>
