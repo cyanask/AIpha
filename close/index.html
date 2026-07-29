@@ -350,18 +350,18 @@
       background: rgba(200, 120, 24, .07);
       color: #91550c;
     }
-    .funding-phase.decision-state-overheat_alert,
-    .funding-phase.decision-state-downside_stress {
+    .funding-phase.decision-state-fragile,
+    .funding-phase.decision-state-cascade_active {
       border-color: rgba(180, 35, 24, .3);
       background: rgba(180, 35, 24, .06);
       color: var(--nero-red);
     }
-    .funding-phase.decision-state-bottom_watch {
+    .funding-phase.decision-state-clearing_watch {
       border-color: rgba(200, 120, 24, .35);
       background: rgba(200, 120, 24, .07);
       color: #91550c;
     }
-    .funding-phase.decision-state-bottom_ready {
+    .funding-phase.decision-state-clearing_confirmed {
       border-color: rgba(20, 139, 90, .35);
       background: rgba(20, 139, 90, .07);
       color: var(--nero-green);
@@ -1224,7 +1224,7 @@
         <div class="title-row">
           <span class="order intro-order">01</span>
           <h1>AI产业收盘数据板</h1>
-          <span class="product-badge" aria-label="AIpha Close version"><span>AIpha Close</span><span class="product-separator">|</span><span class="product-version">v1.15</span></span>
+          <span class="product-badge" aria-label="AIpha Close version"><span>AIpha Close</span><span class="product-separator">|</span><span class="product-version">v1.16</span></span>
         </div>
         <p>基于收盘行情、公开资金数据和映射表，按市场概览、资金面与拥挤度、流动性、AI链指数、产业链条拆解、数据边界固定顺序阅读。公开页只保留可发布摘要，不展示本地路径、数据库明细、全量映射资产或原始资产。</p>
       </div>
@@ -1306,43 +1306,43 @@
           <span class="order">03</span>
           <h2>资金面与 Beta 风险</h2>
         </div>
-        <span class="section-meta">H / S / B 决策层 · L / C / D 驱动层</span>
+        <span class="section-meta">踩踏风险 / 回撤空间 / 反弹概率 · L / C / D 驱动层</span>
       </div>
     
-      <p class="funding-lead">H 识别快速上涨后的 Beta 过热，S 判断下跌与融资收缩是否仍在释放，B 只在高压力过后、融资收缩回落且价格连续止跌时上升。D 高只表示融资收缩强，不等于快见底；三地分数只做各自历史比较。</p>
+      <p class="funding-lead">三项决策指标分别回答：未来 10 日是否容易发生连续踩踏、若触发还可能跌多少、去杠杆后先反弹还是先创新低。高位脆弱或首跌触发后会锁定“踩踏进行中”，单日反弹不能解除；概率只在长历史走步校准通过后显示，否则明确标为风险分数或样本不足。</p>
       <div class="funding-market-grid">
-      <article class="funding-market-card decision-neutral elevated">
+      <article class="funding-market-card decision-cascade_active elevated">
         <div class="funding-market-head">
           <div><span class="funding-market-code">A_SHARE</span><h3>A股（沪市代理）</h3></div>
-          <span class="funding-phase decision-state-neutral">中性观察</span>
+          <span class="funding-phase decision-state-cascade_active">踩踏进行中</span>
         </div>
         <p class="funding-coverage">口径：深交所历史接口本轮覆盖不足，暂以沪市官方同口径序列代理；不冒充全 A 股绝对杠杆率。</p>
         
       <div class="funding-decision-layer">
         <div class="funding-score-grid funding-decision-grid">
           
-      <div class="funding-score funding-decision-score calm">
-        <div class="funding-score-head"><span><b>H</b> 上涨过热风险</span><strong>27</strong></div>
-        <div class="funding-score-track" aria-label="上涨过热风险 27"><i style="width:26.8%"></i></div>
-        <small>≥75 且上涨：检查 Beta 暴露</small>
-      </div>
-    
-          
       <div class="funding-score funding-decision-score elevated">
-        <div class="funding-score-head"><span><b>S</b> 下跌压力</span><strong>72</strong></div>
-        <div class="funding-score-track" aria-label="下跌压力 72"><i style="width:72.0%"></i></div>
-        <small>≥75：仍在压力释放</small>
+        <div class="funding-score-head"><span><b>R</b> 未来10日踩踏风险</span><strong>75</strong></div>
+        <div class="funding-score-track" aria-label="未来10日踩踏风险 75"><i style="width:75.0%"></i></div>
+        <small>风险分数 · 概率待校准</small>
       </div>
     
           
-      <div class="funding-score funding-decision-score neutral">
-        <div class="funding-score-head"><span><b>B</b> 筑底准备度</span><strong>35</strong></div>
-        <div class="funding-score-track" aria-label="筑底准备度 35"><i style="width:35.1%"></i></div>
-        <small>≥70 且连续两日：配置观察</small>
+      <div class="funding-score funding-decision-score missing">
+        <div class="funding-score-head"><span><b>DD</b> 若触发还可能跌多少</span><strong>--</strong></div>
+        <div class="funding-score-track" aria-label="若触发还可能跌多少 --"><i style="width:0%"></i></div>
+        <small>历史事件不足 · 暂不输出</small>
+      </div>
+    
+          
+      <div class="funding-score funding-decision-score missing">
+        <div class="funding-score-head"><span><b>P</b> 止跌反弹概率</span><strong>未进入</strong></div>
+        <div class="funding-score-track" aria-label="止跌反弹概率 未进入"><i style="width:0%"></i></div>
+        <small>尚未进入止跌判断区。</small>
       </div>
     
         </div>
-        <p class="funding-decision-summary">当前未触发方向性 Beta 风险提示，继续观察价格与资金是否同向变化。</p>
+        <p class="funding-decision-summary">踩踏风险已触发或仍在延续；单日反弹不解除风险，也不进入止跌判断。</p>
         <p class="funding-price-basis">价格口径：上证、深证成指、创业板、科创50与中证500等权日收益 · 2026-07-28</p>
       </div>
     
@@ -1392,38 +1392,38 @@
         </details>
       </article>
     
-      <article class="funding-market-card decision-neutral watch">
+      <article class="funding-market-card decision-normal watch">
         <div class="funding-market-head">
           <div><span class="funding-market-code">US</span><h3>美股</h3></div>
-          <span class="funding-phase decision-state-neutral">中性观察</span>
+          <span class="funding-phase decision-state-normal">常态观察</span>
         </div>
         <p class="funding-coverage">口径：FINRA 月频账户融资、Cboe 日频期权与 CFTC 周频杠杆基金仓位的组合代理。</p>
         
       <div class="funding-decision-layer">
         <div class="funding-score-grid funding-decision-grid">
           
-      <div class="funding-score funding-decision-score watch">
-        <div class="funding-score-head"><span><b>H</b> 上涨过热风险</span><strong>48</strong></div>
-        <div class="funding-score-track" aria-label="上涨过热风险 48"><i style="width:48.2%"></i></div>
-        <small>≥75 且上涨：检查 Beta 暴露</small>
+      <div class="funding-score funding-decision-score calm">
+        <div class="funding-score-head"><span><b>R</b> 未来10日踩踏风险</span><strong>40</strong></div>
+        <div class="funding-score-track" aria-label="未来10日踩踏风险 40"><i style="width:39.5%"></i></div>
+        <small>风险分数 · 概率待校准</small>
       </div>
     
           
-      <div class="funding-score funding-decision-score watch">
-        <div class="funding-score-head"><span><b>S</b> 下跌压力</span><strong>57</strong></div>
-        <div class="funding-score-track" aria-label="下跌压力 57"><i style="width:57.2%"></i></div>
-        <small>≥75：仍在压力释放</small>
+      <div class="funding-score funding-decision-score missing">
+        <div class="funding-score-head"><span><b>DD</b> 若触发还可能跌多少</span><strong>--</strong></div>
+        <div class="funding-score-track" aria-label="若触发还可能跌多少 --"><i style="width:0%"></i></div>
+        <small>历史事件不足 · 暂不输出</small>
       </div>
     
           
-      <div class="funding-score funding-decision-score neutral">
-        <div class="funding-score-head"><span><b>B</b> 筑底准备度</span><strong>0</strong></div>
-        <div class="funding-score-track" aria-label="筑底准备度 0"><i style="width:0.0%"></i></div>
-        <small>≥70 且连续两日：配置观察</small>
+      <div class="funding-score funding-decision-score missing">
+        <div class="funding-score-head"><span><b>P</b> 止跌反弹概率</span><strong>未进入</strong></div>
+        <div class="funding-score-track" aria-label="止跌反弹概率 未进入"><i style="width:0%"></i></div>
+        <small>尚未进入止跌判断区。</small>
       </div>
     
         </div>
-        <p class="funding-decision-summary">当前未触发方向性 Beta 风险提示，继续观察价格与资金是否同向变化。</p>
+        <p class="funding-decision-summary">当前未触发高位脆弱或踩踏状态，继续观察价格与资金是否同向变化。</p>
         <p class="funding-price-basis">价格口径：Yahoo Finance S&amp;P 500 日收盘（FRED 不可用时的价格后备） · 2026-07-27</p>
       </div>
     
@@ -1483,38 +1483,38 @@
         </details>
       </article>
     
-      <article class="funding-market-card decision-downside_stress elevated">
+      <article class="funding-market-card decision-cascade_active elevated">
         <div class="funding-market-head">
           <div><span class="funding-market-code">KR</span><h3>韩国股市</h3></div>
-          <span class="funding-phase decision-state-downside_stress">下跌压力高</span>
+          <span class="funding-phase decision-state-cascade_active">踩踏进行中</span>
         </div>
         <p class="funding-coverage">口径：KOFIA FreeSIS 的 KOSPI、KOSDAQ 汇总信用融资、投资者存款与股票借贷日频代理。</p>
         
       <div class="funding-decision-layer">
         <div class="funding-score-grid funding-decision-grid">
           
-      <div class="funding-score funding-decision-score calm">
-        <div class="funding-score-head"><span><b>H</b> 上涨过热风险</span><strong>21</strong></div>
-        <div class="funding-score-track" aria-label="上涨过热风险 21"><i style="width:21.3%"></i></div>
-        <small>≥75 且上涨：检查 Beta 暴露</small>
-      </div>
-    
-          
       <div class="funding-score funding-decision-score elevated">
-        <div class="funding-score-head"><span><b>S</b> 下跌压力</span><strong>78</strong></div>
-        <div class="funding-score-track" aria-label="下跌压力 78"><i style="width:77.7%"></i></div>
-        <small>≥75：仍在压力释放</small>
+        <div class="funding-score-head"><span><b>R</b> 未来10日踩踏风险</span><strong>78</strong></div>
+        <div class="funding-score-track" aria-label="未来10日踩踏风险 78"><i style="width:77.7%"></i></div>
+        <small>风险分数 · 概率待校准</small>
       </div>
     
           
-      <div class="funding-score funding-decision-score neutral">
-        <div class="funding-score-head"><span><b>B</b> 筑底准备度</span><strong>49</strong></div>
-        <div class="funding-score-track" aria-label="筑底准备度 49"><i style="width:49.0%"></i></div>
-        <small>≥70 且连续两日：配置观察</small>
+      <div class="funding-score funding-decision-score missing">
+        <div class="funding-score-head"><span><b>DD</b> 若触发还可能跌多少</span><strong>--</strong></div>
+        <div class="funding-score-track" aria-label="若触发还可能跌多少 --"><i style="width:0%"></i></div>
+        <small>历史事件不足 · 暂不输出</small>
+      </div>
+    
+          
+      <div class="funding-score funding-decision-score missing">
+        <div class="funding-score-head"><span><b>P</b> 止跌反弹概率</span><strong>未进入</strong></div>
+        <div class="funding-score-track" aria-label="止跌反弹概率 未进入"><i style="width:0%"></i></div>
+        <small>尚未进入止跌判断区。</small>
       </div>
     
         </div>
-        <p class="funding-decision-summary">下跌与资金收缩压力仍高，D 高不等于见底，暂不把超跌视为筑底确认。</p>
+        <p class="funding-decision-summary">踩踏风险已触发或仍在延续；单日反弹不解除风险，也不进入止跌判断。</p>
         <p class="funding-price-basis">价格口径：Yahoo Finance KOSPI 日收盘（价格方向辅助；KOFIA 仍是资金真源） · 2026-07-27</p>
       </div>
     
@@ -1583,10 +1583,10 @@
         <div class="funding-sector-title"><div><span>A股</span><h3>重点赛道资金压力</h3></div><small>当前一级主映射 · 三组互斥 · 自身历史分位</small></div>
         <p class="funding-sector-lead">半导体口径剔除半导体设备，通信口径聚焦光模块、CPO、光芯片、交换机、高速 PCB 与连接器。L 只代表场内两融，不代表场外总杠杆。</p>
         <div class="funding-market-grid funding-sector-grid">
-      <article class="funding-market-card funding-sector-card decision-downside_stress critical" data-sector-id="semi_ex_equipment">
+      <article class="funding-market-card funding-sector-card decision-cascade_active critical" data-sector-id="semi_ex_equipment">
         <div class="funding-market-head">
           <div><span class="funding-market-code">SEMI</span><h3>半导体（不含设备）</h3></div>
-          <span class="funding-phase decision-state-downside_stress">下跌压力高</span>
+          <span class="funding-phase decision-state-cascade_active">踩踏进行中</span>
         </div>
         <p class="funding-sector-sample">160 只主映射 · 两融覆盖 151 只 / 94%</p>
         <p class="funding-coverage">口径：按当前一级主映射互斥分组；个股两融由东方财富整理交易所披露，全市场抓取后在本地过滤。</p>
@@ -1594,28 +1594,28 @@
       <div class="funding-decision-layer">
         <div class="funding-score-grid funding-decision-grid">
           
-      <div class="funding-score funding-decision-score calm">
-        <div class="funding-score-head"><span><b>H</b> 上涨过热风险</span><strong>32</strong></div>
-        <div class="funding-score-track" aria-label="上涨过热风险 32"><i style="width:32.2%"></i></div>
-        <small>≥75 且上涨：检查 Beta 暴露</small>
-      </div>
-    
-          
       <div class="funding-score funding-decision-score critical">
-        <div class="funding-score-head"><span><b>S</b> 下跌压力</span><strong>95</strong></div>
-        <div class="funding-score-track" aria-label="下跌压力 95"><i style="width:94.9%"></i></div>
-        <small>≥75：仍在压力释放</small>
+        <div class="funding-score-head"><span><b>R</b> 未来10日踩踏风险</span><strong>95</strong></div>
+        <div class="funding-score-track" aria-label="未来10日踩踏风险 95"><i style="width:94.9%"></i></div>
+        <small>风险分数 · 概率待校准</small>
       </div>
     
           
-      <div class="funding-score funding-decision-score neutral">
-        <div class="funding-score-head"><span><b>B</b> 筑底准备度</span><strong>19</strong></div>
-        <div class="funding-score-track" aria-label="筑底准备度 19"><i style="width:18.9%"></i></div>
-        <small>≥70 且连续两日：配置观察</small>
+      <div class="funding-score funding-decision-score missing">
+        <div class="funding-score-head"><span><b>DD</b> 若触发还可能跌多少</span><strong>--</strong></div>
+        <div class="funding-score-track" aria-label="若触发还可能跌多少 --"><i style="width:0%"></i></div>
+        <small>历史事件不足 · 暂不输出</small>
+      </div>
+    
+          
+      <div class="funding-score funding-decision-score missing">
+        <div class="funding-score-head"><span><b>P</b> 止跌反弹概率</span><strong>未进入</strong></div>
+        <div class="funding-score-track" aria-label="止跌反弹概率 未进入"><i style="width:0%"></i></div>
+        <small>尚未进入止跌判断区。</small>
       </div>
     
         </div>
-        <p class="funding-decision-summary">下跌与资金收缩压力仍高，D 高不等于见底，暂不把超跌视为筑底确认。</p>
+        <p class="funding-decision-summary">踩踏风险已触发或仍在延续；单日反弹不解除风险，也不进入止跌判断。</p>
         <p class="funding-price-basis">价格口径：当前主映射成份等权日收益与上涨家数 · 2026-07-28</p>
       </div>
     
@@ -1675,10 +1675,10 @@
         </details>
       </article>
     
-      <article class="funding-market-card funding-sector-card decision-downside_stress critical" data-sector-id="optical_interconnect">
+      <article class="funding-market-card funding-sector-card decision-cascade_active critical" data-sector-id="optical_interconnect">
         <div class="funding-market-head">
           <div><span class="funding-market-code">OPTICAL</span><h3>通信 / 光互连</h3></div>
-          <span class="funding-phase decision-state-downside_stress">下跌压力高</span>
+          <span class="funding-phase decision-state-cascade_active">踩踏进行中</span>
         </div>
         <p class="funding-sector-sample">61 只主映射 · 两融覆盖 59 只 / 97%</p>
         <p class="funding-coverage">口径：按当前一级主映射互斥分组；个股两融由东方财富整理交易所披露，全市场抓取后在本地过滤。</p>
@@ -1686,28 +1686,28 @@
       <div class="funding-decision-layer">
         <div class="funding-score-grid funding-decision-grid">
           
-      <div class="funding-score funding-decision-score calm">
-        <div class="funding-score-head"><span><b>H</b> 上涨过热风险</span><strong>27</strong></div>
-        <div class="funding-score-track" aria-label="上涨过热风险 27"><i style="width:27.3%"></i></div>
-        <small>≥75 且上涨：检查 Beta 暴露</small>
-      </div>
-    
-          
       <div class="funding-score funding-decision-score critical">
-        <div class="funding-score-head"><span><b>S</b> 下跌压力</span><strong>96</strong></div>
-        <div class="funding-score-track" aria-label="下跌压力 96"><i style="width:95.9%"></i></div>
-        <small>≥75：仍在压力释放</small>
+        <div class="funding-score-head"><span><b>R</b> 未来10日踩踏风险</span><strong>96</strong></div>
+        <div class="funding-score-track" aria-label="未来10日踩踏风险 96"><i style="width:95.9%"></i></div>
+        <small>风险分数 · 概率待校准</small>
       </div>
     
           
-      <div class="funding-score funding-decision-score neutral">
-        <div class="funding-score-head"><span><b>B</b> 筑底准备度</span><strong>14</strong></div>
-        <div class="funding-score-track" aria-label="筑底准备度 14"><i style="width:14.1%"></i></div>
-        <small>≥70 且连续两日：配置观察</small>
+      <div class="funding-score funding-decision-score missing">
+        <div class="funding-score-head"><span><b>DD</b> 若触发还可能跌多少</span><strong>--</strong></div>
+        <div class="funding-score-track" aria-label="若触发还可能跌多少 --"><i style="width:0%"></i></div>
+        <small>历史事件不足 · 暂不输出</small>
+      </div>
+    
+          
+      <div class="funding-score funding-decision-score missing">
+        <div class="funding-score-head"><span><b>P</b> 止跌反弹概率</span><strong>未进入</strong></div>
+        <div class="funding-score-track" aria-label="止跌反弹概率 未进入"><i style="width:0%"></i></div>
+        <small>尚未进入止跌判断区。</small>
       </div>
     
         </div>
-        <p class="funding-decision-summary">下跌与资金收缩压力仍高，D 高不等于见底，暂不把超跌视为筑底确认。</p>
+        <p class="funding-decision-summary">踩踏风险已触发或仍在延续；单日反弹不解除风险，也不进入止跌判断。</p>
         <p class="funding-price-basis">价格口径：当前主映射成份等权日收益与上涨家数 · 2026-07-28</p>
       </div>
     
@@ -1767,10 +1767,10 @@
         </details>
       </article>
     
-      <article class="funding-market-card funding-sector-card decision-downside_stress critical" data-sector-id="semi_equipment">
+      <article class="funding-market-card funding-sector-card decision-cascade_active critical" data-sector-id="semi_equipment">
         <div class="funding-market-head">
           <div><span class="funding-market-code">SEMI-EQ</span><h3>半导体设备</h3></div>
-          <span class="funding-phase decision-state-downside_stress">下跌压力高</span>
+          <span class="funding-phase decision-state-cascade_active">踩踏进行中</span>
         </div>
         <p class="funding-sector-sample">45 只主映射 · 两融覆盖 42 只 / 93%</p>
         <p class="funding-coverage">口径：按当前一级主映射互斥分组；个股两融由东方财富整理交易所披露，全市场抓取后在本地过滤。</p>
@@ -1778,28 +1778,28 @@
       <div class="funding-decision-layer">
         <div class="funding-score-grid funding-decision-grid">
           
-      <div class="funding-score funding-decision-score calm">
-        <div class="funding-score-head"><span><b>H</b> 上涨过热风险</span><strong>26</strong></div>
-        <div class="funding-score-track" aria-label="上涨过热风险 26"><i style="width:25.7%"></i></div>
-        <small>≥75 且上涨：检查 Beta 暴露</small>
-      </div>
-    
-          
       <div class="funding-score funding-decision-score critical">
-        <div class="funding-score-head"><span><b>S</b> 下跌压力</span><strong>94</strong></div>
-        <div class="funding-score-track" aria-label="下跌压力 94"><i style="width:94.4%"></i></div>
-        <small>≥75：仍在压力释放</small>
+        <div class="funding-score-head"><span><b>R</b> 未来10日踩踏风险</span><strong>94</strong></div>
+        <div class="funding-score-track" aria-label="未来10日踩踏风险 94"><i style="width:94.4%"></i></div>
+        <small>风险分数 · 概率待校准</small>
       </div>
     
           
-      <div class="funding-score funding-decision-score neutral">
-        <div class="funding-score-head"><span><b>B</b> 筑底准备度</span><strong>28</strong></div>
-        <div class="funding-score-track" aria-label="筑底准备度 28"><i style="width:28.5%"></i></div>
-        <small>≥70 且连续两日：配置观察</small>
+      <div class="funding-score funding-decision-score missing">
+        <div class="funding-score-head"><span><b>DD</b> 若触发还可能跌多少</span><strong>--</strong></div>
+        <div class="funding-score-track" aria-label="若触发还可能跌多少 --"><i style="width:0%"></i></div>
+        <small>历史事件不足 · 暂不输出</small>
+      </div>
+    
+          
+      <div class="funding-score funding-decision-score missing">
+        <div class="funding-score-head"><span><b>P</b> 止跌反弹概率</span><strong>未进入</strong></div>
+        <div class="funding-score-track" aria-label="止跌反弹概率 未进入"><i style="width:0%"></i></div>
+        <small>尚未进入止跌判断区。</small>
       </div>
     
         </div>
-        <p class="funding-decision-summary">下跌与资金收缩压力仍高，D 高不等于见底，暂不把超跌视为筑底确认。</p>
+        <p class="funding-decision-summary">踩踏风险已触发或仍在延续；单日反弹不解除风险，也不进入止跌判断。</p>
         <p class="funding-price-basis">价格口径：当前主映射成份等权日收益与上涨家数 · 2026-07-28</p>
       </div>
     
@@ -1862,9 +1862,9 @@
       </div>
       <details class="funding-method">
         <summary>口径与局限</summary>
-        <p>H 仅在上涨状态且不低于 75 时提示 Beta 过热；S 不低于 75 表示下跌压力仍高；B 只有在近期高压力后、D 回落并连续两日止跌确认时才达到可配置观察。</p>
-        <p>D 表示当前融资收缩强度，不代表已经见底；只有此前 L/C 均不低于 70 且当前 D 不低于 70 时才确认去杠杆。</p>
-        <ul><li>三地原始值口径与频率不同，只比较各市场自身历史分位。</li><li>公开数据不能覆盖场外衍生品、私人信贷与全部经纪商内部风险敞口。</li><li>低频数据在新一期发布前沿用最近正式观测，并单独显示日期；韩国信用融资通常为 T-1。</li><li>A股赛道个股两融由东方财富整理交易所披露，外部抓取为公开全市场后本地过滤；不是交易所直连接口。</li><li>美股价格优先使用 FRED S&amp;P 500；FRED 不可用时才使用 Yahoo Finance 公共行情后备，官方资金口径不变。</li><li>韩国 KOSPI 价格方向使用 Yahoo Finance 公共行情辅助；KOFIA 仍是杠杆、客户资金与股票借贷的官方真源。</li></ul>
+        <p>未来 10 日踩踏风险先显示风险分数；概率功能当前锁定，至少需要 750 个已走步标注样本、同分数区间不少于 60 个样本并完成独立校准后才可启用。高位脆弱或首跌触发后锁定踩踏状态，单日反弹不解除；回撤空间和止跌反弹概率同样只在校准通过后显示。</p>
+        <p>L/C/D 仍是底层驱动；杠杆加速、价格加速度、拥挤、波动与广度共同决定高位脆弱，D 高只说明融资收缩，不代表已经见底。</p>
+        <ul><li>三地原始值口径与频率不同，只比较各市场自身历史分位。</li><li>概率、条件回撤与反弹概率在长历史走步校准不足时保持空值，风险分数不得解释为概率。</li><li>公开数据不能覆盖场外衍生品、私人信贷与全部经纪商内部风险敞口。</li><li>低频数据在新一期发布前沿用最近正式观测，并单独显示日期；韩国信用融资通常为 T-1。</li><li>A股赛道个股两融由东方财富整理交易所披露，外部抓取为公开全市场后本地过滤；不是交易所直连接口。</li><li>美股价格优先使用 FRED S&amp;P 500；FRED 不可用时才使用 Yahoo Finance 公共行情后备，官方资金口径不变。</li><li>韩国 KOSPI 价格方向使用 Yahoo Finance 公共行情辅助；KOFIA 仍是杠杆、客户资金与股票借贷的官方真源。</li></ul>
       </details>
     </section>
     
@@ -25514,7 +25514,7 @@
       </div>
     </section>
     
-    <footer>Generated at 2026-07-29T14:51:59+08:00. Public artifact contains HTML and necessary static assets only.</footer>
+    <footer>Generated at 2026-07-29T17:10:12+08:00. Public artifact contains HTML and necessary static assets only.</footer>
   </main>
   <script>
     (() => {
