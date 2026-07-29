@@ -404,6 +404,18 @@
       font-size: 11px;
       line-height: 1.45;
     }
+    .funding-current-pressure {
+      margin: 0;
+      padding: 5px 6px;
+      border-left: 3px solid var(--nero-line-strong);
+      background: #fff;
+      color: var(--nero-muted);
+      font-size: 10px;
+      line-height: 1.4;
+    }
+    .funding-current-pressure strong { color: var(--nero-ink); font: 800 12px/1 var(--font-mono); }
+    .funding-current-pressure.elevated { border-left-color: #c87818; }
+    .funding-current-pressure.critical { border-left-color: var(--nero-red); }
     .funding-price-basis,
     .funding-driver-label {
       margin: 0;
@@ -1224,7 +1236,7 @@
         <div class="title-row">
           <span class="order intro-order">01</span>
           <h1>AI产业收盘数据板</h1>
-          <span class="product-badge" aria-label="AIpha Close version"><span>AIpha Close</span><span class="product-separator">|</span><span class="product-version">v1.16</span></span>
+          <span class="product-badge" aria-label="AIpha Close version"><span>AIpha Close</span><span class="product-separator">|</span><span class="product-version">v1.17</span></span>
         </div>
         <p>基于收盘行情、公开资金数据和映射表，按市场概览、资金面与拥挤度、流动性、AI链指数、产业链条拆解、数据边界固定顺序阅读。公开页只保留可发布摘要，不展示本地路径、数据库明细、全量映射资产或原始资产。</p>
       </div>
@@ -1309,7 +1321,7 @@
         <span class="section-meta">踩踏风险 / 回撤空间 / 反弹概率 · L / C / D 驱动层</span>
       </div>
     
-      <p class="funding-lead">三项决策指标分别回答：未来 10 日是否容易发生连续踩踏、若触发还可能跌多少、去杠杆后先反弹还是先创新低。高位脆弱或首跌触发后会锁定“踩踏进行中”，单日反弹不能解除；概率只在长历史走步校准通过后显示，否则明确标为风险分数或样本不足。</p>
+      <p class="funding-lead">三项决策指标分别回答：事件发生前未来 10 日是否容易连续踩踏、从当前价格起算还可能跌多少、去杠杆后先反弹还是先创新低。首跌触发后第一项改为“已触发”并暂停前瞻预测，当前抛压另行显示，避免把已经发生的暴跌误写成未来风险；概率只在长历史走步校准通过后显示。</p>
       <div class="funding-market-grid">
       <article class="funding-market-card decision-cascade_active elevated">
         <div class="funding-market-head">
@@ -1321,16 +1333,16 @@
       <div class="funding-decision-layer">
         <div class="funding-score-grid funding-decision-grid">
           
-      <div class="funding-score funding-decision-score elevated">
-        <div class="funding-score-head"><span><b>R</b> 未来10日踩踏风险</span><strong>75</strong></div>
-        <div class="funding-score-track" aria-label="未来10日踩踏风险 75"><i style="width:75.0%"></i></div>
-        <small>风险分数 · 概率待校准</small>
+      <div class="funding-score funding-decision-score missing">
+        <div class="funding-score-head"><span><b>R</b> 未来10日踩踏风险</span><strong>已触发</strong></div>
+        <div class="funding-score-track" aria-label="未来10日踩踏风险 已触发"><i style="width:0%"></i></div>
+        <small>前瞻预测暂停 · 触发 2026-07-02 · 触发前 68</small>
       </div>
     
           
       <div class="funding-score funding-decision-score missing">
-        <div class="funding-score-head"><span><b>DD</b> 若触发还可能跌多少</span><strong>--</strong></div>
-        <div class="funding-score-track" aria-label="若触发还可能跌多少 --"><i style="width:0%"></i></div>
+        <div class="funding-score-head"><span><b>DD</b> 从当前价格还可能跌多少</span><strong>--</strong></div>
+        <div class="funding-score-track" aria-label="从当前价格还可能跌多少 --"><i style="width:0%"></i></div>
         <small>历史事件不足 · 暂不输出</small>
       </div>
     
@@ -1342,7 +1354,8 @@
       </div>
     
         </div>
-        <p class="funding-decision-summary">踩踏风险已触发或仍在延续；单日反弹不解除风险，也不进入止跌判断。</p>
+        <p class="funding-current-pressure elevated">当前抛压 <strong>72</strong> · 描述已经发生或仍在持续的抛压，不是未来跌幅概率。</p>
+        <p class="funding-decision-summary">去杠杆事件已触发或当前抛压仍在延续；未来 10 日踩踏预测暂停，单日反弹不等于止跌。</p>
         <p class="funding-price-basis">价格口径：上证、深证成指、创业板、科创50与中证500等权日收益 · 2026-07-28</p>
       </div>
     
@@ -1405,13 +1418,13 @@
       <div class="funding-score funding-decision-score calm">
         <div class="funding-score-head"><span><b>R</b> 未来10日踩踏风险</span><strong>40</strong></div>
         <div class="funding-score-track" aria-label="未来10日踩踏风险 40"><i style="width:39.5%"></i></div>
-        <small>风险分数 · 概率待校准</small>
+        <small>前瞻风险分数 · 概率待校准</small>
       </div>
     
           
       <div class="funding-score funding-decision-score missing">
-        <div class="funding-score-head"><span><b>DD</b> 若触发还可能跌多少</span><strong>--</strong></div>
-        <div class="funding-score-track" aria-label="若触发还可能跌多少 --"><i style="width:0%"></i></div>
+        <div class="funding-score-head"><span><b>DD</b> 从当前价格还可能跌多少</span><strong>--</strong></div>
+        <div class="funding-score-track" aria-label="从当前价格还可能跌多少 --"><i style="width:0%"></i></div>
         <small>历史事件不足 · 暂不输出</small>
       </div>
     
@@ -1423,6 +1436,7 @@
       </div>
     
         </div>
+        <p class="funding-current-pressure watch">当前抛压 <strong>57</strong> · 描述已经发生或仍在持续的抛压，不是未来跌幅概率。</p>
         <p class="funding-decision-summary">当前未触发高位脆弱或踩踏状态，继续观察价格与资金是否同向变化。</p>
         <p class="funding-price-basis">价格口径：Yahoo Finance S&amp;P 500 日收盘（FRED 不可用时的价格后备） · 2026-07-27</p>
       </div>
@@ -1493,16 +1507,16 @@
       <div class="funding-decision-layer">
         <div class="funding-score-grid funding-decision-grid">
           
-      <div class="funding-score funding-decision-score elevated">
-        <div class="funding-score-head"><span><b>R</b> 未来10日踩踏风险</span><strong>78</strong></div>
-        <div class="funding-score-track" aria-label="未来10日踩踏风险 78"><i style="width:77.7%"></i></div>
-        <small>风险分数 · 概率待校准</small>
+      <div class="funding-score funding-decision-score missing">
+        <div class="funding-score-head"><span><b>R</b> 未来10日踩踏风险</span><strong>已触发</strong></div>
+        <div class="funding-score-track" aria-label="未来10日踩踏风险 已触发"><i style="width:0%"></i></div>
+        <small>前瞻预测暂停 · 触发 2026-06-23 · 触发前 83</small>
       </div>
     
           
       <div class="funding-score funding-decision-score missing">
-        <div class="funding-score-head"><span><b>DD</b> 若触发还可能跌多少</span><strong>--</strong></div>
-        <div class="funding-score-track" aria-label="若触发还可能跌多少 --"><i style="width:0%"></i></div>
+        <div class="funding-score-head"><span><b>DD</b> 从当前价格还可能跌多少</span><strong>--</strong></div>
+        <div class="funding-score-track" aria-label="从当前价格还可能跌多少 --"><i style="width:0%"></i></div>
         <small>历史事件不足 · 暂不输出</small>
       </div>
     
@@ -1514,7 +1528,8 @@
       </div>
     
         </div>
-        <p class="funding-decision-summary">踩踏风险已触发或仍在延续；单日反弹不解除风险，也不进入止跌判断。</p>
+        <p class="funding-current-pressure elevated">当前抛压 <strong>78</strong> · 描述已经发生或仍在持续的抛压，不是未来跌幅概率。</p>
+        <p class="funding-decision-summary">去杠杆事件已触发或当前抛压仍在延续；未来 10 日踩踏预测暂停，单日反弹不等于止跌。</p>
         <p class="funding-price-basis">价格口径：Yahoo Finance KOSPI 日收盘（价格方向辅助；KOFIA 仍是资金真源） · 2026-07-27</p>
       </div>
     
@@ -1594,16 +1609,16 @@
       <div class="funding-decision-layer">
         <div class="funding-score-grid funding-decision-grid">
           
-      <div class="funding-score funding-decision-score critical">
-        <div class="funding-score-head"><span><b>R</b> 未来10日踩踏风险</span><strong>95</strong></div>
-        <div class="funding-score-track" aria-label="未来10日踩踏风险 95"><i style="width:94.9%"></i></div>
-        <small>风险分数 · 概率待校准</small>
+      <div class="funding-score funding-decision-score missing">
+        <div class="funding-score-head"><span><b>R</b> 未来10日踩踏风险</span><strong>已触发</strong></div>
+        <div class="funding-score-track" aria-label="未来10日踩踏风险 已触发"><i style="width:0%"></i></div>
+        <small>前瞻预测暂停 · 触发 2026-05-29 · 触发前 81</small>
       </div>
     
           
       <div class="funding-score funding-decision-score missing">
-        <div class="funding-score-head"><span><b>DD</b> 若触发还可能跌多少</span><strong>--</strong></div>
-        <div class="funding-score-track" aria-label="若触发还可能跌多少 --"><i style="width:0%"></i></div>
+        <div class="funding-score-head"><span><b>DD</b> 从当前价格还可能跌多少</span><strong>--</strong></div>
+        <div class="funding-score-track" aria-label="从当前价格还可能跌多少 --"><i style="width:0%"></i></div>
         <small>历史事件不足 · 暂不输出</small>
       </div>
     
@@ -1615,7 +1630,8 @@
       </div>
     
         </div>
-        <p class="funding-decision-summary">踩踏风险已触发或仍在延续；单日反弹不解除风险，也不进入止跌判断。</p>
+        <p class="funding-current-pressure critical">当前抛压 <strong>95</strong> · 描述已经发生或仍在持续的抛压，不是未来跌幅概率。</p>
+        <p class="funding-decision-summary">去杠杆事件已触发或当前抛压仍在延续；未来 10 日踩踏预测暂停，单日反弹不等于止跌。</p>
         <p class="funding-price-basis">价格口径：当前主映射成份等权日收益与上涨家数 · 2026-07-28</p>
       </div>
     
@@ -1686,16 +1702,16 @@
       <div class="funding-decision-layer">
         <div class="funding-score-grid funding-decision-grid">
           
-      <div class="funding-score funding-decision-score critical">
-        <div class="funding-score-head"><span><b>R</b> 未来10日踩踏风险</span><strong>96</strong></div>
-        <div class="funding-score-track" aria-label="未来10日踩踏风险 96"><i style="width:95.9%"></i></div>
-        <small>风险分数 · 概率待校准</small>
+      <div class="funding-score funding-decision-score missing">
+        <div class="funding-score-head"><span><b>R</b> 未来10日踩踏风险</span><strong>已触发</strong></div>
+        <div class="funding-score-track" aria-label="未来10日踩踏风险 已触发"><i style="width:0%"></i></div>
+        <small>前瞻预测暂停 · 触发 2026-06-26 · 触发前 76</small>
       </div>
     
           
       <div class="funding-score funding-decision-score missing">
-        <div class="funding-score-head"><span><b>DD</b> 若触发还可能跌多少</span><strong>--</strong></div>
-        <div class="funding-score-track" aria-label="若触发还可能跌多少 --"><i style="width:0%"></i></div>
+        <div class="funding-score-head"><span><b>DD</b> 从当前价格还可能跌多少</span><strong>--</strong></div>
+        <div class="funding-score-track" aria-label="从当前价格还可能跌多少 --"><i style="width:0%"></i></div>
         <small>历史事件不足 · 暂不输出</small>
       </div>
     
@@ -1707,7 +1723,8 @@
       </div>
     
         </div>
-        <p class="funding-decision-summary">踩踏风险已触发或仍在延续；单日反弹不解除风险，也不进入止跌判断。</p>
+        <p class="funding-current-pressure critical">当前抛压 <strong>96</strong> · 描述已经发生或仍在持续的抛压，不是未来跌幅概率。</p>
+        <p class="funding-decision-summary">去杠杆事件已触发或当前抛压仍在延续；未来 10 日踩踏预测暂停，单日反弹不等于止跌。</p>
         <p class="funding-price-basis">价格口径：当前主映射成份等权日收益与上涨家数 · 2026-07-28</p>
       </div>
     
@@ -1778,16 +1795,16 @@
       <div class="funding-decision-layer">
         <div class="funding-score-grid funding-decision-grid">
           
-      <div class="funding-score funding-decision-score critical">
-        <div class="funding-score-head"><span><b>R</b> 未来10日踩踏风险</span><strong>94</strong></div>
-        <div class="funding-score-track" aria-label="未来10日踩踏风险 94"><i style="width:94.4%"></i></div>
-        <small>风险分数 · 概率待校准</small>
+      <div class="funding-score funding-decision-score missing">
+        <div class="funding-score-head"><span><b>R</b> 未来10日踩踏风险</span><strong>已触发</strong></div>
+        <div class="funding-score-track" aria-label="未来10日踩踏风险 已触发"><i style="width:0%"></i></div>
+        <small>前瞻预测暂停 · 触发 2026-07-06 · 触发前 75</small>
       </div>
     
           
       <div class="funding-score funding-decision-score missing">
-        <div class="funding-score-head"><span><b>DD</b> 若触发还可能跌多少</span><strong>--</strong></div>
-        <div class="funding-score-track" aria-label="若触发还可能跌多少 --"><i style="width:0%"></i></div>
+        <div class="funding-score-head"><span><b>DD</b> 从当前价格还可能跌多少</span><strong>--</strong></div>
+        <div class="funding-score-track" aria-label="从当前价格还可能跌多少 --"><i style="width:0%"></i></div>
         <small>历史事件不足 · 暂不输出</small>
       </div>
     
@@ -1799,7 +1816,8 @@
       </div>
     
         </div>
-        <p class="funding-decision-summary">踩踏风险已触发或仍在延续；单日反弹不解除风险，也不进入止跌判断。</p>
+        <p class="funding-current-pressure critical">当前抛压 <strong>94</strong> · 描述已经发生或仍在持续的抛压，不是未来跌幅概率。</p>
+        <p class="funding-decision-summary">去杠杆事件已触发或当前抛压仍在延续；未来 10 日踩踏预测暂停，单日反弹不等于止跌。</p>
         <p class="funding-price-basis">价格口径：当前主映射成份等权日收益与上涨家数 · 2026-07-28</p>
       </div>
     
@@ -1862,7 +1880,7 @@
       </div>
       <details class="funding-method">
         <summary>口径与局限</summary>
-        <p>未来 10 日踩踏风险先显示风险分数；概率功能当前锁定，至少需要 750 个已走步标注样本、同分数区间不少于 60 个样本并完成独立校准后才可启用。高位脆弱或首跌触发后锁定踩踏状态，单日反弹不解除；回撤空间和止跌反弹概率同样只在校准通过后显示。</p>
+        <p>未来 10 日踩踏风险只使用事件发生前可观察的价格过热、拥挤、杠杆及其加速等信息；概率功能当前锁定，至少需要 750 个已走步标注样本、同分数区间不少于 60 个样本并完成独立校准后才可启用。事件触发后暂停前瞻分数并保留触发日与触发前分数，当前抛压独立显示；剩余回撤从当前价格起算，回撤空间和止跌反弹概率只在校准通过后显示。</p>
         <p>L/C/D 仍是底层驱动；杠杆加速、价格加速度、拥挤、波动与广度共同决定高位脆弱，D 高只说明融资收缩，不代表已经见底。</p>
         <ul><li>三地原始值口径与频率不同，只比较各市场自身历史分位。</li><li>概率、条件回撤与反弹概率在长历史走步校准不足时保持空值，风险分数不得解释为概率。</li><li>公开数据不能覆盖场外衍生品、私人信贷与全部经纪商内部风险敞口。</li><li>低频数据在新一期发布前沿用最近正式观测，并单独显示日期；韩国信用融资通常为 T-1。</li><li>A股赛道个股两融由东方财富整理交易所披露，外部抓取为公开全市场后本地过滤；不是交易所直连接口。</li><li>美股价格优先使用 FRED S&amp;P 500；FRED 不可用时才使用 Yahoo Finance 公共行情后备，官方资金口径不变。</li><li>韩国 KOSPI 价格方向使用 Yahoo Finance 公共行情辅助；KOFIA 仍是杠杆、客户资金与股票借贷的官方真源。</li></ul>
       </details>
@@ -25514,7 +25532,7 @@
       </div>
     </section>
     
-    <footer>Generated at 2026-07-29T17:10:12+08:00. Public artifact contains HTML and necessary static assets only.</footer>
+    <footer>Generated at 2026-07-29T17:49:25+08:00. Public artifact contains HTML and necessary static assets only.</footer>
   </main>
   <script>
     (() => {
