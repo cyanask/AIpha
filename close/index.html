@@ -269,6 +269,35 @@
       grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 8px;
     }
+    .funding-sector-block {
+      display: grid;
+      gap: 8px;
+      margin-top: 2px;
+      padding-top: 10px;
+      border-top: 1px solid var(--nero-line-strong);
+    }
+    .funding-sector-title {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 10px;
+    }
+    .funding-sector-title > div { display: flex; align-items: baseline; gap: 7px; }
+    .funding-sector-title span { color: var(--nero-blue); font: 800 10px/1 var(--font-mono); }
+    .funding-sector-title h3 { margin: 0; font-size: 16px; }
+    .funding-sector-title small { color: var(--nero-subtle); font: 10px/1.3 var(--font-mono); text-align: right; }
+    .funding-sector-lead {
+      margin: 0;
+      color: var(--nero-muted);
+      font-size: 11px;
+      line-height: 1.45;
+    }
+    .funding-sector-card { background: linear-gradient(180deg, #fbfdfe 0%, #f7fafb 100%); }
+    .funding-sector-sample {
+      margin: -2px 0 0;
+      color: var(--nero-subtle);
+      font: 10px/1.35 var(--font-mono);
+    }
     .funding-market-card {
       display: grid;
       align-content: start;
@@ -1116,6 +1145,8 @@
       .module-leaf-tags { padding: 6px; }
       .source-list li { grid-template-columns: minmax(0, 1fr); gap: 2px; }
       .funding-summary { min-height: 0; }
+      .funding-sector-title { align-items: flex-start; flex-direction: column; }
+      .funding-sector-title small { text-align: left; }
       .funding-metric-row { flex-direction: column; }
       .funding-metric-value { width: 100%; text-align: left; }
     }
@@ -1150,9 +1181,9 @@
         <div class="title-row">
           <span class="order intro-order">01</span>
           <h1>AI产业收盘数据板</h1>
-          <span class="product-badge" aria-label="AIpha Close version"><span>AIpha Close</span><span class="product-separator">|</span><span class="product-version">v1.13</span></span>
+          <span class="product-badge" aria-label="AIpha Close version"><span>AIpha Close</span><span class="product-separator">|</span><span class="product-version">v1.14</span></span>
         </div>
-        <p>基于收盘行情、官方资金数据和映射表，按市场概览、资金面与拥挤度、流动性、AI链指数、产业链条拆解、数据边界固定顺序阅读。公开页只保留可发布摘要，不展示本地路径、数据库明细、全量映射资产或原始资产。</p>
+        <p>基于收盘行情、公开资金数据和映射表，按市场概览、资金面与拥挤度、流动性、AI链指数、产业链条拆解、数据边界固定顺序阅读。公开页只保留可发布摘要，不展示本地路径、数据库明细、全量映射资产或原始资产。</p>
       </div>
     </section>
     
@@ -1405,10 +1436,201 @@
         </details>
       </article>
     </div>
+      <div class="funding-sector-block">
+        <div class="funding-sector-title"><div><span>A股</span><h3>重点赛道资金压力</h3></div><small>当前一级主映射 · 三组互斥 · 自身历史分位</small></div>
+        <p class="funding-sector-lead">半导体口径剔除半导体设备，通信口径聚焦光模块、CPO、光芯片、交换机、高速 PCB 与连接器。L 只代表场内两融，不代表场外总杠杆。</p>
+        <div class="funding-market-grid funding-sector-grid">
+      <article class="funding-market-card funding-sector-card critical" data-sector-id="semi_ex_equipment">
+        <div class="funding-market-head">
+          <div><span class="funding-market-code">SEMI</span><h3>半导体（不含设备）</h3></div>
+          <span class="funding-phase phase-funding_shock_unconfirmed">资金冲击待确认</span>
+        </div>
+        <p class="funding-sector-sample">160 只主映射 · 两融覆盖 151 只 / 94%</p>
+        <p class="funding-coverage">口径：按当前一级主映射互斥分组；个股两融由东方财富整理交易所披露，全市场抓取后在本地过滤。</p>
+        <div class="funding-score-grid">
+          
+      <div class="funding-score watch">
+        <div class="funding-score-head"><span><b>L</b> 场内融资</span><strong>57</strong></div>
+        <div class="funding-score-track" aria-label="场内融资历史分位 57"><i style="width:57.2%"></i></div>
+        <small>2026-07-28 · daily_T_minus_1</small>
+      </div>
+    
+          
+      <div class="funding-score elevated">
+        <div class="funding-score-head"><span><b>C</b> 交易拥挤</span><strong>76</strong></div>
+        <div class="funding-score-track" aria-label="交易拥挤历史分位 76"><i style="width:76.3%"></i></div>
+        <small>2026-07-28 · daily</small>
+      </div>
+    
+          
+      <div class="funding-score critical">
+        <div class="funding-score-head"><span><b>D</b> 收缩脉冲</span><strong>93</strong></div>
+        <div class="funding-score-track" aria-label="收缩脉冲历史分位 93"><i style="width:92.9%"></i></div>
+        <small>2026-07-28 · daily_T_minus_1</small>
+      </div>
+    
+        </div>
+        <p class="funding-summary">资金压力指标升至高分位，但缺少此前杠杆与拥挤同时偏高的确认。</p>
+        <details class="funding-metrics">
+          <summary>查看原始指标与公开来源 <span>5 项</span></summary>
+          <div>
+      <div class="funding-metric-row">
+        <div><strong>融资余额/流通市值</strong><small>只衡量交易所披露范围内的场内融资余额，不是包含场外衍生品的总杠杆率。</small></div>
+        <div class="funding-metric-value"><b>3.6%</b><small>2026-07-28 · <a href="https://data.eastmoney.com/rzrq/detail/SH.html" rel="noreferrer">东方财富（交易所披露整理）</a></small></div>
+      </div>
+    
+      <div class="funding-metric-row">
+        <div><strong>融资交易额/板块成交</strong><small>衡量融资资金对板块当日成交的参与强度。</small></div>
+        <div class="funding-metric-value"><b>7.6%</b><small>2026-07-28 · <a href="https://data.eastmoney.com/rzrq/detail/SH.html" rel="noreferrer">东方财富（交易所披露整理）</a></small></div>
+      </div>
+    
+      <div class="funding-metric-row">
+        <div><strong>板块成交/全市场成交</strong><small>衡量全市场成交向该赛道集中的程度；分母沿用 Close 全市场成交口径。</small></div>
+        <div class="funding-metric-value"><b>13.9%</b><small>2026-07-28 · <a href="https://data.eastmoney.com/rzrq/detail/SH.html" rel="noreferrer">东方财富（交易所披露整理）</a></small></div>
+      </div>
+    
+      <div class="funding-metric-row">
+        <div><strong>融资余额 5 日变化</strong><small>持续负值是该赛道场内融资资金收缩的直接线索。</small></div>
+        <div class="funding-metric-value"><b>-2.9%</b><small>2026-07-28 · <a href="https://data.eastmoney.com/rzrq/detail/SH.html" rel="noreferrer">东方财富（交易所披露整理）</a></small></div>
+      </div>
+    
+      <div class="funding-metric-row">
+        <div><strong>融资标的覆盖率</strong><small>有公开个股两融明细的主映射样本数占该赛道全部样本数。</small></div>
+        <div class="funding-metric-value"><b>94.4%</b><small>2026-07-28 · <a href="https://data.eastmoney.com/rzrq/detail/SH.html" rel="noreferrer">东方财富（交易所披露整理）</a></small></div>
+      </div>
+    </div>
+        </details>
+      </article>
+    
+      <article class="funding-market-card funding-sector-card critical" data-sector-id="optical_interconnect">
+        <div class="funding-market-head">
+          <div><span class="funding-market-code">OPTICAL</span><h3>通信 / 光互连</h3></div>
+          <span class="funding-phase phase-funding_shock_unconfirmed">资金冲击待确认</span>
+        </div>
+        <p class="funding-sector-sample">61 只主映射 · 两融覆盖 59 只 / 97%</p>
+        <p class="funding-coverage">口径：按当前一级主映射互斥分组；个股两融由东方财富整理交易所披露，全市场抓取后在本地过滤。</p>
+        <div class="funding-score-grid">
+          
+      <div class="funding-score watch">
+        <div class="funding-score-head"><span><b>L</b> 场内融资</span><strong>46</strong></div>
+        <div class="funding-score-track" aria-label="场内融资历史分位 46"><i style="width:46.1%"></i></div>
+        <small>2026-07-28 · daily_T_minus_1</small>
+      </div>
+    
+          
+      <div class="funding-score watch">
+        <div class="funding-score-head"><span><b>C</b> 交易拥挤</span><strong>65</strong></div>
+        <div class="funding-score-track" aria-label="交易拥挤历史分位 65"><i style="width:65.1%"></i></div>
+        <small>2026-07-28 · daily</small>
+      </div>
+    
+          
+      <div class="funding-score critical">
+        <div class="funding-score-head"><span><b>D</b> 收缩脉冲</span><strong>98</strong></div>
+        <div class="funding-score-track" aria-label="收缩脉冲历史分位 98"><i style="width:98.3%"></i></div>
+        <small>2026-07-28 · daily_T_minus_1</small>
+      </div>
+    
+        </div>
+        <p class="funding-summary">资金压力指标升至高分位，但缺少此前杠杆与拥挤同时偏高的确认。</p>
+        <details class="funding-metrics">
+          <summary>查看原始指标与公开来源 <span>5 项</span></summary>
+          <div>
+      <div class="funding-metric-row">
+        <div><strong>融资余额/流通市值</strong><small>只衡量交易所披露范围内的场内融资余额，不是包含场外衍生品的总杠杆率。</small></div>
+        <div class="funding-metric-value"><b>4.5%</b><small>2026-07-28 · <a href="https://data.eastmoney.com/rzrq/detail/SH.html" rel="noreferrer">东方财富（交易所披露整理）</a></small></div>
+      </div>
+    
+      <div class="funding-metric-row">
+        <div><strong>融资交易额/板块成交</strong><small>衡量融资资金对板块当日成交的参与强度。</small></div>
+        <div class="funding-metric-value"><b>9.1%</b><small>2026-07-28 · <a href="https://data.eastmoney.com/rzrq/detail/SH.html" rel="noreferrer">东方财富（交易所披露整理）</a></small></div>
+      </div>
+    
+      <div class="funding-metric-row">
+        <div><strong>板块成交/全市场成交</strong><small>衡量全市场成交向该赛道集中的程度；分母沿用 Close 全市场成交口径。</small></div>
+        <div class="funding-metric-value"><b>10.9%</b><small>2026-07-28 · <a href="https://data.eastmoney.com/rzrq/detail/SH.html" rel="noreferrer">东方财富（交易所披露整理）</a></small></div>
+      </div>
+    
+      <div class="funding-metric-row">
+        <div><strong>融资余额 5 日变化</strong><small>持续负值是该赛道场内融资资金收缩的直接线索。</small></div>
+        <div class="funding-metric-value"><b>-8.0%</b><small>2026-07-28 · <a href="https://data.eastmoney.com/rzrq/detail/SH.html" rel="noreferrer">东方财富（交易所披露整理）</a></small></div>
+      </div>
+    
+      <div class="funding-metric-row">
+        <div><strong>融资标的覆盖率</strong><small>有公开个股两融明细的主映射样本数占该赛道全部样本数。</small></div>
+        <div class="funding-metric-value"><b>96.7%</b><small>2026-07-28 · <a href="https://data.eastmoney.com/rzrq/detail/SH.html" rel="noreferrer">东方财富（交易所披露整理）</a></small></div>
+      </div>
+    </div>
+        </details>
+      </article>
+    
+      <article class="funding-market-card funding-sector-card critical" data-sector-id="semi_equipment">
+        <div class="funding-market-head">
+          <div><span class="funding-market-code">SEMI-EQ</span><h3>半导体设备</h3></div>
+          <span class="funding-phase phase-funding_shock_unconfirmed">资金冲击待确认</span>
+        </div>
+        <p class="funding-sector-sample">45 只主映射 · 两融覆盖 42 只 / 93%</p>
+        <p class="funding-coverage">口径：按当前一级主映射互斥分组；个股两融由东方财富整理交易所披露，全市场抓取后在本地过滤。</p>
+        <div class="funding-score-grid">
+          
+      <div class="funding-score calm">
+        <div class="funding-score-head"><span><b>L</b> 场内融资</span><strong>3</strong></div>
+        <div class="funding-score-track" aria-label="场内融资历史分位 3"><i style="width:3.3%"></i></div>
+        <small>2026-07-28 · daily_T_minus_1</small>
+      </div>
+    
+          
+      <div class="funding-score elevated">
+        <div class="funding-score-head"><span><b>C</b> 交易拥挤</span><strong>77</strong></div>
+        <div class="funding-score-track" aria-label="交易拥挤历史分位 77"><i style="width:76.8%"></i></div>
+        <small>2026-07-28 · daily</small>
+      </div>
+    
+          
+      <div class="funding-score critical">
+        <div class="funding-score-head"><span><b>D</b> 收缩脉冲</span><strong>93</strong></div>
+        <div class="funding-score-track" aria-label="收缩脉冲历史分位 93"><i style="width:93.2%"></i></div>
+        <small>2026-07-28 · daily_T_minus_1</small>
+      </div>
+    
+        </div>
+        <p class="funding-summary">资金压力指标升至高分位，但缺少此前杠杆与拥挤同时偏高的确认。</p>
+        <details class="funding-metrics">
+          <summary>查看原始指标与公开来源 <span>5 项</span></summary>
+          <div>
+      <div class="funding-metric-row">
+        <div><strong>融资余额/流通市值</strong><small>只衡量交易所披露范围内的场内融资余额，不是包含场外衍生品的总杠杆率。</small></div>
+        <div class="funding-metric-value"><b>1.8%</b><small>2026-07-28 · <a href="https://data.eastmoney.com/rzrq/detail/SH.html" rel="noreferrer">东方财富（交易所披露整理）</a></small></div>
+      </div>
+    
+      <div class="funding-metric-row">
+        <div><strong>融资交易额/板块成交</strong><small>衡量融资资金对板块当日成交的参与强度。</small></div>
+        <div class="funding-metric-value"><b>7.1%</b><small>2026-07-28 · <a href="https://data.eastmoney.com/rzrq/detail/SH.html" rel="noreferrer">东方财富（交易所披露整理）</a></small></div>
+      </div>
+    
+      <div class="funding-metric-row">
+        <div><strong>板块成交/全市场成交</strong><small>衡量全市场成交向该赛道集中的程度；分母沿用 Close 全市场成交口径。</small></div>
+        <div class="funding-metric-value"><b>5.1%</b><small>2026-07-28 · <a href="https://data.eastmoney.com/rzrq/detail/SH.html" rel="noreferrer">东方财富（交易所披露整理）</a></small></div>
+      </div>
+    
+      <div class="funding-metric-row">
+        <div><strong>融资余额 5 日变化</strong><small>持续负值是该赛道场内融资资金收缩的直接线索。</small></div>
+        <div class="funding-metric-value"><b>-5.5%</b><small>2026-07-28 · <a href="https://data.eastmoney.com/rzrq/detail/SH.html" rel="noreferrer">东方财富（交易所披露整理）</a></small></div>
+      </div>
+    
+      <div class="funding-metric-row">
+        <div><strong>融资标的覆盖率</strong><small>有公开个股两融明细的主映射样本数占该赛道全部样本数。</small></div>
+        <div class="funding-metric-value"><b>93.3%</b><small>2026-07-28 · <a href="https://data.eastmoney.com/rzrq/detail/SH.html" rel="noreferrer">东方财富（交易所披露整理）</a></small></div>
+      </div>
+    </div>
+        </details>
+      </article>
+    </div>
+      </div>
       <details class="funding-method">
         <summary>口径与局限</summary>
         <p>去杠杆仅在此前 L/C 均不低于 70 且当前 D 不低于 70 时确认；否则只标记资金冲击。</p>
-        <ul><li>三地原始值口径与频率不同，只比较各市场自身历史分位。</li><li>公开数据不能覆盖场外衍生品、私人信贷与全部经纪商内部风险敞口。</li><li>低频数据在新一期发布前沿用最近正式观测，并单独显示日期；韩国信用融资通常为 T-1。</li></ul>
+        <ul><li>三地原始值口径与频率不同，只比较各市场自身历史分位。</li><li>公开数据不能覆盖场外衍生品、私人信贷与全部经纪商内部风险敞口。</li><li>低频数据在新一期发布前沿用最近正式观测，并单独显示日期；韩国信用融资通常为 T-1。</li><li>A股赛道个股两融由东方财富整理交易所披露，外部抓取为公开全市场后本地过滤；不是交易所直连接口。</li></ul>
       </details>
     </section>
     
@@ -25049,7 +25271,7 @@
       </div>
     
       <div class="boundary-grid">
-        <ul class="source-list"><li><strong>行情事实</strong><span>2026-07-28 / 覆盖 551</span></li><li><strong>指数源</strong><span>2026-07-28 / passed</span></li><li><strong>资金面</strong><span>A/美/港三地 / passed</span></li><li><strong>特征快照</strong><span>2026-07-28 / passed</span></li><li><strong>映射样本</strong><span>605 行</span></li><li><strong>Radar窗口</strong><span>2日 / 14条</span></li><li><strong>Serenity窗口</strong><span>180日 / 主题 7</span></li></ul>
+        <ul class="source-list"><li><strong>行情事实</strong><span>2026-07-28 / 覆盖 551</span></li><li><strong>指数源</strong><span>2026-07-28 / passed</span></li><li><strong>资金面</strong><span>A/美/韩三地 + A股三赛道 / passed</span></li><li><strong>特征快照</strong><span>2026-07-28 / passed</span></li><li><strong>映射样本</strong><span>605 行</span></li><li><strong>Radar窗口</strong><span>2日 / 14条</span></li><li><strong>Serenity窗口</strong><span>180日 / 主题 7</span></li></ul>
         <div class="boundary-note">
           <p>HTML-only public artifact boundary; excludes SQLite ledgers, full mapping table, full Serenity archive, and full Radar raw package.</p>
           <p>数据缺口：missing_market_data:1；missing_serenity_tag:138；funding_crowding_a_share_partial_coverage；radar_unmatched_items:14</p>
@@ -25058,7 +25280,7 @@
       </div>
     </section>
     
-    <footer>Generated at 2026-07-29T10:05:10+08:00. Public artifact contains HTML and necessary static assets only.</footer>
+    <footer>Generated at 2026-07-29T12:19:48+08:00. Public artifact contains HTML and necessary static assets only.</footer>
   </main>
   <script>
     (() => {
