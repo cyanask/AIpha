@@ -350,6 +350,22 @@
       background: rgba(200, 120, 24, .07);
       color: #91550c;
     }
+    .funding-phase.decision-state-overheat_alert,
+    .funding-phase.decision-state-downside_stress {
+      border-color: rgba(180, 35, 24, .3);
+      background: rgba(180, 35, 24, .06);
+      color: var(--nero-red);
+    }
+    .funding-phase.decision-state-bottom_watch {
+      border-color: rgba(200, 120, 24, .35);
+      background: rgba(200, 120, 24, .07);
+      color: #91550c;
+    }
+    .funding-phase.decision-state-bottom_ready {
+      border-color: rgba(20, 139, 90, .35);
+      background: rgba(20, 139, 90, .07);
+      color: var(--nero-green);
+    }
     .funding-score-grid {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -372,6 +388,33 @@
     .funding-score.elevated .funding-score-track i { background: #c87818; }
     .funding-score.critical .funding-score-track i { background: var(--nero-red); }
     .funding-score.calm .funding-score-track i { background: var(--nero-green); }
+    .funding-score.constructive .funding-score-track i { background: var(--nero-green); }
+    .funding-score.neutral .funding-score-track i { background: var(--nero-line-strong); }
+    .funding-decision-layer {
+      display: grid;
+      gap: 6px;
+      padding: 7px;
+      border: 1px solid var(--nero-line-strong);
+      background: #f8fafb;
+    }
+    .funding-decision-score { background: #fbfdfd; }
+    .funding-decision-summary {
+      margin: 0;
+      color: var(--nero-ink);
+      font-size: 11px;
+      line-height: 1.45;
+    }
+    .funding-price-basis,
+    .funding-driver-label {
+      margin: 0;
+      color: var(--nero-subtle);
+      font: 9px/1.35 var(--font-mono);
+    }
+    .funding-driver-label {
+      padding-top: 2px;
+      color: var(--nero-muted);
+      font-weight: 700;
+    }
     .funding-summary {
       min-height: 38px;
       margin: 0;
@@ -1181,7 +1224,7 @@
         <div class="title-row">
           <span class="order intro-order">01</span>
           <h1>AI产业收盘数据板</h1>
-          <span class="product-badge" aria-label="AIpha Close version"><span>AIpha Close</span><span class="product-separator">|</span><span class="product-version">v1.14</span></span>
+          <span class="product-badge" aria-label="AIpha Close version"><span>AIpha Close</span><span class="product-separator">|</span><span class="product-version">v1.15</span></span>
         </div>
         <p>基于收盘行情、公开资金数据和映射表，按市场概览、资金面与拥挤度、流动性、AI链指数、产业链条拆解、数据边界固定顺序阅读。公开页只保留可发布摘要，不展示本地路径、数据库明细、全量映射资产或原始资产。</p>
       </div>
@@ -1261,19 +1304,49 @@
       <div class="section-head">
         <div class="section-title">
           <span class="order">03</span>
-          <h2>资金面与拥挤度</h2>
+          <h2>资金面与 Beta 风险</h2>
         </div>
-        <span class="section-meta">L / C / D · 市场内历史分位</span>
+        <span class="section-meta">H / S / B 决策层 · L / C / D 驱动层</span>
       </div>
     
-      <p class="funding-lead">先看杠杆存量 L 与仓位拥挤 C 是否已在高位，再看收缩脉冲 D。只有此前 L、C 均不低于 70 且当前 D 不低于 70，才标记“去杠杆确认”。三地分数只做各自历史比较，不横向比较绝对水平。</p>
+      <p class="funding-lead">H 识别快速上涨后的 Beta 过热，S 判断下跌与融资收缩是否仍在释放，B 只在高压力过后、融资收缩回落且价格连续止跌时上升。D 高只表示融资收缩强，不等于快见底；三地分数只做各自历史比较。</p>
       <div class="funding-market-grid">
-      <article class="funding-market-card calm">
+      <article class="funding-market-card decision-neutral elevated">
         <div class="funding-market-head">
           <div><span class="funding-market-code">A_SHARE</span><h3>A股（沪市代理）</h3></div>
-          <span class="funding-phase phase-risk_elevated">风险偏高</span>
+          <span class="funding-phase decision-state-neutral">中性观察</span>
         </div>
         <p class="funding-coverage">口径：深交所历史接口本轮覆盖不足，暂以沪市官方同口径序列代理；不冒充全 A 股绝对杠杆率。</p>
+        
+      <div class="funding-decision-layer">
+        <div class="funding-score-grid funding-decision-grid">
+          
+      <div class="funding-score funding-decision-score calm">
+        <div class="funding-score-head"><span><b>H</b> 上涨过热风险</span><strong>27</strong></div>
+        <div class="funding-score-track" aria-label="上涨过热风险 27"><i style="width:26.8%"></i></div>
+        <small>≥75 且上涨：检查 Beta 暴露</small>
+      </div>
+    
+          
+      <div class="funding-score funding-decision-score elevated">
+        <div class="funding-score-head"><span><b>S</b> 下跌压力</span><strong>72</strong></div>
+        <div class="funding-score-track" aria-label="下跌压力 72"><i style="width:72.0%"></i></div>
+        <small>≥75：仍在压力释放</small>
+      </div>
+    
+          
+      <div class="funding-score funding-decision-score neutral">
+        <div class="funding-score-head"><span><b>B</b> 筑底准备度</span><strong>35</strong></div>
+        <div class="funding-score-track" aria-label="筑底准备度 35"><i style="width:35.1%"></i></div>
+        <small>≥70 且连续两日：配置观察</small>
+      </div>
+    
+        </div>
+        <p class="funding-decision-summary">当前未触发方向性 Beta 风险提示，继续观察价格与资金是否同向变化。</p>
+        <p class="funding-price-basis">价格口径：上证、深证成指、创业板、科创50与中证500等权日收益 · 2026-07-28</p>
+      </div>
+    
+        <p class="funding-driver-label">底层驱动 · 风险偏高</p>
         <div class="funding-score-grid">
           
       <div class="funding-score elevated">
@@ -1291,8 +1364,8 @@
     
           
       <div class="funding-score calm">
-        <div class="funding-score-head"><span><b>D</b> 收缩脉冲</span><strong>34</strong></div>
-        <div class="funding-score-track" aria-label="收缩脉冲历史分位 34"><i style="width:34.0%"></i></div>
+        <div class="funding-score-head"><span><b>D</b> 融资收缩强度</span><strong>34</strong></div>
+        <div class="funding-score-track" aria-label="融资收缩强度历史分位 34"><i style="width:34.0%"></i></div>
         <small>2026-07-27 · daily_T_minus_1</small>
       </div>
     
@@ -1319,12 +1392,42 @@
         </details>
       </article>
     
-      <article class="funding-market-card watch">
+      <article class="funding-market-card decision-neutral watch">
         <div class="funding-market-head">
           <div><span class="funding-market-code">US</span><h3>美股</h3></div>
-          <span class="funding-phase phase-risk_elevated">风险偏高</span>
+          <span class="funding-phase decision-state-neutral">中性观察</span>
         </div>
         <p class="funding-coverage">口径：FINRA 月频账户融资、Cboe 日频期权与 CFTC 周频杠杆基金仓位的组合代理。</p>
+        
+      <div class="funding-decision-layer">
+        <div class="funding-score-grid funding-decision-grid">
+          
+      <div class="funding-score funding-decision-score watch">
+        <div class="funding-score-head"><span><b>H</b> 上涨过热风险</span><strong>48</strong></div>
+        <div class="funding-score-track" aria-label="上涨过热风险 48"><i style="width:48.2%"></i></div>
+        <small>≥75 且上涨：检查 Beta 暴露</small>
+      </div>
+    
+          
+      <div class="funding-score funding-decision-score watch">
+        <div class="funding-score-head"><span><b>S</b> 下跌压力</span><strong>57</strong></div>
+        <div class="funding-score-track" aria-label="下跌压力 57"><i style="width:57.2%"></i></div>
+        <small>≥75：仍在压力释放</small>
+      </div>
+    
+          
+      <div class="funding-score funding-decision-score neutral">
+        <div class="funding-score-head"><span><b>B</b> 筑底准备度</span><strong>0</strong></div>
+        <div class="funding-score-track" aria-label="筑底准备度 0"><i style="width:0.0%"></i></div>
+        <small>≥70 且连续两日：配置观察</small>
+      </div>
+    
+        </div>
+        <p class="funding-decision-summary">当前未触发方向性 Beta 风险提示，继续观察价格与资金是否同向变化。</p>
+        <p class="funding-price-basis">价格口径：Yahoo Finance S&amp;P 500 日收盘（FRED 不可用时的价格后备） · 2026-07-27</p>
+      </div>
+    
+        <p class="funding-driver-label">底层驱动 · 风险偏高</p>
         <div class="funding-score-grid">
           
       <div class="funding-score critical">
@@ -1342,16 +1445,21 @@
     
           
       <div class="funding-score watch">
-        <div class="funding-score-head"><span><b>D</b> 收缩脉冲</span><strong>67</strong></div>
-        <div class="funding-score-track" aria-label="收缩脉冲历史分位 67"><i style="width:67.3%"></i></div>
+        <div class="funding-score-head"><span><b>D</b> 融资收缩强度</span><strong>67</strong></div>
+        <div class="funding-score-track" aria-label="融资收缩强度历史分位 67"><i style="width:67.3%"></i></div>
         <small>2026-07-21 · weekly</small>
       </div>
     
         </div>
         <p class="funding-summary">杠杆或拥挤至少一项偏高，应结合后续资金收缩变化观察。</p>
         <details class="funding-metrics">
-          <summary>查看原始指标与官方来源 <span>4 项</span></summary>
+          <summary>查看原始指标与官方来源 <span>5 项</span></summary>
           <div>
+      <div class="funding-metric-row">
+        <div><strong>S&amp;P 500 收盘</strong><small>只用于判断价格方向、波动与止跌，不替代 FINRA、Cboe 或 CFTC 资金口径。</small></div>
+        <div class="funding-metric-value"><b>7,413.18</b><small>2026-07-27 · <a href="https://finance.yahoo.com/quote/%5EGSPC/history/" rel="noreferrer">Yahoo Finance（S&amp;P 500 价格后备）</a></small></div>
+      </div>
+    
       <div class="funding-metric-row">
         <div><strong>保证金借款/自由贷方余额</strong><small>衡量经纪账户借款相对可用贷方余额的压力。</small></div>
         <div class="funding-metric-value"><b>3.41x</b><small>2026-06-30 · <a href="https://www.finra.org/rules-guidance/key-topics/margin-accounts/margin-statistics" rel="noreferrer">FINRA</a></small></div>
@@ -1375,47 +1483,82 @@
         </details>
       </article>
     
-      <article class="funding-market-card watch">
+      <article class="funding-market-card decision-downside_stress elevated">
         <div class="funding-market-head">
           <div><span class="funding-market-code">KR</span><h3>韩国股市</h3></div>
-          <span class="funding-phase phase-risk_elevated">风险偏高</span>
+          <span class="funding-phase decision-state-downside_stress">下跌压力高</span>
         </div>
         <p class="funding-coverage">口径：KOFIA FreeSIS 的 KOSPI、KOSDAQ 汇总信用融资、投资者存款与股票借贷日频代理。</p>
+        
+      <div class="funding-decision-layer">
+        <div class="funding-score-grid funding-decision-grid">
+          
+      <div class="funding-score funding-decision-score calm">
+        <div class="funding-score-head"><span><b>H</b> 上涨过热风险</span><strong>21</strong></div>
+        <div class="funding-score-track" aria-label="上涨过热风险 21"><i style="width:21.3%"></i></div>
+        <small>≥75 且上涨：检查 Beta 暴露</small>
+      </div>
+    
+          
+      <div class="funding-score funding-decision-score elevated">
+        <div class="funding-score-head"><span><b>S</b> 下跌压力</span><strong>78</strong></div>
+        <div class="funding-score-track" aria-label="下跌压力 78"><i style="width:77.7%"></i></div>
+        <small>≥75：仍在压力释放</small>
+      </div>
+    
+          
+      <div class="funding-score funding-decision-score neutral">
+        <div class="funding-score-head"><span><b>B</b> 筑底准备度</span><strong>49</strong></div>
+        <div class="funding-score-track" aria-label="筑底准备度 49"><i style="width:49.0%"></i></div>
+        <small>≥70 且连续两日：配置观察</small>
+      </div>
+    
+        </div>
+        <p class="funding-decision-summary">下跌与资金收缩压力仍高，D 高不等于见底，暂不把超跌视为筑底确认。</p>
+        <p class="funding-price-basis">价格口径：Yahoo Finance KOSPI 日收盘（价格方向辅助；KOFIA 仍是资金真源） · 2026-07-27</p>
+      </div>
+    
+        <p class="funding-driver-label">底层驱动 · 风险偏高</p>
         <div class="funding-score-grid">
           
-      <div class="funding-score elevated">
-        <div class="funding-score-head"><span><b>L</b> 杠杆存量</span><strong>73</strong></div>
-        <div class="funding-score-track" aria-label="杠杆存量历史分位 73"><i style="width:72.8%"></i></div>
-        <small>2026-07-27 · daily_T_minus_1</small>
+      <div class="funding-score critical">
+        <div class="funding-score-head"><span><b>L</b> 杠杆存量</span><strong>84</strong></div>
+        <div class="funding-score-track" aria-label="杠杆存量历史分位 84"><i style="width:84.1%"></i></div>
+        <small>2026-07-28 · daily_T_minus_1</small>
       </div>
     
           
       <div class="funding-score calm">
-        <div class="funding-score-head"><span><b>C</b> 仓位拥挤</span><strong>5</strong></div>
-        <div class="funding-score-track" aria-label="仓位拥挤历史分位 5"><i style="width:5.3%"></i></div>
-        <small>2026-07-27 · daily</small>
+        <div class="funding-score-head"><span><b>C</b> 仓位拥挤</span><strong>11</strong></div>
+        <div class="funding-score-track" aria-label="仓位拥挤历史分位 11"><i style="width:11.3%"></i></div>
+        <small>2026-07-28 · daily</small>
       </div>
     
           
       <div class="funding-score watch">
-        <div class="funding-score-head"><span><b>D</b> 收缩脉冲</span><strong>56</strong></div>
-        <div class="funding-score-track" aria-label="收缩脉冲历史分位 56"><i style="width:56.1%"></i></div>
-        <small>2026-07-27 · daily</small>
+        <div class="funding-score-head"><span><b>D</b> 融资收缩强度</span><strong>51</strong></div>
+        <div class="funding-score-track" aria-label="融资收缩强度历史分位 51"><i style="width:51.4%"></i></div>
+        <small>2026-07-28 · daily</small>
       </div>
     
         </div>
         <p class="funding-summary">杠杆或拥挤至少一项偏高，应结合后续资金收缩变化观察。</p>
         <details class="funding-metrics">
-          <summary>查看原始指标与官方来源 <span>5 项</span></summary>
+          <summary>查看原始指标与官方来源 <span>6 项</span></summary>
           <div>
       <div class="funding-metric-row">
+        <div><strong>KOSPI 收盘</strong><small>只用于判断价格方向、波动与止跌，不替代 KOFIA 信用融资、存款或股票借贷口径。</small></div>
+        <div class="funding-metric-value"><b>6,755.75</b><small>2026-07-27 · <a href="https://finance.yahoo.com/quote/%5EKS11/history/" rel="noreferrer">Yahoo Finance（KOSPI 价格辅助）</a></small></div>
+      </div>
+    
+      <div class="funding-metric-row">
         <div><strong>信用融资余额/投资者存款</strong><small>衡量融资多头相对可用客户资金的压力，只作韩国市场自身历史比较。</small></div>
-        <div class="funding-metric-value"><b>30.0%</b><small>2026-07-27 · <a href="https://freesis.kofia.or.kr/stat/FreeSIS.do?parentDivId=MSIS10000000000000&amp;serviceId=STATSCU0100000070" rel="noreferrer">KOFIA 信用融资</a> / <a href="https://freesis.kofia.or.kr/stat/FreeSIS.do?parentDivId=MSIS10000000000000&amp;serviceId=STATSCU0100000060" rel="noreferrer">KOFIA 市场资金</a></small></div>
+        <div class="funding-metric-value"><b>31.0%</b><small>2026-07-28 · <a href="https://freesis.kofia.or.kr/stat/FreeSIS.do?parentDivId=MSIS10000000000000&amp;serviceId=STATSCU0100000070" rel="noreferrer">KOFIA 信用融资</a> / <a href="https://freesis.kofia.or.kr/stat/FreeSIS.do?parentDivId=MSIS10000000000000&amp;serviceId=STATSCU0100000060" rel="noreferrer">KOFIA 市场资金</a></small></div>
       </div>
     
       <div class="funding-metric-row">
         <div><strong>信用融资余额</strong><small>KOSPI 与 KOSDAQ 汇总的场内融资多头存量。</small></div>
-        <div class="funding-metric-value"><b>32.74万亿韩元</b><small>2026-07-27 · <a href="https://freesis.kofia.or.kr/stat/FreeSIS.do?parentDivId=MSIS10000000000000&amp;serviceId=STATSCU0100000070" rel="noreferrer">KOFIA 信用融资</a></small></div>
+        <div class="funding-metric-value"><b>33.19万亿韩元</b><small>2026-07-28 · <a href="https://freesis.kofia.or.kr/stat/FreeSIS.do?parentDivId=MSIS10000000000000&amp;serviceId=STATSCU0100000070" rel="noreferrer">KOFIA 信用融资</a></small></div>
       </div>
     
       <div class="funding-metric-row">
@@ -1425,7 +1568,7 @@
     
       <div class="funding-metric-row">
         <div><strong>信用融资余额 5 日变化</strong><small>持续负值是融资多头被动或主动收缩的直接线索。</small></div>
-        <div class="funding-metric-value"><b>-1.8%</b><small>2026-07-27 · <a href="https://freesis.kofia.or.kr/stat/FreeSIS.do?parentDivId=MSIS10000000000000&amp;serviceId=STATSCU0100000070" rel="noreferrer">KOFIA 信用融资</a></small></div>
+        <div class="funding-metric-value"><b>-1.1%</b><small>2026-07-28 · <a href="https://freesis.kofia.or.kr/stat/FreeSIS.do?parentDivId=MSIS10000000000000&amp;serviceId=STATSCU0100000070" rel="noreferrer">KOFIA 信用融资</a></small></div>
       </div>
     
       <div class="funding-metric-row">
@@ -1440,13 +1583,43 @@
         <div class="funding-sector-title"><div><span>A股</span><h3>重点赛道资金压力</h3></div><small>当前一级主映射 · 三组互斥 · 自身历史分位</small></div>
         <p class="funding-sector-lead">半导体口径剔除半导体设备，通信口径聚焦光模块、CPO、光芯片、交换机、高速 PCB 与连接器。L 只代表场内两融，不代表场外总杠杆。</p>
         <div class="funding-market-grid funding-sector-grid">
-      <article class="funding-market-card funding-sector-card critical" data-sector-id="semi_ex_equipment">
+      <article class="funding-market-card funding-sector-card decision-downside_stress critical" data-sector-id="semi_ex_equipment">
         <div class="funding-market-head">
           <div><span class="funding-market-code">SEMI</span><h3>半导体（不含设备）</h3></div>
-          <span class="funding-phase phase-funding_shock_unconfirmed">资金冲击待确认</span>
+          <span class="funding-phase decision-state-downside_stress">下跌压力高</span>
         </div>
         <p class="funding-sector-sample">160 只主映射 · 两融覆盖 151 只 / 94%</p>
         <p class="funding-coverage">口径：按当前一级主映射互斥分组；个股两融由东方财富整理交易所披露，全市场抓取后在本地过滤。</p>
+        
+      <div class="funding-decision-layer">
+        <div class="funding-score-grid funding-decision-grid">
+          
+      <div class="funding-score funding-decision-score calm">
+        <div class="funding-score-head"><span><b>H</b> 上涨过热风险</span><strong>32</strong></div>
+        <div class="funding-score-track" aria-label="上涨过热风险 32"><i style="width:32.2%"></i></div>
+        <small>≥75 且上涨：检查 Beta 暴露</small>
+      </div>
+    
+          
+      <div class="funding-score funding-decision-score critical">
+        <div class="funding-score-head"><span><b>S</b> 下跌压力</span><strong>95</strong></div>
+        <div class="funding-score-track" aria-label="下跌压力 95"><i style="width:94.9%"></i></div>
+        <small>≥75：仍在压力释放</small>
+      </div>
+    
+          
+      <div class="funding-score funding-decision-score neutral">
+        <div class="funding-score-head"><span><b>B</b> 筑底准备度</span><strong>19</strong></div>
+        <div class="funding-score-track" aria-label="筑底准备度 19"><i style="width:18.9%"></i></div>
+        <small>≥70 且连续两日：配置观察</small>
+      </div>
+    
+        </div>
+        <p class="funding-decision-summary">下跌与资金收缩压力仍高，D 高不等于见底，暂不把超跌视为筑底确认。</p>
+        <p class="funding-price-basis">价格口径：当前主映射成份等权日收益与上涨家数 · 2026-07-28</p>
+      </div>
+    
+        <p class="funding-driver-label">底层驱动 · 资金冲击待确认</p>
         <div class="funding-score-grid">
           
       <div class="funding-score watch">
@@ -1464,8 +1637,8 @@
     
           
       <div class="funding-score critical">
-        <div class="funding-score-head"><span><b>D</b> 收缩脉冲</span><strong>93</strong></div>
-        <div class="funding-score-track" aria-label="收缩脉冲历史分位 93"><i style="width:92.9%"></i></div>
+        <div class="funding-score-head"><span><b>D</b> 融资收缩强度</span><strong>93</strong></div>
+        <div class="funding-score-track" aria-label="融资收缩强度历史分位 93"><i style="width:92.9%"></i></div>
         <small>2026-07-28 · daily_T_minus_1</small>
       </div>
     
@@ -1502,13 +1675,43 @@
         </details>
       </article>
     
-      <article class="funding-market-card funding-sector-card critical" data-sector-id="optical_interconnect">
+      <article class="funding-market-card funding-sector-card decision-downside_stress critical" data-sector-id="optical_interconnect">
         <div class="funding-market-head">
           <div><span class="funding-market-code">OPTICAL</span><h3>通信 / 光互连</h3></div>
-          <span class="funding-phase phase-funding_shock_unconfirmed">资金冲击待确认</span>
+          <span class="funding-phase decision-state-downside_stress">下跌压力高</span>
         </div>
         <p class="funding-sector-sample">61 只主映射 · 两融覆盖 59 只 / 97%</p>
         <p class="funding-coverage">口径：按当前一级主映射互斥分组；个股两融由东方财富整理交易所披露，全市场抓取后在本地过滤。</p>
+        
+      <div class="funding-decision-layer">
+        <div class="funding-score-grid funding-decision-grid">
+          
+      <div class="funding-score funding-decision-score calm">
+        <div class="funding-score-head"><span><b>H</b> 上涨过热风险</span><strong>27</strong></div>
+        <div class="funding-score-track" aria-label="上涨过热风险 27"><i style="width:27.3%"></i></div>
+        <small>≥75 且上涨：检查 Beta 暴露</small>
+      </div>
+    
+          
+      <div class="funding-score funding-decision-score critical">
+        <div class="funding-score-head"><span><b>S</b> 下跌压力</span><strong>96</strong></div>
+        <div class="funding-score-track" aria-label="下跌压力 96"><i style="width:95.9%"></i></div>
+        <small>≥75：仍在压力释放</small>
+      </div>
+    
+          
+      <div class="funding-score funding-decision-score neutral">
+        <div class="funding-score-head"><span><b>B</b> 筑底准备度</span><strong>14</strong></div>
+        <div class="funding-score-track" aria-label="筑底准备度 14"><i style="width:14.1%"></i></div>
+        <small>≥70 且连续两日：配置观察</small>
+      </div>
+    
+        </div>
+        <p class="funding-decision-summary">下跌与资金收缩压力仍高，D 高不等于见底，暂不把超跌视为筑底确认。</p>
+        <p class="funding-price-basis">价格口径：当前主映射成份等权日收益与上涨家数 · 2026-07-28</p>
+      </div>
+    
+        <p class="funding-driver-label">底层驱动 · 资金冲击待确认</p>
         <div class="funding-score-grid">
           
       <div class="funding-score watch">
@@ -1526,8 +1729,8 @@
     
           
       <div class="funding-score critical">
-        <div class="funding-score-head"><span><b>D</b> 收缩脉冲</span><strong>98</strong></div>
-        <div class="funding-score-track" aria-label="收缩脉冲历史分位 98"><i style="width:98.3%"></i></div>
+        <div class="funding-score-head"><span><b>D</b> 融资收缩强度</span><strong>98</strong></div>
+        <div class="funding-score-track" aria-label="融资收缩强度历史分位 98"><i style="width:98.3%"></i></div>
         <small>2026-07-28 · daily_T_minus_1</small>
       </div>
     
@@ -1564,13 +1767,43 @@
         </details>
       </article>
     
-      <article class="funding-market-card funding-sector-card critical" data-sector-id="semi_equipment">
+      <article class="funding-market-card funding-sector-card decision-downside_stress critical" data-sector-id="semi_equipment">
         <div class="funding-market-head">
           <div><span class="funding-market-code">SEMI-EQ</span><h3>半导体设备</h3></div>
-          <span class="funding-phase phase-funding_shock_unconfirmed">资金冲击待确认</span>
+          <span class="funding-phase decision-state-downside_stress">下跌压力高</span>
         </div>
         <p class="funding-sector-sample">45 只主映射 · 两融覆盖 42 只 / 93%</p>
         <p class="funding-coverage">口径：按当前一级主映射互斥分组；个股两融由东方财富整理交易所披露，全市场抓取后在本地过滤。</p>
+        
+      <div class="funding-decision-layer">
+        <div class="funding-score-grid funding-decision-grid">
+          
+      <div class="funding-score funding-decision-score calm">
+        <div class="funding-score-head"><span><b>H</b> 上涨过热风险</span><strong>26</strong></div>
+        <div class="funding-score-track" aria-label="上涨过热风险 26"><i style="width:25.7%"></i></div>
+        <small>≥75 且上涨：检查 Beta 暴露</small>
+      </div>
+    
+          
+      <div class="funding-score funding-decision-score critical">
+        <div class="funding-score-head"><span><b>S</b> 下跌压力</span><strong>94</strong></div>
+        <div class="funding-score-track" aria-label="下跌压力 94"><i style="width:94.4%"></i></div>
+        <small>≥75：仍在压力释放</small>
+      </div>
+    
+          
+      <div class="funding-score funding-decision-score neutral">
+        <div class="funding-score-head"><span><b>B</b> 筑底准备度</span><strong>28</strong></div>
+        <div class="funding-score-track" aria-label="筑底准备度 28"><i style="width:28.5%"></i></div>
+        <small>≥70 且连续两日：配置观察</small>
+      </div>
+    
+        </div>
+        <p class="funding-decision-summary">下跌与资金收缩压力仍高，D 高不等于见底，暂不把超跌视为筑底确认。</p>
+        <p class="funding-price-basis">价格口径：当前主映射成份等权日收益与上涨家数 · 2026-07-28</p>
+      </div>
+    
+        <p class="funding-driver-label">底层驱动 · 资金冲击待确认</p>
         <div class="funding-score-grid">
           
       <div class="funding-score calm">
@@ -1588,8 +1821,8 @@
     
           
       <div class="funding-score critical">
-        <div class="funding-score-head"><span><b>D</b> 收缩脉冲</span><strong>93</strong></div>
-        <div class="funding-score-track" aria-label="收缩脉冲历史分位 93"><i style="width:93.2%"></i></div>
+        <div class="funding-score-head"><span><b>D</b> 融资收缩强度</span><strong>93</strong></div>
+        <div class="funding-score-track" aria-label="融资收缩强度历史分位 93"><i style="width:93.2%"></i></div>
         <small>2026-07-28 · daily_T_minus_1</small>
       </div>
     
@@ -1629,8 +1862,9 @@
       </div>
       <details class="funding-method">
         <summary>口径与局限</summary>
-        <p>去杠杆仅在此前 L/C 均不低于 70 且当前 D 不低于 70 时确认；否则只标记资金冲击。</p>
-        <ul><li>三地原始值口径与频率不同，只比较各市场自身历史分位。</li><li>公开数据不能覆盖场外衍生品、私人信贷与全部经纪商内部风险敞口。</li><li>低频数据在新一期发布前沿用最近正式观测，并单独显示日期；韩国信用融资通常为 T-1。</li><li>A股赛道个股两融由东方财富整理交易所披露，外部抓取为公开全市场后本地过滤；不是交易所直连接口。</li></ul>
+        <p>H 仅在上涨状态且不低于 75 时提示 Beta 过热；S 不低于 75 表示下跌压力仍高；B 只有在近期高压力后、D 回落并连续两日止跌确认时才达到可配置观察。</p>
+        <p>D 表示当前融资收缩强度，不代表已经见底；只有此前 L/C 均不低于 70 且当前 D 不低于 70 时才确认去杠杆。</p>
+        <ul><li>三地原始值口径与频率不同，只比较各市场自身历史分位。</li><li>公开数据不能覆盖场外衍生品、私人信贷与全部经纪商内部风险敞口。</li><li>低频数据在新一期发布前沿用最近正式观测，并单独显示日期；韩国信用融资通常为 T-1。</li><li>A股赛道个股两融由东方财富整理交易所披露，外部抓取为公开全市场后本地过滤；不是交易所直连接口。</li><li>美股价格优先使用 FRED S&amp;P 500；FRED 不可用时才使用 Yahoo Finance 公共行情后备，官方资金口径不变。</li><li>韩国 KOSPI 价格方向使用 Yahoo Finance 公共行情辅助；KOFIA 仍是杠杆、客户资金与股票借贷的官方真源。</li></ul>
       </details>
     </section>
     
@@ -25280,7 +25514,7 @@
       </div>
     </section>
     
-    <footer>Generated at 2026-07-29T12:19:48+08:00. Public artifact contains HTML and necessary static assets only.</footer>
+    <footer>Generated at 2026-07-29T14:51:59+08:00. Public artifact contains HTML and necessary static assets only.</footer>
   </main>
   <script>
     (() => {
