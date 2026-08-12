@@ -1,4 +1,4 @@
-# AIpha Research Desk
+# AIpha
 
 Unified GitHub Pages entry for AIpha public static HTML artifacts.
 
